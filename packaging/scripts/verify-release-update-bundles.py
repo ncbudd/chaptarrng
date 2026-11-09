@@ -41,7 +41,10 @@ def verify(directory, version, source, rids):
         if not archive.is_file() or not bundle.is_file() or not 0 < bundle.stat().st_size <= 4 * 1024 * 1024:
             raise ValueError("Missing archive or bounded signature bundle: " + name)
         with archive.open("rb") as stream:
-            digest = hashlib.file_digest(stream, "sha256").hexdigest()
+            hasher = hashlib.sha256()
+            for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+                hasher.update(chunk)
+            digest = hasher.hexdigest()
         checksum = (directory / (name + ".sha256")).read_text().strip().split()
         if checksum != [digest, name]:
             raise ValueError("Archive checksum or sidecar filename mismatch: " + name)

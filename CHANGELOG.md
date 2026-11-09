@@ -4,6 +4,14 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.994](https://github.com/snapetech-org/chaptarrng/compare/v0.9.993..v0.9.994) - 2026-11-09
+
+### Release fixes
+
+- Keep the native M4B recovery harness and archive signature verifier compatible with the Python shipped on public Linux runners. Use streaming SHA-256 while retaining bounded memory use; apply the same fix to Windows standalone handoff checks.
+
+This release includes the fixes staged under 0.9.991 through 0.9.993, which were held after release validation failures.
+
 ## [0.9.993](https://github.com/snapetech-org/chaptarrng/compare/v0.9.992..v0.9.993) - 2026-11-09
 
 ### Release fixes

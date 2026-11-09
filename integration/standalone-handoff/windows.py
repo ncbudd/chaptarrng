@@ -26,8 +26,11 @@ def require(condition, message):
 
 
 def digest(path):
+    hasher = hashlib.sha256()
     with path.open('rb') as source:
-        return hashlib.file_digest(source, 'sha256').hexdigest()
+        for chunk in iter(lambda: source.read(1024 * 1024), b''):
+            hasher.update(chunk)
+    return hasher.hexdigest()
 
 
 def extract(archive, destination):
