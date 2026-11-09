@@ -29,12 +29,12 @@ case "$RID" in
       2>&1 | tee "$evidence/acceptance.log"
     ;;
   linux-x64|linux-arm64|osx-x64|osx-arm64)
-    native_options=()
-    [[ "$RID" != linux-* ]] || native_options=(--runtime-id "$RID")
-    TMPDIR="$evidence/work" python packaging/scripts/test-bookshelf-standalone-handoff.py \
+    command=(python packaging/scripts/test-bookshelf-standalone-handoff.py \
       "$RUNNER_TEMP/native-audit-predecessor/BookshelfNG-v0.4.21.76-${RID}.tar.gz" \
       "$RUNNER_TEMP/native-audit-candidate/ChaptarrNG-0.0.0-${RID}.tar.gz" \
-      --output "$evidence/results" --candidate-revision "$GITHUB_SHA" "${native_options[@]}" \
+      --output "$evidence/results" --candidate-revision "$GITHUB_SHA")
+    [[ "$RID" != linux-* ]] || command+=(--runtime-id "$RID")
+    TMPDIR="$evidence/work" "${command[@]}" \
       2>&1 | tee "$evidence/acceptance.log"
     ;;
   *) echo "Unsupported native acceptance RID: $RID" >&2; exit 1 ;;
