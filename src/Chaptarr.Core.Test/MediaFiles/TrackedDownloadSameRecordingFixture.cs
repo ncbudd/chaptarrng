@@ -65,5 +65,20 @@ namespace Chaptarr.Core.Test.MediaFiles
 
             Assert.That(DownloadedBooksImportService.IsSameRecording(grabbed, matched), Is.False);
         }
+
+        [TestCase("Project Hail Mary: A Novel", "Project Hail Mary", true)]
+        [TestCase("Project Hail Mary", "Project Hail Mary: A Novel", true)]
+        [TestCase("Project Hail Mary: A Novel", "Project Hail Mary", true)]
+        [TestCase("Pride and Prejudice", "Pride and Prejudice and Kitties", false)]
+        [TestCase("Project Hail Mary: Illustrated Edition", "Project Hail Mary", false)]
+        public void should_only_accept_equivalent_ebook_titles(string grabbedTitle, string matchedTitle, bool accepted)
+        {
+            var grabbed = new Edition { Id = 1, IsEbook = true, Title = grabbedTitle };
+            var matched = new Edition { Id = 2, IsEbook = true, Title = matchedTitle };
+
+            Assert.That(DownloadedBooksImportService.IsEquivalentEbookTitle(grabbed, matched), Is.EqualTo(accepted));
+            matched.IsEbook = false;
+            Assert.That(DownloadedBooksImportService.IsEquivalentEbookTitle(grabbed, matched), Is.False);
+        }
     }
 }

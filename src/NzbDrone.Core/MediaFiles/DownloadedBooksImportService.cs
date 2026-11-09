@@ -20,6 +20,7 @@ using NzbDrone.Core.MediaFiles.BookImport.Services;
 using NzbDrone.Core.MediaFiles.Events;
 using NzbDrone.Core.MediaFiles.TagExtraction;
 using NzbDrone.Core.Messaging.Events;
+using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.Qualities;
 using NzbDrone.Core.RootFolders;
@@ -1239,6 +1240,12 @@ namespace NzbDrone.Core.MediaFiles
                     continue;
                 }
 
+                if (IsEquivalentEbookTitle(expectedEdition, matchedEdition))
+                {
+                    _logger.Debug("Import matched equivalent ebook edition {0} instead of grabbed edition {1}; accepting", matchedEdition.Id, expectedEdition.Id);
+                    continue;
+                }
+
                 decision.Reject(new Rejection(
                     $"Completed download was grabbed for edition '{expectedEdition.Title}', but import matched edition '{matchedEdition.Title}'. Chaptarr could not verify the expected edition."));
             }
@@ -1258,6 +1265,23 @@ namespace NzbDrone.Core.MediaFiles
                    !string.IsNullOrWhiteSpace(matchedLanguage) &&
                    string.Equals(expectedLanguage, matchedLanguage, StringComparison.OrdinalIgnoreCase) &&
                    BookService.HaveSameNarration(expected, matched);
+        }
+
+        internal static bool IsEquivalentEbookTitle(Edition expected, Edition matched)
+        {
+            if (expected == null || matched == null || !expected.IsEbook || !matched.IsEbook)
+            {
+                return false;
+            }
+
+            var expectedTitle = ReleaseTitleMatchScorer.TryGetGenericNovelBaseTitle(expected.Title, out var expectedBase)
+                ? expectedBase : expected.Title;
+            var matchedTitle = ReleaseTitleMatchScorer.TryGetGenericNovelBaseTitle(matched.Title, out var matchedBase)
+                ? matchedBase : matched.Title;
+
+            var expectedTokens = ReleaseTitleMatchScorer.Tokenize(expectedTitle);
+            var matchedTokens = ReleaseTitleMatchScorer.Tokenize(matchedTitle);
+            return expectedTokens.Count > 0 && expectedTokens.SequenceEqual(matchedTokens, StringComparer.OrdinalIgnoreCase);
         }
 
         private Edition ResolveExpectedTrackedEdition(Book book, DownloadClientItem downloadClientItem)
