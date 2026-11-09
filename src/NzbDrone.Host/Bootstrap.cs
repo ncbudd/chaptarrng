@@ -31,6 +31,7 @@ using NzbDrone.Core.Datastore.Extensions;
 using NzbDrone.Core.Http;
 using NzbDrone.Core.Lifecycle;
 using NzbDrone.Core.Messaging.Events;
+using NzbDrone.Core.RemotePathMappings;
 // using NzbDrone.Core.MetadataSource.Hardcover; // Removed - using V5 API via BookInfoProxy
 using NzbDrone.Core.Books.Services;
 using NzbDrone.Core.Organizer;
@@ -50,6 +51,17 @@ namespace NzbDrone.Host
             "Chaptarr.Api.V1",
             "Chaptarr.Http"
         };
+
+        // RegisterMany scans nested implementation types, including the private
+        // DirectDownloadClient.NoopRemotePathMappingService used only as a local
+        // constructor fallback. When it wins DI resolution, mapping APIs silently
+        // return defaults (issue #199). Bind the real persistence-backed service
+        // explicitly, after assembly scanning, for both interactive and utility hosts.
+        internal static void RegisterRealRemotePathMappingService(IContainer container)
+        {
+            container.Register<IRemotePathMappingService, RemotePathMappingService>(
+                Reuse.Singleton, ifAlreadyRegistered: IfAlreadyRegistered.Replace);
+        }
 
         public static void Start(string[] args, Action<IHostBuilder> trayCallback = null)
         {
@@ -123,6 +135,8 @@ namespace NzbDrone.Host
                                 .AddNamingPatternServices()
                                 // .AddHardcoverServices() // Removed - using V5 API via BookInfoProxy
                                 .AddStartupContext(startupContext);
+
+                            RegisterRealRemotePathMappingService(utilityContainer);
 
                             var utilityProvider = utilityFactory.CreateServiceProvider(utilityContainer);
                             utilityProvider.GetRequiredService<IUtilityModeRouter>().Route(appMode);
@@ -209,8 +223,10 @@ namespace NzbDrone.Host
                         .AddImportServices()
                         .AddNamingPatternServices()
                         // .AddHardcoverServices() // Removed - using V5 API via BookInfoProxy
-                        .AddStartupContext(context)
-                        .Resolve<IEventAggregator>().PublishEvent(new ApplicationStartingEvent());
+                        .AddStartupContext(context);
+
+                    RegisterRealRemotePathMappingService(c);
+                    c.Resolve<IEventAggregator>().PublishEvent(new ApplicationStartingEvent());
                 })
                 .ConfigureServices(services =>
                 {

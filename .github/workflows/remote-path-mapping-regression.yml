@@ -1,0 +1,28 @@
+name: Remote path mapping API regression
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/NzbDrone.Host/Bootstrap.cs'
+      - 'src/NzbDrone.Core/RemotePathMappings/**'
+      - 'src/NzbDrone.Core/Download/Clients/Direct/**'
+      - 'src/Chaptarr.Api.V1/RemotePathMappings/**'
+      - 'integration/test_remote_path_mapping_image.py'
+      - '.github/workflows/remote-path-mapping-regression.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docker-remote-mapping:
+    name: Source build and actual HTTP/SQLite mapping proof
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Build disposable Docker image
+        run: docker build --progress=plain -f Dockerfile.build -t chaptarrng:rpm-regression .
+      - name: Exercise mapping API and persistent SQLite lifecycle
+        run: python3 integration/test_remote_path_mapping_image.py --image chaptarrng:rpm-regression
