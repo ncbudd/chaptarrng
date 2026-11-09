@@ -15,6 +15,7 @@ import { fetchHealth } from 'Store/Actions/systemActions';
 import { fetchTagDetails, fetchTags } from 'Store/Actions/tagActions';
 import { detectOrphanedModals, forceCloseAllModals } from 'Utilities/modalCleanup';
 import { repopulatePage } from 'Utilities/pagePopulator';
+import refreshUiSession from 'Utilities/refreshUiSession';
 import titleCase from 'Utilities/String/titleCase';
 
 function getHandlerName(name) {
@@ -137,7 +138,7 @@ class SignalRConnector extends Component {
 
     this.connection = new signalR.HubConnectionBuilder()
       .configureLogging(new Logger(signalR.LogLevel.Information))
-      .withUrl(url, { accessTokenFactory: () => window.Chaptarr.apiKey })
+      .withUrl(url, { accessTokenFactory: this.getAccessToken })
       .withAutomaticReconnect({
         nextRetryDelayInMilliseconds: (retryContext) => {
           if (retryContext.elapsedMilliseconds > 180000) {
@@ -172,6 +173,15 @@ class SignalRConnector extends Component {
   // Control
 
   missingHandlersLogged = new Set();
+
+  getAccessToken = async () => {
+    if (this.needsCredentialRefresh) {
+      await refreshUiSession();
+      this.needsCredentialRefresh = false;
+    }
+
+    return window.Chaptarr.apiKey;
+  };
   
   handlePauseResume = () => {
     const { isPaused } = this.state;
@@ -933,6 +943,7 @@ class SignalRConnector extends Component {
   };
 
   onReconnecting = () => {
+    this.needsCredentialRefresh = true;
     this.props.dispatchSetAppValue({ isReconnecting: true });
   };
 

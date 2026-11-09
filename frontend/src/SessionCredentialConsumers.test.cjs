@@ -100,7 +100,7 @@ test('closing calendar modal aborts its request without updating the unmounted c
   assert.equal(modal.state, before);
 });
 
-test('SignalR reconnect reads the latest UI token and redacts stale tokens from diagnostics', () => {
+test('SignalR reconnect refreshes credentials and redacts stale tokens from diagnostics', async () => {
   const captured = {};
   class HubConnectionBuilder {
     configureLogging(logger) { captured.logger = logger; return this; }
@@ -111,16 +111,27 @@ test('SignalR reconnect reads the latest UI token and redacts stale tokens from 
     }
   }
   const window = { Chaptarr: { urlBase: '/books', apiKey: 'ui_before' } };
+  let refreshes = 0;
   const Connector = load('Components/SignalRConnector.js', {
     '@microsoft/signalr/dist/browser/signalr.js': { HubConnectionBuilder, LogLevel: { Information: 2 } },
-    'react-redux': { connect: () => (component) => component }
+    'react-redux': { connect: () => (component) => component },
+    'Utilities/refreshUiSession': { __esModule: true, default: async () => {
+      refreshes++;
+      if (refreshes === 1) throw new Error('server still restarting');
+      window.Chaptarr.apiKey = 'ui_renewed';
+    } }
   }, window);
-  const connector = new Connector({});
+  const connector = new Connector({ dispatchSetAppValue() {} });
   connector.restoreImportState = () => {};
   connector.componentDidMount();
   assert.equal(captured.url, '/books/signalr/messages');
-  assert.equal(captured.options.accessTokenFactory(), 'ui_before');
+  assert.equal(await captured.options.accessTokenFactory(), 'ui_before');
   window.Chaptarr.apiKey = 'ui_after';
-  assert.equal(captured.options.accessTokenFactory(), 'ui_after');
+  assert.equal(await captured.options.accessTokenFactory(), 'ui_after');
+  connector.onReconnecting();
+  await assert.rejects(captured.options.accessTokenFactory(), /server still restarting/);
+  assert.equal(await captured.options.accessTokenFactory(), 'ui_renewed');
+  assert.equal(await captured.options.accessTokenFactory(), 'ui_renewed');
+  assert.equal(refreshes, 2);
   assert.equal(captured.logger.cleanse('retry /signalr?access_token=ui_before&other=1'), 'retry /signalr?access_token=(removed)&other=1');
 });

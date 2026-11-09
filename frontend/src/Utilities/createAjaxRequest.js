@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import refreshUiSession from './refreshUiSession';
 
 const absUrlRegex = /^(https?:)?\/\//i;
 
@@ -27,7 +28,7 @@ function addContentType(ajaxOptions) {
 }
 
 export default function createAjaxRequest(originalAjaxOptions) {
-  const requestXHR = new window.XMLHttpRequest();
+  let requestXHR = new window.XMLHttpRequest();
   let aborted = false;
   let complete = false;
 
@@ -39,6 +40,7 @@ export default function createAjaxRequest(originalAjaxOptions) {
   }
 
   const ajaxOptions = { ...originalAjaxOptions };
+  const usesUiSession = isRelative(ajaxOptions) && window.Chaptarr.apiKey?.startsWith('ui_');
 
   if (isRelative(ajaxOptions)) {
     addRootUrl(ajaxOptions);
@@ -46,9 +48,32 @@ export default function createAjaxRequest(originalAjaxOptions) {
     addContentType(ajaxOptions);
   }
 
-  const request = $.ajax({
+  const send = () => $.ajax({
     xhr: () => requestXHR,
     ...ajaxOptions
+  });
+
+  const request = send().then(null, (xhr, textStatus, errorThrown) => {
+    if (!aborted && usesUiSession && xhr.status === 401) {
+      const retry = $.Deferred();
+      refreshUiSession().then(() => {
+        if (aborted) {
+          retry.reject(xhr, textStatus, errorThrown);
+          return;
+        }
+
+        requestXHR = new window.XMLHttpRequest();
+        addApiKey(ajaxOptions);
+        // A 401 is rejected by authentication before the API action executes.
+        // Retry once only; a second rejection is delivered to the caller.
+        send().done((...args) => retry.resolve(...args)).fail((...args) => retry.reject(...args));
+      }, () => {
+        retry.reject(xhr, textStatus, errorThrown);
+      });
+      return retry.promise();
+    }
+
+    return $.Deferred().reject(xhr, textStatus, errorThrown).promise();
   }).then(null, (xhr, textStatus, errorThrown) => {
     xhr.aborted = aborted;
 

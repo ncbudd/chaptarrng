@@ -31,9 +31,13 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
     env = dict(os.environ, DOTNET_GCHeapHardLimit='0x30000000', ASPNETCORE_ENVIRONMENT='Production')
     log = open(args.log, 'w')
     process = subprocess.Popen([args.dotnet, str(args.app.resolve()), '-data='+str(data), '-nobrowser', '-nosingleinstancecheck'], stdout=log, stderr=subprocess.STDOUT, env=env)
-    def request(path, headers=None, method='GET'):
+    def request(path, headers=None, method='GET', body=None):
         connection=http.client.HTTPConnection('127.0.0.1',port,timeout=5)
-        connection.request(method,path,headers=headers or {})
+        headers=dict(headers or {})
+        if body is not None:
+            body=json.dumps(body)
+            headers['Content-Type']='application/json'
+        connection.request(method,path,body=body,headers=headers)
         response=connection.getresponse()
         result=(response.status,dict(response.getheaders()),response.read())
         connection.close()
@@ -81,6 +85,23 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
         assert request('/api/v1/calendar/token?calendarToken='+calendar)[0]==401
         assert request('/signalr/messages/negotiate?negotiateVersion=1',{'Authorization':'Bearer '+ui},'POST')[0]==401
         assert request('/signalr/messages/negotiate?negotiateVersion=1',{'Authorization':'Bearer '+ui,'Cookie':cookie},'POST')[0]==200
+        if not args.misconfigured_oidc:
+            status,headers,body=request('/api/v1/config/host',{'X-Api-Key':ui,'Cookie':cookie})
+            assert status==200
+            settings=json.loads(body)
+            password=secrets.token_hex(18)
+            settings.update(authenticationMethod='forms',authenticationRequired='enabled',username='audit-owner',password=password,passwordConfirmation=password)
+            status,headers,body=request('/api/v1/config/host',{'X-Api-Key':ui,'Cookie':cookie},'PUT',settings)
+            assert status in (200,202),(status,body[:1000])
+            forms_cookie=headers['Set-Cookie'].split(';',1)[0]
+            assert request('/api/v1/system/status',{'X-Api-Key':ui,'Cookie':cookie+'; '+forms_cookie})[0]==401
+            status,headers,body=request('/initialize.json',{'Cookie':forms_cookie,'Accept':'application/json'})
+            assert status==200,(status,body[:1000])
+            renewed=json.loads(body)['apiKey']
+            renewed_cookie=headers['Set-Cookie'].split(';',1)[0]
+            assert renewed!=ui and renewed.startswith('ui_')
+            assert request('/api/v1/system/status',{'X-Api-Key':renewed,'Cookie':forms_cookie+'; '+renewed_cookie})[0]==200
+            print('PASS: first-run account creation revokes the old UI token and the preserved Forms cookie obtains a usable replacement')
         print(f'PASS ({method}): real startup, anonymous setup/API rejection despite local bypass, private setup password, cookie-bound UI API/SignalR access, read-only external calendar subscription without master-key exposure')
     finally:
         process.send_signal(signal.SIGTERM)

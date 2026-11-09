@@ -1,5 +1,7 @@
-import 'Styles/globals.css';
 import { applyDocumentLocale } from 'Utilities/Localization/locale';
+import refreshUiSession from 'Utilities/refreshUiSession';
+
+import 'Styles/globals.css';
 import './polyfills';
 import './index.css';
 
@@ -180,12 +182,7 @@ async function start() {
     }
 
     try {
-      const refresh = await fetch(`${window.Chaptarr.urlBase}/initialize.json`, {
-        cache: 'no-store',
-      });
-      if (refresh.ok) {
-        window.Chaptarr.apiKey = (await refresh.json()).apiKey;
-      }
+      await refreshUiSession();
     } catch {
       // Normal API handling reports disconnected/expired sessions.
     }
