@@ -134,12 +134,18 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                     continue
                 if workflow_path.name in {"release.yml", "release-distribution.yml", "docker-publish.yml"} and line.strip() == "runs-on: ubuntu-24.04":
                     continue
-                if workflow_path.name in {"published-installed-handoff.yml", "native-audit-acceptance.yml"}:
+                if workflow_path.name in {"published-installed-handoff.yml", "native-audit-acceptance.yml", "release.yml"}:
                     if line.strip() == "runs-on: ubuntu-24.04":
                         continue
                     if line.strip() == "runs-on: ${{ matrix.runner }}":
-                        self.assertIn("runner: ubuntu-24.04-arm", source)
-                        self.assertIn("runner: ubuntu-24.04", source)
+                        job_name = {
+                            "published-installed-handoff.yml": "installed-linux",
+                            "native-audit-acceptance.yml": "installed",
+                            "release.yml": "installed-release-linux",
+                        }[workflow_path.name]
+                        installed = job_block(source, job_name)
+                        self.assertIn("runner: ubuntu-24.04-arm", installed)
+                        self.assertIn("runner: ubuntu-24.04", installed)
                         continue
                 self.assertNotRegex(
                     line,
@@ -179,7 +185,12 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         for name in ("require-release-readiness", "build-and-push"):
             self.assertIn("runs-on: ubuntu-24.04", job_block(docker, name), name)
         self.assertIn("needs: require-release-readiness", job_block(docker, "build-and-push"))
-        self.assertIn("needs: [preflight, release, docker, standalone-assets, rpm-source, windows-migration-installer, legacy-desktop-candidates]", job_block(release, "publish-release"))
+        installed = job_block(release, "installed-release-linux")
+        for rid in ("linux-x64", "linux-arm64", "linux-musl-x64", "linux-musl-arm64", "linux-x86"):
+            self.assertIn(f"rid: {rid}", installed)
+        self.assertIn("test-bookshelf-standalone-handoff.py", installed)
+        self.assertIn("needs: [preflight, release, docker, standalone-assets, installed-release-linux, rpm-source, windows-migration-installer, legacy-desktop-candidates]", job_block(release, "publish-release"))
+        self.assertIn("needs.installed-release-linux.result == 'success'", job_block(release, "publish-release"))
 
     def test_published_installed_handoff_uses_exact_release_assets(self) -> None:
         source = (WORKFLOW.parent / "published-installed-handoff.yml").read_text(encoding="utf-8")

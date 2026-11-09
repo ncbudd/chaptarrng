@@ -584,6 +584,121 @@ jobs:
         retention-days: 7
         if-no-files-found: error
 
+  installed-release-linux:
+    name: Validate ${{ matrix.rid }} installed migration and rollback before publication
+    needs: [release, standalone-assets]
+    timeout-minutes: 40
+    runs-on: ${{ matrix.runner }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - rid: linux-x64
+            runner: ubuntu-24.04
+            flavor: glibc
+            predecessor_sha256: a490b90bfcc608a40844d5c3ce09f3cc95b767e3fbea93c71401b33326ab30f2
+          - rid: linux-arm64
+            runner: ubuntu-24.04-arm
+            flavor: glibc
+            predecessor_sha256: 1aeca17ed8cd8ed862e7d88ef334fda825fe796832cbfbf7e66e8d102fee4d03
+          - rid: linux-musl-x64
+            runner: ubuntu-24.04
+            flavor: musl
+            predecessor_sha256: f0d8983f72663fcb5ccbeb4758bc4adcb1e9d5d19ed57c62e91a0409b3500bba
+          - rid: linux-musl-arm64
+            runner: ubuntu-24.04-arm
+            flavor: musl
+            predecessor_sha256: 95968365c66772193c53264831dd1ef7ff6954ebdbd26e423b1cd777ddf3caad
+          - rid: linux-x86
+            runner: ubuntu-24.04
+            flavor: x86
+            predecessor_sha256: 1c6f2ecf34d5c39358c8a3d1b2ab165b0de5f59501c44e11353fb897199fd9b1
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ${{ needs.release.outputs.sha }}
+        persist-credentials: false
+    - name: Verify checked-out release source
+      env:
+        EXPECTED_RELEASE_SHA: ${{ needs.release.outputs.sha }}
+      run: bash packaging/scripts/verify-release-source-sha.sh
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+      with:
+        name: chaptarrng-standalone-${{ matrix.rid }}
+        path: ${{ runner.temp }}/standalone-candidate
+    - name: Download and verify predecessor and candidate
+      env:
+        VERSION: ${{ needs.release.outputs.version }}
+        RID: ${{ matrix.rid }}
+        PREDECESSOR_SHA256: ${{ matrix.predecessor_sha256 }}
+      run: |
+        set -euo pipefail
+        candidate="ChaptarrNG-${VERSION}-${RID}.tar.gz"
+        predecessor="BookshelfNG-v0.4.21.76-${RID}.tar.gz"
+        (cd "$RUNNER_TEMP/standalone-candidate" && sha256sum --check "$candidate.sha256")
+        mkdir -p "$RUNNER_TEMP/standalone-predecessor"
+        curl --fail --location --retry 3 --retry-all-errors \
+          "https://github.com/snapetech-org/bookshelfng/releases/download/v0.4.21.76/$predecessor" \
+          --output "$RUNNER_TEMP/standalone-predecessor/$predecessor"
+        printf '%s  %s\n' "$PREDECESSOR_SHA256" "$RUNNER_TEMP/standalone-predecessor/$predecessor" | sha256sum --check -
+    - name: Exercise installed migration and forced rollback
+      env:
+        RID: ${{ matrix.rid }}
+        FLAVOR: ${{ matrix.flavor }}
+        VERSION: ${{ needs.release.outputs.version }}
+        RELEASE_SHA: ${{ needs.release.outputs.sha }}
+      run: |
+        set -euo pipefail
+        mkdir -p "$RUNNER_TEMP/standalone-handoff/work"
+        predecessor="BookshelfNG-v0.4.21.76-${RID}.tar.gz"
+        candidate="ChaptarrNG-${VERSION}-${RID}.tar.gz"
+        if [[ "$FLAVOR" == glibc ]]; then
+          TMPDIR="$RUNNER_TEMP/standalone-handoff/work" python3 packaging/scripts/test-bookshelf-standalone-handoff.py \
+            "$RUNNER_TEMP/standalone-predecessor/$predecessor" \
+            "$RUNNER_TEMP/standalone-candidate/$candidate" \
+            --output "$RUNNER_TEMP/standalone-handoff/evidence" --candidate-revision "$RELEASE_SHA" --runtime-id "$RID" \
+            2>&1 | tee "$RUNNER_TEMP/standalone-handoff/acceptance.log"
+        else
+          image="chaptarrng-release-handoff-${RID}:$GITHUB_RUN_ID"
+          docker_platform=()
+          fixture_options=()
+          fixture_library="$RUNNER_TEMP/standalone-handoff/library"
+          mkdir -p "$fixture_library/Fixture Author/Ebooks" "$fixture_library/Fixture Author/Audiobooks"
+          if [[ "$FLAVOR" == x86 ]]; then
+            docker_platform=(--platform linux/386)
+            fixture_options=(--preinitialized-source-auxiliary-databases --exclude-legacy-x86-mam-indexer)
+          fi
+          docker build "${docker_platform[@]}" -t "$image" -f "integration/standalone-handoff/Dockerfile.$FLAVOR" integration/standalone-handoff
+          docker run "${docker_platform[@]}" --rm --network none --user "$(id -u):$(id -g)" \
+            --cap-drop ALL --security-opt no-new-privileges --pids-limit 512 --memory 6g --cpus 2 \
+            -e TMPDIR=/work/work -v "$PWD:/repo:ro" \
+            -v "$RUNNER_TEMP/standalone-predecessor:/predecessor:ro" \
+            -v "$RUNNER_TEMP/standalone-candidate:/candidate:ro" \
+            -v "$fixture_library:/library" \
+            -v "$RUNNER_TEMP/standalone-handoff:/work" \
+            "$image" "/predecessor/$predecessor" "/candidate/$candidate" \
+            --output /work/evidence --candidate-revision "$RELEASE_SHA" --runtime-id "$RID" "${fixture_options[@]}" \
+            2>&1 | tee "$RUNNER_TEMP/standalone-handoff/acceptance.log"
+        fi
+    - name: Record runner kernel
+      if: always()
+      run: |
+        mkdir -p "$RUNNER_TEMP/standalone-handoff"
+        uname -r > "$RUNNER_TEMP/standalone-handoff/kernel-release.txt"
+    - name: Retain installed handoff evidence
+      if: always()
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      with:
+        name: release-installed-${{ matrix.rid }}
+        path: |
+          ${{ runner.temp }}/standalone-handoff/acceptance.log
+          ${{ runner.temp }}/standalone-handoff/evidence/**
+          ${{ runner.temp }}/standalone-handoff/kernel-release.txt
+        retention-days: 30
+        if-no-files-found: warn
+
   windows-migration-installer:
     name: Build BookshelfNG Windows migration installer
     needs: [preflight, release, standalone-assets]
@@ -806,13 +921,14 @@ jobs:
         if-no-files-found: error
 
   publish-release:
-    needs: [preflight, release, docker, standalone-assets, rpm-source, windows-migration-installer, legacy-desktop-candidates]
+    needs: [preflight, release, docker, standalone-assets, installed-release-linux, rpm-source, windows-migration-installer, legacy-desktop-candidates]
     if: >-
       always() &&
       needs.preflight.result == 'success' &&
       needs.release.result == 'success' &&
       needs.docker.result == 'success' &&
       needs.standalone-assets.result == 'success' &&
+      needs.installed-release-linux.result == 'success' &&
       needs.rpm-source.result == 'success' &&
       (needs.windows-migration-installer.result == 'success' || needs.windows-migration-installer.result == 'skipped') &&
       (needs.legacy-desktop-candidates.result == 'success' || needs.legacy-desktop-candidates.result == 'skipped') &&

@@ -33,6 +33,7 @@ using NzbDrone.Core.Http;
 using NzbDrone.Core.Lifecycle;
 using NzbDrone.Core.Messaging.Events;
 using NzbDrone.Core.RemotePathMappings;
+using NzbDrone.Core.Update;
 // using NzbDrone.Core.MetadataSource.Hardcover; // Removed - using V5 API via BookInfoProxy
 using NzbDrone.Core.Books.Services;
 using NzbDrone.Core.Organizer;
@@ -61,6 +62,14 @@ namespace NzbDrone.Host
         internal static void RegisterRealRemotePathMappingService(IContainer container)
         {
             container.Register<IRemotePathMappingService, RemotePathMappingService>(
+                Reuse.Singleton, ifAlreadyRegistered: IfAlreadyRegistered.Replace);
+        }
+
+        internal static void RegisterUpdatePackageProviders(IContainer container)
+        {
+            container.Register<IGitHubUpdatePackageProvider, GitHubUpdatePackageProvider>(
+                Reuse.Singleton, ifAlreadyRegistered: IfAlreadyRegistered.Replace);
+            container.Register<IUpdatePackageProvider, UpdatePackageProvider>(
                 Reuse.Singleton, ifAlreadyRegistered: IfAlreadyRegistered.Replace);
         }
 
@@ -144,6 +153,7 @@ namespace NzbDrone.Host
                                 .AddStartupContext(startupContext);
 
                             RegisterRealRemotePathMappingService(utilityContainer);
+                            RegisterUpdatePackageProviders(utilityContainer);
 
                             var utilityProvider = utilityFactory.CreateServiceProvider(utilityContainer);
                             utilityProvider.GetRequiredService<IUtilityModeRouter>().Route(appMode);
@@ -250,6 +260,7 @@ namespace NzbDrone.Host
                         .AddStartupContext(context);
 
                     RegisterRealRemotePathMappingService(c);
+                    RegisterUpdatePackageProviders(c);
                     c.Resolve<IEventAggregator>().PublishEvent(new ApplicationStartingEvent());
                 })
                 .ConfigureServices(services =>

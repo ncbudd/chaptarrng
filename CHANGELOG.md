@@ -4,6 +4,18 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.991](https://github.com/snapetech-org/chaptarrng/compare/v0.9.990..v0.9.991) - 2026-11-09
+
+### Fixes
+
+- Register both update-package providers explicitly so Linux x86 standalone installs can start after a BookshelfNG migration. The installed No, Manual, Yes, and forced-rollback handoff now passes with the corrected x86 build.
+- Restore browser session credentials after authentication changes and restarts, while preserving scoped calendar subscriptions.
+- Include the application and supply-chain security audit fixes merged after 0.9.990.
+
+### Release validation
+
+- Require installed migration and forced-rollback acceptance for every Linux standalone architecture before publishing a release.
+
 ## [0.9.990](https://github.com/snapetech-org/chaptarrng/compare/v0.9.988..v0.9.990) - 2026-11-09
 
 ### Release infrastructure
