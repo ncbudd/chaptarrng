@@ -10,7 +10,7 @@ const script = `
     if (options.method === 'POST') {
       posts += 1;
       return { ok: true, json: async () => ({
-        id: '987654321', guild_id: guild, channel_id: channel,
+        id: '987654321', channel_id: channel,
         embeds: [{ description: process.env.ANNOUNCEMENT_BODY }],
       }) };
     }

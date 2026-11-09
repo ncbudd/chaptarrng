@@ -142,12 +142,11 @@ for (let index = 0; index < chunks.length; index += 1) {
   if (!receipt.id) {
     throw new Error('Discord did not confirm the announcement message.');
   }
-  if (!/^\d+$/.test(receipt.guild_id) || !/^\d+$/.test(receipt.channel_id)) {
-    throw new Error('Discord did not confirm the announcement destination.');
-  }
+  // The wait=true message receipt can omit guild_id. The webhook lookup above
+  // already verified both destination IDs before any POST was sent.
   if (
-    receipt.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID ||
-    receipt.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID
+    (receipt.guild_id && receipt.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID) ||
+    (receipt.channel_id && receipt.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID)
   ) {
     throw new Error('Discord confirmed an unexpected announcement destination.');
   }
@@ -155,9 +154,9 @@ for (let index = 0; index < chunks.length; index += 1) {
     'Discord announcement message ' +
       (index + 1) +
       ': https://discord.com/channels/' +
-      receipt.guild_id +
+      CHAPTARRNG_DISCORD_GUILD_ID +
       '/' +
-      receipt.channel_id +
+      CHAPTARRNG_DISCORD_CHANNEL_ID +
       '/' +
       receipt.id
   );
