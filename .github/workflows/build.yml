@@ -522,7 +522,7 @@ jobs:
       run: echo "PLAYWRIGHT_BROWSERS_PATH=$PLAYWRIGHT_BROWSERS_PATH" >> "$GITHUB_ENV"
 
     - name: Install Chromium and system dependencies on Linux
-      if: runner.os == 'Linux'
+      if: runner.os == 'Linux' && inputs.runner_pool == 'public'
       env:
         PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers
       shell: bash

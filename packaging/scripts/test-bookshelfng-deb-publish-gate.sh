@@ -32,12 +32,13 @@ for workflow in "$repo_root/.github/workflows/build.yml" \
   "$repo_root/.github/workflows/docker-publish.yml" \
   "$release_workflow" "$repo_root/.github/workflows/release-distribution.yml"; do
   if [[ "$workflow" == "$repo_root/.github/workflows/build.yml" ]]; then
+    chromium_step="$(sed -n '/^    - name: Install Chromium and system dependencies on Linux$/,/^    - name: Verify Unraid package sync stays off feature branches$/p' "$workflow")"
     if grep -Fq 'sudo apt-get' "$workflow" && {
-      ! grep -Fq 'RUNNER_POOL: ${{ inputs.runner_pool }}' "$workflow" ||
-      ! grep -Fq 'if [[ "$RUNNER_POOL" == "public" ]]' "$workflow" ||
-      ! grep -Fq "inputs.runner_pool == 'public'" "$workflow"
+      ! grep -Fq "if: runner.os == 'Linux' && inputs.runner_pool == 'public'" <<< "$chromium_step" ||
+      ! grep -Fq 'sudo apt-get install -y bubblewrap' <<< "$chromium_step" ||
+      [[ "$(grep -Fc 'sudo apt-get' "$workflow")" != "$(grep -Fc 'sudo apt-get' <<< "$chromium_step")" ]]
     }; then
-      echo 'Hosted PostgreSQL client installation must be restricted to the explicit public runner pool.' >&2
+      echo 'Chromium system dependency installation must be restricted to the explicit public runner pool.' >&2
       exit 1
     fi
   elif [[ "$workflow" == "$release_workflow" ]]; then

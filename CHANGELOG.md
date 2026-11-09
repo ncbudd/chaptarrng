@@ -4,6 +4,15 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.992](https://github.com/snapetech-org/chaptarrng/compare/v0.9.991..v0.9.992) - 2026-11-09
+
+### Release fixes
+
+- Correct the pinned Playwright Chromium platform key in the multi-platform Docker build. The x64 and ARM64 browser stages now build successfully.
+- Keep Chromium system dependency installation on the explicitly selected public runner route, and update the release contract to match that route.
+
+This release also includes the 0.9.991 fixes; that tag was held before publication when release validation found the Docker build failure.
+
 ## [0.9.991](https://github.com/snapetech-org/chaptarrng/compare/v0.9.990..v0.9.991) - 2026-11-09
 
 ### Fixes

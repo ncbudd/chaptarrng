@@ -15,7 +15,7 @@ ARG TARGETARCH
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 RUN mkdir -p "$PLAYWRIGHT_BROWSERS_PATH"; \
     case "$TARGETARCH" in \
-        amd64) PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04 npx --yes playwright@1.64.1 install --no-shell chromium ;; \
+        amd64) PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64 npx --yes playwright@1.64.1 install --no-shell chromium ;; \
         arm64) PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-arm64 npx --yes playwright@1.64.1 install --no-shell chromium ;; \
         arm) echo "Playwright Chromium is unavailable for linux/arm/v7; browser-assisted fallback will be unavailable on this image." ;; \
         *) echo "Unsupported architecture for Playwright Chromium: $TARGETARCH" && exit 1 ;; \
