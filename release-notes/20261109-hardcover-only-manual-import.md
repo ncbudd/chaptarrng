@@ -1,3 +1,9 @@
-## Hardcover-only manual imports
+---
+category: fixed
+audience: users
+area: imports
+action: Retry manual imports with only Hardcover selected after updating.
+breaking: false
+---
 
-Selecting only Hardcover in Metadata Provider settings now routes selected `hc:` author and edition IDs to the native Hardcover catalog during manual import. Previously this path still queried the metadata server unless the separate legacy `HARDCOVER=true` environment mode was set, so an available Hardcover edition could be reported missing from the author catalog. The explicit legacy environment mode and `HARDCOVER_NATIVE=false` override retain their behavior.
+When only Hardcover is selected in Metadata Provider settings, manual imports now look up selected author and edition IDs in Hardcover. Previously they could report an available edition missing from the author catalog unless the legacy `HARDCOVER=true` environment mode was also set.
