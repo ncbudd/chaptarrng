@@ -5,9 +5,11 @@ const plan = JSON.parse(readFileSync('/fixture/web-request.json'));
 const base = 'http://127.0.0.1:5055/api/v1';
 const headers = { 'X-Api-Key': 'synthetic-seerr-web-admin-key-20261105' };
 for (let n = 0; n < 120; n++) {
+  // nosemgrep: typescript.react.security.react-insecure-request.react-insecure-request -- synthetic integration fixture calls its loopback-only test server.
   try { if ((await fetch(base + '/status')).ok) break; } catch {}
   await new Promise(resolve => setTimeout(resolve, 1000));
 }
+  // nosemgrep: typescript.react.security.react-insecure-request.react-insecure-request -- synthetic integration fixture calls its loopback-only test server.
 const scan = await fetch(base + '/settings/jobs/readarr-scan/run', { method: 'POST', headers });
 assert.ok([200, 409].includes(scan.status), 'Expected a started or already-active library scan');
 let request;

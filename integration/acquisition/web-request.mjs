@@ -4,14 +4,17 @@ const fixture = JSON.parse(readFileSync('/fixture/manifest.json'));
 const base = 'http://127.0.0.1:5055/api/v1';
 const admin = { 'X-Api-Key': 'synthetic-seerr-web-admin-key-20261105' };
 for (let n = 0; n < 120; n++) {
+  // nosemgrep: typescript.react.security.react-insecure-request.react-insecure-request -- synthetic integration fixture calls its loopback-only test server.
   try { if ((await fetch(base + '/status')).ok) break; } catch {}
   await new Promise(resolve => setTimeout(resolve, 1000));
 }
+  // nosemgrep: typescript.react.security.react-insecure-request.react-insecure-request -- synthetic integration fixture calls its loopback-only test server.
 const login = await fetch(base + '/auth/local', { method: 'POST', headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ email: 'fixture-requester@example.invalid', password: 'Synthetic-Fixture-Password-20261105' }) });
 assert.equal(login.status, 200, await login.text());
 const cookie = login.headers.getSetCookie().map(value => value.split(';')[0]).join('; ');
 assert.ok(cookie.includes('connect.sid='));
+  // nosemgrep: typescript.react.security.react-insecure-request.react-insecure-request -- synthetic integration fixture calls its loopback-only test server.
 const submitted = await fetch(base + '/request', { method: 'POST', headers: { Cookie: cookie, 'Content-Type': 'application/json' },
   body: JSON.stringify({ mediaType: 'book', mediaId: 'bookshelf:1:MzA', format: fixture.mediaType, preferredEditionId: String(fixture.editionId) }) });
 const request = await submitted.json();

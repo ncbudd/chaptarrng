@@ -33,7 +33,7 @@ def api(base, key, method, path, body=None):
         data = json.dumps(body).encode()
     req = Request(base + path, headers=headers, data=data, method=method)
     try:
-        with urlopen(req, timeout=20) as response:
+        with urlopen(req, timeout=20) as response:  # nosemgrep: python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected -- task-owned loopback API
             raw = response.read().decode()
             return response.status, response.headers, json.loads(raw) if raw else None
     except HTTPError as error:
@@ -47,9 +47,9 @@ def ready(base, config, timeout):
     while time.monotonic() < deadline:
         if config.is_file():
             try:
-                key = ElementTree.parse(config).findtext("ApiKey")
+                key = ElementTree.parse(config).findtext("ApiKey")  # nosemgrep: python.lang.security.use-defused-xml-parse.use-defused-xml-parse -- generated local config.xml only
                 if key:
-                    with urlopen(base + "/ping", timeout=3) as response:
+                    with urlopen(base + "/ping", timeout=3) as response:  # nosemgrep: python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected -- task-owned loopback health
                         if response.status == 200:
                             return key
             except (ElementTree.ParseError, OSError, URLError, TimeoutError) as error:

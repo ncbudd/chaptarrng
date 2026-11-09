@@ -2,6 +2,7 @@
 # is accepted, replace it with the exact published multi-architecture digest
 # that passed the migration and rollback rehearsals.
 FROM ghcr.io/snapetech-org/chaptarrng:latest
+# nosemgrep: dockerfile.security.last-user-is-root.last-user-is-root -- Unpublished Cloudron migration candidate: the read-only root requires privileged startup; publication remains gated by platform acceptance.
 USER root
 
 # Cloudron requires a 2xx health response and the package has no separate

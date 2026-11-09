@@ -509,12 +509,18 @@ void ExecuteFixture(SqliteConnection connection, string relativePath, string por
     var fixturePath = Path.Combine(AppContext.BaseDirectory, relativePath.Replace('/', Path.DirectorySeparatorChar));
     var sql = File.ReadAllText(fixturePath).Replace("/library", portableLibraryPath, StringComparison.Ordinal);
     using var command = connection.CreateCommand();
-    command.CommandText = sql;
+    // Only the committed schema and migration fixtures are passed by this smoke test.
+    command.CommandText = sql; // nosemgrep: csharp.lang.security.sqli.csharp-sqli.csharp-sqli
     command.ExecuteNonQuery();
 }
 
 static long CountRowsIfTableExists(SqliteConnection connection, string tableName)
 {
+    if (tableName is not ("Authors" or "Books" or "BookFiles"))
+    {
+        throw new ArgumentOutOfRangeException(nameof(tableName));
+    }
+
     using var command = connection.CreateCommand();
     command.CommandText = "SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = $table;";
     command.Parameters.AddWithValue("$table", tableName);
@@ -523,7 +529,7 @@ static long CountRowsIfTableExists(SqliteConnection connection, string tableName
         return 0;
     }
 
-    command.CommandText = $"SELECT COUNT(*) FROM \"{tableName}\";";
+    command.CommandText = $"SELECT COUNT(*) FROM \"{tableName}\";"; // nosemgrep: csharp.lang.security.sqli.csharp-sqli.csharp-sqli -- tableName is allowlisted above.
     return Convert.ToInt64(command.ExecuteScalar());
 }
 
@@ -540,7 +546,8 @@ static string CreateConnectionString(string databasePath, SqliteOpenMode mode)
 static T QueryScalar<T>(SqliteConnection connection, string sql)
 {
     using var command = connection.CreateCommand();
-    command.CommandText = sql;
+    // Every caller supplies a literal query within this local smoke test.
+    command.CommandText = sql; // nosemgrep: csharp.lang.security.sqli.csharp-sqli.csharp-sqli
     var value = command.ExecuteScalar();
     if (value is null or DBNull)
     {

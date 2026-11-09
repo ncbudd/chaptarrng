@@ -883,7 +883,7 @@ def preserve_postgres_side_schemas(state: dict) -> None:
         prefix="target-postgres-log-cache-",
         dir=state["backupDir"],
     ))
-    os.chmod(current_backup, 0o700)
+    os.chmod(current_backup, 0o700)  # nosemgrep: python.lang.security.audit.insecure-file-permissions.insecure-file-permissions -- private PostgreSQL backup directory; directory and executable modes cannot be 0644.
     os.chown(current_backup, uid, gid)
     state["targetPostgresBackupDir"] = str(current_backup)
     write_state(state)
@@ -1266,7 +1266,7 @@ def install_mode_locked(args: argparse.Namespace, service: str) -> int:
     ensure_space(install_dir.parent, archive_bytes, "application")
     helper_path = backup_dir / "bookshelfng-systemd-bootstrap.py"
     shutil.copy2(pathlib.Path(__file__).resolve(), helper_path)
-    os.chmod(helper_path, 0o755)
+    os.chmod(helper_path, 0o755)  # nosemgrep: python.lang.security.audit.insecure-file-permissions.insecure-file-permissions -- copied executable helper; directory and executable modes cannot be 0644.
     state_path = backup_dir / "state.json"
     previous_app = backup_dir / "previous-app"
     config_snapshot = backup_dir / "config.xml"
@@ -1320,7 +1320,7 @@ def install_mode_locked(args: argparse.Namespace, service: str) -> int:
     global BOOTSTRAP_ENVIRONMENT
     BOOTSTRAP_ENVIRONMENT = environment
     stage_parent = pathlib.Path(tempfile.mkdtemp(prefix=".chaptarrng-bookshelf-bootstrap-", dir=install_dir.parent))
-    os.chmod(stage_parent, 0o755)
+    os.chmod(stage_parent, 0o755)  # nosemgrep: python.lang.security.audit.insecure-file-permissions.insecure-file-permissions -- service-traversable staging directory; directory and executable modes cannot be 0644.
     try:
         staged_app = extract_release_archive(archive_snapshot, stage_parent / "release")
         os.chown(staged_app, dynamic_user, service_gid)
@@ -1330,7 +1330,7 @@ def install_mode_locked(args: argparse.Namespace, service: str) -> int:
         target_app = pathlib.Path(state["targetApp"])
         shutil.copytree(staged_app, target_app, symlinks=True, copy_function=shutil.copy2)
         os.chown(target_app, dynamic_user, service_gid)
-        os.chmod(target_app, 0o755)
+        os.chmod(target_app, 0o755)  # nosemgrep: python.lang.security.audit.insecure-file-permissions.insecure-file-permissions -- installed application directory; directory and executable modes cannot be 0644.
         for path in target_app.rglob("*"):
             if not path.is_symlink():
                 os.chown(path, dynamic_user, service_gid)
@@ -1362,9 +1362,9 @@ def install_mode_locked(args: argparse.Namespace, service: str) -> int:
             state["configUid"] = data_stat.st_uid
             state["configGid"] = data_stat.st_gid
             state["configMode"] = 0o640
-        os.chmod(backup_dir, 0o711)
+        os.chmod(backup_dir, 0o711)  # nosemgrep: python.lang.security.audit.insecure-file-permissions.insecure-file-permissions -- traversal-only backup directory; directory and executable modes cannot be 0644.
         copytree_preserving_ownership(install_dir, previous_app)
-        os.chmod(previous_app, 0o700)
+        os.chmod(previous_app, 0o700)  # nosemgrep: python.lang.security.audit.insecure-file-permissions.insecure-file-permissions -- owner-private previous application backup; directory and executable modes cannot be 0644.
 
         if source_is_postgres:
             postgres_backup_dir.mkdir(mode=0o700)
