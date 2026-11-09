@@ -805,8 +805,8 @@ jobs:
       needs.docker.result == 'success' &&
       needs.standalone-assets.result == 'success' &&
       needs.rpm-source.result == 'success' &&
-      !contains(fromJSON('["failure", "cancelled"]'), needs.windows-migration-installer.result) &&
-      !contains(fromJSON('["failure", "cancelled"]'), needs.legacy-desktop-candidates.result) &&
+      (needs.windows-migration-installer.result == 'success' || needs.windows-migration-installer.result == 'skipped') &&
+      (needs.legacy-desktop-candidates.result == 'success' || needs.legacy-desktop-candidates.result == 'skipped') &&
       (
         github.event_name != 'workflow_dispatch' ||
         (
