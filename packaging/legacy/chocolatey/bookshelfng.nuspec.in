@@ -10,6 +10,9 @@
     <projectUrl>https://github.com/snapetech-org/chaptarrng</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/snapetech-org/chaptarrng@1171a870bf1f44dac799eae53f44507562ed78f8/frontend/src/Content/Images/Icons/apple-touch-icon.png</iconUrl>
     <packageSourceUrl>https://github.com/snapetech-org/chaptarrng/tree/main/packaging/legacy/chocolatey</packageSourceUrl>
+    <projectSourceUrl>https://github.com/snapetech-org/chaptarrng</projectSourceUrl>
+    <mailingListUrl>https://github.com/snapetech-org/chaptarrng/discussions</mailingListUrl>
+    <releaseNotes>https://github.com/snapetech-org/chaptarrng/releases</releaseNotes>
     <docsUrl>https://github.com/snapetech-org/chaptarrng/blob/main/docs/MIGRATE_FROM_BOOKSHELFNG.md</docsUrl>
     <bugTrackerUrl>https://github.com/snapetech-org/chaptarrng/issues</bugTrackerUrl>
     <licenseUrl>https://github.com/snapetech-org/chaptarrng/blob/main/LICENSE</licenseUrl>
