@@ -677,7 +677,8 @@ test('release builds and verifies desktop migration candidates only behind all r
   const guardedSteps = desktopJob.match(/^      if: .*vars\.CHAPTARRNG_MIGRATION_BRIDGE_ENABLED == 'true'.*vars\.CHAPTARRNG_RELEASE_READY == 'true'.*vars\.BOOKSHELFNG_RELEASE_READY == 'true'.*$/gm) ?? [];
   assert.equal(guardedSteps.length, 5, 'download, build, and upload steps all require every release gate');
   assert.match(desktopJob, /name: chaptarrng-bookshelfng-desktop-candidates/);
-  assert.match(publishJob, /needs: \[preflight, release, docker, standalone-assets, rpm-source, windows-migration-installer, legacy-desktop-candidates\]/);
+  assert.match(publishJob, /needs: \[preflight, release, docker, standalone-assets, installed-release-linux, rpm-source, windows-migration-installer, legacy-desktop-candidates\]/);
+  assert.match(publishJob, /needs\.installed-release-linux\.result == 'success'/);
   assert.match(publishJob, /name: chaptarrng-bookshelfng-desktop-candidates/);
   assert.match(publishJob, /ChaptarrNG-\$\{VERSION\}-bookshelfng-x86_64\.AppImage/);
   assert.match(publishJob, /ChaptarrNG-\$\{VERSION\}-bookshelfng\.flatpak/);
