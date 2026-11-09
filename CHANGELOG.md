@@ -14,7 +14,7 @@ history grouped from conventional commits.
 
 ### Release validation
 
-- Require installed migration and forced-rollback acceptance for every Linux standalone architecture before publishing a release.
+- Require installed migration and forced-rollback acceptance for Linux, macOS, and Windows standalone archives before publishing a release.
 
 ## [0.9.990](https://github.com/snapetech-org/chaptarrng/compare/v0.9.988..v0.9.990) - 2026-11-09
 

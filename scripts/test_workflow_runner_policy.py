@@ -189,8 +189,16 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         for rid in ("linux-x64", "linux-arm64", "linux-musl-x64", "linux-musl-arm64", "linux-x86"):
             self.assertIn(f"rid: {rid}", installed)
         self.assertIn("test-bookshelf-standalone-handoff.py", installed)
-        self.assertIn("needs: [preflight, release, docker, standalone-assets, installed-release-linux, rpm-source, windows-migration-installer, legacy-desktop-candidates]", job_block(release, "publish-release"))
+        desktop = job_block(release, "installed-release-desktop")
+        for rid in ("osx-x64", "osx-arm64", "win-x64", "win-x86"):
+            self.assertIn(f"rid: {rid}", desktop)
+        for runner in ("macos-15-intel", "macos-15", "windows-2022"):
+            self.assertIn(f"runner: {runner}", desktop)
+        self.assertIn("test-bookshelf-standalone-handoff.py", desktop)
+        self.assertIn("integration/standalone-handoff/windows.py", desktop)
+        self.assertIn("needs: [preflight, release, docker, standalone-assets, installed-release-linux, installed-release-desktop, rpm-source, windows-migration-installer, legacy-desktop-candidates]", job_block(release, "publish-release"))
         self.assertIn("needs.installed-release-linux.result == 'success'", job_block(release, "publish-release"))
+        self.assertIn("needs.installed-release-desktop.result == 'success'", job_block(release, "publish-release"))
 
     def test_published_installed_handoff_uses_exact_release_assets(self) -> None:
         source = (WORKFLOW.parent / "published-installed-handoff.yml").read_text(encoding="utf-8")
