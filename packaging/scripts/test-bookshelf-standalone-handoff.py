@@ -156,7 +156,9 @@ def start_predecessor(app: Path, data_dir: Path, log_path: Path) -> subprocess.P
         env={**os.environ, "HARDCOVER": "false", "HARDCOVER_NATIVE": "false"},
     )
     RUNNING.append(process)
-    wait_http(process, 90, "BookshelfNG predecessor")
+    # The 32-bit predecessor runs through CPU emulation on hosted x64 Linux.
+    # Keep the native-platform limit while allowing that slower source startup.
+    wait_http(process, 180 if struct.calcsize("P") == 4 else 90, "BookshelfNG predecessor")
     return process
 
 
