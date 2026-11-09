@@ -60,9 +60,11 @@ for decision carry-forward rules and current maps. ChaptarrNG retirement also
 requires every item in the cumulative feature matrix below, whether released,
 maintained, active, or unreleased.
 
-Organization-wide build, test, scan, package, and release jobs must use private
-ephemeral JIT runners with no hosted fallback. Missing platform capacity blocks
-the exact-head evidence required to close a row.
+Build, test, scan, package, and release jobs use compatible GitHub-hosted
+runners by default. Private ephemeral JIT is reserved for private resources,
+special hardware or storage, or explicit isolation that hosted runners cannot
+provide; missing private capacity is not a blocker when a compatible hosted
+runner is available.
 
 ## Historical BookshelfNG consolidation status — 2026-10-21
 
