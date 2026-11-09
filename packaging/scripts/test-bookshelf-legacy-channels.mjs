@@ -148,8 +148,8 @@ test('Linux, macOS and FreeBSD standalone archives include the optional, recover
   const migrationGuide = read('docs/MIGRATE_FROM_BOOKSHELFNG.md');
   const handoffTest = read('packaging/scripts/test-bookshelf-standalone-handoff.py');
 
-  assert.match(builder, /publish_standalone_project\(\)[\s\S]*?if \[\[ "\$rid" == linux-x86 \|\| "\$rid" == freebsd-x64 \]\][\s\S]*?dotnet publish "\$@" "\$\{restore_sources\[@\]\}"/,
-    'macOS Bash can publish standalone RIDs without expanding an empty array under nounset');
+  assert.match(builder, /publish_standalone_project\(\)[\s\S]*?if \[\[ "\$rid" == linux-x86 \|\| "\$rid" == freebsd-x64 \]\]; then\s+dotnet publish "\$@" --no-restore "\$\{restore_sources\[@\]\}"\s+else\s+dotnet publish "\$@" --no-restore\s+fi/,
+    'macOS Bash can publish ordinary standalone RIDs without expanding an empty array under nounset');
   assert.match(builder, /export NUGET_PACKAGES="\$work\/nuget-packages"/,
     'extra-platform restores cannot reuse a same-version runtime from a shared NuGet cache');
   assert.match(builder, /"--artifacts-path"\s+"\$work\/artifacts"/,
