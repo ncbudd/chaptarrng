@@ -1,0 +1,74 @@
+# ng-runner-policy: trusted-hosted-or-private-jit-v1
+name: Media recovery acceptance
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/NzbDrone.Core/MediaFiles/**'
+      - 'src/NzbDrone.Common/Processes/**'
+      - 'src/Chaptarr.Core.Test/MediaFiles/**'
+      - 'src/Directory.*'
+      - 'global.json'
+      - 'integration/Dockerfile.m4b-test'
+      - 'integration/test-m4b-whole-app-recovery.py'
+      - '.github/workflows/media-recovery-acceptance.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: media-recovery-acceptance-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  recovery:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
+        with:
+          global-json-file: global.json
+      - name: Build locked application and media regressions
+        run: |
+          dotnet restore src/NzbDrone.Console/Chaptarr.Console.csproj --locked-mode --disable-parallel -m:1
+          dotnet restore src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --locked-mode --disable-parallel -m:1
+          dotnet build src/NzbDrone.Console/Chaptarr.Console.csproj -c Release --no-restore -m:1
+          dotnet build src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj -c Release --no-restore -m:1
+      - name: Build pinned media tool image
+        run: docker build -f integration/Dockerfile.m4b-test -t chaptarrng-m4b-test:ci integration
+      - name: Require real-tool merge, fallback, chapters and restart cases
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+            --pids-limit 1024 --memory 4g --cpus 2 \
+            --volume "$GITHUB_WORKSPACE:/workspace" --workdir /workspace/_tests/net10.0 \
+            chaptarrng-m4b-test:ci dotnet vstest Chaptarr.Core.Test.dll \
+            --TestCaseFilter:'FullyQualifiedName~real_m4b_tool_should_' \
+            --ResultsDirectory:/workspace/media-results --Logger:'trx;LogFileName=media.trx'
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          ns = {'t': 'http://microsoft.com/schemas/VisualStudio/TeamTest/2010'}
+          results = ET.parse('media-results/media.trx').getroot().findall('t:Results/t:UnitTestResult', ns)
+          if len(results) < 10 or any(r.get('outcome') != 'Passed' for r in results):
+              raise SystemExit('Real M4B tool acceptance requires at least ten passed cases and no skips.')
+          print(f'Real M4B tool acceptance: {len(results)} passed, zero skipped.')
+          PY
+      - name: Kill and restart the complete product during real M4B conversion
+        run: >-
+          python3 integration/test-m4b-whole-app-recovery.py
+          --candidate-directory _output/net10.0
+          --candidate-revision "$GITHUB_SHA"
+          --image chaptarrng-m4b-test:ci
+          --work-dir "$RUNNER_TEMP/m4b-whole-app-recovery"
+      - name: Retain media and process recovery evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: media-recovery-${{ github.sha }}
+          path: |
+            media-results/*.trx
+            ${{ runner.temp }}/m4b-whole-app-recovery/evidence/
+          retention-days: 14
+          if-no-files-found: warn
