@@ -4,6 +4,16 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.993](https://github.com/snapetech-org/chaptarrng/compare/v0.9.992..v0.9.993) - 2026-11-09
+
+### Release fixes
+
+- Use Ubuntu 24.04-compatible signing arguments for the BookshelfNG Launchpad source package. Signed source and binary package acceptance passes.
+- Restore the Docker build against the repository's complete runtime lock files, then publish each target architecture. Local build stages pass for amd64, arm64, and arm/v7.
+- Refresh the Windows migration installer core lock file for its self-contained win-x64 publish. Strict locked restore now accepts the pinned linker dependency.
+
+This release includes the fixes staged under 0.9.991 and 0.9.992; those tags were held after release validation found packaging, Docker, and Windows installer build failures.
+
 ## [0.9.992](https://github.com/snapetech-org/chaptarrng/compare/v0.9.991..v0.9.992) - 2026-11-09
 
 ### Release fixes

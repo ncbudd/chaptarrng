@@ -70,7 +70,7 @@ RUN --mount=type=cache,target=/root/.nuget/packages,sharing=locked \
         "linux/arm/v7") RUNTIME_ID="linux-arm" ;; \
         *) echo "Unsupported platform: $TARGETPLATFORM" && exit 1 ;; \
     esac; \
-    dotnet restore src/Chaptarr.NoTests.sln --locked-mode -m:1 -r "$RUNTIME_ID"; \
+    dotnet restore src/Chaptarr.NoTests.sln --locked-mode -m:1; \
     dotnet publish src/NzbDrone.Console/Chaptarr.Console.csproj -c Release -f net10.0 -r "$RUNTIME_ID" --self-contained false -o /app --no-restore /p:EnableWindowsTargeting=true /p:RunAnalyzersDuringBuild=false /p:RunCodeAnalysis=false /p:PublishSingleFile=false
 
 RUN case "$TARGETPLATFORM" in       linux/amd64) verifier_rid=linux-x64 ;;       linux/arm64) verifier_rid=linux-arm64 ;;       linux/arm/v7) verifier_rid=linux-arm ;;       *) exit 1 ;;     esac && python3 packaging/scripts/install-update-verifier.py "$verifier_rid" /app/Tools

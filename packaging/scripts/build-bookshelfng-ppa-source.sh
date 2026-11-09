@@ -116,7 +116,8 @@ if [[ -n "${GPG_PRIVATE_KEY:-}" ]]; then
     echo 'GPG_PRIVATE_KEY did not provide a usable signing key.' >&2
     exit 1
   fi
-  gpg_args=("--sign-keyid=$fingerprint")
+  # Ubuntu 24.04's dpkg-buildpackage accepts -k but not --sign-keyid.
+  gpg_args=("-k$fingerprint")
 fi
 
 (
