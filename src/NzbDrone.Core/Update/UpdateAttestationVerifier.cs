@@ -109,6 +109,7 @@ namespace NzbDrone.Core.Update
 
         internal static bool MatchesRelease(string verifiedJson, UpdatePackage package)
         {
+            if (package?.Hash?.Length != 64 || !package.Hash.All(Uri.IsHexDigit)) { return false; }
             using var document = JsonDocument.Parse(verifiedJson);
             if (document.RootElement.ValueKind != JsonValueKind.Array) { return false; }
             foreach (var verification in document.RootElement.EnumerateArray())
@@ -123,7 +124,10 @@ namespace NzbDrone.Core.Update
                     version.Build != package.Version.Build || Math.Max(0, version.Revision) != Math.Max(0, package.Version.Revision) ||
                     !statement.TryGetProperty("subject", out var subjects)) { continue; }
                 if (subjects.EnumerateArray().Any(subject => subject.TryGetProperty("name", out var name) &&
-                    Path.GetFileName(name.GetString()) == package.FileName)) { return true; }
+                    Path.GetFileName(name.GetString()) == package.FileName &&
+                    subject.TryGetProperty("digest", out var digest) &&
+                    digest.TryGetProperty("sha256", out var hash) &&
+                    string.Equals(hash.GetString(), package.Hash, StringComparison.OrdinalIgnoreCase))) { return true; }
             }
 
             return false;

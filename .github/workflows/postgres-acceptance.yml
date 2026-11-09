@@ -42,8 +42,6 @@ jobs:
       PGPORT: '5432'
       PGUSER: chaptarr
       PGPASSWORD: chaptarr
-      TMPDIR: ${{ runner.temp }}
-      CHAPTARRNG_POSTGRES_SMOKE_DIR: ${{ runner.temp }}/postgres-acceptance
       CHAPTARRNG_KEEP_POSTGRES_EVIDENCE: 'true'
       CHAPTARRNG_POSTGRES_TEST_CONNECTION: Host=127.0.0.1;Port=5432;Database=acceptance-main;Username=chaptarr;Password=chaptarr;Pooling=false;Timeout=5;Command Timeout=300
       Chaptarr__Postgres__Host: 127.0.0.1
@@ -80,6 +78,9 @@ jobs:
           dotnet build src/NzbDrone.Console/Chaptarr.Console.csproj -c Release --no-restore -m:1
           dotnet build src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj -c Release --no-restore -m:1
       - name: Require all live migration, restore and transaction fixtures
+        env:
+          TMPDIR: ${{ runner.temp }}
+          CHAPTARRNG_POSTGRES_SMOKE_DIR: ${{ runner.temp }}/postgres-acceptance
         run: bash scripts/test-postgres-migrations-smoke.sh
       - name: Retain PostgreSQL acceptance evidence
         if: always()

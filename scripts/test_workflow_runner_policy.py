@@ -134,7 +134,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                     continue
                 if workflow_path.name in {"release.yml", "release-distribution.yml", "docker-publish.yml"} and line.strip() == "runs-on: ubuntu-24.04":
                     continue
-                if workflow_path.name == "published-installed-handoff.yml":
+                if workflow_path.name in {"published-installed-handoff.yml", "native-audit-acceptance.yml"}:
                     if line.strip() == "runs-on: ubuntu-24.04":
                         continue
                     if line.strip() == "runs-on: ${{ matrix.runner }}":

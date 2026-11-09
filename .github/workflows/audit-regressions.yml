@@ -23,6 +23,8 @@ jobs:
       - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
         with:
           global-json-file: global.json
+      - name: Validate workflow expressions and runner contexts
+        run: bash scripts/check-workflow-syntax.sh
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
         with:
           node-version: 26.12.1
@@ -67,6 +69,7 @@ jobs:
           python3 scripts/test-security-scan-discovery.py
           python3 scripts/test-audit-policy.py
           python3 scripts/test-postgres-test-results.py
+          python3 packaging/scripts/test_release_update_bundles.py
           python3 scripts/test_workflow_runner_policy.py
       - name: Retain regression evidence
         if: always()

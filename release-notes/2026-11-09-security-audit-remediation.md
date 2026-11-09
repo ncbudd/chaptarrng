@@ -10,3 +10,5 @@ Harden first-run administration, restricted API authorization, browser-session c
 See `docs/security/audit-remediation-2026-11-09.md` for all 27 audit dispositions, configuration changes and validation boundaries. GitHub branch protection is a separate administrative action and is not applied by this commit.
 
 PostgreSQL migration, restore and atomic transaction checks now run automatically against disposable PostgreSQL 16 and 17 services. Missing or skipped database acceptance cases fail validation, and successful evidence is retained.
+
+Update verification binds each archive name to its own signed digest. Release publication verifies every update bundle before upload. Automatic native archive checks exercise migration and rollback on Linux, macOS and Windows.

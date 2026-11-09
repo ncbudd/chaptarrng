@@ -568,6 +568,15 @@ jobs:
           cp "$BUNDLE" "$asset.sigstore.json"
         done
 
+    - uses: ./.github/actions/setup-github-cli
+
+    - name: Verify the update bundle with the updater trust policy
+      env:
+        VERSION: ${{ needs.release.outputs.version }}
+        SOURCE_SHA: ${{ needs.release.outputs.sha }}
+        RID: ${{ matrix.rid }}
+      run: python3 packaging/scripts/verify-release-update-bundles.py "$RUNNER_TEMP/release-assets" "$VERSION" "$SOURCE_SHA" --runtime-id "$RID"
+
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
       with:
         name: chaptarrng-standalone-${{ matrix.rid }}
@@ -889,6 +898,7 @@ jobs:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TAG: ${{ needs.release.outputs.tag }}
         VERSION: ${{ needs.release.outputs.version }}
+        SOURCE_SHA: ${{ needs.release.outputs.sha }}
         LEGACY_BRIDGE_ENABLED: ${{ vars.CHAPTARRNG_MIGRATION_BRIDGE_ENABLED == 'true' && vars.CHAPTARRNG_RELEASE_READY == 'true' && vars.BOOKSHELFNG_RELEASE_READY == 'true' }}
       run: |
         set -euo pipefail
@@ -931,6 +941,7 @@ jobs:
           (cd "$RUNNER_TEMP/release-assets" && sha256sum --check "$container_candidates.sha256")
           tar -tzf "$RUNNER_TEMP/release-assets/$container_candidates" >/dev/null
         fi
+        python3 packaging/scripts/verify-release-update-bundles.py "$RUNNER_TEMP/release-assets" "$VERSION" "$SOURCE_SHA"
         mapfile -d '' release_files < <(find "$RUNNER_TEMP/release-assets" -mindepth 1 -maxdepth 1 -type f -print0)
         ((${#release_files[@]} > 0))
         gh release upload "$TAG" "${release_files[@]}" --clobber
