@@ -7,6 +7,7 @@ set -euo pipefail
 : "${CHAPTARRNG_POSTGRES_IMAGE:?A digest-pinned PostgreSQL image is required}"
 [[ "$RUNNER_TEMP" == /* && -d "$RUNNER_TEMP" ]]
 [[ "$CHAPTARRNG_POSTGRES_IMAGE" =~ ^postgres:[0-9]+-bookworm@sha256:[a-f0-9]{64}$ ]]
+bash scripts/setup-acceptance-python.sh
 client_dir="$RUNNER_TEMP/postgres-client-bin"
 mkdir -p -- "$client_dir"
 cat > "$client_dir/postgres-tool" <<'WRAPPER'

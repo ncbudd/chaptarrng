@@ -2,7 +2,7 @@
 """Reject empty, skipped or incomplete PostgreSQL acceptance test runs."""
 import argparse
 from pathlib import Path
-import xml.etree.ElementTree as ET
+from defusedxml import ElementTree as ET
 
 
 REQUIRED_FIXTURES = {
@@ -17,7 +17,9 @@ NS = {"t": "http://microsoft.com/schemas/VisualStudio/TeamTest/2010"}
 
 
 def verify(path):
-    root = ET.parse(path).getroot()
+    if Path(path).stat().st_size > 64 * 1024 * 1024:
+        raise ValueError("PostgreSQL test evidence exceeds its 64 MiB limit")
+    root = ET.parse(path, forbid_dtd=True).getroot()
     results = root.findall("t:Results/t:UnitTestResult", NS)
     definitions = {test.attrib["id"]: test for test in root.findall("t:TestDefinitions/t:UnitTest", NS)}
     if not results:
@@ -36,6 +38,9 @@ def verify(path):
     if missing:
         raise ValueError("PostgreSQL acceptance omitted required fixtures: " + ", ".join(sorted(missing)))
     counters = root.find("t:ResultSummary/t:Counters", NS)
+    summary = root.find("t:ResultSummary", NS)
+    if summary is None or summary.get("outcome") not in ("Completed", "Passed"):
+        raise ValueError("PostgreSQL acceptance did not complete successfully")
     if counters is None or any(int(counters.get(key, "-1")) != len(results) for key in ("total", "executed", "passed")):
         raise ValueError("PostgreSQL acceptance counters do not match successful executed tests")
     print(f"PostgreSQL acceptance: {len(results)} passed; no skipped tests; all {len(REQUIRED_FIXTURES)} required live fixtures executed.")

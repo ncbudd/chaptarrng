@@ -7,18 +7,24 @@ on:
       - 'src/**'
       - 'frontend/**'
       - 'packaging/**'
+      - '!packaging/scripts/test-*.mjs'
+      - '!packaging/scripts/test_*.py'
       - 'scripts/**'
       - 'package.json'
       - 'yarn.lock'
       - 'global.json'
       - 'Directory.*'
+      - '.config/**'
+      - 'security/gh-verifier-assets.json'
       - '.github/workflows/native-audit-acceptance.yml'
   workflow_dispatch:
 permissions:
   contents: read
 concurrency:
   group: native-audit-acceptance-${{ github.ref }}
-  cancel-in-progress: true
+  # Native runs are expensive; retain a running candidate while newer main work
+  # waits. Its exact source/hash evidence remains valid when app inputs match.
+  cancel-in-progress: false
 jobs:
   frontend:
     if: github.ref == 'refs/heads/main'

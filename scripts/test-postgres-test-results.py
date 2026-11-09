@@ -5,6 +5,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import xml.etree.ElementTree as ET
+from defusedxml.common import DefusedXmlException
 
 
 spec = importlib.util.spec_from_file_location("postgres_results", Path(__file__).with_name("verify-postgres-test-results.py"))
@@ -29,7 +30,7 @@ class PostgresEvidenceTests(unittest.TestCase):
             ET.SubElement(results, "UnitTestResult", testId=test_id, testName=fixture, outcome=outcome)
             definition = ET.SubElement(definitions, "UnitTest", id=test_id)
             ET.SubElement(definition, "TestMethod", className="Chaptarr.Core.Test." + fixture)
-        summary = ET.SubElement(root, "ResultSummary")
+        summary = ET.SubElement(root, "ResultSummary", outcome="Completed")
         count = str(len(fixtures) + counter_offset)
         ET.SubElement(summary, "Counters", total=count, executed=count, passed=count)
         ET.ElementTree(root).write(self.path, encoding="utf-8", xml_declaration=True)
@@ -64,11 +65,24 @@ class PostgresEvidenceTests(unittest.TestCase):
 
     def test_result_without_definition_is_rejected(self):
         self.report()
-        document = ET.parse(self.path)
+        document = gate.ET.parse(self.path, forbid_dtd=True)
         definitions = document.getroot().find("t:TestDefinitions", gate.NS)
         definitions.remove(definitions[0])
         document.write(self.path)
         with self.assertRaisesRegex(ValueError, "Missing test definition"):
+            gate.verify(self.path)
+
+    def test_dtd_and_entity_documents_are_rejected(self):
+        self.path.write_text('<!DOCTYPE TestRun [<!ENTITY content SYSTEM "file:///etc/passwd">]><TestRun>&content;</TestRun>')
+        with self.assertRaises(DefusedXmlException):
+            gate.verify(self.path)
+
+    def test_failed_summary_is_rejected_even_when_individual_results_pass(self):
+        self.report()
+        document = gate.ET.parse(self.path, forbid_dtd=True)
+        document.getroot().find("t:ResultSummary", gate.NS).set("outcome", "Failed")
+        document.write(self.path)
+        with self.assertRaisesRegex(ValueError, "did not complete successfully"):
             gate.verify(self.path)
 
 

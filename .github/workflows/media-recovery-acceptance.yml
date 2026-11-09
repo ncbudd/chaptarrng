@@ -30,6 +30,8 @@ jobs:
       - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
         with:
           global-json-file: global.json
+      - name: Install pinned acceptance tools
+        run: bash scripts/setup-acceptance-python.sh
       - name: Build locked application and media regressions
         run: |
           dotnet restore src/NzbDrone.Console/Chaptarr.Console.csproj --locked-mode --disable-parallel -m:1
@@ -42,7 +44,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p media-results
-          docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp \
+          docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp -e DOTNET_CLI_HOME=/tmp \
             --cap-drop ALL --security-opt no-new-privileges \
             --pids-limit 1024 --memory 4g --cpus 2 \
             --volume "$GITHUB_WORKSPACE:/workspace" --workdir /workspace/_tests/net10.0 \
@@ -50,9 +52,9 @@ jobs:
             --TestCaseFilter:'FullyQualifiedName~real_m4b_tool_should_' \
             --ResultsDirectory:/workspace/media-results --Logger:'trx;LogFileName=media.trx'
           python3 - <<'PY'
-          import xml.etree.ElementTree as ET
+          from defusedxml import ElementTree as ET
           ns = {'t': 'http://microsoft.com/schemas/VisualStudio/TeamTest/2010'}
-          results = ET.parse('media-results/media.trx').getroot().findall('t:Results/t:UnitTestResult', ns)
+          results = ET.parse('media-results/media.trx', forbid_dtd=True).getroot().findall('t:Results/t:UnitTestResult', ns)
           if len(results) < 10 or any(r.get('outcome') != 'Passed' for r in results):
               raise SystemExit('Real M4B tool acceptance requires at least ten passed cases and no skips.')
           print(f'Real M4B tool acceptance: {len(results)} passed, zero skipped.')
