@@ -150,6 +150,27 @@ test('Linux, macOS and FreeBSD standalone archives include the optional, recover
 
   assert.match(builder, /publish_standalone_project\(\)[\s\S]*?if \[\[ "\$rid" == linux-x86 \|\| "\$rid" == freebsd-x64 \]\]; then\s+dotnet publish "\$@" --no-restore "\$\{restore_sources\[@\]\}"\s+else\s+dotnet publish "\$@" --no-restore\s+fi/,
     'macOS Bash can publish ordinary standalone RIDs without expanding an empty array under nounset');
+  const publishWrapper = builder.match(/publish_standalone_project\(\) \{[\s\S]*?\n\}/)?.[0];
+  assert.ok(publishWrapper, 'the publish wrapper must exist');
+  for (const rid of ['osx-arm64', 'linux-x64', 'linux-x86', 'freebsd-x64']) {
+    const script = `set -euo pipefail
+rid="$1"
+if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
+  restore_sources=("-p:ChaptarrStandaloneLockRoot=fixture locks")
+fi
+dotnet() { printf '%s\\n' "$@"; }
+${publishWrapper}
+publish_standalone_project "project with spaces.csproj" --output "output with spaces"
+`;
+    const result = spawnSync('bash', ['-c', script, 'publish-contract', rid], { encoding: 'utf8' });
+    assert.equal(result.status, 0, `${rid}: ${result.stderr}`);
+    const expected = ['publish', 'project with spaces.csproj', '--output', 'output with spaces', '--no-restore'];
+    if (rid === 'linux-x86' || rid === 'freebsd-x64') {
+      expected.push('-p:ChaptarrStandaloneLockRoot=fixture locks');
+    }
+    assert.deepEqual(result.stdout.trimEnd().split('\n'), expected,
+      `${rid} preserves argument boundaries and publishes only after the separately verified restore`);
+  }
   assert.match(builder, /export NUGET_PACKAGES="\$work\/nuget-packages"/,
     'extra-platform restores cannot reuse a same-version runtime from a shared NuGet cache');
   assert.match(builder, /"--artifacts-path"\s+"\$work\/artifacts"/,

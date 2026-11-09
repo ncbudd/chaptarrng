@@ -43,7 +43,7 @@ jobs:
           PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers
         run: |
           sudo apt-get update
-          sudo apt-get install -y bubblewrap
+          sudo apt-get install -y bubblewrap ripgrep
           driver=./_tests/net10.0/.playwright
           PW_LANG_NAME=csharp "$driver/node/linux-x64/node" "$driver/package/cli.js" install --with-deps --no-shell chromium
       - name: Verify real sandboxed Chromium before the full suite
@@ -56,10 +56,14 @@ jobs:
         run: dotnet test src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --no-build --no-restore -m:1 --filter 'FullyQualifiedName!~DirectDownloadPlaywrightBrowserFixture' --logger 'trx;LogFileName=audit-regressions.trx'
       - name: Run frontend, localization and scanner-policy checks
         run: |
+          set -euo pipefail
           yarn typecheck
           yarn test-localization
-          mapfile -t frontend_tests < <(rg --files frontend -g '*.test.cjs')
-          node --test "${frontend_tests[@]}"
+          # Keep discovery in the foreground so missing rg or an empty test set fails.
+          rg --files frontend -g '*.test.cjs' > "$RUNNER_TEMP/frontend-tests.txt"
+          mapfile -t frontend_tests < "$RUNNER_TEMP/frontend-tests.txt"
+          test "${#frontend_tests[@]}" -gt 0
+          node --test "${frontend_tests[@]}" packaging/scripts/test-bookshelf-legacy-channels.mjs scripts/release-notes.test.mjs scripts/post-discord-announcement.test.mjs scripts/test-patched-deepmerge.mjs
           python3 scripts/test-security-scan-discovery.py
           python3 scripts/test-audit-policy.py
           python3 scripts/test_workflow_runner_policy.py
