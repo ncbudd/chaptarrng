@@ -133,7 +133,7 @@ jobs:
       with:
         persist-credentials: false
 
-    - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+    - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
       if: inputs.runtime_packs_run_id == ''
       env:
         DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet
@@ -173,7 +173,7 @@ jobs:
       if: inputs.runtime_packs_run_id != ''
       run: cp "$RUNNER_TEMP/runtime-pack-provenance.json" "$RUNNER_TEMP/chaptarrng-platform-runtime-packs/reuse-provenance.json"
 
-    - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+    - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
       if: inputs.runtime_packs_run_id != ''
       env:
         DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet
@@ -250,7 +250,7 @@ jobs:
         mkdir -p -- "$dotnet_dir"
         printf 'DOTNET_INSTALL_DIR=%s\n' "$dotnet_dir" >> "$GITHUB_ENV"
 
-    - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+    - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
       with:
         dotnet-version: 10.0.403
 
@@ -328,7 +328,7 @@ jobs:
         mkdir -p -- "$dotnet_dir"
         printf 'DOTNET_INSTALL_DIR=%s\n' "$dotnet_dir" >> "$GITHUB_ENV"
 
-    - uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68
+    - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
       with:
         dotnet-version: 10.0.403
 
