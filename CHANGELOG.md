@@ -4,6 +4,12 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.990](https://github.com/snapetech-org/chaptarrng/compare/v0.9.988..v0.9.990) - 2026-11-09
+
+### Release infrastructure
+
+- Remove the already-tested Windows migration-installer payload before the isolated Chocolatey handoff test stages its own verified candidate, preserving the test's refusal to overwrite unknown payloads.
+
 ## [0.9.988](https://github.com/snapetech-org/chaptarrng/compare/v0.9.987..v0.9.988) - 2026-11-09
 
 ### Release infrastructure
