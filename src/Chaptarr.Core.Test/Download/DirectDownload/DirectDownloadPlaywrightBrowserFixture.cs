@@ -95,7 +95,7 @@ namespace Chaptarr.Core.Test.Download.DirectDownload
 
             if (string.Equals(Environment.GetEnvironmentVariable("DIRECT_DOWNLOAD_REQUIRE_PLAYWRIGHT"), "true", StringComparison.OrdinalIgnoreCase))
             {
-                Assert.Fail("Headless Chromium is required but could not be launched.");
+                Assert.Fail("Headless Chromium is required but could not be launched. " + resolver.LastLaunchFailure);
             }
 
             Assert.Ignore("Headless Chromium is not installed on this test host.");

@@ -35,6 +35,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
 
         private string SandboxPath => _folders == null ? null : Path.Combine(_folders.StartUpFolder, "Tools", "browser-sandbox.sh");
         private bool HasSandbox => OperatingSystem.IsLinux() && _httpClient != null && File.Exists(SandboxPath) && File.Exists("/usr/bin/bwrap");
+        internal string LastLaunchFailure { get; private set; }
 
         private Microsoft.Playwright.BrowserTypeLaunchOptions LaunchOptions(Microsoft.Playwright.IPlaywright playwright)
         {
@@ -56,10 +57,15 @@ namespace NzbDrone.Core.Download.Clients.Direct
 
         public async Task<bool> IsAvailableAsync()
         {
-            if (!HasSandbox) { return false; }
+            LastLaunchFailure = null;
+            if (!HasSandbox)
+            {
+                LastLaunchFailure = "The Linux bubblewrap helper and HTTP broker are required.";
+                return false;
+            }
             try
             {
-                var playwright = await Microsoft.Playwright.Playwright.CreateAsync();
+                using var playwright = await Microsoft.Playwright.Playwright.CreateAsync();
                 await using var browser = await playwright.Chromium.LaunchAsync(LaunchOptions(playwright));
 
                 await browser.CloseAsync();
@@ -68,7 +74,8 @@ namespace NzbDrone.Core.Download.Clients.Direct
             }
             catch (Exception ex)
             {
-                _logger.Debug("Playwright browser is not available: {0}", CleanseLogMessage.Cleanse(ex.ToString()));
+                LastLaunchFailure = CleanseLogMessage.Cleanse(ex.ToString());
+                _logger.Debug("Playwright browser is not available: {0}", LastLaunchFailure);
                 return false;
             }
         }

@@ -85,7 +85,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("inputs.runner_pool == 'public'", build)
         self.assertIn("'windows-2025'", build)
         self.assertIn("'macos-15-intel'", build)
-        self.assertIn("'ubuntu-24.04'", build)
+        self.assertIn("'ubuntu-22.04'", build)
         self.assertIn('"group":"ng-shared-main-jit"', build)
         self.assertIn('"ng-shared-main-chaptarrng"', build)
         self.assertIn('"ng-main-run-{0}"', build)

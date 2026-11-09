@@ -12,7 +12,9 @@ concurrency:
 jobs:
   regressions:
     if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-24.04
+    # Browser acceptance needs an unprivileged-user-namespace-capable host.
+    # Do not disable Ubuntu 24.04's system-wide AppArmor protections to run it.
+    runs-on: ubuntu-22.04
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
@@ -44,11 +46,14 @@ jobs:
           sudo apt-get install -y bubblewrap
           driver=./_tests/net10.0/.playwright
           PW_LANG_NAME=csharp "$driver/node/linux-x64/node" "$driver/package/cli.js" install --with-deps --no-shell chromium
-      - name: Run backend and real sandboxed browser regressions
+      - name: Verify real sandboxed Chromium before the full suite
         env:
           DIRECT_DOWNLOAD_REQUIRE_PLAYWRIGHT: 'true'
           PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers
-        run: dotnet test src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --no-build --no-restore -m:1 --logger 'trx;LogFileName=audit-regressions.trx'
+          DEBUG: pw:browser
+        run: dotnet test src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --no-build --no-restore -m:1 --filter 'FullyQualifiedName~DirectDownloadPlaywrightBrowserFixture' --logger 'trx;LogFileName=audit-browser.trx'
+      - name: Run full backend regressions
+        run: dotnet test src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --no-build --no-restore -m:1 --filter 'FullyQualifiedName!~DirectDownloadPlaywrightBrowserFixture' --logger 'trx;LogFileName=audit-regressions.trx'
       - name: Run frontend, localization and scanner-policy checks
         run: |
           yarn typecheck
