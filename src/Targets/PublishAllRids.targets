@@ -6,13 +6,14 @@
     <!-- Enable roll-forward to latest patch.  This allows one restore operation
          to apply to all of the self-contained publish operations. -->
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
+    <PublishRuntimeIdentifiers Condition="'$(PublishRuntimeIdentifiers)' == ''">$(RuntimeIdentifiers)</PublishRuntimeIdentifiers>
   </PropertyGroup>
 
   <Target Name="PublishAllRids">
     <ItemGroup>
       <Frameworks Include="$(TargetFrameworks)" />
 
-      <Combined Include="$(RuntimeIdentifiers)">
+      <Combined Include="$(PublishRuntimeIdentifiers)">
         <Framework>%(Frameworks.Identity)</Framework>
       </Combined>
 

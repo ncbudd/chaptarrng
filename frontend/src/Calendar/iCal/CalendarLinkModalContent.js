@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import Alert from 'Components/Alert';
 import Form from 'Components/Form/Form';
 import FormGroup from 'Components/Form/FormGroup';
 import FormInputButton from 'Components/Form/FormInputButton';
@@ -8,11 +9,13 @@ import FormLabel from 'Components/Form/FormLabel';
 import Icon from 'Components/Icon';
 import Button from 'Components/Link/Button';
 import ClipboardButton from 'Components/Link/ClipboardButton';
+import LoadingIndicator from 'Components/Loading/LoadingIndicator';
 import ModalBody from 'Components/Modal/ModalBody';
 import ModalContent from 'Components/Modal/ModalContent';
 import ModalFooter from 'Components/Modal/ModalFooter';
 import ModalHeader from 'Components/Modal/ModalHeader';
 import { icons, inputTypes, kinds, sizes } from 'Helpers/Props';
+import createAjaxRequest from 'Utilities/createAjaxRequest';
 import translate from 'Utilities/String/translate';
 
 function getUrls(state) {
@@ -20,8 +23,13 @@ function getUrls(state) {
     unmonitored,
     pastDays,
     futureDays,
-    tags
+    tags,
+    calendarToken
   } = state;
+
+  if (!calendarToken) {
+    return { iCalHttpUrl: '', iCalWebCalUrl: '' };
+  }
 
   let icalUrl = `${window.location.host}${window.Chaptarr.urlBase}/feed/v1/calendar/Chaptarr.ics?`;
 
@@ -33,7 +41,7 @@ function getUrls(state) {
     icalUrl += `tags=${tags.toString()}&`;
   }
 
-  icalUrl += `pastDays=${pastDays}&futureDays=${futureDays}&apikey=${encodeURIComponent(window.Chaptarr.apiKey)}`;
+  icalUrl += `pastDays=${pastDays}&futureDays=${futureDays}&calendarToken=${encodeURIComponent(calendarToken)}`;
 
   const iCalHttpUrl = `${window.location.protocol}//${icalUrl}`;
   const iCalWebCalUrl = `webcal://${icalUrl}`;
@@ -56,7 +64,10 @@ class CalendarLinkModalContent extends Component {
       unmonitored: false,
       pastDays: 7,
       futureDays: 28,
-      tags: []
+      tags: [],
+      calendarToken: null,
+      isLoading: true,
+      hasError: false
     };
 
     const urls = getUrls(defaultState);
@@ -66,6 +77,33 @@ class CalendarLinkModalContent extends Component {
       ...urls
     };
   }
+
+  componentDidMount() {
+    this.onLoadTokenPress();
+  }
+
+  componentWillUnmount() {
+    this.unmounted = true;
+    this.tokenRequest?.abortRequest();
+  }
+
+  onLoadTokenPress = () => {
+    this.setState({ isLoading: true, hasError: false });
+    this.tokenRequest = createAjaxRequest({ url: '/calendar/token', dataType: 'json' });
+    this.tokenRequest.request.done(({ token }) => {
+      if (!this.unmounted) {
+        this.setState((state) => ({
+          calendarToken: token,
+          isLoading: false,
+          ...getUrls({ ...state, calendarToken: token })
+        }));
+      }
+    }).fail(() => {
+      if (!this.unmounted) {
+        this.setState({ isLoading: false, hasError: true });
+      }
+    });
+  };
 
   //
   // Listeners
@@ -101,6 +139,8 @@ class CalendarLinkModalContent extends Component {
       pastDays,
       futureDays,
       tags,
+      isLoading,
+      hasError,
       iCalHttpUrl,
       iCalWebCalUrl
     } = this.state;
@@ -112,7 +152,14 @@ class CalendarLinkModalContent extends Component {
         </ModalHeader>
 
         <ModalBody>
-          <Form>
+          {isLoading ? <LoadingIndicator /> : null}
+          {hasError ? (
+            <Alert kind={kinds.DANGER} role="alert">
+              {translate('UnableToLoadTheCalendar')}
+              <Button onPress={this.onLoadTokenPress}>{translate('Retry')}</Button>
+            </Alert>
+          ) : null}
+          {!isLoading && !hasError ? <Form>
             <FormGroup>
               <FormLabel>
                 {translate('IncludeUnmonitored')}
@@ -203,7 +250,7 @@ class CalendarLinkModalContent extends Component {
                 onFocus={this.onLinkFocus}
               />
             </FormGroup>
-          </Form>
+          </Form> : null}
         </ModalBody>
 
         <ModalFooter>

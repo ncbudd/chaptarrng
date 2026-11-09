@@ -8,6 +8,7 @@ namespace Chaptarr.Core.Test.Common
     public class SensitiveDataSanitizerFixture
     {
         [TestCase("https://api.example.com/endpoint?apikey=supersecretkey123&other=value", "supersecretkey123")]
+        [TestCase("https://books.example/feed/v1/calendar/Chaptarr.ics?calendarToken=cal_private&pastDays=7", "cal_private")]
         [TestCase("https://id.example/callback?code=oauth-code&client_secret=client-secret", "oauth-code")]
         [TestCase("https://id.example/callback?code=oauth-code&client_secret=client-secret", "client-secret")]
         [TestCase("https://id.example/token?id_token=id-token&refresh_token=refresh-token", "id-token")]

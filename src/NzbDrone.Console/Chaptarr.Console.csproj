@@ -8,6 +8,10 @@
   <PropertyGroup Condition="!$(RuntimeIdentifier.StartsWith('win'))">
     <AssemblyName>Chaptarr</AssemblyName>
   </PropertyGroup>
+  <PropertyGroup Condition="$(RuntimeIdentifier.StartsWith('win')) and '$(ChaptarrStandaloneLockRoot)' == ''">
+    <!-- Windows has a different platform project reference from the Unix build. -->
+    <NuGetLockFilePath>$(MSBuildThisFileDirectory)locks/windows/packages.lock.json</NuGetLockFilePath>
+  </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\NzbDrone.Host\Chaptarr.Host.csproj" />
     <ProjectReference Include="..\NzbDrone.Mono\Chaptarr.Mono.csproj" Condition="!$(RuntimeIdentifier.StartsWith('win'))" />

@@ -138,6 +138,54 @@ namespace Chaptarr.Core.Test.Http.Authentication
             Assert.That(result.Succeeded, Is.True);
         }
 
+        [TestCase("/feed/v1/calendar/Chaptarr.ics", "GET", true)]
+        [TestCase("/feed/v1/calendar/Readarr.ics", "GET", true)]
+        [TestCase("/feed/v1/calendar/Chaptarr.ics", "POST", false)]
+        [TestCase("/api/v1/system/status", "GET", false)]
+        [TestCase("/api/v1/calendar/token", "GET", false)]
+        [TestCase("/signalr/messages", "GET", false)]
+        [TestCase("/feed/v1/calendar/Chaptarr.ics/extra", "GET", false)]
+        public async Task calendar_credential_is_only_valid_for_reading_calendar_feeds(string path, string method, bool allowed)
+        {
+            var context = new DefaultHttpContext();
+            context.Request.Method = method;
+            context.Request.Path = path;
+            context.Request.PathBase = "/chaptarr";
+            context.Request.QueryString = new QueryString("?calendarToken=" + CalendarFeedCredential.Issue(ApiKey));
+            var result = await Authenticate(context, "API", "apikey", new AuthOptions { AllowApiKeyQuery = false });
+
+            Assert.That(result.Succeeded, Is.EqualTo(allowed));
+            if (allowed)
+            {
+                Assert.That(result.Principal.FindFirst("ApiKeyScope").Value, Is.EqualTo("calendar"));
+            }
+        }
+
+        [TestCase("fixture-api-key")]
+        [TestCase("cal_invalid")]
+        public async Task calendar_query_cannot_bypass_the_master_query_key_setting(string token)
+        {
+            var context = new DefaultHttpContext();
+            context.Request.Method = "GET";
+            context.Request.Path = "/feed/v1/calendar/Chaptarr.ics";
+            context.Request.QueryString = new QueryString("?calendarToken=" + token);
+
+            var result = await Authenticate(context, "API", "apikey", new AuthOptions { AllowApiKeyQuery = false });
+            Assert.That(result.Succeeded, Is.False);
+        }
+
+        [Test]
+        public void rotating_master_key_revokes_calendar_subscriptions()
+        {
+            var context = new DefaultHttpContext();
+            context.Request.Method = "GET";
+            context.Request.Path = "/feed/v1/calendar/Chaptarr.ics";
+            var oldToken = CalendarFeedCredential.Issue(ApiKey);
+            Assert.That(CalendarFeedCredential.Validate(context.Request, oldToken, "rotated-key"), Is.False);
+            Assert.That(CalendarFeedCredential.Validate(context.Request, oldToken, null), Is.False);
+            Assert.That(CalendarFeedCredential.Issue(ApiKey), Is.EqualTo(oldToken));
+        }
+
         private static async Task<AuthenticateResult> Authenticate(
             string schemeName,
             string queryName,

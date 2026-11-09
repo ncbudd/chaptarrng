@@ -83,14 +83,32 @@ if [[ "$rid" == freebsd-x64 ]]; then
   restore_sources+=("-p:EnableWindowsTargeting=false")
 fi
 
+restore_standalone_project() {
+  local project="$1"
+  if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
+    dotnet restore "$project" -p:Configuration=Release -p:RuntimeIdentifier="$rid" \
+      -p:SelfContained=true -p:UseAppHost=true --disable-parallel -m:1 "${restore_sources[@]}"
+  else
+    dotnet restore "$project" -p:Configuration=Release -p:RuntimeIdentifier="$rid" \
+      -p:SelfContained=true -p:UseAppHost=true --locked-mode --disable-parallel -m:1
+  fi
+}
+
+restore_standalone_project src/NzbDrone.Console/Chaptarr.Console.csproj
+restore_standalone_project src/NzbDrone.Update/Chaptarr.Update.csproj
+if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
+  # Verify before executing dependency-provided compilation/publish targets.
+  python3 packaging/scripts/verify-platform-locks.py src "$work/locks"
+fi
+
 publish_standalone_project() {
   # Bash 3.2 (the system Bash on supported macOS runners) treats expansion of
   # an empty array as an unset variable under nounset. Only expand this array
   # for the RIDs that populate it.
   if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
-    dotnet publish "$@" "${restore_sources[@]}"
+    dotnet publish "$@" --no-restore "${restore_sources[@]}"
   else
-    dotnet publish "$@"
+    dotnet publish "$@" --no-restore
   fi
 }
 

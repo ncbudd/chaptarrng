@@ -25,14 +25,15 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
         sock.bind(('127.0.0.1', 0))
         port = sock.getsockname()[1]
     master = secrets.token_hex(16)
+    seerr = secrets.token_hex(16)
     method = 'Oidc' if args.misconfigured_oidc else 'None'
-    (data/'config.xml').write_text(f'<Config><ApiKey>{master}</ApiKey><BindAddress>127.0.0.1</BindAddress><Port>{port}</Port><AuthenticationMethod>{method}</AuthenticationMethod><AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired><LaunchBrowser>False</LaunchBrowser><AnalyticsEnabled>False</AnalyticsEnabled><UpdateAutomatically>False</UpdateAutomatically></Config>')
+    (data/'config.xml').write_text(f'<Config><ApiKey>{master}</ApiKey><SeerrApiKey>{seerr}</SeerrApiKey><BindAddress>127.0.0.1</BindAddress><Port>{port}</Port><AuthenticationMethod>{method}</AuthenticationMethod><AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired><LaunchBrowser>False</LaunchBrowser><AnalyticsEnabled>False</AnalyticsEnabled><UpdateAutomatically>False</UpdateAutomatically></Config>')
     env = dict(os.environ, DOTNET_GCHeapHardLimit='0x30000000', ASPNETCORE_ENVIRONMENT='Production')
     log = open(args.log, 'w')
     process = subprocess.Popen([args.dotnet, str(args.app.resolve()), '-data='+str(data), '-nobrowser', '-nosingleinstancecheck'], stdout=log, stderr=subprocess.STDOUT, env=env)
-    def request(path, headers=None):
+    def request(path, headers=None, method='GET'):
         connection=http.client.HTTPConnection('127.0.0.1',port,timeout=5)
-        connection.request('GET',path,headers=headers or {})
+        connection.request(method,path,headers=headers or {})
         response=connection.getresponse()
         result=(response.status,dict(response.getheaders()),response.read())
         connection.close()
@@ -66,7 +67,21 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
         assert request('/api/v1/system/status',{'X-Api-Key':ui})[0]==401
         status,headers,body=request('/api/v1/system/status',{'X-Api-Key':ui,'Cookie':cookie})
         assert status==200,(status,body[:1000])
-        print(f'PASS ({method}): real app startup, anonymous setup/API rejection despite local bypass setting, authenticated bootstrap, non-master UI credential, cookie-bound API authentication')
+        assert request('/api/v1/calendar/token')[0]==401
+        assert request('/api/v1/calendar/token',{'X-Api-Key':seerr})[0] in (401,403)
+        status,headers,body=request('/api/v1/calendar/token',{'X-Api-Key':ui,'Cookie':cookie})
+        assert status==200,(status,body[:1000])
+        calendar=json.loads(body)['token']
+        assert calendar.startswith('cal_') and calendar not in (ui,master)
+        assert 'no-store' in headers.get('Cache-Control','')
+        for name in ('Chaptarr.ics','Readarr.ics'):
+            status,headers,body=request('/feed/v1/calendar/'+name+'?calendarToken='+calendar)
+            assert status==200 and b'BEGIN:VCALENDAR' in body,(status,body[:1000])
+        assert request('/api/v1/system/status?calendarToken='+calendar)[0]==401
+        assert request('/api/v1/calendar/token?calendarToken='+calendar)[0]==401
+        assert request('/signalr/messages/negotiate?negotiateVersion=1',{'Authorization':'Bearer '+ui},'POST')[0]==401
+        assert request('/signalr/messages/negotiate?negotiateVersion=1',{'Authorization':'Bearer '+ui,'Cookie':cookie},'POST')[0]==200
+        print(f'PASS ({method}): real startup, anonymous setup/API rejection despite local bypass, private setup password, cookie-bound UI API/SignalR access, read-only external calendar subscription without master-key exposure')
     finally:
         process.send_signal(signal.SIGTERM)
         try: process.wait(timeout=15)

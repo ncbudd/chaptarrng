@@ -2,6 +2,8 @@
 
   <PropertyGroup>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <!-- Match the parent application's supported RIDs for locked cross-platform publishing. -->
+    <RuntimeIdentifiers>win-x64;win-x86;osx-x64;osx-arm64;linux-x64;linux-musl-x64;linux-arm;linux-musl-arm;linux-arm64;linux-musl-arm64</RuntimeIdentifiers>
     <RestoreLockedMode Condition="'$(CI)' == 'true'">true</RestoreLockedMode>
     <NuGetLockFilePath Condition="'$(ChaptarrStandaloneLockRoot)'!=''">$(ChaptarrStandaloneLockRoot)/$(MSBuildProjectName).lock.json</NuGetLockFilePath>
     <RepositoryUrl>https://github.com/lidarr/taglib-sharp</RepositoryUrl>

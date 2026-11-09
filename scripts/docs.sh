@@ -47,7 +47,7 @@ run_msbuild() {
   dotnet msbuild -restore "$SLN_FILE" \
     -p:Configuration=Debug \
     -p:Platform=Posix \
-    -p:RuntimeIdentifiers="$RUNTIME" \
+    -p:PublishRuntimeIdentifiers="$RUNTIME" \
     -t:PublishAllRids \
     "$@"
 }
