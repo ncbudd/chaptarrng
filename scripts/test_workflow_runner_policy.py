@@ -712,13 +712,14 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
     def test_postgres_restore_uses_client_matching_server_major(self) -> None:
         source = WORKFLOW.read_text(encoding="utf-8")
         migrations = job_block(source, "postgres-migrations")
-        self.assertIn("image: postgres:16", migrations)
-        self.assertIn("sudo apt-get install -y postgresql-client-16", migrations)
-        self.assertIn("if [[ \"$RUNNER_POOL\" == \"public\" ]]", migrations)
-        self.assertIn("PostgreSQL 16 client binaries are required for the migration smoke.", migrations)
-        self.assertIn('postgres:16 "$tool" "$@"', migrations)
-        self.assertIn("/usr/lib/postgresql/16/bin", migrations)
-        self.assertIn("GITHUB_PATH", migrations)
+        self.assertIn("image: postgres:16-bookworm@sha256:", migrations)
+        self.assertIn("CHAPTARRNG_POSTGRES_IMAGE: postgres:16-bookworm@sha256:", migrations)
+        self.assertIn("bash scripts/setup-postgres-test-tools.sh", migrations)
+        tools = (WORKFLOW.parents[2] / "scripts/setup-postgres-test-tools.sh").read_text()
+        self.assertIn('"$CHAPTARRNG_POSTGRES_IMAGE" "$tool" "$@"', tools)
+        self.assertIn("GITHUB_PATH", tools)
+        self.assertIn("Chaptarr__Postgres__MainDb: acceptance-main", migrations)
+        self.assertIn("CHAPTARRNG_KEEP_POSTGRES_EVIDENCE: 'true'", migrations)
 
     def test_frontend_build_runs_after_tests_and_before_publish(self) -> None:
         build = job_block(WORKFLOW.read_text(encoding="utf-8"), "build")

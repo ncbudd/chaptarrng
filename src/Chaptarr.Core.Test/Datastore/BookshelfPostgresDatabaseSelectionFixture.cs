@@ -24,6 +24,8 @@ namespace Chaptarr.Core.Test.Datastore
         [SetUp]
         public void SetUp()
         {
+            _ownsBookshelfMain = false;
+            _ownsChaptarrMain = false;
             _baseConnectionString = Environment.GetEnvironmentVariable("CHAPTARRNG_POSTGRES_TEST_CONNECTION");
             if (string.IsNullOrWhiteSpace(_baseConnectionString))
             {

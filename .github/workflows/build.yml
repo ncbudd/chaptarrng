@@ -832,9 +832,11 @@ jobs:
         inputs.release_sha != ''
       )
     runs-on: ${{ inputs.runner_pool == 'public' && 'ubuntu-24.04' || fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-postgres-migrations"]}}', github.run_id)) }}
+    env:
+      CHAPTARRNG_POSTGRES_IMAGE: postgres:16-bookworm@sha256:5264710be20f409750ac6dc4e5706dcef929c87e241605463f0f9aefa932a8d9
     services:
       postgres:
-        image: postgres:16
+        image: postgres:16-bookworm@sha256:5264710be20f409750ac6dc4e5706dcef929c87e241605463f0f9aefa932a8d9
         env:
           POSTGRES_USER: chaptarr
           POSTGRES_PASSWORD: chaptarr
@@ -850,6 +852,7 @@ jobs:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
         ref: ${{ inputs.action == 'publish' && inputs.release_tag != '' && inputs.release_sha || github.sha }}
+        persist-credentials: false
 
     - name: Configure user-writable .NET install directory
       shell: bash
@@ -864,46 +867,8 @@ jobs:
       with:
         dotnet-version: 10.0.403
 
-    - name: Install PostgreSQL client
-      shell: bash
-      env:
-        RUNNER_POOL: ${{ inputs.runner_pool }}
-      run: |
-        set -euo pipefail
-        if [[ "$RUNNER_POOL" == "public" ]]; then
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client-16
-        fi
-        if [[ ! -x /usr/lib/postgresql/16/bin/pg_dump || ! -x /usr/lib/postgresql/16/bin/pg_restore ]]; then
-          echo 'PostgreSQL 16 client binaries are required for the migration smoke.' >&2
-          exit 1
-        fi
-        # Match the service's major version. A newer pg_dump emits settings
-        # (such as transaction_timeout) that PostgreSQL 16 cannot restore.
-        /usr/lib/postgresql/16/bin/pg_dump --version
-        /usr/lib/postgresql/16/bin/pg_restore --version
-        echo /usr/lib/postgresql/16/bin >> "$GITHUB_PATH"
-
-    - name: Pin dump tools to the PostgreSQL service version
-      shell: bash
-      run: |
-        set -euo pipefail
-        client_dir="$RUNNER_TEMP/postgres16-client-bin"
-        mkdir -p -- "$client_dir"
-        cat > "$client_dir/postgres16-tool" <<'WRAPPER'
-        #!/usr/bin/env bash
-        set -euo pipefail
-        tool="${0##*/}"
-        docker_args=(run --rm --network host --user "$(id -u):$(id -g)" --volume "${RUNNER_TEMP}:${RUNNER_TEMP}")
-        while IFS= read -r name; do
-          docker_args+=(--env "$name")
-        done < <(compgen -e | grep '^PG' || true)
-        docker "${docker_args[@]}" postgres:16 "$tool" "$@"
-        WRAPPER
-        chmod 0755 "$client_dir/postgres16-tool"
-        ln -s postgres16-tool "$client_dir/pg_dump"
-        ln -s postgres16-tool "$client_dir/pg_restore"
-        echo "$client_dir" >> "$GITHUB_PATH"
+    - name: Use the service image for PostgreSQL clients
+      run: bash scripts/setup-postgres-test-tools.sh
 
     - name: Create databases
       shell: bash
@@ -911,14 +876,14 @@ jobs:
         PGPASSWORD: chaptarr
       run: |
         set -euo pipefail
-        psql -h localhost -U chaptarr -d postgres -c 'CREATE DATABASE "chaptarr-main";'
-        psql -h localhost -U chaptarr -d postgres -c 'CREATE DATABASE "chaptarr-log";'
-        psql -h localhost -U chaptarr -d postgres -c 'CREATE DATABASE "chaptarr-cache";'
+        psql -h localhost -U chaptarr -d postgres -c 'CREATE DATABASE "acceptance-main";'
+        psql -h localhost -U chaptarr -d postgres -c 'CREATE DATABASE "acceptance-log";'
+        psql -h localhost -U chaptarr -d postgres -c 'CREATE DATABASE "acceptance-cache";'
 
     - name: Restore dependencies
       run: |
-        dotnet restore src/Chaptarr.NoTests.sln
-        dotnet restore src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj
+        dotnet restore src/Chaptarr.NoTests.sln --locked-mode
+        dotnet restore src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --locked-mode
 
     - name: Build (migrations smoke)
       run: |
@@ -927,29 +892,30 @@ jobs:
 
     - name: Smoke - migrate up on fresh PostgreSQL
       env:
+        CHAPTARRNG_KEEP_POSTGRES_EVIDENCE: 'true'
         TMPDIR: ${{ runner.temp }}
         CHAPTARRNG_POSTGRES_SMOKE_DIR: ${{ runner.temp }}/chaptarr-postgres-smoke-${{ github.run_id }}-${{ github.run_attempt }}
         Chaptarr__Postgres__Host: localhost
         Chaptarr__Postgres__Port: "5432"
         Chaptarr__Postgres__User: chaptarr
         Chaptarr__Postgres__Password: chaptarr
-        Chaptarr__Postgres__MainDb: chaptarr-main
-        Chaptarr__Postgres__LogDb: chaptarr-log
-        Chaptarr__Postgres__CacheDb: chaptarr-cache
-        CHAPTARRNG_POSTGRES_TEST_CONNECTION: Host=localhost;Port=5432;Database=chaptarr-main;Username=chaptarr;Password=chaptarr;Pooling=false;Timeout=5;Command Timeout=300
+        Chaptarr__Postgres__MainDb: acceptance-main
+        Chaptarr__Postgres__LogDb: acceptance-log
+        Chaptarr__Postgres__CacheDb: acceptance-cache
+        CHAPTARRNG_POSTGRES_TEST_CONNECTION: Host=localhost;Port=5432;Database=acceptance-main;Username=chaptarr;Password=chaptarr;Pooling=false;Timeout=5;Command Timeout=300
         Chaptarr__Server__BindAddress: 127.0.0.1
         Chaptarr__Server__Port: "8789"
       run: bash scripts/test-postgres-migrations-smoke.sh
 
     - name: Upload PostgreSQL smoke logs
       id: postgres-smoke-logs
-      if: failure()
+      if: always()
       uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
       with:
         name: chaptarr-postgres-smoke-${{ github.run_id }}-${{ github.run_attempt }}
         path: ${{ runner.temp }}/chaptarr-postgres-smoke-${{ github.run_id }}-${{ github.run_attempt }}
-        retention-days: 3
-        if-no-files-found: ignore
+        retention-days: 14
+        if-no-files-found: warn
 
     - name: Remove local PostgreSQL smoke logs
       if: always() && steps.postgres-smoke-logs.outcome != 'failure'

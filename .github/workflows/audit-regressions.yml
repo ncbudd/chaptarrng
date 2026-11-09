@@ -66,6 +66,7 @@ jobs:
           node --test "${frontend_tests[@]}" packaging/scripts/test-bookshelf-legacy-channels.mjs scripts/release-notes.test.mjs scripts/post-discord-announcement.test.mjs scripts/test-patched-deepmerge.mjs
           python3 scripts/test-security-scan-discovery.py
           python3 scripts/test-audit-policy.py
+          python3 scripts/test-postgres-test-results.py
           python3 scripts/test_workflow_runner_policy.py
       - name: Retain regression evidence
         if: always()

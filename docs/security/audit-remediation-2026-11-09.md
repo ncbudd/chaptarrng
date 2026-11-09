@@ -67,3 +67,11 @@ The full NUnit suite includes intentionally skipped fixtures that require extern
 Semgrep rules are materialized privately from immutable upstream archives. The repository contains only source provenance and rule selections, not a redistributed copy of the third-party rules. The reviewed set contains 1,074 Community Edition rules. Scan reports do not include the rule archive. Trivy exceptions remain path-specific, justified and expire on 2026-12-31; they cover documented bootstrap/test/candidate deployment choices, not dependency or secret findings.
 
 The earlier audit's validation-only items remain acceptance work rather than established vulnerabilities: representative acquisition/Seerr lifecycles, native platform installation/recovery, real PostgreSQL behavior, fuzzing and deployment-specific permissions. This patch does not turn synthetic evidence into a claim that those operational checks ran.
+
+## Follow-up: live PostgreSQL acceptance
+
+The dedicated `PostgreSQL acceptance` workflow runs on main pushes using disposable PostgreSQL 16 and 17 services. Server and dump/restore clients share immutable official-image digests. The startup smoke uses isolated `acceptance-*` databases so the legacy/default database-selection fixtures can reserve their own names. The same expanded smoke and evidence gate also run in release validation.
+
+All PostgreSQL fixtures are selected, including database inspection/selection, legacy conversion, real dump/restore, quality-profile lifecycle, and atomic repository operations. The evidence verifier rejects empty runs, skipped or failed cases, missing required live fixtures, and inconsistent result totals. Atomic operations now have shared SQLite/PostgreSQL cases for commit, outer rollback, nested rollback/abandonment, and constraint failure with suppressed events. Validation results will be recorded after the hosted matrix completes.
+
+The published v0.9.990 archives point to pre-remediation commit `2cb17528625b0bd7bdd64d829361a1b59a5c5456`; their independently queued installed checks do not establish acceptance of the patched application. That release predates signed update bundles, so the new updater correctly refuses it as an unsigned update.

@@ -1,0 +1,93 @@
+# ng-runner-policy: trusted-hosted-or-private-jit-v1
+name: PostgreSQL acceptance
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: postgres-acceptance-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  postgres:
+    if: github.ref == 'refs/heads/main'
+    name: PostgreSQL ${{ matrix.major }} migration and recovery
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - major: 16
+            image: postgres:16-bookworm@sha256:5264710be20f409750ac6dc4e5706dcef929c87e241605463f0f9aefa932a8d9
+          - major: 17
+            image: postgres:17-bookworm@sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994
+    services:
+      postgres:
+        image: ${{ matrix.image }}
+        env:
+          POSTGRES_USER: chaptarr
+          POSTGRES_PASSWORD: chaptarr
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U chaptarr"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 20
+    env:
+      CHAPTARRNG_POSTGRES_IMAGE: ${{ matrix.image }}
+      PGHOST: 127.0.0.1
+      PGPORT: '5432'
+      PGUSER: chaptarr
+      PGPASSWORD: chaptarr
+      TMPDIR: ${{ runner.temp }}
+      CHAPTARRNG_POSTGRES_SMOKE_DIR: ${{ runner.temp }}/postgres-acceptance
+      CHAPTARRNG_KEEP_POSTGRES_EVIDENCE: 'true'
+      CHAPTARRNG_POSTGRES_TEST_CONNECTION: Host=127.0.0.1;Port=5432;Database=acceptance-main;Username=chaptarr;Password=chaptarr;Pooling=false;Timeout=5;Command Timeout=300
+      Chaptarr__Postgres__Host: 127.0.0.1
+      Chaptarr__Postgres__Port: '5432'
+      Chaptarr__Postgres__User: chaptarr
+      Chaptarr__Postgres__Password: chaptarr
+      Chaptarr__Postgres__MainDb: acceptance-main
+      Chaptarr__Postgres__LogDb: acceptance-log
+      Chaptarr__Postgres__CacheDb: acceptance-cache
+      Chaptarr__Server__Port: '8789'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
+        with:
+          global-json-file: global.json
+      - name: Use the service image for PostgreSQL clients
+        run: bash scripts/setup-postgres-test-tools.sh
+      - name: Create isolated acceptance databases
+        env:
+          EXPECTED_MAJOR: ${{ matrix.major }}
+        run: |
+          set -euo pipefail
+          major="$(psql -d postgres -Atc 'SHOW server_version_num')"
+          test "$((major / 10000))" = "$EXPECTED_MAJOR"
+          for database in acceptance-main acceptance-log acceptance-cache; do
+            psql -v ON_ERROR_STOP=1 -d postgres -c "CREATE DATABASE \"$database\";"
+          done
+      - name: Compile locked application and regression projects
+        run: |
+          dotnet restore src/NzbDrone.Console/Chaptarr.Console.csproj --locked-mode --disable-parallel -m:1
+          dotnet restore src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --locked-mode --disable-parallel -m:1
+          dotnet build src/NzbDrone.Console/Chaptarr.Console.csproj -c Release --no-restore -m:1
+          dotnet build src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj -c Release --no-restore -m:1
+      - name: Require all live migration, restore and transaction fixtures
+        run: bash scripts/test-postgres-migrations-smoke.sh
+      - name: Retain PostgreSQL acceptance evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: postgres-${{ matrix.major }}-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/postgres-acceptance/app.log
+            ${{ runner.temp }}/postgres-acceptance/nunit-results/
+          if-no-files-found: warn
+          retention-days: 14
