@@ -13,7 +13,7 @@ function createHealthCheckSelector() {
           source: 'UI',
           type: 'warning',
           message: translate('HealthSignalRDisconnected'),
-          wikiUrl: 'https://discord.gg/nqFGsGUug2'
+          wikiUrl: 'https://discord.gg/5PyXBfvS6T'
         });
       }
 

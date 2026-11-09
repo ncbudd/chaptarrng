@@ -38,10 +38,10 @@ namespace NzbDrone.Core.Notifications.Twitter
             AuthorizeNotification = "startOAuth";
         }
 
-        [FieldDefinition(0, Label = "provider.field.f282690e03cd8", Privacy = PrivacyLevel.ApiKey, HelpText = "provider.field.f3e9c99374508", HelpLink = "https://discord.gg/nqFGsGUug2")]
+        [FieldDefinition(0, Label = "provider.field.f282690e03cd8", Privacy = PrivacyLevel.ApiKey, HelpText = "provider.field.f3e9c99374508", HelpLink = "https://discord.gg/5PyXBfvS6T")]
         public string ConsumerKey { get; set; }
 
-        [FieldDefinition(1, Label = "provider.field.f190fd47bff2e", Privacy = PrivacyLevel.ApiKey, HelpText = "provider.field.fedec108b0608", HelpLink = "https://discord.gg/nqFGsGUug2")]
+        [FieldDefinition(1, Label = "provider.field.f190fd47bff2e", Privacy = PrivacyLevel.ApiKey, HelpText = "provider.field.fedec108b0608", HelpLink = "https://discord.gg/5PyXBfvS6T")]
         public string ConsumerSecret { get; set; }
 
         [FieldDefinition(2, Label = "provider.field.ff9db72ced1ee", Privacy = PrivacyLevel.ApiKey, Advanced = true)]

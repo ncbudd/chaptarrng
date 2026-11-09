@@ -21,7 +21,7 @@ namespace NzbDrone.Core.Notifications.Webhook
             _proxy = proxy;
         }
 
-        public override string Link => "https://discord.gg/nqFGsGUug2";
+        public override string Link => "https://discord.gg/5PyXBfvS6T";
 
         public override void OnGrab(GrabMessage message)
         {

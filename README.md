@@ -8,7 +8,7 @@ A Snapetech-maintained Chaptarr fork for audiobook and eBook libraries.
 
 [![License](https://img.shields.io/github/license/snapetech-org/chaptarrng)](https://github.com/snapetech-org/chaptarrng/blob/main/LICENSE)
 [![.NET 10 LTS](https://img.shields.io/badge/.NET-10%20LTS-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/en-us/platform/support/policy)
-[![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/nqFGsGUug2)
+[![Discord](https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white)](https://discord.gg/5PyXBfvS6T)
 
 </div>
 

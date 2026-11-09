@@ -7,7 +7,7 @@ namespace NzbDrone.Core.CustomFormats
         public abstract int Order { get; }
         public abstract string ImplementationName { get; }
 
-        public virtual string InfoLink => "https://discord.gg/nqFGsGUug2";
+        public virtual string InfoLink => "https://discord.gg/5PyXBfvS6T";
 
         public string Name { get; set; }
         public bool Negate { get; set; }

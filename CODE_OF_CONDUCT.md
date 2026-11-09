@@ -61,7 +61,7 @@ representative at an online or offline event.
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement via a private channel:
 
-- Direct message the moderators on Discord: https://discord.gg/nqFGsGUug2
+- Direct message the moderators on Discord: https://discord.gg/5PyXBfvS6T
 - Or email seerrng@proton.me
 
 All complaints will be reviewed and investigated promptly and fairly.

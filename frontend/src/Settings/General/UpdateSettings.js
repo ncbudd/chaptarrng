@@ -58,7 +58,7 @@ function UpdateSettings(props) {
           type={inputTypes.AUTO_COMPLETE}
           name="branch"
           helpText={usingExternalUpdateMechanism ? translate('BranchUpdateMechanism') : translate('BranchUpdate')}
-          helpLink="https://discord.gg/nqFGsGUug2"
+          helpLink="https://discord.gg/5PyXBfvS6T"
           {...branch}
           values={branchValues}
           onChange={onInputChange}
@@ -95,7 +95,7 @@ function UpdateSettings(props) {
             name="updateMechanism"
             values={updateOptions}
             helpText={translate('UpdateMechanismHelpText')}
-            helpLink="https://discord.gg/nqFGsGUug2"
+            helpLink="https://discord.gg/5PyXBfvS6T"
             onChange={onInputChange}
             {...updateMechanism}
           />

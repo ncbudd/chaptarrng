@@ -62,7 +62,7 @@ namespace Chaptarr.Api.V1
                 Fields = settings != null ? SchemaBuilder.ToSchema(settings) : new List<Field>(),
 
                 //Discord link for support
-                InfoLink = string.Format("https://discord.gg/nqFGsGUug2",
+                InfoLink = string.Format("https://discord.gg/5PyXBfvS6T",
                     definition.Implementation.ToLower())
             };
         }

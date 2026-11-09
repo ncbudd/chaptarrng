@@ -16,7 +16,7 @@ function Tags(props) {
   } = props;
 
   if (!items.length) {
-    const wikiLink = <Link to='https://discord.gg/nqFGsGUug2'>{translate('Here')}</Link>;
+    const wikiLink = <Link to='https://discord.gg/5PyXBfvS6T'>{translate('Here')}</Link>;
     return (
       <Alert kind={kinds.INFO}>
         {translate('NoTagsHaveBeenAddedYet', [wikiLink])}

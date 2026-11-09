@@ -225,7 +225,7 @@ class DevelopmentSettings extends Component {
                       type={inputTypes.TEXT}
                       name="metadataServerUrl"
                       helpText={translate('MetadataSourceHelpText')}
-                      helpLink="https://discord.gg/nqFGsGUug2"
+                      helpLink="https://discord.gg/5PyXBfvS6T"
                       onChange={onInputChange}
                       {...settings.metadataServerUrl}
                     />

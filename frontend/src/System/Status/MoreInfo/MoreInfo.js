@@ -25,7 +25,7 @@ class MoreInfo extends Component {
 
           <DescriptionListItemTitle>{translate('Discord')}</DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://discord.gg/nqFGsGUug2">{translate('ChaptarrOnDiscord')}</Link>
+            <Link to="https://discord.gg/5PyXBfvS6T">{translate('ChaptarrOnDiscord')}</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>{translate('Source')}</DescriptionListItemTitle>

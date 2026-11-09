@@ -152,7 +152,7 @@ const sourceDirectDownload = [{
 const targetDirectDownload = [{
   id: 121,
   configContract: "DirectDownloadSettings",
-  infoLink: "https://discord.gg/nqFGsGUug2",
+  infoLink: "https://discord.gg/5PyXBfvS6T",
   fields: [{
     name: "urls",
     type: "textArea",

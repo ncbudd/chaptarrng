@@ -1506,8 +1506,8 @@
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
           "line": 44,
           "kind": "Label",
-          "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f190fd47bff2e\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fedec108b0608\", HelpLink = \"https://discord.gg/nqFGsGUug2\")]",
-          "sourceLineSha256": "70fa640d445331d1264a7d5935e196c5f5793dc391fff0013a9913f8b7ba56c0"
+          "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f190fd47bff2e\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fedec108b0608\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
+          "sourceLineSha256": "0ba371cf6a5f4e30b79b2fc4c27c79255e6553e5d6ad50e684c01b4a7edb3bdb"
         }
       ],
       "protectedLiterals": []
@@ -2005,8 +2005,8 @@
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
           "line": 41,
           "kind": "Label",
-          "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f282690e03cd8\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f3e9c99374508\", HelpLink = \"https://discord.gg/nqFGsGUug2\")]",
-          "sourceLineSha256": "8649d83a612ecb68cc8849e20b8f466c4386045a4968ff91d828b5abcbd76351"
+          "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f282690e03cd8\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f3e9c99374508\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
+          "sourceLineSha256": "7041286c13c76bf7f4a3a8c5234c06002436bda3dc974f323839460e92f58d81"
         }
       ],
       "protectedLiterals": []
@@ -2565,8 +2565,8 @@
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
           "line": 41,
           "kind": "HelpText",
-          "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f282690e03cd8\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f3e9c99374508\", HelpLink = \"https://discord.gg/nqFGsGUug2\")]",
-          "sourceLineSha256": "8649d83a612ecb68cc8849e20b8f466c4386045a4968ff91d828b5abcbd76351"
+          "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f282690e03cd8\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f3e9c99374508\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
+          "sourceLineSha256": "7041286c13c76bf7f4a3a8c5234c06002436bda3dc974f323839460e92f58d81"
         }
       ],
       "protectedLiterals": []
@@ -7638,8 +7638,8 @@
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
           "line": 44,
           "kind": "HelpText",
-          "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f190fd47bff2e\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fedec108b0608\", HelpLink = \"https://discord.gg/nqFGsGUug2\")]",
-          "sourceLineSha256": "70fa640d445331d1264a7d5935e196c5f5793dc391fff0013a9913f8b7ba56c0"
+          "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f190fd47bff2e\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fedec108b0608\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
+          "sourceLineSha256": "0ba371cf6a5f4e30b79b2fc4c27c79255e6553e5d6ad50e684c01b4a7edb3bdb"
         }
       ],
       "protectedLiterals": []

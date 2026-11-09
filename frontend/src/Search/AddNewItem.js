@@ -449,7 +449,7 @@ class AddNewItem extends Component {
                 </Alert>
 
                 <div>
-                  <Link to="https://discord.gg/nqFGsGUug2">
+                  <Link to="https://discord.gg/5PyXBfvS6T">
                     {translate('WhySearchesCouldBeFailing')}
                   </Link>
                 </div>

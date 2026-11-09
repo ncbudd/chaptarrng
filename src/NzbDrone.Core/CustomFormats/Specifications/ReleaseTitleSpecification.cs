@@ -4,7 +4,7 @@ namespace NzbDrone.Core.CustomFormats
     {
         public override int Order => 1;
         public override string ImplementationName => "Release Title";
-        public override string InfoLink => "https://discord.gg/nqFGsGUug2";
+        public override string InfoLink => "https://discord.gg/5PyXBfvS6T";
 
         protected override bool IsSatisfiedByWithoutNegate(CustomFormatInput input)
         {

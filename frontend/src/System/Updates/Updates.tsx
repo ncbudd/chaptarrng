@@ -294,7 +294,7 @@ function Updates() {
                 <InlineMarkdown
                   data={translate('InstallMajorVersionUpdateMessageLink', {
                     domain: 'discord.gg',
-                    url: 'https://discord.gg/nqFGsGUug2',
+                    url: 'https://discord.gg/5PyXBfvS6T',
                   })}
                 />
               </div>

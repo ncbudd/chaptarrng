@@ -58,7 +58,7 @@ function NotificationEventItems(props) {
       <div>
         <FormInputHelpText
           text={translate('NotificationEventTriggersHelpText')}
-          link="https://discord.gg/nqFGsGUug2"
+          link="https://discord.gg/5PyXBfvS6T"
         />
         <div className={styles.events}>
           {

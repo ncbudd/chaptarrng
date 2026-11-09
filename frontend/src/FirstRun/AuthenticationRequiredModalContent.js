@@ -152,7 +152,7 @@ function AuthenticationRequiredModalContent(props) {
                   name="authenticationMethod"
                   values={authenticationMethodOptions}
                   helpText={translate('AuthenticationMethodHelpText')}
-                  helpLink="https://discord.gg/nqFGsGUug2"
+                  helpLink="https://discord.gg/5PyXBfvS6T"
                   onChange={handleAuthMethodChange}
                   {...authenticationMethod}
                 />
