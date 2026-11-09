@@ -64,7 +64,7 @@ jobs:
       if: inputs.action == 'inspect'
       env:
         DISCORD_RELEASE_WEBHOOK: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
-      run: node scripts/inspect-discord-destination.mjs --require-chaptarrng-guild
+      run: node scripts/inspect-discord-destination.mjs --require-chaptarrng-destination
 
     - name: Post announcement
       if: inputs.action == 'announce'
@@ -76,7 +76,7 @@ jobs:
         ANNOUNCEMENT_WORKFLOW_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
       run: |
         if [[ -z "$DISCORD_RELEASE_WEBHOOK" ]]; then
-          echo "::error::Add a Chaptarr community server webhook as the DISCORD_RELEASE_WEBHOOK repository secret."
+          echo "::error::Add the owner-selected ChaptarrNG release-channel webhook as the DISCORD_RELEASE_WEBHOOK repository secret."
           exit 1
         fi
         node scripts/post-discord-announcement.mjs

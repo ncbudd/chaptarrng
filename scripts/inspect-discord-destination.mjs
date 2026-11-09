@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-import { CHAPTARRNG_DISCORD_GUILD_ID } from './chaptarrng-discord-destination.mjs';
+import {
+  CHAPTARRNG_DISCORD_CHANNEL_ID,
+  CHAPTARRNG_DISCORD_GUILD_ID,
+} from './chaptarrng-discord-destination.mjs';
 
 const value = process.env.DISCORD_RELEASE_WEBHOOK;
 if (!value) throw new Error('DISCORD_RELEASE_WEBHOOK is required.');
@@ -29,6 +32,10 @@ if (!/^\d+$/.test(destination.guild_id) || !/^\d+$/.test(destination.channel_id)
 console.log('Discord guild ID: ' + destination.guild_id);
 console.log('Discord channel ID: ' + destination.channel_id);
 console.log('Discord channel: https://discord.com/channels/' + destination.guild_id + '/' + destination.channel_id);
-if (process.argv.includes('--require-chaptarrng-guild') && destination.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID) {
-  throw new Error('Discord release webhook points outside the Chaptarr community server.');
+if (
+  process.argv.includes('--require-chaptarrng-destination') &&
+  (destination.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID ||
+    destination.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID)
+) {
+  throw new Error('Discord release webhook points outside the owner-selected release channel.');
 }

@@ -16,10 +16,10 @@ and cutover behind their existing fail-closed acceptance gates. Treat exact-head
 validation, installed acceptance, operator data, and production readiness as
 separate evidence.
 
-Discord release delivery must target the Chaptarr community server, not the
-snapetech/SeerrNG server. Verify the webhook guild before posting and retain
+Discord release delivery must target the owner-selected ChaptarrNG release
+channel. Verify both the webhook guild and channel before posting and retain
 message links from Discord receipts. A successful webhook response from a
-different guild is not a Chaptarr announcement.
+different channel is not a ChaptarrNG announcement.
 
 ## CodeQL — owner directive, 2026-10-30
 

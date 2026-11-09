@@ -4,7 +4,10 @@ import fs from 'node:fs';
 import { setTimeout as sleep } from 'node:timers/promises';
 
 import { splitDiscordReleaseBody } from './discord-release-notes.mjs';
-import { CHAPTARRNG_DISCORD_GUILD_ID } from './chaptarrng-discord-destination.mjs';
+import {
+  CHAPTARRNG_DISCORD_CHANNEL_ID,
+  CHAPTARRNG_DISCORD_GUILD_ID,
+} from './chaptarrng-discord-destination.mjs';
 
 function required(name) {
   const value = process.env[name]?.trim();
@@ -48,8 +51,11 @@ if (!destinationResponse.ok) {
   throw new Error('Discord destination lookup returned HTTP ' + destinationResponse.status + '.');
 }
 const webhookDestination = await destinationResponse.json();
-if (webhookDestination.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID) {
-  throw new Error('Discord release webhook points outside the Chaptarr community server.');
+if (
+  webhookDestination.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID ||
+  webhookDestination.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID
+) {
+  throw new Error('Discord release webhook points outside the owner-selected release channel.');
 }
 
 const title = required('ANNOUNCEMENT_TITLE');
@@ -139,7 +145,10 @@ for (let index = 0; index < chunks.length; index += 1) {
   if (!/^\d+$/.test(receipt.guild_id) || !/^\d+$/.test(receipt.channel_id)) {
     throw new Error('Discord did not confirm the announcement destination.');
   }
-  if (receipt.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID) {
+  if (
+    receipt.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID ||
+    receipt.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID
+  ) {
     throw new Error('Discord confirmed an unexpected announcement destination.');
   }
   console.log(
