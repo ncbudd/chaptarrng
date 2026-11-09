@@ -127,8 +127,18 @@ jobs:
       release_tag: ${{ needs.preflight.outputs.release_tag }}
       release_sha: ${{ needs.preflight.outputs.release_sha }}
 
+  security:
+    if: needs.preflight.outputs.release_requested == 'true'
+    needs: preflight
+    uses: ./.github/workflows/security-gate.yml
+    permissions:
+      contents: read
+      statuses: write
+    with:
+      ref: ${{ needs.preflight.outputs.release_sha }}
+
   release:
-    needs: [preflight, validate]
+    needs: [preflight, validate, security]
     if: >-
       (
         github.event_name != 'workflow_dispatch' ||
@@ -464,6 +474,8 @@ jobs:
         rid: [linux-x64, linux-arm64, linux-musl-x64, linux-musl-arm64, osx-x64, osx-arm64, win-x64, win-x86, linux-x86, freebsd-x64]
     permissions:
       contents: read
+      id-token: write
+      attestations: write
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       with:
@@ -531,6 +543,30 @@ jobs:
           fi
         fi
         (cd "$RUNNER_TEMP/release-assets" && sha256sum --check "$asset.sha256")
+
+    - name: Bind release version to the verified source
+      env:
+        VERSION: ${{ needs.release.outputs.version }}
+        SOURCE_SHA: ${{ needs.release.outputs.sha }}
+      run: jq -n --arg version "$VERSION" --arg source "$SOURCE_SHA" '{version:$version,sourceCommit:$source}' > "$RUNNER_TEMP/release-predicate.json"
+
+    - name: Attest standalone release artifacts
+      id: attest
+      uses: actions/attest@badbb428b0055a04f53d6ce00bda98cf1c04e56e
+      with:
+        subject-path: ${{ runner.temp }}/release-assets/*
+        predicate-type: https://github.com/snapetech-org/chaptarrng/release/v1
+        predicate-path: ${{ runner.temp }}/release-predicate.json
+
+    - name: Attach verification bundle to each archive
+      env:
+        BUNDLE: ${{ steps.attest.outputs.bundle-path }}
+      run: |
+        set -euo pipefail
+        for asset in "$RUNNER_TEMP"/release-assets/*.tar.gz "$RUNNER_TEMP"/release-assets/*.zip; do
+          [[ -f "$asset" ]] || continue
+          cp "$BUNDLE" "$asset.sigstore.json"
+        done
 
     - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
       with:

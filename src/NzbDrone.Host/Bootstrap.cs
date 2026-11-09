@@ -27,6 +27,7 @@ using NzbDrone.Common.Instrumentation;
 using NzbDrone.Common.Instrumentation.Extensions;
 using NzbDrone.Common.Options;
 using NzbDrone.Core.Configuration;
+using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Datastore.Extensions;
 using NzbDrone.Core.Http;
 using NzbDrone.Core.Lifecycle;
@@ -65,6 +66,7 @@ namespace NzbDrone.Host
 
         public static void Start(string[] args, Action<IHostBuilder> trayCallback = null)
         {
+            IAppFolderInfo restoreFolders = null;
             try
             {
                 PdfSharpLicense.SetAgplLicense();
@@ -79,6 +81,11 @@ namespace NzbDrone.Host
                 Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
 
                 var appMode = GetApplicationMode(startupContext);
+                if (appMode == ApplicationModes.Service || appMode == ApplicationModes.Interactive)
+                {
+                    restoreFolders = new AppFolderInfo(startupContext);
+                    FullRestoreBundle.Prepare(restoreFolders);
+                }
                 var config = GetConfiguration(startupContext);
 
                 switch (appMode)
@@ -87,7 +94,7 @@ namespace NzbDrone.Host
                         {
                             Logger.Debug("Service selected");
 
-                            CreateConsoleHostBuilder(args, startupContext).UseWindowsService().Build().Run();
+                            RunHostWithRestoreCommit(CreateConsoleHostBuilder(args, startupContext).UseWindowsService(), restoreFolders);
                             break;
                         }
 
@@ -101,7 +108,7 @@ namespace NzbDrone.Host
                                 trayCallback(builder);
                             }
 
-                            builder.Build().Run();
+                            RunHostWithRestoreCommit(builder, restoreFolders);
                             break;
                         }
 
@@ -158,11 +165,28 @@ namespace NzbDrone.Host
                 Logger.Info(ex.Message);
                 LogManager.Configuration = null;
             }
+            finally
+            {
+                if (restoreFolders != null && FullRestoreBundle.IsPrepared(restoreFolders))
+                {
+                    // Includes host/configuration failures before DbFactory can own rollback.
+                    SqliteConnection.ClearAllPools();
+                    FullRestoreBundle.Rollback(restoreFolders);
+                }
+            }
 
             // Make sure there are no lingering database connections
             GC.Collect();
             GC.WaitForPendingFinalizers();
             NpgsqlConnection.ClearAllPools();
+        }
+
+        private static void RunHostWithRestoreCommit(IHostBuilder builder, IAppFolderInfo folders)
+        {
+            using var host = builder.Build();
+            using var registration = host.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted
+                .Register(() => FullRestoreBundle.CommitAfterStartup(folders));
+            host.Run();
         }
 
         public static IHostBuilder CreateConsoleHostBuilder(string[] args, StartupContext context)

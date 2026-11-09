@@ -58,7 +58,7 @@ namespace Chaptarr.Core.Test.Backup
 
             public void Extract(string compressedFile, string destination)
             {
-                File.WriteAllText(Path.Combine(destination, "Config.xml"), "replacement"); // nosemgrep: csharp.lang.security.filesystem.unsafe-path-combine.unsafe-path-combine -- destination is a test-owned extraction folder and the filename is fixed.
+                File.WriteAllText(Path.Combine(destination, "Config.xml"), "<Config><InstanceName>Replacement</InstanceName></Config>"); // nosemgrep: csharp.lang.security.filesystem.unsafe-path-combine.unsafe-path-combine -- destination is a test-owned extraction folder and the filename is fixed.
                 if (ExtractContents != null)
                 {
                     ExtractContents(destination);
@@ -235,18 +235,20 @@ namespace Chaptarr.Core.Test.Backup
             _subject = CreateSubject(new DatabaseRestorationService(new TestDiskProvider(new FileSystem()), _appFolderInfo));
 
             Assert.That(BackupService.BackupFileRegex.IsMatch(Path.GetFileName(archivePath)), Is.True);
+            File.WriteAllText(_appFolderInfo.GetConfigPath(), "original");
             _subject.Restore(archivePath);
 
             var restoredConnectionString = new SqliteConnectionStringBuilder
             {
-                DataSource = _appFolderInfo.GetDatabaseRestore(),
+                DataSource = Path.Combine(_appFolderInfo.AppDataFolder, "restore-pending", "database"),
                 Mode = SqliteOpenMode.ReadOnly,
                 Pooling = false
             }.ToString();
 
             Assert.Multiple(() =>
             {
-                Assert.That(File.ReadAllText(_appFolderInfo.GetConfigPath()), Is.EqualTo("replacement"));
+                Assert.That(File.ReadAllText(_appFolderInfo.GetConfigPath()), Is.EqualTo("original"));
+                Assert.That(File.ReadAllText(Path.Combine(_appFolderInfo.AppDataFolder, "restore-pending", "config")), Does.Contain("Replacement"));
                 Assert.That(DatabaseLineageGuard.Detect(restoredConnectionString, DatabaseType.SQLite), Is.EqualTo(DatabaseLineage.BookshelfNG));
                 Assert.That(File.Exists(archivePath), Is.True);
             });

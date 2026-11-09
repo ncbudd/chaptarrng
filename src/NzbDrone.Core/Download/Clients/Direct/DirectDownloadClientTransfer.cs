@@ -118,6 +118,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
                     cancellationToken.ThrowIfCancellationRequested();
                     var request = new HttpRequest(currentUri.AbsoluteUri)
                     {
+                    AllowPrivateNetworkTargets = false,
                         AllowAutoRedirect = false,
                         RequestTimeout = TimeSpan.FromMinutes(2),
                         ResponseStream = progressStream,

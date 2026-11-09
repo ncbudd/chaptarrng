@@ -150,6 +150,8 @@ namespace NzbDrone.Core.MediaCover
                     AllowAutoRedirect = false,
                     LogHttpError = false,
                     RequestTimeout = ImageRequestTimeout,
+                    AllowPrivateNetworkTargets = IsTrustedCoverOrigin(new Uri(currentUrl)),
+                    MaxResponseBytes = MaxImageBytes,
                     ResponseStream = responseStream
                 };
 
@@ -166,6 +168,11 @@ namespace NzbDrone.Core.MediaCover
                     if (MediaCoverRendition.InspectDownloadedImage(url, imageData, out var contentHash))
                     {
                         throw new PlaceholderImageException(url, contentHash);
+                    }
+
+                    if (!RasterImagePolicy.TryGetContentType(imageData, out _))
+                    {
+                        throw new WebException("Remote cover is not a supported raster image.", WebExceptionStatus.ProtocolError);
                     }
 
                     return imageData;
@@ -268,7 +275,7 @@ namespace NzbDrone.Core.MediaCover
                 return false;
             }
 
-            if (!IsTrustedCoverHost(uri.Host) && HostResolvesToPrivateOrLocalAddress(uri.Host, out var privateReason))
+            if (!IsTrustedCoverOrigin(uri) && HostResolvesToPrivateOrLocalAddress(uri.Host, out var privateReason))
             {
                 reason = privateReason;
                 return false;
@@ -278,21 +285,12 @@ namespace NzbDrone.Core.MediaCover
             return true;
         }
 
-        private bool IsTrustedCoverHost(string host)
+        private bool IsTrustedCoverOrigin(Uri uri)
         {
-            var metadataHost = GetMetadataServerHost();
-            if (string.IsNullOrWhiteSpace(metadataHost) || string.IsNullOrWhiteSpace(host))
-            {
-                return false;
-            }
-
-            if (host.Equals(metadataHost, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
-
-            // If the user configured the metadata server on loopback, allow loopback cover URLs as well.
-            return IsLoopbackHost(metadataHost) && IsLoopbackHost(host);
+            return Uri.TryCreate(_configService?.MetadataServerUrl, UriKind.Absolute, out var metadata) &&
+                   uri.Scheme.Equals(metadata.Scheme, StringComparison.OrdinalIgnoreCase) &&
+                   uri.IdnHost.Equals(metadata.IdnHost, StringComparison.OrdinalIgnoreCase) &&
+                   uri.Port == metadata.Port;
         }
 
         private string GetMetadataServerHost()

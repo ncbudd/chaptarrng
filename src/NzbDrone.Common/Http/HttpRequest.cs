@@ -55,6 +55,9 @@ namespace NzbDrone.Common.Http
         public TimeSpan RateLimit { get; set; }
         public string RateLimitKey { get; set; }
         public Stream ResponseStream { get; set; }
+        // Untrusted provider URLs must enforce this on the resolved socket, not only at lookup time.
+        public bool AllowPrivateNetworkTargets { get; set; } = true;
+        public long MaxResponseBytes { get; set; } = long.MaxValue;
         public CancellationToken CancellationToken { get; set; }
 
         public override string ToString()

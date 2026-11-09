@@ -1097,13 +1097,15 @@ namespace Chaptarr.Api.V1.Books
                     book.Editions = resource.Editions
                         .Select(resourceEdition =>
                         {
-                            var mappedEdition = resourceEdition.ToModel(facadeContext);
-                            if (mappedEdition?.Id > 0 &&
-                                storedEditionsById.TryGetValue(mappedEdition.Id, out var storedEdition))
+                            if (resourceEdition == null || !storedEditionsById.TryGetValue(resourceEdition.Id, out var storedEdition))
                             {
-                                PreserveStoredEditionIdentity(mappedEdition, storedEdition);
+                                throw new FluentValidation.ValidationException("Submitted edition does not belong to this book.");
                             }
 
+                            // PUT /book changes selection. Provider-owned identity, media, metadata,
+                            // and image URLs must never be replaced by a round-tripped client resource.
+                            var mappedEdition = storedEdition.JsonClone();
+                            mappedEdition.Monitored = resourceEdition.Monitored;
                             return mappedEdition;
                         })
                         .ToList();

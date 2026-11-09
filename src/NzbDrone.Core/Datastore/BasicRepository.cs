@@ -964,7 +964,7 @@ namespace NzbDrone.Core.Datastore
             }
 
             var sortDirection = pagingSpec.SortDirection == SortDirection.Descending ? "DESC" : "ASC";
-            var pagingOffset = Math.Max(pagingSpec.Page - 1, 0) * pagingSpec.PageSize;
+            var pagingOffset = Math.Max((long)pagingSpec.Page - 1, 0) * pagingSpec.PageSize;
             var sortColumn = sortColumnOverride ?? $"\"{sortKey.Table ?? _table}\".\"{sortKey.Column}\"";
             builder.OrderBy($"{sortColumn} {sortDirection} LIMIT {pagingSpec.PageSize} OFFSET {pagingOffset}");
 

@@ -2340,8 +2340,9 @@ namespace Chaptarr.Api.V1.Books
                 return NotFound();
             }
 
+            using var operation = DatabaseAtomicOperation.Begin();
             bookResource.Id = targetBookId;
-            var book = _bookService.GetBook(bookResource.Id);
+            var book = _bookService.GetBook(bookResource.Id)?.JsonClone();
             if (book == null)
             {
                 return NotFound();
@@ -2351,6 +2352,21 @@ namespace Chaptarr.Api.V1.Books
             if (facadeContext?.IsBookshelfCompatibility == true)
             {
                 ResolveBookshelfLegacyEditionIds(bookResource.Editions, book);
+            }
+
+            if (bookResource.Editions != null)
+            {
+                var owned = (book.Editions ?? new List<Edition>()).ToDictionary(e => e.Id);
+                var seen = new HashSet<int>();
+                foreach (var submitted in bookResource.Editions)
+                {
+                    if (submitted == null || submitted.Id <= 0 || !seen.Add(submitted.Id) ||
+                        !owned.TryGetValue(submitted.Id, out var stored) || stored.BookId != book.Id ||
+                        stored.IsEbook != (book.MediaType == BookMediaType.Ebook))
+                    {
+                        throw new ValidationException("Every submitted edition must belong to this book and media type, with no duplicates.");
+                    }
+                }
             }
 
             var wasMonitoredForFacadeMediaType = facadeContext != null &&
@@ -2410,6 +2426,7 @@ namespace Chaptarr.Api.V1.Books
                 _bookService.SetMonitored(sourceWorkIds, bookResource.Monitored);
             }
 
+            operation.Complete();
             if (beforeMonitoredEditionId != afterMonitoredEditionId)
             {
                 EnsureBookCover(model.Id, "editionSwitch");

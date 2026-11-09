@@ -521,8 +521,8 @@ namespace NzbDrone.Core.MediaFiles
                     }
 
                     // Read raw chunks so tools that update progress with carriage returns still stream live.
-                    var outputTask = ReadStreamAsync(process.StandardOutput, outputHandler, "stdout");
-                    var errorTask = ReadStreamAsync(process.StandardError, outputHandler, "stderr");
+                    var outputTask = ReadStreamAsync(process.StandardOutput, outputHandler, "stdout", process);
+                    var errorTask = ReadStreamAsync(process.StandardError, outputHandler, "stderr", process);
 
                     var stopwatch = Stopwatch.StartNew();
                     var exited = false;
@@ -570,6 +570,10 @@ namespace NzbDrone.Core.MediaFiles
                     var error = errorTask.IsCompletedSuccessfully ? errorTask.Result : string.Empty;
                     result.StandardOutput = output ?? string.Empty;
                     result.StandardError = error ?? string.Empty;
+                    if (!outputTask.IsCompletedSuccessfully || !errorTask.IsCompletedSuccessfully)
+                    {
+                        result.ErrorMessage = "External tool output could not be read within the output budget";
+                    }
 
                     try
                     {
@@ -647,7 +651,9 @@ namespace NzbDrone.Core.MediaFiles
             }
         }
 
-        private async Task<string> ReadStreamAsync(StreamReader reader, Action<string> outputHandler, string streamName)
+        internal const int MaximumCapturedOutputChars = 4 * 1024 * 1024;
+
+        private async Task<string> ReadStreamAsync(StreamReader reader, Action<string> outputHandler, string streamName, Process process)
         {
             var builder = new StringBuilder();
             var buffer = new char[1024];
@@ -658,6 +664,12 @@ namespace NzbDrone.Core.MediaFiles
                 if (read <= 0)
                 {
                     break;
+                }
+
+                if (builder.Length > MaximumCapturedOutputChars - read)
+                {
+                    KillProcessTree(process, process.StartInfo.FileName, "output-limit");
+                    throw new InvalidDataException($"External tool {streamName} exceeded its output budget");
                 }
 
                 var chunk = new string(buffer, 0, read);
@@ -704,8 +716,8 @@ namespace NzbDrone.Core.MediaFiles
                         return null;
                     }
 
-                    var outputTask = process.StandardOutput.ReadToEndAsync();
-                    var errorTask = process.StandardError.ReadToEndAsync();
+                    var outputTask = ReadStreamAsync(process.StandardOutput, null, "stdout", process);
+                    var errorTask = ReadStreamAsync(process.StandardError, null, "stderr", process);
 
                     var exited = process.WaitForExit(10000);
                     if (!exited)

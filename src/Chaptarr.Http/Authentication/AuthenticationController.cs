@@ -8,6 +8,7 @@ using System.Xml;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using NLog;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
@@ -91,6 +92,7 @@ namespace Chaptarr.Http.Authentication
         [HttpGet("logout")]
         public async Task<IActionResult> Logout()
         {
+            HttpContext.RequestServices.GetRequiredService<IUiSessionTokenService>().Revoke(HttpContext);
             _authService.Logout(HttpContext);
             // If multiple UI auth cookies exist (e.g., local fallback while Plex/OIDC is primary),
             // sign out of all cookie schemes so "Logout" consistently clears access.

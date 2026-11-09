@@ -50,8 +50,9 @@ jobs:
           scan-type: fs
           scan-ref: .
           scanners: vuln,secret
-          severity: HIGH,CRITICAL
-          ignore-unfixed: true
+          severity: UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL
+          ignore-unfixed: false
+          version: v0.76.2
           exit-code: '1'
           format: sarif
           output: trivy-results.sarif

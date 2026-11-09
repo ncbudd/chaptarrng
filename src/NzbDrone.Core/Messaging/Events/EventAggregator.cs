@@ -7,6 +7,7 @@ using NzbDrone.Common;
 using NzbDrone.Common.EnsureThat;
 using NzbDrone.Common.Messaging;
 using NzbDrone.Common.TPL;
+using NzbDrone.Core.Datastore;
 
 namespace NzbDrone.Core.Messaging.Events
 {
@@ -51,6 +52,11 @@ namespace NzbDrone.Core.Messaging.Events
             where TEvent : class, IEvent
         {
             Ensure.That(@event, () => @event).IsNotNull();
+            if (DatabaseAtomicOperation.DeferEvent(() => PublishEvent(@event)))
+            {
+                return;
+            }
+
 
             var eventName = GetEventName(@event.GetType());
 

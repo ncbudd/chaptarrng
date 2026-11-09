@@ -72,6 +72,20 @@ namespace NzbDrone.Core.Datastore
 
         public bool Restore()
         {
+            if (FullRestoreBundle.IsPrepared(_appFolderInfo))
+            {
+                try
+                {
+                    Validate(_appFolderInfo.GetDatabase());
+                    return true;
+                }
+                catch
+                {
+                    FullRestoreBundle.Rollback(_appFolderInfo);
+                    throw;
+                }
+            }
+
             var dbRestorePath = _appFolderInfo.GetDatabaseRestore();
             var dbPath = _appFolderInfo.GetDatabase();
             var previousDatabasePath = GetPreviousDatabasePath(dbPath);
@@ -112,11 +126,24 @@ namespace NzbDrone.Core.Datastore
 
         public void Commit()
         {
+            if (FullRestoreBundle.IsPrepared(_appFolderInfo))
+            {
+                // Keep both originals until the host has successfully started as well.
+                FullRestoreBundle.MarkDatabaseValidated(_appFolderInfo);
+                return;
+            }
+
             DeleteDatabaseFiles(GetPreviousDatabasePath(_appFolderInfo.GetDatabase()));
         }
 
         public void Rollback()
         {
+            if (FullRestoreBundle.IsPrepared(_appFolderInfo))
+            {
+                FullRestoreBundle.Rollback(_appFolderInfo);
+                return;
+            }
+
             var dbPath = _appFolderInfo.GetDatabase();
             var previousDatabasePath = GetPreviousDatabasePath(dbPath);
 

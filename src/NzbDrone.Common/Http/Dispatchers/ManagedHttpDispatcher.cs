@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -93,7 +94,7 @@ namespace NzbDrone.Common.Http.Dispatchers
                 AddRequestHeaders(requestMessage, request.Headers);
             }
 
-            var httpClient = GetClient(request.Url);
+            var httpClient = request.AllowPrivateNetworkTargets ? GetClient(request.Url) : GetPublicClient(request.Url);
 
             try
             {
@@ -113,14 +114,20 @@ namespace NzbDrone.Common.Http.Dispatchers
 
                 try
                 {
-                    if (request.ResponseStream != null && responseMessage.StatusCode == HttpStatusCode.OK)
+                    var streamResponse = request.ResponseStream != null && responseMessage.IsSuccessStatusCode;
+                    var limit = Math.Min(request.MaxResponseBytes, responseMessage.IsSuccessStatusCode
+                        ? (streamResponse ? long.MaxValue : 64L * 1024 * 1024)
+                        : 1024L * 1024);
+                    if (responseMessage.Content.Headers.ContentLength > limit)
                     {
-                        await responseMessage.Content.CopyToAsync(request.ResponseStream, null, linkedCancellationTokenSource.Token);
+                        throw new InvalidDataException("HTTP response exceeds the configured byte limit.");
                     }
-                    else
-                    {
-                        data = await responseMessage.Content.ReadAsByteArrayAsync(linkedCancellationTokenSource.Token);
-                    }
+
+                    using var buffered = streamResponse ? null : new MemoryStream();
+                    using var limited = new ResponseSizeLimitedStream(streamResponse ? request.ResponseStream : buffered, limit);
+                    await responseMessage.Content.CopyToAsync(limited, null, linkedCancellationTokenSource.Token);
+
+                    data = buffered?.ToArray();
                 }
                 catch (OperationCanceledException)
                 {
@@ -148,6 +155,23 @@ namespace NzbDrone.Common.Http.Dispatchers
             var key = proxySettings?.Key ?? NO_PROXY_KEY;
 
             return _httpClientCache.Get(key, () => CreateHttpClient(proxySettings));
+        }
+
+        protected virtual System.Net.Http.HttpClient GetPublicClient(HttpUri uri)
+        {
+            var proxySettings = _proxySettingsProvider.GetProxySettings(uri);
+            if (proxySettings != null && !proxySettings.IsDirectConnection)
+            {
+                // A proxy resolves the destination itself, beyond our socket policy. Never silently
+                // weaken the public-address restriction or send an untrusted request through it.
+                throw new WebException("Untrusted URL fetching requires a direct connection with destination address validation.");
+            }
+
+            return _httpClientCache.Get("public-targets", () => new System.Net.Http.HttpClient(
+                _socketsHttpHandlerFactory.CreateHandler(proxySettings, false, false, null, false, 12, allowPrivateNetworkTargets: false))
+            {
+                Timeout = Timeout.InfiniteTimeSpan
+            });
         }
 
         protected virtual System.Net.Http.HttpClient CreateHttpClient(HttpProxySettings proxySettings)

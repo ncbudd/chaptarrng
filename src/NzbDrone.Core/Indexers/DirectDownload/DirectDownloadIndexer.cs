@@ -99,7 +99,7 @@ namespace NzbDrone.Core.Indexers.DirectDownload
 
         public override HttpRequest GetDownloadRequest(string link)
         {
-            return new HttpRequest(link);
+            return new HttpRequest(link) { AllowPrivateNetworkTargets = false };
         }
 
         protected override async Task Test(List<ValidationFailure> failures)

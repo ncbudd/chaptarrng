@@ -18,7 +18,7 @@ namespace NzbDrone.Core.Authentication
 
     public class UserService : IUserService
     {
-        private const int Iterations = 10000;
+        internal const int Iterations = 220_000;
         private const int SaltSize = 128 / 8;
         private const int HashSize = 256 / 8;
 
@@ -103,6 +103,12 @@ namespace NzbDrone.Core.Authentication
 
             if (VerifyHashedPassword(user, password))
             {
+                if (user.Iterations < Iterations)
+                {
+                    SetUserHashedPassword(user, password);
+                    return Update(user);
+                }
+
                 return user;
             }
 
@@ -141,7 +147,7 @@ namespace NzbDrone.Core.Authentication
 
         private static bool VerifyHashedPassword(User user, string password)
         {
-            if (user.Iterations <= 0 || user.Salt.IsNullOrWhiteSpace())
+            if (user.Iterations <= 0 || user.Iterations > 5_000_000 || user.Salt.IsNullOrWhiteSpace())
             {
                 return false;
             }
@@ -150,6 +156,11 @@ namespace NzbDrone.Core.Authentication
             {
                 var salt = Convert.FromBase64String(user.Salt);
                 var expected = Convert.FromBase64String(user.Password);
+                if (salt.Length < SaltSize || expected.Length != HashSize)
+                {
+                    return false;
+                }
+
                 var actual = Rfc2898DeriveBytes.Pbkdf2(password, salt, user.Iterations, HashAlgorithmName.SHA512, expected.Length);
 
                 return CryptographicOperations.FixedTimeEquals(expected, actual);

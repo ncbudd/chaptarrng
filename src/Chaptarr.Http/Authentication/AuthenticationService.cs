@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Chaptarr.Http.Extensions;
 using Microsoft.AspNetCore.Http;
 using NLog;
@@ -22,6 +23,7 @@ namespace Chaptarr.Http.Authentication
         private static readonly Logger _authLogger = LogManager.GetLogger("Auth");
         private const int MaxFailedAttemptsPerIp = 10;
         private static readonly TimeSpan FailedAttemptWindow = TimeSpan.FromMinutes(15);
+        private static readonly object[] AttemptLocks = Enumerable.Range(0, 128).Select(_ => new object()).ToArray();
 
         private readonly IConfigFileProvider _configFileProvider;
         private readonly IUserService _userService;
@@ -51,24 +53,34 @@ namespace Chaptarr.Http.Authentication
             }
 
             var remoteIp = request.GetRemoteIP();
-            var failures = _failedAttemptsByIp.Find(remoteIp);
-            if (failures >= MaxFailedAttemptsPerIp)
+            var attemptLock = AttemptLocks[(StringComparer.Ordinal.GetHashCode(remoteIp ?? string.Empty) & int.MaxValue) % AttemptLocks.Length];
+            lock (attemptLock)
             {
-                LogInvalidated(request);
-                return null;
+                var failures = _failedAttemptsByIp.Find(remoteIp);
+                if (failures >= MaxFailedAttemptsPerIp)
+                {
+                    LogInvalidated(request);
+                    return null;
+                }
+
+                // Reserve the attempt before expensive verification. Concurrent failures cannot
+                // overwrite one another, and distinct addresses do not serialize hashing.
+                _failedAttemptsByIp.Set(remoteIp, failures + 1, FailedAttemptWindow);
             }
 
             var user = _userService.FindUser(username, password);
 
             if (user != null)
             {
-                _failedAttemptsByIp.Remove(remoteIp);
+                lock (attemptLock)
+                {
+                    _failedAttemptsByIp.Remove(remoteIp);
+                }
                 LogSuccess(request, username);
 
                 return user;
             }
 
-            _failedAttemptsByIp.Set(remoteIp, failures + 1, FailedAttemptWindow);
             LogFailure(request, username);
 
             return null;

@@ -1,0 +1,65 @@
+# 2026-11-09 audit remediation
+
+This change addresses the code and repository-workflow findings CHAP-001 through CHAP-027 from the full application audit. It was integrated over main commit `2cb17528625b0bd7bdd64d829361a1b59a5c5456`, preserving the concurrent release, metadata and Windows migration changes. No production deployment or release publication is part of this work.
+
+The application and workflow changes are implemented. **CHAP-021 remains an external repository-administration action:** the GitHub connector has no administration capability, and the available browser failed during initialization before opening repository settings. A concrete branch-protection request is included in `security/main-branch-protection.json`; committing that file does not apply the rule. Do not describe this item as closed until GitHub confirms the rule is active.
+
+## Remediation register
+
+| ID | Change | Regression or verification |
+| --- | --- | --- |
+| CHAP-001 | First-run administration requires a random setup password stored in the private AppData `setup-token` file. Existing external/OIDC/Plex authentication is preserved; incomplete external authentication fails closed. | First-run, external-authentication and setup-token fixtures; HTTP startup smoke. |
+| CHAP-002 | Cover cache entries must decode as supported raster images within byte/pixel limits. The static catch-all cannot serve cover-cache paths; cover responses carry `nosniff`. | Cover proxy routing and raster-policy cases. |
+| CHAP-003 | Book updates validate every submitted edition against its existing book and media type. Only monitoring choices are copied; ownership/metadata cannot be reassigned. Related database operations share one transaction. | Edition validation plus SQLite transaction commit/rollback/event tests. |
+| CHAP-004 | Public fetches validate the DNS addresses actually used at socket connection. Cover and direct-download traffic use this policy; metadata exceptions require an exact origin match. | Public socket-policy and proxy-failure cases. |
+| CHAP-005 | Browser fallback requires a non-root Linux bubblewrap sandbox with a private filesystem/network namespace. Page requests pass through the same public HTTP policy; websocket, download, service-worker and resource budgets are enforced. Unsupported hosts fail closed. | Browser resolver fixtures; automatic Ubuntu CI exercises real Chromium. Local host cannot supply the required non-root UID mapping. |
+| CHAP-006 | Restricted Seerr file listing rejects `unmapped`, `authorId` and alternate file-ID selectors when authorizing through `bookId`. | Seerr API-key access-policy fixtures. |
+| CHAP-007 | Buffered success bodies and all non-success bodies are bounded, including declared-length and chunked/error responses. Stream copies retain cancellation and explicit limits. | HTTP body-limit/cancellation fixtures. |
+| CHAP-008 | ZIP metadata is checked before decompression; integrity checking occurs during quota-enforced streaming into a private staging directory. | Corrupt final entry and archive budget cases. |
+| CHAP-009 | Extraction refuses existing content and link ancestors, uses exclusive file creation and publishes a completed private staging directory. | Symlink and existing-file rejection fixtures. |
+| CHAP-010 | All archives in an import batch stage privately; any extraction failure aborts and cleans the batch. Files become import candidates only after complete publication. | Archive/import fixtures. |
+| CHAP-011 | Media, backup and update archives have separate size budgets; backup creation checks the same limits its restore path accepts. | Archive profile and backup validation fixtures. |
+| CHAP-012 | Full restore stages configuration and database together. A durable recovery journal retains both originals through database validation/migration and successful host startup; failed/restarted attempts roll back both. | FullRestoreBundle fixtures, including invalid-database recovery and delayed commit. |
+| CHAP-013 | Settings restore prevalidates provider definitions, custom formats and profiles, then performs replacement in one database transaction. Delete failures abort; event/cache publication occurs only after commit. | Settings/backup fixtures and atomic transaction failure cases. |
+| CHAP-014 | `AdminApiKey` is registered and requires an authenticated full-scope key. Restricted and anonymous callers cannot use author media-move routes. | Admin-policy authorization cases. |
+| CHAP-015 | Browser initialization returns a short-lived, cookie-bound UI credential instead of the permanent master key. Tokens expire after 30 minutes, refresh in active UI sessions, and are revoked at logout. | UI token, initialize JSON and authentication fixtures; frontend source tests. |
+| CHAP-016 | User passwords use PBKDF2-SHA512 with 220,000 iterations; encrypted settings backups use PBKDF2-SHA256 with 600,000. Successful legacy login upgrades the hash; old encrypted backups remain readable. | Legacy hash upgrade and encrypted-backup compatibility cases. |
+| CHAP-017 | Login attempts reserve throttle capacity under striped synchronization before password verification. Concurrent failures cannot lose increments. | 100 concurrent failed attempts permit only the configured ten password checks. |
+| CHAP-018 | Group zero no longer implies root execution. Cloudron initializes permissions and drops to the application account. Container/chart privileges and resource bounds are explicit. | Entrypoint/packaging contracts and container-platform candidate checks. |
+| CHAP-019 | Missing or failed ripgrep discovery and empty CI inputs fail the scanner rather than reporting success. | Three scanner-discovery failure tests. |
+| CHAP-020 | Security scans run on every PR revision using trusted-base policy and read-only PR data in offline constrained containers; main pushes and releases are gated too. An exact-source `Security audit` status is emitted. New PR-controlled suppressions are rejected. CodeQL remains disabled. | Runner-policy tests, nine audit-policy tests and full local scans; hosted status is separate evidence. |
+| CHAP-021 | Prepared branch protection requiring `Security audit`, with force pushes/deletion disabled. | **Not applied:** repository administration is unavailable in this session. |
+| CHAP-022 | Updates require SHA-256 plus Sigstore attestation for the selected version, repository and main-branch release-workflow identity. Release archives receive signed bundles. Supported packages bundle a hash-pinned GitHub CLI verifier. Downloads and verifier execution are bounded. | URL/identity/version/checksum rejection tests; verifier packaging check. A valid newly signed published release remains release acceptance. |
+| CHAP-023 | Pagination caps page size at 2,000 and offset at 10,000,000; arithmetic uses a wider checked type. | Pagination boundary/overflow fixtures. |
+| CHAP-024 | Each external-tool output stream has a bounded capture buffer; overflowing tools are terminated and incomplete output is rejected. | Real child-process stdout/stderr overflow tests. |
+| CHAP-025 | Containment checks deny access on failed, missing or dangling link resolution and use platform-appropriate path comparison. | File-containment cases in the backend suite. |
+| CHAP-026 | NuGet project and installer lockfiles are committed and CI restores in locked mode. Custom runtime restores must match committed package versions/content hashes. Scanner versions, image digests, rule commits and rule-archive hashes are pinned. | Standard locked restore; positive/negative custom-lock tests; immutable rule materialization. |
+| CHAP-027 | Vulnerable glob consumers resolve to 14.0.4 with targeted dependency overrides. | Development dependencies included in Trivy; real frontend production build succeeds. |
+
+## Operator-visible behavior
+
+- On a fresh local-authentication installation, enter username `setup` and the password from AppData's `setup-token` file when the browser prompts. Create the normal account immediately. Unix permissions are owner-only; Windows inherits the existing AppData ACL. Keep that directory private. Existing configured SSO does not enter this path.
+- UI credentials are intentionally short-lived. A background tab refreshes on visibility; a restarted app or logged-out session must obtain a new UI credential. Existing external API integrations continue to use their configured API keys.
+- Public cover/download/update fetches reject private, loopback, reserved and cloud-metadata destinations at connection time. Configured non-direct proxy paths fail closed for these public fetches because they cannot prove the destination socket policy. Local download clients remain a separate trusted integration path.
+- JavaScript-based download resolution needs Linux, a non-root application account, bubblewrap, user namespaces and the packaged Chromium version. No unsandboxed fallback is available. Windows, macOS and other unsupported hosts can still use ordinary HTTP resolution.
+- Archives permit at most 20,000 entries and 30 minutes of extraction. Media permits 16 GiB per entry / 128 GiB total; backups 32 / 64 GiB; updates 2 / 4 GiB. HTTP update downloads are limited to 2 GiB and 15 minutes. These are explicit safety ceilings rather than unbounded inputs.
+- A pending full restore applies on the next service/interactive startup. Recovery directories ending in `.failed-*` preserve failed attempts for operator inspection. A restore does not commit merely because SQLite opens; application startup must complete.
+- Automatic updates reject old releases without the new attestation bundle. Standard Linux/macOS/Windows packages bundle GitHub CLI 2.103.3. FreeBSD must install a native `gh` with attestation support; absence or verification failure blocks the update. Upgrading from an older installation without these protections requires a separately trusted initial installation.
+- Kubernetes defaults now request 100m CPU/256 MiB and limit 4 CPU/4 GiB. Operators should size these values for their library and conversion workload. Root is used only for the documented container permission bootstrap before the application drops privileges.
+
+## Validation and limits
+
+Local validation completed:
+
+- Full backend suite: 5,335 passed, 46 skipped, zero failures. Subsequent focused tests and the real HTTP smoke cover the final UI service-lifetime correction.
+- Real application startup/HTTP smoke: anonymous setup and API requests rejected; setup password private; authenticated initialization returns a non-master token; API access requires its matching cookie. The console builds with zero warnings/errors.
+- Frontend: 193 source tests and 67 localization tests pass; type checking and the production webpack build pass (47 existing webpack warnings).
+- Semgrep: 1,074 pinned rules loaded, 663 applicable rules, 6,417 scanned files and zero active findings. Later small policy/test additions are scanned again before push. The engine reports partial parsing for some C#/shell syntax, cannot parse raw Helm templates, and its Bash workflow subpatterns cannot parse PowerShell steps. Trivy separately renders/scans the chart; these scanner limitations are not a claim of complete static-analysis coverage. One file's timeout is retried with a 90-second rule budget.
+- Trivy: zero active dependency, secret or deployment findings, including development dependencies; 19 reviewed deployment findings are suppressed by the documented expiring policy.
+- Standard solution locked restore passes; policy tests, scanner-discovery tests, runner-policy checks, packaging contracts and container-platform candidate checks pass. The packaged verifier rejects a forged attestation bundle.
+
+The full NUnit suite includes intentionally skipped fixtures that require external services, native media tooling or installed-product inputs. Passing component tests is not installed migration, representative-media, PostgreSQL, power-loss or multi-platform acceptance. The real sandboxed Chromium test runs in the dedicated Ubuntu workflow because this workspace cannot map a non-root UID. Publication still depends on the existing installed acceptance gates.
+
+Semgrep rules are materialized privately from immutable upstream archives. The repository contains only source provenance and rule selections, not a redistributed copy of the third-party rules. The reviewed set contains 1,074 Community Edition rules. Scan reports do not include the rule archive. Trivy exceptions remain path-specific, justified and expire on 2026-12-31; they cover documented bootstrap/test/candidate deployment choices, not dependency or secret findings.
+
+The earlier audit's validation-only items remain acceptance work rather than established vulnerabilities: representative acquisition/Seerr lifecycles, native platform installation/recovery, real PostgreSQL behavior, fuzzing and deployment-specific permissions. This patch does not turn synthetic evidence into a claim that those operational checks ran.

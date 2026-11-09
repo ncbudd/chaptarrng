@@ -49,6 +49,10 @@ podSecurityContext:
     type: RuntimeDefault
 containerSecurityContext:
   allowPrivilegeEscalation: false
+  capabilities:
+    drop: [ALL]
+    # Root bootstrap only: initialize existing PVC ownership, then gosu drops the app.
+    add: [CHOWN, DAC_OVERRIDE, FOWNER, SETUID, SETGID]
 
 service:
   type: ClusterIP
@@ -75,7 +79,13 @@ persistence:
   size: 10Gi
   annotations: {}
 
-resources: {}
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: "4"
+    memory: 4Gi
 nodeSelector: {}
 tolerations: []
 affinity: {}

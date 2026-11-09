@@ -27,6 +27,7 @@ namespace NzbDrone.Core.Indexers.DirectDownload
                 using var buffer = new CappedMemoryStream(request.MaxResponseBytes);
                 var httpRequest = new HttpRequest(currentUri.AbsoluteUri)
                 {
+                    AllowPrivateNetworkTargets = false,
                     AllowAutoRedirect = false,
                     RequestTimeout = request.RequestTimeout,
                     ResponseStream = buffer

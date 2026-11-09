@@ -203,7 +203,7 @@ if [ "$EUID" -eq 0 ]; then
     echo "Running as root, setting up user..."
     
     # Handle special case: root user requested
-    if [ "$PUID" -eq 0 ] || [ "$PGID" -eq 0 ]; then
+    if [ "$PUID" -eq 0 ]; then
         echo "Warning: Running as root (UID 0) is not recommended for security reasons"
         run_application "$@"
     fi

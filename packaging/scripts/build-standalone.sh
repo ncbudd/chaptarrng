@@ -70,6 +70,8 @@ if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
     "-p:RestoreConfigFile=$custom_nuget_config"
     "-p:RuntimeFrameworkVersion=10.0.12"
     "-p:ChaptarrExtraPlatformRuntimePacks=true"
+    "-p:ChaptarrStandaloneLockRoot=$work/locks"
+    "-p:RestoreLockedMode=false"
   )
 fi
 
@@ -137,8 +139,12 @@ PY
 fi
 
 mkdir -p "$bundle/UI"
+if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
+  python3 packaging/scripts/verify-platform-locks.py src "$work/locks"
+fi
 cp -a _output/UI/. "$bundle/UI/"
 cp LICENSE "$bundle/LICENSE"
+python3 packaging/scripts/install-update-verifier.py "$rid" "$bundle/Tools"
 test -s "$bundle/UI/index.html"
 
 if [[ "$rid" == linux-* || "$rid" == osx-* ]]; then

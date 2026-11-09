@@ -14,6 +14,7 @@ using NzbDrone.Common.Reflection;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.CustomFormats;
 using NzbDrone.Core.Download;
+using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Exceptions;
 using NzbDrone.Core.Indexers;
 using NzbDrone.Core.Indexers.MyAnonaMouse;
@@ -228,6 +229,8 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
                 throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Selected categories are not present in this backup file");
             }
 
+            ValidateProviderSections(package, categoriesToApply);
+            using var operation = DatabaseAtomicOperation.Begin();
             var result = new SettingsBackupRestoreResult();
             AddLegacySectionWarnings(package, categoriesToApply, result);
 
@@ -318,7 +321,75 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
                 RestoreRemotePathMappings(package, downloadClientIdMap, request.Mode, result);
             }
 
+            operation.Complete();
             return result;
+        }
+
+        private static void ValidateProviderSections(SettingsBackupPackage package, HashSet<SettingsBackupCategory> categories)
+        {
+            var tags = new Dictionary<int, int>();
+            if (categories.Contains(SettingsBackupCategory.Profiles))
+            {
+                var validation = new SettingsBackupRestoreResult();
+                foreach (var entry in package.CustomFormats ?? new List<CustomFormatBackup>())
+                {
+                    if (entry == null || entry.Name.IsNullOrWhiteSpace())
+                    {
+                        throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an invalid custom format.");
+                    }
+
+                    var restored = FromBackup(entry, validation);
+                    if (validation.Warnings.Count != 0 || restored.Specifications.Count != (entry.Specifications?.Count ?? 0))
+                    {
+                        throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an unsupported or invalid custom format specification.");
+                    }
+                }
+
+                if ((package.QualityProfiles ?? new List<QualityProfileBackup>()).Any(p => p == null || p.Name.IsNullOrWhiteSpace()) ||
+                    (package.MetadataProfiles ?? new List<MetadataProfile>()).Any(p => p == null || p.Name.IsNullOrWhiteSpace()))
+                {
+                    throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an invalid profile.");
+                }
+            }
+
+            if (categories.Contains(SettingsBackupCategory.Proxies) &&
+                (package.Proxies ?? new List<ProxyDefinitionBackup>()).Any(p => p == null || p.Name.IsNullOrWhiteSpace()))
+            {
+                throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an invalid proxy.");
+            }
+
+            if (categories.Contains(SettingsBackupCategory.DownloadClients))
+            {
+                foreach (var entry in package.DownloadClients ?? new List<DownloadClientDefinitionBackup>())
+                {
+                    if (FromBackup(entry, tags) == null)
+                    {
+                        throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an invalid or unsupported download client.");
+                    }
+                }
+            }
+
+            if (categories.Contains(SettingsBackupCategory.Indexers))
+            {
+                foreach (var entry in package.Indexers ?? new List<IndexerDefinitionBackup>())
+                {
+                    if (FromBackup(entry, tags, tags, tags) == null)
+                    {
+                        throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an invalid or unsupported indexer.");
+                    }
+                }
+            }
+
+            if (categories.Contains(SettingsBackupCategory.Connections))
+            {
+                foreach (var entry in package.Connections ?? new List<NotificationDefinitionBackup>())
+                {
+                    if (FromBackup(entry, tags) == null)
+                    {
+                        throw new NzbDroneClientException(HttpStatusCode.BadRequest, "Backup contains an invalid or unsupported connection.");
+                    }
+                }
+            }
         }
 
         internal static void AddLegacySectionWarnings(SettingsBackupPackage package, HashSet<SettingsBackupCategory> categoriesToApply, SettingsBackupRestoreResult result)
@@ -1874,13 +1945,12 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
             }
             catch
             {
-                // Best-effort only; fall back to lexical containment to avoid breaking NAS/Docker edge cases.
-                return true;
+                return false;
             }
 
             if (resolvedPath.IsNullOrWhiteSpace())
             {
-                return true;
+                return false;
             }
 
             var resolvedRoots = roots
@@ -1926,6 +1996,13 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
             {
                 var next = Path.Combine(current, segments[i]);
 
+                // LinkTarget still identifies dangling links when Exists is false.
+                var link = new FileInfo(next).LinkTarget;
+                if (link != null && !Directory.Exists(next) && !File.Exists(next))
+                {
+                    return null;
+                }
+
                 if (!Directory.Exists(next) && !File.Exists(next))
                 {
                     // Can't resolve further; append remaining segments to the resolved prefix.
@@ -1940,15 +2017,13 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
                 var isDir = Directory.Exists(next);
                 FileSystemInfo info = isDir ? new DirectoryInfo(next) : new FileInfo(next);
 
-                try
+                var resolved = info.ResolveLinkTarget(returnFinalTarget: true);
+                if (link != null && (resolved == null || !resolved.Exists))
                 {
-                    var resolved = info.ResolveLinkTarget(returnFinalTarget: true);
-                    current = resolved?.FullName ?? info.FullName;
+                    return null;
                 }
-                catch
-                {
-                    current = info.FullName;
-                }
+
+                current = resolved?.FullName ?? info.FullName;
             }
 
             return current;
@@ -1964,12 +2039,12 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
             fullPath = fullPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
             rootPath = rootPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
 
-            if (fullPath.Equals(rootPath, StringComparison.OrdinalIgnoreCase))
+            if (fullPath.Equals(rootPath, OperatingSystem.IsWindows() ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal))
             {
                 return true;
             }
 
-            return fullPath.StartsWith(rootPath + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase);
+            return fullPath.StartsWith(rootPath + Path.DirectorySeparatorChar, OperatingSystem.IsWindows() ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal);
         }
 
         private static string NormalizeFileName(string fileName)

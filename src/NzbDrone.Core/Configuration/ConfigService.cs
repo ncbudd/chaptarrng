@@ -30,7 +30,8 @@ namespace NzbDrone.Core.Configuration
         private readonly IEventAggregator _eventAggregator;
         private readonly IRootFolderService _rootFolderService;
         private readonly Logger _logger;
-        private static Dictionary<string, string> _cache;
+        private static Dictionary<string, string> _cache = new Dictionary<string, string>();
+        private static readonly object CacheLock = new object();
 
         public ConfigService(IConfigRepository repository, IEventAggregator eventAggregator, IRootFolderService rootFolderService, Logger logger)
         {
@@ -102,6 +103,11 @@ namespace NzbDrone.Core.Configuration
             get
             {
                 const string key = "recyclebin";
+
+                if (NzbDrone.Core.Datastore.DatabaseAtomicOperation.IsActive)
+                {
+                    return _repository.Get(key)?.Value ?? string.Empty;
+                }
 
                 EnsureCache();
 
@@ -900,9 +906,18 @@ namespace NzbDrone.Core.Configuration
             key = key.ToLowerInvariant();
             Ensure.That(key, () => key).IsNotNullOrWhiteSpace();
 
-            EnsureCache();
+            string dbValue;
+            if (NzbDrone.Core.Datastore.DatabaseAtomicOperation.IsActive)
+            {
+                dbValue = _repository.Get(key)?.Value;
+            }
+            else
+            {
+                EnsureCache();
+                _cache.TryGetValue(key, out dbValue);
+            }
 
-            if (_cache.TryGetValue(key, out var dbValue) && dbValue != null && !string.IsNullOrEmpty(dbValue))
+            if ( dbValue != null && !string.IsNullOrEmpty(dbValue))
             {
                 return dbValue;
             }
@@ -1011,7 +1026,7 @@ namespace NzbDrone.Core.Configuration
 
         private void EnsureCache()
         {
-            lock (_cache)
+            lock (CacheLock)
             {
                 if (!_cache.Any())
                 {
@@ -1021,9 +1036,11 @@ namespace NzbDrone.Core.Configuration
             }
         }
 
+        internal static void InvalidateCache() => ClearCache();
+
         private static void ClearCache()
         {
-            lock (_cache)
+            lock (CacheLock)
             {
                 _cache = new Dictionary<string, string>();
             }

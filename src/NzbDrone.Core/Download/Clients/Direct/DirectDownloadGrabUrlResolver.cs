@@ -140,6 +140,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
             {
                 var httpRequest = new HttpRequest(apiUri.AbsoluteUri)
                 {
+                    AllowPrivateNetworkTargets = false,
                     AllowAutoRedirect = true,
                     RequestTimeout = ResolveTimeout,
                     SuppressHttpError = true
@@ -284,6 +285,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
                 {
                     var httpRequest = new HttpRequest(apiUri.AbsoluteUri)
                     {
+                    AllowPrivateNetworkTargets = false,
                         AllowAutoRedirect = true,
                         RequestTimeout = ResolveTimeout
                     };
@@ -345,6 +347,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
             {
                 var httpRequest = new HttpRequest(infoUri.AbsoluteUri)
                 {
+                    AllowPrivateNetworkTargets = false,
                     AllowAutoRedirect = true,
                     RequestTimeout = ResolveTimeout
                 };
@@ -423,6 +426,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
             {
                 var httpRequest = new HttpRequest(url)
                 {
+                    AllowPrivateNetworkTargets = false,
                     AllowAutoRedirect = true,
                     RequestTimeout = ResolveTimeout,
                     SuppressHttpError = true
@@ -492,6 +496,7 @@ namespace NzbDrone.Core.Download.Clients.Direct
             {
                 var httpRequest = new HttpRequest(mirrorUri.AbsoluteUri)
                 {
+                    AllowPrivateNetworkTargets = false,
                     AllowAutoRedirect = true,
                     RequestTimeout = ResolveTimeout
                 };

@@ -4127,7 +4127,10 @@ namespace Chaptarr.Core.Test.MediaFiles
 
                 Assert.That(archiveService.Extractions, Has.Count.EqualTo(1));
                 Assert.That(archiveService.Extractions[0].CompressedFile, Is.EqualTo(zipPath));
-                Assert.That(archiveService.Extractions[0].Destination, Is.EqualTo(tempDir));
+                Assert.That(archiveService.Extractions[0].Destination, Is.Not.EqualTo(tempDir));
+                Assert.That(archiveService.Extractions[0].Destination, Does.Contain(".chaptarr-import-"));
+                Assert.That(Directory.Exists(Path.Combine(tempDir, "chaptarr-extracted")), Is.True);
+                Assert.That(Directory.Exists(Path.GetDirectoryName(archiveService.Extractions[0].Destination)), Is.False);
             }
             finally
             {

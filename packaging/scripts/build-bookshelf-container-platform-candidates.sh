@@ -131,7 +131,7 @@ dockerfile_old = (
     "# This standard ChaptarrNG image tag is a source candidate. Before a Cloudron update\n"
     "# is accepted, replace it with the exact published multi-architecture digest\n"
     "# that passed the migration and rollback rehearsals.\n"
-    "FROM " + legacy_tag
+    "FROM ghcr.io/snapetech-org/chaptarrng@sha256:__CHAPTARRNG_IMAGE_DIGEST__"
 )
 dockerfile_new = (
     "# This ChaptarrNG image digest is pinned to the release that produced this candidate.\n"

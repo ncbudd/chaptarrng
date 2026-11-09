@@ -39,6 +39,9 @@ namespace Chaptarr.Http
 
     public static class PagingResourceMapper
     {
+        public const int MaximumPageSize = 2000;
+        public const long MaximumOffset = 10_000_000;
+
         public static PagingSpec<TModel> MapToPagingSpec<TResource, TModel>(this PagingResource<TResource> pagingResource, string defaultSortKey = "Id", SortDirection defaultSortDirection = SortDirection.Descending)
         {
             if (pagingResource.Page < 1)
@@ -49,6 +52,12 @@ namespace Chaptarr.Http
             if (pagingResource.PageSize < 1)
             {
                 throw new BadRequestException(new { message = "PageSize must be >= 1" });
+            }
+
+            if (pagingResource.PageSize > MaximumPageSize ||
+                ((long)pagingResource.Page - 1) * pagingResource.PageSize > MaximumOffset)
+            {
+                throw new BadRequestException(new { message = "Requested page exceeds the supported pagination limits" });
             }
 
             var pagingSpec = new PagingSpec<TModel>

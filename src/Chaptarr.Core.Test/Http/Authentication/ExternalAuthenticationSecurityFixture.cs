@@ -131,7 +131,7 @@ namespace Chaptarr.Core.Test.Http.Authentication
         }
 
         [Test]
-        public void incomplete_oidc_should_allow_local_recovery_and_require_api_auth_remotely()
+        public void incomplete_oidc_should_require_owner_api_credentials_on_every_network()
         {
             var config = ConfigFileProviderProxy.Create();
             var state = (ConfigFileProviderProxy)(object)config;
@@ -142,7 +142,7 @@ namespace Chaptarr.Core.Test.Http.Authentication
             var localScheme = GetMisconfiguredScheme(CreateHttpContext("192.168.86.10"), config);
             var remoteScheme = GetMisconfiguredScheme(CreateHttpContext("203.0.113.20"), config);
 
-            Assert.That(localScheme, Is.EqualTo(AuthenticationType.None.ToString()));
+            Assert.That(localScheme, Is.EqualTo("API"));
             Assert.That(remoteScheme, Is.EqualTo("API"));
         }
 

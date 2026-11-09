@@ -81,6 +81,50 @@ namespace Chaptarr.Core.Test.Http
             Assert.That(exception.Status, Is.EqualTo(WebExceptionStatus.Timeout));
         }
 
+        [TestCase(false, false)]
+        [TestCase(true, false)]
+        [TestCase(false, true)]
+        [TestCase(true, true)]
+        public void oversized_error_body_is_bounded_even_for_a_streaming_download(bool declaredLength, bool responseStream)
+        {
+            var content = new LargeContent(declaredLength);
+            var dispatcher = new TestDispatcher(new CacheManager(), new ErrorHandler(content));
+            using var destination = new MemoryStream();
+            var request = new HttpRequest("https://downloads.example/error.epub")
+            {
+                ResponseStream = responseStream ? destination : null
+            };
+            Assert.ThrowsAsync<WebException>(async () => await dispatcher.GetResponseAsync(request, new CookieContainer()));
+            Assert.That(content.BytesWritten, Is.LessThanOrEqualTo(1024 * 1024));
+            Assert.That(destination.Length, Is.Zero, "Error pages must not become a downloaded book.");
+        }
+
+        private sealed class ErrorHandler : HttpMessageHandler
+        {
+            private readonly HttpContent _content;
+            public ErrorHandler(HttpContent content) { _content = content; }
+            protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) =>
+                Task.FromResult(new HttpResponseMessage(HttpStatusCode.BadGateway) { Content = _content });
+        }
+
+        private sealed class LargeContent : HttpContent
+        {
+            private readonly bool _declaredLength;
+            public long BytesWritten { get; private set; }
+            public LargeContent(bool declaredLength) { _declaredLength = declaredLength; }
+            protected override bool TryComputeLength(out long length) { length = 64 * 1024 * 1024; return _declaredLength; }
+            protected override Task SerializeToStreamAsync(Stream stream, TransportContext context) => SerializeToStreamAsync(stream, context, CancellationToken.None);
+            protected override async Task SerializeToStreamAsync(Stream stream, TransportContext context, CancellationToken cancellationToken)
+            {
+                var buffer = new byte[8192];
+                for (var i = 0; i < 8192; i++)
+                {
+                    await stream.WriteAsync(buffer, cancellationToken);
+                    BytesWritten += buffer.Length;
+                }
+            }
+        }
+
         private sealed class TestDispatcher : ManagedHttpDispatcher
         {
             private readonly System.Net.Http.HttpClient _client;

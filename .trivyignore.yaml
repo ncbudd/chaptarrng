@@ -1,11 +1,12 @@
-# Reviewed, path-specific exceptions for root initialization and disposable test images.
-# This file is used only by trusted main-branch Trivy dispatches. Reassess before expiry.
+# Narrow, reviewed deployment findings. No vulnerability or secret exceptions.
+# The PR gate reads this policy from the trusted base revision, never the PR.
 misconfigurations:
   - id: AVD-DS-0002
     paths:
       - Dockerfile.build
       - Dockerfile.cross
-    statement: "The entrypoint initializes mounted volumes as root, then uses gosu to run ChaptarrNG as PUID/PGID; installed runtime user is checked separately."
+      - packaging/legacy/cloudron/Dockerfile
+    statement: Root is limited to volume ownership/bootstrap and nginx. docker-entrypoint drops the app to PUID/PGID; Cloudron explicitly uses 1000:1000.
     expired_at: 2026-12-31
   - id: AVD-DS-0002
     paths:
@@ -13,10 +14,53 @@ misconfigurations:
       - integration/acquisition/Dockerfile.qbittorrent
       - integration/standalone-handoff/Dockerfile.musl
       - integration/standalone-handoff/Dockerfile.x86
-    statement: "Disposable integration images use root for package setup and isolated test services; they do not ship as ChaptarrNG runtime images."
+    statement: Disposable integration fixtures exercise installation, service identities and process recovery. They are not production application images.
     expired_at: 2026-12-31
-  - id: AVD-DS-0002
+  - id: AVD-DS-0026
     paths:
-      - packaging/legacy/cloudron/Dockerfile
-    statement: "Unpublished Cloudron migration candidate uses root for read-only filesystem startup; package publication requires separate installed platform acceptance."
+      - integration/Dockerfile.m4b-test
+      - integration/acquisition/Dockerfile.qbittorrent
+      - integration/standalone-handoff/Dockerfile.musl
+      - integration/standalone-handoff/Dockerfile.x86
+    statement: Integration harnesses own bounded health/startup checks and exit status; these test containers do not run as independent services.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0012
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: The entrypoint initializes existing PVC permissions as root, then gosu runs the app as PUID. This preserves migration ownership and rollback.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0014
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: Bootstrap creates the service identity in /etc and prepares tools before dropping privileges. A read-only root would prevent supported existing-volume startup.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0020
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: The bootstrap UID is root; the application UID is selected by PUID and dropped in docker-entrypoint.sh.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0021
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: The bootstrap GID is root; the application GID is selected by PGID and dropped in docker-entrypoint.sh.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0106
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: Only CHOWN, DAC_OVERRIDE, FOWNER, SETUID and SETGID are added for existing-volume initialization and the privilege drop. All other capabilities are dropped.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0110
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: Helm consumers select the namespace at installation; the scanner renders a synthetic release in its default namespace and never installs it.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0125
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: The chart enforces ghcr.io/snapetech-org/chaptarrng at an immutable digest; mirrors require an explicit allowCustomRepository override.
+    expired_at: 2026-12-31
+  - id: AVD-KSV-0022
+    paths:
+      - charts/bookshelfng/templates/statefulset.yaml
+    statement: Minimal capabilities support existing PVC ownership setup and gosu; all unrelated capabilities are dropped before application startup.
     expired_at: 2026-12-31

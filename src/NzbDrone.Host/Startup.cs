@@ -229,6 +229,13 @@ namespace NzbDrone.Host
 
             services.AddAuthorization(options =>
             {
+                options.AddPolicy("AdminApiKey", policy =>
+                {
+                    policy.AuthenticationSchemes.Add("API");
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("ApiKeyScope", "full");
+                });
+
                 options.AddPolicy("SignalR", policy =>
                 {
                     policy.AuthenticationSchemes.Add("SignalR");

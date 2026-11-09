@@ -12,10 +12,12 @@ namespace NzbDrone.Core.Update
     public class UpdateVerification : IVerifyUpdates
     {
         private readonly IDiskProvider _diskProvider;
+        private readonly IUpdateAttestationVerifier _attestations;
 
-        public UpdateVerification(IDiskProvider diskProvider)
+        public UpdateVerification(IDiskProvider diskProvider, IUpdateAttestationVerifier attestations)
         {
             _diskProvider = diskProvider;
+            _attestations = attestations;
         }
 
         public bool Verify(UpdatePackage updatePackage, string packagePath)
@@ -29,7 +31,7 @@ namespace NzbDrone.Core.Update
             {
                 var hash = fileStream.SHA256Hash();
 
-                return hash.Equals(updatePackage.Hash, StringComparison.OrdinalIgnoreCase);
+                return hash.Equals(updatePackage.Hash, StringComparison.OrdinalIgnoreCase) && _attestations.Verify(updatePackage, packagePath);
             }
         }
     }

@@ -6,9 +6,9 @@ FROM node:26.12.1-bookworm-slim@sha256:28147155d47dc31abe0a46e0d12b59b2fb3d0a2dc
 RUN npm install -g yarn@1.22.22 --force
 
 ###### browser stage ######
-FROM node:26.12.1-bookworm-slim AS browser
+FROM node:26.12.1-bookworm-slim@sha256:28147155d47dc31abe0a46e0d12b59b2fb3d0a2dcc5dc65fce76a074180b16fe AS browser
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
-RUN npx --yes playwright@1.63.0 install --only-shell chromium
+RUN npx --yes playwright@1.64.1 install --no-shell chromium
 
 ###### mp4v2 stage ######
 FROM sandreas/mp4v2:2.1.1@sha256:c186cccc63b69a428be6a60359c29aff84bfacbd8597a4237038c7ccd7628a2d AS mp4v2
@@ -44,6 +44,9 @@ WORKDIR /src
 # Bring in the rest of the project *after* deps are installed
 COPY . .
 
+# Bundle the pinned signature verifier independently of the distribution gh version.
+RUN apt-get update && apt-get install -y --no-install-recommends python3 && rm -rf /var/lib/apt/lists/*
+
 # Front‑end build
 RUN yarn typecheck
 RUN yarn build
@@ -51,10 +54,12 @@ RUN yarn build
 # Back‑end build with NuGet cache (limit to linux-x64 + disable parallel for stability)
 ARG RUNTIME_ID=linux-x64
 RUN --mount=type=cache,target=/root/.nuget/packages,sharing=locked \
-    dotnet restore src/Chaptarr.NoTests.sln -r ${RUNTIME_ID} --disable-parallel --nologo /p:RestoreUseStaticGraphEvaluation=true
+    dotnet restore src/Chaptarr.NoTests.sln --locked-mode -m:1 -r ${RUNTIME_ID} --disable-parallel --nologo /p:RestoreUseStaticGraphEvaluation=true
 
 RUN --mount=type=cache,target=/root/.nuget/packages,sharing=locked \
     dotnet publish src/NzbDrone.Console/Chaptarr.Console.csproj -c Release -f net10.0 -r ${RUNTIME_ID} --self-contained false -o /app --no-restore /p:EnableWindowsTargeting=true /p:RunAnalyzersDuringBuild=false /p:RunCodeAnalysis=false /p:PublishSingleFile=false --nologo
+
+RUN python3 packaging/scripts/install-update-verifier.py linux-x64 /app/Tools
 
 # Copy UI output to final app directory
 RUN mkdir -p /app/UI && cp -r _output/UI/* /app/UI/
@@ -72,6 +77,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     set -eux; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
+        bubblewrap \
         ffmpeg \
         php-cli php-mbstring php-xml php-json php-curl php-zip \
         wget \

@@ -4,7 +4,6 @@ using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.StaticFiles;
 using NLog;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Instrumentation;
@@ -14,16 +13,14 @@ namespace Chaptarr.Http.Frontend.Mappers
 {
     public class MediaCoverProxyMapper : IMapHttpRequestsToDisk
     {
-        private readonly Regex _regex = new Regex(@"/MediaCoverProxy/(?<hash>\w+)/(?<filename>[^/?]+)", RegexOptions.IgnoreCase);
+        private readonly Regex _regex = new Regex(@"\A/MediaCoverProxy/(?<hash>[a-f0-9]{64})/(?<filename>[^/\\?#]+)\z", RegexOptions.IgnoreCase);
 
         private readonly IMediaCoverProxy _mediaCoverProxy;
-        private readonly IContentTypeProvider _mimeTypeProvider;
         private readonly Logger _logger;
 
         public MediaCoverProxyMapper(IMediaCoverProxy mediaCoverProxy, Logger logger)
         {
             _mediaCoverProxy = mediaCoverProxy;
-            _mimeTypeProvider = new FileExtensionContentTypeProvider();
             _logger = logger;
         }
 
@@ -82,9 +79,10 @@ namespace Chaptarr.Http.Frontend.Mappers
                 return new StatusCodeResult((int)HttpStatusCode.NotFound);
             }
 
-            if (!_mimeTypeProvider.TryGetContentType(filename, out var contentType))
+            if (!MediaCoverRendition.IsSupportedImagePath(filename) ||
+                !RasterImagePolicy.TryGetContentType(imageData, out var contentType))
             {
-                contentType = "application/octet-stream";
+                return new StatusCodeResult((int)HttpStatusCode.NotFound);
             }
 
             return new PrivateCacheFileContentResult(imageData, contentType);
@@ -108,6 +106,7 @@ namespace Chaptarr.Http.Frontend.Mappers
             public override Task ExecuteResultAsync(ActionContext context)
             {
                 context.HttpContext.Response.Headers["Cache-Control"] = $"private, max-age={BrowserCacheSeconds}";
+                context.HttpContext.Response.Headers["X-Content-Type-Options"] = "nosniff";
                 return base.ExecuteResultAsync(context);
             }
         }

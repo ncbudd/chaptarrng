@@ -92,7 +92,11 @@ namespace Chaptarr.Http.Authentication
         {
             if (IsExactPath(path, "/history") || IsExactPath(path, "/bookfile"))
             {
-                return HasSinglePositiveIdQuery(request, "bookId");
+                // Conflicting selectors must not override the book filter in the controller.
+                return HasSinglePositiveIdQuery(request, "bookId") &&
+                       !request.Query.ContainsKey("unmapped") &&
+                       !request.Query.ContainsKey("authorId") &&
+                       !request.Query.ContainsKey("bookFileIds");
             }
 
             if (IsExactPath(path, "/bookshelf/legacy-identities"))

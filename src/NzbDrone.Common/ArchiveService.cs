@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using ICSharpCode.SharpZipLib.Core;
+using System.Diagnostics;
+using System.Linq;
+using ICSharpCode.SharpZipLib.Checksum;
 using ICSharpCode.SharpZipLib.GZip;
 using ICSharpCode.SharpZipLib.Tar;
 using ICSharpCode.SharpZipLib.Zip;
@@ -21,9 +23,21 @@ namespace NzbDrone.Common
         internal static long MaxTotalBytes { get; set; } = DefaultMaxTotalBytes;
     }
 
+    public sealed class ArchiveExtractionOptions
+    {
+        public int MaxEntries { get; init; } = 20_000;
+        public long MaxSingleEntryBytes { get; init; }
+        public long MaxTotalBytes { get; init; }
+        public TimeSpan Timeout { get; init; } = TimeSpan.FromMinutes(30);
+        public static ArchiveExtractionOptions Media => new() { MaxSingleEntryBytes = 16L << 30, MaxTotalBytes = 128L << 30 };
+        public static ArchiveExtractionOptions Backup => new() { MaxSingleEntryBytes = 32L << 30, MaxTotalBytes = 64L << 30 };
+        public static ArchiveExtractionOptions Update => new() { MaxSingleEntryBytes = 2L << 30, MaxTotalBytes = 4L << 30 };
+    }
+
     public interface IArchiveService
     {
         void Extract(string compressedFile, string destination);
+        void Extract(string compressedFile, string destination, ArchiveExtractionOptions options) => Extract(compressedFile, destination);
         void CreateZip(string path, IEnumerable<string> files);
     }
 
@@ -38,18 +52,79 @@ namespace NzbDrone.Common
 
         public void Extract(string compressedFile, string destination)
         {
-            _logger.Debug("Extracting archive [{0}] to [{1}]", compressedFile, destination);
-
-            if (compressedFile.EndsWith(".zip", StringComparison.InvariantCultureIgnoreCase))
+            Extract(compressedFile, destination, new ArchiveExtractionOptions
             {
-                ExtractZip(compressedFile, destination);
+                MaxEntries = ArchiveExtractionLimits.MaxEntries,
+                MaxSingleEntryBytes = ArchiveExtractionLimits.MaxSingleEntryBytes,
+                MaxTotalBytes = ArchiveExtractionLimits.MaxTotalBytes
+            });
+        }
+
+        public void Extract(string compressedFile, string destination, ArchiveExtractionOptions options)
+        {
+            ArgumentNullException.ThrowIfNull(options);
+            if (options.MaxEntries <= 0 || options.MaxSingleEntryBytes <= 0 || options.MaxTotalBytes <= 0 || options.Timeout <= TimeSpan.Zero)
+            {
+                throw new ArgumentOutOfRangeException(nameof(options));
+            }
+
+            destination = Path.GetFullPath(destination);
+            RejectLinkedAncestors(destination);
+            if (File.Exists(destination) || (Directory.Exists(destination) && Directory.EnumerateFileSystemEntries(destination).Any()))
+            {
+                throw new IOException("Archive destination must be a new or empty directory.");
+            }
+
+            var parent = Path.GetDirectoryName(destination);
+            Directory.CreateDirectory(parent);
+            var stage = Path.Combine(parent, ".chaptarr-extract-" + Guid.NewGuid().ToString("N"));
+            if (OperatingSystem.IsWindows())
+            {
+                Directory.CreateDirectory(stage);
             }
             else
             {
-                ExtractTgz(compressedFile, destination);
+                Directory.CreateDirectory(stage, UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute);
             }
 
-            _logger.Debug("Extraction complete.");
+            try
+            {
+                if (compressedFile.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
+                {
+                    ExtractZip(compressedFile, stage, options);
+                }
+                else
+                {
+                    ExtractTgz(compressedFile, stage, options);
+                }
+
+                RejectLinkedAncestors(destination);
+                if (Directory.Exists(destination))
+                {
+                    Directory.Delete(destination, false);
+                }
+
+                Directory.Move(stage, destination);
+            }
+            finally
+            {
+                if (Directory.Exists(stage))
+                {
+                    Directory.Delete(stage, true);
+                }
+            }
+        }
+
+        private static void RejectLinkedAncestors(string path)
+        {
+            for (var current = path; !string.IsNullOrEmpty(current); current = Path.GetDirectoryName(current))
+            {
+                var info = new DirectoryInfo(current);
+                if (info.LinkTarget != null || (info.Exists && (info.Attributes & FileAttributes.ReparsePoint) != 0))
+                {
+                    throw new IOException("Archive destination must not traverse a link or reparse point.");
+                }
+            }
         }
 
         public void CreateZip(string path, IEnumerable<string> files)
@@ -60,15 +135,25 @@ namespace NzbDrone.Common
 
             zipFile.BeginUpdate();
 
+            var backupLimits = ArchiveExtractionOptions.Backup;
+            long totalBytes = 0;
+            var count = 0;
             foreach (var file in files)
             {
+                var size = new FileInfo(file).Length;
+                totalBytes += size;
+                if (++count > backupLimits.MaxEntries || size > backupLimits.MaxSingleEntryBytes || totalBytes > backupLimits.MaxTotalBytes)
+                {
+                    throw new IOException("Backup exceeds the supported restore size budget.");
+                }
+
                 zipFile.Add(file, Path.GetFileName(file));
             }
 
             zipFile.CommitUpdate();
         }
 
-        private void ExtractZip(string compressedFile, string destination)
+        private void ExtractZip(string compressedFile, string destination, ArchiveExtractionOptions options)
         {
             Directory.CreateDirectory(destination);
             var destinationRoot = GetSafeExtractionRoot(destination);
@@ -76,22 +161,41 @@ namespace NzbDrone.Common
             using var fileStream = File.OpenRead(compressedFile);
             using var zipFile = new ZipFile(fileStream);
 
-            _logger.Debug("Validating Archive {0}", compressedFile);
-
-            if (!zipFile.TestArchive(true, TestStrategy.FindFirstError, OnZipError))
+            // Validate the complete directory before reading any compressed payload. TestArchive(true)
+            // would decompress every entry before enforcing the budgets.
+            if (zipFile.Count > options.MaxEntries)
             {
-                throw new IOException(string.Format("File {0} failed archive validation.", compressedFile));
+                throw new IOException("Archive contains too many entries.");
             }
 
+            long declaredTotal = 0;
+            var paths = new HashSet<string>(OperatingSystem.IsWindows() ? StringComparer.OrdinalIgnoreCase : StringComparer.Ordinal);
+            foreach (ZipEntry entry in zipFile)
+            {
+                var path = GetSafeExtractionPath(destinationRoot, entry.Name);
+                if (!paths.Add(path) || entry.IsCrypted || ((entry.ExternalFileAttributes >> 16) & 0xf000) == 0xa000)
+                {
+                    throw new IOException("Duplicate, encrypted, or linked archive entry is not supported.");
+                }
+
+                if (entry.Size < 0 || entry.Size > options.MaxSingleEntryBytes || entry.Size > options.MaxTotalBytes - declaredTotal)
+                {
+                    throw new IOException("Archive exceeds its declared size budget.");
+                }
+
+                declaredTotal += entry.Size;
+            }
+
+            var timer = Stopwatch.StartNew();
             var entryCount = 0;
             long totalExtractedBytes = 0;
 
             foreach (ZipEntry zipEntry in zipFile)
             {
                 entryCount++;
-                if (entryCount > ArchiveExtractionLimits.MaxEntries)
+                if (entryCount > options.MaxEntries)
                 {
-                    throw new IOException($"Archive contains too many entries (limit {ArchiveExtractionLimits.MaxEntries})");
+                    throw new IOException($"Archive contains too many entries (limit {options.MaxEntries})");
                 }
 
                 if (!zipEntry.IsFile)
@@ -101,14 +205,14 @@ namespace NzbDrone.Common
 
                 var entryFileName = zipEntry.Name;
 
-                if (zipEntry.Size > ArchiveExtractionLimits.MaxSingleEntryBytes)
+                if (zipEntry.Size > options.MaxSingleEntryBytes)
                 {
-                    throw new IOException($"Archive entry '{entryFileName}' exceeds maximum allowed size (limit {ArchiveExtractionLimits.MaxSingleEntryBytes} bytes)");
+                    throw new IOException($"Archive entry '{entryFileName}' exceeds maximum allowed size (limit {options.MaxSingleEntryBytes} bytes)");
                 }
 
-                if (zipEntry.Size >= 0 && totalExtractedBytes + zipEntry.Size > ArchiveExtractionLimits.MaxTotalBytes)
+                if (zipEntry.Size >= 0 && totalExtractedBytes + zipEntry.Size > options.MaxTotalBytes)
                 {
-                    throw new IOException($"Archive exceeds maximum allowed extracted size (limit {ArchiveExtractionLimits.MaxTotalBytes} bytes)");
+                    throw new IOException($"Archive exceeds maximum allowed extracted size (limit {options.MaxTotalBytes} bytes)");
                 }
 
                 var fullZipToPath = GetSafeExtractionPath(destinationRoot, entryFileName);
@@ -119,12 +223,17 @@ namespace NzbDrone.Common
                 }
 
                 using var zipStream = zipFile.GetInputStream(zipEntry);
-                using var streamWriter = File.Create(fullZipToPath);
-                CopyStreamWithLimits(zipStream, streamWriter, entryFileName, ArchiveExtractionLimits.MaxSingleEntryBytes, ref totalExtractedBytes, ArchiveExtractionLimits.MaxTotalBytes);
+                using var streamWriter = new FileStream(fullZipToPath, FileMode.CreateNew, FileAccess.Write, FileShare.None);
+                var crc = new Crc32();
+                CopyStreamWithLimits(zipStream, streamWriter, entryFileName, options.MaxSingleEntryBytes, ref totalExtractedBytes, options.MaxTotalBytes, timer, options.Timeout, crc);
+                if (crc.Value != zipEntry.Crc)
+                {
+                    throw new IOException("Archive entry failed CRC validation.");
+                }
             }
         }
 
-        private void ExtractTgz(string compressedFile, string destination)
+        private void ExtractTgz(string compressedFile, string destination, ArchiveExtractionOptions options)
         {
             Directory.CreateDirectory(destination);
             var destinationRoot = GetSafeExtractionRoot(destination);
@@ -136,6 +245,7 @@ namespace NzbDrone.Common
             var entryCount = 0;
             long totalExtractedBytes = 0;
 
+            var timer = Stopwatch.StartNew();
             TarEntry entry;
             while ((entry = tarStream.GetNextEntry()) != null)
             {
@@ -145,9 +255,9 @@ namespace NzbDrone.Common
                 }
 
                 entryCount++;
-                if (entryCount > ArchiveExtractionLimits.MaxEntries)
+                if (entryCount > options.MaxEntries)
                 {
-                    throw new IOException($"Archive contains too many entries (limit {ArchiveExtractionLimits.MaxEntries})");
+                    throw new IOException($"Archive contains too many entries (limit {options.MaxEntries})");
                 }
 
                 var typeFlag = entry.TarHeader.TypeFlag;
@@ -162,14 +272,14 @@ namespace NzbDrone.Common
                     throw new IOException($"Invalid archive entry size for '{entry.Name}'");
                 }
 
-                if (entry.Size > ArchiveExtractionLimits.MaxSingleEntryBytes)
+                if (entry.Size > options.MaxSingleEntryBytes)
                 {
-                    throw new IOException($"Archive entry '{entry.Name}' exceeds maximum allowed size (limit {ArchiveExtractionLimits.MaxSingleEntryBytes} bytes)");
+                    throw new IOException($"Archive entry '{entry.Name}' exceeds maximum allowed size (limit {options.MaxSingleEntryBytes} bytes)");
                 }
 
-                if (totalExtractedBytes + entry.Size > ArchiveExtractionLimits.MaxTotalBytes)
+                if (totalExtractedBytes + entry.Size > options.MaxTotalBytes)
                 {
-                    throw new IOException($"Archive exceeds maximum allowed extracted size (limit {ArchiveExtractionLimits.MaxTotalBytes} bytes)");
+                    throw new IOException($"Archive exceeds maximum allowed extracted size (limit {options.MaxTotalBytes} bytes)");
                 }
 
                 if (entry.IsDirectory)
@@ -182,7 +292,7 @@ namespace NzbDrone.Common
                 // Ignore tar metadata/extended headers and non-file types
                 if (typeFlag != TarHeader.LF_NORMAL && typeFlag != TarHeader.LF_OLDNORM)
                 {
-                    CopyStreamWithLimits(tarStream, Stream.Null, entry.Name, ArchiveExtractionLimits.MaxSingleEntryBytes, ref totalExtractedBytes, ArchiveExtractionLimits.MaxTotalBytes);
+                    CopyStreamWithLimits(tarStream, Stream.Null, entry.Name, options.MaxSingleEntryBytes, ref totalExtractedBytes, options.MaxTotalBytes, timer, options.Timeout);
                     continue;
                 }
 
@@ -194,12 +304,12 @@ namespace NzbDrone.Common
                     Directory.CreateDirectory(directoryName);
                 }
 
-                using var outputStream = File.Create(fullFilePath);
-                CopyStreamWithLimits(tarStream, outputStream, entry.Name, ArchiveExtractionLimits.MaxSingleEntryBytes, ref totalExtractedBytes, ArchiveExtractionLimits.MaxTotalBytes);
+                using var outputStream = new FileStream(fullFilePath, FileMode.CreateNew, FileAccess.Write, FileShare.None);
+                CopyStreamWithLimits(tarStream, outputStream, entry.Name, options.MaxSingleEntryBytes, ref totalExtractedBytes, options.MaxTotalBytes, timer, options.Timeout);
             }
         }
 
-        private static void CopyStreamWithLimits(Stream input, Stream output, string entryName, long maxEntryBytes, ref long totalExtractedBytes, long maxTotalBytes)
+        private static void CopyStreamWithLimits(Stream input, Stream output, string entryName, long maxEntryBytes, ref long totalExtractedBytes, long maxTotalBytes, Stopwatch timer, TimeSpan timeout, Crc32 crc = null)
         {
             var buffer = new byte[81920];
             long entryBytes = 0;
@@ -207,6 +317,12 @@ namespace NzbDrone.Common
             int read;
             while ((read = input.Read(buffer, 0, buffer.Length)) > 0)
             {
+                if (timer.Elapsed > timeout)
+                {
+                    throw new IOException("Archive extraction exceeded its time budget.");
+                }
+
+                crc?.Update(new ArraySegment<byte>(buffer, 0, read));
                 entryBytes += read;
                 totalExtractedBytes += read;
 
@@ -254,12 +370,5 @@ namespace NzbDrone.Common
             return Path.DirectorySeparatorChar == '\\' ? StringComparison.OrdinalIgnoreCase : StringComparison.Ordinal;
         }
 
-        private void OnZipError(TestStatus status, string message)
-        {
-            if (!string.IsNullOrWhiteSpace(message))
-            {
-                _logger.Error("File {0} failed zip validation. {1}", status.File.Name, message);
-            }
-        }
     }
 }

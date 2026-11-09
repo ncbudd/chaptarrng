@@ -527,7 +527,7 @@ test('Cloudron candidate preserves application ID, health endpoint, port, and mo
   assert.equal(manifest.httpPort, 8787);
   assert.equal(manifest.healthCheckPath, '/ping');
   assert.deepEqual(manifest.persistentDirs, ['/config', '/books', '/downloads']);
-  assert.match(dockerfile, /^FROM ghcr\.io\/snapetech-org\/chaptarrng:latest$/m);
+  assert.match(dockerfile, /^FROM ghcr\.io\/snapetech-org\/chaptarrng@sha256:__CHAPTARRNG_IMAGE_DIGEST__$/m);
   assert.match(dockerfile, /^CMD \["dotnet", "\/app\/Chaptarr\.dll", "-nobrowser", "-data=\/config"\]$/m,
     'the Cloudron wrapper restores the app command cleared by its replacement ENTRYPOINT');
   assert.match(dockerfile, /BOOKSHELFNG_MIGRATION_MODE=automatic/);

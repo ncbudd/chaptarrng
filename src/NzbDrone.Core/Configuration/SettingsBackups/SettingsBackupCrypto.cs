@@ -8,7 +8,7 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
         public const string EnvelopeFormat = "chaptarr.settings-backup.envelope";
         public const int EnvelopeVersion = 1;
         public const string EnvelopeCipher = "aes-256-gcm";
-        public const int DefaultKdfIterations = 100_000;
+        public const int DefaultKdfIterations = 600_000;
         public const int MinKdfIterations = 10_000;
         public const int MaxKdfIterations = 5_000_000;
 
@@ -78,7 +78,8 @@ namespace NzbDrone.Core.Configuration.SettingsBackups
             var tag = Convert.FromBase64String(envelope.TagB64);
             var ciphertext = Convert.FromBase64String(envelope.CiphertextB64);
 
-            var iterations = envelope.KdfIterations > 0 ? envelope.KdfIterations : DefaultKdfIterations;
+            // Older envelopes omitted this field and were written with 100,000 iterations.
+            var iterations = envelope.KdfIterations > 0 ? envelope.KdfIterations : 100_000;
             if (iterations < MinKdfIterations || iterations > MaxKdfIterations)
             {
                 throw new ArgumentException($"Invalid KDF iterations in backup envelope: {iterations}");

@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using Chaptarr.Http.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Configuration.Events;
@@ -25,6 +26,7 @@ namespace NzbDrone.Http.Authentication
             if (_authenticationRequired == AuthenticationRequiredType.DisabledForLocalAddresses)
             {
                 if (context.Resource is HttpContext httpContext &&
+                    httpContext.RequestServices.GetService<IInitialSetupTokenService>()?.IsRequired == false &&
                     TrustedNetworkPolicy.IsLocalOrTrusted(httpContext, _configService))
                 {
                     context.Succeed(requirement);

@@ -1891,15 +1891,39 @@ namespace NzbDrone.Core.MediaFiles
                 .Where(IsSupportedArchive)
                 .ToList();
 
-            foreach (var archive in archives)
+            if (archives.Count == 0)
             {
-                try
+                return;
+            }
+
+            // Publish one complete payload only after every archive succeeds. A failure leaves no
+            // visible media for this or the next import scan to mistake for a complete download.
+            var parent = Path.GetDirectoryName(directoryInfo.FullName.TrimEnd(Path.DirectorySeparatorChar));
+            var stage = Path.Combine(parent, ".chaptarr-import-" + Guid.NewGuid().ToString("N"));
+            var target = Path.Combine(directoryInfo.FullName, "chaptarr-extracted");
+            try
+            {
+                if (OperatingSystem.IsWindows())
                 {
-                    _archiveService.Extract(archive, directoryInfo.FullName);
+                    Directory.CreateDirectory(stage);
                 }
-                catch (Exception e)
+                else
                 {
-                    _logger.Warn(e, "Failed to extract archive during import: {0}", archive);
+                    Directory.CreateDirectory(stage, UnixFileMode.UserRead | UnixFileMode.UserWrite | UnixFileMode.UserExecute);
+                }
+
+                for (var i = 0; i < archives.Count; i++)
+                {
+                    _archiveService.Extract(archives[i], Path.Combine(stage, i.ToString(System.Globalization.CultureInfo.InvariantCulture)), ArchiveExtractionOptions.Media);
+                }
+
+                Directory.Move(stage, target);
+            }
+            finally
+            {
+                if (Directory.Exists(stage))
+                {
+                    Directory.Delete(stage, true);
                 }
             }
         }

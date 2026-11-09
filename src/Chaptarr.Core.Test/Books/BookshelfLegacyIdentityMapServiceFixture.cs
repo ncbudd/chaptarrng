@@ -218,6 +218,8 @@ INSERT INTO BookshelfLegacyIdentityMap VALUES ('BookshelfNG', 'Book', 8, 103, 0)
 
             protected override object Invoke(MethodInfo targetMethod, object[] args)
             {
+                if (targetMethod?.Name == "get_DatabaseType") { return DatabaseType.SQLite; }
+
                 if (targetMethod?.Name == nameof(IDatabase.OpenConnection))
                 {
                     var connection = new SqliteConnection(ConnectionString);

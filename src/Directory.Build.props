@@ -5,6 +5,9 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <ErrorOnDuplicatePublishOutputFiles>true</ErrorOnDuplicatePublishOutputFiles>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(CI)' == 'true'">true</RestoreLockedMode>
+    <NuGetLockFilePath Condition="'$(ChaptarrStandaloneLockRoot)'!=''">$(ChaptarrStandaloneLockRoot)/$(MSBuildProjectName).lock.json</NuGetLockFilePath>
     <!-- Allow Linux/macOS tools to restore projects with Windows-specific target frameworks. -->
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
 

@@ -61,7 +61,16 @@ namespace NzbDrone.Common.Http.Proxy
                 return true;
             }
 
-            return proxy?.IsBypassed(destination) == true;
+            try
+            {
+                return proxy?.IsBypassed(destination) == true;
+            }
+            catch (System.Net.NetworkInformation.NetworkInformationException)
+            {
+                // Sandboxed hosts can prohibit interface inspection. Never turn an
+                // unavailable locality check into permission to bypass the proxy.
+                return false;
+            }
         }
 
         private static bool IsBypassedByIpAddressRange(string[] bypassList, string host)

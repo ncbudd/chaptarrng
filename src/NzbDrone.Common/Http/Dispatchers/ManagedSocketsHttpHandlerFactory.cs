@@ -57,7 +57,7 @@ namespace NzbDrone.Common.Http.Dispatchers
             var handler = new SocketsHttpHandler
             {
                 AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Brotli,
-                UseProxy = proxySettings?.IsDirectConnection != true,
+                UseProxy = allowPrivateNetworkTargets && proxySettings?.IsDirectConnection != true,
                 UseCookies = useCookies,
                 AllowAutoRedirect = allowAutoRedirect,
                 Credentials = credentials,

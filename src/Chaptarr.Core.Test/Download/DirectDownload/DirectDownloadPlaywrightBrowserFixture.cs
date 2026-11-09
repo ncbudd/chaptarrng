@@ -1,8 +1,8 @@
 using System;
-using System.Net;
-using System.Net.Sockets;
-using System.Text;
-using System.Threading;
+using System.IO;
+using Moq;
+using NzbDrone.Common.EnvironmentInfo;
+using NzbDrone.Common.Http;
 using System.Threading.Tasks;
 using NLog;
 using NUnit.Framework;
@@ -43,14 +43,13 @@ namespace Chaptarr.Core.Test.Download.DirectDownload
                 </html>
                 """;
 
-            await using var server = new LocalHttpServer(html);
-            var resolver = new PlaywrightBrowserResolver(LogManager.GetCurrentClassLogger());
+            var resolver = CreateResolver(html);
 
             await EnsureBrowserAvailableAsync(resolver);
 
-            var resolvedUrl = await resolver.TryResolveSlowDownloadUrlAsync(server.RootUrl + "md5/book-id?key=page-token").WaitAsync(TimeSpan.FromSeconds(30));
+            var resolvedUrl = await resolver.TryResolveSlowDownloadUrlAsync("https://pages.example.test/" + "md5/book-id?key=page-token").WaitAsync(TimeSpan.FromSeconds(30));
 
-            Assert.That(resolvedUrl, Is.EqualTo(server.RootUrl + "slow_download/slow-result?token=download-token"));
+            Assert.That(resolvedUrl, Is.EqualTo("https://pages.example.test/" + "slow_download/slow-result?token=download-token"));
         }
 
         [Test]
@@ -61,12 +60,11 @@ namespace Chaptarr.Core.Test.Download.DirectDownload
                 <html><body><a href="https://files.example.test/books/sample.epub">Download EPUB</a></body></html>
                 """;
 
-            await using var server = new LocalHttpServer(html);
-            var resolver = new PlaywrightBrowserResolver(LogManager.GetCurrentClassLogger());
+            var resolver = CreateResolver(html);
 
             await EnsureBrowserAvailableAsync(resolver);
 
-            var resolvedUrl = await resolver.TryResolveSlowDownloadUrlAsync(server.RootUrl + "md5/book-id").WaitAsync(TimeSpan.FromSeconds(30));
+            var resolvedUrl = await resolver.TryResolveSlowDownloadUrlAsync("https://pages.example.test/" + "md5/book-id").WaitAsync(TimeSpan.FromSeconds(30));
 
             Assert.That(resolvedUrl, Is.EqualTo("https://files.example.test/books/sample.epub"));
         }
@@ -79,14 +77,13 @@ namespace Chaptarr.Core.Test.Download.DirectDownload
                 <html><body><a href="/books/sample.epub?download=1">Download EPUB</a></body></html>
                 """;
 
-            await using var server = new LocalHttpServer(html);
-            var resolver = new PlaywrightBrowserResolver(LogManager.GetCurrentClassLogger());
+            var resolver = CreateResolver(html);
 
             await EnsureBrowserAvailableAsync(resolver);
 
-            var resolvedUrl = await resolver.TryResolveSlowDownloadUrlAsync(server.RootUrl + "md5/book-id").WaitAsync(TimeSpan.FromSeconds(30));
+            var resolvedUrl = await resolver.TryResolveSlowDownloadUrlAsync("https://pages.example.test/" + "md5/book-id").WaitAsync(TimeSpan.FromSeconds(30));
 
-            Assert.That(resolvedUrl, Is.EqualTo(server.RootUrl + "books/sample.epub?download=1"));
+            Assert.That(resolvedUrl, Is.EqualTo("https://pages.example.test/" + "books/sample.epub?download=1"));
         }
 
         private static async Task EnsureBrowserAvailableAsync(PlaywrightBrowserResolver resolver)
@@ -104,69 +101,22 @@ namespace Chaptarr.Core.Test.Download.DirectDownload
             Assert.Ignore("Headless Chromium is not installed on this test host.");
         }
 
-        private sealed class LocalHttpServer : IAsyncDisposable
+        private static PlaywrightBrowserResolver CreateResolver(string html)
         {
-            private readonly TcpListener _listener;
-            private readonly CancellationTokenSource _cancellation = new();
-            private readonly byte[] _responseBody;
-            private readonly Task _serverTask;
-
-            public LocalHttpServer(string responseBody)
+            var folders = new Mock<IAppFolderInfo>();
+            folders.SetupGet(f => f.StartUpFolder).Returns(TestContext.CurrentContext.TestDirectory);
+            folders.SetupGet(f => f.AppDataFolder).Returns(Path.Combine(TestContext.CurrentContext.TestDirectory, "app-config"));
+            var http = new Mock<IHttpClient>(MockBehavior.Strict);
+            http.Setup(h => h.ExecuteAsync(It.IsAny<HttpRequest>())).Returns((HttpRequest request) =>
             {
-                _listener = new TcpListener(IPAddress.Loopback, 0);
-                _listener.Start();
-
-                var endpoint = (IPEndPoint)_listener.LocalEndpoint;
-                RootUrl = $"http://127.0.0.1:{endpoint.Port}/";
-                _responseBody = Encoding.UTF8.GetBytes(responseBody);
-                _serverTask = ServeAsync();
-            }
-
-            public string RootUrl { get; }
-
-            public async ValueTask DisposeAsync()
-            {
-                _cancellation.Cancel();
-                _listener.Stop();
-
-                try
-                {
-                    await _serverTask;
-                }
-                catch (Exception ex) when (ex is SocketException or OperationCanceledException or ObjectDisposedException)
-                {
-                }
-
-                _cancellation.Dispose();
-            }
-
-            private async Task ServeAsync()
-            {
-                while (!_cancellation.IsCancellationRequested)
-                {
-                    using var client = await _listener.AcceptTcpClientAsync(_cancellation.Token);
-                    using var stream = client.GetStream();
-                    var request = new StringBuilder();
-                    var requestBuffer = new byte[1024];
-
-                    while (!request.ToString().Contains("\r\n\r\n", StringComparison.Ordinal))
-                    {
-                        var count = await stream.ReadAsync(requestBuffer, _cancellation.Token);
-                        if (count == 0)
-                        {
-                            break;
-                        }
-
-                        request.Append(Encoding.ASCII.GetString(requestBuffer, 0, count));
-                    }
-
-                    var headers = Encoding.ASCII.GetBytes(
-                        $"HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\nContent-Length: {_responseBody.Length}\r\nConnection: close\r\n\r\n");
-                    await stream.WriteAsync(headers, _cancellation.Token);
-                    await stream.WriteAsync(_responseBody, _cancellation.Token);
-                    await stream.FlushAsync(_cancellation.Token);
-                }
-            }
+                Assert.That(request.AllowPrivateNetworkTargets, Is.False);
+                Assert.That(request.AllowAutoRedirect, Is.False);
+                Assert.That(request.MaxResponseBytes, Is.LessThanOrEqualTo(10 * 1024 * 1024));
+                Assert.That(request.StoreRequestCookie || request.StoreResponseCookie, Is.False);
+                var headers = new HttpHeader { ContentType = "text/html; charset=utf-8" };
+                return Task.FromResult(new HttpResponse(request, headers, html));
+            });
+            return new PlaywrightBrowserResolver(LogManager.GetCurrentClassLogger(), http.Object, folders.Object);
         }
     }
 }

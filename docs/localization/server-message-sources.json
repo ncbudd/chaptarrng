@@ -11493,7 +11493,7 @@
       "callsites": [
         {
           "file": "src/Chaptarr.Api.V1/Books/BookController.cs",
-          "line": 2606,
+          "line": 2623,
           "sourceLine": "return BadRequest(\"EditionId is required\");",
           "sourceLineSha256": "cb0d38e687b93edd458d5bbeed5b1db975752b921d97ccfd20041303a41f0b7a",
           "category": "direct-api-result",
@@ -12097,7 +12097,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Direct/DirectDownloadClientTransfer.cs",
-          "line": 228,
+          "line": 229,
           "sourceLine": "state.Message = \"Completed file is missing from the staging folder.\";",
           "sourceLineSha256": "5c8918ade478cd64ff65edee5c8f244d8421bb62325583ea47c25ba89c08c333",
           "category": "operational-message",

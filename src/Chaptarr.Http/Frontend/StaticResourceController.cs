@@ -85,6 +85,11 @@ namespace Chaptarr.Http.Frontend
         [HttpGet("/{**path:regex(^(?!(api|feed)(/|$)).*)}")]
         public IActionResult Index([FromRoute] string path)
         {
+            if ((path ?? string.Empty).StartsWith("MediaCoverProxy/", System.StringComparison.OrdinalIgnoreCase))
+            {
+                return NotFound();
+            }
+
             return MapResource(path);
         }
 

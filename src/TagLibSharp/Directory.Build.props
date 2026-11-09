@@ -1,6 +1,9 @@
 <Project>
 
   <PropertyGroup>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+    <RestoreLockedMode Condition="'$(CI)' == 'true'">true</RestoreLockedMode>
+    <NuGetLockFilePath Condition="'$(ChaptarrStandaloneLockRoot)'!=''">$(ChaptarrStandaloneLockRoot)/$(MSBuildProjectName).lock.json</NuGetLockFilePath>
     <RepositoryUrl>https://github.com/lidarr/taglib-sharp</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 

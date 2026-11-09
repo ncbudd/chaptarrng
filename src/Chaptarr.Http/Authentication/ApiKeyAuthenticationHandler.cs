@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection;
 using NzbDrone.Common.Options;
 using NzbDrone.Core.Configuration;
 
@@ -97,6 +98,11 @@ namespace Chaptarr.Http.Authentication
             }
 
             var providedBytes = Encoding.UTF8.GetBytes(providedApiKey);
+            if (providedApiKey.StartsWith("ui_", StringComparison.Ordinal) &&
+                Context.RequestServices.GetRequiredService<IUiSessionTokenService>().Validate(Context, providedApiKey))
+            {
+                return CreateSuccess("full");
+            }
             if (providedBytes.Length == _apiKeyBytes.Length &&
                 CryptographicOperations.FixedTimeEquals(providedBytes, _apiKeyBytes))
             {

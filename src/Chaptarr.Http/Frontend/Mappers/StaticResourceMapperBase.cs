@@ -146,8 +146,7 @@ namespace Chaptarr.Http.Frontend.Mappers
 
                 if (resolvedRoot.IsNullOrWhiteSpace() || resolvedPath.IsNullOrWhiteSpace())
                 {
-                    // Best-effort only; fall back to the lexical containment checks already performed.
-                    return true;
+                    return false;
                 }
 
                 if (string.Equals(resolvedPath, resolvedRoot, _caseSensitive))
@@ -159,8 +158,8 @@ namespace Chaptarr.Http.Frontend.Mappers
             }
             catch
             {
-                // Best-effort only; do not break common self-hosted mount patterns due to resolution failures.
-                return true;
+                // An unresolvable path is not evidence of containment.
+                return false;
             }
         }
 
@@ -188,6 +187,13 @@ namespace Chaptarr.Http.Frontend.Mappers
             {
                 var next = Path.Combine(current, segments[i]);
 
+                // LinkTarget still identifies dangling links when Exists is false.
+                var link = new FileInfo(next).LinkTarget;
+                if (link != null && !Directory.Exists(next) && !File.Exists(next))
+                {
+                    return null;
+                }
+
                 if (!Directory.Exists(next) && !File.Exists(next))
                 {
                     for (var j = i; j < segments.Length; j++)
@@ -201,15 +207,13 @@ namespace Chaptarr.Http.Frontend.Mappers
                 var isDir = Directory.Exists(next);
                 FileSystemInfo info = isDir ? new DirectoryInfo(next) : new FileInfo(next);
 
-                try
+                var resolved = info.ResolveLinkTarget(returnFinalTarget: true);
+                if (link != null && (resolved == null || !resolved.Exists))
                 {
-                    var resolved = info.ResolveLinkTarget(returnFinalTarget: true);
-                    current = resolved?.FullName ?? info.FullName;
+                    return null;
                 }
-                catch
-                {
-                    current = info.FullName;
-                }
+
+                current = resolved?.FullName ?? info.FullName;
             }
 
             return current;

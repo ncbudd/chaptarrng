@@ -98,7 +98,7 @@ namespace Chaptarr.Core.Test.MediaCover
                 ? throw new KeyNotFoundException()
                 : Placeholder
                     ? throw new PlaceholderImageException("https://images.example/default.jpg", "known")
-                    : new byte[] { 1, 2, 3 };
+                    : Convert.FromBase64String("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aWQAAAABJRU5ErkJggg==");
         }
 
         [Test]
@@ -188,7 +188,7 @@ namespace Chaptarr.Core.Test.MediaCover
         {
             var mapper = new MediaCoverProxyMapper(new MediaCoverProxyStub { Missing = true }, Logger);
 
-            var result = mapper.GetResponse("/MediaCoverProxy/missing/cover.jpg") as StatusCodeResult;
+            var result = mapper.GetResponse("/MediaCoverProxy/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/cover.jpg") as StatusCodeResult;
 
             Assert.That(result?.StatusCode, Is.EqualTo(StatusCodes.Status404NotFound));
         }
@@ -198,7 +198,7 @@ namespace Chaptarr.Core.Test.MediaCover
         {
             var mapper = new MediaCoverProxyMapper(new MediaCoverProxyStub { Placeholder = true }, Logger);
 
-            var result = mapper.GetResponse("/MediaCoverProxy/placeholder/cover.jpg") as StatusCodeResult;
+            var result = mapper.GetResponse("/MediaCoverProxy/cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc/cover.jpg") as StatusCodeResult;
 
             Assert.That(result?.StatusCode, Is.EqualTo(StatusCodes.Status404NotFound));
         }
@@ -241,7 +241,7 @@ namespace Chaptarr.Core.Test.MediaCover
         public async Task proxied_image_response_should_enable_private_browser_caching()
         {
             var mapper = new MediaCoverProxyMapper(new MediaCoverProxyStub(), Logger);
-            var result = mapper.GetResponse("/MediaCoverProxy/found/cover.jpg");
+            var result = mapper.GetResponse("/MediaCoverProxy/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa/cover.jpg");
             var services = new ServiceCollection();
             services.AddLogging();
             services.AddControllers();

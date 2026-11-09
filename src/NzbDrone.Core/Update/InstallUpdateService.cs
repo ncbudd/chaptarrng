@@ -114,7 +114,11 @@ namespace NzbDrone.Core.Update
             }
 
             var safePackageFileName = SanitizeUpdatePackageFileName(updatePackage.FileName);
-            var packageDestination = Path.Combine(updateSandboxFolder, safePackageFileName);
+            if (!UpdateAttestationVerifier.IsTrustedPackage(updatePackage))
+            {
+                throw new UpdateVerificationFailedException("Update source is not the trusted ChaptarrNG release repository.");
+            }
+            var packageDestination = Path.Combine(tempFolder, Guid.NewGuid().ToString("N") + "-" + safePackageFileName);
 
             if (_diskProvider.FolderExists(updateSandboxFolder))
             {
@@ -124,20 +128,33 @@ namespace NzbDrone.Core.Update
 
             _logger.ProgressInfo("Downloading update {0}", updatePackage.Version);
             _logger.Debug("Downloading update package from [{0}] to [{1}]", updatePackage.Url, packageDestination);
-            _httpClient.DownloadFile(updatePackage.Url, packageDestination);
-
-            _logger.ProgressInfo("Verifying update package");
-
-            if (!_updateVerifier.Verify(updatePackage, packageDestination))
+            try
             {
-                _logger.Error("Update package is invalid");
-                throw new UpdateVerificationFailedException("Update file '{0}' is invalid", packageDestination);
+                using (var packageFile = new FileStream(packageDestination, FileMode.CreateNew, FileAccess.Write, FileShare.None))
+                {
+                    _httpClient.Get(new HttpRequest(updatePackage.Url)
+                    {
+                        ResponseStream = packageFile, AllowAutoRedirect = true, AllowPrivateNetworkTargets = false,
+                        MaxResponseBytes = 2L * 1024 * 1024 * 1024, RequestTimeout = TimeSpan.FromMinutes(15),
+                        StoreRequestCookie = false, StoreResponseCookie = false
+                    });
+                }
+
+                _logger.ProgressInfo("Verifying update package");
+                if (!_updateVerifier.Verify(updatePackage, packageDestination))
+                {
+                    _logger.Error("Update package is invalid");
+                    throw new UpdateVerificationFailedException("Update file '{0}' is invalid", packageDestination);
+                }
+
+                _logger.Info("Update package verified successfully");
+                _logger.ProgressInfo("Extracting Update package");
+                _archiveService.Extract(packageDestination, updateSandboxFolder, ArchiveExtractionOptions.Update);
             }
-
-            _logger.Info("Update package verified successfully");
-
-            _logger.ProgressInfo("Extracting Update package");
-            _archiveService.Extract(packageDestination, updateSandboxFolder);
+            finally
+            {
+                _diskProvider.DeleteFile(packageDestination);
+            }
             _logger.Info("Update package extracted successfully");
 
             EnsureValidBranch(updatePackage);

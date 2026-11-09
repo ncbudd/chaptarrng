@@ -1,0 +1,66 @@
+# ng-runner-policy: trusted-hosted-or-private-jit-v1
+name: Audit regressions
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: audit-regressions-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  regressions:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@0f4a354dd5547a28c70b7853dbd95d5b67886e73
+        with:
+          global-json-file: global.json
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+        with:
+          node-version: 26.12.1
+      - name: Restore locked dependencies and compile regressions
+        run: |
+          npm install --global yarn@1.22.22
+          yarn install --frozen-lockfile
+          dotnet restore src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --locked-mode --disable-parallel -m:1
+          dotnet build src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --no-restore -m:1
+          dotnet restore src/NzbDrone.Console/Chaptarr.Console.csproj --locked-mode --disable-parallel -m:1
+          dotnet build src/NzbDrone.Console/Chaptarr.Console.csproj --no-restore -m:1
+      - name: Exercise actual first-run HTTP authentication
+        run: python3 integration/test-audit-auth-startup.py --app _output/net10.0/Chaptarr.dll --log "$RUNNER_TEMP/audit-auth-startup.log"
+      - name: Install isolated browser dependencies
+        env:
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y bubblewrap
+          driver=./_tests/net10.0/.playwright
+          PW_LANG_NAME=csharp "$driver/node/linux-x64/node" "$driver/package/cli.js" install --with-deps --no-shell chromium
+      - name: Run backend and real sandboxed browser regressions
+        env:
+          DIRECT_DOWNLOAD_REQUIRE_PLAYWRIGHT: 'true'
+          PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers
+        run: dotnet test src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --no-build --no-restore -m:1 --logger 'trx;LogFileName=audit-regressions.trx'
+      - name: Run frontend, localization and scanner-policy checks
+        run: |
+          yarn typecheck
+          yarn test-localization
+          mapfile -t frontend_tests < <(rg --files frontend -g '*.test.cjs')
+          node --test "${frontend_tests[@]}"
+          python3 scripts/test-security-scan-discovery.py
+          python3 scripts/test-audit-policy.py
+          python3 scripts/test_workflow_runner_policy.py
+      - name: Retain regression evidence
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: audit-regressions-${{ github.sha }}
+          path: src/Chaptarr.Core.Test/TestResults/*.trx
+          if-no-files-found: warn
+          retention-days: 14

@@ -44,19 +44,19 @@ jobs:
       - name: Verify the isolated Docker daemon
         run: docker info
 
-      - name: Scan with the current Semgrep CE image and p/default rules
+      - name: Scan with pinned Semgrep CE and reviewed rules
         run: |
-          docker run --rm --network host --user "$(id -u):$(id -g)" \
-            -e HOME=/tmp -e EIO_BACKEND=posix \
-            -e HTTP_PROXY -e HTTPS_PROXY -e http_proxy -e https_proxy \
-            -e NO_PROXY -e no_proxy \
-            -e REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
-            -e CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
-            -e SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt \
-            -v /etc/ssl/certs/ca-certificates.crt:/etc/ssl/certs/ca-certificates.crt:ro \
-            -v "$GITHUB_WORKSPACE:/src" -w /src semgrep/semgrep:latest \
-            semgrep scan --config p/default --metrics=off --jobs 2 \
-              --json-output semgrep.json --sarif-output semgrep.sarif .
+          set -euo pipefail
+          image=semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed
+          docker pull "$image"
+          python3 scripts/prepare-semgrep-rules.py "$RUNNER_TEMP/security-rules" --download-only
+          docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \
+            -v "$PWD:/policy:ro" -v "$RUNNER_TEMP/security-rules:/rules" "$image" \
+            /policy/scripts/prepare-semgrep-rules.py /rules
+          docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp -e EIO_BACKEND=posix \
+            -v "$PWD:/src:ro" -v "$PWD:/reports" -v "$RUNNER_TEMP/security-rules:/rules:ro" -w /src "$image" \
+            semgrep scan --config /rules/rules.json --metrics=off --disable-version-check --no-rewrite-rule-ids --max-target-bytes 10000000 --error --jobs 2 \
+              --json-output /reports/semgrep.json --sarif-output /reports/semgrep.sarif .
 
       - name: Report finding count
         if: always() && hashFiles('semgrep.json') != ''

@@ -173,6 +173,26 @@ async function start() {
 
   window.Chaptarr = await response.json();
 
+  // Refresh the short-lived browser credential without exposing the integration API key.
+  const refreshSession = async () => {
+    if (document.visibilityState !== 'visible') {
+      return;
+    }
+
+    try {
+      const refresh = await fetch(`${window.Chaptarr.urlBase}/initialize.json`, {
+        cache: 'no-store',
+      });
+      if (refresh.ok) {
+        window.Chaptarr.apiKey = (await refresh.json()).apiKey;
+      }
+    } catch {
+      // Normal API handling reports disconnected/expired sessions.
+    }
+  };
+  window.setInterval(refreshSession, 10 * 60 * 1000);
+  document.addEventListener('visibilitychange', refreshSession);
+
   /* eslint-disable no-undef, @typescript-eslint/ban-ts-comment */
   // @ts-ignore 2304
   __webpack_public_path__ = `${window.Chaptarr.urlBase}/`;

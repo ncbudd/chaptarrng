@@ -13,7 +13,7 @@ namespace Chaptarr.Core.Test.Authentication
     public class FirstRunAuthenticationSetupFixture
     {
         [Test]
-        public void should_disable_authentication_when_no_user_exists()
+        public void should_preserve_authentication_and_require_setup_token_when_no_user_exists()
         {
             var authenticationMethod = AuthenticationType.Forms;
             var configFileProvider = new Mock<IConfigFileProvider>();
@@ -28,10 +28,8 @@ namespace Chaptarr.Core.Test.Authentication
             var setup = new FirstRunAuthenticationSetup(configFileProvider.Object, new Lazy<IUserService>(() => userService.Object), LogManager.GetCurrentClassLogger());
             setup.EnsureInitialAccountSetup();
 
-            Assert.That(authenticationMethod, Is.EqualTo(AuthenticationType.None));
-            configFileProvider.Verify(config => config.SaveConfigDictionary(It.Is<Dictionary<string, object>>(values =>
-                values.Count == 1 &&
-                Equals(values[nameof(IConfigFileProvider.AuthenticationMethod)], AuthenticationType.None))), Times.Once);
+            Assert.That(authenticationMethod, Is.EqualTo(AuthenticationType.Forms));
+            configFileProvider.Verify(config => config.SaveConfigDictionary(It.IsAny<Dictionary<string, object>>()), Times.Never);
         }
 
         [Test]
@@ -50,7 +48,7 @@ namespace Chaptarr.Core.Test.Authentication
         }
 
         [Test]
-        public void should_not_touch_users_when_authentication_is_already_disabled()
+        public void should_check_for_initial_setup_when_authentication_is_disabled()
         {
             var configFileProvider = new Mock<IConfigFileProvider>();
             configFileProvider.SetupGet(config => config.AuthenticationMethod).Returns(AuthenticationType.None);
@@ -59,7 +57,7 @@ namespace Chaptarr.Core.Test.Authentication
             var setup = new FirstRunAuthenticationSetup(configFileProvider.Object, new Lazy<IUserService>(() => userService.Object), LogManager.GetCurrentClassLogger());
             setup.EnsureInitialAccountSetup();
 
-            userService.Verify(service => service.FindUser(), Times.Never);
+            userService.Verify(service => service.FindUser(), Times.Once);
             configFileProvider.Verify(config => config.SaveConfigDictionary(It.IsAny<Dictionary<string, object>>()), Times.Never);
         }
     }

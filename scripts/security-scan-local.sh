@@ -21,13 +21,11 @@ while (($#)); do
       cat <<'HELP'
 Usage: scripts/security-scan-local.sh [--staged] [--semgrep-only|--trivy-only] [--ci]
 
-Semgrep uses the local Community Edition engine with p/default and metrics off.
+Semgrep uses pinned Community Edition rules with metrics off.
 Trivy selects secret, dependency, and IaC scanners from files in this repository.
-Findings are report-only by default. Set SEMGREP_FAIL_ON_FINDINGS=1 or
-TRIVY_EXIT_CODE=1 to make local findings fail the command. CI fails on active
-HIGH/CRITICAL Trivy findings. --ci disables repository-
-controlled Trivy config and secret config, but uses the reviewed, path-specific
-.trivyignore.yaml exceptions on trusted main. --staged scans only staged Semgrep files.
+Findings are report-only locally and blocking with --ci. Set SEMGREP_FAIL_ON_FINDINGS=1 or
+TRIVY_EXIT_CODE=1 to make findings fail the command. --ci disables repository-
+controlled Trivy config; trusted runs use the reviewed .trivyignore.yaml inventory. --staged scans only staged Semgrep files.
 HELP
       exit 0 ;;
     *) echo "Unknown option: $1" >&2; exit 2 ;;
@@ -39,18 +37,48 @@ if (( staged )) && [[ "$mode" == trivy ]]; then
   exit 2
 fi
 
+command -v rg >/dev/null 2>&1 || { echo "ripgrep is required to discover scanner inputs." >&2; exit 127; }
+if (( ci_mode )); then
+  export SEMGREP_FAIL_ON_FINDINGS=1 TRIVY_EXIT_CODE=1 REQUIRE_TRIVY=1
+fi
+
+# rg returns 1 only for a legitimate empty match set. Tool, I/O, and argument
+# failures must terminate the scan even when discovery is used inside an if.
+scan_inputs() {
+  local status=0
+  rg "$@" >/dev/null || status=$?
+  if (( status > 1 )); then
+    echo "Security input discovery failed (ripgrep exit $status)." >&2
+    exit "$status"
+  fi
+  return "$status"
+}
+
 semgrep_patterns=(-g '*.py' -g '*.js' -g '*.jsx' -g '*.ts' -g '*.tsx' -g '*.mjs' -g '*.cjs' -g '*.go' -g '*.rs' -g '*.java' -g '*.kt' -g '*.kts' -g '*.cs' -g '*.c' -g '*.h' -g '*.cc' -g '*.cpp' -g '*.hpp' -g '*.php' -g '*.rb' -g '*.swift' -g '*.sh' -g '*.bash' -g '*.zsh' -g '*.ps1' -g '*.sql' -g '*.scala' -g '*.ex' -g '*.exs' -g '*.tf' -g 'Dockerfile*' -g 'docker-compose*.yml' -g 'docker-compose*.yaml' -g 'compose*.yml' -g 'compose*.yaml' -g '.github/workflows/*.yml' -g '.github/workflows/*.yaml' -g 'k8s/**/*.yml' -g 'k8s/**/*.yaml' -g 'helm/**/*.yml' -g 'helm/**/*.yaml' -g 'charts/**/*.yml' -g 'charts/**/*.yaml' -g 'deploy/**/*.yml' -g 'deploy/**/*.yaml' -g 'infra/**/*.yml' -g 'infra/**/*.yaml')
 
 has_semgrep_input() {
-  if ! command -v rg >/dev/null 2>&1; then
-    [[ -d src || -d frontend || -d scripts ]]
-    return
-  fi
-  rg --files --hidden "${semgrep_patterns[@]}" -g '!**/security-scan-local.sh' -g '!**/update-security-tools.sh' -g '!**/install-security-hooks.sh' -g '!**/.githooks/**' -g '!**/.husky/**' -g '!**/docs/**' >/dev/null 2>&1
+  scan_inputs --files --hidden "${semgrep_patterns[@]}" -g '!**/security-scan-local.sh' -g '!**/update-security-tools.sh' -g '!**/install-security-hooks.sh' -g '!**/.githooks/**' -g '!**/.husky/**' -g '!**/docs/**'
 }
 
 semgrep_run() {
-  local args=(scan --config "${SEMGREP_CONFIG:-p/default}" --metrics=off --jobs "${SEMGREP_JOBS:-2}")
+  local rules_dir="${XDG_CACHE_HOME:-$HOME/.cache}/chaptarr-security-rules"
+  local rule_config="${SEMGREP_CONFIG:-$rules_dir/rules.json}"
+  if [[ -z "${SEMGREP_CONFIG:-}" ]]; then
+    if [[ "${SEMGREP_OFFLINE:-0}" != 1 ]]; then
+      python3 scripts/prepare-semgrep-rules.py "$rules_dir" --download-only
+    fi
+    if command -v uvx >/dev/null 2>&1; then
+      uvx --from semgrep==1.184.0 python scripts/prepare-semgrep-rules.py "$rules_dir"
+    elif command -v docker >/dev/null 2>&1; then
+      docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \
+        -v "$repo_root:/policy:ro" -v "$rules_dir:/rules" \
+        semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed \
+        /policy/scripts/prepare-semgrep-rules.py /rules
+    else
+      python3 scripts/prepare-semgrep-rules.py "$rules_dir"
+    fi
+  fi
+  local args=(scan --config "$rule_config" --metrics=off --no-rewrite-rule-ids --max-target-bytes 10000000 --jobs "${SEMGREP_JOBS:-2}")
   local targets=()
   if [[ "${SEMGREP_OFFLINE:-0}" == 1 ]]; then
     args+=(--disable-version-check)
@@ -71,30 +99,31 @@ semgrep_run() {
     fi
   else
     if ! has_semgrep_input; then
-      echo "Semgrep: no supported source or configuration files in this repository; skipped."
+      echo "Semgrep: no supported source or configuration files in this repository."
+      (( ci_mode )) && return 1
       return 0
     fi
     targets=(.)
   fi
 
-  echo "Semgrep Community Edition: config=${SEMGREP_CONFIG:-p/default}, targets=${#targets[@]}"
+  echo "Semgrep Community Edition: config=$rule_config, targets=${#targets[@]}"
   if [[ -n "${SEMGREP_BIN:-}" ]]; then
     [[ -x "$SEMGREP_BIN" ]] || { echo "SEMGREP_BIN is not executable: $SEMGREP_BIN" >&2; return 127; }
     "$SEMGREP_BIN" "${args[@]}" "${targets[@]}"
   elif command -v uvx >/dev/null 2>&1; then
     local uv_args=()
     [[ "${SEMGREP_OFFLINE:-0}" == 1 ]] && uv_args+=(--offline)
-    uvx "${uv_args[@]}" --from semgrep semgrep "${args[@]}" "${targets[@]}"
+    uvx "${uv_args[@]}" --from semgrep==1.184.0 semgrep "${args[@]}" "${targets[@]}"
   elif command -v semgrep >/dev/null 2>&1; then
     semgrep "${args[@]}" "${targets[@]}"
   elif command -v docker >/dev/null 2>&1; then
-    local image="semgrep/semgrep:latest"
+    local image="semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed"
     if ! docker image inspect "$image" >/dev/null 2>&1; then
       [[ "${SEMGREP_OFFLINE:-0}" == 0 ]] || { echo "Semgrep image is not cached for offline mode." >&2; return 127; }
       docker pull "$image"
     fi
     docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -e "EIO_BACKEND=${SEMGREP_EIO_BACKEND:-posix}" \
-      -v "$repo_root:/src:ro" -w /src "$image" semgrep "${args[@]}" "${targets[@]}"
+      -v "$repo_root:/src:ro" -v "$rules_dir:$rules_dir:ro" -w /src "$image" semgrep "${args[@]}" "${targets[@]}"
   else
     echo "Semgrep is unavailable. Install uv, pipx, Semgrep, or Docker." >&2
     return 127
@@ -102,25 +131,13 @@ semgrep_run() {
 }
 
 has_dependency_files() {
-  if ! command -v rg >/dev/null 2>&1; then
-    [[ -f package.json || -f yarn.lock || -f src/Directory.Packages.props ]]
-    return
-  fi
-  rg --files --hidden -g 'package.json' -g 'package-lock.json' -g 'pnpm-lock.yaml' -g 'yarn.lock' -g 'bun.lock*' -g 'Cargo.toml' -g 'Cargo.lock' -g 'go.mod' -g 'go.sum' -g 'pyproject.toml' -g 'requirements*.txt' -g 'uv.lock' -g 'poetry.lock' -g 'Pipfile*' -g '*.csproj' -g '*.sln' -g 'pom.xml' -g 'build.gradle' -g 'build.gradle.kts' -g 'gradle.lockfile' -g 'Gemfile*' -g 'composer.json' -g 'composer.lock' -g 'mix.lock' -g 'pubspec.yaml' >/dev/null 2>&1
+  scan_inputs --files --hidden -g 'package.json' -g 'package-lock.json' -g 'pnpm-lock.yaml' -g 'yarn.lock' -g 'bun.lock*' -g 'Cargo.toml' -g 'Cargo.lock' -g 'go.mod' -g 'go.sum' -g 'pyproject.toml' -g 'requirements*.txt' -g 'uv.lock' -g 'poetry.lock' -g 'Pipfile*' -g '*.csproj' -g '*.sln' -g 'pom.xml' -g 'build.gradle' -g 'build.gradle.kts' -g 'gradle.lockfile' -g 'Gemfile*' -g 'composer.json' -g 'composer.lock' -g 'mix.lock' -g 'pubspec.yaml'
 }
 has_iac_files() {
-  if ! command -v rg >/dev/null 2>&1; then
-    [[ -f Dockerfile.build || -f Dockerfile.cross || -d .github/workflows ]]
-    return
-  fi
-  rg --files --hidden -g 'Dockerfile' -g 'Dockerfile.*' -g 'docker-compose*.yml' -g 'docker-compose*.yaml' -g 'compose*.yml' -g 'compose*.yaml' -g '*.tf' -g '*.tfvars' -g 'Chart.yaml' -g 'kustomization.yaml' -g '.github/workflows/*.yml' -g '.github/workflows/*.yaml' -g 'k8s/**/*.yml' -g 'k8s/**/*.yaml' -g 'helm/**/*.yml' -g 'helm/**/*.yaml' -g 'charts/**/*.yml' -g 'charts/**/*.yaml' -g 'deploy/**/*.yml' -g 'deploy/**/*.yaml' -g 'infra/**/*.yml' -g 'infra/**/*.yaml' >/dev/null 2>&1
+  scan_inputs --files --hidden -g 'Dockerfile' -g 'Dockerfile.*' -g 'docker-compose*.yml' -g 'docker-compose*.yaml' -g 'compose*.yml' -g 'compose*.yaml' -g '*.tf' -g '*.tfvars' -g 'Chart.yaml' -g 'kustomization.yaml' -g '.github/workflows/*.yml' -g '.github/workflows/*.yaml' -g 'k8s/**/*.yml' -g 'k8s/**/*.yaml' -g 'helm/**/*.yml' -g 'helm/**/*.yaml' -g 'charts/**/*.yml' -g 'charts/**/*.yaml' -g 'deploy/**/*.yml' -g 'deploy/**/*.yaml' -g 'infra/**/*.yml' -g 'infra/**/*.yaml'
 }
 has_code_files() {
-  if ! command -v rg >/dev/null 2>&1; then
-    [[ -d src || -d frontend || -d scripts ]]
-    return
-  fi
-  rg --files --hidden "${semgrep_patterns[@]}" -g '!**/security-scan-local.sh' -g '!**/update-security-tools.sh' -g '!**/install-security-hooks.sh' -g '!**/.githooks/**' -g '!**/.husky/**' -g '!**/docs/**' >/dev/null 2>&1
+  scan_inputs --files --hidden "${semgrep_patterns[@]}" -g '!**/security-scan-local.sh' -g '!**/update-security-tools.sh' -g '!**/install-security-hooks.sh' -g '!**/.githooks/**' -g '!**/.husky/**' -g '!**/docs/**'
 }
 
 trivy_run() {
@@ -130,23 +147,21 @@ trivy_run() {
   if has_iac_files; then scanners+=(misconfig); fi
   if has_code_files || ((${#scanners[@]} > 0)); then scanners+=(secret); fi
   if ((${#scanners[@]} == 0)); then
-    if (( ci_mode )); then
-      echo "Trivy: no inputs were discovered in CI; refusing to report a green skipped scan." >&2
-      return 2
-    fi
-    echo "Trivy: no source, dependency, or deployment files; skipped."
+    echo "Trivy: no source, dependency, or deployment files."
+    (( ci_mode )) && return 1
     return 0
   fi
   local scanner_list
   printf -v scanner_list '%s,' "${scanners[@]}"
   scanner_list="${scanner_list%,}"
-  local trivy_exit_code="${TRIVY_EXIT_CODE:-0}"
-  if (( ci_mode )); then trivy_exit_code=1; fi
-  args+=(fs --scanners "$scanner_list" --timeout "${TRIVY_TIMEOUT:-20m}" --severity HIGH,CRITICAL --ignore-unfixed --exit-code "$trivy_exit_code")
-  for dir in .git node_modules vendor target dist build coverage .venv; do args+=(--skip-dirs "$dir"); done
+  args+=(fs --scanners "$scanner_list" --timeout "${TRIVY_TIMEOUT:-20m}" --severity "${TRIVY_SEVERITY:-UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL}" --exit-code "${TRIVY_EXIT_CODE:-0}")
+  args+=(--include-dev-deps --ignorefile=.trivyignore.yaml --show-suppressed)
+  # Render the migration chart with synthetic scan-only inputs; never install it.
+  args+=(--helm-set bookshelfMigration.confirmed=true --helm-set image.digest=sha256:0000000000000000000000000000000000000000000000000000000000000000)
+  for dir in .git node_modules vendor target dist build coverage .venv _temp _output _tests; do args+=(--skip-dirs "$dir"); done
   if (( ci_mode )); then
     [[ -f .trivyignore.yaml ]] || { echo "Trivy: reviewed exception inventory is missing." >&2; return 2; }
-    args+=(--config= --ignorefile=.trivyignore.yaml --secret-config=)
+    args+=(--config= --secret-config=)
   fi
   if [[ "${TRIVY_OFFLINE:-0}" == 1 ]]; then args+=(--skip-db-update --skip-java-db-update --skip-check-update); fi
 
@@ -154,7 +169,7 @@ trivy_run() {
   if command -v trivy >/dev/null 2>&1; then
     trivy "${args[@]}" .
   elif command -v docker >/dev/null 2>&1; then
-    local image="aquasec/trivy:latest"
+    local image="aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb"
     local cache_dir="${TRIVY_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/trivy}"
     mkdir -p "$cache_dir"
     if ! docker image inspect "$image" >/dev/null 2>&1; then

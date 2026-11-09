@@ -26,11 +26,17 @@ export CHAPTARR_EXPECTED_PORT=8788
 export CHAPTARR__SERVER__PORT=8788
 export CHAPTARR__SERVER__BINDADDRESS=127.0.0.1
 
-# Cloudron mounts the image filesystem read-only. The base image normally
-# creates its PUID account in /etc/passwd at startup, so select its built-in
-# root path and leave persistent-volume ownership unchanged for rollback.
-export PUID=0
-export PGID=0
+# Preserve existing ownership for rollback while granting the prebuilt service user
+# access to persistent data. Refuse startup if the filesystem cannot enforce ACLs.
+export PUID=1000
+export PGID=1000
+for data_root in /config /books /downloads; do
+    if ! find -P "$data_root" -xdev -type d -exec setfacl -m u:1000:rwx,d:u:1000:rwx {} + ||
+       ! find -P "$data_root" -xdev -type f -exec setfacl -m u:1000:rw {} +; then
+        echo "Unable to grant the unprivileged Chaptarr service access to $data_root" >&2
+        exit 1
+    fi
+done
 
 # Cloudron mounts the container root read-only. Keep nginx request/proxy
 # buffers on its writable /run mount instead of the image's /var/lib paths.
@@ -73,7 +79,7 @@ trap 'stop_children; exit 129' HUP
 nginx -g 'daemon off;' &
 nginx_pid=$!
 
-"/entrypoint.sh" "$@" &
+gosu 1000:1000 "/entrypoint.sh" "$@" &
 app_pid=$!
 
 set +e

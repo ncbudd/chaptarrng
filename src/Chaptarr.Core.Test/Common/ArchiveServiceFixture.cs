@@ -158,6 +158,65 @@ namespace Chaptarr.Core.Test.Common
             }
         }
 
+        [Test]
+        public void late_corrupt_entry_publishes_none_of_the_archive()
+        {
+            var root = GetTempDir();
+            try
+            {
+                var zipPath = Path.Combine(root, "corrupt.zip");
+                using (var output = new ZipOutputStream(File.Create(zipPath)))
+                {
+                    output.SetLevel(0);
+                    foreach (var entryName in new[] { "first.epub", "last.epub" })
+                    {
+                        var data = Encoding.UTF8.GetBytes(entryName + "-unique-payload");
+                        output.PutNextEntry(new ZipEntry(entryName) { Size = data.Length });
+                        output.Write(data, 0, data.Length);
+                        output.CloseEntry();
+                    }
+                }
+
+                var archive = File.ReadAllBytes(zipPath);
+                var marker = Encoding.UTF8.GetBytes("last.epub-unique-payload");
+                var offset = archive.AsSpan().IndexOf(marker);
+                Assert.That(offset, Is.GreaterThan(0));
+                archive[offset] ^= 1;
+                File.WriteAllBytes(zipPath, archive);
+                var destination = Path.Combine(root, "destination");
+                Assert.That(() => new ArchiveService(LogManager.GetCurrentClassLogger()).Extract(zipPath, destination), Throws.Exception);
+                Assert.That(Directory.Exists(destination), Is.False);
+                Assert.That(Directory.GetDirectories(root), Is.Empty, "Failed staging directories must be removed.");
+            }
+            finally { TryDeleteDirectory(root); }
+        }
+
+        [TestCase(false)]
+        [TestCase(true)]
+        public void extraction_cannot_overwrite_existing_files_or_follow_destination_links(bool link)
+        {
+            if (link && OperatingSystem.IsWindows()) { Assert.Ignore("Unix symlink regression."); }
+            var root = GetTempDir();
+            try
+            {
+                var zipPath = Path.Combine(root, "input.zip");
+                CreateZipWithEntry(zipPath, "book.epub", "replacement");
+                var original = Path.Combine(root, "original");
+                Directory.CreateDirectory(original);
+                File.WriteAllText(Path.Combine(original, "book.epub"), "retained");
+                var destination = original;
+                if (link)
+                {
+                    destination = Path.Combine(root, "linked");
+                    Directory.CreateSymbolicLink(destination, original);
+                }
+
+                Assert.That(() => new ArchiveService(LogManager.GetCurrentClassLogger()).Extract(zipPath, destination), Throws.InstanceOf<IOException>());
+                Assert.That(File.ReadAllText(Path.Combine(original, "book.epub")), Is.EqualTo("retained"));
+            }
+            finally { TryDeleteDirectory(root); }
+        }
+
         private static string GetTempDir()
         {
             var baseDir = Path.Combine(TestContext.CurrentContext.WorkDirectory, nameof(ArchiveServiceFixture), Guid.NewGuid().ToString("N"));

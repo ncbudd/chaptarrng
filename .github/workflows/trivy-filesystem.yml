@@ -43,11 +43,14 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install the latest Trivy release
+      - name: Install pinned Trivy
         uses: aquasecurity/setup-trivy@81e514348e19b6112ce2a7e3ecbafe19c1e1f567 # latest
         with:
-          version: latest
+          version: v0.76.2
           token: ${{ github.token }}
+
+      - name: Install required discovery tool
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
 
       - name: Scan applicable repository files
         run: ./scripts/security-scan-local.sh --trivy-only --ci

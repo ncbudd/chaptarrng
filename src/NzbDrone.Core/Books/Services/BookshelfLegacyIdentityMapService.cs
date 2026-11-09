@@ -80,7 +80,7 @@ WHERE ""Source"" = @Source
                 // Sorting in SQL can make SQLite scan the source-order index
                 // instead of seeking TargetId. Sort only the selected rows here,
                 // retaining each database's previous NULL ordering per batch.
-                var nullsLast = connection is Npgsql.NpgsqlConnection;
+                var nullsLast = _database.DatabaseType == DatabaseType.PostgreSQL;
                 mappings.AddRange(connection.Query<BookshelfLegacyIdentityMapEntry>(sql, parameters)
                     .OrderBy(mapping => mapping.SourceId)
                     .ThenBy(mapping => nullsLast && !mapping.MediaType.HasValue)

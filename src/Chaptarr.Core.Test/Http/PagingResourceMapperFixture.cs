@@ -25,7 +25,6 @@ namespace Chaptarr.Core.Test.Http
         [TestCase(10)]
         [TestCase(1000)]
         [TestCase(2000)]
-        [TestCase(100000)]
         public void should_pass_page_size_through_unchanged(int pageSize)
         {
             var spec = BuildResource(1, pageSize).MapToPagingSpec<TestModel, TestModel>();
@@ -45,6 +44,15 @@ namespace Chaptarr.Core.Test.Http
         public void should_reject_page_below_one(int page)
         {
             Assert.Throws<BadRequestException>(() => BuildResource(page, 10).MapToPagingSpec<TestModel, TestModel>());
+        }
+
+        [TestCase(1, 2001)]
+        [TestCase(1, int.MaxValue)]
+        [TestCase(int.MaxValue, 2000)]
+        [TestCase(1000001, 1000)]
+        public void should_reject_unbounded_or_overflowing_pages(int page, int pageSize)
+        {
+            Assert.Throws<BadRequestException>(() => BuildResource(page, pageSize).MapToPagingSpec<TestModel, TestModel>());
         }
     }
 }

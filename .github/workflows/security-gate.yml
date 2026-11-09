@@ -1,0 +1,114 @@
+# ng-runner-policy: trusted-hosted-or-private-jit-v1
+name: Security gate
+on:
+  push:
+    branches: [main]
+  # Use the trusted base workflow/rules. PR contents are scanned as read-only data;
+  # no PR scripts, actions, package hooks, or binaries execute on the runner.
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        type: string
+        required: true
+permissions:
+  contents: read
+concurrency:
+  group: security-gate-${{ github.event.pull_request.number || inputs.ref || github.ref }}
+  cancel-in-progress: true
+jobs:
+  scan:
+    name: Security gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      # nosemgrep: yaml.github-actions.security.pull-request-target-code-checkout.pull-request-target-code-checkout -- PR sources are read-only scan data in network-isolated containers; no PR scripts, actions, hooks, or binaries execute, and checkout credentials are not persisted.
+      - name: Checkout trusted scanner policy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          path: policy
+          persist-credentials: false
+      # nosemgrep: yaml.github-actions.security.pull-request-target-code-checkout.pull-request-target-code-checkout -- PR sources are read-only scan data in network-isolated containers; no PR scripts, actions, hooks, or binaries execute, and checkout credentials are not persisted.
+      - name: Checkout exact source revision as scan data
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          path: source
+          persist-credentials: false
+      - name: Prepare pinned scanners and vulnerability database
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 policy/scripts/check-scan-suppressions.py policy source
+          docker pull semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed
+          docker pull aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb
+          mkdir -p reports trivy-cache "$RUNNER_TEMP/security-rules"
+          python3 policy/scripts/prepare-semgrep-rules.py "$RUNNER_TEMP/security-rules" --download-only
+          docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \
+            -v "$PWD/policy:/policy:ro" -v "$RUNNER_TEMP/security-rules:/rules" \
+            semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed \
+            /policy/scripts/prepare-semgrep-rules.py /rules
+          docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD/trivy-cache:/cache" \
+            aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
+            image --cache-dir /cache --download-db-only
+      - name: Scan source offline with Semgrep Community Edition
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+            --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
+            --user "$(id -u):$(id -g)" -e HOME=/tmp -e EIO_BACKEND=posix \
+            -v "$PWD/source:/src:ro" -v "$RUNNER_TEMP/security-rules:/rules:ro" -v "$PWD/reports:/reports" -w /src \
+            semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed \
+            semgrep scan --config /rules/rules.json --metrics=off --no-git-ignore --no-rewrite-rule-ids --max-target-bytes 10000000 --disable-version-check --error --jobs 2 \
+              --exclude .git --json-output /reports/semgrep.json .
+      - name: Scan dependencies, secrets, and deployment configuration offline
+        if: always() && !cancelled()
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+            --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
+            --user "$(id -u):$(id -g)" -e HOME=/tmp \
+            -v "$PWD/source:/src:ro" -v "$PWD/policy:/policy:ro" -v "$PWD/trivy-cache:/cache" -v "$PWD/reports:/reports" -w /src \
+            aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
+            fs --cache-dir /cache --skip-db-update --skip-java-db-update --skip-check-update \
+              --config= --ignorefile /policy/.trivyignore.yaml --show-suppressed --secret-config= --scanners vuln,secret,misconfig --include-dev-deps \
+              --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --exit-code 1 --timeout 20m \
+              --skip-dirs .git,node_modules,_output,_tests,_temp \
+              --helm-set bookshelfMigration.confirmed=true --helm-set image.digest=sha256:0000000000000000000000000000000000000000000000000000000000000000 \
+              --format json --output /reports/trivy.json .
+      - name: Retain reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: security-${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          path: reports/*.json
+          if-no-files-found: error
+          retention-days: 14
+  status:
+    name: Record exact source result
+    needs: scan
+    if: always()
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      statuses: write
+    steps:
+      - name: Record required status on the scanned commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          SCAN_RESULT: ${{ needs.scan.result }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          state=failure
+          if [[ "$SCAN_RESULT" == success ]]; then state=success; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$SOURCE_SHA" \
+            -f "state=$state" -f context='Security audit' \
+            -f "description=Security scan: $SCAN_RESULT" \
+            -f "target_url=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

@@ -78,6 +78,10 @@ namespace Chaptarr.Core.Test.Http
 
         [TestCase("/history", "?bookId=21", true)]
         [TestCase("/bookfile", "?bookId=21", true)]
+        [TestCase("/bookfile", "?bookId=21&unmapped=true", false)]
+        [TestCase("/bookfile", "?bookId=21&unmapped=false", false)]
+        [TestCase("/bookfile", "?bookId=21&authorId=4", false)]
+        [TestCase("/bookfile", "?bookId=21&bookFileIds=4", false)]
         [TestCase("/history", "?bookId=0", false)]
         [TestCase("/bookfile", "?bookId=invalid", false)]
         [TestCase("/history", "?bookId=21&bookId=22", false)]

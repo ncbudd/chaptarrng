@@ -20,7 +20,7 @@ namespace NzbDrone.Core.Datastore
 
         public IDbConnection OpenConnection()
         {
-            return _database.OpenConnection();
+            return DatabaseAtomicOperation.OpenConnection(_database);
         }
 
         public Version Version => _database.Version;

@@ -1,4 +1,5 @@
 using System.Globalization;
+using Chaptarr.Http.Authentication;
 using Chaptarr.Http.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -14,10 +15,12 @@ namespace Chaptarr.Http.Frontend
     public class InitializeJsonController : Controller
     {
         private readonly IConfigFileProvider _configFileProvider;
+        private readonly IUiSessionTokenService _tokens;
 
-        public InitializeJsonController(IConfigFileProvider configFileProvider)
+        public InitializeJsonController(IConfigFileProvider configFileProvider, IUiSessionTokenService tokens)
         {
             _configFileProvider = configFileProvider;
+            _tokens = tokens;
         }
 
         [HttpGet("/initialize.json")]
@@ -30,7 +33,7 @@ namespace Chaptarr.Http.Frontend
             var model = new InitializeJsonResource
             {
                 ApiRoot = $"{urlBase}/api/v1",
-                ApiKey = _configFileProvider.ApiKey,
+                ApiKey = _tokens.Issue(HttpContext),
                 Release = BuildInfo.Release,
                 Version = BuildInfo.Version.ToString(),
                 BuildTime = BuildInfo.BuildDateTime.ToString("yyyy-MM-dd'T'HH:mm:ss'Z'", CultureInfo.InvariantCulture),
