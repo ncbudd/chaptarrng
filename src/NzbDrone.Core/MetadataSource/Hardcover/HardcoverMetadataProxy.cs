@@ -439,9 +439,34 @@ query GetAuthorEditions($id: Int!, $limit: Int!, $offset: Int!) {
         // Mode selection is intentionally independent from credentials. A
         // native deployment with a missing token must fail clearly at request
         // time instead of silently switching to METADATA_URL.
-        public bool IsNativeEnabled =>
-            string.Equals(Environment.GetEnvironmentVariable("HARDCOVER"), "true", StringComparison.OrdinalIgnoreCase) &&
-            !string.Equals(Environment.GetEnvironmentVariable("HARDCOVER_NATIVE"), "false", StringComparison.OrdinalIgnoreCase);
+        public bool IsNativeEnabled
+        {
+            get
+            {
+                if (string.Equals(Environment.GetEnvironmentVariable("HARDCOVER_NATIVE"), "false", StringComparison.OrdinalIgnoreCase))
+                {
+                    return false;
+                }
+
+                var legacyMode = Environment.GetEnvironmentVariable("HARDCOVER");
+                if (legacyMode != null)
+                {
+                    return string.Equals(legacyMode, "true", StringComparison.OrdinalIgnoreCase);
+                }
+
+                // Native installations select Hardcover through Metadata Provider settings.
+                // A selected hc: author/edition must use that catalog during manual import,
+                // even when no BookshelfNG HARDCOVER mode variable was provided.
+                return AdditionalMetadataSources.GetConfiguredRuntimeSources(
+                    AdditionalMetadataSources.GetEnvironmentSourceOverride(),
+                    _configService.MetadataCatalogSources,
+                    _configService.IsDefined("MetadataCatalogSources"),
+                    _configService.AdditionalMetadataSources,
+                    _configService.IsDefined("AdditionalMetadataSources"),
+                    null, null, null, null, null)
+                    .Contains(AdditionalMetadataSources.Hardcover);
+            }
+        }
 
         public List<SearchJsonResource> Search(string query, bool interactiveSearch = false)
         {

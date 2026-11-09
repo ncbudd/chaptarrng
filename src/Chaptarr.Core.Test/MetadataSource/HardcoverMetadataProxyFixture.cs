@@ -84,6 +84,33 @@ namespace NzbDrone.Core.Test.MetadataSource.Hardcover
         }
 
         [Test]
+        public void should_route_settings_only_hardcover_ids_to_native_catalog()
+        {
+            Environment.SetEnvironmentVariable("HARDCOVER", null);
+            _configService.Setup(x => x.MetadataCatalogSources).Returns("hardcover");
+            _configService.Setup(x => x.IsDefined("MetadataCatalogSources")).Returns(true);
+
+            Subject.IsNativeEnabled.Should().BeTrue();
+
+            Environment.SetEnvironmentVariable("HARDCOVER_NATIVE", "false");
+            Subject.IsNativeEnabled.Should().BeFalse();
+
+            Environment.SetEnvironmentVariable("HARDCOVER_NATIVE", null);
+            Environment.SetEnvironmentVariable("HARDCOVER", "false");
+            Subject.IsNativeEnabled.Should().BeFalse();
+        }
+
+        [Test]
+        public void should_not_route_unselected_hardcover_ids_to_native_catalog()
+        {
+            Environment.SetEnvironmentVariable("HARDCOVER", null);
+            _configService.Setup(x => x.MetadataCatalogSources).Returns("metadata-api");
+            _configService.Setup(x => x.IsDefined("MetadataCatalogSources")).Returns(true);
+
+            Subject.IsNativeEnabled.Should().BeFalse();
+        }
+
+        [Test]
         public void should_fail_clearly_when_native_is_requested_without_token()
         {
             Environment.SetEnvironmentVariable("HARDCOVER_AUTH", null);
