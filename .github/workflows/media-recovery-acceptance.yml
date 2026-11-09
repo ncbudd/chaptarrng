@@ -41,7 +41,9 @@ jobs:
       - name: Require real-tool merge, fallback, chapters and restart cases
         run: |
           set -euo pipefail
-          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+          mkdir -p media-results
+          docker run --rm --network none --user "$(id -u):$(id -g)" -e HOME=/tmp \
+            --cap-drop ALL --security-opt no-new-privileges \
             --pids-limit 1024 --memory 4g --cpus 2 \
             --volume "$GITHUB_WORKSPACE:/workspace" --workdir /workspace/_tests/net10.0 \
             chaptarrng-m4b-test:ci dotnet vstest Chaptarr.Core.Test.dll \
