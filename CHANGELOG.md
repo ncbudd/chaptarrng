@@ -4,6 +4,15 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.995](https://github.com/snapetech-org/chaptarrng/compare/v0.9.994..v0.9.995) - 2026-11-09
+
+### Release fixes
+
+- Correct the security release-note fragment so the release generator can assemble the full, validated notes after all platform checks pass.
+- Include the latest Chocolatey package metadata corrections for ChaptarrNG and the BookshelfNG migration bridge.
+
+This release includes the fixes staged under 0.9.991 through 0.9.994, which were held after release validation or preparation failures.
+
 ## [0.9.994](https://github.com/snapetech-org/chaptarrng/compare/v0.9.993..v0.9.994) - 2026-11-09
 
 ### Release fixes
