@@ -8,7 +8,7 @@ history grouped from conventional commits.
 
 ### Upstream source attribution
 
-- Publicly credit 216 Chaptarr issues and pull requests whose upstream code, reports, suggestions, or discussions were recorded as implemented or integrated in ChaptarrNG’s historical audit. The [source ledger](UPSTREAM_ATTRIBUTION.md) links every originating record and upstream author while making clear that those people contributed to Chaptarr, not directly to this fork.
+- Publicly credit all 305 Chaptarr issues and pull requests captured by ChaptarrNG’s historical audit. The [source ledger](UPSTREAM_ATTRIBUTION.md) links every originating record and upstream author, preserves implemented, validation-pending, external-blocker, withdrawn, not-applicable, and unreviewed dispositions, and makes clear that those people contributed to Chaptarr, not directly to this fork.
 
 ## [0.9.977](https://github.com/snapetech-org/chaptarrng/compare/v0.9.976..v0.9.977) - 2026-10-18
 
