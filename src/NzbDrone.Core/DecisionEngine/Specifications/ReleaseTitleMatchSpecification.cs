@@ -122,6 +122,11 @@ namespace NzbDrone.Core.DecisionEngine.Specifications
                 return false;
             }
 
+            if (ReleaseTitleMatchScorer.TryGetGenericNovelBaseTitle(edition.Title, out _))
+            {
+                return false;
+            }
+
             var matchedTokens = ReleaseTitleMatchScorer.Tokenize(match.MatchedVariant);
             var baseTitleTokens = ReleaseTitleMatchScorer.Tokenize(baseTitle);
             return matchedTokens.Count > 0 &&

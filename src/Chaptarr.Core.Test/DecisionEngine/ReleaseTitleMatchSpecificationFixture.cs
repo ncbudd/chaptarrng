@@ -241,6 +241,44 @@ namespace Chaptarr.Core.Test.DecisionEngine
             });
         }
 
+        [TestCase("Richard Osman - We Solve Murders (retail) (epub)")]
+        [TestCase("Richard.Osman-We.Solve.Murders")]
+        public void should_accept_base_title_when_monitored_edition_only_adds_a_novel(string releaseTitle)
+        {
+            var author = new Author { Name = "Richard Osman" };
+            var book = new Book
+            {
+                Title = "We Solve Murders: A Novel",
+                Author = author,
+                Editions = new List<Edition>
+                {
+                    new Edition
+                    {
+                        Id = 1,
+                        Title = "We Solve Murders: A Novel",
+                        Subtitle = "A Novel",
+                        Monitored = true,
+                        IsEbook = true
+                    }
+                }
+            };
+            var criteria = new BookSearchCriteria
+            {
+                Author = author,
+                Books = new List<Book> { book },
+                InteractiveSearch = true
+            };
+            var remoteBook = new RemoteBook
+            {
+                Release = new ReleaseInfo { Title = releaseTitle, Author = author.Name }
+            };
+
+            var decision = new ReleaseTitleMatchSpecification(LogManager.GetCurrentClassLogger())
+                .IsSatisfiedBy(remoteBook, criteria);
+
+            Assert.That(decision.Accepted, Is.True, decision.Reason);
+        }
+
         [Test]
         public void should_reject_interactive_search_result_when_release_author_hint_does_not_match_search_author()
         {

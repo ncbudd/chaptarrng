@@ -124,7 +124,7 @@ namespace NzbDrone.Core.Books
 
         public Edition FindByForeignEditionId(string foreignEditionId)
         {
-            return ChooseOldest(FindAllByForeignEditionId(foreignEditionId), nameof(Edition.ForeignEditionId), foreignEditionId);
+            return ChooseOldest(FindAllByForeignEditionId(foreignEditionId), nameof(Edition.ForeignEditionId));
         }
 
         public List<Edition> FindAllByForeignEditionId(string foreignEditionId)
@@ -136,7 +136,7 @@ namespace NzbDrone.Core.Books
 
         public Edition FindByHardcoverEditionId(string hardcoverEditionId)
         {
-            return ChooseOldest(FindAllByHardcoverEditionId(hardcoverEditionId), nameof(Edition.HardcoverEditionId), hardcoverEditionId);
+            return ChooseOldest(FindAllByHardcoverEditionId(hardcoverEditionId), nameof(Edition.HardcoverEditionId));
         }
 
         public List<Edition> FindAllByHardcoverEditionId(string hardcoverEditionId)
@@ -148,7 +148,7 @@ namespace NzbDrone.Core.Books
 
         public Edition FindByGoodreadsEditionId(long goodreadsEditionId)
         {
-            return ChooseOldest(FindAllByGoodreadsEditionId(goodreadsEditionId), nameof(Edition.GoodreadsEditionId), goodreadsEditionId.ToString());
+            return ChooseOldest(FindAllByGoodreadsEditionId(goodreadsEditionId), nameof(Edition.GoodreadsEditionId));
         }
 
         public List<Edition> FindAllByGoodreadsEditionId(long goodreadsEditionId)
@@ -160,7 +160,7 @@ namespace NzbDrone.Core.Books
 
         public Edition FindByOpenLibraryEditionId(string openLibraryEditionId)
         {
-            return ChooseOldest(FindAllByOpenLibraryEditionId(openLibraryEditionId), nameof(Edition.OpenLibraryEditionId), openLibraryEditionId);
+            return ChooseOldest(FindAllByOpenLibraryEditionId(openLibraryEditionId), nameof(Edition.OpenLibraryEditionId));
         }
 
         public List<Edition> FindAllByOpenLibraryEditionId(string openLibraryEditionId)
@@ -172,7 +172,7 @@ namespace NzbDrone.Core.Books
 
         public Edition FindByGoogleBooksEditionId(string googleBooksEditionId)
         {
-            return ChooseOldest(FindAllByGoogleBooksEditionId(googleBooksEditionId), nameof(Edition.GoogleBooksEditionId), googleBooksEditionId);
+            return ChooseOldest(FindAllByGoogleBooksEditionId(googleBooksEditionId), nameof(Edition.GoogleBooksEditionId));
         }
 
         public List<Edition> FindAllByGoogleBooksEditionId(string googleBooksEditionId)
@@ -182,7 +182,7 @@ namespace NzbDrone.Core.Books
                 .ToList();
         }
 
-        private Edition ChooseOldest(List<Edition> editions, string field, string value, bool expectedPlural = false)
+        private Edition ChooseOldest(List<Edition> editions, string field, bool expectedPlural = false)
         {
             var matches = (editions ?? new List<Edition>())
                 .Where(e => e != null)
@@ -192,14 +192,16 @@ namespace NzbDrone.Core.Books
             var chosen = matches.FirstOrDefault();
             if (matches.Count > 1)
             {
-                var message = "Found {0} editions with {1} {2}; legacy singular lookup using oldest (Id={3})";
+                // The provider ID can be user supplied. The field and chosen row
+                // identify the ambiguous lookup without writing that value to logs.
+                var message = "Found {0} editions with {1}; legacy singular lookup using oldest (Id={2})";
                 if (expectedPlural)
                 {
-                    _logger.Debug(message, matches.Count, field, value, chosen?.Id);
+                    _logger.Debug(message, matches.Count, field, chosen?.Id);
                 }
                 else
                 {
-                    _logger.Warn(message, matches.Count, field, value, chosen?.Id);
+                    _logger.Warn(message, matches.Count, field, chosen?.Id);
                 }
             }
 
@@ -499,7 +501,7 @@ namespace NzbDrone.Core.Books
 
         public Edition FindByIsbn(string isbn)
         {
-            return ChooseOldest(FindAllByIsbn(isbn), nameof(Edition.Isbn13), isbn, expectedPlural: true);
+            return ChooseOldest(FindAllByIsbn(isbn), nameof(Edition.Isbn13), expectedPlural: true);
         }
 
         public List<Edition> FindAllByIsbn(string isbn)

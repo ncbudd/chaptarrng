@@ -937,6 +937,14 @@ namespace NzbDrone.Core.Parser
             AddTitleVariants(context.PrimaryVariants, primaryTitle);
             context.PrimaryTitle = primaryTitle;
 
+            // "A Novel" describes the edition's format, not a distinct work.
+            // A release naming the base title can identify this edition without
+            // weakening the guard for meaningful subtitles or sibling books.
+            if (TryGetGenericNovelBaseTitle(primaryTitle, out var genericNovelBaseTitle))
+            {
+                AddTitleVariants(context.PrimaryVariants, genericNovelBaseTitle);
+            }
+
             // AnyEditionOk changes which edition can be accepted after a download; it
             // must not broaden release identity during search. Otherwise, known sibling
             // editions can make a result appear to match the monitored edition.
@@ -1196,6 +1204,26 @@ namespace NzbDrone.Core.Parser
             }
 
             return false;
+        }
+
+        internal static bool TryGetGenericNovelBaseTitle(string title, out string baseTitle)
+        {
+            baseTitle = null;
+            const string suffix = ": A Novel";
+            if (string.IsNullOrWhiteSpace(title) ||
+                !title.TrimEnd().EndsWith(suffix, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+
+            var candidate = title.TrimEnd().Substring(0, title.TrimEnd().Length - suffix.Length).Trim();
+            if (string.IsNullOrWhiteSpace(candidate))
+            {
+                return false;
+            }
+
+            baseTitle = candidate;
+            return true;
         }
 
         private static string ComposeKnownSubtitleTitle(
