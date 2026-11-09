@@ -28,6 +28,15 @@ invoke, restore, or reroute CodeQL workflows unless the owner explicitly
 reverses this directive. Other build, test, scan, packaging, and release work
 follows the runner policy above.
 
+## Security scan acceptance
+
+Trivy CI must discover repository inputs and fail on active HIGH/CRITICAL
+findings. Keep `.trivyignore.yaml` exceptions path-specific, reasoned and
+time-limited; review them before expiry. Standard Docker images initialize as
+root and then drop to PUID/PGID through `gosu`; test images and the unpublished
+Cloudron migration candidate have separately recorded exceptions. A green
+scan that skipped its inputs is not acceptance.
+
 # ChaptarrNG build notes
 
 ## Six Labors license — check these paths first

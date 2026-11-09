@@ -1,0 +1,22 @@
+# Reviewed, path-specific exceptions for root initialization and disposable test images.
+# This file is used only by trusted main-branch Trivy dispatches. Reassess before expiry.
+misconfigurations:
+  - id: AVD-DS-0002
+    paths:
+      - Dockerfile.build
+      - Dockerfile.cross
+    statement: "The entrypoint initializes mounted volumes as root, then uses gosu to run ChaptarrNG as PUID/PGID; installed runtime user is checked separately."
+    expired_at: 2026-12-31
+  - id: AVD-DS-0002
+    paths:
+      - integration/Dockerfile.m4b-test
+      - integration/acquisition/Dockerfile.qbittorrent
+      - integration/standalone-handoff/Dockerfile.musl
+      - integration/standalone-handoff/Dockerfile.x86
+    statement: "Disposable integration images use root for package setup and isolated test services; they do not ship as ChaptarrNG runtime images."
+    expired_at: 2026-12-31
+  - id: AVD-DS-0002
+    paths:
+      - packaging/legacy/cloudron/Dockerfile
+    statement: "Unpublished Cloudron migration candidate uses root for read-only filesystem startup; package publication requires separate installed platform acceptance."
+    expired_at: 2026-12-31

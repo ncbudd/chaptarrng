@@ -24,8 +24,10 @@ Usage: scripts/security-scan-local.sh [--staged] [--semgrep-only|--trivy-only] [
 Semgrep uses the local Community Edition engine with p/default and metrics off.
 Trivy selects secret, dependency, and IaC scanners from files in this repository.
 Findings are report-only by default. Set SEMGREP_FAIL_ON_FINDINGS=1 or
-TRIVY_EXIT_CODE=1 to make findings fail the command. --ci disables repository-
-controlled Trivy config and ignore files. --staged scans only staged Semgrep files.
+TRIVY_EXIT_CODE=1 to make local findings fail the command. CI fails on active
+HIGH/CRITICAL Trivy findings. --ci disables repository-
+controlled Trivy config and secret config, but uses the reviewed, path-specific
+.trivyignore.yaml exceptions on trusted main. --staged scans only staged Semgrep files.
 HELP
       exit 0 ;;
     *) echo "Unknown option: $1" >&2; exit 2 ;;
@@ -138,9 +140,14 @@ trivy_run() {
   local scanner_list
   printf -v scanner_list '%s,' "${scanners[@]}"
   scanner_list="${scanner_list%,}"
-  args+=(fs --scanners "$scanner_list" --timeout "${TRIVY_TIMEOUT:-20m}" --severity HIGH,CRITICAL --ignore-unfixed --exit-code "${TRIVY_EXIT_CODE:-0}")
+  local trivy_exit_code="${TRIVY_EXIT_CODE:-0}"
+  if (( ci_mode )); then trivy_exit_code=1; fi
+  args+=(fs --scanners "$scanner_list" --timeout "${TRIVY_TIMEOUT:-20m}" --severity HIGH,CRITICAL --ignore-unfixed --exit-code "$trivy_exit_code")
   for dir in .git node_modules vendor target dist build coverage .venv; do args+=(--skip-dirs "$dir"); done
-  if (( ci_mode )); then args+=(--config= --ignorefile= --secret-config=); fi
+  if (( ci_mode )); then
+    [[ -f .trivyignore.yaml ]] || { echo "Trivy: reviewed exception inventory is missing." >&2; return 2; }
+    args+=(--config= --ignorefile=.trivyignore.yaml --secret-config=)
+  fi
   if [[ "${TRIVY_OFFLINE:-0}" == 1 ]]; then args+=(--skip-db-update --skip-java-db-update --skip-check-update); fi
 
   echo "Trivy filesystem scan: scanners=$scanner_list"
