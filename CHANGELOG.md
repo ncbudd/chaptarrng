@@ -4,6 +4,12 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.987](https://github.com/snapetech-org/chaptarrng/compare/v0.9.986..v0.9.987) - 2026-11-09
+
+### Upstream source attribution
+
+- Publicly credit 216 Chaptarr issues and pull requests whose upstream code, reports, suggestions, or discussions were recorded as implemented or integrated in ChaptarrNG’s historical audit. The [source ledger](UPSTREAM_ATTRIBUTION.md) links every originating record and upstream author while making clear that those people contributed to Chaptarr, not directly to this fork.
+
 ## [0.9.977](https://github.com/snapetech-org/chaptarrng/compare/v0.9.976..v0.9.977) - 2026-10-18
 
 ### User-facing changes
