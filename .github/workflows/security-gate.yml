@@ -92,7 +92,7 @@ jobs:
   status:
     name: Record exact source result
     needs: scan
-    if: always()
+    if: always() && !cancelled()
     runs-on: ubuntu-24.04
     permissions:
       contents: read
