@@ -35,6 +35,7 @@ COPY --from=node /usr/local /usr/local
 COPY package.json yarn.lock ./
 # The pinned braces resolution is a local package and must exist before Yarn resolves it.
 COPY patches/braces ./patches/braces
+COPY patches/deepmerge ./patches/deepmerge
 
 # Yarn 1 otherwise selects /usr/local/share/.cache/yarn in this copied toolchain.
 # Keep its actual cache on the mount and serialize writers during parallel builds.

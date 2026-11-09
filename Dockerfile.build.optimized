@@ -24,6 +24,7 @@ COPY --from=node /usr/local /usr/local
 COPY package.json yarn.lock ./
 # The pinned braces resolution is a local package and must exist before Yarn resolves it.
 COPY patches/braces ./patches/braces
+COPY patches/deepmerge ./patches/deepmerge
 
 # Use BuildKit cache mount so tarballs stay on host between builds
 RUN --mount=type=cache,target=/root/.cache/yarn \
