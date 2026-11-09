@@ -632,6 +632,20 @@ jobs:
       shell: pwsh
       run: ./packaging/scripts/test-windows-service-data-path.ps1 -AppDirectory ./publish/Chaptarr
 
+    - name: Release Windows installer payload after installer tests
+      if: matrix.platform == 'windows-x64'
+      shell: pwsh
+      run: |
+        $payload = Join-Path $PWD 'distribution/windows/installer-net/Payload/Chaptarr.payload.zip'
+        if (-not (Test-Path -LiteralPath $payload -PathType Leaf)) {
+          throw "The Windows installer test payload is missing: $payload"
+        }
+        Remove-Item -LiteralPath $payload -Force
+        $payloadDirectory = Split-Path -Parent $payload
+        if (-not (Get-ChildItem -LiteralPath $payloadDirectory -Force | Select-Object -First 1)) {
+          Remove-Item -LiteralPath $payloadDirectory -Force
+        }
+
     - name: Test Chocolatey BookshelfNG .76 to exact candidate handoff
       if: matrix.platform == 'windows-x64' && github.event_name == 'workflow_dispatch'
       shell: pwsh
