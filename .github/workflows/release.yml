@@ -799,6 +799,14 @@ jobs:
   publish-release:
     needs: [preflight, release, docker, standalone-assets, rpm-source, windows-migration-installer, legacy-desktop-candidates]
     if: >-
+      always() &&
+      needs.preflight.result == 'success' &&
+      needs.release.result == 'success' &&
+      needs.docker.result == 'success' &&
+      needs.standalone-assets.result == 'success' &&
+      needs.rpm-source.result == 'success' &&
+      !contains(fromJSON('["failure", "cancelled"]'), needs.windows-migration-installer.result) &&
+      !contains(fromJSON('["failure", "cancelled"]'), needs.legacy-desktop-candidates.result) &&
       (
         github.event_name != 'workflow_dispatch' ||
         (

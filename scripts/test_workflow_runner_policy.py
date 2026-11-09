@@ -377,6 +377,14 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         publisher = job_block(source, "publish-release")
         self.assertIn("EXPECTED_RELEASE_TAG: ${{ needs.preflight.outputs.release_tag }}", publisher)
         self.assertIn('"$RELEASE_TAG" != "$EXPECTED_RELEASE_TAG"', publisher)
+        for token in (
+            "always()",
+            "needs.standalone-assets.result == 'success'",
+            "needs.rpm-source.result == 'success'",
+            "needs.windows-migration-installer.result",
+            "needs.legacy-desktop-candidates.result",
+        ):
+            self.assertIn(token, publisher)
 
         packages = job_block(source, "publish-packages")
         self.assertIn("action: publish", packages)
