@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--dotnet', default='dotnet')
 parser.add_argument('--app', type=Path, required=True)
 parser.add_argument('--log', type=Path, required=True)
+parser.add_argument('--misconfigured-oidc', action='store_true')
 args = parser.parse_args()
 with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
     data = Path(temporary)
@@ -24,7 +25,8 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
         sock.bind(('127.0.0.1', 0))
         port = sock.getsockname()[1]
     master = secrets.token_hex(16)
-    (data/'config.xml').write_text(f'<Config><ApiKey>{master}</ApiKey><BindAddress>127.0.0.1</BindAddress><Port>{port}</Port><AuthenticationMethod>None</AuthenticationMethod><LaunchBrowser>False</LaunchBrowser><AnalyticsEnabled>False</AnalyticsEnabled><UpdateAutomatically>False</UpdateAutomatically></Config>')
+    method = 'Oidc' if args.misconfigured_oidc else 'None'
+    (data/'config.xml').write_text(f'<Config><ApiKey>{master}</ApiKey><BindAddress>127.0.0.1</BindAddress><Port>{port}</Port><AuthenticationMethod>{method}</AuthenticationMethod><AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired><LaunchBrowser>False</LaunchBrowser><AnalyticsEnabled>False</AnalyticsEnabled><UpdateAutomatically>False</UpdateAutomatically></Config>')
     env = dict(os.environ, DOTNET_GCHeapHardLimit='0x30000000', ASPNETCORE_ENVIRONMENT='Production')
     log = open(args.log, 'w')
     process = subprocess.Popen([args.dotnet, str(args.app.resolve()), '-data='+str(data), '-nobrowser', '-nosingleinstancecheck'], stdout=log, stderr=subprocess.STDOUT, env=env)
@@ -45,12 +47,17 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
             except (ConnectionError,OSError): time.sleep(0.3)
         else: raise RuntimeError('App did not listen before startup deadline')
         assert status==401,(status,body[:200])
-        assert headers.get('WWW-Authenticate','').startswith('Basic realm=')
         assert request('/api/v1/system/status')[0]==401
-        token=(data/'setup-token').read_text()
-        assert (data/'setup-token').stat().st_mode & 0o777 == 0o600
-        authorization='Basic '+base64.b64encode(('setup:'+token).encode()).decode()
-        status,headers,body=request('/initialize.json',{'Authorization':authorization})
+        if args.misconfigured_oidc:
+            assert not (data/'setup-token').exists()
+            recovery_headers = {'X-Api-Key': master}
+        else:
+            assert headers.get('WWW-Authenticate','').startswith('Basic realm=')
+            token=(data/'setup-token').read_text()
+            assert (data/'setup-token').stat().st_mode & 0o777 == 0o600
+            authorization='Basic '+base64.b64encode(('setup:'+token).encode()).decode()
+            recovery_headers = {'Authorization': authorization}
+        status,headers,body=request('/initialize.json',recovery_headers)
         assert status==200,(status,body[:200])
         ui=json.loads(body)['apiKey']
         assert ui.startswith('ui_') and ui!=master
@@ -59,7 +66,7 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
         assert request('/api/v1/system/status',{'X-Api-Key':ui})[0]==401
         status,headers,body=request('/api/v1/system/status',{'X-Api-Key':ui,'Cookie':cookie})
         assert status==200,(status,body[:1000])
-        print('PASS: real app startup, unauthenticated setup/API rejection, private setup token, authenticated bootstrap, non-master UI credential, cookie-bound API authentication')
+        print(f'PASS ({method}): real app startup, anonymous setup/API rejection despite local bypass setting, authenticated bootstrap, non-master UI credential, cookie-bound API authentication')
     finally:
         process.send_signal(signal.SIGTERM)
         try: process.wait(timeout=15)

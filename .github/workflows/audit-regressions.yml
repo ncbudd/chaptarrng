@@ -33,7 +33,9 @@ jobs:
           dotnet restore src/NzbDrone.Console/Chaptarr.Console.csproj --locked-mode --disable-parallel -m:1
           dotnet build src/NzbDrone.Console/Chaptarr.Console.csproj --no-restore -m:1
       - name: Exercise actual first-run HTTP authentication
-        run: python3 integration/test-audit-auth-startup.py --app _output/net10.0/Chaptarr.dll --log "$RUNNER_TEMP/audit-auth-startup.log"
+        run: |
+          python3 integration/test-audit-auth-startup.py --app _output/net10.0/Chaptarr.dll --log "$RUNNER_TEMP/audit-auth-startup.log"
+          python3 integration/test-audit-auth-startup.py --app _output/net10.0/Chaptarr.dll --log "$RUNNER_TEMP/audit-oidc-startup.log" --misconfigured-oidc
       - name: Install isolated browser dependencies
         env:
           PLAYWRIGHT_BROWSERS_PATH: ${{ runner.temp }}/playwright-browsers

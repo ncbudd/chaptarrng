@@ -51,10 +51,10 @@ The application and workflow changes are implemented. **CHAP-021 remains an exte
 
 Local validation completed:
 
-- Full backend suite: 5,335 passed, 46 skipped, zero failures. Subsequent focused tests and the real HTTP smoke cover the final UI service-lifetime correction.
-- Real application startup/HTTP smoke: anonymous setup and API requests rejected; setup password private; authenticated initialization returns a non-master token; API access requires its matching cookie. The console builds with zero warnings/errors.
+- Full backend suite: 5,335 passed, 46 skipped, zero failures. All 33 subsequent focused tests pass, covering the final UI service-lifetime and incomplete-OIDC local-bypass corrections.
+- Real application startup/HTTP smoke: anonymous setup and API requests rejected even with local-address authentication bypass configured; setup password private; authenticated initialization returns a non-master token; API access requires its matching cookie. A separate incomplete-OIDC startup rejects anonymous local requests and permits credential-authenticated recovery without creating a setup token. The console builds with zero warnings/errors.
 - Frontend: 193 source tests and 67 localization tests pass; type checking and the production webpack build pass (47 existing webpack warnings).
-- Semgrep: 1,074 pinned rules loaded, 663 applicable rules, 6,417 scanned files and zero active findings. Later small policy/test additions are scanned again before push. The engine reports partial parsing for some C#/shell syntax, cannot parse raw Helm templates, and its Bash workflow subpatterns cannot parse PowerShell steps. Trivy separately renders/scans the chart; these scanner limitations are not a claim of complete static-analysis coverage. One file's timeout is retried with a 90-second rule budget.
+- Semgrep: 1,074 pinned rules loaded, 663 applicable rules, 6,417 scanned files and zero active findings. Later policy/authentication/test additions also pass targeted scans. The engine reports partial parsing for some C#/shell syntax, cannot parse raw Helm templates, and its Bash workflow subpatterns cannot parse PowerShell steps. Trivy separately renders/scans the chart; these scanner limitations are not a claim of complete static-analysis coverage. One file's timeout completed on retry with a 90-second rule budget.
 - Trivy: zero active dependency, secret or deployment findings, including development dependencies; 19 reviewed deployment findings are suppressed by the documented expiring policy.
 - Standard solution locked restore passes; policy tests, scanner-discovery tests, runner-policy checks, packaging contracts and container-platform candidate checks pass. The packaged verifier rejects a forged attestation bundle.
 

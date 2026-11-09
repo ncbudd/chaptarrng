@@ -26,6 +26,24 @@ namespace Chaptarr.Core.Test.Authentication
     [TestFixture]
     public class AuditAuthenticationFixture
     {
+        [TestCase(false, true)]
+        [TestCase(true, false)]
+        public async Task local_authentication_bypass_cannot_open_a_misconfigured_identity_provider(bool misconfigured, bool allowed)
+        {
+            var config = new Mock<IConfigFileProvider>();
+            config.SetupGet(c => c.AuthenticationRequired).Returns(AuthenticationRequiredType.DisabledForLocalAddresses);
+            config.SetupGet(c => c.AuthenticationMethodIsMisconfigured).Returns(misconfigured);
+            var setup = new Mock<IInitialSetupTokenService>();
+            setup.SetupGet(s => s.IsRequired).Returns(false);
+            using var services = new ServiceCollection().AddSingleton(setup.Object).BuildServiceProvider();
+            var http = new DefaultHttpContext { RequestServices = services };
+            http.Connection.RemoteIpAddress = IPAddress.Loopback;
+            var requirement = new NzbDrone.Http.Authentication.BypassableDenyAnonymousAuthorizationRequirement();
+            var authorization = new AuthorizationHandlerContext(new[] { requirement }, new ClaimsPrincipal(), http);
+            await new NzbDrone.Http.Authentication.UiAuthorizationHandler(config.Object).HandleAsync(authorization);
+            Assert.That(authorization.HasSucceeded, Is.EqualTo(allowed));
+        }
+
         [Test]
         public void browser_token_requires_cookie_and_is_revoked_on_logout_and_security_change()
         {

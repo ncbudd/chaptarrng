@@ -263,8 +263,8 @@ namespace NzbDrone.Core.Configuration
             {
                 var method = ConfiguredAuthenticationMethod;
 
-                // Local recovery uses the no-auth handler while the UI authorization boundary
-                // keeps remote requests closed until OIDC is complete.
+                // The UI authentication selector detects this misconfiguration and requires
+                // an authenticated API credential for recovery, including local requests.
                 if (AuthenticationMethodIsMisconfigured)
                 {
                     return AuthenticationType.None;

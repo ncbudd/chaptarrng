@@ -23,7 +23,8 @@ namespace NzbDrone.Http.Authentication
 
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, BypassableDenyAnonymousAuthorizationRequirement requirement)
         {
-            if (_authenticationRequired == AuthenticationRequiredType.DisabledForLocalAddresses)
+            if (!_configService.AuthenticationMethodIsMisconfigured &&
+                _authenticationRequired == AuthenticationRequiredType.DisabledForLocalAddresses)
             {
                 if (context.Resource is HttpContext httpContext &&
                     httpContext.RequestServices.GetService<IInitialSetupTokenService>()?.IsRequired == false &&
