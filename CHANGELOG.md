@@ -4,6 +4,13 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.988](https://github.com/snapetech-org/chaptarrng/compare/v0.9.987..v0.9.988) - 2026-11-09
+
+### Release infrastructure
+
+- Build Playwright browser assets on the hosted builder architecture so the multi-platform image can include the documented arm/v7 fallback without requiring a nonexistent arm/v7 Node 26 image.
+- Align release-contract tests with the current pinned Ruby setup action and the hosted/public Discord announcement route.
+
 ## [0.9.987](https://github.com/snapetech-org/chaptarrng/compare/v0.9.986..v0.9.987) - 2026-11-09
 
 ### Upstream source attribution

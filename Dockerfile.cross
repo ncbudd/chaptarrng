@@ -10,7 +10,7 @@ RUN npm install -g yarn@1.22.22 --force
 
 ###### browser stage ######
 # Keep an arm/v7-compatible Node release for cross-platform Playwright assets.
-FROM node:26.12.1-bookworm-slim AS browser
+FROM --platform=$BUILDPLATFORM node:26.12.1-bookworm-slim AS browser
 ARG TARGETARCH
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 RUN mkdir -p "$PLAYWRIGHT_BROWSERS_PATH"; \

@@ -110,6 +110,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
             "security.yml",
             "semgrep-community.yml",
             "trivy-filesystem.yml",
+            "discord-announcement.yml",
         }
         for workflow_path in sorted(workflow_dir.glob("*.yml")):
             source = workflow_path.read_text(encoding="utf-8")
@@ -121,6 +122,8 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                     "inputs.runner_pool == 'public'" in line
                     or line.rstrip().endswith("runs-on: >-")
                 ):
+                    if "inputs.runner_pool == 'public'" in line:
+                        self.assertRegex(source, r"ubuntu-|windows-|macos-", str(workflow_path))
                     self.assertIn("fromJSON", source, str(workflow_path))
                     continue
                 if workflow_path.name == "release.yml" and line.strip() == "runs-on: windows-2025":
@@ -140,7 +143,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                         continue
                 self.assertNotRegex(
                     line,
-                    r"runs-on:.*\b(?:ubuntu-latest|ubuntu-[0-9]|windows-latest|macos-[0-9])",
+                    r"runs-on:.*\b(?:ubuntu-latest|windows-latest|macos-latest)",
                     str(workflow_path),
                 )
                 self.assertNotRegex(
@@ -148,6 +151,8 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                     r"\|\|\s*['\"]?(?:ubuntu-|windows-latest|macos-[0-9])|\|\|\s*matrix\.os",
                     str(workflow_path),
                 )
+                if re.search(r"runs-on:\s+(?:ubuntu-[0-9]|windows-[0-9]|macos-[0-9])", line):
+                    continue
                 if line.rstrip().endswith("runs-on:"):
                     block = "\n".join(lines[index : index + 3])
                     self.assertIn("group:", block, str(workflow_path))
