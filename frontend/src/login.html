@@ -346,6 +346,7 @@
               SIGN IN TO CONTINUE
             </div>
 
+            <!-- nosemgrep: python.django.security.django-no-csrf-token.django-no-csrf-token -- This static ASP.NET page requires the private out-of-band setup token in the POST body before it creates a setup session; it is not a Django template. -->
             <form id="initial-setup-form" action="setup" method="post" class="mb-lg">
               <h1 id="setup-title" class="sign-in">Set up ChaptarrNG</h1>
               <p id="setup-instructions">Open the setup-token file in your ChaptarrNG data folder. In Docker, it is /config/setup-token. Paste its contents to continue and create your account.</p>
