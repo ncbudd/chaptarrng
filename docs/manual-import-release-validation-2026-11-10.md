@@ -74,8 +74,30 @@ These figures describe the unpublished `.998` candidate, not a later release.
 
 A concurrent release session committed `5c5159f2`, selecting `macos-26` for
 native ARM64 installed validation and advancing the version to `0.9.999`.
-It started publication run `42887913617`. Follow that run rather than creating
-another competing release. Its native build, installation, migration, rollback,
-signing, and publication gates remain authoritative. Publication has not yet
-been confirmed in this record; no published assets or tags were replaced to
-bypass those gates.
+It started publication run `42887913617`. That run completed successfully.
+No published assets or tags were replaced to bypass its gates.
+
+## Published result
+
+- `v0.9.999` became the latest stable GitHub release on November 10, 2026,
+  at `21:06:47 UTC`, from `5c5159f21a313521c21ec3b5506e54c21a02f6e1`.
+- All ten standalone archives built and passed their updater signature policy.
+  All nine installed migration/forced-rollback gates passed, including Linux
+  x86 and macOS ARM64 on `macos-26`. The earlier predecessor failure remains
+  recorded above; no source-health assertion was weakened to obtain a pass.
+- The public `ChaptarrNG-0.9.999-win-x64.zip` is 174,118,279 bytes (166.05 MiB).
+  Its public release digest matches the independently downloaded artifact:
+  `a881e703cef9a5dacb5ee82c637df6ec95e1d2dce99d10f55aa110a846df92d6`.
+  ZIP CRC, checksum, and updater trust-policy verification pass. Playwright,
+  the updater, and the SkiaSharp runtime remain; the unused Db2 driver and
+  SkiaSharp PDB are absent. The 190,000,000-byte budget is satisfied.
+- `chaptarrng.0.9.999.nupkg` was pushed successfully to Chocolatey at
+  `21:12:03 UTC`. Submission does not establish moderator approval. The legacy
+  BookshelfNG Chocolatey identity was not pushed: its migration-bridge
+  publication gate remains disabled, unchanged by this task.
+- Discord destination verification and posting passed. Retained receipts:
+  [changelog](https://discord.com/channels/1447333772419928256/1569406962800656495/1569820718764396606)
+  and [ChaptarrNG project channel](https://discord.com/channels/1447333772419928256/1552357772975280199/1569820720605958287).
+- The verified Windows archive, checksum, signature bundle, and verification
+  manifest are retained on `kspld0` under
+  `~/code/task-deliverables/chaptarrng-manual-import-20261110/`.
