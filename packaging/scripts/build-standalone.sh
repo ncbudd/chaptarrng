@@ -192,17 +192,29 @@ fi
 asset="ChaptarrNG-${version}-${rid}"
 if [[ "$rid" == win-* ]]; then
   archive="$output/${asset}.zip"
-  python3 - "$bundle" "$archive" <<'PY'
+  staged_archive="$work/${asset}.zip"
+  python3 - "$bundle" "$staged_archive" "$rid" <<'PY'
 import pathlib
 import sys
 import zipfile
 
 root = pathlib.Path(sys.argv[1])
 archive = pathlib.Path(sys.argv[2])
+rid = sys.argv[3]
 with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_DEFLATED) as output_zip:
     for path in sorted(root.rglob("*")):
+        if path.name == "libSkiaSharp.pdb":
+            continue
         output_zip.write(path, path.relative_to(root).as_posix())
+
+if rid == "win-x64":
+    # Both Chocolatey packages download this ZIP. Leave room below the scanner limit.
+    budget = 190_000_000
+    size = archive.stat().st_size
+    if size > budget:
+        raise SystemExit(f"{archive.name} is {size:,} bytes, above the Chocolatey budget of {budget:,} bytes.")
 PY
+  mv -f -- "$staged_archive" "$archive"
 else
   archive="$output/${asset}.tar.gz"
   if [[ "$(uname -s)" == Darwin ]]; then
