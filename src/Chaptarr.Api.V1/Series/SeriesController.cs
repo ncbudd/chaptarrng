@@ -11,6 +11,7 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.Books.Services;
 using NzbDrone.Core.MediaCover;
+using NzbDrone.Core.MediaFiles;
 using NzbDrone.Common.Instrumentation;
 
 namespace Chaptarr.Api.V1.Series
@@ -24,6 +25,7 @@ namespace Chaptarr.Api.V1.Series
         private readonly ISeriesVariantService _seriesVariantService;
         private readonly IEditionService _editionService;
         private readonly IMediaCoverProxy _mediaCoverProxy;
+        private readonly IMediaFileService _mediaFileService;
         private readonly Logger _logger;
 
         public SeriesController(ISeriesService seriesService,
@@ -32,6 +34,7 @@ namespace Chaptarr.Api.V1.Series
                                 ISeriesVariantService seriesVariantService,
                                 IEditionService editionService,
                                 IMediaCoverProxy mediaCoverProxy,
+                                IMediaFileService mediaFileService,
                                 Logger logger)
         {
             _seriesService = seriesService;
@@ -40,6 +43,7 @@ namespace Chaptarr.Api.V1.Series
             _seriesVariantService = seriesVariantService;
             _editionService = editionService;
             _mediaCoverProxy = mediaCoverProxy;
+            _mediaFileService = mediaFileService;
             _logger = logger;
         }
 
@@ -87,6 +91,16 @@ namespace Chaptarr.Api.V1.Series
                 .Where(l => l.IsPrimary)
                 .OrderBy(l => l.SeriesPosition)
                 .ToList();
+
+            // Edition.BookFiles is never loaded by the edition service, so ownership comes from
+            // one batched file lookup for the whole series (file.EditionId is the owned edition).
+            var bookIds = links.Select(l => l.Book?.Value?.Id ?? 0).Where(id => id > 0).Distinct().ToList();
+            IReadOnlySet<int> ownedEditionIds = (bookIds.Count == 0
+                    ? new List<BookFile>()
+                    : _mediaFileService.GetFilesByBooks(bookIds) ?? new List<BookFile>())
+                .Select(file => file.EditionId)
+                .ToHashSet();
+
             var volumes = new List<SeriesNarratorMatrixBuilder.Volume>();
             foreach (var link in links)
             {
@@ -97,7 +111,7 @@ namespace Chaptarr.Api.V1.Series
                 }
 
                 var editions = _editionService.GetEditionsByBook(book.Id).Where(e => !e.IsEbook).ToList();
-                volumes.Add(new SeriesNarratorMatrixBuilder.Volume(book.Id, book.Title, link.SeriesPosition, editions));
+                volumes.Add(new SeriesNarratorMatrixBuilder.Volume(book.Id, book.Title, link.SeriesPosition, editions, ownedEditionIds));
             }
 
             return Ok(SeriesNarratorMatrixBuilder.Build(series.Id, series.Title, volumes));

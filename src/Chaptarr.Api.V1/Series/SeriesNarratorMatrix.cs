@@ -42,7 +42,7 @@ namespace Chaptarr.Api.V1.Series
 
     public static class SeriesNarratorMatrixBuilder
     {
-        public sealed record Volume(int BookId, string Title, int Position, IReadOnlyList<Edition> Editions);
+        public sealed record Volume(int BookId, string Title, int Position, IReadOnlyList<Edition> Editions, IReadOnlySet<int> OwnedEditionIds = null);
 
         public static string Normalize(string value)
         {
@@ -79,7 +79,7 @@ namespace Chaptarr.Api.V1.Series
                 foreach (var edition in volume.Editions)
                 {
                     var narrators = EditionCatalogMapper.NarratorsOf(edition);
-                    var owned = edition.BookFiles?.Any() == true;
+                    var owned = volume.OwnedEditionIds?.Contains(edition.Id) == true || edition.BookFiles?.Any() == true;
                     var production = EditionCatalogMapper.ProductionOf(edition, narrators);
                     foreach (var narrator in narrators)
                     {
