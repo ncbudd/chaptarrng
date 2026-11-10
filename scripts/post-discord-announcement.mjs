@@ -7,6 +7,8 @@ import { splitDiscordReleaseBody } from './discord-release-notes.mjs';
 import {
   CHAPTARRNG_DISCORD_CHANNEL_ID,
   CHAPTARRNG_DISCORD_GUILD_ID,
+  CHANGELOG_DISCORD_CHANNEL_ID,
+  verifyDiscordDestination,
 } from './chaptarrng-discord-destination.mjs';
 
 function required(name) {
@@ -30,32 +32,18 @@ function validateHttpsUrl(value, label) {
   return url.toString();
 }
 
-const webhookValue = required('DISCORD_RELEASE_WEBHOOK');
-let webhookUrl;
-try {
-  webhookUrl = new URL(webhookValue);
-} catch {
-  throw new Error('DISCORD_RELEASE_WEBHOOK must be a Discord HTTPS webhook URL.');
-}
-if (
-  webhookUrl.protocol !== 'https:' ||
-  !['discord.com', 'discordapp.com'].includes(webhookUrl.hostname) ||
-  !webhookUrl.pathname.startsWith('/api/webhooks/')
-) {
-  throw new Error('DISCORD_RELEASE_WEBHOOK must be a Discord HTTPS webhook URL.');
-}
-webhookUrl.searchParams.set('wait', 'true');
-
-const destinationResponse = await fetch(webhookUrl, { redirect: 'error' });
-if (!destinationResponse.ok) {
-  throw new Error('Discord destination lookup returned HTTP ' + destinationResponse.status + '.');
-}
-const webhookDestination = await destinationResponse.json();
-if (
-  webhookDestination.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID ||
-  webhookDestination.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID
-) {
-  throw new Error('Discord release webhook points outside the owner-selected release channel.');
+const projectWebhook = await verifyDiscordDestination(
+  required('DISCORD_RELEASE_WEBHOOK'),
+  'DISCORD_RELEASE_WEBHOOK',
+  CHAPTARRNG_DISCORD_CHANNEL_ID
+);
+const changelogWebhook = process.env.DISCORD_CHANGELOG_WEBHOOK?.trim();
+const notesWebhook = changelogWebhook
+  ? await verifyDiscordDestination(changelogWebhook, 'DISCORD_CHANGELOG_WEBHOOK', CHANGELOG_DISCORD_CHANNEL_ID)
+  : projectWebhook;
+const notesChannel = changelogWebhook ? CHANGELOG_DISCORD_CHANNEL_ID : CHAPTARRNG_DISCORD_CHANNEL_ID;
+if (!changelogWebhook) {
+  console.warn('::warning::DISCORD_CHANGELOG_WEBHOOK is unset; using the existing project channel.');
 }
 
 const title = required('ANNOUNCEMENT_TITLE');
@@ -101,6 +89,44 @@ if (process.env.ANNOUNCEMENT_WORKFLOW_URL) {
   });
 }
 
+async function post(url, channel, payload) {
+  let response;
+  try {
+    response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+      redirect: 'error',
+      signal: AbortSignal.timeout(20000),
+    });
+  } catch {
+    throw new Error('Discord webhook request failed before receiving a response.');
+  }
+
+  if (!response.ok) {
+    throw new Error('Discord webhook returned HTTP ' + response.status + '.');
+  }
+
+  let receipt;
+  try {
+    receipt = await response.json();
+  } catch {
+    throw new Error('Discord webhook returned an unreadable response.');
+  }
+  if (
+    typeof receipt.id !== 'string' || !/^\d+$/.test(receipt.id) ||
+    receipt.channel_id !== channel ||
+    (receipt.guild_id && receipt.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID)
+  ) {
+    throw new Error('Discord did not confirm a message in the expected channel.');
+  }
+  if (payload.content && receipt.content !== payload.content) {
+    throw new Error('Discord returned a different project-channel announcement.');
+  }
+  return { receipt, link: `https://discord.com/channels/${CHAPTARRNG_DISCORD_GUILD_ID}/${channel}/${receipt.id}` };
+}
+
+let firstLink;
 for (let index = 0; index < chunks.length; index += 1) {
   const suffix = chunks.length > 1 ? ' (' + (index + 1) + '/' + chunks.length + ')' : '';
   const payload = {
@@ -117,62 +143,32 @@ for (let index = 0; index < chunks.length; index += 1) {
     ],
   };
 
-  let response;
-  try {
-    response = await fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-      redirect: 'error',
-    });
-  } catch {
-    throw new Error('Discord webhook request failed before receiving a response.');
-  }
-
-  if (!response.ok) {
-    throw new Error('Discord webhook returned HTTP ' + response.status + '.');
-  }
-
-  let receipt;
-  try {
-    receipt = await response.json();
-  } catch {
-    throw new Error('Discord webhook returned an unreadable response.');
-  }
-  if (!receipt.id) {
-    throw new Error('Discord did not confirm the announcement message.');
-  }
-  // The wait=true message receipt can omit guild_id. The webhook lookup above
-  // already verified both destination IDs before any POST was sent.
-  if (
-    (receipt.guild_id && receipt.guild_id !== CHAPTARRNG_DISCORD_GUILD_ID) ||
-    (receipt.channel_id && receipt.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID)
-  ) {
-    throw new Error('Discord confirmed an unexpected announcement destination.');
-  }
-  console.log(
-    'Discord announcement message ' +
-      (index + 1) +
-      ': https://discord.com/channels/' +
-      CHAPTARRNG_DISCORD_GUILD_ID +
-      '/' +
-      CHAPTARRNG_DISCORD_CHANNEL_ID +
-      '/' +
-      receipt.id
-  );
+  const { receipt, link } = await post(notesWebhook, notesChannel, payload);
+  firstLink ??= link;
+  console.log('Discord announcement message ' + (index + 1) + ': ' + link);
   // Discord normalizes line endings and trims surrounding whitespace in embeds,
   // so a text difference alone does not mean the message was lost.
   const normalize = (value) =>
     typeof value === 'string' ? value.replace(/\r\n/g, '\n').trim() : value;
   if (normalize(receipt.embeds?.[0]?.description) !== normalize(chunks[index])) {
-    console.warn(
-      'Discord accepted announcement message ' + (index + 1) + ' but returned different text.'
-    );
+    const detail = 'Discord accepted announcement message ' + (index + 1) + ' but returned different text.';
+    if (changelogWebhook) throw new Error(detail);
+    console.warn(detail);
   }
 
   if (index + 1 < chunks.length) {
     await sleep(1000);
   }
+}
+
+if (changelogWebhook) {
+  const { link } = await post(projectWebhook, CHAPTARRNG_DISCORD_CHANNEL_ID, {
+    username: 'ChaptarrNG Releases',
+    allowed_mentions: { parse: [] },
+    flags: 4,
+    content: `**${title.slice(0, 256)}**\n[Read the changelog](${firstLink})`,
+  });
+  console.log('ChaptarrNG project link: ' + link);
 }
 
 console.log('Posted ' + chunks.length + ' Discord announcement message(s).');

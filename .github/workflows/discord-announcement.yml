@@ -64,12 +64,14 @@ jobs:
       if: inputs.action == 'inspect'
       env:
         DISCORD_RELEASE_WEBHOOK: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
+        DISCORD_CHANGELOG_WEBHOOK: ${{ secrets.DISCORD_CHANGELOG_WEBHOOK }}
       run: node scripts/inspect-discord-destination.mjs --require-chaptarrng-destination
 
     - name: Post announcement
       if: inputs.action == 'announce'
       env:
         DISCORD_RELEASE_WEBHOOK: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
+        DISCORD_CHANGELOG_WEBHOOK: ${{ secrets.DISCORD_CHANGELOG_WEBHOOK }}
         ANNOUNCEMENT_TITLE: ${{ inputs.title }}
         ANNOUNCEMENT_URL: ${{ inputs.url }}
         ANNOUNCEMENT_BODY: ${{ inputs.body }}

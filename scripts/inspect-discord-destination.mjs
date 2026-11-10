@@ -3,6 +3,8 @@
 import {
   CHAPTARRNG_DISCORD_CHANNEL_ID,
   CHAPTARRNG_DISCORD_GUILD_ID,
+  CHANGELOG_DISCORD_CHANNEL_ID,
+  verifyDiscordDestination,
 } from './chaptarrng-discord-destination.mjs';
 
 const value = process.env.DISCORD_RELEASE_WEBHOOK;
@@ -38,4 +40,11 @@ if (
     destination.channel_id !== CHAPTARRNG_DISCORD_CHANNEL_ID)
 ) {
   throw new Error('Discord release webhook points outside the owner-selected release channel.');
+}
+
+const changelog = process.env.DISCORD_CHANGELOG_WEBHOOK?.trim();
+if (changelog) {
+  await verifyDiscordDestination(changelog, 'DISCORD_CHANGELOG_WEBHOOK', CHANGELOG_DISCORD_CHANNEL_ID);
+  console.log('Changelog channel: https://discord.com/channels/' +
+    CHAPTARRNG_DISCORD_GUILD_ID + '/' + CHANGELOG_DISCORD_CHANNEL_ID);
 }

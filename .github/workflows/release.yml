@@ -108,6 +108,7 @@ jobs:
       if: steps.release-request.outputs.release_requested == 'true'
       env:
         DISCORD_RELEASE_WEBHOOK: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
+        DISCORD_CHANGELOG_WEBHOOK: ${{ secrets.DISCORD_CHANGELOG_WEBHOOK }}
       run: |
         bash packaging/scripts/validate-release-publisher-config.sh discord
         node scripts/inspect-discord-destination.mjs --require-chaptarrng-destination
@@ -1229,6 +1230,7 @@ jobs:
       contents: read
     env:
       DISCORD_RELEASE_WEBHOOK: ${{ secrets.DISCORD_RELEASE_WEBHOOK }}
+      DISCORD_CHANGELOG_WEBHOOK: ${{ secrets.DISCORD_CHANGELOG_WEBHOOK }}
       ANNOUNCEMENT_TITLE: ChaptarrNG ${{ needs.release.outputs.tag }} release notes
       ANNOUNCEMENT_URL: ${{ github.server_url }}/${{ github.repository }}/releases/tag/${{ needs.release.outputs.tag }}
       ANNOUNCEMENT_BODY: ${{ needs.release.outputs.release_body }}
@@ -1258,5 +1260,17 @@ jobs:
           exit 1
         fi
 
-    - name: Send Discord announcement
-      run: node scripts/post-discord-announcement.mjs
+    - name: Check out the workflow revision's Discord tools
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        ref: ${{ github.sha }}
+        path: .discord-release-tools
+        sparse-checkout: |
+          scripts/post-discord-announcement.mjs
+          scripts/chaptarrng-discord-destination.mjs
+          scripts/discord-release-notes.mjs
+        sparse-checkout-cone-mode: false
+        persist-credentials: false
+
+    - name: Send Discord changelog and project link
+      run: node .discord-release-tools/scripts/post-discord-announcement.mjs
