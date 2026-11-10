@@ -433,6 +433,32 @@ namespace Chaptarr.Core.Test.Books
         }
 
         [Test]
+        public void should_not_warn_when_facade_editions_without_identity_are_omitted()
+        {
+            var originalConfiguration = LogManager.Configuration;
+            try
+            {
+                var logs = ConfigureLogging();
+                var editions = new[] { new Edition { Id = 1, Title = "No identity" } };
+                var context = new ReadarrFacadeContext("hc", "ebook", "/readarr/hc/ebook");
+
+                for (var i = 0; i < 3; i++)
+                {
+                    var addressable = ReadarrFacadeEditionIdentity.FilterAddressableEditions(editions, context, "edition response");
+                    Assert.That(addressable, Is.Empty);
+                }
+
+                Assert.That(logs.Logs.Where(log => log.StartsWith("Warn|", StringComparison.Ordinal)), Is.Empty);
+                Assert.That(logs.Logs.Any(log => log.Contains("Omitted 1 edition row(s) without hc identity", StringComparison.Ordinal)), Is.True);
+            }
+            finally
+            {
+                LogManager.Configuration = originalConfiguration;
+                LogManager.ReconfigExistingLoggers();
+            }
+        }
+
+        [Test]
         public void should_preserve_existing_edition_identity_when_mapping_facade_book_update()
         {
             var existing = new Book
