@@ -714,8 +714,8 @@ jobs:
             extension: tar.gz
             predecessor_sha256: 4f660a1367e28c01660c2e082c4f1778f652cca34affc0dba55d3f47ef67f747
           - rid: osx-arm64
-            # Explicit native ARM64 route while macos-15 jobs are cancelled before runner assignment.
-            runner: macos-14
+            # Explicit native ARM64 route; macos-14 was retired on 2026-11-02.
+            runner: macos-26
             extension: tar.gz
             predecessor_sha256: d964bb1146b6c9e313758a967815f53f8d9aa45314bc30cfa55e96bb299433ce
           - rid: win-x64
