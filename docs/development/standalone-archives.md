@@ -77,7 +77,9 @@ selects a compatible installed OpenSSL ABI when needed.
 
 ## Publication gate
 
-The runtime matrix and build workflows are source-only until the release and
-migration acceptance gates close. ChaptarrNG `v0.9.977` still contains only
-the three archives listed in the release notes; no expanded archive set or
-BookshelfNG channel bridge is public.
+ChaptarrNG `v0.9.995` published all ten standalone archives with SHA-256 and
+Sigstore sidecars. Installed migration and forced rollback passed on the nine
+Linux, macOS and Windows runtime targets; the current FreeBSD archive still
+needs native installed acceptance. The BookshelfNG identity bridge remains
+unpublished. See the [package acceptance handoff](../maintainers/PACKAGE_ACCEPTANCE_HANDOFF_2026-11-10.md)
+for current evidence and platform-specific outstanding checks.

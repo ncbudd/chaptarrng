@@ -1,13 +1,17 @@
 # Native package channels
 
-Status checked 2026-10-26. ChaptarrNG [`v0.9.977`](https://github.com/snapetech-org/chaptarrng/releases/tag/v0.9.977)
+Status checked 2026-11-10. ChaptarrNG [`v0.9.995`](https://github.com/snapetech-org/chaptarrng/releases/tag/v0.9.995)
 is the latest published release; [main](https://github.com/snapetech-org/chaptarrng/tree/main) includes candidate-only
 BookshelfNG migration and package-bridge tooling. GitHub Release archives are the payload for
 native packages; the standard ChaptarrNG container is built separately from
 the same application source and migration code. Package recipes add service
 and filesystem integration. See the
-[ChaptarrNG v0.9.977 release](https://github.com/snapetech-org/chaptarrng/releases/tag/v0.9.977)
+[ChaptarrNG v0.9.995 release](https://github.com/snapetech-org/chaptarrng/releases/tag/v0.9.995)
 for the published archives, checksums, and source RPMs.
+
+For exact-current release evidence, environment requirements and outstanding
+installed-package checks, use the [2026-11-10 package acceptance handoff](../docs/maintainers/PACKAGE_ACCEPTANCE_HANDOFF_2026-11-10.md).
+Older dated acceptance sections below describe historical candidate versions.
 
 The current local candidate has passed the installed and runtime rehearsals
 listed in the [channel acceptance matrix](../docs/maintainers/BOOKSHELFNG_CHANNEL_ACCEPTANCE_2026-10-26.md).
