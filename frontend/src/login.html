@@ -171,6 +171,16 @@
         margin: 20px 0;
       }
 
+      #initial-setup-form,
+      body[data-auth-method="setup"] #sign-in-prompt,
+      body[data-auth-method="setup"] #local-login-form {
+        display: none;
+      }
+
+      body[data-auth-method="setup"] #initial-setup-form {
+        display: block;
+      }
+
       .form-input {
         box-sizing: border-box;
         padding: 6px 16px;
@@ -323,7 +333,7 @@
     </style>
   </head>
 
-  <body>
+  <body data-auth-method="__AUTH_METHOD__">
     <div class="center">
       <div class="content">
         <div class="panel">
@@ -335,6 +345,18 @@
             <div id="sign-in-prompt" class="sign-in">
               SIGN IN TO CONTINUE
             </div>
+
+            <form id="initial-setup-form" action="setup" method="post" class="mb-lg">
+              <h1 id="setup-title" class="sign-in">Set up ChaptarrNG</h1>
+              <p id="setup-instructions">Open the setup-token file in your ChaptarrNG data folder. In Docker, it is /config/setup-token. Paste its contents to continue and create your account.</p>
+              <div class="form-group">
+                <label id="setup-token-label" for="setup-token">Setup token</label>
+                <input id="setup-token" type="password" name="setupToken" class="form-input"
+                  aria-describedby="setup-instructions" autocomplete="off" spellcheck="false" maxlength="128" required />
+              </div>
+              <button id="setup-button" type="submit" class="button">Continue setup</button>
+              <div id="setup-failed" class="login-failed hidden" role="alert">That setup token did not match. Copy the current token and try again.</div>
+            </form>
 
             <form
               id="local-login-form"
@@ -486,7 +508,9 @@
           : "ltr";
       }
 
-      document.title = translate("AuthLoginTitle", "Login - Chaptarr");
+      if (authMethod !== "setup") {
+        document.title = translate("AuthLoginTitle", "Login - Chaptarr");
+      }
       document.querySelector(".logo").alt = translate("AuthLoginLogoAlt", "Chaptarr logo");
       document.getElementById("sign-in-prompt").textContent = translate("AuthSignInPrompt", "Sign in to continue");
       var usernameInput = document.querySelector("input[name='username']");
@@ -515,6 +539,13 @@
     var loginFailed = urlParams.get("loginFailed") === "true";
     var ssoFailed = urlParams.get("ssoFailed") === "true";
     var ssoError = urlParams.get("ssoError") || "";
+
+    if (authMethod === "setup") {
+      document.title = document.getElementById("setup-title").textContent;
+      if (urlParams.get("setupFailed") === "true") {
+        document.getElementById("setup-failed").classList.remove("hidden");
+      }
+    }
 
     if (loginFailed) {
       var loginFailedDiv = document.getElementById("login-failed");

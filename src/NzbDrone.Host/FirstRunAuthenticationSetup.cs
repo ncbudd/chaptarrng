@@ -30,7 +30,7 @@ namespace NzbDrone.Host
                 _configFileProvider.AuthenticationMethod != AuthenticationType.Oidc &&
                 _configFileProvider.AuthenticationMethod != AuthenticationType.Plex && _userService.Value.FindUser() == null)
             {
-                _logger.Info("Initial account setup requires username 'setup' and the password in the config directory's setup-token file.");
+                _logger.Info("Open the ChaptarrNG web UI and enter the token from the config directory's setup-token file to begin account setup.");
             }
         }
     }

@@ -152,7 +152,11 @@ export const actionHandlers = handleThunks({
 
     abortCurrentFetchRequest = abortRequest;
 
-    request.then((data) => {
+    request.done((data) => {
+      if (abortCurrentFetchRequest !== currentAbortRequest) {
+        return;
+      }
+
       dispatch(batchActions([
         update({ section, data }),
 
@@ -163,10 +167,8 @@ export const actionHandlers = handleThunks({
           error: null
         })
       ]));
-    });
-
-    request.catch((xhr) => {
-      if (xhr.aborted) {
+    }).fail((xhr) => {
+      if (xhr.aborted || abortCurrentFetchRequest !== currentAbortRequest) {
         return;
       }
 
@@ -176,9 +178,7 @@ export const actionHandlers = handleThunks({
         isPopulated: false,
         error: xhr
       }));
-    });
-
-    request.finally(() => {
+    }).always(() => {
       if (abortCurrentFetchRequest === currentAbortRequest) {
         abortCurrentFetchRequest = null;
       }

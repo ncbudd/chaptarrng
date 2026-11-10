@@ -11,12 +11,15 @@ import socket
 import subprocess
 import tempfile
 import time
+from urllib.parse import urlencode
 
 parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--dotnet', default='dotnet')
 parser.add_argument('--app', type=Path, required=True)
 parser.add_argument('--log', type=Path, required=True)
 parser.add_argument('--misconfigured-oidc', action='store_true')
+parser.add_argument('--url-base', default='')
+parser.add_argument('--initial-auth-method', choices=('None', 'Forms', 'Basic'), default='None')
 args = parser.parse_args()
 with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
     data = Path(temporary)
@@ -26,18 +29,21 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
         port = sock.getsockname()[1]
     master = secrets.token_hex(16)
     seerr = secrets.token_hex(16)
-    method = 'Oidc' if args.misconfigured_oidc else 'None'
-    (data/'config.xml').write_text(f'<Config><ApiKey>{master}</ApiKey><SeerrApiKey>{seerr}</SeerrApiKey><BindAddress>127.0.0.1</BindAddress><Port>{port}</Port><AuthenticationMethod>{method}</AuthenticationMethod><AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired><LaunchBrowser>False</LaunchBrowser><AnalyticsEnabled>False</AnalyticsEnabled><UpdateAutomatically>False</UpdateAutomatically></Config>')
+    method = 'Oidc' if args.misconfigured_oidc else args.initial_auth_method
+    (data/'config.xml').write_text(f'<Config><ApiKey>{master}</ApiKey><SeerrApiKey>{seerr}</SeerrApiKey><BindAddress>127.0.0.1</BindAddress><Port>{port}</Port><UrlBase>{args.url_base}</UrlBase><AuthenticationMethod>{method}</AuthenticationMethod><AuthenticationRequired>DisabledForLocalAddresses</AuthenticationRequired><LaunchBrowser>False</LaunchBrowser><AnalyticsEnabled>False</AnalyticsEnabled><UpdateAutomatically>False</UpdateAutomatically></Config>')
     env = dict(os.environ, DOTNET_GCHeapHardLimit='0x30000000', ASPNETCORE_ENVIRONMENT='Production')
     log = open(args.log, 'w')
     process = subprocess.Popen([args.dotnet, str(args.app.resolve()), '-data='+str(data), '-nobrowser', '-nosingleinstancecheck'], stdout=log, stderr=subprocess.STDOUT, env=env)
-    def request(path, headers=None, method='GET', body=None):
+    def request(path, headers=None, method='GET', body=None, form=None):
         connection=http.client.HTTPConnection('127.0.0.1',port,timeout=5)
         headers=dict(headers or {})
         if body is not None:
             body=json.dumps(body)
             headers['Content-Type']='application/json'
-        connection.request(method,path,body=body,headers=headers)
+        if form is not None:
+            body=urlencode(form)
+            headers['Content-Type']='application/x-www-form-urlencoded'
+        connection.request(method,args.url_base+path,body=body,headers=headers)
         response=connection.getresponse()
         result=(response.status,dict(response.getheaders()),response.read())
         connection.close()
@@ -57,14 +63,29 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
             assert not (data/'setup-token').exists()
             recovery_headers = {'X-Api-Key': master}
         else:
-            assert headers.get('WWW-Authenticate','').startswith('Basic realm=')
+            assert not headers.get('WWW-Authenticate')
+            status,headers,body=request('/')
+            assert status==302 and headers.get('Location')==args.url_base+'/login',(status,headers)
+            assert not headers.get('WWW-Authenticate')
             token=(data/'setup-token').read_text()
             assert (data/'setup-token').stat().st_mode & 0o777 == 0o600
             authorization='Basic '+base64.b64encode(('setup:'+token).encode()).decode()
-            recovery_headers = {'Authorization': authorization}
+            assert request('/initialize.json', {'Authorization': authorization})[0]==200
+            status,headers,body=request('/setup', method='POST', form={'setupToken': 'wrong'})
+            assert status==302 and headers.get('Location')==args.url_base+'/login?setupFailed=true',(status,headers)
+            assert 'Set-Cookie' not in headers
+            status,headers,body=request('/setup', method='POST', form={'setupToken': token+'\n'})
+            assert status==302 and headers.get('Location')==args.url_base+'/',(status,headers)
+            setup_cookie=headers['Set-Cookie'].split(';',1)[0]
+            assert setup_cookie.startswith('ChaptarrInitialSetup=')
+            assert 'httponly' in headers['Set-Cookie'].lower() and 'samesite=strict' in headers['Set-Cookie'].lower()
+            recovery_headers = {'Cookie': setup_cookie}
+            assert request('/', recovery_headers)[0] in (200,404)  # The audit build may omit UI assets.
         status,headers,body=request('/initialize.json',recovery_headers)
         assert status==200,(status,body[:200])
-        ui=json.loads(body)['apiKey']
+        bootstrap=json.loads(body)
+        assert bootstrap['setupRequired'] is not args.misconfigured_oidc
+        ui=bootstrap['apiKey']
         assert ui.startswith('ui_') and ui!=master
         cookie=headers['Set-Cookie'].split(';',1)[0]
         assert 'httponly' in headers['Set-Cookie'].lower() and 'samesite=strict' in headers['Set-Cookie'].lower()
@@ -94,10 +115,14 @@ with tempfile.TemporaryDirectory(prefix='chaptarr-audit-startup-') as temporary:
             status,headers,body=request('/api/v1/config/host',{'X-Api-Key':ui,'Cookie':cookie},'PUT',settings)
             assert status in (200,202),(status,body[:1000])
             forms_cookie=headers['Set-Cookie'].split(';',1)[0]
+            assert request('/initialize.json', {'Cookie': setup_cookie, 'Accept': 'application/json'})[0]==401
+            assert request('/setup', method='POST', form={'setupToken': token})[0]==404
             assert request('/api/v1/system/status',{'X-Api-Key':ui,'Cookie':cookie+'; '+forms_cookie})[0]==401
             status,headers,body=request('/initialize.json',{'Cookie':forms_cookie,'Accept':'application/json'})
             assert status==200,(status,body[:1000])
-            renewed=json.loads(body)['apiKey']
+            bootstrap=json.loads(body)
+            assert not bootstrap['setupRequired']
+            renewed=bootstrap['apiKey']
             renewed_cookie=headers['Set-Cookie'].split(';',1)[0]
             assert renewed!=ui and renewed.startswith('ui_')
             assert request('/api/v1/system/status',{'X-Api-Key':renewed,'Cookie':forms_cookie+'; '+renewed_cookie})[0]==200

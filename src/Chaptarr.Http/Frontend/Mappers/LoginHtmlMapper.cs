@@ -5,6 +5,7 @@ using System.Text;
 using NLog;
 using NzbDrone.Common.Disk;
 using NzbDrone.Common.EnvironmentInfo;
+using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
 namespace Chaptarr.Http.Frontend.Mappers
@@ -12,15 +13,18 @@ namespace Chaptarr.Http.Frontend.Mappers
     public class LoginHtmlMapper : HtmlMapperBase
     {
         private readonly IConfigFileProvider _configFileProvider;
+        private readonly IInitialSetupTokenService _setupTokens;
 
         public LoginHtmlMapper(IAppFolderInfo appFolderInfo,
                                IDiskProvider diskProvider,
                                Lazy<ICacheBreakerProvider> cacheBreakProviderFactory,
                                IConfigFileProvider configFileProvider,
+                               IInitialSetupTokenService setupTokens,
                                Logger logger)
             : base(diskProvider, cacheBreakProviderFactory, logger)
         {
             _configFileProvider = configFileProvider;
+            _setupTokens = setupTokens;
             HtmlPath = Path.Combine(appFolderInfo.StartUpFolder, configFileProvider.UiFolder, "login.html");
             UrlBase = configFileProvider.UrlBase;
         }
@@ -33,7 +37,8 @@ namespace Chaptarr.Http.Frontend.Mappers
         protected override Stream GetContentStream(string filePath)
         {
             var text = GetHtmlText();
-            text = text.Replace("__AUTH_METHOD__", _configFileProvider.AuthenticationMethod.ToString().ToLowerInvariant());
+            var authMethod = _setupTokens.IsRequired ? "setup" : _configFileProvider.AuthenticationMethod.ToString().ToLowerInvariant();
+            text = text.Replace("__AUTH_METHOD__", authMethod);
             text = text.Replace("__OIDC_PROVIDER__", GetOidcProviderHint());
 
             var stream = new MemoryStream();

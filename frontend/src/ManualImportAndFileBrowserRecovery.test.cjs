@@ -36,7 +36,7 @@ const React = {
   }
 };
 
-function loadComponent(componentPath, moduleMocks) {
+function loadComponent(componentPath, moduleMocks, exportName = 'default') {
   const filePath = path.join(__dirname, componentPath);
   const source = fs.readFileSync(filePath, 'utf8');
   const { code } = transformSync(source, {
@@ -64,7 +64,7 @@ function loadComponent(componentPath, moduleMocks) {
   };
 
   vm.runInNewContext(code, sandbox, { filename: filePath });
-  return sandbox.exports.default;
+  return sandbox.exports[exportName];
 }
 
 function findElements(element, predicate, matches = []) {
@@ -212,6 +212,63 @@ test('manual import failure announces the error, retries, and prevents stale imp
   assert.equal(retries, 1);
   assert.equal(findElements(output, (element) => element.type === 'Table').length, 0);
   assert.equal(importButton.props.isDisabled, true);
+});
+
+test('manual import previews settle through jQuery callbacks and ignore an older request', () => {
+  const requests = [];
+  const dispatched = [];
+  const action = (type) => (payload) => ({ type, payload });
+  const defaultExport = (value) => ({ __esModule: true, default: value });
+  const handlers = loadComponent('Store/Actions/interactiveImportActions.js', new Map([
+    ['redux-actions', { createAction: action }],
+    ['redux-batched-actions', { batchActions: action('batch') }],
+    ['Helpers/Props', { sortDirections: { ASCENDING: 'ascending' } }],
+    ['Store/thunks', { createThunk: action, handleThunks: (value) => value }],
+    ['./baseActions', { set: action('set'), update: action('update') }],
+    ['./Creators/createFetchHandler', defaultExport(() => {})],
+    ['./Creators/createHandleActions', defaultExport(() => {})],
+    ['./Creators/Reducers/createSetClientSideCollectionSortReducer', defaultExport(() => {})],
+    ['Utilities/createAjaxRequest', defaultExport((options) => {
+      const callbacks = {};
+      const preview = { options, callbacks, aborted: false };
+      requests.push(preview);
+
+      // The real AJAX helper returns a jQuery Deferred with no Promise.finally().
+      const request = {
+        done(callback) { callbacks.done = callback; return this; },
+        fail(callback) { callbacks.fail = callback; return this; },
+        always(callback) { callbacks.always = callback; return this; }
+      };
+
+      return { request, abortRequest: () => { preview.aborted = true; } };
+    })]
+  ]), 'actionHandlers');
+  const fetchItems = handlers['interactiveImport/fetchInteractiveImportItems'];
+  const dispatch = (value) => dispatched.push(value);
+  fetchItems(null, { folder: '/first' }, dispatch);
+  fetchItems(null, { folder: '/second' }, dispatch);
+
+  const [first, second] = requests;
+  assert.equal(first.aborted, true);
+  assert.equal(second.options.url, '/manualimport');
+  first.callbacks.done([{ path: '/first/stale.epub' }]);
+  first.callbacks.always();
+  assert.equal(dispatched.length, 2);
+
+  const file = { path: '/second/book.epub' };
+  second.callbacks.done([file]);
+  second.callbacks.always();
+  assert.equal(dispatched.at(-1).payload[0].payload.data[0], file);
+  assert.equal(dispatched.at(-1).payload[1].payload.isPopulated, true);
+
+  fetchItems(null, { downloadId: 'tracked' }, dispatch);
+  const last = requests.at(-1);
+  const error = { message: 'Preview unavailable' };
+  last.callbacks.fail(error);
+  last.callbacks.always();
+  assert.equal(second.aborted, false);
+  assert.equal(dispatched.at(-1).payload.error, error);
+  assert.equal(dispatched.at(-1).payload.isFetching, false);
 });
 
 function fileBrowserMocks() {

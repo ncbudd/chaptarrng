@@ -175,7 +175,7 @@ function createMapStateToProps() {
         ...errors,
         isPopulated,
         isSmallScreen: dimensions.isSmallScreen,
-        authenticationEnabled: systemStatus.authentication !== 'none',
+        authenticationEnabled: !window.Chaptarr.setupRequired && systemStatus.authentication !== 'none',
         enableColorImpairedMode,
         advancedSettings,
         experienceMode: experienceMode || 'advanced'

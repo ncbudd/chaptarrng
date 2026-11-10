@@ -423,6 +423,27 @@ namespace Chaptarr.Http.Authentication
 
             return services.AddAuthentication()
                 .AddScheme<AuthenticationSchemeOptions, InitialSetupAuthenticationHandler>(InitialSetupAuthenticationHandler.SchemeName, _ => { })
+                .AddCookie(InitialSetupAuthenticationHandler.CookieSchemeName, options =>
+                {
+                    options.Cookie.Name = "ChaptarrInitialSetup";
+                    options.Cookie.HttpOnly = true;
+                    options.Cookie.SameSite = Microsoft.AspNetCore.Http.SameSiteMode.Strict;
+                    options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(15);
+                    options.SlidingExpiration = false;
+                    options.Events.OnValidatePrincipal = context =>
+                    {
+                        var requestServices = context.HttpContext.RequestServices;
+                        var stamp = context.Principal?.FindFirst(AuthStampClaim)?.Value;
+                        if (!requestServices.GetRequiredService<IInitialSetupTokenService>().IsRequired ||
+                            stamp.IsNullOrWhiteSpace() || stamp != requestServices.GetRequiredService<IConfigFileProvider>().AuthCookieStamp)
+                        {
+                            context.RejectPrincipal();
+                        }
+
+                        return System.Threading.Tasks.Task.CompletedTask;
+                    };
+                })
                 .AddNone(AuthenticationType.None.ToString())
                 .AddExternal(AuthenticationType.External.ToString())
                 .AddBasic(AuthenticationType.Basic.ToString())

@@ -5,9 +5,11 @@ using System.Reflection;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Moq;
 using NUnit.Framework;
 using Chaptarr.Http.Frontend;
 using Chaptarr.Http.Authentication;
+using NzbDrone.Core.Authentication;
 using NzbDrone.Core.Configuration;
 
 namespace Chaptarr.Core.Test.Http
@@ -58,11 +60,13 @@ namespace Chaptarr.Core.Test.Http
             }
         }
 
-        [Test]
-        public void should_disable_cache_and_serialize_expected_initialize_shape()
+        [TestCase(false)]
+        [TestCase(true)]
+        public void should_disable_cache_and_serialize_expected_initialize_shape(bool setupRequired)
         {
             var config = ConfigFileProviderProxy.Create("/chaptarr", "api-key", "Library", "dark", "main");
-            var controller = new InitializeJsonController(config, new UiSessionTokenService(config))
+            var setupTokens = Mock.Of<IInitialSetupTokenService>(tokens => tokens.IsRequired == setupRequired);
+            var controller = new InitializeJsonController(config, new UiSessionTokenService(config), setupTokens)
             {
                 ControllerContext = new ControllerContext
                 {
@@ -87,6 +91,7 @@ namespace Chaptarr.Core.Test.Http
             Assert.That(root.GetProperty("Theme").GetString(), Is.EqualTo("dark"));
             Assert.That(root.GetProperty("Branch").GetString(), Is.EqualTo("main"));
             Assert.That(root.GetProperty("UrlBase").GetString(), Is.EqualTo("/chaptarr"));
+            Assert.That(root.GetProperty("SetupRequired").GetBoolean(), Is.EqualTo(setupRequired));
             Assert.That(root.GetProperty("UserHash").GetString(), Is.Not.Empty);
 
             var buildTime = root.GetProperty("BuildTime").GetString();

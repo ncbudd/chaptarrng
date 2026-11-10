@@ -34,6 +34,26 @@ namespace Chaptarr.Http.Authentication
             _logger = logger;
         }
 
+        [HttpPost("setup")]
+        [Consumes("application/x-www-form-urlencoded")]
+        [RequestSizeLimit(4096)]
+        public async Task<IActionResult> Setup([FromServices] IInitialSetupTokenService tokens, [FromForm] string setupToken)
+        {
+            if (!tokens.IsRequired)
+            {
+                return NotFound();
+            }
+
+            if (!tokens.Validate(setupToken?.Trim()))
+            {
+                return Redirect("~/login?setupFailed=true");
+            }
+
+            var principal = InitialSetupAuthenticationHandler.CreatePrincipal(_configFileProvider.AuthCookieStamp);
+            await HttpContext.SignInAsync(InitialSetupAuthenticationHandler.CookieSchemeName, principal);
+            return Redirect("~/");
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromForm] LoginResource resource, [FromQuery] string returnUrl = null)
         {
@@ -99,6 +119,7 @@ namespace Chaptarr.Http.Authentication
             await HttpContext.SignOutAsync(AuthenticationType.Forms.ToString());
             await HttpContext.SignOutAsync(AuthenticationType.Oidc.ToString());
             await HttpContext.SignOutAsync(AuthenticationType.Plex.ToString());
+            await HttpContext.SignOutAsync(InitialSetupAuthenticationHandler.CookieSchemeName);
             return Redirect(_configFileProvider.UrlBase + "/");
         }
     }
