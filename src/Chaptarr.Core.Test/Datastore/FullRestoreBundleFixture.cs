@@ -14,6 +14,39 @@ namespace Chaptarr.Core.Test.Datastore
     public class FullRestoreBundleFixture
     {
         [Test]
+        public void source_only_ssl_certificate_rejects_restore_before_staging()
+        {
+            var root = Path.Combine(Path.GetTempPath(), "chaptarr-restore-ssl-" + Guid.NewGuid());
+            Directory.CreateDirectory(root);
+            var folders = new Mock<IAppFolderInfo>();
+            folders.SetupGet(f => f.AppDataFolder).Returns(root);
+            var info = folders.Object;
+            try
+            {
+                File.WriteAllText(info.GetDatabase(), "original database");
+                File.WriteAllText(info.GetConfigPath(), "<Config><InstanceName>Original</InstanceName></Config>");
+                var database = Path.Combine(root, "candidate.db");
+                var config = Path.Combine(root, "candidate.xml");
+                File.WriteAllText(database, "candidate database");
+                File.WriteAllText(config, $"<Config><EnableSsl>True</EnableSsl><SslCertPath>{Path.Combine(root, "missing.pfx")}</SslCertPath></Config>");
+
+                var error = Assert.Throws<InvalidDataException>(() => FullRestoreBundle.Stage(info, database, config));
+
+                Assert.Multiple(() =>
+                {
+                    Assert.That(error.Message, Does.Contain("certificate file is unavailable"));
+                    Assert.That(File.ReadAllText(info.GetDatabase()), Is.EqualTo("original database"));
+                    Assert.That(File.ReadAllText(info.GetConfigPath()), Does.Contain("Original"));
+                    Assert.That(Directory.Exists(Path.Combine(root, "restore-pending")), Is.False);
+                });
+            }
+            finally
+            {
+                Directory.Delete(root, true);
+            }
+        }
+
+        [Test]
         public void invalid_prepared_database_restores_both_original_files_before_returning_failure()
         {
             var root = Path.Combine(Path.GetTempPath(), "chaptarr-restore-invalid-" + Guid.NewGuid());

@@ -4,6 +4,13 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [0.9.1000](https://github.com/snapetech-org/chaptarrng/compare/v0.9.999..v0.9.1000) - 2026-11-10
+
+### Backup restore recovery
+
+- Reject a BookshelfNG backup before staging when its saved SSL certificate path is unavailable on the target. The running ChaptarrNG installation stays available and the upload explains the issue.
+- If another restore-time startup error occurs after staging, restore the previous database and configuration and start ChaptarrNG once with that previous data. Keep the failed restore evidence and log the cause.
+
 ## [0.9.995](https://github.com/snapetech-org/chaptarrng/compare/v0.9.994..v0.9.995) - 2026-11-09
 
 ### Release fixes

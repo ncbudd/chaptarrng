@@ -578,6 +578,15 @@ schema-158 database. This is hosted synthetic validation, not operator-data
 acceptance. The source-candidate path is not available in `.977` and must not
 be used for production cutover while the retirement gates remain open.
 
+Starting with `v0.9.1000`, a restore upload is rejected before staging if the
+backup enables SSL but its saved certificate path is unavailable on the target.
+Mount or copy the certificate at that path, then upload the original backup
+again. If another restore-time startup failure occurs, ChaptarrNG restores its
+previous database and configuration and starts once with that previous data.
+Inspect the startup error and the retained `restore-in-progress.failed-*`
+directory before retrying; a healthy prior installation does not mean the
+backup was imported.
+
 Current `main` also accepts raw `.db` and `.xml` backup uploads through the
 same restore endpoint. The `.xml` suffix is a legacy filename; the uploaded
 content must still be a SQLite database. ChaptarrNG checks SQLite integrity

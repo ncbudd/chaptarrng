@@ -299,7 +299,14 @@ namespace NzbDrone.Core.Backup
                     var configFile = files.FirstOrDefault(file =>
                         Path.GetFileName(file).Equals("Config.xml", StringComparison.InvariantCultureIgnoreCase));
 
-                    FullRestoreBundle.Stage(_appFolderInfo, databaseFile, configFile);
+                    try
+                    {
+                        FullRestoreBundle.Stage(_appFolderInfo, databaseFile, configFile);
+                    }
+                    catch (InvalidDataException ex)
+                    {
+                        throw new RestoreBackupFailedException(HttpStatusCode.BadRequest, "Unable to restore backup: {0}", ex.Message);
+                    }
                     return;
                 }
                 finally

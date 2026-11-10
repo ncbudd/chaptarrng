@@ -25,6 +25,11 @@ namespace NzbDrone.Core.Datastore
             lock (Sync) { return Prepared.Contains(Working(folders)); }
         }
 
+        public static bool HasIncompleteRestore(IAppFolderInfo folders)
+        {
+            return Directory.Exists(Working(folders));
+        }
+
         public static void Stage(IAppFolderInfo folders, string database, string config)
         {
             lock (Sync)
@@ -42,6 +47,16 @@ namespace NzbDrone.Core.Datastore
                         document.Root.Elements().Any(e => e.Name.LocalName.Equals("PostgresHost", StringComparison.OrdinalIgnoreCase) && !string.IsNullOrWhiteSpace(e.Value)))
                     {
                         throw new InvalidDataException("The restore config must be a valid SQLite Config document.");
+                    }
+
+                    var sslEnabled = document.Root.Elements().FirstOrDefault(e => e.Name.LocalName.Equals("EnableSsl", StringComparison.OrdinalIgnoreCase))?.Value;
+                    if (bool.TryParse(sslEnabled, out var enableSsl) && enableSsl)
+                    {
+                        var certificate = document.Root.Elements().FirstOrDefault(e => e.Name.LocalName.Equals("SslCertPath", StringComparison.OrdinalIgnoreCase))?.Value;
+                        if (string.IsNullOrWhiteSpace(certificate) || !File.Exists(certificate))
+                        {
+                            throw new InvalidDataException("The backup enables SSL, but its certificate file is unavailable on this installation.");
+                        }
                     }
                 }
 

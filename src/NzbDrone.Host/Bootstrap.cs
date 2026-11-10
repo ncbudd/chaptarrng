@@ -75,6 +75,36 @@ namespace NzbDrone.Host
 
         public static void Start(string[] args, Action<IHostBuilder> trayCallback = null)
         {
+            var restoreAttempted = false;
+            var restoreCommitted = false;
+            var previousDatabaseExisted = false;
+            IAppFolderInfo restoredFolders = null;
+
+            try
+            {
+                StartAttempt(args, trayCallback,
+                    (folders, hadDatabase) =>
+                    {
+                        restoreAttempted = true;
+                        previousDatabaseExisted = hadDatabase;
+                        restoredFolders = folders;
+                    },
+                    () => restoreCommitted = true);
+            }
+            catch (Exception ex) when (restoreAttempted && !restoreCommitted && previousDatabaseExisted &&
+                                       restoredFolders != null &&
+                                       !FullRestoreBundle.HasIncompleteRestore(restoredFolders) &&
+                                       File.Exists(restoredFolders.GetDatabase()))
+            {
+                Logger.Error(ex, "Backup restore failed during startup. The previous database and configuration were restored; starting ChaptarrNG with the previous data.");
+                SqliteConnection.ClearAllPools();
+                StartAttempt(args, trayCallback, null, null);
+            }
+        }
+
+        private static void StartAttempt(string[] args, Action<IHostBuilder> trayCallback,
+                                         Action<IAppFolderInfo, bool> onRestoreAttempted, Action onRestoreCommitted)
+        {
             IAppFolderInfo restoreFolders = null;
             try
             {
@@ -93,7 +123,12 @@ namespace NzbDrone.Host
                 if (appMode == ApplicationModes.Service || appMode == ApplicationModes.Interactive)
                 {
                     restoreFolders = new AppFolderInfo(startupContext);
+                    var previousDatabaseExisted = File.Exists(restoreFolders.GetDatabase());
                     FullRestoreBundle.Prepare(restoreFolders);
+                    if (FullRestoreBundle.IsPrepared(restoreFolders))
+                    {
+                        onRestoreAttempted?.Invoke(restoreFolders, previousDatabaseExisted);
+                    }
                 }
                 var config = GetConfiguration(startupContext);
 
@@ -103,7 +138,7 @@ namespace NzbDrone.Host
                         {
                             Logger.Debug("Service selected");
 
-                            RunHostWithRestoreCommit(CreateConsoleHostBuilder(args, startupContext).UseWindowsService(), restoreFolders);
+                            RunHostWithRestoreCommit(CreateConsoleHostBuilder(args, startupContext).UseWindowsService(), restoreFolders, onRestoreCommitted);
                             break;
                         }
 
@@ -117,7 +152,7 @@ namespace NzbDrone.Host
                                 trayCallback(builder);
                             }
 
-                            RunHostWithRestoreCommit(builder, restoreFolders);
+                            RunHostWithRestoreCommit(builder, restoreFolders, onRestoreCommitted);
                             break;
                         }
 
@@ -191,11 +226,15 @@ namespace NzbDrone.Host
             NpgsqlConnection.ClearAllPools();
         }
 
-        private static void RunHostWithRestoreCommit(IHostBuilder builder, IAppFolderInfo folders)
+        private static void RunHostWithRestoreCommit(IHostBuilder builder, IAppFolderInfo folders, Action onRestoreCommitted)
         {
             using var host = builder.Build();
             using var registration = host.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted
-                .Register(() => FullRestoreBundle.CommitAfterStartup(folders));
+                .Register(() =>
+                {
+                    FullRestoreBundle.CommitAfterStartup(folders);
+                    onRestoreCommitted?.Invoke();
+                });
             host.Run();
         }
 
