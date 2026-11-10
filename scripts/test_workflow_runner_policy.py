@@ -192,8 +192,9 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         desktop = job_block(release, "installed-release-desktop")
         for rid in ("osx-x64", "osx-arm64", "win-x64", "win-x86"):
             self.assertIn(f"rid: {rid}", desktop)
-        for runner in ("macos-15-intel", "macos-15", "windows-2022"):
+        for runner in ("macos-15-intel", "macos-14", "windows-2022"):
             self.assertIn(f"runner: {runner}", desktop)
+        self.assertNotIn("runner: macos-15\n", desktop)
         self.assertIn("test-bookshelf-standalone-handoff.py", desktop)
         self.assertIn("integration/standalone-handoff/windows.py", desktop)
         self.assertIn("needs: [preflight, release, docker, standalone-assets, installed-release-linux, installed-release-desktop, rpm-source, windows-migration-installer, legacy-desktop-candidates]", job_block(release, "publish-release"))
