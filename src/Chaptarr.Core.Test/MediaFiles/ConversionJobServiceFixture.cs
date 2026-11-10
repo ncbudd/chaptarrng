@@ -759,7 +759,11 @@ namespace Chaptarr.Core.Test.MediaFiles
             Assert.That(job.Status, Is.EqualTo(ConversionJobStatus.Converting));
             Assert.That(job.AttemptCount, Is.EqualTo(1));
             Assert.That(File.Exists(request.OutputPath), Is.False);
-            File.WriteAllText(readyPath, $"{job.Status}|{job.AttemptCount}");
+            // Publish readiness only after its contents are complete. The parent
+            // waits for this path and must never observe an empty new file.
+            var readyTemporaryPath = readyPath + ".tmp";
+            File.WriteAllText(readyTemporaryPath, $"{job.Status}|{job.AttemptCount}");
+            File.Move(readyTemporaryPath, readyPath);
 
             Thread.Sleep(Timeout.Infinite);
         }
