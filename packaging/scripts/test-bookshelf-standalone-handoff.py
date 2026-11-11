@@ -626,7 +626,9 @@ def run_rollback_case(predecessor: Path, launcher: Path, work: Path, base_env: d
     env = base_env.copy()
     env["BOOKSHELFNG_MIGRATION_MODE"] = "automatic"
     env["BOOKSHELFNG_HEALTH_URL"] = "http://127.0.0.1:1/ping"
-    env["CHAPTARR_BOOKSHELF_HANDOFF_TIMEOUT_SECONDS"] = "8"
+    # Let migration reach the promoted target before forcing the unreachable
+    # health URL to exercise rollback; slow macOS runners can need >8 seconds.
+    env["CHAPTARR_BOOKSHELF_HANDOFF_TIMEOUT_SECONDS"] = "30"
     log_path = work / "forced-rollback.log"
     with log_path.open("wb") as log:
         process = subprocess.Popen([str(launcher), str(data_dir)], cwd=launcher.parents[1], env=env,
