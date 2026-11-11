@@ -38,11 +38,12 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: Publish verified packages from main
+        description: Publish channels or retry only the existing Chocolatey package
         required: true
         type: choice
         options:
           - publish
+          - retry_chocolatey
       runner_pool:
         description: Select the authorized public runner pool
         required: true
@@ -71,7 +72,7 @@ jobs:
     name: Validate published release target
     if: >-
       github.ref == 'refs/heads/main' &&
-      inputs.action == 'publish' &&
+      (inputs.action == 'publish' || inputs.action == 'retry_chocolatey') &&
       inputs.runner_pool == 'public' &&
       (github.event_name == 'workflow_dispatch' || github.event_name == 'workflow_call')
     runs-on: ubuntu-24.04
@@ -111,8 +112,12 @@ jobs:
         [[ "$TAG" =~ ^v([0-9]+\.[0-9]+\.[0-9]+)$ ]]
         [[ "$TAG" == "v${VERSION}" ]]
         [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
-        if [[ "$REF" != refs/heads/main || "$ACTION" != publish || "$RUNNER_POOL" != public ]]; then
-          echo 'Package publishing requires action=publish, pool=public, and a main-branch workflow run.' >&2
+        if [[ "$REF" != refs/heads/main || ( "$ACTION" != publish && "$ACTION" != retry_chocolatey ) || "$RUNNER_POOL" != public ]]; then
+          echo 'Package publishing requires action=publish or retry_chocolatey, pool=public, and a main-branch workflow run.' >&2
+          exit 1
+        fi
+        if [[ "$ACTION" == retry_chocolatey && "${REQUESTED_LEGACY_BRIDGE,,}" == true ]]; then
+          echo 'A Chocolatey retry cannot publish the legacy BookshelfNG bridge.' >&2
           exit 1
         fi
         if [[ "$EVENT_NAME" != workflow_dispatch && "$EVENT_NAME" != workflow_call ]]; then
@@ -147,7 +152,7 @@ jobs:
         github.event_name != 'workflow_dispatch' ||
         (
           github.ref == 'refs/heads/main' &&
-          inputs.action == 'publish' &&
+          (inputs.action == 'publish' || inputs.action == 'retry_chocolatey') &&
           inputs.runner_pool == 'public'
         )
       ) &&
@@ -428,7 +433,7 @@ jobs:
     needs: [release-target]
     if: >-
       github.ref == 'refs/heads/main' &&
-      inputs.action == 'publish' &&
+      (inputs.action == 'publish' || inputs.action == 'retry_chocolatey') &&
       inputs.runner_pool == 'public'
     runs-on: windows-2025
     steps:
@@ -612,7 +617,7 @@ jobs:
     needs: [credentials, release-target, build-chocolatey]
     if: >-
       github.ref == 'refs/heads/main' &&
-      inputs.action == 'publish' &&
+      (inputs.action == 'publish' || inputs.action == 'retry_chocolatey') &&
       inputs.runner_pool == 'public' &&
       needs.credentials.outputs.chocolatey == 'true'
     runs-on: windows-2025

@@ -56,13 +56,13 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'NSSM could not set ChaptarrNG service parameters.' }
     & $nssm.Source set ChaptarrNG Start SERVICE_AUTO_START
     if ($LASTEXITCODE -ne 0) { throw 'NSSM could not configure automatic service start.' }
-    & $nssm.Source start ChaptarrNG
-    if ($LASTEXITCODE -ne 0) { throw 'NSSM could not start ChaptarrNG.' }
     $service = Get-Service -Name 'ChaptarrNG' -ErrorAction Stop
-    $service.WaitForStatus('Running', [TimeSpan]::FromSeconds(30))
+    $service.Start()
+    $service.WaitForStatus('Running', [TimeSpan]::FromSeconds(90))
   } elseif ($wasRunning) {
-    Start-Service -Name 'ChaptarrNG'
-    (Get-Service -Name 'ChaptarrNG').WaitForStatus('Running', [TimeSpan]::FromSeconds(30))
+    $service.Refresh()
+    $service.Start()
+    $service.WaitForStatus('Running', [TimeSpan]::FromSeconds(90))
   }
 
   if (Test-Path $backupDir) {
