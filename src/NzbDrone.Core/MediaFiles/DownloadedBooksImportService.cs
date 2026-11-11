@@ -1237,18 +1237,41 @@ namespace NzbDrone.Core.MediaFiles
                         "Import matched edition {0} instead of grabbed edition {1}; same narration and language, accepting",
                         matchedEdition.Id,
                         expectedEdition.Id);
+                    RetargetToExpectedEdition(localBook, matchedBook, expectedEdition);
                     continue;
                 }
 
                 if (IsEquivalentEbookTitle(expectedEdition, matchedEdition))
                 {
                     _logger.Debug("Import matched equivalent ebook edition {0} instead of grabbed edition {1}; accepting", matchedEdition.Id, expectedEdition.Id);
+                    RetargetToExpectedEdition(localBook, matchedBook, expectedEdition);
                     continue;
                 }
 
                 decision.Reject(new Rejection(
-                    $"Completed download was grabbed for edition '{expectedEdition.Title}', but import matched edition '{matchedEdition.Title}'. Chaptarr could not verify the expected edition."));
+                    $"Completed download was grabbed for edition {FormatEditionLabel(expectedEdition)}, but import matched edition {FormatEditionLabel(matchedEdition)}. Chaptarr could not verify the expected edition."));
             }
+        }
+
+        // The edition gate above only accepts another listing of a strict (pinned) book when it is
+        // the same recording or the same ebook text as the grabbed edition. Import it as the grabbed
+        // edition: leaving the sibling on the decision makes ImportApprovedBooks treat it as a
+        // conflict with the pinned edition, clone the book row, and the completed-download strict
+        // verification then fails because the file landed on the clone instead of the grabbed book.
+        internal static void RetargetToExpectedEdition(LocalBook localBook, Book matchedBook, Edition expectedEdition)
+        {
+            if (localBook == null || matchedBook == null || expectedEdition == null ||
+                expectedEdition.Id <= 0 || expectedEdition.BookId != matchedBook.Id)
+            {
+                return;
+            }
+
+            if (expectedEdition.Book == null)
+            {
+                expectedEdition.Book = matchedBook;
+            }
+
+            localBook.Edition = expectedEdition;
         }
 
         internal static bool IsSameRecording(Edition expected, Edition matched)
