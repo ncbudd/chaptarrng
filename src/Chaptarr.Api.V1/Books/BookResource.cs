@@ -1104,7 +1104,7 @@ namespace Chaptarr.Api.V1.Books
 
                             // PUT /book changes selection. Provider-owned identity, media, metadata,
                             // and image URLs must never be replaced by a round-tripped client resource.
-                            var mappedEdition = storedEdition.JsonClone();
+                            var mappedEdition = DetachedEntityClone.Clone(storedEdition);
                             mappedEdition.Monitored = resourceEdition.Monitored;
                             return mappedEdition;
                         })

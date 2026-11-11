@@ -2342,7 +2342,9 @@ namespace Chaptarr.Api.V1.Books
 
             using var operation = DatabaseAtomicOperation.Begin();
             bookResource.Id = targetBookId;
-            var book = _bookService.GetBook(bookResource.Id)?.JsonClone();
+            // Copy the stored state without walking the loaded entity graph: editions point back
+            // at their book, so a plain JsonClone loops for every book that has editions.
+            var book = DetachedEntityClone.Clone(_bookService.GetBook(bookResource.Id));
             if (book == null)
             {
                 return NotFound();
