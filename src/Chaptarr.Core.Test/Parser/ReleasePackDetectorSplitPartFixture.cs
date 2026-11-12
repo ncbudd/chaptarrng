@@ -31,6 +31,13 @@ namespace Chaptarr.Core.Test.Parser
             Assert.That(ReleasePackDetector.ParseSplitPart(title), Is.Null);
         }
 
+        [TestCase("Ernest Hemingway - The Old Man And The Sea [Sutherland]_64 [2/5] - \"The Old Man and the Sea - Part 02.mp3\" yEnc")]
+        [TestCase("Author - Title - \"Title - Part 3.m4b\" yEnc")]
+        public void should_ignore_part_numbers_inside_a_quoted_usenet_file_name(string title)
+        {
+            Assert.That(ReleasePackDetector.ParseSplitPart(title), Is.Null);
+        }
+
         [Test]
         public void should_keep_split_verdict_when_marker_has_no_usable_position()
         {
