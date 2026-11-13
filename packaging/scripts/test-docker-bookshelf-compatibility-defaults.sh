@@ -453,21 +453,26 @@ run_case 'handoff metadata ownership and process-group signals support the runti
 run_case 'AppImage and Flatpak default-No choice defers; Yes previews before applying' check_desktop_ask_choices
 
 mkdir -p "$test_root/bin"
-cat > "$test_root/bin/wget" <<'SH'
+cat > "$test_root/bin/curl" <<'SH'
 #!/bin/sh
-printf '%s\n' "$*" > "$WGET_CAPTURE"
+printf '%s\n' "$@" > "$CURL_CAPTURE"
+printf '%s' "${CURL_STATUS:-200}"
+exit "${CURL_EXIT:-0}"
 SH
-chmod +x "$test_root/bin/wget"
+chmod +x "$test_root/bin/curl"
 
 run_case 'health check honors uppercase explicit port' bash -c '
   set -euo pipefail
   export CHAPTARR_CONFIG_FILE="$1/missing-config.xml"
   export CHAPTARR__SERVER__PORT=9123
   export CHAPTARR_DEFAULT_PORT=8787
-  export WGET_CAPTURE="$1/wget.args"
+  export CURL_CAPTURE="$1/curl.args"
   export PATH="$1/bin:$PATH"
   sh "$2"
-  grep -Fq "http://127.0.0.1:9123/ping" "$WGET_CAPTURE"
+  grep -Fxq "http://127.0.0.1:9123/ping" "$CURL_CAPTURE"
+  grep -Fxq -- "--noproxy" "$CURL_CAPTURE"
+  grep -Fxq -- "*" "$CURL_CAPTURE"
+  grep -Fxq -- "%{http_code}" "$CURL_CAPTURE"
 ' _ "$test_root" "$repo_root/docker-healthcheck.sh"
 
 run_case 'health check honors legacy Readarr port and URL base' bash -c '
@@ -478,10 +483,10 @@ run_case 'health check honors legacy Readarr port and URL base' bash -c '
   export Readarr__Server__Port=9124
   export Readarr__Server__UrlBase=/bookshelf
   export CHAPTARR_DEFAULT_PORT=8787
-  export WGET_CAPTURE="$1/wget-legacy-readarr.args"
+  export CURL_CAPTURE="$1/curl-legacy-readarr.args"
   export PATH="$1/bin:$PATH"
   sh "$2"
-  grep -Fq "http://127.0.0.1:9124/bookshelf/ping" "$WGET_CAPTURE"
+  grep -Fxq "http://127.0.0.1:9124/bookshelf/ping" "$CURL_CAPTURE"
 ' _ "$test_root" "$repo_root/docker-healthcheck.sh"
 
 run_case 'health check honors uppercase legacy Audioarr port' bash -c '
@@ -491,10 +496,32 @@ run_case 'health check honors uppercase legacy Audioarr port' bash -c '
   unset Chaptarr__Server__UrlBase CHAPTARR__SERVER__URLBASE Readarr__Server__UrlBase READARR__SERVER__URLBASE Audioarr__Server__UrlBase AUDIOARR__SERVER__URLBASE
   export AUDIOARR__SERVER__PORT=9133
   export CHAPTARR_DEFAULT_PORT=8787
-  export WGET_CAPTURE="$1/wget-legacy-audioarr.args"
+  export CURL_CAPTURE="$1/curl-legacy-audioarr.args"
   export PATH="$1/bin:$PATH"
   sh "$2"
-  grep -Fq "http://127.0.0.1:9133/ping" "$WGET_CAPTURE"
+  grep -Fxq "http://127.0.0.1:9133/ping" "$CURL_CAPTURE"
+' _ "$test_root" "$repo_root/docker-healthcheck.sh"
+
+run_case 'health check rejects redirects and server errors' bash -c '
+  set -euo pipefail
+  export CHAPTARR_CONFIG_FILE="$1/missing-config.xml"
+  export CHAPTARR__SERVER__PORT=9125
+  export CURL_CAPTURE="$1/curl-rejected.args"
+  export CURL_STATUS=302
+  export PATH="$1/bin:$PATH"
+  if sh "$2"; then exit 1; fi
+  export CURL_STATUS=503
+  if sh "$2"; then exit 1; fi
+' _ "$test_root" "$repo_root/docker-healthcheck.sh"
+
+run_case 'health check fails closed on curl transport errors' bash -c '
+  set -euo pipefail
+  export CHAPTARR_CONFIG_FILE="$1/missing-config.xml"
+  export CHAPTARR__SERVER__PORT=9126
+  export CURL_CAPTURE="$1/curl-transport-error.args"
+  export CURL_EXIT=28
+  export PATH="$1/bin:$PATH"
+  if sh "$2"; then exit 1; fi
 ' _ "$test_root" "$repo_root/docker-healthcheck.sh"
 
 printf 'All Docker BookshelfNG compatibility default checks passed.\n'

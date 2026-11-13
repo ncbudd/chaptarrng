@@ -6,12 +6,12 @@ cd "$repo_root"
 
 printf 'Refreshing Semgrep Community Edition...\n'
 if command -v uvx >/dev/null 2>&1; then
-  uvx --refresh --from semgrep==1.184.0 semgrep --version
+  uvx --refresh --from semgrep==1.185.0 semgrep --version
 elif command -v pipx >/dev/null 2>&1; then
   if pipx list --short 2>/dev/null | grep -Eq '^semgrep( |$)'; then
-    pipx install --force semgrep==1.184.0
+    pipx install --force semgrep==1.185.0
   else
-    pipx install semgrep==1.184.0
+    pipx install semgrep==1.185.0
   fi
 elif command -v semgrep >/dev/null 2>&1; then
   echo "Semgrep is installed outside uv/pipx. Update it with its package manager, then rerun this script." >&2
@@ -34,5 +34,5 @@ else
 fi
 
 if command -v docker >/dev/null 2>&1; then
-  docker pull semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed
+  docker pull semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d
 fi

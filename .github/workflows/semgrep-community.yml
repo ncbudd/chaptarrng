@@ -47,7 +47,7 @@ jobs:
       - name: Scan with pinned Semgrep CE and reviewed rules
         run: |
           set -euo pipefail
-          image=semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed
+          image=semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d
           docker pull "$image"
           python3 scripts/prepare-semgrep-rules.py "$RUNNER_TEMP/security-rules" --download-only
           docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \

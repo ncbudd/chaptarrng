@@ -39,7 +39,7 @@ jobs:
           dotnet build src/NzbDrone.Console/Chaptarr.Console.csproj -c Release --no-restore -m:1
           dotnet build src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj -c Release --no-restore -m:1
       - name: Build pinned media tool image
-        run: docker build -f integration/Dockerfile.m4b-test -t chaptarrng-m4b-test:ci integration
+        run: docker build -f integration/Dockerfile.m4b-test -t chaptarrng-m4b-test:ci .
       - name: Require real-tool merge, fallback, chapters and restart cases
         run: |
           set -euo pipefail

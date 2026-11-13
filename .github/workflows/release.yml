@@ -133,7 +133,9 @@ jobs:
     needs: preflight
     uses: ./.github/workflows/security-gate.yml
     permissions:
+      actions: read
       contents: read
+      pull-requests: read
       statuses: write
     with:
       ref: ${{ needs.preflight.outputs.release_sha }}

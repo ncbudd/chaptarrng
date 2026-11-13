@@ -1,6 +1,9 @@
-FROM i386/debian:bookworm-slim@sha256:abd54731664e83f582c92db7581fb65a7bb81498c8b7001101844301bf6efe36
+# CI-only linux/386 handoff fixture. Debian's stable i386 base has active
+# high-severity issues without stable fixes, so pin the current testing image
+# and scan the fully upgraded fixture before using it for release acceptance.
+FROM i386/debian:forky-slim@sha256:c68021144c3e2488704791edfd76e6c23d907a3cdeaf0295f319bcbc57e42e34
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
-    python3 bash procps curl ca-certificates libicu72 libssl3 libstdc++6 libgcc-s1 zlib1g libgssapi-krb5-2 \
+    python3 bash procps curl ca-certificates libicu78 libssl3t64 libstdc++6 libgcc-s1 zlib1g libgssapi-krb5-2 \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /repo
 ENTRYPOINT ["python3", "/repo/packaging/scripts/test-bookshelf-standalone-handoff.py"]

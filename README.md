@@ -776,7 +776,10 @@ require qBittorrent, Transmission, or another external download client.
 The official Docker image includes the Playwright Chromium runtime on AMD64
 and ARM64. ARMv7 images omit Chromium, so browser fallback is unavailable on
 ARMv7; API-key-resolved downloads still work there. A custom image must include
-a matching browser runtime for browser fallback to work.
+a matching browser runtime for browser fallback to work. The container sandbox
+uses bubblewrap 0.13.1 and requires unprivileged user namespaces; if container
+policy disables them, browser fallback fails closed while API-based grabs
+remain available.
 
 The built-in client reports transfer progress and keeps its state and staged
 files across restarts. Once a supported ebook file is complete, Chaptarr can
