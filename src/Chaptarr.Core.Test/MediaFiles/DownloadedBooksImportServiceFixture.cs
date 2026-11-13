@@ -2654,14 +2654,26 @@ namespace Chaptarr.Core.Test.MediaFiles
         [Test]
         public void should_import_equivalent_ebook_sibling_as_the_grabbed_pinned_edition()
         {
-            var matched = new Edition { Id = 3, BookId = 10, Title = "Project Hail Mary", Monitored = false, ManualAdd = false, IsEbook = true };
-            var grabbed = new Edition { Id = 4, BookId = 10, Title = "Project Hail Mary: A Novel", Monitored = true, ManualAdd = false, IsEbook = true };
+            var matched = new Edition { Id = 3, BookId = 10, Title = "Project Hail Mary", Monitored = false, ManualAdd = false, IsEbook = true, Language = "eng" };
+            var grabbed = new Edition { Id = 4, BookId = 10, Title = "Project Hail Mary: A Novel", Monitored = true, ManualAdd = false, IsEbook = true, Language = "eng" };
 
             var decision = ProcessStrictSiblingMatch("Project Hail Mary.epub", matched, grabbed, "DOWNLOAD-EBOOK-EQUIVALENT");
 
             Assert.That(decision.Approved, Is.True);
             Assert.That(decision.Item.Book.Id, Is.EqualTo(10));
             Assert.That(decision.Item.Edition.Id, Is.EqualTo(4));
+        }
+
+        [Test]
+        public void should_not_treat_equivalent_ebook_titles_as_the_same_edition_without_matching_known_languages()
+        {
+            var expected = new Edition { Id = 4, BookId = 10, Title = "Project Hail Mary: A Novel", IsEbook = true, Language = "eng" };
+            var matched = new Edition { Id = 3, BookId = 10, Title = "Project Hail Mary", IsEbook = true, Language = "deu" };
+
+            Assert.That(DownloadedBooksImportService.IsEquivalentEbookTitle(expected, matched), Is.False);
+
+            matched.Language = null;
+            Assert.That(DownloadedBooksImportService.IsEquivalentEbookTitle(expected, matched), Is.False);
         }
 
         [Test]
