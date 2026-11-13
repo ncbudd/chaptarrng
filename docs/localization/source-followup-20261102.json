@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "baseHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "state": "Exact-source corrections for three reviewed English typos; stable source IDs, locale keys, placeholders, and caller bindings are retained. The third correction aligns the qBittorrent category validation catalog with all four pinned callers; its 12 locale targets remain held for fresh review.",
+  "entries": [
+    {
+      "sourceId": "server.message.m783307436ce0",
+      "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+      "oldSourceText": "Disable 'Check before download' option in Sabnbzd",
+      "oldSourceTextSha256": "783307436ce024cb670e4bb840a69fc41d16ed88e01af2a1e76edac69dd3787a",
+      "newSourceText": "Disable the 'Check before download' option in SABnzbd.",
+      "newSourceTextSha256": "948643f3359c1289a9d26e7ec9e286c4f3112a71eac236e17cae3b922ffb0d4d",
+      "sourceFingerprintBefore": "789a0357c2f94fe0d4f2cece8c35dca6590517e0afb03fdf4dbf7c09a805351a",
+      "sourceFingerprintAfter": "632b66e54d0ad074520dc12d9f24fc02de5c9d43bc5aad5e68755ebbe4674886",
+      "callerFile": "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs",
+      "callerFileSha256Before": "78ae7eda5718915c769519a5c78d5c9c48fb094ddf16ddc2f99dbabe3dd82120",
+      "callerFileSha256After": "efee6bb68ba896dac3bd57ed6488fe76a220f382e6301e96b905b8330bd21e50",
+      "callerOccurrencesChanged": 1,
+      "postEditCallerOccurrences": [
+        {
+          "line": 446,
+          "lineText": "                return new NzbDroneValidationFailure(\"\", \"Disable the 'Check before download' option in SABnzbd.\", \"server.message.m783307436ce0\", null)"
+        }
+      ],
+      "translationHandling": "W654 translations use the verified product spelling SABnzbd; W695 target values already express the intended through-Mailgun meaning and were accepted unchanged."
+    },
+    {
+      "sourceId": "server.message.m843e64bf5198",
+      "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+      "oldSourceText": "Unable to send test message though Mailgun.",
+      "oldSourceTextSha256": "843e64bf5198780337ab9571cc9686310541b82d8781fa77b1d5882af18b4663",
+      "newSourceText": "Unable to send a test message through Mailgun.",
+      "newSourceTextSha256": "e6c6644f46f71ef52d94b0391b1ada634c435b5dbdad50dfc910cbdc16ddadec",
+      "sourceFingerprintBefore": "e59d9a092b649ccbe6d901e6a7346fb3383d8a742bdf81fb8e14a56c36b10613",
+      "sourceFingerprintAfter": "366d91002fd688da9f705ec11d13cc0f6e7eed606f505f14e046cb41912d8bf1",
+      "callerFile": "src/NzbDrone.Core/Notifications/Mailgun/Mailgun.cs",
+      "callerFileSha256Before": "0d11db1b184f08654f35a6ed39ac396c186338aa37438d1ba7bdda8addffa65b",
+      "callerFileSha256After": "58dc913eb6c5d4a426532802afd9a70d15dfe184b07a088f672e4f7615c51c3d",
+      "callerOccurrencesChanged": 2,
+      "postEditCallerOccurrences": [
+        {
+          "line": 83,
+          "lineText": "                _logger.Error(ex, \"Unable to send a test message through Mailgun.\");"
+        },
+        {
+          "line": 84,
+          "lineText": "                failures.Add(NzbDroneValidationFailure.ForMessage(\"\", \"Unable to send a test message through Mailgun.\", \"server.message.m843e64bf5198\"));"
+        }
+      ],
+      "translationHandling": "W654 translations use the verified product spelling SABnzbd; W695 target values already express the intended through-Mailgun meaning and were accepted unchanged."
+    },
+    {
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+      "oldSourceText": "Can not contain '', '//', or start/end with '/'",
+      "oldSourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d",
+      "newSourceText": "Can not contain '\\', '//', or start/end with '/'",
+      "newSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+      "sourceFingerprintBefore": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+      "sourceFingerprintAfter": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+      "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "callerFileSha256Before": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "callerFileSha256After": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "callerOccurrencesChanged": 0,
+      "postEditCallerOccurrences": [
+        {
+          "line": 27,
+          "lineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+          "lineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb"
+        },
+        {
+          "line": 29,
+          "lineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+          "lineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b"
+        },
+        {
+          "line": 31,
+          "lineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+          "lineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5"
+        },
+        {
+          "line": 33,
+          "lineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+          "lineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661"
+        }
+      ],
+      "translationHandling": "After correcting the English source under the existing stable ID, fresh exact-head primary review and independent cross-review accepted corrections in ar, de, es, fr, id, ja, ko, pt_BR, vi, zh_CN, and zh_TW. Each target prohibits backslash and // and forbids leading/trailing /. Hindi remains held pending a suitable reviewed translation; no native-speaker approval is claimed."
+    }
+  ],
+  "sourceMessageHashSnapshot": "docs/localization/source-message-hashes.json",
+  "sourceMessageHashSnapshotSha256": "f13e8b8db5ec55fb2228bd8462f3f842373c86f6349ea3a400b98ec6d8d6468d"
+}

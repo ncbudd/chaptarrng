@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "e9de5ac22aba7780f4ff55b3fd903731fea89269",
+  "tree": "1c8212fcc3623723b306865ac4d7f765ecf72a22",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "e9de5ac22aba7780f4ff55b3fd903731fea89269",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "expectedHead": "e9de5ac22aba7780f4ff55b3fd903731fea89269",
+  "expectedTree": "1c8212fcc3623723b306865ac4d7f765ecf72a22",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "scope": {
+    "positions": [
+      350,
+      399
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "currentMissingIdsCount": 1210,
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "window": [
+      350,
+      399
+    ],
+    "sourceIds": 50,
+    "firstId": "provider.field.f09a1e89c10cf",
+    "lastId": "notification.prefix.grabbed"
+  },
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "bytes": 312087
+  },
+  "registry": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "bytes": 395755,
+    "records": 409
+  },
+  "catalogs": {
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "blob": "015bf6c5de3a3a78d72283954dcc79ae8e1cbe88",
+      "sha256": "51f2e5a0eb74638723377a0edb43d81096417c77c626a325e8f783de9b24042f",
+      "bytes": 358692
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "blob": "c24555e90a7e72b68f99620f4c7cfd444e7bdd76",
+      "sha256": "4ae15ccf2bab720cd2c7e5c6903ee37c1b46e7efada0e7863d9965c100d1e3bb",
+      "bytes": 305722
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "blob": "0410355259419b22e8551e98d0968d8f4cc117a9",
+      "sha256": "ac416271f1b37dd197304dd628fb102943d4556e9eb7c0768f66efbe05a3aef9",
+      "bytes": 605117
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "blob": "8499d42e1cd742be4aad72f471b88c5c42cd66e2",
+      "sha256": "709664ebcc366f884c00dc7d392029cd79b4fac9856a393ee8137e3740dbbc9f",
+      "bytes": 360542
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "blob": "0842fb1793fabd491f027328f3944ddf678664cd",
+      "sha256": "f5e2fd50695e4e01cd8aad488c78f63ea958a22be33e9e6b87ed9c2b4bc8eb7e",
+      "bytes": 408252
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "blob": "13281bb8c95558d6edff8ab56d0d650cd93869be",
+      "sha256": "de470f11c30b0d8a202809cbd632e485e103bda504b783831e8797f6709d0f30",
+      "bytes": 374161
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "4590df4fd8d345a0271ee2f0477fcb768dd2a434",
+      "sha256": "4890c9606d2b23d1dff61c8a30bf81f0930b7ef8e9f7f699faf2d31be5745bf0",
+      "bytes": 352133
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "7bd327c22ebecd5093447b0da4c6753d1985f5e9",
+      "sha256": "725b59c02d6dbb9aef9171d7e274b96833620afc5cfbf28cf51c151b9a785e6a",
+      "bytes": 431206
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "06b4e265ba0dfb0969273dd0a5b36dbc4a619484",
+      "sha256": "cc9fc6f6f009817288749c71d2a7a9b2d8fc3ddf4a8a5eda9bba0a175d803c50",
+      "bytes": 367478
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "c57ecd34b03deb1e9aa7d57ab55484efb1916355",
+      "sha256": "861849d35fc9aa5fa6d076581a558cc0b36f7919a9a937992bd318343166e33d",
+      "bytes": 307044
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "397088d6a4a76c9913972f1a2bd39f59a8362149",
+      "sha256": "46d0db1a73f3684be6531ab070a8cf89e9d0003e80c1616dbb69a66574f0f5e1",
+      "bytes": 388805
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "8507811c3511f4718d41c7dcaa08f21f96c09bfd",
+      "sha256": "4dc67639470032a57f417a2990d879b92ff8e57edca131a01dcb4b6e08944e81",
+      "bytes": 332674
+    }
+  },
+  "sourceSlice": {
+    "path": "source-slice.jsonl",
+    "rows": 50,
+    "sha256": "d9023509a43ad8de586ea0e49b18ae9804326631e36abc6f1d1d01727ef5fb44"
+  },
+  "inputCells": {
+    "path": "input-cells.jsonl",
+    "rows": 600,
+    "sha256": "ee719287c641a2bfd8ab2227f9630c2714e028cb2917266173f4be0d957cb08a"
+  },
+  "callerContext": {
+    "path": "caller-context.jsonl",
+    "sha256": "41ce0ec4a87f2afec4db2adffa9a08a422be145197f959193f2bd1a8adff1615",
+    "sourceIds": 50,
+    "callerRefs": 64,
+    "uniqueCallerFiles": 28,
+    "lineNumberShifts": 18,
+    "callerMismatches": 0
+  },
+  "review": {
+    "path": "review-cells.jsonl",
+    "rows": 600,
+    "sha256": "c5d12ab95bfaf97eabb48923ecc162e10a9b20fe874e11855fdbd33dc85c50f0",
+    "dispositions": {
+      "accept-current": 528,
+      "propose-refinement": 59,
+      "propose-correction": 13,
+      "hold": 0
+    }
+  },
+  "protectedLiteralIntegrity": {
+    "path": "protected-literal-integrity.jsonl",
+    "sha256": "79b86f1099946d126322d98f5ca222a8109c76273bed81e402ba748b0d4d2a21",
+    "rows": 600,
+    "currentMismatches": 0,
+    "currentMismatchCells": [],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "correctionCandidates": {
+    "path": "correction-candidates.jsonl",
+    "rows": 72,
+    "sha256": "98ada52b66301403c42331e984c34711c542c33af4e5a253f348e19371eae05e"
+  },
+  "inputChecksumManifest": {
+    "path": "INPUT-SHA256SUMS",
+    "sha256": "956eddb84e148971873d27af4ece1542cc1063cff760aed31b3cca22ec54f534",
+    "verification": "pass"
+  },
+  "localizedUiTerms": {
+    "path": "localized-ui-terms.json",
+    "sha256": "66f037a714f123c1c2e726ce3ecc0e04c0f557ee705b37826a314fbfc46fb661"
+  },
+  "reviewDecisionInput": {
+    "path": "review-decisions.json",
+    "sha256": "8bdc3b913e4b7c9c20ce60bdacb886561cb2bb9d0bb9f590a464e633cc3d4747",
+    "findings": 72,
+    "sourceRationales": 50
+  },
+  "reviewerProvenance": {
+    "path": "reviewer-provenance.json",
+    "sha256": "2b2437e26fd24cd38a700e6937e4898be32e9a1453f6e67422903b100b992004"
+  },
+  "priorContextDispositionRows": 12,
+  "priorContextAttestation": {
+    "sourceOrdinal": 349,
+    "sourceId": "provider.field.f46124e023603",
+    "cells": 12,
+    "primaryDispositions": {
+      "accept-current": 12
+    },
+    "crossReviewDispositions": {
+      "accept-current": 12
+    },
+    "priorCrossReviewCurrentTargetsMatchingLive": 12,
+    "priorCrossFinalTargetsMatchingLive": 12,
+    "callerRefsReattested": 1
+  },
+  "priorContextDispositionSha256": "0d978b3b9a89f9c74d6704659ead7384f34960a958ee2283bca47997ee49f722",
+  "priorDispositionBoundaryPath": "prior-disposition-boundary.json",
+  "priorDispositionBoundarySha256": "7167c819791b9b87e4fe1fff307f31ad778028dd07bb60a1466bb1ad77e1f29c",
+  "previousWindowAttestation": {
+    "reviewedPositions": [
+      0,
+      349
+    ],
+    "sourceIdSetOverlap": 0,
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c"
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false,
+  "finalReattestation": {
+    "path": "final-reattestation.json",
+    "sha256": "4f7c9b27c726fe8fa8ce2ca955da0cd1644af6e4878a029290d72f8eb5b7c55b",
+    "checks": "pass",
+    "head": "e9de5ac22aba7780f4ff55b3fd903731fea89269",
+    "tree": "1c8212fcc3623723b306865ac4d7f765ecf72a22",
+    "cellMismatches": 0,
+    "callerMismatches": 0
+  }
+}

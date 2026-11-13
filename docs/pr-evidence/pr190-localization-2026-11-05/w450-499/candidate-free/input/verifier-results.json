@@ -1,0 +1,23 @@
+{
+  "capturedAfterRuns": true,
+  "exactWorktree": {
+    "command": "python3 verify_candidate_free.py --repo /mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+    "result": "PASS",
+    "summary": {
+      "callerSourcePinsVerified": 13049,
+      "catalogs": 13,
+      "historicalRows": 211539,
+      "selectedCellsVerified": 600
+    }
+  },
+  "portable": {
+    "command": "python3 verify_candidate_free.py",
+    "result": "PASS",
+    "summary": {
+      "callerContexts": 50,
+      "candidateFreeOnly": true,
+      "cells": 600,
+      "sourceIds": 50
+    }
+  }
+}

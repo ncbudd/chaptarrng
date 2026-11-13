@@ -1,0 +1,41 @@
+{
+  "reviewerRole": "independent cross-reviewer",
+  "reviewType": "independent source-context-aware adjudication of every frozen target and every primary recommendation",
+  "exactHead": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+  "exactTree": "90a59b1c329feeb3fb34bdc5050128c8792b573e",
+  "scope": {
+    "positions": [
+      250,
+      299
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "inputs": [
+    "English source catalog",
+    "12 direct locale catalogs",
+    "provider-field source/caller registry",
+    "600 primary input/review rows",
+    "all 67 primary correction/refinement proposals",
+    "W249 prior primary and cross-review dispositions"
+  ],
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryOrPrEdits": false,
+  "testsBuildsScansCiRun": false,
+  "workflowsTouched": false
+}

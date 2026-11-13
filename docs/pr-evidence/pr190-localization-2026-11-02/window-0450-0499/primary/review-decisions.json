@@ -1,0 +1,1064 @@
+{
+  "findings": {
+    "450|es": [
+      "propose-correction",
+      "No se pudo conectar al servidor de metadatos: {value0}",
+      "This error reports that Chaptarr could not reach the metadata server; the current wording says 'cannot access' and is less natural for a failed connection attempt.",
+      "high"
+    ],
+    "450|de": [
+      "propose-correction",
+      "Der Metadatenserver ist nicht erreichbar: {value0}",
+      "The current 'Unfähig, ... zu erreichen' is an awkward literal construction; this states clearly that the metadata server could not be reached.",
+      "high"
+    ],
+    "450|pt-BR": [
+      "propose-correction",
+      "Não foi possível acessar o servidor de metadados: {value0}",
+      "The current 'Não pode chegar' is an unnatural calque; this is standard Brazilian Portuguese for an unreachable metadata server.",
+      "high"
+    ],
+    "450|zh-Hant": [
+      "propose-correction",
+      "無法連線至中繼資料伺服器：{value0}",
+      "The current target contains 甲數據, which is not the Traditional Chinese term for metadata, and uses an unsuitable server character; this uses standard Traditional Chinese terminology.",
+      "high"
+    ],
+    "450|vi": [
+      "propose-refinement",
+      "Không thể kết nối đến máy chủ siêu dữ liệu: {value0}",
+      "The current Vietnamese leaves metadata in English; siêu dữ liệu is the established Vietnamese term for this server context.",
+      "moderate"
+    ],
+    "451|zh-Hans": [
+      "propose-correction",
+      "代理服务器身份验证失败（HTTP 407）。请检查用户名和密码。",
+      "The current message leaves Proxy untranslated and omits sentence punctuation; this preserves the HTTP status and gives a direct instruction.",
+      "high"
+    ],
+    "451|hi": [
+      "propose-correction",
+      "प्रॉक्सी प्रमाणीकरण विफल हुआ (HTTP 407)। उपयोगकर्ता नाम और पासवर्ड की जाँच करें।",
+      "The current सत्यापन means verification rather than authentication; this uses प्रमाणीकरण and keeps the proxy error code intact.",
+      "high"
+    ],
+    "451|zh-Hant": [
+      "propose-correction",
+      "代理伺服器驗證失敗（HTTP 407）。請檢查使用者名稱和密碼。",
+      "The current target leaves Proxy in English and uses Mainland wording for username; this gives a natural Traditional Chinese instruction while preserving HTTP 407.",
+      "high"
+    ],
+    "451|ar": [
+      "propose-correction",
+      "فشلت مصادقة الوكيل (HTTP 407). تحقق من اسم المستخدم وكلمة المرور.",
+      "مصادقة is the appropriate term for authentication; the current verification wording is less precise for HTTP proxy credentials.",
+      "high"
+    ],
+    "453|fr": [
+      "propose-correction",
+      "La version de rTorrent doit être au moins 0.9.0. La version signalée est {value0}.",
+      "The current French sentence is missing the preposition de and uses an English-like word order; this correctly states the minimum supported version and reported version.",
+      "high"
+    ],
+    "453|pt-BR": [
+      "propose-refinement",
+      "A versão do rTorrent deve ser 0.9.0 ou superior. A versão informada é {value0}.",
+      "The current target omits do before the product name and repeats 'version' awkwardly; this is idiomatic Brazilian Portuguese.",
+      "moderate"
+    ],
+    "453|ar": [
+      "propose-refinement",
+      "يجب أن يكون إصدار rTorrent 0.9.0 على الأقل. الإصدار المُبلّغ عنه هو {value0}.",
+      "This places the minimum requirement naturally and clarifies which version value was reported.",
+      "moderate"
+    ],
+    "453|vi": [
+      "propose-correction",
+      "Phiên bản rTorrent phải từ 0.9.0 trở lên. Phiên bản được báo cáo là {value0}.",
+      "The current nên expresses a recommendation ('should') although the source states a minimum requirement; this uses phải for the requirement.",
+      "high"
+    ],
+    "453|id": [
+      "propose-correction",
+      "Versi rTorrent harus minimal 0.9.0. Versi yang dilaporkan adalah {value0}.",
+      "The current 'rTorrent versi' and 'versi dilaporkan' use unnatural word order; this is grammatical Indonesian.",
+      "high"
+    ],
+    "454|vi": [
+      "propose-refinement",
+      "Đường dẫn '{value0}' không tồn tại.",
+      "Đường dẫn is the standard Vietnamese term for a filesystem path; Đường alone usually means a road or route.",
+      "moderate"
+    ],
+    "454|ar": [
+      "propose-refinement",
+      "المسار '{value0}' غير موجود.",
+      "The current لا يوجد is an awkward existential construction for this error; غير موجود states that the path does not exist.",
+      "moderate"
+    ],
+    "455|es": [
+      "propose-refinement",
+      "qBittorrent está configurado para eliminar los torrents cuando alcanzan el límite de su ratio de compartición.",
+      "The current proporción de compartición is an unnatural literal translation of the torrent Share Ratio setting; ratio de compartición is clearer in this technical context.",
+      "moderate"
+    ],
+    "455|de": [
+      "propose-refinement",
+      "qBittorrent ist so konfiguriert, dass Torrents entfernt werden, wenn sie ihr Share-Ratio-Limit erreichen.",
+      "Share-Verhältnislimit is an awkward hybrid; Share-Ratio-Limit is the established compact term for this torrent setting.",
+      "moderate"
+    ],
+    "455|ko": [
+      "propose-correction",
+      "qBittorrent는 토렌트가 공유 비율 한도에 도달하면 삭제하도록 설정되어 있습니다.",
+      "The current Korean has a dangling plural pronoun, unnatural word order, and an incomplete passive construction; this clearly describes the configured removal behavior.",
+      "high"
+    ],
+    "455|vi": [
+      "propose-refinement",
+      "qBittorrent được cấu hình để xóa các torrent khi chúng đạt đến giới hạn tỷ lệ chia sẻ.",
+      "The current sentence ends with an unnecessary possessive phrase ('of theirs'); this keeps the torrent ratio meaning without that calque.",
+      "moderate"
+    ],
+    "457|zh-Hans": [
+      "propose-correction",
+      "所选的外文版“{value0}”不属于所选图书 {value1}。",
+      "The current Simplified Chinese cell uses Traditional characters, and 外国版 can imply a foreign country's edition rather than a foreign-language edition.",
+      "high"
+    ],
+    "457|hi": [
+      "propose-correction",
+      "चुना गया विदेशी संस्करण '{value0}' चुनी गई पुस्तक {value1} का नहीं है।",
+      "पुस्तक is feminine, but the current Hindi uses the masculine चुने हुए; this corrects agreement and makes the relation explicit.",
+      "high"
+    ],
+    "458|fr": [
+      "propose-correction",
+      "Jeton non valide",
+      "Le token invalide means 'the invalid token' rather than reporting an invalid-token error; Jeton non valide is a natural French error label.",
+      "high"
+    ],
+    "461|de": [
+      "propose-correction",
+      "Unbekannter Download-Status: {value0}",
+      "Status is masculine in German, so the current adjective ending is incorrect; this corrects agreement in the error label.",
+      "high"
+    ],
+    "461|ar": [
+      "propose-correction",
+      "حالة التنزيل غير معروفة: {value0}",
+      "The current adjective is masculine while حالة is feminine; this corrects the Arabic agreement and keeps the unknown state value.",
+      "high"
+    ],
+    "461|vi": [
+      "propose-refinement",
+      "Trạng thái tải xuống không xác định: {value0}",
+      "The current message begins with a lowercase noun and uses a less direct phrase; this is a standard Vietnamese error label.",
+      "moderate"
+    ],
+    "463|fr": [
+      "propose-correction",
+      "La version de Transmission n’est pas prise en charge ; elle doit être en version 2.40 ou ultérieure.",
+      "The current French omits de after version and uses an awkward literal support construction; this states the minimum version clearly.",
+      "high"
+    ],
+    "463|ja": [
+      "propose-refinement",
+      "Transmissionのバージョンはサポートされていません。2.40以上である必要があります。",
+      "The current Japanese joins two complete clauses with a comma; separate sentences make the requirement clear.",
+      "moderate"
+    ],
+    "463|pt-BR": [
+      "propose-refinement",
+      "A versão do Transmission não é compatível; deve ser 2.40 ou superior.",
+      "The current target omits do before the product name; this improves the Brazilian Portuguese phrasing while preserving the version threshold.",
+      "moderate"
+    ],
+    "463|vi": [
+      "propose-correction",
+      "Phiên bản Transmission không được hỗ trợ; phải là 2.40 trở lên.",
+      "The current nên weakens the source's minimum-version requirement to a recommendation; phải expresses the required threshold.",
+      "high"
+    ],
+    "463|id": [
+      "propose-correction",
+      "Versi Transmission tidak didukung; harus 2.40 atau lebih tinggi.",
+      "The current target uses unnatural word order ('Transmission versi'); this is grammatical Indonesian and preserves the threshold.",
+      "high"
+    ],
+    "464|de": [
+      "propose-refinement",
+      "Überprüfen Sie die SSL-Einstellungen.",
+      "German compounds with an initial acronym use a hyphen here; the current SSL Einstellungen is missing it.",
+      "moderate"
+    ],
+    "466|ko": [
+      "propose-refinement",
+      "Label 플러그인이 활성화되지 않았습니다.",
+      "The current Korean is an uninflected fragment; this forms a complete, natural status message and preserves the plugin name.",
+      "moderate"
+    ],
+    "467|id": [
+      "propose-refinement",
+      "Folder akar '{value0}' tidak memiliki profil kualitas bawaan untuk {value1}.",
+      "The current target leaves default in English in a localized validation message; bawaan is the ordinary Indonesian term for the configured default.",
+      "moderate"
+    ],
+    "468|es": [
+      "propose-correction",
+      "El tamaño de la página debe estar entre 1 y 1000.",
+      "Spanish uses estar entre for a value range; the current debe ser entre is ungrammatical.",
+      "high"
+    ],
+    "469|hi": [
+      "propose-refinement",
+      "DHT अक्षम होने पर qBittorrent मैग्नेट लिंक को हल नहीं कर सकता।",
+      "The current phrase uses an English-like word order around DHT; this makes the disabled-DHT condition explicit.",
+      "moderate"
+    ],
+    "469|pt-BR": [
+      "propose-correction",
+      "qBittorrent não consegue resolver o link magnético com o DHT desativado.",
+      "ligação magnética is not the usual Brazilian Portuguese term for a BitTorrent magnet link; link magnético is standard.",
+      "high"
+    ],
+    "469|ar": [
+      "propose-correction",
+      "لا يستطيع qBittorrent حلّ الرابط المغناطيسي عند تعطيل DHT.",
+      "The current رابط المغناطيس literally means a magnet's link; الرابط المغناطيسي is the correct term for a magnet link.",
+      "high"
+    ],
+    "470|es": [
+      "propose-correction",
+      "El servidor de contenido devolvió {value0} en respuesta a una solicitud de la API de Calibre.",
+      "The current target has awkward Calibre/API ordering; this clearly says the content server returned the value in response to a Calibre API request.",
+      "high"
+    ],
+    "470|zh-Hans": [
+      "propose-correction",
+      "内容服务器在处理 Calibre API 请求时返回了 {value0}。",
+      "The current Chinese reverses the request/result relationship; this states that the server returned the response value while handling the request.",
+      "high"
+    ],
+    "470|hi": [
+      "propose-correction",
+      "Calibre API अनुरोध के जवाब में सामग्री सर्वर ने {value0} लौटाया।",
+      "The current Hindi says the value was returned to the request in an unnatural construction; this correctly expresses the response relationship.",
+      "high"
+    ],
+    "470|de": [
+      "propose-correction",
+      "Der Inhaltsserver hat auf eine Calibre-API-Anfrage den Statuscode {value0} zurückgegeben.",
+      "The current German uses kehrte ... zurück zu, which is the wrong construction; the caller confirms value0 is an HTTP status code.",
+      "high"
+    ],
+    "470|ja": [
+      "propose-correction",
+      "コンテンツサーバーはCalibre APIのリクエストに対して{value0}を返しました。",
+      "The current Japanese uses present tense and an awkward object relation; this gives the natural past-tense server response.",
+      "high"
+    ],
+    "470|fr": [
+      "propose-correction",
+      "Le serveur de contenu a renvoyé {value0} en réponse à une requête de l’API Calibre.",
+      "The current French is a literal and awkward construction; this states that the server returned the value in response to the API request.",
+      "high"
+    ],
+    "470|pt-BR": [
+      "propose-correction",
+      "O servidor de conteúdo retornou {value0} em resposta a uma solicitação à API do Calibre.",
+      "The current target has awkward API ordering; this is natural Brazilian Portuguese and preserves the response value.",
+      "high"
+    ],
+    "470|ar": [
+      "propose-correction",
+      "أعاد خادم المحتوى الرمز {value0} استجابةً لطلب إلى Calibre API.",
+      "The current Arabic says the server returned to the request; this correctly expresses a response and identifies value0 as a code.",
+      "high"
+    ],
+    "470|ko": [
+      "propose-correction",
+      "콘텐츠 서버가 Calibre API 요청에 {value0}를 반환했습니다.",
+      "The current Korean says the server returned the value 'as a request'; this correctly identifies the request as the response context.",
+      "high"
+    ],
+    "470|zh-Hant": [
+      "propose-correction",
+      "內容伺服器回應 Calibre API 請求時傳回了 {value0}。",
+      "The current Traditional Chinese has Mainland-style 服務器 and reverses the response relationship; this uses Traditional wording and clear syntax.",
+      "high"
+    ],
+    "470|vi": [
+      "propose-correction",
+      "Máy chủ nội dung trả về {value0} để phản hồi yêu cầu của Calibre API.",
+      "The current Vietnamese says the server returned the value 'to' a request; this makes the response relationship grammatical.",
+      "high"
+    ],
+    "470|id": [
+      "propose-correction",
+      "Server konten mengembalikan {value0} sebagai respons atas permintaan Calibre API.",
+      "The current Indonesian reverses the response/request relationship; this clearly says the server returned the value in response to the API request.",
+      "high"
+    ],
+    "472|es": [
+      "propose-correction",
+      "No se pudo enviar el mensaje de prueba.",
+      "The current target uses an unnatural incapaz construction and plural messages, while the source names one test message.",
+      "high"
+    ],
+    "472|zh-Hans": [
+      "propose-correction",
+      "无法发送测试消息。",
+      "信息 means information; 消息 is the correct Chinese word for a message sent by the notification test.",
+      "high"
+    ],
+    "472|zh-Hant": [
+      "propose-correction",
+      "無法傳送測試訊息。",
+      "信息 means information and is not the natural Traditional Chinese term for a sent message; 訊息 is appropriate here.",
+      "high"
+    ],
+    "472|ar": [
+      "propose-refinement",
+      "تعذّر إرسال رسالة الاختبار.",
+      "The current Arabic is a noun phrase meaning 'the inability to send'; this gives a natural concise error message.",
+      "moderate"
+    ],
+    "472|ko": [
+      "propose-refinement",
+      "테스트 메시지를 보낼 수 없습니다.",
+      "The current target is a clipped phrase; this forms a natural Korean statement of the send failure.",
+      "moderate"
+    ],
+    "472|id": [
+      "propose-refinement",
+      "Tidak dapat mengirim pesan uji.",
+      "Pesan uji is the more natural Indonesian term for a test message than pesan tes.",
+      "moderate"
+    ],
+    "473|de": [
+      "propose-correction",
+      "Verbindungstest fehlgeschlagen: {value0}",
+      "versagt is not idiomatic for a failed connection test; fehlgeschlagen is the standard failure term.",
+      "high"
+    ],
+    "473|ja": [
+      "propose-refinement",
+      "接続テストに失敗しました：{value0}",
+      "The current Japanese is a noun fragment; this forms a complete and natural error message.",
+      "moderate"
+    ],
+    "473|fr": [
+      "propose-correction",
+      "Échec du test de connexion : {value0}",
+      "The current French adjective order is unnatural; this is the standard concise form for a failed connection test.",
+      "high"
+    ],
+    "473|pt-BR": [
+      "propose-refinement",
+      "Falha no teste de conexão: {value0}",
+      "The current wording is understandable but less natural than this concise error label in Brazilian Portuguese.",
+      "moderate"
+    ],
+    "473|ar": [
+      "propose-correction",
+      "فشل اختبار الاتصال: {value0}",
+      "The current Arabic word order is awkward; this is the natural failure label and preserves the exception detail.",
+      "high"
+    ],
+    "473|ko": [
+      "propose-refinement",
+      "연결 테스트 실패: {value0}",
+      "The current Korean has an unnecessary space before the colon; this is the compact error-label form.",
+      "moderate"
+    ],
+    "473|zh-Hans": [
+      "propose-refinement",
+      "连接测试失败：{value0}",
+      "The current target uses an ASCII colon; a full-width Chinese colon is standard punctuation here.",
+      "moderate"
+    ],
+    "473|zh-Hant": [
+      "propose-refinement",
+      "連線測試失敗：{value0}",
+      "This uses the common Traditional Chinese term 連線 for a connection test and standard full-width punctuation.",
+      "moderate"
+    ],
+    "473|vi": [
+      "propose-refinement",
+      "Kiểm tra kết nối thất bại: {value0}",
+      "Thử nghiệm is closer to an experiment; kiểm tra is the ordinary Vietnamese term for a connection test.",
+      "moderate"
+    ],
+    "473|id": [
+      "propose-correction",
+      "Tes koneksi gagal: {value0}",
+      "Ujian means an exam or formal test in Indonesian; tes koneksi is the standard term for a connection test.",
+      "high"
+    ],
+    "475|es": [
+      "propose-correction",
+      "No se puede importar. La ruta coincide con el directorio base de descargas del cliente. Comprueba si “Keep top-level folder” está desactivado para este torrent o si “Torrent Content Layout” no está configurado como “Original” o “Create Subfolder”.",
+      "The current target leaves NOT untranslated inside the second condition, obscuring the setting check; this translates the negation while preserving the exact qBittorrent setting labels.",
+      "high"
+    ],
+    "475|zh-Hans": [
+      "propose-correction",
+      "无法导入。路径与客户端的基础下载目录相同。请检查此 torrent 是否禁用了“Keep top-level folder”，或者“Torrent Content Layout”是否未设置为“Original”或“Create Subfolder”。",
+      "The current target leaves NOT untranslated inside the condition; this translates the negation and preserves the exact setting labels.",
+      "high"
+    ],
+    "475|hi": [
+      "propose-correction",
+      "आयात नहीं किया जा सकता। पथ क्लाइंट की मूल डाउनलोड निर्देशिका से मेल खाता है। जाँचें कि इस torrent के लिए “Keep top-level folder” अक्षम है या “Torrent Content Layout” “Original” या “Create Subfolder” पर सेट नहीं है।",
+      "The current target leaves NOT in English and makes the second setting condition unclear; this translates the negation while preserving the setting names.",
+      "high"
+    ],
+    "475|de": [
+      "propose-correction",
+      "Import nicht möglich. Der Pfad entspricht dem Basis-Downloadverzeichnis des Clients. Prüfen Sie, ob „Keep top-level folder“ für diesen Torrent deaktiviert ist oder „Torrent Content Layout“ nicht auf „Original“ oder „Create Subfolder“ eingestellt ist.",
+      "The current target leaves NOT in English inside the condition; this translates the negation and preserves the exact setting labels.",
+      "high"
+    ],
+    "475|ja": [
+      "propose-correction",
+      "インポートできません。パスがクライアントの基本ダウンロードディレクトリと一致しています。このtorrentで「Keep top-level folder」が無効になっているか、「Torrent Content Layout」が「Original」または「Create Subfolder」に設定されていない可能性があります。",
+      "The current target inserts the English word NOT into Japanese; this translates the negative condition while preserving the setting labels.",
+      "high"
+    ],
+    "475|fr": [
+      "propose-correction",
+      "Importation impossible. Le chemin correspond au répertoire de téléchargement de base du client. Vérifiez si « Keep top-level folder » est désactivé pour ce torrent ou si « Torrent Content Layout » n’est pas défini sur « Original » ou « Create Subfolder ».",
+      "The current target leaves NOT in English and the second clause lacks its negation; this translates the condition and preserves exact setting labels.",
+      "high"
+    ],
+    "475|pt-BR": [
+      "propose-correction",
+      "Não é possível importar. O caminho corresponde ao diretório base de downloads do cliente. Verifique se “Keep top-level folder” está desativado para este torrent ou se “Torrent Content Layout” não está definido como “Original” ou “Create Subfolder”.",
+      "The current target leaves NOT in English inside the setting condition; this translates the negation and keeps the exact labels.",
+      "high"
+    ],
+    "475|ar": [
+      "propose-correction",
+      "تعذّر الاستيراد. يتطابق المسار مع مجلد التنزيل الأساسي للعميل. تحقّق مما إذا كان خيار “Keep top-level folder” معطلاً لهذا التورنت أو ما إذا كان “Torrent Content Layout” غير مضبوط على “Original” أو “Create Subfolder”.",
+      "The current target leaves NOT in English and the second condition is hard to parse; this translates the negation and preserves setting names.",
+      "high"
+    ],
+    "475|ko": [
+      "propose-correction",
+      "가져올 수 없습니다. 경로가 클라이언트 기본 다운로드 디렉터리와 일치합니다. 이 토렌트에서 “Keep top-level folder”가 비활성화되어 있거나 “Torrent Content Layout”이 “Original” 또는 “Create Subfolder”로 설정되지 않았는지 확인하세요.",
+      "The current Korean repeats the English NOT marker in parentheses; this translates the negative setting condition and preserves the exact labels.",
+      "high"
+    ],
+    "475|zh-Hant": [
+      "propose-correction",
+      "無法匯入。路徑與用戶端的基本下載目錄相同。請檢查此 torrent 是否停用了「Keep top-level folder」，或「Torrent Content Layout」是否未設定為「Original」或「Create Subfolder」。",
+      "The current target leaves NOT untranslated in the setting condition; this translates the negation and retains the exact labels.",
+      "high"
+    ],
+    "475|vi": [
+      "propose-correction",
+      "Không thể nhập. Đường dẫn trùng với thư mục tải xuống cơ sở của ứng dụng khách. Hãy kiểm tra xem “Keep top-level folder” có bị tắt cho torrent này hay “Torrent Content Layout” không được đặt thành “Original” hoặc “Create Subfolder”.",
+      "The current target leaves NOT untranslated and the second clause is ungrammatical; this translates the condition while preserving setting labels.",
+      "high"
+    ],
+    "475|id": [
+      "propose-correction",
+      "Tidak dapat mengimpor. Jalur cocok dengan direktori unduhan dasar klien. Periksa apakah “Keep top-level folder” dinonaktifkan untuk torrent ini atau apakah “Torrent Content Layout” tidak diatur ke “Original” atau “Create Subfolder”.",
+      "The current target leaves NOT untranslated; this translates the negative condition while preserving the exact setting names.",
+      "high"
+    ],
+    "476|es": [
+      "propose-refinement",
+      "No se pudo conectar a NZBGet.",
+      "The current No puede conectarse is less natural for a failed connection attempt; this states that the connection could not be made.",
+      "moderate"
+    ],
+    "476|pt-BR": [
+      "propose-refinement",
+      "Não foi possível conectar ao NZBGet.",
+      "The current Não pode se conectar is an awkward literal rendering; this is natural Brazilian Portuguese for a failed connection attempt.",
+      "moderate"
+    ],
+    "479|ko": [
+      "propose-correction",
+      "Hardcover가 활성화되어 있지 않거나 API 토큰이 없습니다.",
+      "없어집니다 means the token will disappear; the source says the token is missing, so this corrects the meaning.",
+      "high"
+    ],
+    "479|vi": [
+      "propose-correction",
+      "Hardcover chưa được bật hoặc thiếu API token.",
+      "The current bị mất means the token was lost; the source says that it is missing.",
+      "high"
+    ],
+    "480|es": [
+      "propose-correction",
+      "No se puede añadir el libro: el resultado seleccionado no contiene el ID del proveedor del autor.",
+      "The current phrase incorrectly says the result lacks an author provider ID; this expresses that the selected metadata result lacks the author's provider ID.",
+      "high"
+    ],
+    "480|zh-Hans": [
+      "propose-refinement",
+      "无法添加图书：所选结果不包含作者的服务商 ID。",
+      "The current 作者提供商 ID is an awkward literal compound; this makes clear that the ID belongs to the author's metadata provider.",
+      "moderate"
+    ],
+    "480|fr": [
+      "propose-correction",
+      "Impossible d’ajouter le livre : le résultat sélectionné ne contient pas l’ID de fournisseur de l’auteur.",
+      "Ne pas ajouter du livre is an imperative meaning 'do not add the book'; this expresses inability to add the book and corrects the provider-ID phrase.",
+      "high"
+    ],
+    "480|ko": [
+      "propose-refinement",
+      "책을 추가할 수 없습니다. 선택한 결과에 저자의 제공자 ID가 없습니다.",
+      "The current target has unnatural spacing and the phrase 저자 공급자 ID; this uses a natural possessive construction for the author's provider ID.",
+      "moderate"
+    ],
+    "480|vi": [
+      "propose-correction",
+      "Không thể thêm sách: kết quả được chọn không chứa ID nhà cung cấp của tác giả.",
+      "The current phrase 'một nhà cung cấp tác giả ID' is ungrammatical; this clearly identifies the missing author-provider ID.",
+      "high"
+    ],
+    "480|id": [
+      "propose-correction",
+      "Tidak dapat menambahkan buku: hasil yang dipilih tidak memuat ID penyedia penulis.",
+      "The current Indonesian places ID after the provider phrase awkwardly; this gives the natural provider-ID construction.",
+      "moderate"
+    ],
+    "481|zh-Hans": [
+      "propose-refinement",
+      "文件夹“{value0}”无法访问。检查文件夹权限时发生错误。",
+      "The current target has a comma splice and an awkward noun phrase; this separates the access failure from the permission-check error.",
+      "moderate"
+    ],
+    "481|hi": [
+      "propose-correction",
+      "फ़ोल्डर '{value0}' तक पहुँच संभव नहीं है। फ़ोल्डर की अनुमतियों की जाँच करते समय त्रुटि हुई।",
+      "The current Hindi misspells अनुमतियों and says the folder is unavailable rather than inaccessible; this corrects both issues.",
+      "high"
+    ],
+    "481|ja": [
+      "propose-correction",
+      "「{value0}」フォルダーにアクセスできません。フォルダーのアクセス権限を確認中にエラーが発生しました。",
+      "Japanese takes にアクセスする; the current はアクセスできません is ungrammatical for a folder as the access target.",
+      "high"
+    ],
+    "481|pt-BR": [
+      "propose-refinement",
+      "A pasta '{value0}' não está acessível. Ocorreu um erro ao verificar as permissões da pasta.",
+      "The current second sentence starts with lowercase um after a full stop; this corrects capitalization and improves the error phrasing.",
+      "moderate"
+    ],
+    "481|ko": [
+      "propose-correction",
+      "폴더 '{value0}'에 접근할 수 없습니다. 폴더 권한을 확인하는 동안 오류가 발생했습니다.",
+      "The current Korean has incorrect spacing and uses 허가 instead of the standard folder-permissions term 권한.",
+      "high"
+    ],
+    "481|zh-Hant": [
+      "propose-correction",
+      "資料夾「{value0}」無法存取。檢查資料夾權限時發生錯誤。",
+      "The current Traditional Chinese cell uses Simplified 文件夾 and has a comma splice; this uses Traditional terminology and separates the clauses.",
+      "high"
+    ],
+    "481|id": [
+      "propose-refinement",
+      "Folder '{value0}' tidak dapat diakses. Terjadi kesalahan saat memeriksa izin folder.",
+      "The current second sentence starts lowercase after a full stop and is an awkward calque; this is natural Indonesian.",
+      "moderate"
+    ],
+    "482|es": [
+      "propose-refinement",
+      "Conexión rechazada",
+      "The current La conexión rechazada has an article but no verb; this is a natural concise Spanish error label.",
+      "moderate"
+    ],
+    "482|fr": [
+      "propose-refinement",
+      "Connexion refusée",
+      "The current La connexion refusée is a noun fragment with an unnecessary article; this is the standard concise French error label.",
+      "moderate"
+    ],
+    "482|pt-BR": [
+      "propose-refinement",
+      "Conexão recusada",
+      "The current target starts with a lowercase letter and lacks an article or sentence framing; this is the natural concise error label.",
+      "moderate"
+    ],
+    "483|hi": [
+      "propose-correction",
+      "सीरीज़ वेरिएंट {value0} को सफलतापूर्वक हटा दिया गया।",
+      "The current Hindi uses an incorrect plural participle and leaves the action without a grammatical object; this forms a correct deletion status.",
+      "high"
+    ],
+    "483|ko": [
+      "propose-refinement",
+      "시리즈 변형 {value0}을 성공적으로 삭제했습니다.",
+      "The current Korean is an adjective fragment; this reports the successful deletion as a complete status message.",
+      "moderate"
+    ],
+    "483|id": [
+      "propose-correction",
+      "Varian seri {value0} berhasil dihapus.",
+      "The current Indonesian is a noun phrase ('variant successfully deleted') rather than a status; this states that the variant was deleted successfully.",
+      "high"
+    ],
+    "484|zh-Hans": [
+      "propose-correction",
+      "提供商 ID 无效。应使用 {value0} 中的一个前缀，并附加字母数字 ID。",
+      "The current Chinese says the values in {value0} should contain an ID; the source says one of those prefixes is expected with an alphanumeric identifier.",
+      "high"
+    ],
+    "484|hi": [
+      "propose-correction",
+      "प्रदाता ID अमान्य है। अपेक्षित उपसर्गों में से एक {value0} है और ID में अक्षर व अंक होने चाहिए।",
+      "विकलांग means disabled, not invalid, and the current sentence reverses the expected-prefix relationship; this corrects both.",
+      "high"
+    ],
+    "484|fr": [
+      "propose-correction",
+      "ID de fournisseur invalide. L’ID doit commencer par l’un des préfixes {value0} et être alphanumérique.",
+      "The current French has incorrect word order and Espérée l'un is ungrammatical; this clearly states the expected prefix and alphanumeric identifier.",
+      "high"
+    ],
+    "484|ar": [
+      "propose-correction",
+      "معرّف المزوّد ID غير صالح. يجب أن يبدأ المعرّف بأحد الخيارات {value0} وأن يتكوّن من أحرف وأرقام.",
+      "The current target says ألفا (alpha) and omits the numeric part of alphanumeric; this preserves the ID acronym and prefix list while correcting the requirement.",
+      "high"
+    ],
+    "484|zh-Hant": [
+      "propose-refinement",
+      "供應商 ID 無效。ID 應以 {value0} 中的一個前綴開頭，並由英數字元組成。",
+      "The current target says the values in {value0} should contain an ID; this clarifies that one listed prefix is expected before the alphanumeric identifier.",
+      "moderate"
+    ],
+    "485|ko": [
+      "propose-correction",
+      "선택한 에디션 {value0}을 찾을 수 없습니다.",
+      "The current Korean omits the object particle and uses a past ending; this is the natural not-found error.",
+      "high"
+    ],
+    "486|zh-Hans": [
+      "propose-correction",
+      "必须至少选择一个质量配置文件。",
+      "The current 质量资料 means quality information/material, not a quality profile; 配置文件 is the correct software setting term.",
+      "high"
+    ],
+    "486|zh-Hant": [
+      "propose-correction",
+      "必須至少選擇一個品質設定檔。",
+      "The current 質量資料 means quality information/material, not a quality profile; 設定檔 is the appropriate Traditional Chinese software term.",
+      "high"
+    ],
+    "487|hi": [
+      "propose-correction",
+      "हर समूह की ID अद्वितीय होनी चाहिए।",
+      "The current Hindi uses an incorrect dative construction for 'must have'; this states that each group needs a unique ID.",
+      "high"
+    ],
+    "487|zh-Hans": [
+      "propose-refinement",
+      "每个组都必须有唯一的 ID。",
+      "独特 means distinctive; 唯一 is the precise term for an identifier that must be unique.",
+      "moderate"
+    ],
+    "487|zh-Hant": [
+      "propose-refinement",
+      "每個群組都必須有唯一的 ID。",
+      "獨特 means distinctive; 唯一 is the precise term for an identifier that must be unique.",
+      "moderate"
+    ],
+    "487|ja": [
+      "propose-refinement",
+      "グループには一意のIDが必要です。",
+      "一意 is the standard Japanese term for uniqueness constraints; ユニーク is an understandable but less precise loanword here.",
+      "moderate"
+    ],
+    "487|ko": [
+      "propose-correction",
+      "그룹마다 고유한 ID가 있어야 합니다.",
+      "독특한 means distinctive or unusual; 고유한 expresses a unique identifier, and this fixes the sentence grammar.",
+      "high"
+    ],
+    "487|vi": [
+      "propose-refinement",
+      "Mỗi nhóm phải có một ID duy nhất.",
+      "độc đáo suggests distinctive/original; duy nhất is the direct term for an ID that must be unique.",
+      "moderate"
+    ],
+    "489|ja": [
+      "propose-correction",
+      "認証に失敗しました。ユーザー名とパスワードを確認してください。",
+      "The current Japanese uses an unnatural noun clause and an abrupt instruction; this is a natural authentication-failure message.",
+      "high"
+    ],
+    "489|ko": [
+      "propose-correction",
+      "인증에 실패했습니다. 사용자 이름과 비밀번호를 확인하세요.",
+      "The current 확인 means checking/verification rather than authentication; this uses the correct Korean term and instruction.",
+      "high"
+    ],
+    "489|vi": [
+      "propose-refinement",
+      "Xác thực thất bại. Hãy kiểm tra tên người dùng và mật khẩu.",
+      "The current sentence begins lowercase and is a loose fragment; this gives the standard Vietnamese error wording.",
+      "moderate"
+    ],
+    "490|de": [
+      "propose-correction",
+      "Der Ausgabeanbieter muss dem Buchanbieter entsprechen, wenn eine bestimmte Ausgabe angegeben wird.",
+      "entsprechen takes the dative in German; the current den Buchanbieter is incorrect, and bereitgestellt is less natural for a specified edition.",
+      "high"
+    ],
+    "490|fr": [
+      "propose-refinement",
+      "Le fournisseur de l’édition doit correspondre à celui du livre lorsqu’une édition précise est fournie.",
+      "The current plural fournisseur d’éditions is awkward for the single specified edition; this makes the relationship clear.",
+      "moderate"
+    ],
+    "490|id": [
+      "propose-refinement",
+      "Penyedia edisi harus sama dengan penyedia buku jika edisi tertentu diberikan.",
+      "setara means equivalent rather than matching; sama dengan is the direct Indonesian wording for the provider match requirement.",
+      "moderate"
+    ],
+    "491|es": [
+      "propose-correction",
+      "Seleccione al menos un tipo de medio que desee supervisar.",
+      "The current tipo de medios has an unnecessary plural and monitorear is less natural for this settings prompt; this is grammatical Spanish.",
+      "high"
+    ],
+    "491|de": [
+      "propose-refinement",
+      "Wählen Sie mindestens einen zu überwachenden Medientyp aus.",
+      "The current um zu überwachen leaves the object of monitoring implicit; this forms a concise and clear settings instruction.",
+      "moderate"
+    ],
+    "491|fr": [
+      "propose-correction",
+      "Sélectionnez au moins un type de média à surveiller.",
+      "The current pour surveiller is incomplete because it lacks an object; this states which media type should be monitored.",
+      "high"
+    ],
+    "491|hi": [
+      "propose-refinement",
+      "निगरानी के लिए कम से कम एक मीडिया प्रकार चुनें।",
+      "देखने means to look at/watch rather than monitor a category; निगरानी is the appropriate term for this settings action.",
+      "moderate"
+    ],
+    "491|ar": [
+      "propose-correction",
+      "يُرجى اختيار نوع وسائط واحد على الأقل لمراقبته.",
+      "The current Arabic is a noun phrase ('selecting at least one...') without an imperative verb; this forms a clear instruction.",
+      "high"
+    ],
+    "493|de": [
+      "propose-correction",
+      "Der MQTT-Broker hat die Verbindung abgelehnt ({value0}).",
+      "weigerte die Verbindung is not idiomatic German for a broker rejecting a connection; this uses the correct verb and compound spelling.",
+      "high"
+    ],
+    "493|ar": [
+      "propose-correction",
+      "رفض وسيط MQTT الاتصال ({value0}).",
+      "The current Arabic begins with و, meaning 'and', without a preceding clause; this gives a complete error sentence.",
+      "high"
+    ],
+    "494|de": [
+      "propose-correction",
+      "Ungültiger Port. Dies ist die Remote-Calibre-GUI des Containers, nicht der Calibre-Content-Server. Versuchen Sie, Port 8081 zuzuordnen.",
+      "The current Schlechte Port has the wrong gender and mappieren is not idiomatic; this corrects the port error and the mapping instruction.",
+      "high"
+    ],
+    "495|zh-Hans": [
+      "propose-correction",
+      "导入列表没有返回任何结果，请检查设置。",
+      "进口 means importation of goods, while this import list is an application feature; 导入 is the software-import term.",
+      "high"
+    ],
+    "495|zh-Hant": [
+      "propose-correction",
+      "匯入清單沒有傳回任何結果，請檢查設定。",
+      "進口 refers to importing goods; this source describes the application's import list, for which 匯入 is the appropriate term.",
+      "high"
+    ],
+    "495|de": [
+      "propose-correction",
+      "Aus der Importliste wurden keine Ergebnisse zurückgegeben. Bitte überprüfen Sie Ihre Einstellungen.",
+      "Einfuhrliste means a goods-import list and the current sentence is a literal passive; Importliste is the correct application feature term.",
+      "high"
+    ],
+    "495|ja": [
+      "propose-correction",
+      "インポートリストから結果が返されませんでした。設定を確認してください。",
+      "輸入リスト refers to importation of goods; this is the application's software import list, so インポート is appropriate.",
+      "high"
+    ],
+    "495|ko": [
+      "propose-correction",
+      "가져오기 목록에서 결과가 반환되지 않았습니다. 설정을 확인하세요.",
+      "수입 목록 commonly means a list of goods imports; 가져오기 목록 is the software feature term in this import-list caller.",
+      "high"
+    ],
+    "495|vi": [
+      "propose-correction",
+      "Danh sách nhập dữ liệu không trả về kết quả nào. Vui lòng kiểm tra cài đặt.",
+      "nhập khẩu means importation of goods; this is an application import list, so nhập dữ liệu is the appropriate term.",
+      "high"
+    ],
+    "496|es": [
+      "propose-refinement",
+      "No se pudo conectar a BookLore. Comprueba la URL, las credenciales y los registros.",
+      "The current No puede conectarse is less natural for a failed connection attempt, and this makes the follow-up checks a clear instruction.",
+      "moderate"
+    ],
+    "496|zh-Hans": [
+      "propose-refinement",
+      "无法连接到 BookLore。请检查 URL、凭据和日志。",
+      "The current target uses an ASCII period after BookLore and a comma splice; this separates the connection failure from its troubleshooting instruction.",
+      "moderate"
+    ],
+    "496|ja": [
+      "propose-correction",
+      "BookLoreに接続できません。URL、認証情報、ログを確認してください。",
+      "The current Japanese joins the failure and a command without punctuation and uses an unnatural phrase for credentials; this fixes both.",
+      "high"
+    ],
+    "496|fr": [
+      "propose-refinement",
+      "Impossible de se connecter à BookLore. Vérifiez l’URL, les identifiants et les journaux.",
+      "The current uses le URL, but URL is feminine in French; this also replaces the English logs with the standard French term.",
+      "moderate"
+    ],
+    "496|pt-BR": [
+      "propose-refinement",
+      "Não foi possível conectar ao BookLore. Verifique a URL, as credenciais e os logs.",
+      "The current Não pode se conectar is an awkward calque; this is natural Brazilian Portuguese for the failed connection and its follow-up instruction.",
+      "moderate"
+    ],
+    "497|zh-Hans": [
+      "propose-refinement",
+      "未配置用户名和密码时，必须提供 API 密钥。",
+      "The current sentence has unnatural word order; this states the condition before the API-key requirement.",
+      "moderate"
+    ],
+    "497|zh-Hant": [
+      "propose-refinement",
+      "未設定使用者名稱和密碼時，必須提供 API 金鑰。",
+      "The current sentence has unnatural word order and Mainland wording for username; this is natural Traditional Chinese.",
+      "moderate"
+    ],
+    "497|de": [
+      "propose-refinement",
+      "Ein API-Schlüssel ist erforderlich, wenn Benutzername und Passwort nicht konfiguriert sind.",
+      "The current leaves Key in English; API-Schlüssel is the established German term for an API key.",
+      "moderate"
+    ],
+    "497|pt-BR": [
+      "propose-correction",
+      "A chave de API é obrigatória quando o nome de usuário e a senha não estão configurados.",
+      "The current mixes API Key and password in English and has agreement errors; this is fully localized and grammatical Brazilian Portuguese.",
+      "high"
+    ],
+    "497|ko": [
+      "propose-refinement",
+      "사용자 이름과 비밀번호가 설정되지 않은 경우 API 키가 필요합니다.",
+      "The current has spaces around the slash and an awkward sentence ending; this gives natural Korean condition wording.",
+      "moderate"
+    ],
+    "499|es": [
+      "propose-correction",
+      "No es un servidor de contenido de Calibre válido. Consulta https://manual.calibre-ebook.com/server.html.",
+      "The current places Calibre after válido, making the noun phrase ungrammatical; this corrects the word order and preserves the documentation URL.",
+      "high"
+    ],
+    "499|zh-Hans": [
+      "propose-correction",
+      "这不是有效的 Calibre 内容服务器。请参阅 https://manual.calibre-ebook.com/server.html。",
+      "The current says 'there is no valid server' rather than 'this is not a valid server'; this preserves the URL and fixes the error meaning.",
+      "high"
+    ],
+    "499|hi": [
+      "propose-correction",
+      "यह मान्य Calibre सामग्री सर्वर नहीं है। देखें: https://manual.calibre-ebook.com/server.html",
+      "The current Hindi is a noun fragment; this states that the configured server is invalid and preserves the help URL.",
+      "high"
+    ],
+    "499|de": [
+      "propose-correction",
+      "Kein gültiger Calibre-Content-Server. Weitere Informationen: https://manual.calibre-ebook.com/server.html",
+      "The current German uses the wrong adjective gender and an ungrammatical noun compound; this fixes the label and preserves the URL.",
+      "high"
+    ],
+    "499|ja": [
+      "propose-correction",
+      "有効なCalibreコンテンツサーバーではありません。https://manual.calibre-ebook.com/server.htmlを参照してください。",
+      "The current Japanese says 'see' as an isolated fragment; this forms a natural error statement and documentation instruction.",
+      "high"
+    ],
+    "499|fr": [
+      "propose-correction",
+      "Ce n’est pas un serveur de contenu Calibre valide. Consultez https://manual.calibre-ebook.com/server.html.",
+      "The current French is a fragment ('not a valid server') and omits the article; this forms a complete error message.",
+      "high"
+    ],
+    "499|pt-BR": [
+      "propose-refinement",
+      "Não é um servidor de conteúdo Calibre válido. Consulte https://manual.calibre-ebook.com/server.html.",
+      "The current has awkward Calibre word order and an abbreviated instruction; this is natural Brazilian Portuguese and preserves the URL.",
+      "moderate"
+    ],
+    "499|ar": [
+      "propose-correction",
+      "هذا ليس خادم محتوى Calibre صالحًا. راجع https://manual.calibre-ebook.com/server.html.",
+      "The current Arabic is an incomplete noun phrase; this clearly says the server is not valid and preserves the help URL.",
+      "high"
+    ],
+    "499|zh-Hant": [
+      "propose-correction",
+      "這不是有效的 Calibre 內容伺服器。請參閱 https://manual.calibre-ebook.com/server.html。",
+      "The current uses Mainland server wording and says there is no valid server; this uses Traditional terminology and the correct negation.",
+      "high"
+    ],
+    "499|vi": [
+      "propose-correction",
+      "Đây không phải là máy chủ nội dung Calibre hợp lệ. Xem https://manual.calibre-ebook.com/server.html.",
+      "The current means 'there is no valid server' and has unnatural word order; this states that the configured server is invalid.",
+      "high"
+    ],
+    "499|id": [
+      "propose-correction",
+      "Ini bukan server konten Calibre yang valid. Lihat https://manual.calibre-ebook.com/server.html.",
+      "The current means 'there is no valid server' and has awkward adjective placement; this clearly says the configured server is invalid.",
+      "high"
+    ],
+    "498|es": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|zh-Hans": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|hi": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|de": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|ja": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|fr": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|pt-BR": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|ar": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|ko": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|zh-Hant": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|vi": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ],
+    "498|id": [
+      "hold",
+      null,
+      "No direct source-ID or exact/normalized source-template caller was found at the pinned production sources. A related recycle-bin validator uses a different dynamic relationship template, so the caller and placeholder role cannot be mapped safely.",
+      "low"
+    ]
+  },
+  "sourceRationales": {
+    "450": "A validation response reports that the metadata server was unreachable; the embedded value is the underlying exception detail.",
+    "451": "ProxyTestService reports an HTTP 407 proxy-authentication failure and asks the user to check the proxy credentials.",
+    "452": "MQTT gateway settings require Home Assistant's discovery prefix to be a valid MQTT topic prefix.",
+    "453": "The rTorrent client version validation reports the minimum supported version and the server-reported version.",
+    "454": "PathExistsValidator reports that the configured filesystem path is missing; the placeholder is the path.",
+    "455": "qBittorrent's warning explains that its configured Share Ratio limit will remove torrents when reached.",
+    "456": "Metadata profile validation lists the exact allowed type enum values: General, Audiobook, and Ebook.",
+    "457": "Manual import validation says the selected foreign-language edition does not belong to the selected book; placeholders are edition title/ID and book ID.",
+    "458": "Ntfy access-token validation reports a token-format/authentication error.",
+    "459": "Root-folder API validation names the dynamic media label and the accepted MonitorNewItems enum values.",
+    "460": "FileExistsValidator reports that a configured file is missing; the placeholder is the filesystem path.",
+    "461": "qBittorrent reports an unrecognized download-state value.",
+    "462": "Goodreads bookshelf settings require a numeric user ID or a profile URL containing that ID.",
+    "463": "Transmission client validation reports a minimum supported version of 2.40.",
+    "464": "Deluge validation instructs the user to verify SSL settings after a connection/SSL problem.",
+    "465": "qBittorrent reports that the selected download category is unsupported.",
+    "466": "Deluge reports that its Label plugin is not activated.",
+    "467": "Import-list validation reports a missing default quality profile for a selected root folder and media type.",
+    "468": "Book API pagination validation requires the requested page size to be between 1 and 1000.",
+    "469": "qBittorrent reports that it cannot resolve a magnet link while DHT is disabled.",
+    "470": "Calibre content-server validation reports the numeric status code returned for a Calibre API request.",
+    "471": "AudiobookShelf settings validation requires a host value.",
+    "472": "Notification providers return this shared message when sending a test notification fails.",
+    "473": "MyAnonaMouse reports a failed connection test and interpolates the exception message.",
+    "474": "The Series API records which preferred narrator was set for a series; placeholders are narrator and series ID/name.",
+    "475": "qBittorrent's import warning names the exact Keep top-level folder and Torrent Content Layout options and explains the folder/layout mismatch.",
+    "476": "NZBGet client validation reports that the application could not be reached.",
+    "477": "Apprise configuration validation states that stateless URLs cannot carry tags.",
+    "478": "qBittorrent reports that a download is stalled because it has no connections.",
+    "479": "Series lookup validation requires Hardcover to be enabled and an API token to be present.",
+    "480": "Book-add validation says the selected result lacks the author's provider ID.",
+    "481": "FolderReadableValidator reports an inaccessible folder and a permissions-check error; the placeholder is the folder path.",
+    "482": "Deluge reports a refused connection while testing its host.",
+    "483": "The Series API reports that a series variant was successfully deleted; the placeholder is its identifier.",
+    "484": "ProviderIdValidator says the provider ID must use one of the displayed prefixes and contain an alphanumeric identifier.",
+    "485": "Manual import reports that the selected edition identifier could not be found.",
+    "486": "Author and book validation requires at least one selected quality profile.",
+    "487": "Quality item validation requires every group to have a distinct ID.",
+    "488": "Book-add validation reports that no edition of the requested media type survived metadata-profile filtering.",
+    "489": "Grimmory authentication validation asks the user to check the username and password.",
+    "490": "Book-edition validation requires a specified edition's provider to match the book's provider.",
+    "491": "Import-list settings require selection of at least one media type for monitoring.",
+    "492": "Conversion settings reject an unsupported audiobook channel mode.",
+    "493": "MQTT connection validation reports the broker's rejection result code.",
+    "494": "CalibreProxy distinguishes the remote container Calibre GUI from the Calibre content server and suggests mapping port 8081.",
+    "495": "ImportListBase reports that the configured application import list returned no results and asks the user to check settings.",
+    "496": "BookLore connection validation asks the user to check its URL, credentials, and logs.",
+    "497": "SABnzbd settings require an API key unless username/password authentication is configured.",
+    "498": "A catalog message describes a path as the configured recycle-bin folder, but the current validator template uses a different dynamic relationship; caller mapping is unverified.",
+    "499": "CalibreProxy reports that the endpoint is not a valid Calibre content server and includes the official manual URL."
+  }
+}

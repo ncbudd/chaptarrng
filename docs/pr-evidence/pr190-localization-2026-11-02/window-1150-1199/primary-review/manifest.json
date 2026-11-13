@@ -1,0 +1,341 @@
+{
+  "artifactCountExcludingManifestAndSums": 35,
+  "artifacts": [
+    {
+      "bytes": 1208,
+      "path": "INPUT-SHA256SUMS",
+      "sha256": "5996062302237fb02d366d9b1fb9e8408b98b7e7c92ad0e60dc21f97ead47391"
+    },
+    {
+      "bytes": 3835,
+      "path": "README.md",
+      "sha256": "3407965d5ae10eea43636d17e15019384e1ea16ead639b3adb97787622ff7a0c"
+    },
+    {
+      "bytes": 26872,
+      "path": "build-locale-review.py",
+      "sha256": "26168140c0fe291b24b76e3764472c37f6b739a1c1bff0053cc40ab7e09daea4"
+    },
+    {
+      "bytes": 71297,
+      "path": "caller-context.jsonl",
+      "sha256": "41a67039bf8b09cd3132f756ae76741947098ab26e3ac3f935820ba82754328a"
+    },
+    {
+      "bytes": 6159,
+      "path": "catalog-pins.json",
+      "sha256": "06b275e813555de0508363d65c1110f09915b3a020cb95b782438dfb374242d4"
+    },
+    {
+      "bytes": 543607,
+      "path": "correction-candidates.jsonl",
+      "sha256": "0a60863cc27359f616faf5a9d8daf9c91d85e39c86e300a9ba2f8e3b0a5da501"
+    },
+    {
+      "bytes": 3142,
+      "path": "final-reattestation.json",
+      "sha256": "fe1bd9d21a5765bf62849076e36e07e4ca93a619e7002a7fd5a4634b9a655cf7"
+    },
+    {
+      "bytes": 58904,
+      "path": "holds.jsonl",
+      "sha256": "f8cf328684259824eab23e3db9bde449ed6e5662f62cd6e918dac9c719d6bcfe"
+    },
+    {
+      "bytes": 1376027,
+      "path": "input-cells.jsonl",
+      "sha256": "d5707abb0e4838a62728f0c42dc667e97efdc57cd53b59da1f12e67e615dd7fe"
+    },
+    {
+      "bytes": 2429,
+      "path": "input-manifest.json",
+      "sha256": "27c84a1ce0123a0c61792bb412373d168569e775c70e16098f8dab9a5b9816c7"
+    },
+    {
+      "bytes": 756811,
+      "path": "locale-review-ar-de-es-fr-hi-id.jsonl",
+      "sha256": "b8ffcadfe0d94ffbcee11c51594bace9e9fbbbfb0cb76d76946363a7493e3145"
+    },
+    {
+      "bytes": 187,
+      "path": "locale-review-ar-de-es-fr-hi-id.jsonl.sha256",
+      "sha256": "642da8368407e41b2c65ba77eb25f681c0e60b1f9bdc6c9a141d5bd7e54d01f5"
+    },
+    {
+      "bytes": 1223398,
+      "path": "locale-review-ja-ko-pt-vi-zh.jsonl",
+      "sha256": "599491809bc442c981087e13dcec926207b26f9b2b7de88b712e81a91c0ef945"
+    },
+    {
+      "bytes": 101,
+      "path": "locale-review-ja-ko-pt-vi-zh.jsonl.sha256",
+      "sha256": "b88a01d31488655c4d442ed4040644751e3f456fdb2d93f0f6edad463de32fa7"
+    },
+    {
+      "bytes": 7674,
+      "path": "pinned-files.json",
+      "sha256": "6ee4af2429232c0720d02eb23fd1dfcf7dcb3b8b3f372cbc9aeb2bd0f5f60fb9"
+    },
+    {
+      "bytes": 11844458,
+      "path": "prior-disposition-reattestation.jsonl",
+      "sha256": "d390a1037a299ced368f46582eb68dff9e71daaea281a29bff65df3479fb851c"
+    },
+    {
+      "bytes": 19327,
+      "path": "prior-window-reattestation.json",
+      "sha256": "366a6673f973f82fc155f53dd50199abf8a68f1efa32087c11cd32c09989bce1"
+    },
+    {
+      "bytes": 560344,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "f183d30ae2b404f5c32a8d4589e3a9624883afb74946300c0ff34e4ab8351140"
+    },
+    {
+      "bytes": 192060,
+      "path": "refinement-candidates.jsonl",
+      "sha256": "c09d8da48c424387cac28f20c7f210daa57acab23581f2afe8b56896fb9e1f57"
+    },
+    {
+      "bytes": 2441498,
+      "path": "review-cells.jsonl",
+      "sha256": "794cbb9dc208ffedee27c90bb568cfc75ef6bdeb6bc252e9d72477eddf527245"
+    },
+    {
+      "bytes": 1047,
+      "path": "review-parts-manifest.json",
+      "sha256": "c4e4d1e51c1d48e18b83467f0317ca7230a3d84f2a6de8ba765516e4dbb49992"
+    },
+    {
+      "bytes": 3629,
+      "path": "seal-live-reattestation.py",
+      "sha256": "0ce4b30ebe0ecb4430c7a8a0106b058e981ca3946a897d992bf3acecf9d70795"
+    },
+    {
+      "bytes": 7776,
+      "path": "seal-packet-meta.py",
+      "sha256": "6872776f8d9ff39ef9fb9ed7416eb814232e95ae5d1c6a1ab09743ac2d0933b3"
+    },
+    {
+      "bytes": 12244,
+      "path": "seal-review-ledger.py",
+      "sha256": "5d4f3425abbfc1ecfa57020332a4e3dedabb2e3c15f79bb218f63f26231af09a"
+    },
+    {
+      "bytes": 6753,
+      "path": "snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "08a843036f1d3088b2a583620cef1b7f6120d932de4a167b6364ab4de2469443"
+    },
+    {
+      "bytes": 8007,
+      "path": "snapshots/final-seal-all-pr-heads.json",
+      "sha256": "ee245c4aa113343e2da5ed11a6e77a9c00fcb3551457a18f33814439cf72f21e"
+    },
+    {
+      "bytes": 6760,
+      "path": "snapshots/start-all-pr-heads.json",
+      "sha256": "837a32899f6859fef76a0889fff31e5da0d52855f3c390f637983bfe53dc842d"
+    },
+    {
+      "bytes": 2963,
+      "path": "source-selection.json",
+      "sha256": "b706dd45696218607c3338916a4132490be40406bf1186b9524b407cc023c29e"
+    },
+    {
+      "bytes": 100111,
+      "path": "source-slice.jsonl",
+      "sha256": "1c07e345b0605d4c68b21cc022ad1de8dbd1e8e4bcb92f473a8f8ddc32df5d98"
+    },
+    {
+      "bytes": 3414,
+      "path": "summary.json",
+      "sha256": "6a2536745d0bb362bbaf01ef5757f6bfabab52765cd666b32727d3cbcd256657"
+    },
+    {
+      "bytes": 792,
+      "path": "terminology-and-locale-notes.json",
+      "sha256": "889623e94739b825c151f56cd671b0f2a6411e57aacf62778e7dfa51c38ba4c4"
+    },
+    {
+      "bytes": 9303,
+      "path": "w1149-backward-boundary.json",
+      "sha256": "bd4ea8348cceaba5d6345c493ac7e389374c0e8d3270d24623de104cb0f0b9fe"
+    },
+    {
+      "bytes": 8437,
+      "path": "w1149-backward-boundary.jsonl",
+      "sha256": "932ba236e7b3cd33eb9354eb8c0fd6e839ba6b37e7f4b48ee68ee7b4f57a9069"
+    },
+    {
+      "bytes": 11968,
+      "path": "w1200-forward-boundary.json",
+      "sha256": "dc71b1a9f368632151ae104203a2992991f2b48d9e12b556e64a0ffd997f0c2d"
+    },
+    {
+      "bytes": 10835,
+      "path": "w1200-forward-boundary.jsonl",
+      "sha256": "08fc5001c0723b675e82e9d86e60e5e53bf4990e184a88c4ed114d1a1c4f480d"
+    }
+  ],
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "cellCount": 600,
+  "dispositionCounts": {
+    "accept-current": 409,
+    "correction": 133,
+    "hold": 12,
+    "refinement": 46
+  },
+  "finalReattestationSha256": "fe1bd9d21a5765bf62849076e36e07e4ca93a619e7002a7fd5a4634b9a655cf7",
+  "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "inputManifestSha256": "27c84a1ce0123a0c61792bb412373d168569e775c70e16098f8dab9a5b9816c7",
+  "inputSumsSha256": "5996062302237fb02d366d9b1fb9e8408b98b7e7c92ad0e60dc21f97ead47391",
+  "localeCount": 12,
+  "packet": "ChaptarrNG PR #190 primary localization review W1150-W1199",
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "reviewCellsSha256": "794cbb9dc208ffedee27c90bb568cfc75ef6bdeb6bc252e9d72477eddf527245",
+  "schemaVersion": 1,
+  "sealedAtUtc": "2026-11-03T00:18:09.948263+00:00",
+  "snapshots": [
+    "snapshots/start-all-pr-heads.json",
+    "snapshots/after-source-selection-all-pr-heads.json",
+    "snapshots/final-seal-all-pr-heads.json"
+  ],
+  "sourceCount": 50,
+  "summary": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "callerFiles": 7,
+    "callerGaps": 0,
+    "cellCount": 600,
+    "confidenceCounts": {
+      "high": 153,
+      "low": 12,
+      "moderate": 435
+    },
+    "currentProtectedLiteralFailureCells": 11,
+    "directCallerReferences": 59,
+    "dispositionCounts": {
+      "accept-current": 409,
+      "correction": 133,
+      "hold": 12,
+      "refinement": 46
+    },
+    "finalProtectedLiteralFailureCells": 11,
+    "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "headedBrowserAcceptance": false,
+    "history": {
+      "historicFinalVsCurrentMismatchesStable": 195,
+      "oldLiveCurrentDriftThroughW1149": 0,
+      "priorRowsReattested": 13800,
+      "w1050DodgeHoldsPreserved": 12,
+      "w1100AppliedReadbackMismatches": 0,
+      "w1149BackwardBoundaryRows": 12,
+      "w1149BoundaryMatches": 12,
+      "w1150BoundaryMatches": 12,
+      "w1150ForwardBoundaryRows": 12
+    },
+    "holdCellCount": 12,
+    "holdRationale": "For W1187, both callers provide TargetQualityName ?? \"M4B\" as {value0}; the dynamic name can differ from M4B while source registry requires protected literal M4B. Hold rather than insert a possibly false M4B label or infer that dynamic values are always M4B.",
+    "holdSourceIds": [
+      "server.message.md764ed5e74b4"
+    ],
+    "icuMismatchCells": 0,
+    "isDraft": true,
+    "limitations": "Static machine-assisted primary semantic review. No native-speaker approval, headed browser acceptance, runtime validation, or CI/test/build evidence is claimed. One source registry/caller conflict is held in all locales.",
+    "localeCount": 12,
+    "markupMismatchCells": 0,
+    "nativeSpeakerApproval": false,
+    "overallConfidence": "moderate",
+    "perLocaleDispositionCounts": {
+      "ar": {
+        "accept-current": 37,
+        "correction": 7,
+        "hold": 1,
+        "refinement": 5
+      },
+      "de": {
+        "accept-current": 34,
+        "correction": 12,
+        "hold": 1,
+        "refinement": 3
+      },
+      "es": {
+        "accept-current": 37,
+        "correction": 10,
+        "hold": 1,
+        "refinement": 2
+      },
+      "fr": {
+        "accept-current": 33,
+        "correction": 11,
+        "hold": 1,
+        "refinement": 5
+      },
+      "hi": {
+        "accept-current": 38,
+        "correction": 8,
+        "hold": 1,
+        "refinement": 3
+      },
+      "id": {
+        "accept-current": 38,
+        "correction": 10,
+        "hold": 1,
+        "refinement": 1
+      },
+      "ja": {
+        "accept-current": 33,
+        "correction": 11,
+        "hold": 1,
+        "refinement": 5
+      },
+      "ko": {
+        "accept-current": 30,
+        "correction": 12,
+        "hold": 1,
+        "refinement": 7
+      },
+      "pt-BR": {
+        "accept-current": 35,
+        "correction": 11,
+        "hold": 1,
+        "refinement": 3
+      },
+      "vi": {
+        "accept-current": 26,
+        "correction": 18,
+        "hold": 1,
+        "refinement": 5
+      },
+      "zh-Hans": {
+        "accept-current": 34,
+        "correction": 12,
+        "hold": 1,
+        "refinement": 3
+      },
+      "zh-Hant": {
+        "accept-current": 34,
+        "correction": 11,
+        "hold": 1,
+        "refinement": 4
+      }
+    },
+    "placeholderMismatchCells": 0,
+    "proposalKindCounts": {
+      "correction": 133,
+      "refinement": 46
+    },
+    "proposedValueChanges": 179,
+    "pullRequest": 190,
+    "repository": "snapetech-org/chaptarrng",
+    "sourceCount": 50,
+    "state": "OPEN",
+    "tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+    "window": "W1150-W1199",
+    "zeroBasedQueuePositions": [
+      1150,
+      1199
+    ]
+  },
+  "tree": "d073e1373021bf715db37461a12654f7e993cdbf"
+}

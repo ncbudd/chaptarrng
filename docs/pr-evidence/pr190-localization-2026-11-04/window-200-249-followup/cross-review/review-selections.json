@@ -1,0 +1,49 @@
+{
+  "blindSelectedCells": [
+    "AuthenticationRequiredUsernameHelpTextWarning::es",
+    "AuthorDetailsNoMediaTypeRootFolder::es",
+    "AuthorDetailsNoMediaTypeRootFolder::zh-Hans",
+    "AuthorDetailsSeasonNoMediaTypeRootFolder::es",
+    "AuthorDetailsSeasonNoMediaTypeRootFolder::zh-Hans",
+    "AuthorEditorSyncAcrossFormatsHelpText::ar",
+    "AuthorMonitoringGateDetailedHelpText::de",
+    "AuthorMonitoringGateDetailedHelpText::ja",
+    "AutoAddMissingAuthorsConfirmTitle::hi",
+    "AutoAddMissingAuthorsConfirmTitle::pt-BR",
+    "AutoAddMissingAuthorsDisabledTooltip::zh-Hant",
+    "AutoAddMissingAuthorsEnabledTooltip::pt-BR",
+    "AutoAddMissingAuthorsFromCompletedDownloadsHelpText::hi"
+  ],
+  "customTargets": {
+    "AuthorEditorSyncAcrossFormatsHelpText::id": "Tindakan ini langsung menyinkronkan buku yang dipantau oleh penulis yang memenuhi syarat di berbagai format. Proses ini tidak memulai pencarian.",
+    "AuthorEditorSyncAcrossFormatsHelpText::zh-Hans": "此操作会立即跨格式同步符合条件的作者所监控的书籍。此操作不会触发搜索。",
+    "AutoAddMissingAuthorsConfirmMessage::pt-BR": "O Chaptarr pode adicionar autores ausentes identificados pelo servidor a partir dos downloads concluídos na sua categoria do Chaptarr e depois importar esses arquivos. Os novos autores serão colocados na pasta raiz padrão que você escolher. Se houver apenas uma pasta raiz para esse tipo de mídia, o Chaptarr a usará automaticamente."
+  },
+  "rationalesByOrdinal": {
+    "201": "The current Spanish says “new user” and omits the account-name meaning; the selected wording explicitly says “username.”",
+    "202": "The current clauses make the product appear to enable authentication. The selected wording says the application now requires authentication and preserves the local-address exception.",
+    "207": "Corrects malformed word order around the media-type root folder and keeps both placeholders. Spanish retains the existing polite register; Vietnamese localizes “series” with the catalog term.",
+    "208": "Adds the missing “or” to the alternative label in its caller context.",
+    "209": "Corrects malformed word order and preserves the author, folder, book, and media-type meaning. Spanish retains the existing polite register.",
+    "210": "Uses the natural Chinese book counter with the existing count placeholder and balanced punctuation.",
+    "212": "Clarifies that eligible authors’ monitored books are synced across formats and that the action does not start a search. The Indonesian and Simplified Chinese refinements avoid awkward constructions in both submitted candidates.",
+    "217": "Restores the omitted “name” in the Vietnamese field label.",
+    "220": "Replaces literal “book rows,” “grab,” and unmonitor wording with the actual monitored-book automation behavior. The selected text retains searching, downloading/upgrading, the pause for this media type, and unchanged individual book selections.",
+    "224": "Places the query as the search target and the provider as its source, matching the UI’s provider-search prompt.",
+    "228": "Replaces transliterated English with a concise Hindi action label.",
+    "229": "States the auto-add action and its author scope in Hindi.",
+    "230": "Corrects “missing” authors and the queue-import condition; Traditional Chinese uses the queue term rather than “column import.”",
+    "231": "Makes the server-matched author relationship and completed-download condition clear, and identifies the localized Root Folders setting.",
+    "232": "Replaces transliterated English with the Hindi auto-add action while retaining “missing authors.”",
+    "233": "Clarifies that the server matches missing authors from completed downloads in the Chaptarr category, then preserves import and default-root behavior.",
+    "234": "Uses a natural enable-auto-add title and keeps the localized action and author scope.",
+    "235": "Corrects the retry-import instruction and the completed-download/server-match relationship while retaining the one-root-folder fallback.",
+    "239": "Replaces the literal technical “push” calque with the natural send action for metadata.",
+    "241": "The caller is a checkbox in failed-download handling. The selected wording describes redownloading when a download fails instead of reporting a failed redownload.",
+    "242": "The caller is the nested interactive-search checkbox. The selected wording describes retrying after failure and preserves the distinction from other sources.",
+    "243": "Clarifies that the download of a release chosen or obtained from Interactive Search failed, which triggers searching for and attempting another release.",
+    "245": "The source describes stopping monitoring after a book is deleted; it does not say the book itself is disabled or unmanaged.",
+    "246": "The caller uses “Automatic” as an option label; the selected Chinese adjective means automatic rather than automation.",
+    "248": "Uses the established notion of switching/changing between releases, rather than an ambiguous English borrowing or replacement-only wording."
+  }
+}

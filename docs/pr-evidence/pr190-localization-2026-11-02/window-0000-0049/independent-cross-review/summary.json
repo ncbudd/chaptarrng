@@ -1,0 +1,203 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "pullRequestUrl": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "pullRequestStateAtFinalCheck": "OPEN",
+  "pullRequestIsDraftAtFinalCheck": true,
+  "baseHead": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "reviewHead": "7bb2b2f977e81d214318b3f873afe8ab17f03ed5",
+  "reviewTree": "5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb",
+  "worktreePath": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeStatusAtFinalCheck": "clean",
+  "primaryPacketPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-semantic-20261102",
+  "primaryDecisionsSha256": "c481a5aacf8ce6b550c00a8baae964ad145ebe6ac639bd68bd10267e78788229",
+  "primaryPacketSumsSha256": "0352f1f513eb97b70c2f7b23f2a2fd7df2eafbf10c9d5f3c7538acefbd69cd38",
+  "inputPacketPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102",
+  "inputCellsSha256": "e43c22f4fdea77aab86aba6c212d8227b490c106cfc9bdb14a573884164afd3e",
+  "inputManifestSha256": "ac560313425747250b558878f290b62d33a1f03ead3e4079f3092f0dd54b62ce",
+  "counts": {
+    "sourceIds": 50,
+    "locales": 12,
+    "cells": 600,
+    "primaryCandidates": 65,
+    "primaryCandidateSourceIds": 20,
+    "primaryKeeps": 535,
+    "crossReview": {
+      "accepted": 573,
+      "missed": 25,
+      "refined": 2
+    },
+    "acceptedCurrentKeepRows": 510,
+    "acceptedPrimaryCandidateRows": 63,
+    "refinedPrimaryCandidateRows": 2,
+    "missedPrimaryKeepRows": 25,
+    "held": 0,
+    "noop": 0,
+    "exactRecommendedReplacementRows": 90,
+    "newCrossReviewTargetRows": 27
+  },
+  "dispositionsByLocale": {
+    "ar": {
+      "accepted": 48,
+      "missed": 2
+    },
+    "de": {
+      "accepted": 49,
+      "missed": 1
+    },
+    "es": {
+      "accepted": 49,
+      "missed": 1
+    },
+    "fr": {
+      "accepted": 50
+    },
+    "hi": {
+      "accepted": 47,
+      "missed": 2,
+      "refined": 1
+    },
+    "id": {
+      "accepted": 47,
+      "missed": 2,
+      "refined": 1
+    },
+    "ja": {
+      "accepted": 47,
+      "missed": 3
+    },
+    "ko": {
+      "accepted": 45,
+      "missed": 5
+    },
+    "pt-BR": {
+      "accepted": 48,
+      "missed": 2
+    },
+    "vi": {
+      "accepted": 45,
+      "missed": 5
+    },
+    "zh-Hans": {
+      "accepted": 49,
+      "missed": 1
+    },
+    "zh-Hant": {
+      "accepted": 49,
+      "missed": 1
+    }
+  },
+  "attestationPath": "attestation.json",
+  "callerPinsPath": "caller-pins.jsonl",
+  "rowLedgerPath": "crossreview-decisions.jsonl",
+  "attestationErrors": 0,
+  "callerPinErrors": 0,
+  "protectedLiteralValueLosses": 0,
+  "exactHeadReconciliationOverlap": 0,
+  "structuredRepositoryCellEvidenceOverlap": 0,
+  "placeholderMetadataDifference": {
+    "inputPacketPlaceholderTokensEmptyForSevenIDs": true,
+    "affectedIds": 7,
+    "affectedCells": 84,
+    "details": {
+      "provider.field.f848a6d927677": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          ".torrent"
+        ],
+        "rows": 12
+      },
+      "provider.field.f0fafe62ec9fe": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          ".torrent"
+        ],
+        "rows": 12
+      },
+      "provider.field.f0d53d88c6792": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          ".magnet"
+        ],
+        "rows": 12
+      },
+      "provider.field.f73ea2afd7b35": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          ".nzb"
+        ],
+        "rows": 12
+      },
+      "provider.field.f5948d0bfdf6a": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          "[host]",
+          "[port]",
+          "[urlBase]"
+        ],
+        "rows": 12
+      },
+      "provider.field.f242bd077cedf": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          "[category]"
+        ],
+        "rows": 12
+      },
+      "provider.field.fcba7a5944e56": {
+        "inputTokens": [],
+        "semanticProtectedTokens": [
+          "[protocol]",
+          "[host]",
+          "[port]",
+          "[urlBase]"
+        ],
+        "rows": 12
+      }
+    },
+    "allListedProtectedValuesPresentInSourceCurrentAndEveryCandidate": true
+  },
+  "reviewSubpackets": {
+    "a": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-crossreview-20261102/locale-a",
+      "rows": 300,
+      "jsonl": "crossreview-decisions.jsonl",
+      "jsonlSha256": "5ff57d76c825755d5f986425eb0ef2ac2ffa489b67438217d7698e331024ffc3",
+      "sha256SumsFileSha256": "08a9f7c91c091f8b5feb024c2d3e94a39262e25fd2600f4a7111cb7fe899aed9",
+      "checksumsVerified": true
+    },
+    "b": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-crossreview-20261102/locale-b",
+      "rows": 300,
+      "jsonl": "locale-b-crossreview.jsonl",
+      "jsonlSha256": "035d6755e8d1005df3e35b42f77453f4ef7d8628b4848f8a76c18d71ab80a22b",
+      "sha256SumsFileSha256": "85b1ac17c327517aafeb3369e12f63cdca6fce7490df03b4968b0b265147abd6",
+      "checksumsVerified": true
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "headedBrowserReview": false,
+  "repositoryOrPrEdited": false,
+  "testsBuildsScansCiReleasesRun": false,
+  "blockers": [],
+  "verification": {
+    "sourceHashesChecked": 600,
+    "currentTargetHashesChecked": 600,
+    "primaryCandidateHashesChecked": 65,
+    "crossReviewRecommendedTargetHashesChecked": 90,
+    "callerReferenceOccurrencesAcrossRows": 1608,
+    "uniqueSourceCallerReferences": 134,
+    "uniquePhysicalCurrentLines": 95,
+    "callerFiles": 19,
+    "registryLineShiftsReattestedAtUniqueCurrentLocations": 86,
+    "allExactCallerLinesUnique": true,
+    "sourceIdsWithoutCallers": 0,
+    "placeholderMetadataDifferenceRows": 84,
+    "repositoryLocalizationJsonFilesScanned": 22,
+    "priorCellPairOverlaps": 0,
+    "allPacketChecksumsVerified": true,
+    "worktreeCleanAtFinalCheck": true,
+    "livePrHeadStillPinnedAtFinalCheck": true
+  }
+}

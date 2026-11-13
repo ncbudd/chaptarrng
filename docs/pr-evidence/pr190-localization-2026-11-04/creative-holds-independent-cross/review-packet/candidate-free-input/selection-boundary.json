@@ -1,0 +1,51 @@
+{
+  "cellCount": 20,
+  "excluded": [
+    {
+      "locale": "id",
+      "reason": "outside confirmed 20-cell scope",
+      "sourceId": "ui.loading.dodgeBooks"
+    }
+  ],
+  "included": [
+    {
+      "locales": [
+        "vi"
+      ],
+      "sourceId": "provider.option.o7285d46b982d"
+    },
+    {
+      "locales": [
+        "ar",
+        "de",
+        "es",
+        "fr",
+        "hi",
+        "ja",
+        "ko",
+        "pt-BR",
+        "vi",
+        "zh-Hans",
+        "zh-Hant"
+      ],
+      "sourceId": "ui.loading.dodgeBooks"
+    },
+    {
+      "locales": [
+        "ar",
+        "hi",
+        "id",
+        "ja",
+        "ko",
+        "vi",
+        "zh-Hans",
+        "zh-Hant"
+      ],
+      "sourceId": "ui.loading.newEbookSmell"
+    }
+  ],
+  "priorReviewVerdictsIncluded": false,
+  "selection": "20 previously held creative-prompt cells re-reviewed from current exact head",
+  "sourceCount": 3,
+  "translationCandidatesIncluded": false
+}

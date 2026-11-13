@@ -1,0 +1,60 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pull_request": 190,
+  "reviewed_input_head": "32686f13760d04de2bba00af47fc561e632741de",
+  "reviewed_input_tree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+  "source_positions": [
+    200,
+    249
+  ],
+  "cells_reviewed": 600,
+  "changes_applied": 52,
+  "accepted_primary_targets": 51,
+  "independent_refinements": 1,
+  "change_count_by_locale": {
+    "es": 5,
+    "zh-Hans": 4,
+    "hi": 5,
+    "ja": 3,
+    "pt-BR": 6,
+    "ar": 5,
+    "zh-Hant": 5,
+    "vi": 6,
+    "id": 5,
+    "de": 3,
+    "fr": 3,
+    "ko": 2
+  },
+  "key_counts_before": {
+    "src/NzbDrone.Core/Localization/Core/es.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/hi.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ja.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ar.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/vi.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/id.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/de.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/fr.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ko.json": 4165
+  },
+  "key_counts_after": {
+    "src/NzbDrone.Core/Localization/Core/es.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/hi.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ja.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ar.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/vi.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/id.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/de.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/fr.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ko.json": 4165
+  },
+  "caller_refs_reattested": 52,
+  "native_speaker_approval": false,
+  "browser_review": false,
+  "tests_builds_scans_ci_workflows_releases_tags_merges": false
+}

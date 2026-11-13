@@ -82,7 +82,7 @@ on:
 
 # Build validation runs from an explicit main-branch hosted/private dispatch or
 # an exact release tag passed through the main-branch reusable workflow call.
-# Trusted owner PRs use a metadata-only private-JIT route.
+# Trusted owner PRs use a metadata-only public-hosted route.
 concurrency:
   group: build-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}-${{ github.event.action == 'edited' && 'metadata' || 'code' }}
   cancel-in-progress: false
@@ -99,7 +99,7 @@ jobs:
         (
           github.ref == 'refs/heads/main' &&
           inputs.action == 'ci' &&
-          inputs.runner_pool == 'private'
+          inputs.runner_pool == 'public'
         )
       ) &&
       (
@@ -111,10 +111,10 @@ jobs:
         github.event.pull_request.base.ref == 'main' &&
         github.event.pull_request.user.type != 'Bot' &&
         contains(github.event.pull_request.labels.*.name, 'action:ci') &&
-        contains(github.event.pull_request.labels.*.name, 'pool:private') &&
+        contains(github.event.pull_request.labels.*.name, 'pool:public') &&
         (github.event.action != 'edited' || github.event.changes.body != null)
       )
-    runs-on: ${{ fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-release-notes"]}}', github.run_id)) }}
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
     steps:
@@ -1024,7 +1024,7 @@ jobs:
         (
           github.ref == 'refs/heads/main' &&
           inputs.action == 'ci' &&
-          inputs.runner_pool == 'private'
+          inputs.runner_pool == 'public'
         )
       ) &&
       (
@@ -1035,9 +1035,9 @@ jobs:
         github.event.pull_request.head.repo.id == github.repository_id &&
         github.event.pull_request.base.ref == 'main' &&
         contains(github.event.pull_request.labels.*.name, 'action:ci') &&
-        contains(github.event.pull_request.labels.*.name, 'pool:private')
+        contains(github.event.pull_request.labels.*.name, 'pool:public')
       )
-    runs-on: ${{ fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-owner-pr-dispatcher"]}}', github.run_id)) }}
+    runs-on: ubuntu-24.04
     permissions:
       actions: write
       contents: none
@@ -1072,7 +1072,7 @@ jobs:
             "ref": "main",
             "inputs": {
                 "action": "ci",
-                "runner_pool": "private",
+                "runner_pool": "public",
                 "pr_number": number,
                 "pr_sha": sha,
                 "target_run_id": target,
@@ -1100,13 +1100,13 @@ jobs:
       github.event_name == 'workflow_dispatch' &&
       (github.actor == 'snapetech' || github.actor == 'github-actions[bot]') &&
       inputs.action == 'ci' &&
-      inputs.runner_pool == 'private' &&
+      inputs.runner_pool == 'public' &&
       inputs.pr_number != '' &&
       inputs.pr_sha != '' &&
       inputs.target_run_id != '' &&
       inputs.runner_policy_only != true &&
       github.ref == 'refs/heads/main'
-    runs-on: ${{ fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-owner-pr-validation"]}}', github.run_id)) }}
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       pull-requests: read
@@ -1210,13 +1210,13 @@ jobs:
       github.event_name == 'workflow_dispatch' &&
       (github.actor == 'snapetech' || github.actor == 'github-actions[bot]') &&
       inputs.action == 'ci' &&
-      inputs.runner_pool == 'private' &&
+      inputs.runner_pool == 'public' &&
       inputs.pr_number != '' &&
       inputs.pr_sha != '' &&
       inputs.target_run_id != '' &&
       inputs.runner_policy_only != true &&
       github.ref == 'refs/heads/main'
-    runs-on: ${{ fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-owner-pr-reporter"]}}', github.run_id)) }}
+    runs-on: ubuntu-24.04
     permissions:
       checks: write
       contents: none

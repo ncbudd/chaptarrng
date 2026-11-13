@@ -1,0 +1,104 @@
+{
+  "artifact": "ChaptarrNG W561 independent blind source/caller evidence",
+  "repository": "ChaptarrNG",
+  "worktree": "/home/keith/Documents/code/.task-worktrees/localization-20261105/chaptarrng-w500",
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "proposedSourceId": "server.message.m3a79390fb21e",
+  "sourceTransition": "The current validation caller uses the old message key; the correction is prospective and would use the proposed new key.",
+  "currentEnglish": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "fileSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+    "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "value": "NzbGet setting KeepHistory should be less than 25000",
+    "valueSha256": "453c42aa8de536feb62fa62896136529ab6d16edf996511f0fb44b037ba2dc1f"
+  },
+  "proposedEnglish": {
+    "value": "NzbGet setting KeepHistory must not exceed 25000",
+    "valueSha256": "3a79390fb21e5a7e7e4ea479d3d5f2643862a645f76312b3f107817fde29c5b4",
+    "meaning": "Maximum is inclusive: 25000 is allowed; only values greater than 25000 are rejected."
+  },
+  "caller": {
+    "path": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs",
+    "fileSha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c",
+    "gitBlob": "a3a899a8b318a9739e03c7b34eea630b8ef418d1",
+    "lineRange": [
+      339,
+      354
+    ],
+    "lines": [
+      {
+        "line": 339,
+        "text": "            var keepHistory = config.GetValueOrDefault(\"KeepHistory\", \"7\");"
+      },
+      {
+        "line": 340,
+        "text": "            if (!int.TryParse(keepHistory, NumberStyles.None, CultureInfo.InvariantCulture, out var value) || value == 0)"
+      },
+      {
+        "line": 341,
+        "text": "            {"
+      },
+      {
+        "line": 342,
+        "text": "                return new NzbDroneValidationFailure(string.Empty, \"NzbGet setting KeepHistory should be greater than 0\", \"server.message.m6b5f4e5a738f\", null)"
+      },
+      {
+        "line": 343,
+        "text": "                {"
+      },
+      {
+        "line": 344,
+        "text": "                    InfoLink = _proxy.GetBaseUrl(Settings),"
+      },
+      {
+        "line": 345,
+        "text": "                    DetailedDescription = \"NzbGet setting KeepHistory is set to 0. Which prevents Chaptarr from seeing completed downloads.\""
+      },
+      {
+        "line": 346,
+        "text": "                };"
+      },
+      {
+        "line": 347,
+        "text": "            }"
+      },
+      {
+        "line": 348,
+        "text": "            else if (value > 25000)"
+      },
+      {
+        "line": 349,
+        "text": "            {"
+      },
+      {
+        "line": 350,
+        "text": "                return new NzbDroneValidationFailure(string.Empty, \"NzbGet setting KeepHistory should be less than 25000\", \"server.message.m453c42aa8de5\", null)"
+      },
+      {
+        "line": 351,
+        "text": "                {"
+      },
+      {
+        "line": 352,
+        "text": "                    InfoLink = _proxy.GetBaseUrl(Settings),"
+      },
+      {
+        "line": 353,
+        "text": "                    DetailedDescription = \"NzbGet setting KeepHistory is set too high.\""
+      },
+      {
+        "line": 354,
+        "text": "                };"
+      }
+    ],
+    "windowSha256": "cd5e270bb926a64ef7f37feb0102e5e198c1e51fffa85e11bdb53b0062642aa1",
+    "predicateLine": 348,
+    "validationKeyLine": 350,
+    "branchPredicate": "value > 25000",
+    "behavior": "The branch rejects values strictly greater than 25000. A parsed value of exactly 25000 does not enter this error branch."
+  },
+  "sourceReview": "The proposed English copy corrects the strict-boundary implication in the current wording while preserving NzbGet, KeepHistory, and 25000.",
+  "primaryReviewRead": false
+}

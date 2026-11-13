@@ -1,0 +1,1103 @@
+{
+  "batch": "W300-349-Core",
+  "callerlessHoldCells": 48,
+  "callerlessKeys": [
+    "BookOnePlaceholder",
+    "BookTwoPlaceholder",
+    "ConflictsConsidered",
+    "SiblingTitlePlaceholder"
+  ],
+  "candidateFreeCellsSha256": "c796a6d6f357480bb25b98c722feceefc2cbef83c5efc065581b4c2f991332a9",
+  "candidateFreeManifestSha256": "7959f70b857f36f82f52af40ccb152f3ccc8444ec050813fe79d06dbb3508e64",
+  "currentWindowBlindOrCrossOutputsAccessed": false,
+  "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "exactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "finalLiveAttestationSha256": "0526dea5acfbb5ac5678b20f52f806075748eedb85465d624ada6d49f9c77061",
+  "finalLiveMainCallerDriftSha256": "3dd61e7962f1df66a9126edea269afcc370cca722fea82df81f489f147feff21",
+  "finalLiveMainSha": "db87e7fb22ba12172e303bb2e8e4bba219f0618e",
+  "finalLiveMainTree": "4912198b460759106b9c3f6be25b7211f9c98dbb",
+  "integrityMismatchDisposition": {
+    "candidateFreeNumericMismatchCount": 5,
+    "review": "All five mismatches were checked in source and caller context: Book One/Two are written as localized numbers in Korean/German; Japanese “at least one” uses 1; Arabic “one item” uses the singular word. These are faithful localization choices, not dropped quantities. Callerless Book One/Two cells remain hash-only holds."
+  },
+  "mainCallerDriftAttestationSha256": "1a10724bbf38579b9c78e620048e82276cb0e2caa0972272a937bed2e4cc9f0e",
+  "nativeSpeakerApproval": 0,
+  "nativeSpeakerReviewOutstanding": 600,
+  "priorWindowCrossFolderChecksumRead": true,
+  "priorWindowCrossReviewSemanticallyUsed": false,
+  "reviewProcessExposureArtifact": "review-process-exposure.json",
+  "reviewProcessExposureSha256": "7218fa34763147213a4240ebc52d82d12c3d2a8062d4a0fc0cc98dcc22700f86",
+  "sourceNotes": [
+    {
+      "callerContextSha256": "b54d38f46d15647e0e4fa2547469fcc40fe4e5e931c604dae93f384fe8388577",
+      "callerLines": [
+        "frontend/src/Author/Details/BookStatus.js:52",
+        "frontend/src/Book/Details/BookDetailsHeader.js:122",
+        "frontend/src/Book/Details/BookDetailsHeader.js:126",
+        "frontend/src/Book/Details/BookDetailsHeader.js:129",
+        "frontend/src/Book/Index/Table/BookStatusCell.js:28",
+        "frontend/src/Calendar/Agenda/AgendaEvent.js:113",
+        "frontend/src/Calendar/Events/CalendarEvent.js:72"
+      ],
+      "callerPaths": [
+        "frontend/src/Author/Details/BookStatus.js",
+        "frontend/src/Book/Details/BookDetailsHeader.js",
+        "frontend/src/Book/Index/Table/BookStatusCell.js",
+        "frontend/src/Calendar/Agenda/AgendaEvent.js",
+        "frontend/src/Calendar/Events/CalendarEvent.js"
+      ],
+      "callerReferenceCount": 7,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 7,
+      "relatedDynamicTranslationCallsiteCount": 1,
+      "sourceKey": "BookIsDownloading",
+      "sourceKeySha256": "6748abe9892925b4a6f6518776e0e2996725a8930906389075770f8141b1e1e1",
+      "sourceOrdinal": 300,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "86116fcc632ac2ec70b0fa740cfe214567b41b754f19a4f9f46c04356b1a5853",
+      "callerLines": [
+        "frontend/src/Activity/Queue/QueueDetails.js:81",
+        "frontend/src/Calendar/Events/CalendarEventQueueDetails.js:28"
+      ],
+      "callerPaths": [
+        "frontend/src/Activity/Queue/QueueDetails.js",
+        "frontend/src/Calendar/Events/CalendarEventQueueDetails.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 2,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookIsDownloadingInterp",
+      "sourceKeySha256": "95e4bca5fbe0c5151da71451e244259134683c744ef015f052ea3436ad90e485",
+      "sourceOrdinal": 301,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "c5f99517d226f47d3e668edd1cd773d472d172bc4b18edde817ca9f8ad3594af",
+      "callerLines": [
+        "frontend/src/Author/Details/AuthorDetails.js:400"
+      ],
+      "callerPaths": [
+        "frontend/src/Author/Details/AuthorDetails.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookList",
+      "sourceKeySha256": "0c5e785c7ff5add2813319916a0cf2d38bfb3bdc9378c643fb34ccc526c51421",
+      "sourceOrdinal": 302,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "5bc7930aa88d0d6fd523991bd787af1918411e97d963856dc79bf10da93f33f0",
+      "callerLines": [
+        "frontend/src/Book/Index/BookIndex.js:157"
+      ],
+      "callerPaths": [
+        "frontend/src/Book/Index/BookIndex.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "BookListChangedDuringMassSearch",
+      "sourceKeySha256": "98b3ec44b2a5c0ca0b3dddb1b7b02be3e289adbcb22c123a4fec95763fbbcb8a",
+      "sourceOrdinal": 303,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "642b601062620467e7ed56a30da4f0fa1274418cf250a3d5ada59da6814f9e85",
+      "callerLines": [
+        "frontend/src/Book/Index/BookIndex.js:142"
+      ],
+      "callerPaths": [
+        "frontend/src/Book/Index/BookIndex.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "BookListChangedDuringSelectAll",
+      "sourceKeySha256": "6ed0a4d03e788cbf722593a3242f692566d6236a244dc3231e91319e3e300e7c",
+      "sourceOrdinal": 304,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "2b54519da024d78b105906b1390d7b1ffab0f938e43ccfc345cd93af11889348",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:276",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:222",
+        "src/Chaptarr.Api.V1/Config/MediaManagementConfigResource.cs:118",
+        "src/Chaptarr.Api.V1/Config/MediaManagementConfigResource.cs:29",
+        "src/NzbDrone.Core/Configuration/BookMatchingStrictness.cs:3",
+        "src/NzbDrone.Core/Configuration/ConfigService.cs:307",
+        "src/NzbDrone.Core/Configuration/ConfigService.cs:309",
+        "src/NzbDrone.Core/Configuration/ConfigService.cs:311",
+        "src/NzbDrone.Core/Configuration/IConfigService.cs:44",
+        "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs:2122",
+        "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs:2139",
+        "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs:2140",
+        "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs:2142",
+        "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs:2170",
+        "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs:17",
+        "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs:18",
+        "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs:19",
+        "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs:7",
+        "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs:524",
+        "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs:124",
+        "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs:132",
+        "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs:79",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:14531",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:14674",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:5345",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:5360",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:5641",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:5648",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:5669",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:5833",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:6017",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:6023",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:6136",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:6160",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:756",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:760",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:764",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:768",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:770",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:7966",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:8071",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:8347",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:9529",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs:9682",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs:135",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs:141",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs:147",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs:151",
+        "src/NzbDrone.MatchBench/Program.cs:1069",
+        "src/NzbDrone.MatchBench/Program.cs:1074",
+        "src/NzbDrone.MatchBench/Program.cs:1077",
+        "src/NzbDrone.MatchBench/Program.cs:1088",
+        "src/NzbDrone.MatchBench/Program.cs:1092",
+        "src/NzbDrone.MatchBench/Program.cs:1098",
+        "src/NzbDrone.MatchBench/Program.cs:1533",
+        "src/NzbDrone.MatchBench/Program.cs:869",
+        "src/NzbDrone.MatchBench/Program.cs:895",
+        "src/NzbDrone.MatchBench/Program.cs:899",
+        "src/NzbDrone.MatchBench/Program.cs:928",
+        "src/NzbDrone.MatchBench/Program.cs:958"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+        "src/Chaptarr.Api.V1/Config/MediaManagementConfigResource.cs",
+        "src/NzbDrone.Core/Configuration/BookMatchingStrictness.cs",
+        "src/NzbDrone.Core/Configuration/ConfigService.cs",
+        "src/NzbDrone.Core/Configuration/IConfigService.cs",
+        "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+        "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs",
+        "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs",
+        "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs",
+        "src/NzbDrone.MatchBench/Program.cs"
+      ],
+      "callerReferenceCount": 60,
+      "indirectKeyReferenceCount": 58,
+      "literalCallCount": 2,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "BookMatchingStrictness",
+      "sourceKeySha256": "805cf4fa2ef1b16890cc47f1a88fb7ad11cec141913f3a48586ea2d6a98931d3",
+      "sourceOrdinal": 305,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "e3b9f48ea89341855badb690f2e866bce7b83f9126a4dbba79c098cd242c832b",
+      "callerLines": [
+        "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js:73",
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:286",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:233",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:51"
+      ],
+      "callerPaths": [
+        "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js",
+        "frontend/src/Settings/MediaManagement/MediaManagement.js",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 4,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 3,
+      "relatedDynamicTranslationCallsiteCount": 5,
+      "sourceKey": "BookMatchingStrictnessAggressive",
+      "sourceKeySha256": "54edf547d540d4564b9f47d0336dad769a72159b0c03ac2c78b2f375beb682d2",
+      "sourceOrdinal": 306,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "a13aca74d20980440eb628c874ec9568ca35bb7cd65148ad71166a4eff756761",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:47"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookMatchingStrictnessAggressiveHelpText",
+      "sourceKeySha256": "865f5eabe9626f0d1d43102f55b655eca8f72f90a3afddb91c211f7a07cf4e3e",
+      "sourceOrdinal": 307,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "3b9fdac141f9ad7adcf8521cc3193c3abdfe5b60b693a8765b1bab2e66c4c536",
+      "callerLines": [
+        "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js:75",
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:285",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:232",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:36"
+      ],
+      "callerPaths": [
+        "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js",
+        "frontend/src/Settings/MediaManagement/MediaManagement.js",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 4,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 3,
+      "relatedDynamicTranslationCallsiteCount": 5,
+      "sourceKey": "BookMatchingStrictnessBalanced",
+      "sourceKeySha256": "fd0aa33467ddc0fc022821e714671ac34652acf4ca35db058f3f5edb98d96b5d",
+      "sourceOrdinal": 308,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "c92b397abd8d8523a0f0e75fd68394e521c83c4b85474bcf8f9342145cb3e626",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:50"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookMatchingStrictnessBalancedHelpText",
+      "sourceKeySha256": "5651ae4ee52815fefb81b7fe8c4b818d5e3d289dfec16fcbf7eb03c135d6e6c2",
+      "sourceOrdinal": 309,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "ca3064c25c28c895d8d4a1879de57e25e67fa8072db64a5a35e1fa0d63b4b801",
+      "callerLines": [
+        "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js:77",
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:284",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:22",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:231"
+      ],
+      "callerPaths": [
+        "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js",
+        "frontend/src/Settings/MediaManagement/MediaManagement.js",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 4,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 3,
+      "relatedDynamicTranslationCallsiteCount": 5,
+      "sourceKey": "BookMatchingStrictnessStrict",
+      "sourceKeySha256": "8b5bce8c9eb4200f393ead317ce6baa7cac72e831b18e8b2fd3e9f5b0ea6fe48",
+      "sourceOrdinal": 310,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "73a31eb4fe3421775a4e8b19987f961f05b6de20556e82e23e188f23f8f99ecb",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js:45"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookMatchingStrictnessStrictHelpText",
+      "sourceKeySha256": "0442d6dd894827deed270c544a327ab04243196367a9167d35e6e097dc2a402b",
+      "sourceOrdinal": 311,
+      "sourceReviewNote": "Reviewed as a Settings selector/help block and a Quickstart matching example; meaning is tied to strictness level, title evidence, and series-position behavior."
+    },
+    {
+      "callerContextSha256": "4a60b50bd573976bef81229080fe1170370437b0770c0042339f3e88f2f89c3d",
+      "callerLines": [],
+      "callerPaths": [],
+      "callerReferenceCount": 0,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookOnePlaceholder",
+      "sourceKeySha256": "62ca36c850bbf047954c0b3968d1f904a6249d115b25e1d5e47c94b090e84e2b",
+      "sourceOrdinal": 312,
+      "sourceReviewNote": "No pinned production literal or indirect caller, and no same-file dynamic translation callsite was found. All 12 locale cells are held hash-only; no target change is recommended without verified caller context."
+    },
+    {
+      "callerContextSha256": "b28a2a9cd2b796dd05cc75e42bc35da6dbe0adb0f47796d25260b74c5a030c8e",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:24",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:38",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:53"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 3,
+      "indirectKeyReferenceCount": 3,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "BookTitlePlaceholder",
+      "sourceKeySha256": "6c8c95ab2c40b3cd8f06f40f937d5ffdc060a814b051356ac914ae3d8491bc28",
+      "sourceOrdinal": 313,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "07dcb1abcf2a633c22e4ae2ae60582e94de19a96eaa5c920a0fca5870bb101f2",
+      "callerLines": [],
+      "callerPaths": [],
+      "callerReferenceCount": 0,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "BookTwoPlaceholder",
+      "sourceKeySha256": "bb4195197f0b1d298bc434a70c6d19c09db82c9745e020e38b25d685fe013fef",
+      "sourceOrdinal": 314,
+      "sourceReviewNote": "No pinned production literal or indirect caller, and no same-file dynamic translation callsite was found. All 12 locale cells are held hash-only; no target change is recommended without verified caller context."
+    },
+    {
+      "callerContextSha256": "674753711e5f08ca729d7f3b870724ef81f1f6b19d5bf66315909f1d66b6f466",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:39"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "AccurateMetadataPlaceholder",
+      "sourceKeySha256": "e6d311e1fb32a14b67dfe4dfe5c9fad5ffff7649c176e95ddae78878cf794800",
+      "sourceOrdinal": 315,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "a45940f6165b2d8ce45b49ccf5dc9a34b8655777df4b34cb96282cad65696f51",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:256",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:297"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "ChangedItems",
+      "sourceKeySha256": "326940582d976ef6a8c9a4452f1dddda96812f034ace31cff2693c583040680a",
+      "sourceOrdinal": 316,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "f4be1a646bc66add526bb33ef18e158aaf8d05fd7835795ae82147444c177a38",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:29"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "ConflictingBookDataPlaceholder",
+      "sourceKeySha256": "ddfbe4d4c6a74adc71fae23b8444ce5ade9f7e167948a25aefee8c7f74ce17ea",
+      "sourceOrdinal": 317,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "be7dff297c9269e6faa89f71767f6c3ef39db169179d90d35898a3c8b2248187",
+      "callerLines": [],
+      "callerPaths": [],
+      "callerReferenceCount": 0,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "ConflictsConsidered",
+      "sourceKeySha256": "a7e976894974fc706036edf4b79db33c16e4f501136efedece504ff51f431d6a",
+      "sourceOrdinal": 318,
+      "sourceReviewNote": "No pinned production literal or indirect caller, and no same-file dynamic translation callsite was found. All 12 locale cells are held hash-only; no target change is recommended without verified caller context."
+    },
+    {
+      "callerContextSha256": "627374f5075f9a5956471abf475ce158f7b22724dc1bb975d1449115421276e5",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:288"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "DryRunNoProviderCommit",
+      "sourceKeySha256": "e6e3e5079c07202ff8e704926d9da0b439fe37b13730ba07b61fc11bc4a374c1",
+      "sourceOrdinal": 319,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "a702b8c3f74977351f658b5e32e40273fa17ed014b4c18b7d50c2a8f05e4b7e3",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:257"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "ExcludedItems",
+      "sourceKeySha256": "1625251872df4930e124407fdfdd6cc3a33dd4ec9740195c3092715cc7a5fd06",
+      "sourceOrdinal": 320,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "dcc47fc7c8cd82348f7abe77bfb8b13204a212dd381f70cb32964bd15c6ecfc8",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:40"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "ExtraUnrelatedTextPlaceholder",
+      "sourceKeySha256": "6e22a3d29af99b0c59633d5426eee6311892ccc8b74020292e77a3c04188d956",
+      "sourceOrdinal": 321,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "134a09be14e520da933efac68351e32ff24c2a946ce581de75a1bda1b74b7c5f",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:266",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:284",
+        "src/Chaptarr.Api.V1/ImportLists/ImportListSyncController.cs:45",
+        "src/Chaptarr.Api.V1/ImportLists/ImportListSyncController.cs:72",
+        "src/NzbDrone.Core/Datastore/Migration/117_add_import_list_sync_history.cs:21",
+        "src/NzbDrone.Core/Datastore/Migration/119_reconcile_rebased_branch_schemas.cs:74",
+        "src/NzbDrone.Core/Datastore/Migration/maintenance_rebased_version_collision_schema_repair.cs:326",
+        "src/NzbDrone.Core/ImportLists/FetchAndParseImportListService.cs:40",
+        "src/NzbDrone.Core/ImportLists/FetchAndParseImportListService.cs:41",
+        "src/NzbDrone.Core/ImportLists/FetchAndParseImportListService.cs:48",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistory.cs:14",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistoryService.cs:50",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncService.cs:1542",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncService.cs:1605"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+        "src/Chaptarr.Api.V1/ImportLists/ImportListSyncController.cs",
+        "src/NzbDrone.Core/Datastore/Migration/117_add_import_list_sync_history.cs",
+        "src/NzbDrone.Core/Datastore/Migration/119_reconcile_rebased_branch_schemas.cs",
+        "src/NzbDrone.Core/Datastore/Migration/maintenance_rebased_version_collision_schema_repair.cs",
+        "src/NzbDrone.Core/ImportLists/FetchAndParseImportListService.cs",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistory.cs",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistoryService.cs",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncService.cs"
+      ],
+      "callerReferenceCount": 14,
+      "indirectKeyReferenceCount": 12,
+      "literalCallCount": 2,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "FailureStage",
+      "sourceKeySha256": "96de0d7256e5c9258f7ef221f22f4ba8ea076bcca8ffaf876f1a999985901f95",
+      "sourceOrdinal": 322,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "ae307be88b42286d465cfb0c965a57b8daaa67ef506d629bfc6787a09ee417be",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:45",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:59"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 2,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "GenericSeriesTitleWithDifferentPositionPlaceholder",
+      "sourceKeySha256": "a392b60c84ee2501566efd491c5eac16a86aa8b12a74eb2b4eb8ff4ff4500ce2",
+      "sourceOrdinal": 323,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "db5c17b7cd84adc4ab7f7aff385bdf56e1b0b2af72f5dcfeaac0df7df9b89481",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:25"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "KnownAccurateMetadataPlaceholder",
+      "sourceKeySha256": "5461c605690d2da4eeae093be8895efb2f76b0be9d01e3b8ab22a8bbaf781276",
+      "sourceOrdinal": 324,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "0391b71bcfa79eab261c0a8358dbfe652951944f680f27fa2b9fa3361719d15a",
+      "callerLines": [
+        "frontend/src/Search/Common/AddAuthorOptionsForm.js:159"
+      ],
+      "callerPaths": [
+        "frontend/src/Search/Common/AddAuthorOptionsForm.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "LoadingRootFoldersForAdd",
+      "sourceKeySha256": "73914dff45c00f81548c0053b8afacba90d972caaf946a56b87e789272c9dfbc",
+      "sourceOrdinal": 325,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "a9cbc0d7fd9833073efba51ad6fba52374c27b7317288028cd40d4011e304bf9",
+      "callerLines": [
+        "src/NzbDrone.Core/HealthCheck/Checks/MamUnsatisfiedSlotStatusCheck.cs:43"
+      ],
+      "callerPaths": [
+        "src/NzbDrone.Core/HealthCheck/Checks/MamUnsatisfiedSlotStatusCheck.cs"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "MamUnsatisfiedSlotStatusStale",
+      "sourceKeySha256": "82e7a8eca5f28eeacbba3c68e9ba904ea66b138dd84ac32c772f04cb64835196",
+      "sourceOrdinal": 326,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "96b4f0e84047a5cf55c584fb4911af0f75c7ce3f46ddd93f459d1c6dfb119b7f",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js:14"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "NamingBuilderErrorConsecutiveFolderSeparators",
+      "sourceKeySha256": "ba4db6f372e19823ec814b8c115947ad733ee6210085a7ad7327fdbac970b2b6",
+      "sourceOrdinal": 327,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "5c5280659e3a574430cbd38215b17a94797f68df751974383dab26111ce339ab",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js:15"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "NamingBuilderErrorEmptyGroup",
+      "sourceKeySha256": "a0fe84a51da859abe27a733eb15549b4c0d1467504495bc1f6ac51c4824f8159",
+      "sourceOrdinal": 328,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "18c4ce0bcb35e1a2c2c35a2fb033b569ddb9437e02f9c3f08d0fe95dc4f9e12c",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js:16"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "NamingBuilderErrorMissingToken",
+      "sourceKeySha256": "1ea4bb9d2bedd2aeb3bd965c0105fe0e6de4ecd99323ff4c48aa507ff34be51e",
+      "sourceOrdinal": 329,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "4b68e4eb9d5d321e364f90230b3cbc1ba9b5a765bc8a9da44f4401fcb0e6991d",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/NamingCanvas.js:138",
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/utils.js:50"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/NamingCanvas.js",
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/utils.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 2,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "NamingBuilderGroupItem",
+      "sourceKeySha256": "8fd200dc66af0961897fdb1e7bb9fdd4835a97306a6fbbadcf9b051d25e8de18",
+      "sourceOrdinal": 330,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "a174c4f545f8f7bcf0fcd17a3d90630dab9fdf1ec009d7b3256b98c698fcb782",
+      "callerLines": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/NamingCanvas.js:138",
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/utils.js:50"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/NamingCanvas.js",
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/utils.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 2,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "NamingBuilderGroupItems",
+      "sourceKeySha256": "5b634e561b2290cbbab629562b404df787ae2293f1e53b9fc940a75d7acb949a",
+      "sourceOrdinal": 331,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "b036d40820e653c036049cd85565e4622b1813ee7c9d1d9ef69da1993cf457c9",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:254",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:297"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "NewItems",
+      "sourceKeySha256": "89477227f561684a6fe27ed9e10488bc0713b6e8d012c634ef50145e3e045afd",
+      "sourceOrdinal": 332,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "dbd09861f093bb6468bc60675e1c3019fd3b7f2d6d2eaaadd853a0009b54d54e",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:365"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "NoImportListSyncHistory",
+      "sourceKeySha256": "d11e102c959313c5d96f8ba46f031834a7e8d7e0fdbdfdad12ff0ebc485351f2",
+      "sourceOrdinal": 333,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "bfd587af85e81365d5360ddea939cad83642bd413e3724e3c5dc8dfaff16904a",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:55"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "NoisyExtraTextPlaceholder",
+      "sourceKeySha256": "503017518ab304360d487f81f10413dc099d7ca0c80bf9a2fdb716b4664ddbb0",
+      "sourceOrdinal": 334,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "cd090899efd375e6dae3d2d6c6006b669d12cb3790e3ff704bbdde7ffa22a74f",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:247",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:279"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 2,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "PreviewComplete",
+      "sourceKeySha256": "4b501e7755a69ec3fbbf4a3285f4921fcaa83e6b3b407cf8801922b8bbab35a6",
+      "sourceOrdinal": 335,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "9a064afae80b32cb6443b1c03f6526cb8bdf7704c9b792dd2683418eedd8eb74",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:249"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "PreviewFailed",
+      "sourceKeySha256": "21bbf1c5b446bfe97fb0fa8e022461205288f2b8eacf053924b2c5d79e6d4cc2",
+      "sourceOrdinal": 336,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "791907a244f8be5da22b0471d3b0fe907491d23a121f3a6f3899a0eaea0b0500",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportList.js:143",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:333"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportList.js",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 2,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "PreviewNextSync",
+      "sourceKeySha256": "93cdb332dd83b66a007279731466debbc513086dbee38b6dd8de90e30723c99b",
+      "sourceOrdinal": 337,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "d7f3c432857c8d81b3bbf9122e99f7fd3eba143415a03e7625b2581ba85088a7",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:333"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "PreviewingSync",
+      "sourceKeySha256": "4aefc7995177ee27ef476b155043f8a09d62bcb47535fc179c5f0d2aeaba5592",
+      "sourceOrdinal": 338,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "fda4aa7480aef6f15f43afb11a127b60a10ccdc301968a3d4cb5fec960d62371",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:253",
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:297"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "ProcessedItems",
+      "sourceKeySha256": "0e6dac8fa4ba87974fc5fdfa1d73cf8f200f166481fc881943d6376251c11a16",
+      "sourceOrdinal": 339,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "439a66fed0c021b8e83e55002d80191cae1df30fa1e3782e94285ca09f5bb054",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:286",
+        "src/Chaptarr.Api.V1/ImportLists/ImportListSyncController.cs:54",
+        "src/Chaptarr.Api.V1/ImportLists/ImportListSyncController.cs:81",
+        "src/NzbDrone.Core/Datastore/Migration/117_add_import_list_sync_history.cs:30",
+        "src/NzbDrone.Core/Datastore/Migration/119_reconcile_rebased_branch_schemas.cs:83",
+        "src/NzbDrone.Core/Datastore/Migration/maintenance_rebased_version_collision_schema_repair.cs:335",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistory.cs:23",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistoryService.cs:58"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+        "src/Chaptarr.Api.V1/ImportLists/ImportListSyncController.cs",
+        "src/NzbDrone.Core/Datastore/Migration/117_add_import_list_sync_history.cs",
+        "src/NzbDrone.Core/Datastore/Migration/119_reconcile_rebased_branch_schemas.cs",
+        "src/NzbDrone.Core/Datastore/Migration/maintenance_rebased_version_collision_schema_repair.cs",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistory.cs",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncHistoryService.cs"
+      ],
+      "callerReferenceCount": 8,
+      "indirectKeyReferenceCount": 7,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "ProviderStateCommitted",
+      "sourceKeySha256": "2cf09db45887c4189c3549894da1aa9f574ba9256a3a0917830af2de3bac50ec",
+      "sourceOrdinal": 340,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "797e91428dccb9f102ecc6c00361376ddfa391f386e0fbcd5655dd304d036f38",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:53",
+        "frontend/src/Store/Actions/searchActions.js:145",
+        "frontend/src/Store/Actions/searchActions.js:418"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+        "frontend/src/Store/Actions/searchActions.js"
+      ],
+      "callerReferenceCount": 3,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 3,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "RequestFailed",
+      "sourceKeySha256": "4eaba7744bf18a7754a36d9da84b91218d759a666d2e9d5740bff194e3e0f246",
+      "sourceOrdinal": 341,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "cfde18181a8fb4aae8830ac56ed773febfc688aa7070ba947db5f0a13c72cf2e",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:30",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:41",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:54"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 3,
+      "indirectKeyReferenceCount": 3,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "SameSeriesDifferentPositionPlaceholder",
+      "sourceKeySha256": "5c351c22eda065d5532a77b22b605d9967a363b227cb1e2d43f67431f585cfad",
+      "sourceOrdinal": 342,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "a6f8dec7f5039a7ba141cb4511bffc836723bd6cc9637add6628abf1a1e0f10c",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:259"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "SearchEligibleItems",
+      "sourceKeySha256": "a10ec44505210d6178c8028007e92a8d62b5ed6dd65cc1add2cab05ec8958a80",
+      "sourceOrdinal": 343,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "c13de3ac02f06d4ed4d131c9a2037b4bea7762a774c8cc2db148efb57f181e68",
+      "callerLines": [
+        "frontend/src/Settings/Profiles/Quality/dramatizedAudioPreference.js:9",
+        "frontend/src/UnmappedFiles/UnmappedFilesTable.js:564",
+        "src/Chaptarr.Api.V1/Author/AuthorController.cs:1655",
+        "src/Chaptarr.Api.V1/Author/AuthorController.cs:636",
+        "src/Chaptarr.Api.V1/Author/AuthorController.cs:645",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:190",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:211",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:361",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:375",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:380",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:385",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:405",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs:410",
+        "src/Chaptarr.Api.V1/RootFolders/RootFolderResource.cs:644",
+        "src/NzbDrone.Core/Books/Services/AddBookService.cs:1020",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1109",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1158",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1691",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1697",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1703",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1709",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1723",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1728",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1745",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1750",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1762",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs:1767",
+        "src/NzbDrone.Core/Books/Services/AuthorService.cs:1006",
+        "src/NzbDrone.Core/Books/Services/AuthorService.cs:999",
+        "src/NzbDrone.Core/Books/Services/EditionSelector.cs:102",
+        "src/NzbDrone.Core/Configuration/SettingsBackups/SettingsBackupService.cs:228",
+        "src/NzbDrone.Core/CustomFormats/BuiltInCustomFormats.cs:15",
+        "src/NzbDrone.Core/Download/Clients/Aria2/Aria2Containers.cs:74",
+        "src/NzbDrone.Core/Download/Clients/Aria2/Aria2Containers.cs:83",
+        "src/NzbDrone.Core/Download/Clients/Aria2/Aria2Containers.cs:84",
+        "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs:355",
+        "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs:360",
+        "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs:366",
+        "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs:371",
+        "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs:376",
+        "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs:188",
+        "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs:193",
+        "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs:199",
+        "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs:204",
+        "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs:209",
+        "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs:960",
+        "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs:965",
+        "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs:971",
+        "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs:976",
+        "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs:981",
+        "src/NzbDrone.Core/MediaFiles/AudioTagService.cs:339",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:1041",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:1177",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:1186",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:1696",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:1720",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:1726",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs:783",
+        "src/NzbDrone.Core/MediaFiles/Commands/UnmappedFileSelectionResolver.cs:51",
+        "src/NzbDrone.Core/MediaFiles/Commands/UnmappedFileSelectionResolver.cs:63",
+        "src/NzbDrone.Core/MediaFiles/EbookTagService.cs:194",
+        "src/NzbDrone.Core/MetadataSource/BookInfo/BookInfoProxy.cs:1865",
+        "src/NzbDrone.Core/Notifications/Plex/Server/PlexServerService.cs:188",
+        "src/NzbDrone.Core/Notifications/Plex/Server/PlexServerService.cs:231",
+        "src/NzbDrone.Core/RemotePathMappings/RemotePathMappingService.cs:194"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/Profiles/Quality/dramatizedAudioPreference.js",
+        "frontend/src/UnmappedFiles/UnmappedFilesTable.js",
+        "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+        "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs",
+        "src/Chaptarr.Api.V1/RootFolders/RootFolderResource.cs",
+        "src/NzbDrone.Core/Books/Services/AddBookService.cs",
+        "src/NzbDrone.Core/Books/Services/AuthorLibraryService.cs",
+        "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+        "src/NzbDrone.Core/Books/Services/EditionSelector.cs",
+        "src/NzbDrone.Core/Configuration/SettingsBackups/SettingsBackupService.cs",
+        "src/NzbDrone.Core/CustomFormats/BuiltInCustomFormats.cs",
+        "src/NzbDrone.Core/Download/Clients/Aria2/Aria2Containers.cs",
+        "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs",
+        "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs",
+        "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs",
+        "src/NzbDrone.Core/MediaFiles/AudioTagService.cs",
+        "src/NzbDrone.Core/MediaFiles/BookImport/Manual/ManualImportService.cs",
+        "src/NzbDrone.Core/MediaFiles/Commands/UnmappedFileSelectionResolver.cs",
+        "src/NzbDrone.Core/MediaFiles/EbookTagService.cs",
+        "src/NzbDrone.Core/MetadataSource/BookInfo/BookInfoProxy.cs",
+        "src/NzbDrone.Core/Notifications/Plex/Server/PlexServerService.cs",
+        "src/NzbDrone.Core/RemotePathMappings/RemotePathMappingService.cs"
+      ],
+      "callerReferenceCount": 65,
+      "indirectKeyReferenceCount": 64,
+      "literalCallCount": 1,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "Selected",
+      "sourceKeySha256": "57fd7a0cf33f2666eede69e44f8857159653f2f28e4fd7482a5e16d4af628d2a",
+      "sourceOrdinal": 344,
+      "sourceReviewNote": "Reviewed all locale values against the English source and the exact pinned direct/indirect production caller context. Placeholder, inline-code, markup, protected-literal, numeric, and locale-convention checks were considered for each cell."
+    },
+    {
+      "callerContextSha256": "55abeda57fbfb1395fee0bbf2ca971f7340d2bf25ff8334ca5e61f905288691a",
+      "callerLines": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:44",
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js:58"
+      ],
+      "callerPaths": [
+        "frontend/src/System/Quickstart/QuickstartMatchingSection.js"
+      ],
+      "callerReferenceCount": 2,
+      "indirectKeyReferenceCount": 2,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 4,
+      "sourceKey": "SiblingTitleBetterMatchPlaceholder",
+      "sourceKeySha256": "726686a8c9131929e1bbc0b1741d74ffce9ff5b8bf5dea6519c3552eaf19c808",
+      "sourceOrdinal": 345,
+      "sourceReviewNote": "Reviewed as a translated mock filename/tag token in Quickstart’s allow/block examples; term choices must distinguish title, metadata, unrelated text, and conflicting series position."
+    },
+    {
+      "callerContextSha256": "73a411c9e3151c050837209ecdbe06abff2bfeeab9ee6da62409124d93b73fcf",
+      "callerLines": [],
+      "callerPaths": [],
+      "callerReferenceCount": 0,
+      "indirectKeyReferenceCount": 0,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 0,
+      "sourceKey": "SiblingTitlePlaceholder",
+      "sourceKeySha256": "996134e1db2e6556035c9ddff4073b57ed6cefedc4ba517f2b660ac4fe50f7ac",
+      "sourceOrdinal": 346,
+      "sourceReviewNote": "No pinned production literal or indirect caller, and no same-file dynamic translation callsite was found. All 12 locale cells are held hash-only; no target change is recommended without verified caller context."
+    },
+    {
+      "callerContextSha256": "595773eb376176a2188b3bee23a99c29c77923f12a257a861563ec554ed83c12",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:278"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "SyncFailed",
+      "sourceKeySha256": "5fe9c841d23d6fd73be47eb853fe5ce54e9899b97b1846b2ddf35bef63c1e740",
+      "sourceOrdinal": 347,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "2b5a5ad6136a5e5dae60697458e7cbab63b5d83aee0ed82f3a919c9744233044",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:281"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "SyncRunning",
+      "sourceKeySha256": "6a4ac1d4bc5a8132e4259d095cf71a58c2f45070b98464ae65d6cb3b00af747c",
+      "sourceOrdinal": 348,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    },
+    {
+      "callerContextSha256": "996d3791a8f005fdb9175596087aad03548e51febc5c606972af5b8703d6e63a",
+      "callerLines": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js:277"
+      ],
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js"
+      ],
+      "callerReferenceCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "literalCallCount": 0,
+      "relatedDynamicTranslationCallsiteCount": 3,
+      "sourceKey": "SyncSucceeded",
+      "sourceKeySha256": "012594e9e1396708ea02c1358b2cbf547eff981200dd23455c2a950f11b7ba3e",
+      "sourceOrdinal": 349,
+      "sourceReviewNote": "Reviewed in the Import List preview/history modal; status labels, count labels, preview actions, failure-stage values, and provider-state persistence use their exact UI contexts."
+    }
+  ],
+  "sourceSelectionSha256": "35d535cb12193550959bf3bd8d0716b6b75fa93bdf430a0a02d92072b2ff6a60"
+}

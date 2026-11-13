@@ -1,0 +1,36 @@
+{
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "reviewCellCount": 600,
+  "inputCellCount": 600,
+  "uniqueCells": 600,
+  "localeOrder": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "dispositionCounts": {
+    "accept-current": 506,
+    "correction": 50,
+    "hold": 11,
+    "refinement": 33
+  },
+  "uniqueCallerRefs": 53,
+  "callerRefFailures": 0,
+  "errorCount": 0,
+  "errors": [],
+  "allPrimaryFilesMatchManifest": true,
+  "primarySha256SumsVerified": true,
+  "callerLinePinsVerified": 53,
+  "declaredCallerReferencesAcrossSources": 58,
+  "callerLineNormalization": "Trim indentation before comparing lineText and hashing; all 53 distinct caller lines and source-registry pins match. Raw indentation caused the initial validator-only mismatch and is not a content mismatch."
+}

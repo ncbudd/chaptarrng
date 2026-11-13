@@ -1,0 +1,18 @@
+{
+  "issue": "The retained independent-review/summary.json claims 118 accept-current, 1 refinement, 1 correction, and 2 proposed changes. That conflicts with its sealed cross-review ledger and cross-summary.",
+  "retainedOriginalUnchanged": "independent-review/summary.json",
+  "authoritativeCounts": {
+    "cells": 120,
+    "accept-current": 112,
+    "refinement": 7,
+    "correction": 1,
+    "proposedChanges": 8
+  },
+  "evidence": {
+    "crossReviewLedger": "independent-review/cross-review.jsonl",
+    "crossReviewLedgerSha256": "2b641be5319d8639d1f9aac85fe6f87152128e3cd037820545ec596ca955cd74",
+    "crossSummary": "independent-review/cross-summary.json",
+    "crossSummaryFileSha256": "2b0bd543a8d04e51865ff2577d0f3cd6df737c02f1410e3f4eb237673b5d965f"
+  },
+  "resolution": "The 120-row cross-review ledger was recounted directly. Its final dispositions and eight final targets match cross-summary.json. Apply only these eight targets."
+}

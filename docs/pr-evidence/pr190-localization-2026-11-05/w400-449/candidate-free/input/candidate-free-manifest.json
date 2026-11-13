@@ -1,0 +1,72 @@
+{
+  "callerContext": {
+    "path": "caller-context.jsonl",
+    "rows": 50,
+    "sha256": "626ade4dbc03ff182e9d7f7813808696b2d4df8b719390792b54db74cef34420"
+  },
+  "candidateFreeCells": {
+    "path": "candidate-free-cells.jsonl",
+    "rows": 600,
+    "sha256": "1b38676639f05eaa81d64f4d515b8c714e2f50d6550be209f66b526ca0a4a369"
+  },
+  "candidateFreeOnly": true,
+  "head": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "liveMain": "2badb8c277fb6937f320928893d3bee13435f45d",
+  "nativeSpeakerApproval": false,
+  "result": "PASS",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "firstPosition": 400,
+    "lastPosition": 449,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "sourceIds": 50
+  },
+  "sourceSelectionSha256": "7b6c698a6cbbe22c6cec38408c558635b002900c2d2d7b2eb37f0060e907241b",
+  "tree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "liveMainTree": "624e0b781a72d81d43ef32d930d10e42ce7f4aaf",
+  "headWorkflowTree": "d32d228b81852c2f44fdea6511a0bd5df35f61d2",
+  "liveMainWorkflowTree": "aed02ef5ae1eea8a00a4def7850891dc08c47176",
+  "latestMainDriftSha256": "60c2391f59bc98fca7f386dde78965009cfe7e4f5db6fea453b8c53e00aca61f",
+  "catalogPinsSha256": "6dcfb0949da54ecce2445d180ebb6ddd8dc31f6ee33d700f1d1b9c6a56abf501",
+  "priorWindowReattestation": {
+    "path": "prior-window-reattestation.json",
+    "sha256": "77e2a27603e8dd1a6789ef2c87b3948c190af4f48f52f2ed0dbd7e9497066df6",
+    "rows": 600
+  },
+  "priorWindowCells": {
+    "path": "prior-window-reattestation.jsonl",
+    "sha256": "ce63d204ec3b1a9dd2740db5a8aa9695e19c685a964befe8bfb6b512439588bc",
+    "rows": 600
+  },
+  "priorHoldReattestation": {
+    "path": "prior-hold-reattestation.jsonl",
+    "sha256": "158929f5016a92db7fb1729decfe60adc40c03ba9b1f4a4105e418751ef04971",
+    "rows": 12
+  },
+  "packetBuilder": {
+    "path": "packet-builders/build_candidate_free.py",
+    "sha256": "47c46d698d4bd83f2269ac26ce866ac08eff3db52dfd48558f1217d5c3c2c0ff"
+  },
+  "priorWindowAttestor": {
+    "path": "packet-builders/attest_prior_window.py",
+    "sha256": "e1fd0105a89b4600dc44cba6e373eb5aec5ff0fa17da8d2b9e20a92dece8146a"
+  },
+  "packetFinalizer": {
+    "path": "packet-builders/finalize_candidate_free.py",
+    "sha256": "9c506ae4b60026b70710548b219d0d4aec224bc5eacf6c3f5ef4357392ff9739"
+  }
+}

@@ -10,6 +10,7 @@ using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http.Dispatchers;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaFiles;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Email
 {
@@ -121,7 +122,7 @@ namespace NzbDrone.Core.Notifications.Email
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test email");
-                return new ValidationFailure("Server", "Unable to send test email");
+                return NzbDroneValidationFailure.ForMessage("Server", "Unable to send test email", "server.message.mc30b981283d0");
             }
 
             return null;

@@ -1,0 +1,1106 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "primary",
+  "scope": [
+    500,
+    549
+  ],
+  "findings": {
+    "500|de": [
+      "propose-correction",
+      "Unerwartetes Metadatenserver-Protokoll {value0} (erwartet: {value1})",
+      "Corrects German adjective agreement and marks value0 as received versus value1 as expected.",
+      "moderate"
+    ],
+    "500|id": [
+      "propose-correction",
+      "Protokol server metadata tak terduga: {value0} (diharapkan: {value1})",
+      "Replaces Malay-influenced wording with natural Indonesian and retains both protocol values.",
+      "moderate"
+    ],
+    "501|de": [
+      "propose-correction",
+      "Der Test wurde aufgrund eines Fehlers abgebrochen: {value0}",
+      "Corrects the German typo while preserving the exception detail.",
+      "moderate"
+    ],
+    "502|es": [
+      "propose-correction",
+      "No se pudo conectar a uTorrent.",
+      "Recasts the English inability phrase as a natural connection-failure status in the locale.",
+      "moderate"
+    ],
+    "502|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao uTorrent.",
+      "Recasts the English inability phrase as a natural connection-failure status in the locale.",
+      "moderate"
+    ],
+    "502|de": [
+      "propose-correction",
+      "Es konnte keine Verbindung zu uTorrent hergestellt werden.",
+      "Recasts the English inability phrase as a natural connection-failure status in the locale.",
+      "moderate"
+    ],
+    "504|hi": [
+      "propose-refinement",
+      "अज्ञात त्रुटि",
+      "Uses the standard formal Hindi term for an application error.",
+      "moderate"
+    ],
+    "505|ja": [
+      "propose-correction",
+      "トークンキーを空にすることはできません。",
+      "Replaces colloquial “空っぽ” with the standard validation wording.",
+      "moderate"
+    ],
+    "506|hi": [
+      "propose-correction",
+      "लेखक IDs अद्वितीय होने चाहिए।",
+      "Makes the plural requirement explicit and avoids translating “unique” as merely distinctive.",
+      "moderate"
+    ],
+    "506|ko": [
+      "propose-correction",
+      "저자 ID는 서로 달라야 합니다.",
+      "Makes the plural requirement explicit and avoids translating “unique” as merely distinctive.",
+      "moderate"
+    ],
+    "506|vi": [
+      "propose-correction",
+      "ID tác giả phải là duy nhất.",
+      "Makes the plural requirement explicit and avoids translating “unique” as merely distinctive.",
+      "moderate"
+    ],
+    "509|ja": [
+      "propose-correction",
+      "Hardcover APIキーが無効です。",
+      "Repairs the missing Japanese predicate and uses the standard Korean invalid-value phrasing.",
+      "moderate"
+    ],
+    "509|ko": [
+      "propose-correction",
+      "유효하지 않은 Hardcover API 키입니다.",
+      "Repairs the missing Japanese predicate and uses the standard Korean invalid-value phrasing.",
+      "moderate"
+    ],
+    "510|ar": [
+      "propose-correction",
+      "معرّف السلسلة الخارجي مطلوب (ID).",
+      "Keeps the conventional ID acronym while avoiding the current duplicated noun/acronym order.",
+      "moderate"
+    ],
+    "511|fr": [
+      "propose-correction",
+      "Aucun jeton API Hardcover n’est configuré (ajoutez-en un à cette liste d’importation ou dans les paramètres).",
+      "Uses the software import-list meaning, fixes the Arabic clause, and makes the missing-configuration state explicit.",
+      "moderate"
+    ],
+    "511|ar": [
+      "propose-correction",
+      "لم يتم إعداد رمز API لـ Hardcover (أضِف رمزًا إلى قائمة الاستيراد هذه أو إلى الإعدادات).",
+      "Uses the software import-list meaning, fixes the Arabic clause, and makes the missing-configuration state explicit.",
+      "moderate"
+    ],
+    "511|ko": [
+      "propose-correction",
+      "Hardcover API 토큰이 설정되어 있지 않습니다(이 가져오기 목록이나 설정에서 토큰을 설정하세요).",
+      "Uses the software import-list meaning, fixes the Arabic clause, and makes the missing-configuration state explicit.",
+      "moderate"
+    ],
+    "511|vi": [
+      "propose-correction",
+      "Chưa cấu hình token API Hardcover (hãy đặt token trong danh sách nhập này hoặc trong Cài đặt).",
+      "Uses the software import-list meaning, fixes the Arabic clause, and makes the missing-configuration state explicit.",
+      "moderate"
+    ],
+    "511|id": [
+      "propose-correction",
+      "Token API Hardcover belum dikonfigurasi (atur token pada daftar impor ini atau di Pengaturan).",
+      "Uses the software import-list meaning, fixes the Arabic clause, and makes the missing-configuration state explicit.",
+      "moderate"
+    ],
+    "512|es": [
+      "propose-correction",
+      "No se puede conectar a la lista de importación. {value0}",
+      "Uses the application’s import-list meaning rather than physical importing, repairs the connection phrase, and preserves exception detail.",
+      "moderate"
+    ],
+    "512|zh-Hans": [
+      "propose-correction",
+      "无法连接到导入列表。{value0}",
+      "Uses the application’s import-list meaning rather than physical importing, repairs the connection phrase, and preserves exception detail.",
+      "moderate"
+    ],
+    "512|de": [
+      "propose-correction",
+      "Verbindung zur Importliste nicht möglich. {value0}",
+      "Uses the application’s import-list meaning rather than physical importing, repairs the connection phrase, and preserves exception detail.",
+      "moderate"
+    ],
+    "512|ja": [
+      "propose-correction",
+      "インポートリストに接続できません。{value0}",
+      "Uses the application’s import-list meaning rather than physical importing, repairs the connection phrase, and preserves exception detail.",
+      "moderate"
+    ],
+    "512|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar à lista de importação. {value0}",
+      "Uses the application’s import-list meaning rather than physical importing, repairs the connection phrase, and preserves exception detail.",
+      "moderate"
+    ],
+    "512|zh-Hant": [
+      "propose-correction",
+      "無法連線至匯入清單。{value0}",
+      "Uses the application’s import-list meaning rather than physical importing, repairs the connection phrase, and preserves exception detail.",
+      "moderate"
+    ],
+    "513|es": [
+      "propose-correction",
+      "La conexión al proxy se realizó correctamente a través de {value0}. Tiempo de respuesta: {value1}ms",
+      "Corrects the success/result phrasing and the German/Japanese response-time term while retaining endpoint, milliseconds, and placeholders.",
+      "moderate"
+    ],
+    "513|hi": [
+      "propose-correction",
+      "प्रॉक्सी के माध्यम से कनेक्शन सफल हुआ: {value0}। प्रतिक्रिया समय: {value1}ms",
+      "Corrects the success/result phrasing and the German/Japanese response-time term while retaining endpoint, milliseconds, and placeholders.",
+      "moderate"
+    ],
+    "513|de": [
+      "propose-correction",
+      "Proxy-Verbindung über {value0} erfolgreich. Antwortzeit: {value1}ms",
+      "Corrects the success/result phrasing and the German/Japanese response-time term while retaining endpoint, milliseconds, and placeholders.",
+      "moderate"
+    ],
+    "513|ja": [
+      "propose-correction",
+      "{value0} 経由のプロキシ接続に成功しました。応答時間: {value1}ms",
+      "Corrects the success/result phrasing and the German/Japanese response-time term while retaining endpoint, milliseconds, and placeholders.",
+      "moderate"
+    ],
+    "513|pt-BR": [
+      "propose-correction",
+      "A conexão ao proxy foi bem-sucedida por meio de {value0}. Tempo de resposta: {value1}ms",
+      "Corrects the success/result phrasing and the German/Japanese response-time term while retaining endpoint, milliseconds, and placeholders.",
+      "moderate"
+    ],
+    "513|ko": [
+      "propose-correction",
+      "프록시 연결 성공: {value0}. 응답 시간: {value1}ms",
+      "Corrects the success/result phrasing and the German/Japanese response-time term while retaining endpoint, milliseconds, and placeholders.",
+      "moderate"
+    ],
+    "516|es": [
+      "propose-correction",
+      "Versión de protocolo no compatible; usa Vuze 5.0.0.0 o superior con el complemento Vuze Web Remote.",
+      "Repairs command syntax or punctuation while preserving the Vuze version and plugin name.",
+      "moderate"
+    ],
+    "516|zh-Hans": [
+      "propose-correction",
+      "协议版本不受支持；请使用 Vuze 5.0.0.0 或更高版本，并安装 Vuze Web Remote 插件。",
+      "Repairs command syntax or punctuation while preserving the Vuze version and plugin name.",
+      "moderate"
+    ],
+    "516|fr": [
+      "propose-correction",
+      "Version de protocole non prise en charge ; utilisez Vuze 5.0.0.0 ou une version ultérieure avec le plugin Vuze Web Remote.",
+      "Corrects the syntax and preserves the official Vuze Web Remote plugin name.",
+      "moderate"
+    ],
+    "516|ko": [
+      "propose-correction",
+      "지원되지 않는 프로토콜 버전입니다. Vuze 5.0.0.0 이상과 Vuze Web Remote 플러그인을 사용하세요.",
+      "Repairs the instruction and preserves the official plugin name.",
+      "moderate"
+    ],
+    "516|zh-Hant": [
+      "propose-correction",
+      "不支援此通訊協定版本；請搭配 Vuze Web Remote 外掛使用 Vuze 5.0.0.0 或更新版本。",
+      "Repairs command syntax or punctuation while preserving the Vuze version and plugin name.",
+      "moderate"
+    ],
+    "517|ja": [
+      "propose-correction",
+      "接続がタイムアウトしました。",
+      "Uses the standard Japanese timeout term instead of the colloquial katakana “time up”.",
+      "moderate"
+    ],
+    "519|es": [
+      "propose-refinement",
+      "No se puede editar la ruta de la carpeta raíz.",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|zh-Hans": [
+      "propose-refinement",
+      "无法编辑根文件夹路径。",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|de": [
+      "propose-refinement",
+      "Der Pfad des Stammordners kann nicht bearbeitet werden.",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|pt-BR": [
+      "propose-refinement",
+      "Não é possível editar o caminho da pasta raiz.",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|ko": [
+      "propose-refinement",
+      "루트 폴더 경로는 수정할 수 없습니다.",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|zh-Hant": [
+      "propose-refinement",
+      "無法編輯根資料夾路徑。",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|vi": [
+      "propose-refinement",
+      "Không thể chỉnh sửa đường dẫn thư mục gốc.",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "519|id": [
+      "propose-refinement",
+      "Jalur folder akar tidak dapat diedit.",
+      "Uses the localized application term for the configured root folder; the current target leaves “root” untranslated or renders it literally.",
+      "moderate"
+    ],
+    "520|fr": [
+      "propose-correction",
+      "Les arguments ne sont plus pris en charge pour les scripts personnalisés.",
+      "Uses the programming/configuration sense of script arguments and removes the French/Arabic/Indonesian word-choice errors.",
+      "moderate"
+    ],
+    "520|ar": [
+      "propose-correction",
+      "لم تعد الوسائط مدعومة للبرامج النصية المخصصة.",
+      "Uses the programming/configuration sense of script arguments and removes the French/Arabic/Indonesian word-choice errors.",
+      "moderate"
+    ],
+    "520|id": [
+      "propose-correction",
+      "Argumen tidak lagi didukung untuk skrip kustom.",
+      "Uses the programming/configuration sense of script arguments and removes the French/Arabic/Indonesian word-choice errors.",
+      "moderate"
+    ],
+    "522|es": [
+      "propose-correction",
+      "No se pudieron recuperar los datos de la biblioteca de Hardcover.",
+      "Recasts the inability as a natural retrieval error and avoids first-person or malformed fragments.",
+      "moderate"
+    ],
+    "522|hi": [
+      "propose-correction",
+      "Hardcover लाइब्रेरी का डेटा प्राप्त नहीं किया जा सका।",
+      "Recasts the inability as a natural retrieval error and avoids first-person or malformed fragments.",
+      "moderate"
+    ],
+    "522|de": [
+      "propose-correction",
+      "Die Hardcover-Bibliotheksdaten konnten nicht abgerufen werden.",
+      "Recasts the inability as a natural retrieval error and avoids first-person or malformed fragments.",
+      "moderate"
+    ],
+    "522|fr": [
+      "propose-correction",
+      "Impossible de récupérer les données de la bibliothèque Hardcover.",
+      "Recasts the inability as a natural retrieval error and avoids first-person or malformed fragments.",
+      "moderate"
+    ],
+    "522|pt-BR": [
+      "propose-correction",
+      "Não foi possível recuperar os dados da biblioteca do Hardcover.",
+      "Recasts the inability as a natural retrieval error and avoids first-person or malformed fragments.",
+      "moderate"
+    ],
+    "523|ja": [
+      "propose-refinement",
+      "選択した写真をダウンロードできませんでした。",
+      "Uses a natural failure status in the locale and corrects Indonesian sentence capitalization.",
+      "moderate"
+    ],
+    "523|pt-BR": [
+      "propose-refinement",
+      "Falha ao baixar a foto selecionada.",
+      "Uses a natural failure status in the locale and corrects Indonesian sentence capitalization.",
+      "moderate"
+    ],
+    "523|vi": [
+      "propose-refinement",
+      "Không thể tải ảnh đã chọn xuống.",
+      "Uses a natural failure status in the locale and corrects Indonesian sentence capitalization.",
+      "moderate"
+    ],
+    "523|id": [
+      "propose-refinement",
+      "Gagal mengunduh foto yang dipilih.",
+      "Uses a natural failure status in the locale and corrects Indonesian sentence capitalization.",
+      "moderate"
+    ],
+    "524|zh-Hans": [
+      "propose-correction",
+      "必须指定根文件夹。",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|de": [
+      "propose-correction",
+      "Ein Stammordner ist erforderlich.",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|ja": [
+      "propose-correction",
+      "ルートフォルダーを指定する必要があります。",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|fr": [
+      "propose-correction",
+      "Un dossier racine est requis.",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|ko": [
+      "propose-correction",
+      "루트 폴더를 지정해야 합니다.",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|zh-Hant": [
+      "propose-correction",
+      "必須指定根資料夾。",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|vi": [
+      "propose-correction",
+      "Cần có thư mục gốc.",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "524|id": [
+      "propose-correction",
+      "Folder akar wajib diisi.",
+      "Makes the required root-folder setting explicit and fixes literal-English or malformed wording.",
+      "moderate"
+    ],
+    "525|es": [
+      "propose-correction",
+      "La versión de Nzbget es demasiado baja; se requiere la 12.0 o posterior.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|zh-Hans": [
+      "propose-correction",
+      "Nzbget 版本过低，需要 12.0 或更高版本。",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|hi": [
+      "propose-correction",
+      "Nzbget का संस्करण बहुत पुराना है; 12.0 या उससे ऊपर आवश्यक है।",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|de": [
+      "propose-correction",
+      "Die Nzbget-Version ist zu niedrig; erforderlich ist Version 12.0 oder höher.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|ja": [
+      "propose-correction",
+      "Nzbget のバージョンが低すぎます。12.0 以降が必要です。",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|fr": [
+      "propose-correction",
+      "La version de Nzbget est trop ancienne ; la version 12.0 ou ultérieure est requise.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|pt-BR": [
+      "propose-correction",
+      "A versão do Nzbget é muito antiga; é necessária a 12.0 ou superior.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|ar": [
+      "propose-correction",
+      "إصدار Nzbget منخفض جدًا؛ يلزم الإصدار 12.0 أو أحدث.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|ko": [
+      "propose-correction",
+      "Nzbget 버전이 너무 낮습니다. 12.0 이상이 필요합니다.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|zh-Hant": [
+      "propose-correction",
+      "Nzbget 版本過低，需要 12.0 或更新版本。",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|vi": [
+      "propose-correction",
+      "Phiên bản Nzbget quá thấp; cần phiên bản 12.0 trở lên.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "525|id": [
+      "propose-correction",
+      "Versi Nzbget terlalu rendah; diperlukan versi 12.0 atau yang lebih baru.",
+      "Repairs the compressed or ungrammatical version warning while preserving the product spelling and required version.",
+      "moderate"
+    ],
+    "527|es": [
+      "propose-correction",
+      "Download Station API no admite esta versión; se requiere la versión 2 o posterior. Las versiones compatibles van de {value0} a {value1}.",
+      "Clarifies that version 2 is the minimum and the placeholders describe the supported range.",
+      "moderate"
+    ],
+    "527|de": [
+      "propose-correction",
+      "Diese Version der Download Station API wird nicht unterstützt; erforderlich ist Version 2 oder höher. Unterstützt werden die Versionen {value0} bis {value1}.",
+      "Clarifies that version 2 is the minimum and the placeholders describe the supported range.",
+      "moderate"
+    ],
+    "527|ja": [
+      "propose-correction",
+      "Download Station API のこのバージョンはサポートされていません。バージョン 2 以上が必要です。対応範囲は {value0} から {value1} です。",
+      "Clarifies that version 2 is the minimum and the placeholders describe the supported range.",
+      "moderate"
+    ],
+    "529|es": [
+      "propose-correction",
+      "El seguimiento de libros específicos requiere al menos un ID de libro.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|zh-Hans": [
+      "propose-correction",
+      "监控指定书籍时，至少需要一个图书 ID。",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|de": [
+      "propose-correction",
+      "Für die Überwachung bestimmter Bücher ist mindestens eine Buch-ID erforderlich.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|ja": [
+      "propose-correction",
+      "特定の本を監視するには、少なくとも1つの書籍IDが必要です。",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|fr": [
+      "propose-correction",
+      "Le suivi de livres spécifiques nécessite au moins un ID de livre.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|pt-BR": [
+      "propose-correction",
+      "O monitoramento de livros específicos exige pelo menos um ID de livro.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|ar": [
+      "propose-correction",
+      "تتطلب مراقبة كتب محددة معرّف كتاب واحدًا على الأقل.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|ko": [
+      "propose-correction",
+      "특정 도서를 모니터링하려면 책 ID가 하나 이상 필요합니다.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|zh-Hant": [
+      "propose-correction",
+      "監控指定書籍時，至少需要一個圖書 ID。",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|vi": [
+      "propose-correction",
+      "Cần có ít nhất một ID sách để theo dõi sách cụ thể.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "529|id": [
+      "propose-correction",
+      "Pemantauan buku tertentu memerlukan setidaknya satu ID buku.",
+      "Places “ID” with the book it identifies and avoids the current ungrammatical “book ID” construction.",
+      "moderate"
+    ],
+    "530|es": [
+      "propose-correction",
+      "La sincronización del estado de seguimiento entre formatos requiere que este autor tenga configuradas las carpetas raíz de audiolibros y libros electrónicos.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|zh-Hans": [
+      "propose-correction",
+      "要在不同格式间同步监控状态，必须为此作者配置有声书和电子书的根文件夹。",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|hi": [
+      "propose-correction",
+      "फ़ॉर्मैट के बीच निगरानी स्थिति सिंक करने के लिए, इस लेखक के लिए ऑडियोबुक और ई-बुक दोनों के रूट फ़ोल्डर कॉन्फ़िगर होने चाहिए।",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|de": [
+      "propose-correction",
+      "Um den Überwachungsstatus formatübergreifend zu synchronisieren, müssen für diesen Autor sowohl ein Hörbuch- als auch ein E-Book-Stammordner konfiguriert sein.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|ja": [
+      "propose-correction",
+      "形式間で監視状態を同期するには、この著者にオーディオブックと電子書籍の両方のルートフォルダーを設定する必要があります。",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|fr": [
+      "propose-correction",
+      "La synchronisation de l’état de suivi entre les formats nécessite que les dossiers racine des livres audio et numériques soient configurés pour cet auteur.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|ar": [
+      "propose-correction",
+      "لمزامنة حالة المراقبة بين التنسيقات، يجب إعداد مجلدي الكتب الصوتية والكتب الإلكترونية لهذا المؤلف.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|ko": [
+      "propose-correction",
+      "형식 간 모니터링 상태를 동기화하려면 이 저자에 오디오북과 전자책 루트 폴더가 모두 설정되어 있어야 합니다.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|zh-Hant": [
+      "propose-correction",
+      "若要在不同格式間同步監控狀態，必須為此作者設定有聲書和電子書的根資料夾。",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|vi": [
+      "propose-correction",
+      "Để đồng bộ trạng thái theo dõi giữa các định dạng, tác giả này cần được cấu hình cả thư mục gốc sách nói và sách điện tử.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "530|id": [
+      "propose-correction",
+      "Untuk menyinkronkan status pemantauan antarformat, penulis ini harus memiliki folder akar buku audio dan e-book.",
+      "Resolves the “monitored” modifier as monitored status and states the prerequisite for both media-format root folders.",
+      "moderate"
+    ],
+    "531|ar": [
+      "propose-correction",
+      "يتطلب AudioBookShelf حسابًا إداريًا لإنشاء مفاتيح API. سجّل الدخول بصفة مسؤول، أو أنشئ مفتاح API يدويًا في AudioBookShelf والصقه هنا.",
+      "Repairs the Arabic instruction structure and singular/plural reference to the manually created API key.",
+      "moderate"
+    ],
+    "532|zh-Hans": [
+      "propose-correction",
+      "电子书转换的目标格式无效。",
+      "Adds the missing grammatical relationship between conversion and target format.",
+      "moderate"
+    ],
+    "532|ja": [
+      "propose-correction",
+      "電子書籍の変換先形式が無効です。",
+      "Adds the missing grammatical relationship between conversion and target format.",
+      "moderate"
+    ],
+    "532|fr": [
+      "propose-correction",
+      "Le format cible pour la conversion de l’e-book est invalide.",
+      "Adds the missing grammatical relationship between conversion and target format.",
+      "moderate"
+    ],
+    "533|es": [
+      "propose-refinement",
+      "El indexador no admite los parámetros de búsqueda requeridos.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|zh-Hans": [
+      "propose-refinement",
+      "索引器不支持所需的搜索参数。",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|hi": [
+      "propose-refinement",
+      "इंडेक्सर आवश्यक खोज पैरामीटर का समर्थन नहीं करता है।",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|ja": [
+      "propose-refinement",
+      "インデクサーは必要な検索パラメーターをサポートしていません。",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|fr": [
+      "propose-refinement",
+      "L’indexeur ne prend pas en charge les paramètres de recherche requis.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|pt-BR": [
+      "propose-refinement",
+      "O indexador não oferece suporte aos parâmetros de pesquisa necessários.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|ar": [
+      "propose-refinement",
+      "لا يدعم المفهرس معلمات البحث المطلوبة.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|ko": [
+      "propose-refinement",
+      "인덱서는 필수 검색 매개변수를 지원하지 않습니다.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|zh-Hant": [
+      "propose-refinement",
+      "索引器不支援所需的搜尋參數。",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|vi": [
+      "propose-refinement",
+      "Bộ lập chỉ mục không hỗ trợ các tham số tìm kiếm bắt buộc.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "533|id": [
+      "propose-refinement",
+      "Pengindeks tidak mendukung parameter pencarian yang diperlukan.",
+      "Localizes the generic component name “Indexer” as the source integration type rather than leaving it in English.",
+      "moderate"
+    ],
+    "535|ar": [
+      "propose-correction",
+      "معرّف سلسلة Hardcover غير صالح (ID).",
+      "Keeps the conventional ID acronym while avoiding the current duplicated noun/acronym order.",
+      "moderate"
+    ],
+    "536|es": [
+      "propose-refinement",
+      "Por debajo de {value0} se produce H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|zh-Hans": [
+      "propose-refinement",
+      "低于 {value0} 会导致 H&R。",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|hi": [
+      "propose-refinement",
+      "{value0} से कम होने पर H&R हो सकता है।",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|de": [
+      "propose-refinement",
+      "Werte unter {value0} führen zu H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|ja": [
+      "propose-refinement",
+      "{value0} 未満だと H&R が発生します。",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|fr": [
+      "propose-refinement",
+      "Une valeur inférieure à {value0} entraîne un H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|pt-BR": [
+      "propose-refinement",
+      "Abaixo de {value0}, ocorre H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|ar": [
+      "propose-refinement",
+      "القيمة الأقل من {value0} تؤدي إلى H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|ko": [
+      "propose-refinement",
+      "{value0} 미만이면 H&R이 발생합니다.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|zh-Hant": [
+      "propose-refinement",
+      "低於 {value0} 會導致 H&R。",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|vi": [
+      "propose-refinement",
+      "Giá trị dưới {value0} sẽ dẫn đến H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "536|id": [
+      "propose-refinement",
+      "Nilai di bawah {value0} akan menyebabkan H&R.",
+      "The caller uses this as a warning for minimum seed ratio/time. These candidates express “below the threshold” naturally and retain the tracker acronym H&R.",
+      "moderate"
+    ],
+    "537|es": [
+      "propose-correction",
+      "El ping del servidor de metadatos no devolvió ok=true.",
+      "Keeps the protocol field/value literal intact and corrects the awkward ping-result construction.",
+      "moderate"
+    ],
+    "537|de": [
+      "propose-correction",
+      "Der Ping an den Metadatenserver hat nicht ok=true zurückgegeben.",
+      "Keeps the protocol field/value literal intact and corrects the awkward ping-result construction.",
+      "moderate"
+    ],
+    "537|fr": [
+      "propose-correction",
+      "Le ping du serveur de métadonnées n’a pas renvoyé ok=true.",
+      "Keeps the protocol field/value literal intact and corrects the awkward ping-result construction.",
+      "moderate"
+    ],
+    "537|vi": [
+      "propose-correction",
+      "Lệnh ping máy chủ siêu dữ liệu không trả về ok=true.",
+      "Keeps the protocol field/value literal intact and corrects the awkward ping-result construction.",
+      "moderate"
+    ],
+    "537|id": [
+      "propose-correction",
+      "Ping server metadata tidak mengembalikan ok=true.",
+      "Keeps the protocol field/value literal intact and corrects the awkward ping-result construction.",
+      "moderate"
+    ],
+    "538|es": [
+      "propose-correction",
+      "BookOrbit rechazó el inicio de sesión. Comprueba las credenciales y la política de inicio de sesión con contraseña.",
+      "Corrects punctuation, agreement, and the password-login policy wording while preserving BookOrbit.",
+      "moderate"
+    ],
+    "538|ja": [
+      "propose-correction",
+      "BookOrbit はログインを拒否しました。認証情報とパスワードログインのポリシーを確認してください。",
+      "Corrects punctuation, agreement, and the password-login policy wording while preserving BookOrbit.",
+      "moderate"
+    ],
+    "538|fr": [
+      "propose-correction",
+      "BookOrbit a rejeté la connexion. Vérifiez les identifiants et la politique de connexion par mot de passe.",
+      "Corrects punctuation, agreement, and the password-login policy wording while preserving BookOrbit.",
+      "moderate"
+    ],
+    "540|de": [
+      "propose-correction",
+      "Ungültige URL: {value0}",
+      "Localizes the remaining English phrase or repairs the missing Japanese/Chinese grammatical marker while retaining the rejected value.",
+      "moderate"
+    ],
+    "540|ja": [
+      "propose-correction",
+      "無効な URL: {value0}",
+      "Localizes the remaining English phrase or repairs the missing Japanese/Chinese grammatical marker while retaining the rejected value.",
+      "moderate"
+    ],
+    "540|zh-Hans": [
+      "propose-correction",
+      "无效的 URL：{value0}",
+      "Localizes the remaining English phrase or repairs the missing Japanese/Chinese grammatical marker while retaining the rejected value.",
+      "moderate"
+    ],
+    "540|zh-Hant": [
+      "propose-correction",
+      "無效的 URL：{value0}",
+      "Localizes the remaining English phrase or repairs the missing Japanese/Chinese grammatical marker while retaining the rejected value.",
+      "moderate"
+    ],
+    "541|de": [
+      "propose-correction",
+      "Für diesen Autor ist kein Audiobook-Metadatenprofil eingerichtet (Audiobooks sind deaktiviert). Richten Sie ein Audiobook-Metadatenprofil ein, um Audiobooks hinzuzufügen.",
+      "Clarifies that a profile is not configured, removes the redundant “audiobook books” wording, and repairs the Arabic instruction.",
+      "moderate"
+    ],
+    "541|ja": [
+      "propose-correction",
+      "この著者にはオーディオブックのメタデータプロファイルが設定されていません（オーディオブックは無効です）。追加するには、オーディオブックのメタデータプロファイルを設定してください。",
+      "Clarifies that a profile is not configured, removes the redundant “audiobook books” wording, and repairs the Arabic instruction.",
+      "moderate"
+    ],
+    "541|ar": [
+      "propose-correction",
+      "لم يتم إعداد ملف بيانات وصفية للكتب الصوتية لهذا المؤلف (الكتب الصوتية معطّلة). أعدّ ملفًا للبيانات الوصفية للكتب الصوتية لإضافتها.",
+      "Clarifies that a profile is not configured, removes the redundant “audiobook books” wording, and repairs the Arabic instruction.",
+      "moderate"
+    ],
+    "541|ko": [
+      "propose-correction",
+      "이 저자에게 오디오북 메타데이터 프로필이 설정되어 있지 않습니다(오디오북이 비활성화되어 있습니다). 오디오북을 추가하려면 오디오북 메타데이터 프로필을 설정하세요.",
+      "Clarifies that a profile is not configured, removes the redundant “audiobook books” wording, and repairs the Arabic instruction.",
+      "moderate"
+    ],
+    "542|fr": [
+      "propose-correction",
+      "Il doit contenir une valeur octale valide pour les permissions Unix.",
+      "Uses the correct permission and octal-value terms in French and Vietnamese.",
+      "moderate"
+    ],
+    "542|vi": [
+      "propose-correction",
+      "Phải chứa một giá trị quyền Unix hợp lệ ở dạng bát phân.",
+      "Uses the correct permission and octal-value terms in French and Vietnamese.",
+      "moderate"
+    ],
+    "543|ja": [
+      "propose-refinement",
+      "共有フォルダーは存在しません。",
+      "Uses a complete negative sentence and, for Traditional Chinese, Traditional-script folder wording.",
+      "moderate"
+    ],
+    "543|ar": [
+      "propose-refinement",
+      "المجلد المشترك غير موجود.",
+      "Uses a complete negative sentence and, for Traditional Chinese, Traditional-script folder wording.",
+      "moderate"
+    ],
+    "543|zh-Hant": [
+      "propose-refinement",
+      "共用資料夾不存在。",
+      "Uses a complete negative sentence and, for Traditional Chinese, Traditional-script folder wording.",
+      "moderate"
+    ],
+    "544|de": [
+      "propose-correction",
+      "Eine Passphrase mit mindestens {value0} Zeichen und höchstens {value1} UTF-8-Bytes ist erforderlich.",
+      "Preserves the distinct character-count minimum and UTF-8 byte-length maximum while correcting agreement and clause order.",
+      "moderate"
+    ],
+    "544|fr": [
+      "propose-correction",
+      "Une phrase secrète d’au moins {value0} caractères et d’au plus {value1} octets UTF-8 est requise.",
+      "Preserves the distinct character-count minimum and UTF-8 byte-length maximum while correcting agreement and clause order.",
+      "moderate"
+    ],
+    "544|ko": [
+      "propose-correction",
+      "최소 {value0}자 이상이며 최대 {value1} UTF-8 바이트를 넘지 않는 암호 문구가 필요합니다.",
+      "Preserves the distinct character-count minimum and UTF-8 byte-length maximum while correcting agreement and clause order.",
+      "moderate"
+    ],
+    "544|vi": [
+      "propose-correction",
+      "Cần có cụm mật khẩu dài ít nhất {value0} ký tự và không quá {value1} byte UTF-8.",
+      "Preserves the distinct character-count minimum and UTF-8 byte-length maximum while correcting agreement and clause order.",
+      "moderate"
+    ],
+    "546|es": [
+      "propose-correction",
+      "No se encontró ninguna conversión activa para este elemento de la cola.",
+      "Uses “queue item” rather than the Spanish false friend “article” and expresses “active” rather than “valid”.",
+      "moderate"
+    ],
+    "546|ja": [
+      "propose-correction",
+      "このキュー項目に対するアクティブな変換が見つかりませんでした。",
+      "Uses “queue item” rather than the Spanish false friend “article” and expresses “active” rather than “valid”.",
+      "moderate"
+    ],
+    "546|vi": [
+      "propose-correction",
+      "Không tìm thấy chuyển đổi đang hoạt động cho mục hàng đợi này.",
+      "Uses “queue item” rather than the Spanish false friend “article” and expresses “active” rather than “valid”.",
+      "moderate"
+    ],
+    "547|zh-Hant": [
+      "propose-correction",
+      "需要有效的 {value0} 中繼資料設定檔。",
+      "Corrects the Traditional Chinese mistranslation of metadata and uses “valid” rather than “effective” in Vietnamese.",
+      "moderate"
+    ],
+    "547|vi": [
+      "propose-correction",
+      "Cần có hồ sơ siêu dữ liệu {value0} hợp lệ.",
+      "Corrects the Traditional Chinese mistranslation of metadata and uses “valid” rather than “effective” in Vietnamese.",
+      "moderate"
+    ],
+    "548|de": [
+      "propose-correction",
+      "Bei Verwendung eines API-Schlüssels muss das Feld für den Benutzernamen leer sein.",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "548|ja": [
+      "propose-correction",
+      "APIキーを使用する場合、ユーザー名は空でなければなりません。",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "548|fr": [
+      "propose-correction",
+      "Le nom d’utilisateur doit être vide lors de l’utilisation d’une clé API.",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "548|pt-BR": [
+      "propose-correction",
+      "O nome de usuário deve ficar vazio ao usar uma chave de API.",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "548|ar": [
+      "propose-correction",
+      "يجب أن يكون اسم المستخدم فارغًا عند استخدام مفتاح API.",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "548|ko": [
+      "propose-correction",
+      "API 키를 사용할 때는 사용자 이름을 비워 두어야 합니다.",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "548|id": [
+      "propose-correction",
+      "Nama pengguna harus kosong saat menggunakan kunci API.",
+      "Localizes “API key” as the authentication method and uses natural wording for an empty username.",
+      "moderate"
+    ],
+    "549|fr": [
+      "propose-refinement",
+      "Les qualités ne peuvent être utilisées qu’une seule fois.",
+      "Quality-profile validation requires each quality to appear at most once; these candidates preserve the plural/set meaning.",
+      "moderate"
+    ],
+    "549|zh-Hans": [
+      "propose-refinement",
+      "每种质量只能使用一次。",
+      "Quality-profile validation requires each quality to appear at most once; these candidates preserve the plural/set meaning.",
+      "moderate"
+    ],
+    "549|hi": [
+      "propose-refinement",
+      "हर गुणवत्ता का उपयोग केवल एक बार किया जा सकता है।",
+      "Quality-profile validation requires each quality to appear at most once; these candidates preserve the plural/set meaning.",
+      "moderate"
+    ],
+    "549|zh-Hant": [
+      "propose-refinement",
+      "每種品質只能使用一次。",
+      "Quality-profile validation requires each quality to appear at most once; these candidates preserve the plural/set meaning.",
+      "moderate"
+    ],
+    "516|hi": [
+      "propose-correction",
+      "प्रोटोकॉल संस्करण समर्थित नहीं है। Vuze 5.0.0.0 या उससे ऊपर का संस्करण Vuze Web Remote प्लगइन के साथ उपयोग करें।",
+      "Keeps the official plugin name intact and gives a grammatical Hindi instruction.",
+      "moderate"
+    ],
+    "518|zh-Hans": [
+      "propose-correction",
+      "SABnzbd 开发版本，假定为 3.0.0 或更高版本。",
+      "Corrects the product name capitalization and punctuation.",
+      "moderate"
+    ],
+    "518|zh-Hant": [
+      "propose-correction",
+      "SABnzbd 開發版本，假定為 3.0.0 或更新版本。",
+      "Corrects the product name capitalization and punctuation.",
+      "moderate"
+    ]
+  },
+  "sourceRationales": {
+    "500": "The metadata handshake reports the received protocol as value0 and the expected protocol as value1.",
+    "501": "This is a test result that includes the underlying exception detail in value0.",
+    "502": "The caller reports failure to connect to the uTorrent download client.",
+    "503": "This indexer error includes exception detail in value0 and asks the user to check connectivity and DNS.",
+    "504": "The download-client response supplies a generic unknown-error label.",
+    "505": "The caller rejects a token configuration whose key is empty.",
+    "506": "The API validation requires distinct author identifiers.",
+    "507": "The pending import is queued by title in value0 and retries after the minute interval in value1.",
+    "508": "This is an API validation rule: when scope is the literal enum value 'selected', the unmappedFiles.bookFileIds field must be present.",
+    "509": "The Hardcover integration rejects an invalid API key.",
+    "510": "The series lookup requires an external provider series ID.",
+    "511": "This Hardcover import-list error directs users to configure an API token either on the list or in Settings.",
+    "512": "The import-list connection error includes exception detail in value0.",
+    "513": "The proxy test succeeds through value0 and reports response duration in milliseconds using value1.",
+    "514": "This is an instruction to turn off the movie-sorting option in the SABnzbd client configuration.",
+    "515": "The author-root validator rejects a path that is an ancestor of an existing author directory.",
+    "516": "The Vuze client must use protocol-compatible Vuze 5.0.0.0 or later with the named Web Remote plugin.",
+    "517": "The connection attempt exceeded its timeout.",
+    "518": "The SABnzbd client is a development build; the caller treats it as version 3.0.0 or newer.",
+    "519": "The root-folder controller disallows editing the configured root folder path.",
+    "520": "Custom-script settings no longer accept command-line arguments.",
+    "521": "The folder-readability validator names the failing path in value0 and operating-system user in value1, then explains the Chaptarr process needs read permission.",
+    "522": "The Hardcover integration could not retrieve the account library data.",
+    "523": "The author controller failed to download the selected profile photo.",
+    "524": "A root folder must be provided for the selected configuration.",
+    "525": "The NZBGet download client must be version 12.0 or newer.",
+    "526": "Quality-profile validation requires the cutoff to name an allowed quality or group.",
+    "527": "The Synology Download Station API must be version 2 or newer; value0 and value1 delimit its supported version range.",
+    "528": "The instance needs at least one configured media type, with a root folder and quality profile for audiobook or ebook media.",
+    "529": "The API requires one or more book IDs when monitoring specific books.",
+    "530": "Syncing monitored status across audiobook and ebook formats requires both root folders on the author.",
+    "531": "AudioBookShelf requires an admin account to create API keys, and the user may create one manually if needed.",
+    "532": "The ebook conversion configuration has an unsupported target format.",
+    "533": "The indexer does not implement one or more search parameters required by the requested search.",
+    "534": "The input string does not parse as a GUID.",
+    "535": "The Hardcover integration rejected the supplied series ID.",
+    "536": "The tracker seed-criteria validator warns when the configured ratio or seeding-time minimum is below value0; H&R is the tracker term for Hit and Run.",
+    "537": "The metadata-server ping response lacked the literal success field/value ok=true.",
+    "538": "BookOrbit rejected authentication; the user should check credentials and whether password login is allowed.",
+    "539": "The MAM account-status response is unavailable or stale, so the caller cannot verify its unsatisfied-slot protection rule.",
+    "540": "The URL validator rejected the supplied URL, shown in value0.",
+    "541": "Audiobook import is disabled for this author until an audiobook metadata profile is configured.",
+    "542": "The folder permission setting must be a valid octal Unix-permissions value.",
+    "543": "The shared-folder lookup found no existing folder.",
+    "544": "A passphrase must meet a minimum character count in value0 and a maximum UTF-8 byte length in value1.",
+    "545": "The API accepts moveToCanonicalAuthorFolder only on author-level previews, where bookId must be omitted.",
+    "546": "The queue item has no active conversion record.",
+    "547": "The caller requires a valid metadata profile for the media type named in value0.",
+    "548": "The qBittorrent settings validator requires the username to be empty when API-key authentication is selected.",
+    "549": "Quality-profile validation prevents the same quality from appearing more than once."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "baseHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+  "sourceFileSha256After": "467b8c902bfad2f187338689d7bf75d7a922539f909aa09b5cfe01c91ac5d574",
+  "sourceMessageHashSnapshotSha256After": "7c21ed396c1340c77b5635f2f5c1e6f966bf4342b03052397d39997c7920747b",
+  "sourceIdsRetained": true,
+  "sourceIdCount": 4165,
+  "corrections": [
+    {
+      "sourceId": "server.message.m783307436ce0",
+      "newSourceText": "Disable the 'Check before download' option in SABnzbd.",
+      "sourceTextSha256": "948643f3359c1289a9d26e7ec9e286c4f3112a71eac236e17cae3b922ffb0d4d",
+      "sourceFingerprint": "632b66e54d0ad074520dc12d9f24fc02de5c9d43bc5aad5e68755ebbe4674886",
+      "matchesSourceFollowup": true
+    },
+    {
+      "sourceId": "server.message.m843e64bf5198",
+      "newSourceText": "Unable to send a test message through Mailgun.",
+      "sourceTextSha256": "e6c6644f46f71ef52d94b0391b1ada634c435b5dbdad50dfc910cbdc16ddadec",
+      "sourceFingerprint": "366d91002fd688da9f705ec11d13cc0f6e7eed606f505f14e046cb41912d8bf1",
+      "matchesSourceFollowup": true
+    }
+  ],
+  "callers": [
+    {
+      "sourceId": "server.message.m783307436ce0",
+      "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+      "oldSourceText": "Disable 'Check before download' option in Sabnbzd",
+      "oldSourceTextSha256": "783307436ce024cb670e4bb840a69fc41d16ed88e01af2a1e76edac69dd3787a",
+      "newSourceText": "Disable the 'Check before download' option in SABnzbd.",
+      "newSourceTextSha256": "948643f3359c1289a9d26e7ec9e286c4f3112a71eac236e17cae3b922ffb0d4d",
+      "sourceFingerprintBefore": "789a0357c2f94fe0d4f2cece8c35dca6590517e0afb03fdf4dbf7c09a805351a",
+      "sourceFingerprintAfter": "632b66e54d0ad074520dc12d9f24fc02de5c9d43bc5aad5e68755ebbe4674886",
+      "callerFile": "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs",
+      "callerFileSha256Before": "78ae7eda5718915c769519a5c78d5c9c48fb094ddf16ddc2f99dbabe3dd82120",
+      "callerFileSha256After": "efee6bb68ba896dac3bd57ed6488fe76a220f382e6301e96b905b8330bd21e50",
+      "callerOccurrencesChanged": 1,
+      "postEditCallerOccurrences": [
+        {
+          "line": 446,
+          "lineText": "                return new NzbDroneValidationFailure(\"\", \"Disable the 'Check before download' option in SABnzbd.\", \"server.message.m783307436ce0\", null)"
+        }
+      ],
+      "translationHandling": "W654 translations use the verified product spelling SABnzbd; W695 target values already express the intended through-Mailgun meaning and were accepted unchanged."
+    },
+    {
+      "sourceId": "server.message.m843e64bf5198",
+      "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+      "oldSourceText": "Unable to send test message though Mailgun.",
+      "oldSourceTextSha256": "843e64bf5198780337ab9571cc9686310541b82d8781fa77b1d5882af18b4663",
+      "newSourceText": "Unable to send a test message through Mailgun.",
+      "newSourceTextSha256": "e6c6644f46f71ef52d94b0391b1ada634c435b5dbdad50dfc910cbdc16ddadec",
+      "sourceFingerprintBefore": "e59d9a092b649ccbe6d901e6a7346fb3383d8a742bdf81fb8e14a56c36b10613",
+      "sourceFingerprintAfter": "366d91002fd688da9f705ec11d13cc0f6e7eed606f505f14e046cb41912d8bf1",
+      "callerFile": "src/NzbDrone.Core/Notifications/Mailgun/Mailgun.cs",
+      "callerFileSha256Before": "0d11db1b184f08654f35a6ed39ac396c186338aa37438d1ba7bdda8addffa65b",
+      "callerFileSha256After": "58dc913eb6c5d4a426532802afd9a70d15dfe184b07a088f672e4f7615c51c3d",
+      "callerOccurrencesChanged": 2,
+      "postEditCallerOccurrences": [
+        {
+          "line": 83,
+          "lineText": "                _logger.Error(ex, \"Unable to send a test message through Mailgun.\");"
+        },
+        {
+          "line": 84,
+          "lineText": "                failures.Add(NzbDroneValidationFailure.ForMessage(\"\", \"Unable to send a test message through Mailgun.\", \"server.message.m843e64bf5198\"));"
+        }
+      ],
+      "translationHandling": "W654 translations use the verified product spelling SABnzbd; W695 target values already express the intended through-Mailgun meaning and were accepted unchanged."
+    }
+  ]
+}

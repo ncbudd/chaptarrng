@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+  "tree": "605a751ae9c3b454f4189dd89d021a5976e95237",
+  "pullRequestState": {
+    "headRefOid": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+    "isDraft": true,
+    "state": "OPEN"
+  },
+  "sourceFollowupPath": "docs/localization/source-followup-20261101.json",
+  "sourceFollowupBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+  "sourceFollowupSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+  "sourceIdListCount": 1210,
+  "sliceStart": 50,
+  "sliceStopExclusive": 100,
+  "sliceIds": [
+    "provider.field.fc977e5885c27",
+    "provider.field.fad474080a315",
+    "provider.field.f7ab097af902c",
+    "provider.field.fb0bc267591a6",
+    "provider.field.fe0303eb76da9",
+    "provider.field.f0a783e1949cd",
+    "provider.field.fa6dda8c6f419",
+    "provider.field.f100fa980fa39",
+    "provider.field.fcbf8b70ead77",
+    "provider.field.f916f287836e6",
+    "provider.field.fac6d99147595",
+    "provider.field.f8fe35ee9e555",
+    "provider.field.f43ff64c5a04b",
+    "provider.field.fed7a4fd6fcef",
+    "provider.field.fdc7b7a265acf",
+    "provider.field.fb80d9a4950db",
+    "provider.field.f866e447248db",
+    "provider.field.fff72ae38d781",
+    "provider.field.fcf9692863aa6",
+    "provider.field.fb0c56c384aa4",
+    "provider.field.f8952604a5ad2",
+    "provider.field.f71d1d49e8c27",
+    "provider.field.f980cab606403",
+    "provider.field.fc03eb4d77a85",
+    "provider.field.f130b15afdee4",
+    "provider.field.f535765ad7944",
+    "provider.field.f0ef20a489d17",
+    "provider.field.fceec68456eb2",
+    "provider.field.f0dfe7337cc47",
+    "provider.field.fada1608882a3",
+    "provider.field.f65f28a0cee2d",
+    "provider.field.fa6227f38ef55",
+    "provider.field.fc93c16190aa5",
+    "provider.field.f96c17faad98a",
+    "provider.field.f1f8c9a0e5693",
+    "provider.field.f25db4afacbd7",
+    "provider.field.f357d4eccfc02",
+    "provider.field.f75157c123901",
+    "provider.field.fa09d60a7491d",
+    "provider.field.f022785026db1",
+    "provider.field.f39b32b0975f2",
+    "provider.field.fd4cf989d1fb3",
+    "provider.field.f94541466889e",
+    "provider.field.f5ecacbc7f1fa",
+    "provider.field.f686d3f04e7e0",
+    "provider.field.fea17ca84d52d",
+    "provider.field.f0f701a8deb7c",
+    "provider.field.fd45ae9f7e9a5",
+    "provider.field.fe51ae2eae9c6",
+    "provider.field.f5c36c4fb0440"
+  ],
+  "sliceCount": 50,
+  "directLocales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "targetCells": 600,
+  "sourceCatalogBlob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+  "sourceCatalogSha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+  "sourceCatalogKeys": 4165,
+  "targetCatalogs": {
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "blob": "de781743f32629e57d0a0300081c18ff29b58ebb",
+      "sha256": "38e24eba95b105e772d304d058cbcca66bf6fc862e3c92276ef03a8ae707ada3",
+      "keys": 4165
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "blob": "90de536a69af9a2b2f1565639344e74ff63dea46",
+      "sha256": "af173957a0fff2d5beeed1289122a5814781da91033fe1d664dda86143f61514",
+      "keys": 4165
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "blob": "16ae94c9a3b874e3db569de29f65ac98c101d1f9",
+      "sha256": "b99ae04fdb24cba50e92d8b57bf63d006689a89af239de16b553c688b2662364",
+      "keys": 4165
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "blob": "65e39f63480930d3a79f7dc37c963e76a9b06483",
+      "sha256": "aace648b2824d318c96cd9cc509fd518b57a8338e3ba66e0af309ed3d990b50b",
+      "keys": 4165
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "blob": "f9532c13d3e0b2fdca7995db0e9dc0fdf465c92a",
+      "sha256": "8c05bbf55d434e4cd3cbd185ddf1364176ed110bdc5944ed53640efc7a74de00",
+      "keys": 4165
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "blob": "5397fb21d1b4de5770eaa365f77d9de8b91b500d",
+      "sha256": "e553941d3e1bd3a2dac03db618ef9d515ff8768e93e5cf81f47343e60af05141",
+      "keys": 4165
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "25a0ff92fae58627b489d142c97d6ca9ac92084f",
+      "sha256": "5dcefa518dd4df762adc57c9041d89cc3a39ea9e6cb59167fbcbd93a81a603a8",
+      "keys": 4165
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "c38fc96e0c8a1be31b5fe412910883a0e613f1ae",
+      "sha256": "d856f2c4ee3bc4aed728c6e21f2915d16e27bc6e1f0afd75f92177e844a19d7c",
+      "keys": 4165
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "7dbb4603595686883aeb5f9ddb5b43db68920326",
+      "sha256": "31a95180d50c0c76e76b2d15b2cea63ce3ddd13cc79cf3c5269d48fc225ccfec",
+      "keys": 4165
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "a30333859d02588d8597f1081802f537ce02ce53",
+      "sha256": "a06e9d76d57af391c8c0ee75000fbe23d6ef72e87ab59ff6e61dcd0a29148051",
+      "keys": 4165
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "a4dbbbbb08acfa25af4050995528f2a7b4986f62",
+      "sha256": "8f663fa81fbb28922eb9a91135f580706f183014876e3910ef2ae0ebd1dd8c84",
+      "keys": 4165
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "5531e4ba44859157a6ad3d6a8edb4b2cdea380f6",
+      "sha256": "82e856523ebfaab98dcf774c95d58269bd6cdf62691c203fa0c6785f26052edc",
+      "keys": 4165
+    }
+  },
+  "uniqueCallerFiles": 27,
+  "uniqueCallerLines": 710,
+  "previousWindow": "currentMissingIds positions 0-49",
+  "previousWindowDisjoint": true,
+  "aggregatePriorReview": {
+    "reportedCells": 14520,
+    "perCellLedgerAvailable": false,
+    "overlapWithThisSlice": "unknown; this packet is a fresh exact-head re-review"
+  },
+  "knownExactHeadRowLevelOverlap": "none found for these provider-field IDs",
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryMutated": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false
+}

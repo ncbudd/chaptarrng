@@ -1,0 +1,106 @@
+{
+  "artifact": "ChaptarrNG PR #190 W400-W449 exact-hash application preflight",
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "plannedCells": 140,
+  "plannedByLocale": {
+    "es": 12,
+    "fr": 10,
+    "hi": 17,
+    "id": 7,
+    "ja": 9,
+    "ko": 6,
+    "pt-BR": 8,
+    "zh-Hans": 17,
+    "zh-Hant": 19,
+    "de": 12,
+    "vi": 10,
+    "ar": 13
+  },
+  "nonTargetCellsChanged": 0,
+  "sourceAndCallerPinsMatched": true,
+  "currentTargetHashesMatched": true,
+  "allPlansAreChanges": true,
+  "catalogs": {
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "keyCount": 4165,
+      "sha256": "9dbbc976bdaef3348b3e48aa2f82c930f9f4e27c9052752a3273d1587700a917",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "keyCount": 4165,
+      "sha256": "3e1f7e0930b86741eb6a0ac37f6546fa9783430dc9bc2c63c2ae74096757f3ed",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "en": {
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "keyCount": 4165,
+      "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+      "keyOrderSha256": "1267e6eb650f0ebf2a5c96dc0e898e37a1f571b8e7ded72bb3a4142fed72bcad"
+    },
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "keyCount": 4165,
+      "sha256": "78b5e85d78474993cacecfe319c832eb7e96c8fc67fe7f1270b3c4a7b2e4d320",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "keyCount": 4165,
+      "sha256": "5a79ac84d6becf1fedfd3856dd1c7c17cb867ecfb58987161734756c37da7748",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "keyCount": 4165,
+      "sha256": "be16967cd114dfac749ce10c41f3769170727514a593d7bc8aa1412a497d4da8",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "keyCount": 4165,
+      "sha256": "b65472a41f7683ee24e64353f236b480d37e0d952f169d981c95846ac75e59ce",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "keyCount": 4165,
+      "sha256": "1f7563f4b22a24719c6641e4eb809e7b2c5c32e9d7e86379c5166f43185f4e64",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "keyCount": 4165,
+      "sha256": "18eacf1eb809f87f4716506dea885cc6f547aa1e7fc8997ad7373ae92492832f",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "keyCount": 4165,
+      "sha256": "98b736902e67ca2a3b8ba0bc104e81870bbc32514f1b90294041183089826c0b",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "keyCount": 4165,
+      "sha256": "dd74e95b5dcc266c5feb20cb587a49a1fe2a45249c28aa6026db00558f7a09b9",
+      "keyOrderSha256": "00af8c8f66d793c62cc4d9685d3ab0701565bbf9bb5f5ab619a134441b3f4f1d"
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "keyCount": 4165,
+      "sha256": "ae5943db465dfea8da4f17d373715cb033b578f81f59133e598e818d61f6aa3a",
+      "keyOrderSha256": "00af8c8f66d793c62cc4d9685d3ab0701565bbf9bb5f5ab619a134441b3f4f1d"
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "keyCount": 4165,
+      "sha256": "32d63c3e03ff76649bf81cb5ba65c44d60709740b1798fdd15133a19278c1267",
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b"
+    }
+  },
+  "catalogApplicationPerformed": false,
+  "nativeSpeakerApproval": false
+}

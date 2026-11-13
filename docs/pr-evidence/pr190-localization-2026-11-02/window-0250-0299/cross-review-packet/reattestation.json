@@ -1,0 +1,151 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "head": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+  "tree": "90a59b1c329feeb3fb34bdc5050128c8792b573e",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "sourceWindow": [
+    250,
+    299
+  ],
+  "sourceIds": 50,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "cells": 600,
+  "primaryPacketInputSumsVerified": true,
+  "primaryPacketSumsVerified": true,
+  "primaryInputSumsSha256": "e712793f713d124d05fa685baac6f6eaa6442414800217c34d78ad0fc8d2e1a3",
+  "primarySumsSha256": "9db51756aa0b1e59563679b2c705672c16196b4e1828e0cc0bf017bff2d3f1cb",
+  "sourceSliceSha256": "417c884ca1cdbe00efb945a9ccf333c33a81c4677edd9b411e1838aeff5aff9f",
+  "inputCellsSha256": "8b1e673f487dc40aa3b8b18effbeb023ad38b560450fdb9e3ecb3b34162552b5",
+  "primaryReviewSha256": "dd96dcec0fbef29f9f186f5c893d4cb65113e71f9ef4d8e39ca7efc2c7b79d89",
+  "candidateRowsSha256": "b9134466a717849f2fe13fef6494edb8542cb4c8e847b936d7caa1a962d6897c",
+  "callerContextSha256": "de8ae10d397c634fbf2ccf0e125920eb13a08d3a7bec2692d8575864dcd710dc",
+  "sourceCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "bytes": 312087
+  },
+  "followupFile": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "sourceIdCount": 1210,
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c"
+  },
+  "registry": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "records": 409
+  },
+  "targetCatalogs": {
+    "src/NzbDrone.Core/Localization/Core/es.json": {
+      "blob": "2c7601353e798740f390ed3d4f2a85a1e01ed0a8",
+      "sha256": "f2929bc24bc6de276492c3d5c05f50a3eec359e2f294f77eea0727dc51d00a2e",
+      "bytes": 358652
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": {
+      "blob": "7079e6873643a4479cbbad8f7f4ae8dd4369ba33",
+      "sha256": "f1910f124002eaebf3cc73a4a808934c5448c1d46807fb5f2ddf73610a0b5697",
+      "bytes": 305724
+    },
+    "src/NzbDrone.Core/Localization/Core/hi.json": {
+      "blob": "cc7a1de6514043c8fa6bc43a749ee031d3912d79",
+      "sha256": "fb90537ae4365bd67aad83b5be466bd3c8c6b0e9806e33db8b59faafdf069f56",
+      "bytes": 605053
+    },
+    "src/NzbDrone.Core/Localization/Core/de.json": {
+      "blob": "acde23e6308140b640309d5fdc3a1ce9f55b052d",
+      "sha256": "338af1b346c429ebcd71826fc184212626a42979d7af7b4eb606189fa9e9a3e0",
+      "bytes": 360476
+    },
+    "src/NzbDrone.Core/Localization/Core/ja.json": {
+      "blob": "f3e82ea1dc6c8ce6c2dc13f8c6a690fef4f5ff4b",
+      "sha256": "e3f64ccdfbe5c3c690313ae45e6fd4c04b3acc0b47c4a84d6b46f05e4891ca1d",
+      "bytes": 408244
+    },
+    "src/NzbDrone.Core/Localization/Core/fr.json": {
+      "blob": "e3267a105856b0fce0bb583e8f75ed1fd1959f1c",
+      "sha256": "610012551d2614ea0ac657120e5bd9c9fc1de51cc8424dcb987f48b6dbb65e19",
+      "bytes": 374134
+    },
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": {
+      "blob": "66fdb4604077ac855937c42f76933c470e731741",
+      "sha256": "37f4e3c198713f9fa8e9758cd6c6c3e5d471cbc5a7671cb6f90b0c70f177b02b",
+      "bytes": 352150
+    },
+    "src/NzbDrone.Core/Localization/Core/ar.json": {
+      "blob": "99bda7f17a673d164143cf7148eb23a240b56e1b",
+      "sha256": "1b811164587a0deffb86ef6e28fea3eed6e8a74e92563cd9722f100c7228c866",
+      "bytes": 431143
+    },
+    "src/NzbDrone.Core/Localization/Core/ko.json": {
+      "blob": "fe1c7983b6f7561a8c7c3896af0638ce110e94e6",
+      "sha256": "e8563a3ac39defc34a3eb9010f61b6aeeedc94f1a6ce995858af4c6004c0e143",
+      "bytes": 367415
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": {
+      "blob": "a49358883391eff516300306c03290bfdafd1ddb",
+      "sha256": "0c9b173be3085fcf94f076eb0d39e76627a9fe29dbb3b7e94658613a7a9e62d2",
+      "bytes": 307033
+    },
+    "src/NzbDrone.Core/Localization/Core/vi.json": {
+      "blob": "4ca39b7a6895b6b549cd0b18604a730ede5a0ca6",
+      "sha256": "20d413694d3ead1a74a33a4c8955db4c15629f90694c5bc0076076c667b4f3f4",
+      "bytes": 388795
+    },
+    "src/NzbDrone.Core/Localization/Core/id.json": {
+      "blob": "f5e4ab8faf336f510de65f680d9191f3c7180a73",
+      "sha256": "156059d75fb300f26298725a26c9ab2b5975908e8cece0142f029770503eedcd",
+      "bytes": 332659
+    }
+  },
+  "sourceValuesReattested": 50,
+  "currentCellsReattested": 600,
+  "cellMismatches": 0,
+  "callerRefsReattested": 59,
+  "uniqueCallerLinesReattested": 40,
+  "callerMismatches": 0,
+  "w249Context": {
+    "sourceId": "provider.field.fcdb8bc7fbe78",
+    "source": "Connect to AudioBookShelf over HTTPS instead of HTTP",
+    "cellsReattested": 12,
+    "callerRefsReattested": 1,
+    "protectedLiteralChecks": 36,
+    "priorPrimaryPacketSha256": "fcb4a9cda97bc894fc45a234a71a953434eafecb258fb11ec92fecaafb2abb99",
+    "priorCrossReviewPacketSha256": "ea24fc914c5940d2b8f05c0af9e679adcec63854bded6dd057b29aef57bb18eb",
+    "mismatches": 0
+  },
+  "placeholdersRechecked": 600,
+  "placeholderMismatches": 0,
+  "markupRechecked": 600,
+  "markupMismatches": 0,
+  "protectedLiteralChecks": 576,
+  "protectedLiteralMismatches": 0,
+  "w249ProtectedLiteralMismatches": 0,
+  "status": "pass",
+  "recheckedAtUtc": "2026-11-02T14:18:38Z"
+}

@@ -1,0 +1,30 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "baselineHead": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "baselineTree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "catalogFilesChanged": 12,
+  "catalogCellsChanged": 81,
+  "allCatalogHashesMatchPlan": true,
+  "all120FinalCellsReadBack": true,
+  "readbackMismatches": 0,
+  "localeKeyCounts": {
+    "ar": 4165,
+    "de": 4165,
+    "es": 4165,
+    "fr": 4165,
+    "hi": 4165,
+    "id": 4165,
+    "ja": 4165,
+    "ko": 4165,
+    "pt-BR": 4165,
+    "vi": 4165,
+    "zh-Hans": 4165,
+    "zh-Hant": 4165
+  },
+  "allLocaleKeysetsMatchEnglish": true,
+  "protectedLiteralMismatches": 0,
+  "gitDiffCheck": "passed",
+  "testsBuildsScansBrowserCIWorkflowChanges": false,
+  "mergeReleaseTags": false
+}

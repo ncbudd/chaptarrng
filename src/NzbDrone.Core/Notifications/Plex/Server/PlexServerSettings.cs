@@ -10,12 +10,14 @@ namespace NzbDrone.Core.Notifications.Plex.Server
     {
         public PlexServerSettingsValidator()
         {
-            RuleFor(c => c.AuthToken).NotEmpty().WithMessage("Authenticate with Plex.tv first");
+            RuleFor(c => c.AuthToken).NotEmpty().WithMessage("Authenticate with Plex.tv first")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m5269a817943e"));
             RuleFor(c => c.Host).ValidHost();
             RuleFor(c => c.Port).InclusiveBetween(1, 65535);
             RuleFor(c => c.LibrarySectionId)
                 .Must(v => v.IsNullOrWhiteSpace() || (int.TryParse(v, out var id) && id > 0))
-                .WithMessage("Invalid Plex library selection");
+                .WithMessage("Invalid Plex library selection")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mea00d26cbf7a"));
             RuleFor(c => c.MapFrom).NotEmpty().Unless(c => c.MapTo.IsNullOrWhiteSpace());
             RuleFor(c => c.MapTo).NotEmpty().Unless(c => c.MapFrom.IsNullOrWhiteSpace());
         }

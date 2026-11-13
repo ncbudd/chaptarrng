@@ -1,0 +1,27 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "W1200-W1209",
+  "exactHead": "c66ef0bccc0635f047cebeda95b9aaa0ae8130a4",
+  "exactTree": "e2142a119ce8d9d765927bb44a47f71364863995",
+  "cleanInputSha256": "6d8a45ffef2f07c1c5b468f09257d13cadb3936a016bd3bf72cc73d6f91a4bfb",
+  "callerPinsSha256": "0d35f0060f7a4c0f1011018b73135ae2c7a117d1e939046ebfdb2020942c96b5",
+  "sourceContextSha256": "48ba42e2c2041e8a83df7f492d9d2474cc95c48b9473863bd73c95f5ed82cb62",
+  "ledgerSha256": "168c517c5ddf008647b8246537b10f9e19b61603da7305a6a36d605e1641fa95",
+  "cells": 120,
+  "sourceIds": 10,
+  "locales": 12,
+  "dispositions": {
+    "accept-current": 118,
+    "refinement": 1,
+    "correction": 1
+  },
+  "proposedChanges": 2,
+  "placeholderErrors": 0,
+  "protectedLiteralErrors": 0,
+  "callerHolds": 0,
+  "nativeSpeakerApproval": false,
+  "headedBrowserAcceptance": false,
+  "repoOrPrMutated": false,
+  "primaryDecisionsOpened": false
+}

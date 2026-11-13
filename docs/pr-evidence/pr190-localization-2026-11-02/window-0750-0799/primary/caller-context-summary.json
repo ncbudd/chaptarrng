@@ -1,0 +1,35 @@
+{
+  "genericPipelineFiles": 35,
+  "genericPipelineGaps": [],
+  "genericPipelineRefs": 76,
+  "sourceCallerGaps": [],
+  "sourceCallerRefs": 65,
+  "sourceCallerRows": 50,
+  "staleRegistryPinsRefreshed": [
+    {
+      "file": "src/NzbDrone.Core/Indexers/Torznab/Torznab.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 139,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"ApiPath\", \"Jackett's all endpoint is not supported, please add indexers individually\", \"server.message.ma4a7539d1468\")",
+      "sourceId": "server.message.ma4a7539d1468",
+      "sourceOrdinal": 759
+    },
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 702,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to qBittorrent\", \"server.message.ma5add25e2d2b\")",
+      "sourceId": "server.message.ma5add25e2d2b",
+      "sourceOrdinal": 761
+    },
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/Aria2/Aria2.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 332,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to Aria2\", \"server.message.ma78299fc1030\")",
+      "sourceId": "server.message.ma78299fc1030",
+      "sourceOrdinal": 763
+    }
+  ],
+  "uniqueSourceCallerFiles": 52
+}

@@ -1,0 +1,50 @@
+{
+  "purpose": "Independent root adjudication of all 138 W1150-W1199 primary/cross disagreement cells",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pull_request": 190,
+  "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "output_host": "kspld0",
+  "output_path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1150-1199-root-adjudication-20261103",
+  "rows": 138,
+  "dispositions": {
+    "refinement": 53,
+    "correction": 64,
+    "accept-current": 21
+  },
+  "by_locale": {
+    "ar": 6,
+    "es": 6,
+    "fr": 9,
+    "pt-BR": 11,
+    "vi": 19,
+    "zh-Hans": 15,
+    "zh-Hant": 15,
+    "hi": 10,
+    "ja": 15,
+    "ko": 18,
+    "de": 11,
+    "id": 3
+  },
+  "selected_candidate_origins": {
+    "blind-third": 63,
+    "adjudicator-edit": 20,
+    "current": 21,
+    "independent": 13,
+    "primary": 16,
+    "primary-and-independent": 5
+  },
+  "semantic_holds": 0,
+  "qualified_native_speaker_approval": false,
+  "native_speaker_review_outstanding_rows": 138,
+  "placeholders_and_protected_literals": "all final recommendations passed exact token/literal checks",
+  "exact_head_reattestation": "all source/current strings, file hashes, caller file hashes and pinned source lines matched the clean PR worktree",
+  "input_sha256": {
+    "primary_review_cells": "794cbb9dc208ffedee27c90bb568cfc75ef6bdeb6bc252e9d72477eddf527245",
+    "cross_review_cells": "bee7a858fd79333271bd053e1d5ba1cdcc99e78e4c63c4ae2d22484d5d5b90d1",
+    "blind_third_review_ledger": "e13f2fc615aff90b9e3d84ec58894eb499d398cdd4a8a67c3cd04f9f5283b359",
+    "root_adjudication_input": "bd8dcb0b3d49c29d03428e2d18240bda4c54f943d055030714ec402801922c4e"
+  },
+  "no_repository_or_pull_request_changes": true,
+  "no_tests_builds_scans_ci_browser_or_workflows": true
+}

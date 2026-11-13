@@ -1,0 +1,29 @@
+{
+  "artifact": "ChaptarrNG PR #190 W400-W449 second-opinion semantic review",
+  "counts": {
+    "accept-recommendation": 134,
+    "adjust": 6,
+    "hashOnlyCallerlessHolds": 12,
+    "hold": 0,
+    "recommendations": 140
+  },
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "files": [
+    "README.md",
+    "manifest.json",
+    "second-opinion-ledger.jsonl",
+    "hash-only-holds.jsonl",
+    "summary.json",
+    "verify_second_opinion.py"
+  ],
+  "inputSha256": {
+    "candidate-free/input/SHA256SUMS.txt": "dc057678d73514d8ad08426a648571472b02ee9969cb0cf67b6c4f998e4a3d4f",
+    "candidate-free/input/caller-context.jsonl": "626ade4dbc03ff182e9d7f7813808696b2d4df8b719390792b54db74cef34420",
+    "candidate-free/input/candidate-free-cells.jsonl": "1b38676639f05eaa81d64f4d515b8c714e2f50d6550be209f66b526ca0a4a369",
+    "cross-review/independent-semantic-review/cross-review-ledger.jsonl": "5b9a089c178e8ce2fd01c39b1e5a70a75ca99c59373fb78db93abd005dc83773",
+    "cross-review/independent-semantic-review/holds-hash-only.jsonl": "8008bf01375d532f64c7002f6f634c433ee33b7def61d506a7c449f4234bd44d"
+  },
+  "schemaVersion": 1,
+  "sealed": true
+}

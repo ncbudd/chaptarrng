@@ -1,0 +1,20 @@
+{
+  "checkedAtUtc": "2026-11-03T00:20:03.739685+00:00",
+  "localWorktree": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "status": "",
+    "tree": "d073e1373021bf715db37461a12654f7e993cdbf"
+  },
+  "officialRemoteBranch": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "officialRemoteTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "pr": {
+    "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "isDraft": true,
+    "number": 190,
+    "state": "OPEN",
+    "tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  }
+}

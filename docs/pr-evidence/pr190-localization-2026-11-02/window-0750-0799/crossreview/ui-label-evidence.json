@@ -1,0 +1,192 @@
+{
+  "englishLabelCatalog": {
+    "AuthorEditor": "Author Editor",
+    "Bookshelf": "Bookshelf",
+    "blob": "be4cfe01ea4b4994f434ad9ba85c8f5ec52d45ec",
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "467b8c902bfad2f187338689d7bf75d7a922539f909aa09b5cfe01c91ac5d574"
+  },
+  "exactHead": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+  "exactTree": "3baf8c11efe42c617a286cd37665e946303c6d2a",
+  "finding": "The W770 API message names these two user-visible destinations. Both keys have exact locale-specific catalog values and the frontend reads those keys for the visible labels. The literal Bookshelf exception recorded in the primary packet therefore does not apply to this use; candidate targets should reuse these localized UI labels.",
+  "frontendUsesLabels": [
+    {
+      "key": "Bookshelf",
+      "pin": {
+        "bytes": 16042,
+        "contextAfter": [
+          "to: '/shelf',",
+          "simple: true",
+          "},"
+        ],
+        "contextBefore": [
+          "simple: true",
+          "},",
+          "{"
+        ],
+        "fileSha256": "234d988f9a6badfea3159d598fb9e4e1b0f05cb18d15bc41b33a99fff4210bf3",
+        "gitBlob": "00701d5bfbf2d5e8deaaf5cb8fdad63e283d94d6",
+        "line": 45,
+        "lineSha256": "97fe2949ae2e830642ebf5767a96f171e0100f53a5a4f874faf23fb6bfa2c402",
+        "lineText": "title: () => translate('Bookshelf'),",
+        "path": "frontend/src/Components/Page/Sidebar/PageSidebar.js"
+      },
+      "purpose": "Bookshelf page sidebar title"
+    },
+    {
+      "key": "AuthorEditor",
+      "pin": {
+        "bytes": 22783,
+        "contextAfter": [
+          "iconName={icons.EDIT}",
+          "isDisabled={hasNoAuthor}",
+          "onPress={this.onEditorTogglePress}"
+        ],
+        "contextBefore": [
+          "onPress={this.onEditorTogglePress}",
+          "/> :",
+          "<PageToolbarButton"
+        ],
+        "fileSha256": "304b85e732ca048e9aa49c191f3bbeed7861a8aeba2588a1e8647a7ad2ac66c5",
+        "gitBlob": "676b1907175e5312b2ce2e7c84233dde580643c3",
+        "line": 497,
+        "lineSha256": "34461a107d72d38bb2ad08ccbd426d96e56d6cace0412001e5d68184ae4e5121",
+        "lineText": "label={translate('AuthorEditor')}",
+        "path": "frontend/src/Author/Index/AuthorIndex.js"
+      },
+      "purpose": "Author Editor tab button label"
+    }
+  ],
+  "localeLabels": [
+    {
+      "AuthorEditor": "محرر المؤلف",
+      "Bookshelf": "رف الكتب",
+      "catalogBlob": "75a49b47ba309a8f062c54b8e52b4834b684d46b",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "catalogSha256": "a6a3cf57ab38f150f4f77cba51a837ab61db5111cf892854131245334045a7bc",
+      "locale": "ar"
+    },
+    {
+      "AuthorEditor": "Autor Editor",
+      "Bookshelf": "Bücherregal",
+      "catalogBlob": "cacc1b03b9bbf5b332ad7ccddc3843e7e359438b",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/de.json",
+      "catalogSha256": "dec6f918723556d5864941ffc39180ee02eaafaed4106052df89eb3e0a40b451",
+      "locale": "de"
+    },
+    {
+      "AuthorEditor": "Editor de Autor",
+      "Bookshelf": "Estante para libros",
+      "catalogBlob": "0d0471ddd01741fbb22d595c3fe5d35d7b8cd1de",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/es.json",
+      "catalogSha256": "60ac263cc0e54b470ba925bca5010e9680e40a02404552652a5145be0ffd4ac0",
+      "locale": "es"
+    },
+    {
+      "AuthorEditor": "Éditeur de l'auteur",
+      "Bookshelf": "Bibliothèque",
+      "catalogBlob": "c33fe01c78622fd7aa1ffe1bc63ebeb25a0a45b2",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "catalogSha256": "83bc95f69c8af2afd17124b23b4d009c2f1ebf76f09ba0476d1e641be6cac054",
+      "locale": "fr"
+    },
+    {
+      "AuthorEditor": "लेखक संपादक",
+      "Bookshelf": "पुस्तकालय",
+      "catalogBlob": "ad05de74e54a411dd065b7eb2f8aa44e1b57602b",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "catalogSha256": "53c11ca84b0fe000233c29570caebd51921fcd0375b368ce77a6d640d0455166",
+      "locale": "hi"
+    },
+    {
+      "AuthorEditor": "Penyunting Penulis",
+      "Bookshelf": "Rak buku",
+      "catalogBlob": "24ff18fc32e06ccb49d4ad2d3c13b0a1d751ca25",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/id.json",
+      "catalogSha256": "aa33ae73f7f2e37790bbed21c56329c8603462f30b92d63d40f05e5ae1072dea",
+      "locale": "id"
+    },
+    {
+      "AuthorEditor": "作者エディタ",
+      "Bookshelf": "本棚",
+      "catalogBlob": "34f835275ff7c2c4cfdc7ce82ff49daa4654c1aa",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "catalogSha256": "df131652375e3a811e2d3f95dbcb33a911e96660857edaf8f7725aa970d63311",
+      "locale": "ja"
+    },
+    {
+      "AuthorEditor": "저자 편집기",
+      "Bookshelf": "책장",
+      "catalogBlob": "53af9b441c6d1eb3aa8f24dda8c9c903fd61a4c0",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "catalogSha256": "eca82d00973e581fc7a707c093744afcc8352524d055e02292f84c60571f71cc",
+      "locale": "ko"
+    },
+    {
+      "AuthorEditor": "Editor de autor",
+      "Bookshelf": "Estante",
+      "catalogBlob": "bcb2a345e05cf3764267a8c350382894864eba33",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "catalogSha256": "9412baac229ed0fa184ee26e6ff4774e2976c20fcf0f191715f7ee9c2116f595",
+      "locale": "pt-BR"
+    },
+    {
+      "AuthorEditor": "Trình chỉnh sửa tác giả",
+      "Bookshelf": "Giá sách",
+      "catalogBlob": "c77af180207dd51abdefc63e37b8bd1a38417def",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "catalogSha256": "4be25ecb8f5aa3a3f97ac3629baf2234f4e961f30e16b959eaec70bf18cf9332",
+      "locale": "vi"
+    },
+    {
+      "AuthorEditor": "编辑作者",
+      "Bookshelf": "书架",
+      "catalogBlob": "e5b07155976ec20ef8f5ef066db6dc8e10a8d484",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "catalogSha256": "2c7bbaad2c220be30a96f0efde765c7f18e0740b47da94e2b1a7c8d98383933b",
+      "locale": "zh-Hans"
+    },
+    {
+      "AuthorEditor": "作者編輯器",
+      "Bookshelf": "書架",
+      "catalogBlob": "c82d28795d19d3717b8b6a5caf95bdb9ab6331f5",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "catalogSha256": "3abf9212c6c35eb9db5d87794ea54f376e9a8fe099c7c10f670bdab20a55f131",
+      "locale": "zh-Hant"
+    }
+  ],
+  "message": {
+    "source": "Bookshelf only changes book monitoring. Use Author Editor to change author or future-book monitoring.",
+    "sourceCallerRefs": [
+      {
+        "contextAfter": [
+          "}",
+          "",
+          "if (request.MonitoringOptions?.Monitor == MonitorTypes.SpecificBook &&"
+        ],
+        "contextBefore": [
+          "",
+          "if (request.MonitorNewItems.HasValue || requestedAuthors.Any(author => author.Monitored.HasValue))",
+          "{"
+        ],
+        "currentFileBlob": "b109adb2e0499ddaa20f4c01b636e121b02e65d5",
+        "currentFileSha256": "4d02ee66074c48f3facd9c440ec58093142e64822c64e29f078e4d92788130e5",
+        "currentLineSha256": "77329b286a7714d3cf6b9daae146ecd7f0fbe7ee83a5007adac3ab4cdaed7b28",
+        "currentLineText": "return BadRequest(\"Bookshelf only changes book monitoring. Use Author Editor to change author or future-book monitoring.\");",
+        "file": "src/Chaptarr.Api.V1/BookShelf/BookshelfController.cs",
+        "kind": "direct-api-result",
+        "line": 63,
+        "registryLine": 63,
+        "registryLineSha256": "77329b286a7714d3cf6b9daae146ecd7f0fbe7ee83a5007adac3ab4cdaed7b28",
+        "registryPinReattested": true,
+        "surface": "String body from an MVC API result; the caller may display it"
+      }
+    ],
+    "sourceId": "server.message.mad4c58282c50",
+    "sourceOrdinal": 770,
+    "sourceTextSha256": "ad4c58282c50572973d970b994be2feb5fe8b96cf530565d0f60c02b930e9160"
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1
+}

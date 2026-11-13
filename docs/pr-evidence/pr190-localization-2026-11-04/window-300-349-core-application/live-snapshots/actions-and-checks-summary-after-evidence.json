@@ -1,0 +1,15 @@
+{
+  "head": "9e140498caaad4d5957b0ef16ce659fe77fcebf3",
+  "runId": 41952452511,
+  "event": "pull_request_target",
+  "conclusion": "skipped",
+  "checkRunCount": 10,
+  "checkConclusions": [
+    "skipped"
+  ],
+  "commitStatusCount": 0,
+  "prState": "open",
+  "isDraft": true,
+  "baseApiSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "latestMain": "beb4f9550ec3340b3f6d9b34c721055610e68847"
+}

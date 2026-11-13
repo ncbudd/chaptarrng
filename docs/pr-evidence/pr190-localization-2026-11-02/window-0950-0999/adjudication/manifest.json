@@ -1,0 +1,49 @@
+{
+  "packet": "chaptarrng-pr190-window-0950-0999-adjudication-20261102",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "exactBase": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+  "exactHead": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+  "exactTree": "c46078c93545042313aa1b35bc3b283b1f3b5406",
+  "checksumsFile": "SHA256SUMS",
+  "fileCount": 6,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5819,
+      "sha256": "8694be400d7f21ad06c8f863c5accc21c3e86c16d7bedd69285bac733a780451"
+    },
+    {
+      "path": "adjudication-ledger.jsonl",
+      "bytes": 398274,
+      "sha256": "220c123e63c321b44de87deb02d10b1bd9a2fb419373e72b327bc921ef76c073"
+    },
+    {
+      "path": "all-seven-pr-heads-at-seal.json",
+      "bytes": 4539,
+      "sha256": "d3ec9cf827d23107caf935b8f851083e94e66f6328ccb5b7caf476e981227dc4"
+    },
+    {
+      "path": "evidence-sources.json",
+      "bytes": 12286,
+      "sha256": "dba818c174dd1d2f54c1867decb610804dd58478309343c3af111a93461a86b0"
+    },
+    {
+      "path": "input-attestation.json",
+      "bytes": 2685,
+      "sha256": "580594141a09b416fd5334b76a63137c6526796f07742a573bd57548d7acb7cf"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 13635,
+      "sha256": "c677613dc54b4c688a9431103205a4f9ec2b232da06896647f91615a5bd902dd"
+    }
+  ],
+  "primaryInputManifestSha256": "95179dd3faa69cecee69e15acef6d0d779db41ba38605dd6897138efa672a835",
+  "primaryInputChecksumsFileSha256": "29e46a5d5b9a0a806ea54504f2697635203330eded7d3ac8276b2d7a9ad40a41",
+  "crossReviewInputChecksumsFileSha256": "16f48146d279262f52b90c1ae3f6110a76331395dcc6bd974c9969c2a7432afb",
+  "allSevenLivePRHeadsQueriedAtSeal": true,
+  "nativeSpeakerApproval": false,
+  "approvedTargetChanges": 23,
+  "nativeSpeakerHolds": 1
+}

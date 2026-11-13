@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "reviewMethod": "Independent semantic review from exact-head English source, target catalogs, source registry, and production caller pins. The primary W1150-W1199 packet was not consulted before independent dispositions and candidates were written.",
+  "reviewers": [
+    {
+      "partition": "ar-de-es-fr-hi-id",
+      "cellCount": 300,
+      "artifact": "independent-review-ar-de-es-fr-hi-id.jsonl",
+      "independentOfPrimary": true
+    },
+    {
+      "partition": "ja-ko-ptBR-vi-zh",
+      "cellCount": 300,
+      "artifact": "independent-review-ja-ko-ptBR-vi-zh-W1150-1199.jsonl",
+      "independentOfPrimary": true,
+      "proceduralNote": "The reviewer reports that a broad repository search incidentally printed a few prior-window W1100-W1149 README/build-script lines before exclusion. Those lines contained no W1150-W1199 cells; the reviewer states they were not used as guidance. The current W1150-W1199 primary packet was not read before the independent ledger was written."
+    }
+  ],
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "nativeSpeakerApproval": false
+}

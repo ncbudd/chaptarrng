@@ -1,0 +1,122 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W900-W949",
+  "head": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "tree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+  "state": "OPEN",
+  "isDraft": true,
+  "primaryInput": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0900-0949-primary-20261102",
+    "manifestSha256": "795f1b6bddd08117c158027586a56fcde0c8142043691ba6251e7c1d25cda658",
+    "sha256SumsSha256": "f4990d65eefc3e2b0de8dfbbf7dc6afced7f20ecbdd20c287f00cf20f70d5c9d"
+  },
+  "cellCount": 600,
+  "sourceCount": 50,
+  "localeCount": 12,
+  "dispositionCounts": {
+    "accept-current": 478,
+    "accept-proposal": 121,
+    "revise-proposal": 1
+  },
+  "callerRefsReattested": 86,
+  "providerOptionPipelineRefsReattested": 20,
+  "serverMessagePipelineRefsReattested": 76,
+  "pinnedFilesReattested": 88,
+  "priorLinksReattested": 10800,
+  "liveHeadReconciliation": {
+    "beforeFile": "live-pr-heads-before.json",
+    "afterFile": "live-pr-heads-after.json",
+    "reconciliationFile": "live-head-reconciliation.json",
+    "allSevenQueriedBeforeAfter": true,
+    "targetHeadUnchanged": true,
+    "targetHeadChangesInOtherPRs": [
+      418,
+      204
+    ]
+  },
+  "nativeSpeakerApproval": false,
+  "repositoryModified": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2479,
+      "sha256": "bef1dd7660f60ff85f661efaa17c8c6ecd34cda5bc53f380cd66d6ee1dc3ad4f"
+    },
+    {
+      "path": "build_crossreview.py",
+      "bytes": 35723,
+      "sha256": "2421a80007f1e8aa8d1df2188e03cf00071975669c1951216832d239e31f2f45"
+    },
+    {
+      "path": "caller-reattestation.jsonl",
+      "bytes": 78725,
+      "sha256": "d89edce0bd8f2f884825d5ad3f225bebfd7dc3dd5f1cda169a5ff794c0f3b857"
+    },
+    {
+      "path": "catalog-reattestation.jsonl",
+      "bytes": 6238,
+      "sha256": "c90bee010dd406f16786d1c477ba91f7846656ae5ff25f81e8faf21038af548f"
+    },
+    {
+      "path": "crossreview-ledger.jsonl",
+      "bytes": 1899622,
+      "sha256": "2f456332401d5c4305fbbc9a16f6936491d4655e95a26abf66b6652aa0d06c40"
+    },
+    {
+      "path": "input-reattestation.jsonl",
+      "bytes": 730955,
+      "sha256": "7e135da38fb26833c24f8e6d147a6b08f6c8ce8ab55fa5358e82ff8c24ba82c6"
+    },
+    {
+      "path": "live-head-reconciliation.json",
+      "bytes": 6538,
+      "sha256": "00f4b3453f2c33f2e304f0fcd9131ffcef64b0343639f6c59c3df1c4afd54ffa"
+    },
+    {
+      "path": "live-pr-heads-after.json",
+      "bytes": 4526,
+      "sha256": "5798c3df0aaa2dcddc1f981b869506c0eeb44a4500f3d444c56c133e212f53e6"
+    },
+    {
+      "path": "live-pr-heads-before.json",
+      "bytes": 4526,
+      "sha256": "b175be53f25d2fa94ad969b32d922d1f60d42b36489c9c6fe93d7f241580e9ec"
+    },
+    {
+      "path": "pinned-file-reattestation.jsonl",
+      "bytes": 35865,
+      "sha256": "c81bdcc61e5571b670eab9687463101288af9af30ddb1a8b5078a5078d86bc05"
+    },
+    {
+      "path": "prior-disposition-reattestation.jsonl",
+      "bytes": 12427044,
+      "sha256": "588d4e1eb8b460a835b9d4cd6c85818bc6764eded14c572253c0025ca69eab58"
+    },
+    {
+      "path": "provider-option-pipeline-reattestation.jsonl",
+      "bytes": 18385,
+      "sha256": "b866f7a16025a930ea94b9b8cfe241e33edf6075ae212385b8c8afb387ed0154"
+    },
+    {
+      "path": "server-message-pipeline-reattestation.jsonl",
+      "bytes": 68650,
+      "sha256": "74d8df820028754e6e811d61517cb4fbc7c498812377f88192c54dc493fa7691"
+    },
+    {
+      "path": "source-registry-reattestation.jsonl",
+      "bytes": 32174,
+      "sha256": "176f78e5fd8239600795096ee236e2c77855eb50a327927106d83c8edf8cd8dd"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 4308,
+      "sha256": "e61591b5ad326a98860f902b993642de73236023c88540db67fb821a6150f624"
+    },
+    {
+      "path": "w899-boundary-reattestation.jsonl",
+      "bytes": 7271,
+      "sha256": "78cf087c082c9201573af9f08ed571055c9c6caf1fa8c656ebd632ef76aed36d"
+    }
+  ]
+}

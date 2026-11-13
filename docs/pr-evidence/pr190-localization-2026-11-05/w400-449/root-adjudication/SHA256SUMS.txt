@@ -1,0 +1,4 @@
+85cd7f2ced8860acf98e566fa33afafee7d5e8ae382aa86f46cc6d2519982a4e  ./README.md
+23d44edbf7ab15b71f806013c683efded91d8a6ea455e90c8a067762c27bffaf  ./root-adjudication-ledger.jsonl
+8656e496d73e4b39f38e301b55897c1e9a59f078488aefa7f470a654cee9a09b  ./summary.json
+c7effb4a7ce11721c991a43e78324330f3353d2823a87bd74c60cbbd64d9f88a  ./verify_root_adjudication.py

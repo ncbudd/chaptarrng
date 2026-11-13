@@ -1,0 +1,257 @@
+{
+  "afterSourceSelectionSnapshot": "snapshots/after-source-selection-all-pr-heads.json",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "browserReviewPerformed": false,
+  "callerGaps": [],
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "historicalPriorFinalMismatches": 195,
+  "localeCatalogs": {
+    "ar": {
+      "bytes": 431747,
+      "gitBlob": "4b390e78ed1db9c69ee2c58f7659db5855ad74a0",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "7ecde5f4a8158449f60933c1f1128008b79e77c6b2502bdfb88505e90a9372ec"
+    },
+    "de": {
+      "bytes": 361936,
+      "gitBlob": "5c2b92f60dcef5c2e2bd9a08f2bd91893f9b3197",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "26a5fc0e15b68cdd64abb6fcd042b7708320efa5191f94ab3366677919dee81a"
+    },
+    "es": {
+      "bytes": 359555,
+      "gitBlob": "2c756c894f33e8db92f31e2e2438e7052d56a1ab",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "5856b8428d5db05dbc211088ba870b2930841582b23075b719dda948cb81127b"
+    },
+    "fr": {
+      "bytes": 375106,
+      "gitBlob": "c4b31bbb75ff621aa77928730afacbcac97899e4",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "9f086780b79e27032bf73e75bce67867aa6c2fafd9508fc08f60147af8d0070c"
+    },
+    "hi": {
+      "bytes": 605807,
+      "gitBlob": "44039aa716dd3cff58c5b611a06447a172740aac",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "09fac099ef552bcd91c24e026c159917f319588846bd3133afe4451089500625"
+    },
+    "id": {
+      "bytes": 333027,
+      "gitBlob": "f41d0801e4b37a157c9599e7c59dac3e2f176e92",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "1bc372d2be8d71e08d07020299a00fef27fde3ac6cd6b6925109442856a73a8d"
+    },
+    "ja": {
+      "bytes": 409484,
+      "gitBlob": "a1c34070b50d9a8662ccf64d668f0ae8e8dfc6c9",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "f8b768c60e3444b28fabf2b599b0748e44df5ea803ec911f2f13b116ae4b7945"
+    },
+    "ko": {
+      "bytes": 368616,
+      "gitBlob": "d9c7623ce6c83557e3226fc0419cf42fb191271a",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "3ffda355adaef0a69e3d01945e712205e16fd656bd8e12559d30c8923fa1f586"
+    },
+    "pt-BR": {
+      "bytes": 353071,
+      "gitBlob": "4ac0a6d7cca0778aba2c15f74b72c50e267d1650",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "f442e2c27ac0d962f955bf07b30b14597d9728c1af3af3a1aa43730e5fae073c"
+    },
+    "vi": {
+      "bytes": 389516,
+      "gitBlob": "3b37a85e6f290cce31bb8b33d6b6122a41e17fae",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "a6d9cf85f985afff1fb2de555a02a6b908a49f60a6914c9f2aa05310906d6e1b"
+    },
+    "zh-Hans": {
+      "bytes": 306712,
+      "gitBlob": "b59754bc4e712ad3353dcd503b1fa975c45b26a3",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "95c553ecc0ffb01ac2fc02887504a4b4f61bd23186054ccdddb5ce60c326fe36"
+    },
+    "zh-Hant": {
+      "bytes": 308162,
+      "gitBlob": "9f3dcce15c6ddf61b940c6f0e5ead06e0e625cf2",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "62e70d96f494ee1eb3fdf7fc88bb74cb40e707eeb7b31bb2ac37701c6e573e80"
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "newPriorHashDriftSincePreviousPacket": 0,
+  "priorDispositionCountThroughW1049": 12600,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "localeCount": 12,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "positions": [
+      1050,
+      1099
+    ],
+    "positionsAreZeroBasedQueueIndexes": true,
+    "sourceCount": 50,
+    "window": "W1050-W1099"
+  },
+  "selection": {
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "positions": [
+      1050,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
+      1056,
+      1057,
+      1058,
+      1059,
+      1060,
+      1061,
+      1062,
+      1063,
+      1064,
+      1065,
+      1066,
+      1067,
+      1068,
+      1069,
+      1070,
+      1071,
+      1072,
+      1073,
+      1074,
+      1075,
+      1076,
+      1077,
+      1078,
+      1079,
+      1080,
+      1081,
+      1082,
+      1083,
+      1084,
+      1085,
+      1086,
+      1087,
+      1088,
+      1089,
+      1090,
+      1091,
+      1092,
+      1093,
+      1094,
+      1095,
+      1096,
+      1097,
+      1098,
+      1099
+    ],
+    "selectedSourceIds": [
+      "ui.loading.nextAdventure",
+      "ui.loading.blameCody",
+      "ui.loading.gomeyyApi",
+      "ui.loading.shaneKing",
+      "ui.loading.dodgeBooks",
+      "ui.loading.goldanDragon",
+      "ui.loading.rlhIdentity",
+      "ui.loading.swanDragonLibrary",
+      "ui.loading.skippedOldBooks",
+      "ui.loading.somethingSkels",
+      "server.message.m736b5fe15618",
+      "server.message.m0c585b47781f",
+      "server.message.mafabf0b8cd14",
+      "server.message.m09734a3e9cf9",
+      "server.message.mbcbc641ba38e",
+      "server.message.m835cd53441fb",
+      "server.message.md92a7552538b",
+      "server.message.mb9cbb26f3ba3",
+      "server.message.m61c0ddf68a65",
+      "server.message.mbbd2e6de2c1a",
+      "server.message.mbadd91901e47",
+      "server.message.mfb797cca63fc",
+      "server.message.meb0aaaf88fff",
+      "server.message.mca7536ee5f0c",
+      "server.message.m43edb49bfa4c",
+      "server.message.mae40d81346d7",
+      "server.message.mb7acdc796c01",
+      "server.message.m290e1a4f50ba",
+      "server.message.m380e19583eca",
+      "server.message.me74c7bc1f189",
+      "server.message.mbefd03741239",
+      "server.message.mc8b126d79c7b",
+      "server.message.mefa23f5263d3",
+      "server.message.m2e1832187375",
+      "server.message.md657eda9fd8b",
+      "server.message.m9123e0c2a1bb",
+      "server.message.mec15ef07ac20",
+      "server.message.mb762894b98c4",
+      "server.message.m123c31b11b23",
+      "server.message.m7daa93712844",
+      "server.message.m5314fa3dfe04",
+      "server.message.m4b0072b05f0b",
+      "server.message.me3e7aa14f3c4",
+      "server.message.m1cb06fc96c2e",
+      "server.message.mb226a7601a47",
+      "server.message.m5aa6a41c72ca",
+      "server.message.m060675d5700c",
+      "server.message.m9c90e66f400b",
+      "server.message.md9b3d7c8214b",
+      "server.message.mf4b3a5b30180"
+    ],
+    "window": "W1050-W1099"
+  },
+  "sourceCatalogFile": {
+    "bytes": 312097,
+    "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+  },
+  "sourceQueueFile": {
+    "bytes": 50936,
+    "gitBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "path": "docs/localization/source-followup-20261101.json",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128"
+  },
+  "sourceRegistries": {
+    "loading": {
+      "bytes": 9932,
+      "gitBlob": "05341fb7426720e53ab12897edfb8bcba7a76d8d",
+      "path": "docs/localization/loading-message-sources.json",
+      "sha256": "cfe66595d3f34ca1d2fe65d7837d1a860d57c8bdb0e039c62d8104f8b048cd26"
+    },
+    "server": {
+      "bytes": 766677,
+      "gitBlob": "88e18b12684ca7ece5b4680094188d2ff644d663",
+      "path": "docs/localization/server-message-sources.json",
+      "sha256": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825"
+    }
+  },
+  "stalePins": [],
+  "startSnapshot": "snapshots/start-all-pr-heads.json",
+  "url": "https://github.com/snapetech-org/ChaptarrNG/pull/190",
+  "worktreeState": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+    "status": "",
+    "tree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef"
+  }
+}

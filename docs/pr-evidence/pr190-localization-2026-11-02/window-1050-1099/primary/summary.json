@@ -1,0 +1,119 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "currentProtectedLiteralFailureCells": 0,
+  "directCallerGaps": 0,
+  "directCallerReferences": 60,
+  "dispositionCounts": {
+    "accept-current": 546,
+    "correction": 24,
+    "hold": 12,
+    "refinement": 18
+  },
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "finalProtectedLiteralFailureCells": 0,
+  "historicalPriorFinalMismatches": 195,
+  "icuMismatchCells": 0,
+  "limitations": "Static machine-assisted primary review; no qualified native-speaker approval, browser acceptance, or runtime validation is claimed.",
+  "localeCellCount": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "newPriorHashDriftSincePreviousPacket": 0,
+  "overallConfidence": "moderate",
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 46,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 1
+    },
+    "de": {
+      "accept-current": 45,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 3
+    },
+    "es": {
+      "accept-current": 46,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 1
+    },
+    "fr": {
+      "accept-current": 45,
+      "correction": 3,
+      "hold": 1,
+      "refinement": 1
+    },
+    "hi": {
+      "accept-current": 45,
+      "correction": 3,
+      "hold": 1,
+      "refinement": 1
+    },
+    "id": {
+      "accept-current": 47,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 1
+    },
+    "ja": {
+      "accept-current": 48,
+      "correction": 1,
+      "hold": 1
+    },
+    "ko": {
+      "accept-current": 44,
+      "correction": 4,
+      "hold": 1,
+      "refinement": 1
+    },
+    "pt-BR": {
+      "accept-current": 45,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 2
+    },
+    "vi": {
+      "accept-current": 45,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 2
+    },
+    "zh-Hans": {
+      "accept-current": 45,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 2
+    },
+    "zh-Hant": {
+      "accept-current": 45,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 3
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "priorDispositionRowsThroughW1049": 12600,
+  "priorLiveTargetMismatches": 195,
+  "sourceCount": 50,
+  "staleRegistryPins": 0,
+  "w1049BoundaryAll12Match": true,
+  "w1100BoundaryDispositionsAssigned": false,
+  "window": "W1050-W1099"
+}

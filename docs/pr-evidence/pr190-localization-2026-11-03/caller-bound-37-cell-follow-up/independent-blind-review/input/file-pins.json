@@ -1,0 +1,116 @@
+{
+  "baseHoldLedgerSha256": "77b55bc32c507350538c7b6eeb635a8bc71f1ded96b5265b854938ee46d123b6",
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "localeFiles": [
+    {
+      "bytes": 1099,
+      "gitBlob": "41cdcd7537bb75bbc9d07a1f73bddc872cf8588b",
+      "path": "frontend/src/Components/Loading/LoadingMessage.js",
+      "sha256": "13b9006f2438d72e7a285cf3e81583df1660b8308faa5a707e301c61aaf5a4c6"
+    },
+    {
+      "bytes": 1680,
+      "gitBlob": "1589452c0d61933f0ab187bcbc2e17c9a06b98ef",
+      "path": "frontend/src/Components/Loading/loading-messages.json",
+      "sha256": "9f3eaa1f0a8f838611194a085e4a127ceb90b5a4fed13a735845e4abc1e14a3f"
+    },
+    {
+      "bytes": 14902,
+      "gitBlob": "a3a899a8b318a9739e03c7b34eea630b8ef418d1",
+      "path": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs",
+      "sha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c"
+    },
+    {
+      "bytes": 7001,
+      "gitBlob": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "sha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f"
+    },
+    {
+      "bytes": 13606,
+      "gitBlob": "ee8840d33d12fdc98a83a8f5b4a84c2b5bb80638",
+      "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs",
+      "sha256": "4b5ec60660c36dfcf88a5e4ec1ffcbad7159475429b57c15e5769b661da30ae2"
+    },
+    {
+      "bytes": 432049,
+      "gitBlob": "55d755e1250745595c3c2988c68ec5c91e4f10cf",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "469dc69e1ed9a58cd735ba2d7b3190fbc8c33d97b9325bbc49eb61fea6c77354"
+    },
+    {
+      "bytes": 362183,
+      "gitBlob": "3fc58d800b2eb3ae9dc198a846313ce6a96883b3",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "84b19f5eea2199d036511ce1b9ed1ce4fa071d5433c48fa67c49d0a9fb182ec4"
+    },
+    {
+      "bytes": 312097,
+      "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+    },
+    {
+      "bytes": 359699,
+      "gitBlob": "c7f2426423d3f8dde81321042bc882a823e810c7",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "3a160acd21877601087ca51b9a08c10e0e156ffb6d2a991820d5c04837f7bb9f"
+    },
+    {
+      "bytes": 375368,
+      "gitBlob": "660f34aac3e82cda4f85a918ce55253a0ca907e0",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "ff2e73849779ba1d7c510af2294986a6316f247be315cf97aaa2066fe765eeae"
+    },
+    {
+      "bytes": 606307,
+      "gitBlob": "91a77961e9db8c4cb03d739d0346996c7b756310",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "cb096663b5d617ff67e8507a61f91936407e8470e48ca409da0dc2b0890b9158"
+    },
+    {
+      "bytes": 333136,
+      "gitBlob": "0a49fca5971e8272f18a3414ec50545371be2396",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "80237bd1fd558f897abe7fcc21dce677ac6b104d3647a1e68b9214a3c4e4f609"
+    },
+    {
+      "bytes": 409687,
+      "gitBlob": "8969f2763a8307ea5c74e768d0df2ac25edd36d2",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "83c91059cb694df4e86cc4f364e044e4683cffbd4c2de1a1675e77471cb67084"
+    },
+    {
+      "bytes": 368705,
+      "gitBlob": "239456e73e64ccd8ebfb9b9a29f362edcc24fe24",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "1952db6c313ad3c9e11f545da289d0eb805a99d06a4c324898cf7fb0a4a8f32b"
+    },
+    {
+      "bytes": 353249,
+      "gitBlob": "8345c6ee97586e68ab895d2faa2909ba8438431a",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "53d1488a12ae0f3fbf22acfd05835e2d733b48c7db4e219a1bca05f4d666b613"
+    },
+    {
+      "bytes": 389700,
+      "gitBlob": "8177ea4a26bb23d61142e340e1d49c060799bec1",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "096718bd621b620653da543c0b080bf51016de1334c7013b57d2b3572726f142"
+    },
+    {
+      "bytes": 306920,
+      "gitBlob": "61e4c17e312295c11f9542a63aae9db4d94bc799",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "e3f6d634a7cf3ea4104500974c632d63ae57fa6c7d20779a0637eee1f40686fc"
+    },
+    {
+      "bytes": 308368,
+      "gitBlob": "58daab34b595e15d10f83cac0eb080289bda4ebc",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "e992ce584b9ea31c4249da7f7ecfcfda5f5e122d92edba539ca0ec1bb213c468"
+    }
+  ],
+  "sourceQueueSha256": "385148d05ebe1d486a8dc0cbe8b516ffdb36c8105d83bbcc029e74150d3ef5eb",
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0"
+}

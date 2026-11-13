@@ -1,0 +1,378 @@
+{
+  "combinedPriorRowsThroughW1099": 13200,
+  "historicFinalHashMismatches": 195,
+  "newDriftSincePriorPrimaryPacket": 0,
+  "previousAppliedW1050Rows": 600,
+  "previousPacketSource": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099",
+  "previousPrimaryRowsThroughW1049": 12600,
+  "priorEvidenceChecksumCounts": {
+    "crossreview": 9,
+    "primary": 25,
+    "window": 56
+  },
+  "verifiedChecksumFiles": [
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/README.md",
+      "sha256": "58051107691f3f1d6cf5be32199ea11218da61d921a484a3607454a9b24a39f4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/README.md",
+      "sha256": "f40563d6d2b9471ca8b45bcce77a02d4bbab64e0b81ada4a08c22e263d6edf95"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/apply-reviewed-window.py",
+      "sha256": "0a1c26091d6f7eeb2caaccbdcd7ebb6b4411c78ac98c52eec394ab6a09fe5066"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/apply-summary.json",
+      "sha256": "9d6d20bc4fa3ea2a5aa7911f908cf75172bdb632a562d77d6834a0f5db396377"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/catalog-postapply-attestation.json",
+      "sha256": "ffe283c7a04ff7a909b9e173cd2e1ba5907444bd4ec468d111f6bcba2fc08f88"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/catalog-preapply-pins.jsonl",
+      "sha256": "2e6f1485c1479be170283fb3ae4acaffdbcf80b6132d51c41ffe925918e6c261"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/exact-hash-apply-plan.jsonl",
+      "sha256": "87101ffd546b13ecab9aa66b7f1c85df6694699dd5353bb60e8db965ddd23b97"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/full-window-apply-plan.jsonl",
+      "sha256": "9be81dac52552b07db48ec708de870921c6f0a83e3542276d65afba8b2481748"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/full-window-readback.jsonl",
+      "sha256": "9f3c0e55a937090315e81af997aad6428be8572600d56d33065f0aaa8e59cc89"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/README.md",
+      "sha256": "a5d4a0603e64b9e03855c941ea193727d8d34850085c5bdd8c7db835008c48c0"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/SHA256SUMS",
+      "sha256": "eab4cbe06a6694dd5eabc16e7152db4a003b7b16675bba61955868a386d2ce19"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/attestation.json",
+      "sha256": "83972e229b967a0c66ad9797139b6e7347d0a943e7a24cead5560a3e7766619c"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/build_attestation.py",
+      "sha256": "45380a96b9307e516c964ec165e71383ba48a35d2eff4f1eb838f43e7a6d9c64"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/checksum-audit.jsonl",
+      "sha256": "8fe4f925e17f986b9fdd28acef7b7a8e98e138969693ccb56f42578385003240"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/content-parity.jsonl",
+      "sha256": "1d6aa5c4c5e288be7537444d7218d7b63c18da3959c7ad771965a36821e45b40"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/manifest-artifact-audit.jsonl",
+      "sha256": "a82e10a129777d3a8e2d3cc0f2dc2bc9ee718fb074db78b47f41079cea20788d"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/manifest.json",
+      "sha256": "204a83b984204f598495a1b05e8869429c2bf5afb497e64d3e0a3b64d5a8e7ba"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/pin-and-history-audit.json",
+      "sha256": "7d6bb1bda3ba51c3e31d0b971fc0f6178026ea675cba36bc6cdfdc232d557257"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/pre-apply-seven-pr-snapshot.json",
+      "sha256": "07a6f2f9f939d198fcfe90f7d2b9987555da4a01b008ed399ad60a70340830ba"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/primary-packet-manifest-reconciliation.md",
+      "sha256": "5b2cf42f0a4b0c4ee65ae866f2b21355553bedccaf73369e61bf2b1188e81f42"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/README.md",
+      "sha256": "93042d78d4b0ebd916a160625f3f95db0b1d50e0666d87fe7518afa42c107e65"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/SHA256SUMS",
+      "sha256": "c99491b9e553a371c3aa5f74402185f97814e904447810266e82d12ce99e77e8"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/boundary-audit.json",
+      "sha256": "f01fb8d91d40cf0debe90c120ad56df94efa8d462d6baec98ee8f0846d2e2fb4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/build_crossreview.py",
+      "sha256": "9d79b1c1529b06ca9945e070c5c0a3ae4ab5cbb0b6e3fac9b85f04a380aaae25"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/caller-pin-checks.jsonl",
+      "sha256": "276141eb67e05f8a65d6dfa85e0eddc9f846180be5c9b5c8e2fe54ac8cb36de0"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/cross-review-cells.jsonl",
+      "sha256": "81733e004b7f4e1d9750ad0ac3a98049137e5adad045272a02bf4b175e34abfc"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/historical-drift-checks-through-W1049.jsonl",
+      "sha256": "3605d5670ac3d8de2e6eb7b103f0778e78cc468fdab45c737f9caf1de87b5a28"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/manifest.json",
+      "sha256": "c2bc01e31c507411f017ab1cc0ea17347df6419cbfa6c3a5bca14beb84386cd4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/pin-audit.json",
+      "sha256": "d94fb15df3b2c10f06c3b9dbce346220acc288f5d4403b50d102da65c072efcb"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/summary.json",
+      "sha256": "dedc3be984ca12e348695cadf4958f7e98d5aba4bd699446216ed41a3fc1311e"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/README.md",
+      "sha256": "897127e176748c01d02b61bb77e9faac82a83571ed33c83bf4a31752ab9efbd4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/SHA256SUMS",
+      "sha256": "ac1781208ec67b943b7a70aaa0492231f93c7f52beb177cd15c113484d333f9a"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/caller-context-summary.json",
+      "sha256": "53bc52c324d4c816bfbf48f4b604ed7f2b8c80b6eef5ccad14e02c36dd79d8eb"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/caller-context.jsonl",
+      "sha256": "05e3deb5d5d5390eca6c7ac8c5381373b1b5ad5efde2e28ca509ebf9d64f0508"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/correction-candidates.jsonl",
+      "sha256": "5ee5e22f3c028c96fd99dd7822aae91d86073f86f3ee68fe8ce1db7fe96e013d"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/final-reattestation.json",
+      "sha256": "b16e7a1dbaf683dca24ad64504a7eae4c0306f8b48de11ccf66df248c45d52ae"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/holds.jsonl",
+      "sha256": "7b19df6c64998653a0db0d75fcc94d2fb4dff8c24ec42057440ddfd6e689b972"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/input-cells.jsonl",
+      "sha256": "ff3d39a16bbc932d2eaafc90fd388dfae670da52ec99a103745f94fa1f69e794"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/input-manifest.json",
+      "sha256": "932a6cfd778863ee82b34bd6af81ec8b63de3809f0e94202ab6cc0f5d03ba30f"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/internal-terminology-context.json",
+      "sha256": "713e8557f4eb5cbe946ad18a4128dff6a1799ad1a21f2b53d152d8e88d1631f4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/loading-message-pipeline-context.jsonl",
+      "sha256": "5a09374f80782ef736f767eac063c222b747783d884f83c509b43b3ffe6a63f6"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/make_window.py",
+      "sha256": "ddcf74887428a142677b5a58765ecc50360569fe815998eb165b9827ac6ee91b"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/manifest.json",
+      "sha256": "9b3b0bb0d253d2d5d4cd2513f9777c3dd808f25a976dee72be55c0a78bbe4543"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/pinned-files.json",
+      "sha256": "f288d068226de5d766ed0eccce3cd246550f6de22f9ce35e6c54f8600d7a46f7"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/prior-dispositions-through-W1049.jsonl",
+      "sha256": "1a4da9c48cb68577933bc490a870b4a684a593a6a877539474623b6fc6404376"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/protected-literal-integrity.jsonl",
+      "sha256": "e5ec48c576274f2e815e22cc399d4c16a469c50c97ed72c3ccbedcc62921ddc6"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/refinement-candidates.jsonl",
+      "sha256": "2e1b73aa5c0666655349fa7af6ac46fd9f2df5ad52d259de3b7bc02cb1a15622"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/review-cells.jsonl",
+      "sha256": "14ff122bcc14ddeab9a3e144a249ed12c5703fe1c19ae48f32262aabdcf63173"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/selected-queue-window.json",
+      "sha256": "119590f4648350b4fb8423e46cec6ab3bd866068ce8e554cabfca8be1b297ea8"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "45ddcb5ae526b60c957bcb018daf8bafb4e622e70e6be729d5a281139a2a2679"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/snapshots/final-seal-all-pr-heads.json",
+      "sha256": "57dc543c58dfac0a09b1e993f8bc45a5f570d00ff8981420c47dc4e08c888d6d"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/snapshots/start-all-pr-heads.json",
+      "sha256": "e154fe9b6e5c1f200381eaf9f55259a9aa9770297e9a5e114c4a4bba63fe4efa"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/source-slice.jsonl",
+      "sha256": "d994eb03aa5f7fac5a73c0c8f692649498ec4fce6fff7fcf951dfa7e0555b2e7"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/summary.json",
+      "sha256": "81ca07e679eebcf9969a9028085131245adc7914d43d84d6e6298ed381b7f4df"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/w1049-backward-boundary.json",
+      "sha256": "5fac16711e226d0347368a3ba75e4e4f8af209f409986b73ec90acbe3a4f1b43"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/w1100-forward-boundary.json",
+      "sha256": "494daa8eb85d662c5538554d91080aa1664418d5945c6d7dc7e98aafff1473d6"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/README.md",
+      "sha256": "897127e176748c01d02b61bb77e9faac82a83571ed33c83bf4a31752ab9efbd4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/caller-context-summary.json",
+      "sha256": "53bc52c324d4c816bfbf48f4b604ed7f2b8c80b6eef5ccad14e02c36dd79d8eb"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/caller-context.jsonl",
+      "sha256": "05e3deb5d5d5390eca6c7ac8c5381373b1b5ad5efde2e28ca509ebf9d64f0508"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/correction-candidates.jsonl",
+      "sha256": "5ee5e22f3c028c96fd99dd7822aae91d86073f86f3ee68fe8ce1db7fe96e013d"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/final-reattestation.json",
+      "sha256": "b16e7a1dbaf683dca24ad64504a7eae4c0306f8b48de11ccf66df248c45d52ae"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/holds.jsonl",
+      "sha256": "7b19df6c64998653a0db0d75fcc94d2fb4dff8c24ec42057440ddfd6e689b972"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/input-cells.jsonl",
+      "sha256": "ff3d39a16bbc932d2eaafc90fd388dfae670da52ec99a103745f94fa1f69e794"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/input-manifest.json",
+      "sha256": "932a6cfd778863ee82b34bd6af81ec8b63de3809f0e94202ab6cc0f5d03ba30f"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/internal-terminology-context.json",
+      "sha256": "713e8557f4eb5cbe946ad18a4128dff6a1799ad1a21f2b53d152d8e88d1631f4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/loading-message-pipeline-context.jsonl",
+      "sha256": "5a09374f80782ef736f767eac063c222b747783d884f83c509b43b3ffe6a63f6"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/make_window.py",
+      "sha256": "ddcf74887428a142677b5a58765ecc50360569fe815998eb165b9827ac6ee91b"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/manifest.json",
+      "sha256": "9b3b0bb0d253d2d5d4cd2513f9777c3dd808f25a976dee72be55c0a78bbe4543"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/pinned-files.json",
+      "sha256": "f288d068226de5d766ed0eccce3cd246550f6de22f9ce35e6c54f8600d7a46f7"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/prior-dispositions-through-W1049.jsonl",
+      "sha256": "1a4da9c48cb68577933bc490a870b4a684a593a6a877539474623b6fc6404376"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/protected-literal-integrity.jsonl",
+      "sha256": "e5ec48c576274f2e815e22cc399d4c16a469c50c97ed72c3ccbedcc62921ddc6"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/refinement-candidates.jsonl",
+      "sha256": "2e1b73aa5c0666655349fa7af6ac46fd9f2df5ad52d259de3b7bc02cb1a15622"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/review-cells.jsonl",
+      "sha256": "14ff122bcc14ddeab9a3e144a249ed12c5703fe1c19ae48f32262aabdcf63173"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/selected-queue-window.json",
+      "sha256": "119590f4648350b4fb8423e46cec6ab3bd866068ce8e554cabfca8be1b297ea8"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "45ddcb5ae526b60c957bcb018daf8bafb4e622e70e6be729d5a281139a2a2679"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/snapshots/final-seal-all-pr-heads.json",
+      "sha256": "57dc543c58dfac0a09b1e993f8bc45a5f570d00ff8981420c47dc4e08c888d6d"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/snapshots/start-all-pr-heads.json",
+      "sha256": "e154fe9b6e5c1f200381eaf9f55259a9aa9770297e9a5e114c4a4bba63fe4efa"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/source-slice.jsonl",
+      "sha256": "d994eb03aa5f7fac5a73c0c8f692649498ec4fce6fff7fcf951dfa7e0555b2e7"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/summary.json",
+      "sha256": "81ca07e679eebcf9969a9028085131245adc7914d43d84d6e6298ed381b7f4df"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/w1049-backward-boundary.json",
+      "sha256": "5fac16711e226d0347368a3ba75e4e4f8af209f409986b73ec90acbe3a4f1b43"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/w1100-forward-boundary.json",
+      "sha256": "494daa8eb85d662c5538554d91080aa1664418d5945c6d7dc7e98aafff1473d6"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/README.md",
+      "sha256": "93042d78d4b0ebd916a160625f3f95db0b1d50e0666d87fe7518afa42c107e65"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/boundary-audit.json",
+      "sha256": "f01fb8d91d40cf0debe90c120ad56df94efa8d462d6baec98ee8f0846d2e2fb4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/build_crossreview.py",
+      "sha256": "9d79b1c1529b06ca9945e070c5c0a3ae4ab5cbb0b6e3fac9b85f04a380aaae25"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/caller-pin-checks.jsonl",
+      "sha256": "276141eb67e05f8a65d6dfa85e0eddc9f846180be5c9b5c8e2fe54ac8cb36de0"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/cross-review-cells.jsonl",
+      "sha256": "81733e004b7f4e1d9750ad0ac3a98049137e5adad045272a02bf4b175e34abfc"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/historical-drift-checks-through-W1049.jsonl",
+      "sha256": "3605d5670ac3d8de2e6eb7b103f0778e78cc468fdab45c737f9caf1de87b5a28"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/manifest.json",
+      "sha256": "c2bc01e31c507411f017ab1cc0ea17347df6419cbfa6c3a5bca14beb84386cd4"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/pin-audit.json",
+      "sha256": "d94fb15df3b2c10f06c3b9dbce346220acc288f5d4403b50d102da65c072efcb"
+    },
+    {
+      "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/summary.json",
+      "sha256": "dedc3be984ca12e348695cadf4958f7e98d5aba4bd699446216ed41a3fc1311e"
+    }
+  ],
+  "w1050DodgePunCells": 12,
+  "w1050DodgePunHoldsPreserved": true,
+  "w1050ReadbacksAll600MatchCurrent": true
+}

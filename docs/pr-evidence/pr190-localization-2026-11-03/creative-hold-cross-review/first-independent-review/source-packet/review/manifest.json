@@ -1,0 +1,33 @@
+{
+  "artifact": "Independent ChaptarrNG PR #190 creative hold recommendations",
+  "fileHashes": {
+    "README.md": {
+      "byteCount": 553,
+      "sha256": "956d831792bf36beba85123f72c1b7b6d79ca7fa3ebdb1b91acd58a4c0043e09"
+    },
+    "independent-recommendations.jsonl": {
+      "byteCount": 30804,
+      "sha256": "5d7966cf3efa91306318cd7ad4dac4f2ff9653f3ebdf54b98bc6329d923f85ea"
+    },
+    "live-pr-and-pin-after.json": {
+      "byteCount": 5340,
+      "sha256": "581ed172214c3e8f07b6c01a0cfb114b6c382e762e341a72cd19618cfd55f7b5"
+    },
+    "summary.json": {
+      "byteCount": 1216,
+      "sha256": "bcdfd19e569bbee42493352be56d3c208a7717bff42e3e69c8d11914fe936342"
+    },
+    "verify_review.py": {
+      "byteCount": 4988,
+      "sha256": "8619ebe97eea907f4db73399410c6977973c6e8cdf41421f21977cc3b4a34e76"
+    }
+  },
+  "hashOnlyCallerlessHoldCount": 24,
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "recommendationCount": 20,
+  "recommendationCounts": {
+    "recommend-target": 20
+  },
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "window": "W1200-W1209"
+}

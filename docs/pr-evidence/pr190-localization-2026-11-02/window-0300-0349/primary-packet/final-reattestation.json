@@ -1,0 +1,28 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "exactHead": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+  "exactTree": "d76d887609ae90c9238ffda9b192a4c0c72be227",
+  "headMatchesFrozenPacket": true,
+  "sourceListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceIdsAttested": 50,
+  "cellCountReattested": 600,
+  "cellMismatches": [],
+  "callerRefsReattested": 51,
+  "callerMismatches": [],
+  "priorContextSourceIdsAttested": 1,
+  "priorContextCellsReattested": 12,
+  "priorContextCallerRefsReattested": 1,
+  "priorContextMismatches": [],
+  "checks": "pass",
+  "worktreeStatus": "",
+  "recheckedAtUtc": "2026-11-02T14:35:38Z"
+}

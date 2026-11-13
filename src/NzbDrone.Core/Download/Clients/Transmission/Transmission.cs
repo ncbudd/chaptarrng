@@ -12,6 +12,7 @@ using NzbDrone.Core.Download;
 using NzbDrone.Core.Download.Clients;
 using NzbDrone.Core.MediaFiles.TorrentInfo;
 using NzbDrone.Core.RemotePathMappings;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Download.Clients.Transmission
 {
@@ -40,7 +41,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
 
             if (version < new Version(2, 40))
             {
-                return new ValidationFailure(string.Empty, "Transmission version not supported, should be 2.40 or higher.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Transmission version not supported, should be 2.40 or higher.", "server.message.m0ab424875b06");
             }
 
             return null;

@@ -1,0 +1,42 @@
+{
+  "artifact": "Fresh ChaptarrNG PR #190 W1200-W1209 caller-linked creative hold source/caller input",
+  "callerFileCount": 3,
+  "callerReferenceCount": 5,
+  "callerlessHoldCellsUnchangedAtHead": 24,
+  "callerlessHoldContentIncluded": false,
+  "callerlessHoldExcludedCount": 24,
+  "callerlessHoldHashOnly": true,
+  "creativeCellCount": 20,
+  "creativeSourceCount": 3,
+  "evidencePins": [
+    {
+      "byteCount": 34526,
+      "gitBlob": "afade50db70a417ed626ab402e450f413e84ca01",
+      "kind": "hash-only-hold-inventory",
+      "path": "docs/pr-evidence/pr190-localization-2026-11-03/review-gap-31/coverage-audit/active-holds.jsonl",
+      "sha256": "77b55bc32c507350538c7b6eeb635a8bc71f1ded96b5265b854938ee46d123b6"
+    },
+    {
+      "byteCount": 12692,
+      "gitBlob": "104bbfe01df692f671b5b266896df45d410bde34",
+      "kind": "hash-only-caller-status",
+      "path": "docs/pr-evidence/pr190-localization-2026-11-03/review-gap-31/candidate-free-packet/active-hold-caller-status.json",
+      "sha256": "e452e4fa3d0aa20bb55b23d51b0a64c7dcccd2b3ba6a12c91aa84d6374b45b49"
+    }
+  ],
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "seedCandidateFree": true,
+  "seedFileHashes": {
+    "SHA256SUMS.txt": "da1b927ab0c5afa05f6218cf6f9ad96ed6231473c04dfc65db104a93c1eef319",
+    "current-target-cells.jsonl": "912591835763ec803d8d88f47eef73e277e4ecfa82f03204ea1728bfe7f8bd17",
+    "manifest.json": "334a5a36baf2ff63a66f1bff02557763ceb18fa65f76cbaceb5393587a615455",
+    "source-and-caller-context.jsonl": "65441c7ba12729bddea62f656ea33d0d59f4887fd5ee3c35ad8621fc218172cd"
+  },
+  "seedHadPriorReviewVerdicts": false,
+  "seedHadTranslationCandidates": false,
+  "sourceCallerCatalogPinCount": 16,
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "window": "W1200-W1209"
+}

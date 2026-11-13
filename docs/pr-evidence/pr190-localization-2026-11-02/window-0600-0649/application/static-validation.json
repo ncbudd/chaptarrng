@@ -1,0 +1,28 @@
+{
+  "pinned_input_head": "f405a6256c2661e48e412ac4471ce70411baf98c",
+  "pinned_input_tree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+  "locale_count": 12,
+  "catalog_keys_per_locale": 4165,
+  "catalog_key_sets_identical": true,
+  "reviewed_cells_reattested": 600,
+  "caller_references_reattested": 64,
+  "caller_files_reattested": 42,
+  "candidate_count": 201,
+  "crossreview_outcomes": {
+    "accept-primary-proposal": 198,
+    "reject-primary-proposal-replace-with-corrected-target": 3
+  },
+  "independent_replacement_count": 3,
+  "final_dispositions": {
+    "accept-current": 399,
+    "accept-cross-reviewed-primary": 198,
+    "accept-independent-corrected-replacement": 3
+  },
+  "applied_changes": 201,
+  "exact_readbacks": 201,
+  "primary_current_protected_literal_misses": 15,
+  "final_protected_literal_misses": 0,
+  "w599_and_w650_boundaries_reattested": true,
+  "native_speaker_approval": false,
+  "tests_builds_scans_ci_workflows_releases_tags_merges": "none performed or changed"
+}

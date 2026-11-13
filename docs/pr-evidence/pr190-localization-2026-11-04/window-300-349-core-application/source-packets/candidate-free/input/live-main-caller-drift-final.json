@@ -1,0 +1,97 @@
+{
+  "baseBranchMoved": true,
+  "changedCoreLocalizationFiles": [],
+  "changedDocsLocalizationFiles": [
+    "docs/localization/provider-field-sources.json",
+    "docs/localization/provider-option-sources.json",
+    "docs/localization/server-message-sources.json"
+  ],
+  "changedFrontendFiles": [],
+  "changedLiteralTranslatorCallsites": [],
+  "changedPathCount": 63,
+  "changedPathsIntersectingSelectedKeyReferences": [
+    {
+      "line": 2122,
+      "lineSha256": "11b3e1b1c8bbd59897c39b55671eaaa5b5393268434e323e1041e3528da534b6",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "line": 2139,
+      "lineSha256": "c4de5c8b39985145f8efb7cd19280ef25113d51d7bc03998c58a9e63c6ed1b65",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "line": 2140,
+      "lineSha256": "0b4b331882e2e222a5ffbaffc1b7b4c16c512e8053444c4a56c52af6db1b215a",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "line": 2142,
+      "lineSha256": "0a2e5db5b94a74dd4be1997fc957f081319e01a95e54e4b365494378767f770a",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "line": 2170,
+      "lineSha256": "175793f092820c1e8be18fedb0ae300a17c5d309749868054f33b066caa847b7",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "line": 636,
+      "lineSha256": "e349cbb5cf0c2a8aec5de1f5faed3362858e168b004004b3ff97b4ca5b11454e",
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "line": 645,
+      "lineSha256": "13b02cb59cd0b03039f598dcd635fb9975503197bdf820fbf8bcc95d9690d1e9",
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "line": 1655,
+      "lineSha256": "aee1ea45e404dff16a8958b3f4c675948f3f75efdc9338b8822666259979c6ac",
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "line": 999,
+      "lineSha256": "1ec27fc6e3696487a373f4514eb81672fae9364abf35fdf4bbd794573e90a4ba",
+      "path": "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "line": 1006,
+      "lineSha256": "70cb3580b283350dfe44d47c96dfbef44aa6d30e6c97add3ebc32fb9551411f8",
+      "path": "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    }
+  ],
+  "conclusion": "Live main is 28 commits beyond the PR API base. No Core localization catalog or frontend file changed. Ten selected-key search hits overlap changed backend/API paths, all as indirect enum or incidental English prose references; there are no changed literal translation callsites. This does not alter the exact pinned PR source or caller context.",
+  "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "exactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "liveMainSha": "db87e7fb22ba12172e303bb2e8e4bba219f0618e",
+  "liveMainTree": "4912198b460759106b9c3f6be25b7211f9c98dbb",
+  "localeCatalogsChanged": false,
+  "mainCommitsAhead": 28,
+  "pinnedDirectCallerContextsChanged": false,
+  "prApiBaseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "result": "PASS",
+  "selectedLiteralTranslatorCallsitesChanged": false,
+  "snapshotAtUtc": "2026-11-04T23:09:57+00:00",
+  "sourceCatalogChanged": false
+}

@@ -1,0 +1,387 @@
+{
+  "artifact": "PR #190 W300-W349 base-drift and conflict snapshot before integration",
+  "capturedAtUtc": "2026-11-05T00:24:15Z",
+  "pr": {
+    "number": 190,
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "headRef": "codex/chaptarrng-localization-complete-20261031",
+    "headSha": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+    "baseRef": "main",
+    "apiBaseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+    "mergeable": false,
+    "mergeableState": "dirty"
+  },
+  "refsAfterProductPush": [
+    "7e69f46e21f1ea7455893179116ec85ee2b0f85e\trefs/heads/codex/chaptarrng-localization-complete-20261031",
+    "c711ca5dcde083f9a28acd85dc366435b6ed3fbc\trefs/heads/main",
+    "7e69f46e21f1ea7455893179116ec85ee2b0f85e\trefs/pull/190/head"
+  ],
+  "prHeadExpectedAndObserved": {
+    "expected": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+    "api": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+    "branchAndPullRefsEqual": true
+  },
+  "liveMain": {
+    "expected": "c711ca5dcde083f9a28acd85dc366435b6ed3fbc",
+    "remoteRefsSha": "c711ca5dcde083f9a28acd85dc366435b6ed3fbc",
+    "parent": "ef6f1532368cf3ec0974d9ef6d64047e0fa07309",
+    "deltaFromApiBasePathCount": 68,
+    "deltaFromApiBasePaths": [
+      {
+        "status": "A",
+        "path": ".github/workflows/bookshelfng-api-differential.yml"
+      },
+      {
+        "status": "M",
+        "path": ".github/workflows/bookshelfng-standalone-macos-acceptance.yml"
+      },
+      {
+        "status": "M",
+        "path": ".github/workflows/standalone-asset-validation.yml"
+      },
+      {
+        "status": "M",
+        "path": "AGENTS.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/BOOKSHELFNG_RETIREMENT.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/MIGRATE_FROM_BOOKSHELFNG.md"
+      },
+      {
+        "status": "M",
+        "path": "docs/localization/provider-field-sources.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/localization/provider-option-sources.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/localization/server-message-sources.json"
+      },
+      {
+        "status": "M",
+        "path": "docs/maintainers/BOOKSHELFNG_MIGRATION_FIXTURE_EVIDENCE.md"
+      },
+      {
+        "status": "M",
+        "path": "integration/README.md"
+      },
+      {
+        "status": "A",
+        "path": "integration/bookshelfng-api-contract.mjs"
+      },
+      {
+        "status": "A",
+        "path": "integration/bookshelfng-api-differential.compose.yml"
+      },
+      {
+        "status": "A",
+        "path": "integration/bookshelfng-api-differential.mjs"
+      },
+      {
+        "status": "A",
+        "path": "integration/normalize-bookshelfng-api-differential-fixture.py"
+      },
+      {
+        "status": "A",
+        "path": "integration/run-bookshelfng-api-differential.sh"
+      },
+      {
+        "status": "A",
+        "path": "integration/test-bookshelfng-api-contract.mjs"
+      },
+      {
+        "status": "M",
+        "path": "packaging/scripts/test-bookshelf-legacy-channels.mjs"
+      },
+      {
+        "status": "M",
+        "path": "packaging/scripts/test-bookshelf-standalone-handoff.py"
+      },
+      {
+        "status": "M",
+        "path": "packaging/scripts/test-docker-bookshelf-compatibility-defaults.sh"
+      },
+      {
+        "status": "M",
+        "path": "scripts/test_bookshelfng_helm_install_handoff.sh"
+      },
+      {
+        "status": "M",
+        "path": "scripts/test_workflow_runner_policy.py"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Author/AuthorEditorController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Author/AuthorResource.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Blocklist/BlocklistController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Blocklist/BlocklistResource.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Books/BookController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Books/BookControllerWithSignalR.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Books/BookEditorController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Books/BookResource.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Books/ReadarrFacadeEditionIdentity.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/History/HistoryController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/History/HistoryResource.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Profiles/Quality/QualityProfileController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/ProviderControllerBase.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/ProviderResource.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Wanted/CutoffController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Api.V1/Wanted/MissingController.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Api/AuthorControllerMediaStatisticsFixture.cs"
+      },
+      {
+        "status": "A",
+        "path": "src/Chaptarr.Core.Test/Api/AuthorEditorControllerCompatibilityFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Api/AuthorResourceBookshelfCompatibilityFixture.cs"
+      },
+      {
+        "status": "A",
+        "path": "src/Chaptarr.Core.Test/Api/BlocklistResourceBookshelfCompatibilityFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Api/BookControllerPagedResourceFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Api/BookControllerSiblingDeleteInfoFixture.cs"
+      },
+      {
+        "status": "A",
+        "path": "src/Chaptarr.Core.Test/Api/BookEditorControllerCompatibilityFixture.cs"
+      },
+      {
+        "status": "A",
+        "path": "src/Chaptarr.Core.Test/Api/ProviderResourceCompatibilityProjectionFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Api/Wanted/WantedMonitoringFilterFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/AuthorStats/AuthorStatisticsImportDeferralFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/AuthorStats/AuthorStatisticsRepositoryFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/AuthorStats/AuthorStatisticsServiceFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Books/BookResourceMapperFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Datastore/BookshelfDatabaseImporterFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Datastore/Fixtures/BookshelfNG.PopulatedMigration158.sql"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/History/HistoryResourceMapperFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Indexers/DirectDownloadSettingsFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Indexers/MyAnonaMouseSeedTimeFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/MediaFiles/BookImport/CatalogIdentificationFallbackFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Core.Test/Profiles/Quality/QualityProfileControllerFixture.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/Chaptarr.Http/ClientSchema/SchemaBuilder.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/AuthorStats/AuthorStatisticsRepository.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/AuthorStats/AuthorStatisticsService.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/Books/BookFileStatisticsSql.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/Books/Model/Author.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/Books/Services/AuthorService.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs"
+      },
+      {
+        "status": "A",
+        "path": "src/NzbDrone.Core/Datastore/Migration/125_add_bookshelf_legacy_author_quality_profile_ids.cs"
+      },
+      {
+        "status": "M",
+        "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs"
+      }
+    ]
+  },
+  "w300Overlap": {
+    "targetCatalogPathCount": 13,
+    "changedTargetOrEnglishCatalogPaths": [],
+    "callerPinFileCount": 4348,
+    "changedCallerPinFiles": [
+      "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "src/Chaptarr.Api.V1/Author/AuthorEditorController.cs",
+      "src/Chaptarr.Api.V1/Author/AuthorResource.cs",
+      "src/Chaptarr.Api.V1/Blocklist/BlocklistController.cs",
+      "src/Chaptarr.Api.V1/Blocklist/BlocklistResource.cs",
+      "src/Chaptarr.Api.V1/Books/BookController.cs",
+      "src/Chaptarr.Api.V1/Books/BookControllerWithSignalR.cs",
+      "src/Chaptarr.Api.V1/Books/BookEditorController.cs",
+      "src/Chaptarr.Api.V1/Books/BookResource.cs",
+      "src/Chaptarr.Api.V1/Books/ReadarrFacadeEditionIdentity.cs",
+      "src/Chaptarr.Api.V1/History/HistoryController.cs",
+      "src/Chaptarr.Api.V1/History/HistoryResource.cs",
+      "src/Chaptarr.Api.V1/Profiles/Quality/QualityProfileController.cs",
+      "src/Chaptarr.Api.V1/ProviderControllerBase.cs",
+      "src/Chaptarr.Api.V1/ProviderResource.cs",
+      "src/Chaptarr.Api.V1/Wanted/CutoffController.cs",
+      "src/Chaptarr.Api.V1/Wanted/MissingController.cs",
+      "src/Chaptarr.Http/ClientSchema/SchemaBuilder.cs",
+      "src/NzbDrone.Core/AuthorStats/AuthorStatisticsRepository.cs",
+      "src/NzbDrone.Core/AuthorStats/AuthorStatisticsService.cs",
+      "src/NzbDrone.Core/Books/BookFileStatisticsSql.cs",
+      "src/NzbDrone.Core/Books/Model/Author.cs",
+      "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs"
+    ],
+    "sourceKeysWithChangedPinnedCallerPaths": [
+      {
+        "sourceKey": "BookMatchingStrictness",
+        "changedCallerPaths": [
+          "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs"
+        ],
+        "pinnedContextSha256": "2b54519da024d78b105906b1390d7b1ffab0f938e43ccfc345cd93af11889348"
+      },
+      {
+        "sourceKey": "Selected",
+        "changedCallerPaths": [
+          "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+          "src/NzbDrone.Core/Books/Services/AuthorService.cs"
+        ],
+        "pinnedContextSha256": "c13de3ac02f06d4ed4d131c9a2037b4bea7762a774c8cc2db148efb57f181e68"
+      }
+    ]
+  },
+  "readOnlyMergeTree": {
+    "prHead": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+    "mainHead": "c711ca5dcde083f9a28acd85dc366435b6ed3fbc",
+    "exitCode": 1,
+    "resultTreeOid": "cae65fec2e5a480743cbc6c3ef46c7bdc0cb17d8",
+    "contentConflictPaths": [
+      "docs/localization/server-message-sources.json"
+    ],
+    "autoMergePaths": [
+      "docs/localization/server-message-sources.json",
+      "src/Chaptarr.Api.V1/ProviderControllerBase.cs"
+    ]
+  },
+  "productCommit": {
+    "sha": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+    "parent": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+    "tree": "3e43bcd87bc103d141109053abb52b70508650a1",
+    "changedPaths": [
+      "src/NzbDrone.Core/Localization/Core/ar.json",
+      "src/NzbDrone.Core/Localization/Core/de.json",
+      "src/NzbDrone.Core/Localization/Core/es.json",
+      "src/NzbDrone.Core/Localization/Core/fr.json",
+      "src/NzbDrone.Core/Localization/Core/hi.json",
+      "src/NzbDrone.Core/Localization/Core/id.json",
+      "src/NzbDrone.Core/Localization/Core/ja.json",
+      "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "src/NzbDrone.Core/Localization/Core/vi.json",
+      "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    ]
+  },
+  "resolutionAtSnapshot": "Pending. The W300 product is pinned to f0082d1b. Base integration is separate from the source-pinned product edit; it must preserve both sides of docs/localization/server-message-sources.json, retain latest base workflow content without local workflow edits, and reattest any W300 key whose caller/source context changes."
+}

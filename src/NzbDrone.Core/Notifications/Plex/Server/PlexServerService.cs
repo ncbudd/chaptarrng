@@ -177,7 +177,7 @@ namespace NzbDrone.Core.Notifications.Plex.Server
 
                 if (sections.Empty())
                 {
-                    return new ValidationFailure("Host", "At least one Music library is required");
+                    return NzbDroneValidationFailure.ForMessage("Host", "At least one Music library is required", "server.message.m021ed535c3dc");
                 }
 
                 if (settings.LibrarySectionId.IsNotNullOrWhiteSpace() &&
@@ -185,13 +185,13 @@ namespace NzbDrone.Core.Notifications.Plex.Server
                     librarySectionId > 0 &&
                     sections.All(s => s.Id != librarySectionId))
                 {
-                    return new ValidationFailure(nameof(PlexServerSettings.LibrarySectionId), "Selected Plex library could not be found");
+                    return NzbDroneValidationFailure.ForMessage(nameof(PlexServerSettings.LibrarySectionId), "Selected Plex library could not be found", "server.message.me8703ba3572c");
                 }
             }
             catch (PlexAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to connect to Plex Media Server");
-                return new ValidationFailure("AuthToken", "Invalid authentication token");
+                return NzbDroneValidationFailure.ForMessage("AuthToken", "Invalid authentication token", "server.message.meb46390efea0");
             }
             catch (Exception ex)
             {
@@ -220,7 +220,7 @@ namespace NzbDrone.Core.Notifications.Plex.Server
 
                         if (sections.Empty())
                         {
-                            return new ValidationFailure("Host", "At least one Music library is required");
+                            return NzbDroneValidationFailure.ForMessage("Host", "At least one Music library is required", "server.message.m021ed535c3dc");
                         }
 
                         if (settings.LibrarySectionId.IsNotNullOrWhiteSpace() &&
@@ -228,7 +228,7 @@ namespace NzbDrone.Core.Notifications.Plex.Server
                             librarySectionId > 0 &&
                             sections.All(s => s.Id != librarySectionId))
                         {
-                            return new ValidationFailure(nameof(PlexServerSettings.LibrarySectionId), "Selected Plex library could not be found");
+                            return NzbDroneValidationFailure.ForMessage(nameof(PlexServerSettings.LibrarySectionId), "Selected Plex library could not be found", "server.message.me8703ba3572c");
                         }
 
                         return null;
@@ -236,7 +236,7 @@ namespace NzbDrone.Core.Notifications.Plex.Server
                     catch (PlexAuthenticationException retryAuth)
                     {
                         _logger.Error(retryAuth, "Unable to connect to Plex Media Server");
-                        return new ValidationFailure("AuthToken", "Invalid authentication token");
+                        return NzbDroneValidationFailure.ForMessage("AuthToken", "Invalid authentication token", "server.message.meb46390efea0");
                     }
                     catch (PlexException retryPlex)
                     {
@@ -258,7 +258,7 @@ namespace NzbDrone.Core.Notifications.Plex.Server
                     };
                 }
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Plex Media Server")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to Plex Media Server", "server.message.m62fb6085c79e", null)
                 {
                     DetailedDescription = ex.Message
                 };

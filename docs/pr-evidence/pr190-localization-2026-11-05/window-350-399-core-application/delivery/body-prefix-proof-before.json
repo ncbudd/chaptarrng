@@ -1,0 +1,12 @@
+{
+  "pr": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "state": "open",
+  "isDraft": true,
+  "headSha": "972dc98c18e8a45cbf1ab97203fc4f9684e982f5",
+  "originalBytes": 64252,
+  "originalSha256": "7431f5cd693019dd3e1f4238704d1e938c2bc16e37d767b1b7f3071bead411f4",
+  "suffixBytes": 1021,
+  "expectedBytes": 65273,
+  "expectedSha256": "00ef0db0ab9646e202fb7a5e420ea4e5caee3770cb9fd42026ac8983eaf227d8",
+  "originalIsExpectedPrefix": true
+}

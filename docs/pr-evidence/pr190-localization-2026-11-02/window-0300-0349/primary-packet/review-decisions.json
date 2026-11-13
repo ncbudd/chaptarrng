@@ -1,0 +1,302 @@
+{
+  "findings": {
+    "300|zh-Hans": [
+      "propose-correction",
+      "由 Gotify 生成的应用令牌",
+      "In this Gotify credential context, 令牌 names the app access token accurately and avoids 代币, which can suggest a cryptocurrency token.",
+      "high"
+    ],
+    "300|zh-Hant": [
+      "propose-correction",
+      "由 Gotify 產生的應用程式權杖",
+      "In this Gotify credential context, 權杖 is the appropriate Traditional Chinese term for an application access token; 代幣 can suggest a cryptocurrency token.",
+      "high"
+    ],
+    "303|id": [
+      "propose-correction",
+      "Pengguna Grimmory yang memiliki izin untuk mengelola pustaka",
+      "Corrects the unnatural word order and uses a natural Indonesian phrase for a Grimmory user permitted to manage libraries.",
+      "high"
+    ],
+    "312|ar": [
+      "propose-refinement",
+      "حوّل تعديلات البيانات الوصفية والأغلفة التي أُجريت في Grimmory إلى الاتصالات الأخرى التي تقبل تعديلات المكتبات. يتطلب ذلك تفعيل إعداد sidecar \"write on update\" في Grimmory حتى تظهر التعديلات كملفات جانبية يستطيع Chaptarr مراقبتها. لا يكتب Grimmory هذه الملفات إلا عند تشغيله باستخدام DISK_TYPE=LOCAL؛ أما عند استخدام التخزين الشبكي، فيكون الإعداد مخفيًا ولا يتم تحويل أي تعديلات.",
+      "Preserves the exact Grimmory setting name “write on update” so users can locate it, while retaining the sidecar behavior and DISK_TYPE=LOCAL condition.",
+      "moderate"
+    ],
+    "312|zh-Hans": [
+      "propose-refinement",
+      "将 Grimmory 中所做的元数据和封面编辑转发给其他接受媒体库编辑的连接。需要启用 Grimmory 的 sidecar 设置“write on update”，以便编辑保存为 Chaptarr 可监视的 sidecar 文件。Grimmory 仅在 DISK_TYPE=LOCAL 时写入 sidecar 文件；使用网络存储时，该设置会隐藏，也不会转发任何内容。",
+      "Preserves the exact Grimmory setting name “write on update” so users can locate it, while retaining the sidecar behavior and DISK_TYPE=LOCAL condition.",
+      "moderate"
+    ],
+    "312|zh-Hant": [
+      "propose-refinement",
+      "將 Grimmory 中所做的中繼資料和封面編輯轉送至其他接受媒體庫編輯的連線。需要啟用 Grimmory 的側車設定「write on update」，讓編輯儲存為 Chaptarr 可監看的側車檔案。Grimmory 僅在 DISK_TYPE=LOCAL 時寫入側車檔案；使用網路儲存時，該設定會隱藏，也不會轉送任何內容。",
+      "Preserves the exact Grimmory setting name “write on update” so users can locate it, while retaining the sidecar behavior and DISK_TYPE=LOCAL condition.",
+      "moderate"
+    ],
+    "314|ar": [
+      "propose-refinement",
+      "الوسوم المعيّنة للكتاب في Grimmory، وليست وسوم Chaptarr؛ مثلًا: Processed. لا تغيّر عمليات الإرسال التلقائية والتعديلات المُحوّلة كتب Grimmory التي تحمل أيًا من هذه الوسوم. لكن مربع الحوار «Grimmory Push» وإجراء «Push Chaptarr Metadata to Grimmory» يواصلان تحديثها.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|de": [
+      "propose-refinement",
+      "Tags, die dem Buch in Grimmory zugewiesen sind, nicht Chaptarr-Tags; z. B. Processed. Automatische Übertragungen und weitergeleitete Änderungen lassen Grimmory-Bücher mit einem dieser Tags unverändert. Der Dialog „Grimmory Push“ und die Aktion „Push Chaptarr Metadata to Grimmory“ aktualisieren sie weiterhin.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|es": [
+      "propose-refinement",
+      "Etiquetas asignadas al libro en Grimmory, no etiquetas de Chaptarr; por ejemplo, Processed. Las acciones automáticas de envío y los cambios reenviados no modifican los libros de Grimmory que tengan cualquiera de estas etiquetas. El cuadro de diálogo «Grimmory Push» y la acción «Push Chaptarr Metadata to Grimmory» sí los actualizan.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|fr": [
+      "propose-refinement",
+      "Tags attribués au livre dans Grimmory, et non tags Chaptarr ; par exemple : Processed. Les envois automatiques et les modifications transférées ne touchent pas aux livres Grimmory portant l’un de ces tags. La fenêtre « Grimmory Push » et l’action « Push Chaptarr Metadata to Grimmory » les mettent tout de même à jour.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|hi": [
+      "propose-refinement",
+      "Grimmory में पुस्तक पर लगाए गए टैग, Chaptarr टैग नहीं; उदाहरण के लिए Processed। स्वचालित पुश और अग्रेषित संपादन उन Grimmory पुस्तकों को नहीं बदलते जिन पर इनमें से कोई टैग लगा हो। फिर भी, “Grimmory Push” संवाद और “Push Chaptarr Metadata to Grimmory” कार्रवाई उन्हें अपडेट करती है।",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|id": [
+      "propose-refinement",
+      "Tag yang dipasang pada buku di Grimmory, bukan tag Chaptarr; misalnya Processed. Pengiriman otomatis dan perubahan yang diteruskan tidak mengubah buku Grimmory yang memiliki salah satu tag ini. Dialog “Grimmory Push” dan tindakan “Push Chaptarr Metadata to Grimmory” tetap memperbaruinya.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|ja": [
+      "propose-refinement",
+      "Chaptarrのタグではなく、Grimmoryで本に設定されたタグです。例: 例: Processed。自動送信や転送された編集では、これらのタグが付いたGrimmoryの本は変更されません。ただし、「Grimmory Push」ダイアログと「Push Chaptarr Metadata to Grimmory」操作では引き続き更新されます。",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|ko": [
+      "propose-refinement",
+      "Chaptarr 태그가 아니라 Grimmory에서 책에 설정한 태그입니다. 예: 예: Processed. 자동 전송과 전달된 편집은 이러한 태그가 있는 Grimmory 책을 변경하지 않습니다. 단, “Grimmory Push” 대화상자와 “Push Chaptarr Metadata to Grimmory” 작업은 계속 업데이트합니다.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|pt-BR": [
+      "propose-refinement",
+      "Tags definidos no livro no Grimmory, não tags do Chaptarr; por exemplo, Processed. Os envios automáticos e as edições encaminhadas não alteram livros do Grimmory que tenham qualquer um desses tags. A janela “Grimmory Push” e a ação “Push Chaptarr Metadata to Grimmory” ainda os atualizam.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|vi": [
+      "propose-refinement",
+      "Thẻ được đặt cho sách trong Grimmory, không phải thẻ Chaptarr; ví dụ: Processed. Các lần gửi tự động và chỉnh sửa được chuyển tiếp sẽ không thay đổi sách Grimmory có bất kỳ thẻ nào trong số này. Hộp thoại “Grimmory Push” và thao tác “Push Chaptarr Metadata to Grimmory” vẫn cập nhật các sách đó.",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|zh-Hans": [
+      "propose-refinement",
+      "在 Grimmory 中为书籍设置的标签，而非 Chaptarr 标签；例如 Processed。自动推送和转发的编辑不会更改带有这些标签的 Grimmory 书籍。「Grimmory Push」对话框和「Push Chaptarr Metadata to Grimmory」操作仍会更新这些书籍。",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "314|zh-Hant": [
+      "propose-refinement",
+      "在 Grimmory 中為書籍設定的標籤，而非 Chaptarr 標籤；例如 Processed。自動推送和轉送的編輯不會更改帶有這些標籤的 Grimmory 書籍。「Grimmory Push」對話方塊和「Push Chaptarr Metadata to Grimmory」操作仍會更新這些書籍。",
+      "Localizes the untranslated English abbreviation “e.g.” while keeping the literal Grimmory tag name “Processed” unchanged.",
+      "moderate"
+    ],
+    "315|hi": [
+      "propose-refinement",
+      "Join खाते की सेटिंग में मौजूद API कुंजी (“Join API” बटन पर क्लिक करें)।",
+      "Removes stray spaces around the parenthesis and preserves the exact “Join API” button label.",
+      "moderate"
+    ],
+    "316|vi": [
+      "propose-refinement",
+      "ID thiết bị",
+      "Uses the natural Vietnamese word order ID thiết bị instead of the awkward English plural construction.",
+      "moderate"
+    ],
+    "316|zh-Hans": [
+      "propose-correction",
+      "设备 ID",
+      "Corrects the Traditional character 裝置 in the Simplified Chinese catalog and uses the natural field label 设备 ID.",
+      "high"
+    ],
+    "316|zh-Hant": [
+      "propose-refinement",
+      "裝置 ID",
+      "Uses the natural Chinese field-label form 裝置 ID without the English plural suffix.",
+      "moderate"
+    ],
+    "321|zh-Hant": [
+      "propose-correction",
+      "使用 HTTPS 而非 HTTP 連線至 Kavita",
+      "Corrects the unnatural word order while keeping the meaning “connect to Kavita over HTTPS instead of HTTP.”",
+      "high"
+    ],
+    "322|vi": [
+      "propose-refinement",
+      "Khóa API do MailGun tạo",
+      "Uses the conventional Vietnamese technical term khóa API instead of the literal chìa khóa API.",
+      "moderate"
+    ],
+    "326|fr": [
+      "propose-refinement",
+      "Votre clé API se trouve dans votre profil.",
+      "Replaces the awkward French phrase “clé API de votre profil” with a natural sentence.",
+      "moderate"
+    ],
+    "326|vi": [
+      "propose-refinement",
+      "Khóa API trong hồ sơ của bạn",
+      "Uses the conventional Vietnamese technical term khóa API and states concisely where the user finds it.",
+      "moderate"
+    ],
+    "327|de": [
+      "propose-refinement",
+      "Server-URL",
+      "Uses standard German spelling for this technical field label: Server-URL.",
+      "moderate"
+    ],
+    "329|ar": [
+      "propose-refinement",
+      "تفويض اختياري قائم على رمز. وله الأولوية على اسم المستخدم/كلمة المرور.",
+      "Adds the missing space between sentences and uses clearer Arabic wording for token authorization precedence.",
+      "moderate"
+    ],
+    "329|es": [
+      "propose-correction",
+      "Autorización opcional basada en token. Tiene prioridad sobre el nombre de usuario y la contraseña.",
+      "Corrects the lowercase start after a period and replaces the unnatural phrase “toma prioridad” with “tiene prioridad.”",
+      "high"
+    ],
+    "329|fr": [
+      "propose-correction",
+      "Autorisation facultative par jeton. Elle est prioritaire sur le nom d’utilisateur et le mot de passe.",
+      "Replaces the unidiomatic “prise de priorité” with a natural sentence that clearly states precedence over the credentials.",
+      "high"
+    ],
+    "329|hi": [
+      "propose-refinement",
+      "वैकल्पिक टोकन-आधारित प्राधिकरण। इसे उपयोगकर्ता नाम और पासवर्ड पर प्राथमिकता दी जाती है।",
+      "Makes the second clause grammatical and clearly says token authorization takes precedence over username and password.",
+      "moderate"
+    ],
+    "329|pt-BR": [
+      "propose-refinement",
+      "Autorização opcional por token. Tem prioridade sobre o nome de usuário e a senha.",
+      "Replaces the awkward “toma prioridade” and explicitly names both credentials.",
+      "moderate"
+    ],
+    "331|ja": [
+      "propose-refinement",
+      "任意のパスワード",
+      "Uses the natural Japanese phrase 任意のパスワード instead of the awkward オプションパスワード.",
+      "moderate"
+    ],
+    "331|ko": [
+      "propose-refinement",
+      "선택 사항인 비밀번호",
+      "Naturally describes the field as an optional password.",
+      "moderate"
+    ],
+    "332|hi": [
+      "propose-correction",
+      "विषय",
+      "Uses the base noun form needed for a standalone field label; the current oblique form विषयों is grammatically mismatched.",
+      "high"
+    ],
+    "335|de": [
+      "propose-correction",
+      "Optionale Liste der zu verwendenden Tags oder Emojis",
+      "Corrects the unidiomatic infinitive construction and clearly marks the list as optional.",
+      "high"
+    ],
+    "335|hi": [
+      "propose-refinement",
+      "उपयोग के लिए टैग या इमोजी की वैकल्पिक सूची",
+      "Uses the standard Hindi spelling इमोजी instead of the untranslated English plural “emojis.”",
+      "moderate"
+    ],
+    "335|id": [
+      "propose-refinement",
+      "Daftar tag atau emoji opsional yang akan digunakan",
+      "Replaces the mixed English form “emojis” and awkward “daftar opsi” with natural Indonesian wording.",
+      "moderate"
+    ],
+    "335|ja": [
+      "propose-refinement",
+      "使用するタグや絵文字のリスト（任意）",
+      "Uses the standard Japanese spelling 絵文字 and naturally marks the list as optional.",
+      "moderate"
+    ],
+    "335|ko": [
+      "propose-refinement",
+      "사용할 태그 또는 이모지 목록(선택 사항)",
+      "Replaces the awkward “selection list” phrasing with a natural optional-list construction.",
+      "moderate"
+    ],
+    "335|vi": [
+      "propose-refinement",
+      "Danh sách thẻ hoặc biểu tượng cảm xúc sẽ dùng (tùy chọn)",
+      "Replaces the English word “emojis” with Vietnamese wording and makes the optional status natural.",
+      "moderate"
+    ]
+  },
+  "sourceRationales": {
+    "300": "GotifySettings.cs uses this as the HelpText attached to the adjacent Application Token API-key field; the target must identify a generated app access token.",
+    "301": "GotifySettings.cs attaches this HelpText to a select field for notification priority, so the text names the notification priority setting.",
+    "302": "GrimmorySettings.cs attaches this HelpText to the server URL field; Grimmory and Chaptarr must resolve the same shared or identically mounted files, and the scheme and port example are literal setup details.",
+    "303": "GrimmorySettings.cs attaches this HelpText to the username field; it describes the required Grimmory account permission to manage libraries.",
+    "304": "GrimmorySettings.cs uses this as the label of a library selector populated by getLibraries; it names the ebook library.",
+    "305": "GrimmorySettings.cs attaches this HelpText to the ebook library selector; it describes refresh triggers and the blank selection behavior.",
+    "306": "GrimmorySettings.cs uses this as the label of a library selector populated by getLibraries; it names the audiobook library.",
+    "307": "GrimmorySettings.cs attaches this HelpText to the audiobook library selector; it describes refresh triggers and the blank selection behavior.",
+    "308": "GrimmorySettings.cs attaches this HelpText to the PushMetadata checkbox; enabled pushes lock the pushed book metadata fields in Grimmory on the listed change events.",
+    "309": "GrimmorySettings.cs uses this as a checkbox label for the cover-push behavior described by the adjacent HelpText.",
+    "310": "GrimmorySettings.cs attaches this HelpText to the Push Covers checkbox; it describes the book-cover image synchronization triggers.",
+    "311": "GrimmorySettings.cs uses this as a checkbox label for forwarding edits from Grimmory.",
+    "312": "GrimmorySettings.cs attaches this HelpText to the Forward Grimmory Edits checkbox; the sidecar setting, exact setting name, Chaptarr file-watching behavior, DISK_TYPE=LOCAL requirement, and network-storage limitation are material.",
+    "313": "GrimmorySettings.cs uses this as the label of the Grimmory tag field whose matching books are excluded from automatic updates.",
+    "314": "GrimmorySettings.cs attaches this HelpText to the ignore-tag field; it distinguishes Grimmory tags from Chaptarr tags and explains automatic versus manual push behavior. Processed and both action names are exact UI literals.",
+    "315": "JoinSettings.cs attaches this HelpText to the private API-key field; Join API is the exact account-settings button name.",
+    "316": "JoinSettings.cs and PushBulletSettings.cs both use this as a Device-type field label; the cell is shared by two notification integrations.",
+    "317": "JoinSettings.cs attaches this HelpText to the deprecated device-ID field and explicitly directs users to the newer Device Names field; unset means all devices.",
+    "318": "JoinSettings.cs uses this as the label of the replacement device-name field referenced by the deprecated field.",
+    "319": "JoinSettings.cs attaches this HelpText to the new device-name field; full or partial comma-separated names are accepted, and unset means all devices.",
+    "320": "JoinSettings.cs uses this as the label for its notification-priority select field.",
+    "321": "KavitaSettings.cs attaches this HelpText to the UseSSL checkbox; HTTPS is the secure alternative to HTTP.",
+    "322": "MailgunSettings.cs attaches this HelpText to the API-key credential field; MailGun is the exact provider name.",
+    "323": "MailgunSettings.cs uses this as the checkbox label for selecting the EU endpoint.",
+    "324": "MailgunSettings.cs attaches this HelpText to the EU-endpoint checkbox; this refers to enabling that option.",
+    "325": "MailgunSettings.cs uses this as the label of the sender-domain field.",
+    "326": "NotifiarrSettings.cs attaches this HelpText to the API-key credential field and links to the profile-based account service.",
+    "327": "NtfySettings.cs uses this as the label of a URL-typed server field.",
+    "328": "NtfySettings.cs attaches this HelpText to the server URL field; https://ntfy.sh is the public-server example.",
+    "329": "NtfySettings.cs attaches this HelpText to the token credential field; token authorization is optional and takes precedence over username/password.",
+    "330": "NtfySettings.cs attaches this HelpText to the optional authorization username field; wording should retain the authorization concept.",
+    "331": "NtfySettings.cs attaches this HelpText to the password credential field.",
+    "332": "NtfySettings.cs uses this as the label of a tag field for ntfy topics.",
+    "333": "NtfySettings.cs attaches this HelpText to the topic tag field; the listed topics receive notifications.",
+    "334": "NtfySettings.cs uses this as the label for the Ntfy tag/emoji field.",
+    "335": "NtfySettings.cs attaches this HelpText to the optional tag/emoji field.",
+    "336": "NtfySettings.cs uses this as the label for a URL opened by clicking a notification.",
+    "337": "NtfySettings.cs attaches this HelpText to the click-URL field; the link is optional and used when the user clicks the notification.",
+    "338": "PushBulletSettings.cs attaches this HelpText to a Device-type field; an unset device-ID list means all devices.",
+    "339": "PushBulletSettings.cs uses this as the label of the Channel Tags field.",
+    "340": "PushBulletSettings.cs attaches this HelpText to the Channel Tags field; matching channels receive notifications.",
+    "341": "PushBulletSettings.cs uses this as the label for the device that sends notifications.",
+    "342": "PushBulletSettings.cs attaches this HelpText to Sender ID; device_iden is taken from that device’s URL on pushbullet.com, and blank selects the user’s own account/device.",
+    "343": "PushoverSettings.cs uses this as the label of the account user-key credential field.",
+    "344": "PushoverSettings.cs uses this as the label of the device tag selector whose behavior is explained by the adjacent HelpText.",
+    "345": "PushoverSettings.cs attaches this HelpText to the Devices selector; a blank selection sends to all devices.",
+    "346": "PushoverSettings.cs attaches this HelpText to the retry interval field; Emergency alerts have a 30-second minimum.",
+    "347": "PushoverSettings.cs uses this as the label of the emergency alert expiration field.",
+    "348": "PushoverSettings.cs attaches this HelpText to the expiration field; the retry duration is capped at 86400 seconds.",
+    "349": "PushoverSettings.cs uses this as the label of the sound field for the notification."
+  }
+}

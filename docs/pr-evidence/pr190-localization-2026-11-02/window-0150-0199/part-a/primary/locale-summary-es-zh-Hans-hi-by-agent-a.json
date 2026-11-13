@@ -1,0 +1,245 @@
+{
+  "callerLinePinsReattested": 59,
+  "callerPinMismatches": 0,
+  "cells": 150,
+  "dispositions": {
+    "accept-current": 132,
+    "propose-correction": 10,
+    "propose-refinement": 8
+  },
+  "findings": [
+    {
+      "currentTarget": "हर पंक्ति में एक http:// या https:// URL दर्ज करें। Chaptarr कॉन्फ़िगर किया गया क्रम बनाए रखता है और उसी क्रम में निश्चित रूप से फ़ॉलबैक करता है।",
+      "currentTargetSha256": "83a43e8375b706b14b9778566aefa6deddf69a58f04fb33aad12016d67252f53",
+      "disposition": "propose-refinement",
+      "locale": "hi",
+      "rationale": "“निश्चित रूप से” can mean certainly; this names deterministic fallback and preserves both URL schemes and configured order.",
+      "recommendedTarget": "हर पंक्ति में एक http:// या https:// URL दर्ज करें। Chaptarr कॉन्फ़िगर किया गया क्रम बनाए रखता है और नियतात्मक फ़ॉलबैक के लिए उसी क्रम का उपयोग करता है।",
+      "recommendedTargetSha256": "56998084c55a946f10b0679cb076cd21bcffea5790a93977a44afd4ff5de8776",
+      "sourceId": "provider.field.f5c8c10dd48e0",
+      "sourceOrdinal": 168
+    },
+    {
+      "currentTarget": "Deja blanco cuando la fuente seleccionada no requiere una llave.",
+      "currentTargetSha256": "f86edeebef3c510de7c0674ad3fc75d8275f9866e48dd934c6e2cf3debfac422",
+      "disposition": "propose-refinement",
+      "locale": "es",
+      "rationale": "Restores explicit optional status and keeps the blank-when-unneeded instruction.",
+      "recommendedTarget": "Opcional. Déjalo en blanco cuando la fuente seleccionada no requiera una clave.",
+      "recommendedTargetSha256": "b4171d2af9f596401fce189e7ca0fbda7f7eadd25362f0af42964d4f86e1b17a",
+      "sourceId": "provider.field.f80cf5c07c14e",
+      "sourceOrdinal": 169
+    },
+    {
+      "currentTarget": "El límite de descarga temprano",
+      "currentTargetSha256": "b77152b5e6f958974a2c00b1191048106da6ecd8dbe6e4e43ea3a8f993e8db2b",
+      "disposition": "propose-refinement",
+      "locale": "es",
+      "rationale": "“Descarga temprana” is a literal calque; this reads as a limit on downloading in advance of release.",
+      "recommendedTarget": "Límite de descarga anticipada",
+      "recommendedTargetSha256": "b754f4a9d254cdaa396d389e31db52e236cbdaccca3a1ce610cb35e74b9712c1",
+      "sourceId": "provider.field.fa4001360c131",
+      "sourceOrdinal": 176
+    },
+    {
+      "currentTarget": "प्रारंभिक डाउनलोड सीमा",
+      "currentTargetSha256": "e09d6ee20e98bc7ec853755838bace92cdafc7319907542b5966f99d3d34f63e",
+      "disposition": "propose-refinement",
+      "locale": "hi",
+      "rationale": "The caller’s unit is days before release; this specifies a lead-time limit rather than an initial download limit.",
+      "recommendedTarget": "अग्रिम डाउनलोड की समय-सीमा",
+      "recommendedTargetSha256": "99262fe77f98ee15bd6f67b76c3a758f141f15dadf299d74e98d626098bbedcf",
+      "sourceId": "provider.field.fa4001360c131",
+      "sourceOrdinal": 176
+    },
+    {
+      "currentTarget": "早期下载限制",
+      "currentTargetSha256": "4b8bac4669d24c5d81472d28954051768fbb67b7040d8085c711acd4cc15cafe",
+      "disposition": "propose-refinement",
+      "locale": "zh-Hans",
+      "rationale": "The caller is a number of days before release; this makes the advance-download time limit explicit.",
+      "recommendedTarget": "提前下载时间限制",
+      "recommendedTargetSha256": "e790d2bfbee99afa366c993fc7e309dd8342364a7840a2dad9d0ec1eb98dbb6c",
+      "sourceId": "provider.field.fa4001360c131",
+      "sourceOrdinal": 176
+    },
+    {
+      "currentTarget": "No cambie esto a menos que sepa lo que está haciendo. ya que su cookie se enviará a ese host.",
+      "currentTargetSha256": "db1dcd5c95b15efda73fdf6ca9f2c14160f8cdbf13e66a6d139ccc36d7bfe5b2",
+      "disposition": "propose-correction",
+      "locale": "es",
+      "rationale": "Joins the cause clause correctly and preserves singular cookie and host meaning.",
+      "recommendedTarget": "No cambie esto a menos que sepa lo que está haciendo, ya que su cookie se enviará a ese host.",
+      "recommendedTargetSha256": "73491de5f29358c7f30f69989d125fd4f9abea77e6c93f16d53a1e47c44b48eb",
+      "sourceId": "provider.field.ff76d14398efa",
+      "sourceOrdinal": 183
+    },
+    {
+      "currentTarget": "यह नहीं बदलें जब तक आप नहीं जानते कि आप क्या कर रहे हैं. क्योंकि आपकी कुकीज़ उस होस्ट को भेजी जाएगी.",
+      "currentTargetSha256": "dbecfecf31eeb8aa2dafb7d7a607505912194a5c929ae598f6b0b5a019a59e3c",
+      "disposition": "propose-correction",
+      "locale": "hi",
+      "rationale": "Fixes the sentence break and singular-cookie agreement while preserving the warning.",
+      "recommendedTarget": "जब तक आप यह न जानते हों कि आप क्या कर रहे हैं, तब तक इसे न बदलें, क्योंकि आपकी कुकी उस होस्ट को भेजी जाएगी।",
+      "recommendedTargetSha256": "1be1e5cf1e28bbc5bcabff62ebc5c54e70ebcaa5616f73f1cb611e2b069b0d8f",
+      "sourceId": "provider.field.ff76d14398efa",
+      "sourceOrdinal": 183
+    },
+    {
+      "currentTarget": "不要改变这一点,除非您知道您正在做什么,因为您的 Cookie 将被发送到该主机。",
+      "currentTargetSha256": "16b4dbf7d8dd43e726ea12aef816b74bd42fd8ac2ab5e305a33aabb23cd88c94",
+      "disposition": "propose-refinement",
+      "locale": "zh-Hans",
+      "rationale": "Improves conditional flow and Chinese punctuation while preserving Cookie and host meaning.",
+      "recommendedTarget": "除非您清楚自己在做什么，否则不要更改此项，因为您的 Cookie 会发送到该主机。",
+      "recommendedTargetSha256": "6d7f495c0ce852ea979416ab05d7a52fdff0b3f8bffb8423c8dd2cdbce967829",
+      "sourceId": "provider.field.ff76d14398efa",
+      "sourceOrdinal": 183
+    },
+    {
+      "currentTarget": "La completa URL de feed RSS generada por IPTorrents, utilizando únicamente las categorías que seleccionas (HD, SD, x264, etc ...)",
+      "currentTargetSha256": "89f2d4cd5973865916734bb5513bf8c42b410b2b2fe513b432d62d7e42dd1384",
+      "disposition": "propose-refinement",
+      "locale": "es",
+      "rationale": "Clarifies that IPTorrents generates the full URL from selected categories and fixes word order.",
+      "recommendedTarget": "URL completa del feed RSS que IPTorrents genera usando solo las categorías que seleccionaste (HD, SD, x264, etc.).",
+      "recommendedTargetSha256": "05ea6b127ece053c2dc430764c1ee04da9856372e838ccf44cbebca59380da3b",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "sourceOrdinal": 187
+    },
+    {
+      "currentTarget": "IPTorrents द्वारा उत्पन्न पूर्ण RSS फ़ीड URL, केवल आपके द्वारा चुने गए श्रेणियों का उपयोग करके (HD, SD, x264, आदि ...)",
+      "currentTargetSha256": "3031876d205dd88d72ffc68123fcf7ed2104bde42864d44b16e461dc121028cb",
+      "disposition": "propose-correction",
+      "locale": "hi",
+      "rationale": "Fixes the dangling “using” construction and category agreement.",
+      "recommendedTarget": "IPTorrents द्वारा आपकी चुनी हुई श्रेणियों (HD, SD, x264 आदि) का उपयोग करके बनाया गया पूरा RSS फ़ीड URL।",
+      "recommendedTargetSha256": "662f3b91af7fd45fcc73967c7881b0a3136d5edf2b15d556a58f75b0190f6d07",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "sourceOrdinal": 187
+    },
+    {
+      "currentTarget": "全 RSS feed url 由 IPTorrents 生成,只使用您选择的类别(HD, SD, x264,等)",
+      "currentTargetSha256": "994a7662eeb90be9b508c8e1e153f559459c9b0571144d40348d1003bfebb9e9",
+      "disposition": "propose-correction",
+      "locale": "zh-Hans",
+      "rationale": "Rewrites the fragment in natural Simplified Chinese and preserves provider, RSS, URL, and category examples.",
+      "recommendedTarget": "由 IPTorrents 根据你选择的类别（HD、SD、x264 等）生成的完整 RSS 订阅源 URL。",
+      "recommendedTargetSha256": "1d30838a322c6cf1f502c99eb5408eec968ebe270aac0a62fe5b390f2a364eb2",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "sourceOrdinal": 187
+    },
+    {
+      "currentTarget": "Sitio web URL",
+      "currentTargetSha256": "4b77f98457ec3faf85fd7851e5b1b62d036ca8102cf5d9ad1ce258eff102ae3c",
+      "disposition": "propose-correction",
+      "locale": "es",
+      "rationale": "The current “Sitio web URL” uses an unnatural noun order.",
+      "recommendedTarget": "URL del sitio web",
+      "recommendedTargetSha256": "3f642578d0855b5c0bcc16575be53e6cb88aa44d60b7180f7ea20fc1795ae9d8",
+      "sourceId": "provider.field.feb650fa1243e",
+      "sourceOrdinal": 188
+    },
+    {
+      "currentTarget": "網站 URL",
+      "currentTargetSha256": "b74ffc01cf20587158c64cae2f1e5aada470b5531a45ac9e7106bde3bd97dd52",
+      "disposition": "propose-correction",
+      "locale": "zh-Hans",
+      "rationale": "The current target uses Traditional Chinese 網站; use the Simplified form.",
+      "recommendedTarget": "网站 URL",
+      "recommendedTargetSha256": "f3191fd2adab499afa97ca9d6aba139a1176cf3a525f0a36354a8a5479e9a8b1",
+      "sourceId": "provider.field.feb650fa1243e",
+      "sourceOrdinal": 188
+    },
+    {
+      "currentTarget": "Permite la búsqueda profunda",
+      "currentTargetSha256": "0659ac0d394e45971074e761b2a4c4c3c20422b26c4f03d1f980b6a9ea1f5c77",
+      "disposition": "propose-correction",
+      "locale": "es",
+      "rationale": "The source is an enable action; the current translation says the setting permits deep search.",
+      "recommendedTarget": "Habilitar la búsqueda profunda",
+      "recommendedTargetSha256": "dd7a064244b4c8c4995f5c98fba8e603063ab54d9f10ab309ccee95247d8b12c",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "sourceOrdinal": 197
+    },
+    {
+      "currentTarget": "गहरी खोज की अनुमति",
+      "currentTargetSha256": "1715bcef1ab9fadb1e5705de1087f45d11e7515e085240b10834cb7f6c5d08d5",
+      "disposition": "propose-correction",
+      "locale": "hi",
+      "rationale": "The source is an enable action; the current wording describes permission for deep search.",
+      "recommendedTarget": "गहरी खोज सक्षम करें",
+      "recommendedTargetSha256": "39d1d8761f37475b712ec8384919cbae1612863400cc566fe30622add3b19f75",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "sourceOrdinal": 197
+    },
+    {
+      "currentTarget": "允许深搜索",
+      "currentTargetSha256": "14b4ffeaef3e5af1924196c4dcaa8a709dec8453814653c5c3899e302f73cf63",
+      "disposition": "propose-correction",
+      "locale": "zh-Hans",
+      "rationale": "The source is an enable action; the current translation says allow deep search.",
+      "recommendedTarget": "启用深度搜索",
+      "recommendedTargetSha256": "343e12dd38358d20149ccab2d898ba17ea0c84956d04c01597d329c4e4170b7a",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "sourceOrdinal": 197
+    },
+    {
+      "currentTarget": "Usa la JSON API con metadatos mejorados, incluidos el título, la descripción, el narrador y la duración, cuando estén disponibles.",
+      "currentTargetSha256": "168a2a913ecf380d1369ad37910e9b40ec6ac33586b09ecae018b4c55d587240",
+      "disposition": "propose-refinement",
+      "locale": "es",
+      "rationale": "Keeps literal JSON API and makes the metadata list read naturally in Spanish.",
+      "recommendedTarget": "Usa JSON API con metadatos ampliados que incluyan el título, la descripción, el narrador y la duración, cuando estén disponibles.",
+      "recommendedTargetSha256": "f562498a4a68d2a205b5a0a8f1d8794b5919b9662a386be16f4eaeb12afa46cf",
+      "sourceId": "provider.field.fda201a931c3d",
+      "sourceOrdinal": 198
+    },
+    {
+      "currentTarget": "与Audiobookshelf相结合",
+      "currentTargetSha256": "741192cbfabc0ed053e3a2a5b72a687a69d22456101a01c77816339ab5dd60c2",
+      "disposition": "propose-correction",
+      "locale": "zh-Hans",
+      "rationale": "The current phrase means combine with; this is the natural term for software integration.",
+      "recommendedTarget": "与 Audiobookshelf 集成",
+      "recommendedTargetSha256": "e36d6708f6c09027417461238f194dc19183785a791eb7be8f4ad16428afe27a",
+      "sourceId": "provider.field.f5269857c4a80",
+      "sourceOrdinal": 199
+    }
+  ],
+  "head": "0117311b672af8d828fb45bad7e6026763b201da",
+  "inputCellsSha256": "8b5b2cd5cdc6ac223481e14b84df61e1303f2cc0e79cb9d746252e0582939691",
+  "inputChecksumsVerified": true,
+  "inputPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102",
+  "livePullRequest": {
+    "baseRefName": "main",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "0117311b672af8d828fb45bad7e6026763b201da",
+    "isDraft": true,
+    "state": "OPEN"
+  },
+  "localeReviewSha256": "50dc1018f03e32f10c7441d0ed150bf38e99da98dee133197a6ed4bec783c3e0",
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi"
+  ],
+  "nativeSpeakerApproval": false,
+  "placeholderFailures": 0,
+  "protectedLiteralFailures": 0,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryOrPullRequestChanges": false,
+  "schemaVersion": 1,
+  "sourceAndCatalogRowsReattested": 150,
+  "sourceCatalogMismatches": 0,
+  "sourceIds": 50,
+  "sourceOrdinals": [
+    150,
+    199
+  ],
+  "testsBuildsScansCI": false,
+  "tree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeStatus": "clean"
+}

@@ -1,0 +1,56 @@
+{
+  "allRowsHeld": true,
+  "artifact": "ChaptarrNG PR #190 independent blind creative-hold review",
+  "blobPinCount": 16,
+  "checksumList": "SHA256SUMS.txt",
+  "head": "712d597e6f27f6485f7c287b70f6dc79003ca714",
+  "inputChecksumListSha256": "da1b927ab0c5afa05f6218cf6f9ad96ed6231473c04dfc65db104a93c1eef319",
+  "inputDirectory": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-creative-holds-reconsideration-20261103/live-input",
+  "inputFiles": {
+    "PR-attestation.json": "6ac2efaf74c87a88b9ecc2e6c5c95a5adbccebb6d26aa62183a3f08bc6dfdb94",
+    "current-target-cells.jsonl": "912591835763ec803d8d88f47eef73e277e4ecfa82f03204ea1728bfe7f8bd17",
+    "manifest.json": "334a5a36baf2ff63a66f1bff02557763ceb18fa65f76cbaceb5393587a615455",
+    "scope-exclusion-id-dodgeBooks.json": "8af7d5f1ab2e8d5f04b74417f51a790ffca419b35fd97063641b33e20527abd3",
+    "source-and-caller-context.jsonl": "65441c7ba12729bddea62f656ea33d0d59f4887fd5ee3c35ad8621fc218172cd"
+  },
+  "nativeSpeakerApproval": "not claimed",
+  "outputFiles": [
+    {
+      "byteCount": 1068,
+      "path": "README.md",
+      "sha256": "0e3881578c5279c05306a206fa05e38e6579de531ee9d0a13b751a447a0ccfb8"
+    },
+    {
+      "byteCount": 6559,
+      "path": "pin-audit.json",
+      "sha256": "33cf3398fb39a0d99b0a437dd5e9a242f4bfc6cd8124b5fad64132cc7d7d991c"
+    },
+    {
+      "byteCount": 81114,
+      "path": "blind-hold-ledger.jsonl",
+      "sha256": "ab4000486ae86210ce581b0b8349fc20582e7b8a749ea31381b765471e53b4bf"
+    },
+    {
+      "byteCount": 938,
+      "path": "summary.json",
+      "sha256": "2aff0f63914725872d958700ce723c260d342ac5f76ad11f46eecc7c395ebe1c"
+    },
+    {
+      "byteCount": 7529,
+      "path": "verify_blind_hold_review.py",
+      "sha256": "3378753ab62de348f7416388d83cce1c6f27033e4271ac2590346c6882467db3"
+    }
+  ],
+  "outputHost": "kspls0",
+  "promptCount": 20,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryOrPrFilesEdited": false,
+  "schemaVersion": 1,
+  "sealed": true,
+  "sourceCount": 3,
+  "testsBuildsScansCiRun": false,
+  "tree": "275b19ba948bacd883d845ec970c154511be0e43",
+  "verifier": "verify_blind_hold_review.py",
+  "window": "creative-holds-reconsideration"
+}

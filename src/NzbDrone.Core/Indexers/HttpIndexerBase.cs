@@ -366,7 +366,7 @@ namespace NzbDrone.Core.Indexers
 
                 if (firstRequest == null)
                 {
-                    return new ValidationFailure(string.Empty, "No rss feed query available. This may be an issue with the indexer or your indexer category settings.");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "No rss feed query available. This may be an issue with the indexer or your indexer category settings.", "server.message.mb2cee5ce3cb9");
                 }
 
                 var releases = await FetchPage(firstRequest, parser);
@@ -375,7 +375,7 @@ namespace NzbDrone.Core.Indexers
                 {
                     // An empty feed is not proof of a bad configuration (a narrow category filter can legitimately
                     // return nothing), so report it as a warning that "save anyway" can bypass.
-                    return new NzbDroneValidationFailure(string.Empty, "Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.")
+                    return new NzbDroneValidationFailure(string.Empty, "Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.", "server.message.mca68744b8296", null)
                     {
                         IsWarning = true
                     };
@@ -385,36 +385,36 @@ namespace NzbDrone.Core.Indexers
             {
                 _logger.Warn("Indexer returned result for RSS URL, API Key appears to be invalid: " + ex.Message);
 
-                return new ValidationFailure("ApiKey", "Invalid API Key");
+                return NzbDroneValidationFailure.ForMessage("ApiKey", "Invalid API Key", "server.message.m95e93a58a893");
             }
             catch (RequestLimitReachedException ex)
             {
                 _logger.Warn("Request limit reached: " + ex.Message);
 
-                return new ValidationFailure(string.Empty, "Request limit reached: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Request limit reached: " + ex.Message, "server.message.mfa166a34318e", new { value0 = ex.Message });
             }
             catch (CloudFlareCaptchaException ex)
             {
                 if (ex.IsExpired)
                 {
-                    return new ValidationFailure("CaptchaToken", "CloudFlare CAPTCHA token expired, please Refresh.");
+                    return NzbDroneValidationFailure.ForMessage("CaptchaToken", "CloudFlare CAPTCHA token expired, please Refresh.", "server.message.m6139d49128ce");
                 }
                 else
                 {
-                    return new ValidationFailure("CaptchaToken", "Site protected by CloudFlare CAPTCHA. Valid CAPTCHA token required.");
+                    return NzbDroneValidationFailure.ForMessage("CaptchaToken", "Site protected by CloudFlare CAPTCHA. Valid CAPTCHA token required.", "server.message.mba5771faddc5");
                 }
             }
             catch (UnsupportedFeedException ex)
             {
                 _logger.Warn(ex, "Indexer feed is not supported");
 
-                return new ValidationFailure(string.Empty, "Indexer feed is not supported: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Indexer feed is not supported: " + ex.Message, "server.message.m61da366a8aae", new { value0 = ex.Message });
             }
             catch (IndexerException ex)
             {
                 _logger.Warn(ex, "Unable to connect to indexer");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to indexer. " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer. " + ex.Message, "server.message.m6e47fb747806", new { value0 = ex.Message });
             }
             catch (HttpException ex)
             {
@@ -422,33 +422,33 @@ namespace NzbDrone.Core.Indexers
                     ex.Response.Content.Contains("not support the requested query"))
                 {
                     _logger.Warn(ex, "Indexer does not support the query");
-                    return new ValidationFailure(string.Empty, "Indexer does not support the current query. Check if the categories and or searching for seasons/episodes are supported. Check the log for more details.");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Indexer does not support the current query. Check if the categories and or searching for seasons/episodes are supported. Check the log for more details.", "server.message.mf23043f0ad3f");
                 }
 
                 _logger.Warn(ex, "Unable to connect to indexer");
                 if (ex.Response.HasHttpServerError)
                 {
-                    return new ValidationFailure(string.Empty, "Unable to connect to indexer, indexer's server is unavailable. Try again later. " + ex.Message);
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, indexer's server is unavailable. Try again later. " + ex.Message, "server.message.m61c49aa34607", new { value0 = ex.Message });
                 }
 
                 if (ex.Response.StatusCode is HttpStatusCode.Forbidden or HttpStatusCode.Unauthorized)
                 {
-                    return new ValidationFailure(string.Empty, "Unable to connect to indexer, invalid credentials. " + ex.Message);
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, invalid credentials. " + ex.Message, "server.message.ma0102c76d3fd", new { value0 = ex.Message });
                 }
 
-                return new ValidationFailure(string.Empty, "Unable to connect to indexer, check the log above the ValidationFailure for more details. " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, check the log above the ValidationFailure for more details. " + ex.Message, "server.message.mfa82f5859e19", new { value0 = ex.Message });
             }
             catch (HttpRequestException ex)
             {
                 _logger.Warn(ex, "Unable to connect to indexer");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to indexer, please check your DNS settings and ensure IPv6 is working or disabled. " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, please check your DNS settings and ensure IPv6 is working or disabled. " + ex.Message, "server.message.mfde3b9fa63a8", new { value0 = ex.Message });
             }
             catch (TaskCanceledException ex)
             {
                 _logger.Warn(ex, "Unable to connect to indexer");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to indexer, possibly due to a timeout. Try again or check your network settings. " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, possibly due to a timeout. Try again or check your network settings. " + ex.Message, "server.message.m96088c09619f", new { value0 = ex.Message });
             }
             catch (WebException webException)
             {
@@ -456,20 +456,20 @@ namespace NzbDrone.Core.Indexers
 
                 if (webException.Status is WebExceptionStatus.NameResolutionFailure or WebExceptionStatus.ConnectFailure)
                 {
-                    return new ValidationFailure(string.Empty, "Unable to connect to indexer connection failure. Check your connection to the indexer's server and DNS." + webException.Message);
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer connection failure. Check your connection to the indexer's server and DNS." + webException.Message, "server.message.m275c683c036e", new { value0 = webException.Message });
                 }
 
                 if (webException.Message.Contains("502") || webException.Message.Contains("503") ||
                     webException.Message.Contains("504") || webException.Message.Contains("timed out"))
                 {
-                    return new ValidationFailure(string.Empty, "Unable to connect to indexer, indexer's server is unavailable. Try again later. " + webException.Message);
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, indexer's server is unavailable. Try again later. " + webException.Message, "server.message.m61c49aa34607", new { value0 = webException.Message });
                 }
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to indexer");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to indexer, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, check the log for more details", "server.message.m85babf48e233");
             }
 
             return null;

@@ -1,0 +1,82 @@
+{
+  "localeOrder": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "locales": {
+    "ar": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Modern Standard Arabic; direct imperatives are singular masculine/neutral in form.",
+      "reviewedCellsWithDirectAddress": [
+        1039,
+        1040,
+        1049
+      ]
+    },
+    "de": {
+      "examples": {
+        "formal": [
+          "Stellen Sie sicher"
+        ],
+        "informal": [
+          "Dein Bücherregal",
+          "Spule deine Hörbücher"
+        ]
+      },
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Formal Sie in permission-error guidance; informal du may be used in playful loading copy."
+    },
+    "es": {
+      "decision": "Recommend Asegúrese at W1039/W1040 to align the corresponding unsuffixed messages; keep informal tú in conversational loading copy.",
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Catalog is mixed: tú occurs in general copy and playful loading messages; usted occurs in some server validations. Exact paired folder-permission messages use Asegúrese."
+    },
+    "fr": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Polite vous for server guidance and user-directed loading prompt; no informal address detected in these rows."
+    },
+    "hi": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Respectful imperative/progress constructions where direct guidance appears; no second-person pronoun policy found in repo."
+    },
+    "id": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Anda is used for direct address; descriptive labels do not need a pronoun."
+    },
+    "ja": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Polite ください/ます forms for user-directed guidance; loading status lines are descriptive."
+    },
+    "ko": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Polite 하세요/세요 forms for user guidance; provider labels and loading states are not honorific address."
+    },
+    "pt-BR": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Polite você/third-person imperative forms (e.g. Verifique, Seja); possessive sua."
+    },
+    "vi": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "Neutral/polite Hãy for user guidance; descriptive values do not address the reader."
+    },
+    "zh-Hans": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "请 used for user-directed guidance; other values are labels or descriptive copy."
+    },
+    "zh-Hant": {
+      "nativeSpeakerReviewOutstanding": true,
+      "register": "請 used for user-directed guidance; other values are labels or descriptive copy."
+    }
+  },
+  "reviewScope": "All 600 cells checked for formality/register where the source or target uses direct address, an imperative, or a loading instruction."
+}

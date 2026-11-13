@@ -1,0 +1,81 @@
+{
+  "title": "ChaptarrNG PR #190 caller-bound independent blind semantic review",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0",
+  "candidateFreeInputManifestSha256": "05e9feddecb58acd2b4897adadf962f9ea774cf21fef10428f6885c2c9e29382",
+  "reviewedCells": 37,
+  "sourceIds": [
+    "provider.option.o7285d46b982d",
+    "provider.option.oe4d40d318e99",
+    "server.message.m453c42aa8de5",
+    "server.message.mf00d6bc38ae8",
+    "ui.loading.dodgeBooks",
+    "ui.loading.newEbookSmell",
+    "ui.loading.rewindAudiobooks"
+  ],
+  "perSourceIdCounts": {
+    "server.message.m453c42aa8de5": 12,
+    "server.message.mf00d6bc38ae8": 1,
+    "provider.option.oe4d40d318e99": 1,
+    "provider.option.o7285d46b982d": 1,
+    "ui.loading.newEbookSmell": 8,
+    "ui.loading.rewindAudiobooks": 2,
+    "ui.loading.dodgeBooks": 12
+  },
+  "dispositions": {
+    "SEMANTIC_PASS": 12,
+    "HOLD_LITERAL_LOSS": 1,
+    "HOLD_NATIVE_LABEL_REVIEW": 2,
+    "HOLD_MEANING_LOSS_AND_CREATIVE_REVIEW": 1,
+    "HOLD_CREATIVE_NATIVE_REVIEW": 20,
+    "HOLD_MEANING_DIRECTION_AND_CREATIVE_REVIEW": 1
+  },
+  "qualifiedHumanReviewRequired": 25,
+  "releaseApprovedByThisReview": 0,
+  "sourceCallerMismatchesObserved": 0,
+  "placeholderOrMarkupSequenceMismatches": 0,
+  "protectedLiteralFindings": {
+    "missing": 0,
+    "observedProtectedLiteralPreserved": 12
+  },
+  "specificFindings": [
+    {
+      "cell": "server.message.mf00d6bc38ae8 / hi",
+      "finding": "Hindi target omits the literal backslash prohibited by the exact QBittorrent caller validation."
+    },
+    {
+      "cell": "ui.loading.newEbookSmell / ar",
+      "finding": "Target omits explicit eBook punchline and question tone."
+    },
+    {
+      "cell": "ui.loading.newEbookSmell / ja",
+      "finding": "Negation/idiom direction is ambiguous and needs native resolution."
+    },
+    {
+      "cell": "provider.option.oe4d40d318e99 / id",
+      "finding": "Farsi naming convention requires Indonesian locale review."
+    },
+    {
+      "cell": "provider.option.o7285d46b982d / vi",
+      "finding": "Castilian Spanish label wording requires Vietnamese locale review."
+    },
+    {
+      "cell": "ui.loading.dodgeBooks / all 12 reviewed locales",
+      "finding": "Protected Dodge literal is preserved; creative hybrid wordplay remains held for native review."
+    }
+  ],
+  "notReviewed": {
+    "noExactDirectCallerCells": 24,
+    "sourceOrdinals": [
+      447,
+      498
+    ],
+    "status": "remain held per packet boundary"
+  },
+  "priorReviewLedgersOrHoldReasonsRead": false,
+  "repositoriesOrPullRequestsEdited": false,
+  "testsBuildsScansCIOrWorkflowsRun": false,
+  "reviewLimit": "Machine semantic review only; no native-speaker approval; no cell is released by this artifact."
+}

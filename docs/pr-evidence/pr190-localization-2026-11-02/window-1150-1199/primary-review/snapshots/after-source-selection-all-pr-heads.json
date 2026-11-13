@@ -1,0 +1,155 @@
+{
+  "pullRequests": {
+    "chaptarr": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+        "headRef": {
+          "target": {
+            "oid": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+            "tree": {
+              "oid": "d073e1373021bf715db37461a12654f7e993cdbf"
+            }
+          }
+        },
+        "headRefName": "codex/chaptarrng-localization-complete-20261031",
+        "headRefOid": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+        "isDraft": true,
+        "number": 190,
+        "state": "OPEN",
+        "updatedAt": "2026-11-02T23:23:44Z",
+        "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+      }
+    },
+    "questarr": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "e188cd0c74c73071c94b04915e1babac2d2bf386",
+        "headRef": {
+          "target": {
+            "oid": "0ea966692f4dec72e8830ebc1f085549968c587e",
+            "tree": {
+              "oid": "edc78b5261b481ab8afd044df8371bb21f5d4d14"
+            }
+          }
+        },
+        "headRefName": "codex/localization-foundations-20261028",
+        "headRefOid": "0ea966692f4dec72e8830ebc1f085549968c587e",
+        "isDraft": false,
+        "number": 155,
+        "state": "OPEN",
+        "updatedAt": "2026-11-02T22:40:07Z",
+        "url": "https://github.com/snapetech-org/QuestarrNG/pull/155"
+      }
+    },
+    "romarr": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "bcd1eb41b5cdf8202acb5cf8e365e14761b743b5",
+        "headRef": {
+          "target": {
+            "oid": "6db0b917343fc9fb605f8a4ecfbf9b4c21cebd1b",
+            "tree": {
+              "oid": "bfb778ba77849174a4670a70883c812183506b43"
+            }
+          }
+        },
+        "headRefName": "task/localization-translation-review-20261030",
+        "headRefOid": "6db0b917343fc9fb605f8a4ecfbf9b4c21cebd1b",
+        "isDraft": true,
+        "number": 70,
+        "state": "OPEN",
+        "updatedAt": "2026-11-02T22:49:04Z",
+        "url": "https://github.com/snapetech-org/ROMarrNG/pull/70"
+      }
+    },
+    "seerr": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "221d8e0d542802da7529cd272c928cc747677e5c",
+        "headRef": {
+          "target": {
+            "oid": "5df4c711f832f1f9a818c4d9cfca46661bff0835",
+            "tree": {
+              "oid": "116ff2934d7eaf3d02f84f104621860c16babc01"
+            }
+          }
+        },
+        "headRefName": "codex/seerrng-localization-overhaul-20261028",
+        "headRefOid": "5df4c711f832f1f9a818c4d9cfca46661bff0835",
+        "isDraft": true,
+        "number": 418,
+        "state": "OPEN",
+        "updatedAt": "2026-11-02T23:46:07Z",
+        "url": "https://github.com/snapetech-org/seerrng/pull/418"
+      }
+    },
+    "slskdn": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "f25d263a2a7cdb2c8f76c40c346cb10f749a9356",
+        "headRef": {
+          "target": {
+            "oid": "a0f97a65f75df32a196338bea7a176b23b126cc4",
+            "tree": {
+              "oid": "a5cb30af29a947edbf76721bbc29b59e4330f970"
+            }
+          }
+        },
+        "headRefName": "codex/slskdn-oidc-tooltip-localization-20261030",
+        "headRefOid": "a0f97a65f75df32a196338bea7a176b23b126cc4",
+        "isDraft": true,
+        "number": 409,
+        "state": "OPEN",
+        "updatedAt": "2026-11-02T23:51:05Z",
+        "url": "https://github.com/snapetech-org/slskdN/pull/409"
+      }
+    },
+    "slskr": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "2a2b188f10b9460a15bc6d5c34e406b0193d51ba",
+        "headRef": {
+          "target": {
+            "oid": "99282b2f9b904f9814f5be66d8f643175e134f8e",
+            "tree": {
+              "oid": "ba0ba0790da40159b8d92935f0866cb6a112edce"
+            }
+          }
+        },
+        "headRefName": "codex/slskr-l10n-audit-20261030",
+        "headRefOid": "99282b2f9b904f9814f5be66d8f643175e134f8e",
+        "isDraft": true,
+        "number": 204,
+        "state": "OPEN",
+        "updatedAt": "2026-11-03T00:08:41Z",
+        "url": "https://github.com/snapetech-org/slskr/pull/204"
+      }
+    },
+    "torrent": {
+      "pullRequest": {
+        "baseRefName": "main",
+        "baseRefOid": "0de7ddcf2f16a4399da8fd7904dc35f458b4837c",
+        "headRef": {
+          "target": {
+            "oid": "11ff6fa2618e842e92716b7e92867769200e32e5",
+            "tree": {
+              "oid": "770415a3fcd9353884ac245b53798af9610c0aa3"
+            }
+          }
+        },
+        "headRefName": "codex/torrentng-localization-audit-20261030",
+        "headRefOid": "11ff6fa2618e842e92716b7e92867769200e32e5",
+        "isDraft": true,
+        "number": 243,
+        "state": "OPEN",
+        "updatedAt": "2026-11-02T20:48:55Z",
+        "url": "https://github.com/snapetech-org/TorrentNG/pull/243"
+      }
+    }
+  },
+  "query": "query { seerr: repository(owner:\"snapetech-org\",name:\"SeerrNG\") { pullRequest(number:418) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } chaptarr: repository(owner:\"snapetech-org\",name:\"chaptarrng\") { pullRequest(number:190) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } questarr: repository(owner:\"snapetech-org\",name:\"QuestarrNG\") { pullRequest(number:155) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } romarr: repository(owner:\"snapetech-org\",name:\"ROMarrNG\") { pullRequest(number:70) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } slskr: repository(owner:\"snapetech-org\",name:\"slskR\") { pullRequest(number:204) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } slskdn: repository(owner:\"snapetech-org\",name:\"slskdN\") { pullRequest(number:409) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } torrent: repository(owner:\"snapetech-org\",name:\"TorrentNG\") { pullRequest(number:243) { number state isDraft headRefName headRefOid baseRefName baseRefOid updatedAt url headRef { target { oid ... on Commit { tree { oid } } } } } } }",
+  "queryCompletedUtc": "2026-11-03T00:10:03.641612+00:00",
+  "queryStartedUtc": "2026-11-03T00:10:02.107487+00:00",
+  "snapshotKind": "after-source-selection"
+}

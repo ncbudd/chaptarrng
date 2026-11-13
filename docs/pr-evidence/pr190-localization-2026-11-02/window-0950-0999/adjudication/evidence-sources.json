@@ -1,0 +1,273 @@
+{
+  "retrievedAtUtc": "2026-11-02",
+  "method": "Independent third-party adjudication against exact pinned source/catalog/context and authoritative language dictionaries or current CLDR data where applicable.",
+  "nativeSpeakerApproval": false,
+  "sources": [
+    {
+      "id": "sampled-enum-context",
+      "kind": "pinned-repository-context",
+      "title": "MyAnonAMouse language filter enum and provider option pipeline",
+      "url": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs",
+      "supports": "Selected sources are language names in MyAnonaMouseSearchLanguages and are rendered as standalone provider select-option labels; neighboring option labels provide catalog style context."
+    },
+    {
+      "id": "catalog-style",
+      "kind": "pinned-repository-context",
+      "title": "Pinned language option catalogs and source registry",
+      "url": "docs/localization/provider-option-sources.json and locale Core catalog files",
+      "supports": "Provides the exact source key, current target values, neighboring target labels, locale files, and protected-literal rules at the pinned PR tree."
+    },
+    {
+      "id": "duden-chinesisch",
+      "kind": "dictionary",
+      "title": "Duden: Chinesisch",
+      "url": "https://www.duden.de/rechtschreibung/Chinesisch",
+      "supports": "Chinesisch is the neuter noun meaning the Chinese language."
+    },
+    {
+      "id": "duden-koreanisch",
+      "kind": "dictionary",
+      "title": "Duden: Koreanisch",
+      "url": "https://www.duden.de/rechtschreibung/Koreanisch",
+      "supports": "Koreanisch is the neuter noun meaning the Korean language."
+    },
+    {
+      "id": "duden-pandschabi",
+      "kind": "dictionary",
+      "title": "Duden: Pandschabi",
+      "url": "https://www.duden.de/rechtschreibung/Pandschabi",
+      "supports": "Pandschabi is the neuter noun for the language."
+    },
+    {
+      "id": "duden-kroatisch",
+      "kind": "dictionary",
+      "title": "Duden: Kroatisch",
+      "url": "https://www.duden.de/rechtschreibung/Kroatisch",
+      "supports": "Kroatisch is the neuter noun meaning the Croatian language."
+    },
+    {
+      "id": "duden-kroatische",
+      "kind": "dictionary",
+      "title": "Duden: Kroatische",
+      "url": "https://www.duden.de/rechtschreibung/Kroatische",
+      "supports": "Kroatische is a substantivized adjective with the use restriction “only with a definite article”; this option has no article."
+    },
+    {
+      "id": "duden-malaiisch",
+      "kind": "dictionary",
+      "title": "Duden: Malaiisch",
+      "url": "https://www.duden.de/rechtschreibung/Malaiisch",
+      "supports": "Malaiisch is the neuter noun for the language spoken on the Malay Peninsula and western Indonesia."
+    },
+    {
+      "id": "duden-malaysisch",
+      "kind": "dictionary",
+      "title": "Duden: malaysisch",
+      "url": "https://www.duden.de/rechtschreibung/malaysisch",
+      "supports": "malaysisch is an adjective relating to Malaysia or Malaysians, not the language name in this context."
+    },
+    {
+      "id": "arabic-academy-icelandic",
+      "kind": "language-academy-reference",
+      "title": "Arabic Academy of Cairo research PDF on Iceland",
+      "url": "https://www.arabicacademy.gov.eg/storage/options/pdfs/154_research.pdf",
+      "supports": "Uses الأيسلندية for the Icelandic language."
+    },
+    {
+      "id": "rae-guyarati",
+      "kind": "dictionary",
+      "title": "RAE-ASALE DLE: guyaratí",
+      "url": "https://dle.rae.es/guyarat%C3%AD",
+      "supports": "Defines guyaratí as the Indian language spoken mainly in Guyarat."
+    },
+    {
+      "id": "rae-manes",
+      "kind": "dictionary",
+      "title": "RAE-ASALE DLE: manés, manesa",
+      "url": "https://dle.rae.es/man%C3%A9s",
+      "supports": "Defines manés as the Celtic language spoken on the Isle of Man."
+    },
+    {
+      "id": "fundeu-punyabi",
+      "kind": "language-usage-guidance",
+      "title": "FundéuRAE: panyabí / punyabí",
+      "url": "https://www.fundeu.es/consulta/panyabi-1586/",
+      "supports": "Recommends punyabí for the language/gentilic."
+    },
+    {
+      "id": "larousse-ancient-greek",
+      "kind": "dictionary",
+      "title": "Larousse English–French: Greek",
+      "url": "https://www.larousse.fr/dictionnaires/anglais-francais/Greek/584473",
+      "supports": "Translates ancient Greek as grec ancien."
+    },
+    {
+      "id": "larousse-pendjabi",
+      "kind": "dictionary",
+      "title": "Larousse French–English: pendjabi",
+      "url": "https://www.larousse.fr/dictionnaires/francais-anglais/pendjabi/1011640",
+      "supports": "Translates French pendjabi as Punjabi."
+    },
+    {
+      "id": "priberam-panjabi",
+      "kind": "dictionary",
+      "title": "Dicionário Priberam: panjabi",
+      "url": "https://dicionario.priberam.org/panjabi",
+      "supports": "Defines panjabi as an Indo-Aryan language spoken in the Panjab region."
+    },
+    {
+      "id": "kotobank-scottish-gaelic",
+      "kind": "dictionary-encyclopedia",
+      "title": "Kotobank / Britannica: Scottish Gaelic",
+      "url": "https://kotobank.jp/word/%E3%81%99%E3%81%93%E3%81%A4%E3%81%A8%E3%82%89%E3%82%93%E3%81%A9%E3%81%92%E3%83%BC%E3%82%8A%E3%81%A4%E8%AA%9E-3182125",
+      "supports": "Uses スコットランド・ゲーリック語 as the Japanese name for Scottish Gaelic."
+    },
+    {
+      "id": "cldr49-release",
+      "kind": "locale-data-release",
+      "title": "Unicode CLDR 49 release notes",
+      "url": "https://cldr.unicode.org/downloads/cldr-49",
+      "supports": "Identifies the CLDR 49 release (2026-10-22) used for current locale display-name cross-checks."
+    },
+    {
+      "id": "cldr49-vietnamese-bengali",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Vietnamese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/vi.html",
+      "supports": "Lists Bengali (bn) as Tiếng Bangla."
+    },
+    {
+      "id": "cldr49-vietnamese-arabic",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Vietnamese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/vi.html",
+      "supports": "Lists Arabic (ar) as Tiếng Ả Rập."
+    },
+    {
+      "id": "cldr49-vietnamese-persian",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Vietnamese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/vi.html",
+      "supports": "Lists Persian (fa) as Tiếng Ba Tư."
+    },
+    {
+      "id": "cldr49-vietnamese-manx",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Vietnamese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/vi.html",
+      "supports": "Lists Manx (gv) as Tiếng Manx."
+    },
+    {
+      "id": "cldr49-vietnamese-spanish",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Vietnamese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/vi.html",
+      "supports": "Lists Spanish (es) as Tiếng Tây Ban Nha."
+    },
+    {
+      "id": "cldr49-vietnamese-arabic-refinement",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Vietnamese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/vi.html",
+      "supports": "The Arabic row uses the explicit prefix Tiếng, supporting the Vietnamese label refinement."
+    },
+    {
+      "id": "cldr49-japanese-hindi",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Japanese language display names",
+      "url": "https://unicode.org/cldr/charts/49/summary/ja.html",
+      "supports": "Lists Hindi (hi) as ヒンディー語."
+    },
+    {
+      "id": "cldr49-korean-malay",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 language display names, K–N",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__k-n_.html",
+      "supports": "Lists Malay (ms) as 말레이어 in Korean."
+    },
+    {
+      "id": "cldr49-es-ancient-greek",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 Spanish language display names, A–D",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__a-d_.html",
+      "supports": "Lists Ancient Greek (grc) as griego antiguo in Spanish."
+    },
+    {
+      "id": "cldr49-es-scottish-gaelic",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 language display names, O–S",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__o-s_.html",
+      "supports": "Lists Scottish Gaelic (gd) as gaélico escocés in Spanish."
+    },
+    {
+      "id": "cldr49-fr-brazilian-portuguese",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 language display names, O–S",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__o-s_.html",
+      "supports": "Lists Brazilian Portuguese (pt-BR) as portugais brésilien in French; the catalog qualifier BP is preserved separately."
+    },
+    {
+      "id": "cldr49-indonesian-persian",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49 language display names, O–S",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__o-s_.html",
+      "supports": "Lists Persian (fa) as Persia in Indonesian; records a viable localized alternative but does not resolve whether this catalog should retain Farsi or use Bahasa Persia."
+    },
+    {
+      "id": "dmv-vietnamese-language-names",
+      "kind": "government-language-access-reference",
+      "title": "California DMV Vietnamese language-access complaint form",
+      "url": "https://www.dmv.ca.gov/portal/file/language-access-complaint-form-vietnamese-adm-140-pdf/",
+      "supports": "Uses Tiếng Ba Tư (Farsi) for Persian, corroborating the CLDR form."
+    },
+    {
+      "id": "locale-name-cross-check",
+      "kind": "cross-review-method-reference",
+      "title": "Locale-name lexical cross-check",
+      "url": "See the source-specific dictionary and CLDR entries in this file.",
+      "supports": "For sampled rows retained as current, the cross-review checked language-name recognition in the pinned standalone-option context; this ID is a method tag, not an independent lexicographic citation."
+    },
+    {
+      "id": "indonesian-language-usage",
+      "kind": "cross-review-hold-context",
+      "title": "Indonesian Farsi/Persia usage review note",
+      "url": null,
+      "supports": "The cross-review marked this choice for native-speaker adjudication; no source URL was recorded, and this note is not relied on to select a target."
+    },
+    {
+      "id": "cldr-indonesian-persian",
+      "kind": "historical-locale-data",
+      "title": "Unicode CLDR 22 Indonesian Persian display name",
+      "url": "https://www.unicode.org/cldr/cldr-aux/charts/22/by_type/code_lists.languages.html",
+      "supports": "Historical Indonesian CLDR data used Persia for Persian; not used as current release evidence."
+    },
+    {
+      "id": "cldr49-spanish-ancient-greek",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49: Ancient Greek in Spanish",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__a-d_.html",
+      "supports": "Lists Ancient Greek (grc) as griego antiguo for Spanish."
+    },
+    {
+      "id": "caller-context",
+      "kind": "pinned-repository-context",
+      "title": "Pinned MyAnonaMouse caller context",
+      "url": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs",
+      "supports": "Each selected enum member is exposed as a localized provider-option label through the pinned caller context."
+    },
+    {
+      "id": "infopedia-panjabi",
+      "kind": "dictionary",
+      "title": "Infopédia: panjábi",
+      "url": "https://www.infopedia.pt/dicionarios/lingua-portuguesa/panj%C3%A1bi",
+      "supports": "Panjábi is a Portuguese language name for the language spoken in Punjab/Pendjab."
+    },
+    {
+      "id": "spanish-gaelico-escoces",
+      "kind": "locale-data",
+      "title": "Unicode CLDR 49: Scottish Gaelic in Spanish",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__o-s_.html",
+      "supports": "Lists Scottish Gaelic (gd) as gaélico escocés for Spanish."
+    }
+  ]
+}

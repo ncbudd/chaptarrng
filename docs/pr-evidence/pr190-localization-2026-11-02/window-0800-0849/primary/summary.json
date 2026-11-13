@@ -1,0 +1,107 @@
+{
+  "callerGaps": [],
+  "callerRefs": 63,
+  "callerRows": 50,
+  "candidateCount": 236,
+  "catalogs": 12,
+  "counts": {
+    "accept-current": 364,
+    "hold": 0,
+    "propose-correction": 234,
+    "propose-refinement": 2
+  },
+  "currentProtectedMismatchCells": 1,
+  "exactHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "exactLiveReattestationPassed": true,
+  "exactTree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "finalProtectedMismatchCells": 0,
+  "genericPipelineGaps": [],
+  "genericPipelineRefs": 76,
+  "holdCount": 0,
+  "localeCells": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "machineAssistedConfidence": "moderate",
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocale": {
+    "ar": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "de": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "es": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "fr": {
+      "accept-current": 33,
+      "propose-correction": 17
+    },
+    "hi": {
+      "accept-current": 37,
+      "propose-correction": 13
+    },
+    "id": {
+      "accept-current": 25,
+      "propose-correction": 25
+    },
+    "ja": {
+      "accept-current": 27,
+      "propose-correction": 22,
+      "propose-refinement": 1
+    },
+    "ko": {
+      "accept-current": 31,
+      "propose-correction": 19
+    },
+    "pt-BR": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "vi": {
+      "accept-current": 35,
+      "propose-correction": 15
+    },
+    "zh-Hans": {
+      "accept-current": 30,
+      "propose-correction": 19,
+      "propose-refinement": 1
+    },
+    "zh-Hant": {
+      "accept-current": 30,
+      "propose-correction": 20
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "priorDispositionsRecorded": 9600,
+  "priorPacketCount": 16,
+  "priorPacketFiles": 19,
+  "priorPositionCoverageComplete": true,
+  "protectedLiteralFailureCells": 0,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryModified": false,
+  "schemaVersion": 1,
+  "sourceCallerGaps": [],
+  "sourceIds": 50,
+  "testsBuildsCiBrowserRun": false,
+  "w799BoundaryMatches": 12,
+  "window": "W800-W849"
+}

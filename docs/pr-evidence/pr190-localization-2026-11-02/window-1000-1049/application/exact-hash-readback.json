@@ -1,0 +1,111 @@
+{
+  "allCurrentTargetHashesMatched": true,
+  "allFinalHashesMatched": true,
+  "applyPlanRows": 85,
+  "catalogCount": 12,
+  "catalogs": [
+    {
+      "changedValues": 5,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "postFileSha256": "7ecde5f4a8158449f60933c1f1128008b79e77c6b2502bdfb88505e90a9372ec",
+      "preFileSha256": "04fd1bc472faafb8b6eaeb334a62541fe5baead7eb969823668f293d986754c7"
+    },
+    {
+      "changedValues": 3,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "postFileSha256": "26a5fc0e15b68cdd64abb6fcd042b7708320efa5191f94ab3366677919dee81a",
+      "preFileSha256": "822c7a7f9411dcff0d5a3927023981e95c7ffe9a259d918f5866fa612593125f"
+    },
+    {
+      "changedValues": 12,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "postFileSha256": "5856b8428d5db05dbc211088ba870b2930841582b23075b719dda948cb81127b",
+      "preFileSha256": "30b9c53f68527b3801ebd9d94627d09d44d7633fce3ad7910e5f3bccd2928770"
+    },
+    {
+      "changedValues": 7,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "postFileSha256": "9f086780b79e27032bf73e75bce67867aa6c2fafd9508fc08f60147af8d0070c",
+      "preFileSha256": "39ad286c2df33a0609898bc66ee1a27aa006d904ec67779f65bfa9e207f879aa"
+    },
+    {
+      "changedValues": 11,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "postFileSha256": "09fac099ef552bcd91c24e026c159917f319588846bd3133afe4451089500625",
+      "preFileSha256": "ae3a086889f4a249fe00bdce5fa39227abcecfc503469a916c7c37fa25a4b505"
+    },
+    {
+      "changedValues": 9,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "postFileSha256": "1bc372d2be8d71e08d07020299a00fef27fde3ac6cd6b6925109442856a73a8d",
+      "preFileSha256": "2f314c616632e3b0efd050786ef5eb94ba192e6855eecf6fa1428ee79560cede"
+    },
+    {
+      "changedValues": 6,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "postFileSha256": "f8b768c60e3444b28fabf2b599b0748e44df5ea803ec911f2f13b116ae4b7945",
+      "preFileSha256": "e1ed77e34bff0c53b433430414fd1209b5ee264a376ae83c2897f977a2ea1a33"
+    },
+    {
+      "changedValues": 10,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "postFileSha256": "3ffda355adaef0a69e3d01945e712205e16fd656bd8e12559d30c8923fa1f586",
+      "preFileSha256": "b155885346a182edb10f3c7a7ec7cbf6f2c013ea31760ebb1322b668c20538e6"
+    },
+    {
+      "changedValues": 7,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "postFileSha256": "f442e2c27ac0d962f955bf07b30b14597d9728c1af3af3a1aa43730e5fae073c",
+      "preFileSha256": "3eca2a7973a8a74bbba65b74d4fa26e8e32644e2952609f024c925d46ce8693d"
+    },
+    {
+      "changedValues": 5,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "postFileSha256": "a6d9cf85f985afff1fb2de555a02a6b908a49f60a6914c9f2aa05310906d6e1b",
+      "preFileSha256": "9e7fb769d0ac9980116be1b0ef3112b0e3d40f6bebef561cfeb06400a9b8d9e6"
+    },
+    {
+      "changedValues": 5,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "postFileSha256": "95c553ecc0ffb01ac2fc02887504a4b4f61bd23186054ccdddb5ce60c326fe36",
+      "preFileSha256": "31fb4e0de12db21a1a0cb7c27d69b4dae9f808e44fb78eea49305a59c11c4675"
+    },
+    {
+      "changedValues": 5,
+      "keyOrderPreserved": true,
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "postFileSha256": "62e70d96f494ee1eb3fdf7fc88bb74cb40e707eeb7b31bb2ac37701c6e573e80",
+      "preFileSha256": "7468962bbc51b23bd57e574365eb6f2fdc27d5a74a97896e830576fc248b28b7"
+    }
+  ],
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "keySetsAndOrderPreserved": true,
+  "ledgerRows": 600,
+  "previewChangedValues": 85,
+  "repositoryModified": false,
+  "worktreeCleanBeforePreview": true
+}

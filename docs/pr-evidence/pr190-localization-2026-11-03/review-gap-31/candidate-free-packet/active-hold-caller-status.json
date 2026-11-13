@@ -1,0 +1,259 @@
+{
+  "activeHoldCellCount": 61,
+  "groups": [
+    {
+      "activeHoldCellCount": 12,
+      "directCallerRefs": [],
+      "exactUserFacingCallerFound": false,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "no exact production caller; nearest dynamic AuthorController validation is not this stable message ID",
+      "holdRemains": true,
+      "otherReferences": [
+        {
+          "fileGitBlob": "87d3a764ebf09b157d542c9416cf79d4ca30c626",
+          "fileSha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+          "kind": "translation-mapping-only",
+          "line": 119,
+          "lineSha256": "c939a0b479ba26b99bb1cdbdf2b1abdc948c7ba80685d7fe53a0eb0dc3303be6",
+          "lineText": "    \"id\": \"server.message.m00dbcd234174\",",
+          "path": "frontend/src/Utilities/Localization/server-messages.json"
+        }
+      ],
+      "sourceId": "server.message.m00dbcd234174",
+      "sourceOrdinal": 447
+    },
+    {
+      "activeHoldCellCount": 12,
+      "directCallerRefs": [],
+      "exactUserFacingCallerFound": false,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "no exact direct caller or pinned UI role; server-message map/test references alone do not establish a production caller",
+      "holdRemains": true,
+      "otherReferences": [
+        {
+          "fileGitBlob": "87d3a764ebf09b157d542c9416cf79d4ca30c626",
+          "fileSha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+          "kind": "translation-mapping-only",
+          "line": 819,
+          "lineSha256": "cb94700ddec61b362c5e0aabdd5f23af277785bf7c1f142675e5f739724c9f75",
+          "lineText": "    \"id\": \"server.message.m23e7ac60ea9c\",",
+          "path": "frontend/src/Utilities/Localization/server-messages.json"
+        },
+        {
+          "fileGitBlob": "87d3a764ebf09b157d542c9416cf79d4ca30c626",
+          "fileSha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+          "kind": "translation-mapping-only",
+          "line": 833,
+          "lineSha256": "d64fb44da3bfa242ea4ee6094cc5a43b7570bc954711634087671e5a8564d54a",
+          "lineText": "    \"id\": \"server.message.m23e7ac60ea9c.child\",",
+          "path": "frontend/src/Utilities/Localization/server-messages.json"
+        }
+      ],
+      "sourceId": "server.message.m23e7ac60ea9c",
+      "sourceOrdinal": 498
+    },
+    {
+      "activeHoldCellCount": 12,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "a3a899a8b318a9739e03c7b34eea630b8ef418d1",
+          "fileSha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c",
+          "kind": "direct-production-reference",
+          "line": 350,
+          "lineSha256": "f8aca6578983e32021f11870e36ea68b91fb6e35830be02588f4a97963dc2f1d",
+          "lineText": "                return new NzbDroneValidationFailure(string.Empty, \"NzbGet setting KeepHistory should be less than 25000\", \"server.message.m453c42aa8de5\", null)",
+          "path": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct Nzbget validation result; source/caller boundary mismatch remains",
+      "holdRemains": true,
+      "otherReferences": [
+        {
+          "fileGitBlob": "87d3a764ebf09b157d542c9416cf79d4ca30c626",
+          "fileSha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+          "kind": "translation-mapping-only",
+          "line": 1599,
+          "lineSha256": "41ca9a507d756c8e5b79d4b57f3b248cbb9da4b4a0a56319834959c606fcee48",
+          "lineText": "    \"id\": \"server.message.m453c42aa8de5\",",
+          "path": "frontend/src/Utilities/Localization/server-messages.json"
+        }
+      ],
+      "sourceId": "server.message.m453c42aa8de5",
+      "sourceOrdinal": 561
+    },
+    {
+      "activeHoldCellCount": 1,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+          "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+          "kind": "direct-production-reference",
+          "line": 28,
+          "lineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5",
+          "lineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+          "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs"
+        },
+        {
+          "fileGitBlob": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+          "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+          "kind": "direct-production-reference",
+          "line": 30,
+          "lineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5",
+          "lineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+          "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs"
+        },
+        {
+          "fileGitBlob": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+          "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+          "kind": "direct-production-reference",
+          "line": 32,
+          "lineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5",
+          "lineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+          "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs"
+        },
+        {
+          "fileGitBlob": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+          "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+          "kind": "direct-production-reference",
+          "line": 34,
+          "lineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5",
+          "lineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+          "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct qBittorrent validation rules; English source/caller literal mismatch remains",
+      "holdRemains": true,
+      "otherReferences": [
+        {
+          "fileGitBlob": "87d3a764ebf09b157d542c9416cf79d4ca30c626",
+          "fileSha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+          "kind": "translation-mapping-only",
+          "line": 5641,
+          "lineSha256": "fd2ead71df0c8263b479a627fa4fcba11add08b452489bec2ee0ad0437a1cbf0",
+          "lineText": "    \"id\": \"server.message.mf00d6bc38ae8\",",
+          "path": "frontend/src/Utilities/Localization/server-messages.json"
+        }
+      ],
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "activeHoldCellCount": 1,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "ee8840d33d12fdc98a83a8f5b4a84c2b5bb80638",
+          "fileSha256": "4b5ec60660c36dfcf88a5e4ec1ffcbad7159475429b57c15e5769b661da30ae2",
+          "kind": "direct-production-reference",
+          "line": 187,
+          "lineSha256": "ace2bc6714c469f9f67dacf6cbb387cf7f06a48475cacb8c13a8ca05b4b108e3",
+          "lineText": "        [FieldOption(Label = \"provider.option.oe4d40d318e99\")] Farsi = 39,",
+          "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct MyAnonaMouse language-option label; Indonesian label choice held for native review",
+      "holdRemains": true,
+      "otherReferences": [],
+      "sourceId": "provider.option.oe4d40d318e99",
+      "sourceOrdinal": 963
+    },
+    {
+      "activeHoldCellCount": 1,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "ee8840d33d12fdc98a83a8f5b4a84c2b5bb80638",
+          "fileSha256": "4b5ec60660c36dfcf88a5e4ec1ffcbad7159475429b57c15e5769b661da30ae2",
+          "kind": "direct-production-reference",
+          "line": 224,
+          "lineSha256": "1e1392e14c13cf245cf0f9e165800bc3b272e26436635693db2f474b8db410c3",
+          "lineText": "        [FieldOption(Label = \"provider.option.o7285d46b982d\")] CastilianSpanish = 55,",
+          "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct MyAnonaMouse enum-option label; Vietnamese label held for native review",
+      "holdRemains": true,
+      "otherReferences": [],
+      "sourceId": "provider.option.o7285d46b982d",
+      "sourceOrdinal": 1000
+    },
+    {
+      "activeHoldCellCount": 8,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "1589452c0d61933f0ab187bcbc2e17c9a06b98ef",
+          "fileSha256": "9f3eaa1f0a8f838611194a085e4a127ceb90b5a4fed13a735845e4abc1e14a3f",
+          "kind": "runtime-loading-message-entry",
+          "line": 19,
+          "lineSha256": "e380a8d51e282c0ee627ab6e985c1a56fb564cabd299310d60d34e9b30905e29",
+          "lineText": "    \"id\": \"ui.loading.newEbookSmell\",",
+          "path": "frontend/src/Components/Loading/loading-messages.json"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct loading-message entry rendered by UI; locale wording held for native review",
+      "holdRemains": true,
+      "otherReferences": [],
+      "sourceId": "ui.loading.newEbookSmell",
+      "sourceOrdinal": 1047
+    },
+    {
+      "activeHoldCellCount": 2,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "1589452c0d61933f0ab187bcbc2e17c9a06b98ef",
+          "fileSha256": "9f3eaa1f0a8f838611194a085e4a127ceb90b5a4fed13a735845e4abc1e14a3f",
+          "kind": "runtime-loading-message-entry",
+          "line": 27,
+          "lineSha256": "3982a7937a53a1c35f280bf47500709536e89c748876cfec036a753e8e4da136",
+          "lineText": "    \"id\": \"ui.loading.rewindAudiobooks\",",
+          "path": "frontend/src/Components/Loading/loading-messages.json"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct loading-message entry rendered by UI; locale wording held for native review",
+      "holdRemains": true,
+      "otherReferences": [],
+      "sourceId": "ui.loading.rewindAudiobooks",
+      "sourceOrdinal": 1049
+    },
+    {
+      "activeHoldCellCount": 12,
+      "directCallerRefs": [
+        {
+          "fileGitBlob": "1589452c0d61933f0ab187bcbc2e17c9a06b98ef",
+          "fileSha256": "9f3eaa1f0a8f838611194a085e4a127ceb90b5a4fed13a735845e4abc1e14a3f",
+          "kind": "runtime-loading-message-entry",
+          "line": 47,
+          "lineSha256": "b6eff17619e124d7b4fb2ac9484f15ce1eb99cce64a132e9f16cc0f34ce6c9fe",
+          "lineText": "    \"id\": \"ui.loading.dodgeBooks\",",
+          "path": "frontend/src/Components/Loading/loading-messages.json"
+        }
+      ],
+      "exactUserFacingCallerFound": true,
+      "holdEvidencePath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-full-coverage-audit-20261103/active-holds.jsonl",
+      "holdReasonSummary": "direct loading-message entry rendered by UI; protected-name pun held for native creative localization",
+      "holdRemains": true,
+      "otherReferences": [],
+      "sourceId": "ui.loading.dodgeBooks",
+      "sourceOrdinal": 1054
+    }
+  ],
+  "holdSourceCount": 9,
+  "scope": "caller existence only; no hold release or new translation recommendation",
+  "summary": {
+    "groupsWithExactUserFacingCaller": 7,
+    "groupsWithoutExactUserFacingCaller": [
+      447,
+      498
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+frontend/src/Components/Loading/LoadingMessage.js
+frontend/src/Components/Loading/loading-messages.json
+src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs
+src/NzbDrone.Core/Localization/Core/ar.json
+src/NzbDrone.Core/Localization/Core/de.json
+src/NzbDrone.Core/Localization/Core/en.json
+src/NzbDrone.Core/Localization/Core/es.json
+src/NzbDrone.Core/Localization/Core/fr.json
+src/NzbDrone.Core/Localization/Core/hi.json
+src/NzbDrone.Core/Localization/Core/id.json
+src/NzbDrone.Core/Localization/Core/ja.json
+src/NzbDrone.Core/Localization/Core/ko.json
+src/NzbDrone.Core/Localization/Core/pt_BR.json
+src/NzbDrone.Core/Localization/Core/vi.json
+src/NzbDrone.Core/Localization/Core/zh_CN.json
+src/NzbDrone.Core/Localization/Core/zh_TW.json

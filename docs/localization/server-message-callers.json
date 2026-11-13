@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "scope": "Presentation boundaries only; stores retain raw server messages and captured provider/user values stay data. See server-copy-review.md for complete caller review.",
+  "scope": "Message handling and presentation boundaries only; stores retain raw server messages and captured provider/user values stay data. See server-copy-review.md for complete caller review.",
   "counts": {
-    "files": 34,
-    "callsites": 74
+    "files": 35,
+    "callsites": 77
   },
   "callsites": [
     {
@@ -121,112 +121,118 @@
       "sourceLineSha256": "d7a859f2ea7c1d3ca6681224a31b805fae594633e0664d919e1a8d46008857c3"
     },
     {
-      "file": "frontend/src/Components/Form/EnhancedSelectInput.js",
-      "line": 40,
-      "sourceLine": ".map((e) => translateServerMessage(e?.errorMessage))",
-      "sourceLineSha256": "6f295eb7472c4c00aabb8159505fe1a4607d2bf8f29a75ec1ad0d663391530fc"
+      "file": "frontend/src/Book/Narrator/NarratorSearchModalContent.js",
+      "line": 83,
+      "sourceLine": "const localizedErrorMessage = translateServerMessageById(response?.messageId, response?.messageParameters);",
+      "sourceLineSha256": "c260e6bfa59fdacaef3c64780d8b7d0b7a3b314f41ff0b3ddcd0b302fc5ff9cc"
     },
     {
       "file": "frontend/src/Components/Form/EnhancedSelectInput.js",
-      "line": 43,
-      "sourceLine": "return messages.length ? messages.join(' ') : (translateServerMessage(error.responseText) || null);",
-      "sourceLineSha256": "528de446877fa01e6dea279e015f12e2fab622ba0d0c40879fe51f1fa4c9d842"
+      "line": 39,
+      "sourceLine": ".map((e) => typeof e === 'string' ? e : e?.errorMessage || e?.message)",
+      "sourceLineSha256": "d0e71d7c9849251445e58ae9d0ece387547811386c33cdf2e8ce44a8644b5f13"
     },
     {
       "file": "frontend/src/Components/Form/EnhancedSelectInput.js",
-      "line": 47,
-      "sourceLine": "return translateServerMessage(responseJSON.message || responseJSON.error || error.responseText) || null;",
-      "sourceLineSha256": "4cccff4e6a5b7a9a48c99888c8a4f4e56c31d7c4aa4ff928c2f5464a1bede63c"
+      "line": 46,
+      "sourceLine": "return typeof error.responseText === 'string' && error.responseText.trim() ? error.responseText : null;",
+      "sourceLineSha256": "26792e97b30f54d46d7714c18dcf00cf3ab15b64cd055fc2ae70fcb07156caea"
     },
     {
       "file": "frontend/src/Components/Form/EnhancedSelectInput.js",
-      "line": 50,
-      "sourceLine": "return translateServerMessage(error.responseText) || (error.status && error.statusText ? `${error.status} ${error.statusText}` : null);",
-      "sourceLineSha256": "0bbbd499be1b809edd01b3ba7b86aaca6a0a5f2b4a3e4874580c28b8c1b709c2"
+      "line": 54,
+      "sourceLine": "return [responseJSON.message, responseJSON.errorMessage, responseJSON.error, error.responseText]",
+      "sourceLineSha256": "4e8f107594674167900e4a1ae820515c78ba5e8accae1a1fb632fe8883bdadd8"
+    },
+    {
+      "file": "frontend/src/Components/Form/EnhancedSelectInput.js",
+      "line": 583,
+      "sourceLine": "messageMode=\"opaque\"",
+      "sourceLineSha256": "267ccf433373d931a1e7b292982b6e85bd4c3d796dcc10ab76d75a8e1291f34d"
     },
     {
       "file": "frontend/src/Components/Form/Form.js",
-      "line": 30,
-      "sourceLine": "{translateServerMessage(msg)}",
-      "sourceLineSha256": "64ebb150bc6ab374bd56df844a59e052c1dc5cafe42701342ac709551ce6edd8"
+      "line": 75,
+      "sourceLine": "const localized = <LocalizedServerMessage",
+      "sourceLineSha256": "c1e9f3f5530ed2fcda028057d7df94058a108da6eb6d1ab4e536874ee4b1aac5"
     },
     {
       "file": "frontend/src/Components/Form/Form.js",
-      "line": 43,
-      "sourceLine": "{translateServerMessage(error.errorMessage)}",
-      "sourceLineSha256": "6d6847e3da03842f537d59dd19f9432ec279d10af3d5c6349ed2c6eca78f6e17"
+      "line": 85,
+      "sourceLine": "return translateServerMessage(text);",
+      "sourceLineSha256": "ad509fec82b0168acd0ce93dfdd02c35232a5a86f190bf7e76d9d4b238a3c219"
     },
     {
       "file": "frontend/src/Components/Form/Form.js",
-      "line": 56,
-      "sourceLine": "{translateServerMessage(warning.errorMessage)}",
-      "sourceLineSha256": "d8104d4f6819927eac1d90716d91603006129a17758f8554a0527b5a8c526a54"
+      "line": 92,
+      "sourceLine": "return translateServerMessage(message);",
+      "sourceLineSha256": "4024ec05599851e5044fd2eb4f50111b35c183b3ef3ccebf9e1dc0dd2766f1e2"
     },
     {
       "file": "frontend/src/Components/Form/FormInputGroup.js",
-      "line": 267,
-      "sourceLine": "text={translateServerMessage(error.message)}",
-      "sourceLineSha256": "f2cf8deb1d180173334f2fc26c575908760dba65a97c36a6e1acab13f9254309"
+      "line": 266,
+      "sourceLine": "text={error.message}",
+      "sourceLineSha256": "f5cdad5d179af2fdf65ecd92d9f0e8a36bf3f0646a87b6e5f9d87dee9acacbaa"
     },
     {
       "file": "frontend/src/Components/Form/FormInputGroup.js",
       "line": 269,
-      "sourceLine": "tooltip={translateServerMessage(error.detailedMessage)}",
-      "sourceLineSha256": "34658f0a6a7458bb1af56a319197bd3ef8fd33b57f7b5b1096d1bdd4571291f9"
-    },
-    {
-      "file": "frontend/src/Components/Form/FormInputGroup.js",
-      "line": 283,
-      "sourceLine": "text={translateServerMessage(warning.message)}",
-      "sourceLineSha256": "64802984b43be8f75bb55aec675ad12d06d6ed570ced7a05c7a61f3fa4883d37"
+      "sourceLine": "messageMode={error.messageOrigin === 'server' ? 'opaque' : 'source'}",
+      "sourceLineSha256": "d1b6731cec3b9b5fcb234ec3d1fc3faaa63e50d8b921cf29ba909fa87a8b5b1d"
     },
     {
       "file": "frontend/src/Components/Form/FormInputGroup.js",
       "line": 285,
-      "sourceLine": "tooltip={translateServerMessage(warning.detailedMessage)}",
-      "sourceLineSha256": "d554a318a0ae182adff8bd233cb79dcac5045b4a099ca04c0c08423e5288752a"
+      "sourceLine": "text={warning.message}",
+      "sourceLineSha256": "f15cbc68eb7231de536548ef44fe38b9bbabbef7d235a470378b9310ec587baf"
+    },
+    {
+      "file": "frontend/src/Components/Form/FormInputGroup.js",
+      "line": 288,
+      "sourceLine": "messageMode={warning.messageOrigin === 'server' ? 'opaque' : 'source'}",
+      "sourceLineSha256": "c4e08d26fb88c418b5de782e7063b2ebe6d601947febf028e9cadf7c4f4428c8"
     },
     {
       "file": "frontend/src/Components/Form/FormInputHelpText.js",
-      "line": 32,
-      "sourceLine": "{translateServerMessage(text)}",
-      "sourceLineSha256": "ce890f9941b3a10206e7e5b6708d63d1e9dd79e2973c5a42a0822bb18b8ac24e"
+      "line": 45,
+      "sourceLine": "{translatedText}",
+      "sourceLineSha256": "33dc1daa8106d99a5ceadd88b572830dccdb2b261ff783c4ffbf36778cb1fe50"
     },
     {
       "file": "frontend/src/Components/Form/FormInputHelpText.js",
-      "line": 39,
-      "sourceLine": "title={translateServerMessage(tooltip)}",
-      "sourceLineSha256": "31d219f1bc3dd65e550b89666be73799907a5408b1708cea767ce3390d99b40a"
+      "line": 52,
+      "sourceLine": "title={translatedTooltip}",
+      "sourceLineSha256": "64b6234cfb2bc4648a8c5b03c829d9b5592ac97c7d3678b79f4e1acdb7be3197"
     },
     {
       "file": "frontend/src/Components/Form/FormInputHelpText.js",
-      "line": 53,
-      "sourceLine": "title={translateServerMessage(tooltip)}",
-      "sourceLineSha256": "31d219f1bc3dd65e550b89666be73799907a5408b1708cea767ce3390d99b40a"
+      "line": 66,
+      "sourceLine": "title={translatedTooltip}",
+      "sourceLineSha256": "64b6234cfb2bc4648a8c5b03c829d9b5592ac97c7d3678b79f4e1acdb7be3197"
     },
     {
       "file": "frontend/src/Components/Form/OAuthInput.js",
-      "line": 18,
-      "sourceLine": ".map((e) => translateServerMessage(e?.errorMessage))",
-      "sourceLineSha256": "6f295eb7472c4c00aabb8159505fe1a4607d2bf8f29a75ec1ad0d663391530fc"
+      "line": 17,
+      "sourceLine": ".map((failure, index) => typeof failure === 'string' ?",
+      "sourceLineSha256": "13096848dec39be5de62591c03547d2295bdf3577e5db3f79f2cd0e858da719f"
     },
     {
       "file": "frontend/src/Components/Form/OAuthInput.js",
-      "line": 21,
-      "sourceLine": "return messages.length ? messages.join(' ') : (translateServerMessage(error.responseText) || null);",
-      "sourceLineSha256": "528de446877fa01e6dea279e015f12e2fab622ba0d0c40879fe51f1fa4c9d842"
+      "line": 31,
+      "sourceLine": "return typeof error.responseText === 'string' && error.responseText.trim() ?",
+      "sourceLineSha256": "568b7158d1ee6fd9fc5c97d7fef892105e87e60ef15b4a357e4639b21535a698"
     },
     {
       "file": "frontend/src/Components/Form/OAuthInput.js",
-      "line": 25,
-      "sourceLine": "return translateServerMessage(responseJSON.message || error.responseText) || null;",
-      "sourceLineSha256": "332ec4fa638e6183a136b62dba7a702b5552e4e51acce4ec6d4d3c654ea89d85"
+      "line": 36,
+      "sourceLine": "if (typeof responseJSON === 'string' && responseJSON.trim()) {",
+      "sourceLineSha256": "e7091942190cc5f84465ed6f478a4b965de3ed171eb6580304e7d9a450989ea5"
     },
     {
       "file": "frontend/src/Components/Form/OAuthInput.js",
-      "line": 28,
-      "sourceLine": "return translateServerMessage(error.responseText) || null;",
-      "sourceLineSha256": "57deae359f55a2ee338fa0de4470c4297b9df6ed77e302d230bdd57818e010f2"
+      "line": 41,
+      "sourceLine": "const message = responseJSON.message || responseJSON.errorMessage || error.responseText;",
+      "sourceLineSha256": "e6beb3a9b5e758231d653e630b20165c7900ada9524acdd35e28594c87ea389c"
     },
     {
       "file": "frontend/src/Components/Page/Header/ImportProgressDrawerModal.js",
@@ -236,21 +242,33 @@
     },
     {
       "file": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
-      "line": 76,
+      "line": 55,
+      "sourceLine": "return <BidiText lang=\"und\">{message}</BidiText>;",
+      "sourceLineSha256": "758783a447dd0fa14444433fe0bf6c399140912d41d01d4627cbeaf328eedd8a"
+    },
+    {
+      "file": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
+      "line": 59,
+      "sourceLine": "return translateServerMessageById(messageId, messageParameters) || <BidiText lang=\"und\">{message}</BidiText>;",
+      "sourceLineSha256": "eb19c093fe7a1412f9bbeb3a7074b715320f59fbcfb04ac8d2177b334f40447b"
+    },
+    {
+      "file": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
+      "line": 62,
+      "sourceLine": "return translateServerMessage(message);",
+      "sourceLineSha256": "4024ec05599851e5044fd2eb4f50111b35c183b3ef3ccebf9e1dc0dd2766f1e2"
+    },
+    {
+      "file": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
+      "line": 91,
       "sourceLine": "message={translateServerMessage(message)}",
       "sourceLineSha256": "ef86e1bc76c9ac3d7b22713a2b7ef2bb8724a0665ed8df21398a6eafc1815534"
     },
     {
       "file": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
-      "line": 99,
+      "line": 114,
       "sourceLine": "const stageText = translateServerMessage(message);",
       "sourceLineSha256": "7b74f4a37332c5045ffcb0c09d2c3e3639ce76a05fd5cf9c73352dbf9bfca721"
-    },
-    {
-      "file": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
-      "line": 178,
-      "sourceLine": "{translateServerMessage(message)}",
-      "sourceLineSha256": "5094488fcf0f7f4abca6f201b2f51404bdf2d9fa105c5b0aa908e7bc846cb873"
     },
     {
       "file": "frontend/src/Components/PendingImportStatus/PendingImportStatus.js",
@@ -272,93 +290,93 @@
     },
     {
       "file": "frontend/src/InteractiveSearch/InteractiveSearchRow.js",
-      "line": 64,
-      "sourceLine": "return translateServerMessage(grabError);",
-      "sourceLineSha256": "752323850afe12c6fc90993e3141fed0609e5af92dfc34cdbd083cd1a8962b27"
-    },
-    {
-      "file": "frontend/src/InteractiveSearch/InteractiveSearchRow.js",
-      "line": 346,
-      "sourceLine": "{translateServerMessage(grabError)}",
-      "sourceLineSha256": "da62b57a54c1641a4fbed3f1ab377b326a3ca71b7ce4491ea9a438d4aca76eb7"
+      "line": 306,
+      "sourceLine": "const localizedGrabError = translateServerMessageById(grabErrorMessageId, grabErrorMessageParameters);",
+      "sourceLineSha256": "1320c2417fecaaf1d073c0c51a72efd004c78a71682fd8aa9eb5eeb9bd2fbdeb"
     },
     {
       "file": "frontend/src/Search/Series/AddNewSeriesModalContent.js",
-      "line": 386,
-      "sourceLine": "{fetchError && <Alert kind={kinds.WARNING}>{translateServerMessage(fetchError)}</Alert>}",
-      "sourceLineSha256": "368a08daf4725cf321b6cbe0c873395546961a48f8d46b8a5246068f418e0059"
+      "line": 27,
+      "sourceLine": "const translated = translateServerMessageById(error.messageId, error.messageParameters);",
+      "sourceLineSha256": "f28ac41ae403185d74672cab094dd5e44ad7f00802de7c8afb79ff78bec0678e"
     },
     {
       "file": "frontend/src/Search/Series/AddNewSeriesModalContent.js",
-      "line": 501,
-      "sourceLine": "{translateServerMessage(error.message || error)}",
-      "sourceLineSha256": "a4fbca27d82d81fd819cefb9c965ffcdaa054e0c4d113e48a972266b52383de7"
+      "line": 56,
+      "sourceLine": "const translated = translateServerMessageById(response?.messageId, response?.messageParameters);",
+      "sourceLineSha256": "36e570a40081f9972bef9715581df70217631356d23915af9ecc0bd5c0a45f16"
     },
     {
       "file": "frontend/src/Settings/DownloadClients/DownloadClients/EditDownloadClientModalContent.js",
       "line": 285,
-      "sourceLine": "{translateServerMessage(message.value.message)}",
-      "sourceLineSha256": "255fd0936ae1edf356f999254872e3671e38456de9e6ae2901bb3bdc4edc3b04"
+      "sourceLine": "<LocalizedServerMessage",
+      "sourceLineSha256": "56c4c42c38ffc7bd7f6bf5892cb77645a4b6c6e88271c5f9999de044a7cba52f"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-      "line": 198,
-      "sourceLine": "return translateServerMessage(responseJson);",
-      "sourceLineSha256": "b3dfaebaea3aa274d02b9b0ac5ecddc0f978b9f89860164cf4268a6bb16a4a46"
+      "line": 70,
+      "sourceLine": "<LocalizedServerMessage",
+      "sourceLineSha256": "56c4c42c38ffc7bd7f6bf5892cb77645a4b6c6e88271c5f9999de044a7cba52f"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-      "line": 202,
-      "sourceLine": "return translateServerMessage(responseJson.message);",
-      "sourceLineSha256": "9d156b0eaa8306c38f127d901f12467d14f30f09e9a82c0b528e434cdf334904"
+      "line": 254,
+      "sourceLine": "return renderErrorMessages(messages, parsed.messageId, parsed.messageParameters);",
+      "sourceLineSha256": "af6fd25fd2b507cd536ba6486c359247693e317d87161b7f203a58a675eb8fe9"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-      "line": 206,
-      "sourceLine": "return translateServerMessage(responseJson.error);",
-      "sourceLineSha256": "3dbe980f0052712ce90420549ce1affe7648001324bf8cf4c17b288f8b74da65"
+      "line": 257,
+      "sourceLine": "return <LocalizedServerMessage message={xhr.responseText} />;",
+      "sourceLineSha256": "3d6ad9c1b0d60112c981fb21ad1f96f289c1279ded9633693ff0d7114aa8313a"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-      "line": 210,
-      "sourceLine": "return translateServerMessage(responseJson.detail);",
-      "sourceLineSha256": "1295fab30644367c15ea65b172652e8e21e7c07d9b238cf21d885f46ccef7a2c"
+      "line": 260,
+      "sourceLine": "return <LocalizedServerMessage message={xhr.responseText} />;",
+      "sourceLineSha256": "3d6ad9c1b0d60112c981fb21ad1f96f289c1279ded9633693ff0d7114aa8313a"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-      "line": 625,
-      "sourceLine": "{translateServerMessage(message.value.message)}",
-      "sourceLineSha256": "255fd0936ae1edf356f999254872e3671e38456de9e6ae2901bb3bdc4edc3b04"
-    },
-    {
-      "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-      "line": 647,
-      "sourceLine": "{translateServerMessage(goodreadsValidationMessage)}",
-      "sourceLineSha256": "17ac5877d376f4a1e6d7acf78c81a704b60a7baa2c9ef2746483639edb913125"
+      "line": 654,
+      "sourceLine": "<LocalizedServerMessage",
+      "sourceLineSha256": "56c4c42c38ffc7bd7f6bf5892cb77645a4b6c6e88271c5f9999de044a7cba52f"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
-      "line": 22,
-      "sourceLine": ".map((message) => translateServerMessage(message.trim()));",
-      "sourceLineSha256": "a2d4d2ee7eac643f7b64133d3587fe31878d56b65ee56334611af8dd532a5d98"
+      "line": 35,
+      "sourceLine": "return <LocalizedServerMessage message={responseJson} />;",
+      "sourceLineSha256": "3b46bb813af0c752e4c269b3a42228695a109a2b502b573b43a9e2278c467e6c"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
-      "line": 30,
-      "sourceLine": "return translateServerMessage(responseJson);",
-      "sourceLineSha256": "b3dfaebaea3aa274d02b9b0ac5ecddc0f978b9f89860164cf4268a6bb16a4a46"
+      "line": 40,
+      "sourceLine": "return <LocalizedServerMessage",
+      "sourceLineSha256": "688705946601668ea777faccf0e8cca0478cb695fe63015a0a9bd6a44f0b7a24"
     },
     {
       "file": "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
-      "line": 33,
-      "sourceLine": "return translateServerMessage(responseJson?.message ||",
-      "sourceLineSha256": "9d074330439485ef972e2cb565fa621df4bcf8df04cfbf0c80dec9af002bb712"
+      "line": 48,
+      "sourceLine": "return <LocalizedServerMessage message={`${xhr.status} ${xhr.statusText}`} />;",
+      "sourceLineSha256": "0527bc17c46f3f1054183dad0102085b9ea60cd520d3e7b4b18cd9983cb6d251"
+    },
+    {
+      "file": "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+      "line": 52,
+      "sourceLine": "<LocalizedServerMessage message={xhr.statusText} /> :",
+      "sourceLineSha256": "b6474e3e0c83a664c91f90425c8f05feeb1168ea03d1f050ce178488aa6aa5b9"
+    },
+    {
+      "file": "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+      "line": 59,
+      "sourceLine": "<LocalizedServerMessage",
+      "sourceLineSha256": "56c4c42c38ffc7bd7f6bf5892cb77645a4b6c6e88271c5f9999de044a7cba52f"
     },
     {
       "file": "frontend/src/Settings/Indexers/Indexers/EditIndexerModalContent.js",
       "line": 150,
-      "sourceLine": "{translateServerMessage(item.message.message)}",
-      "sourceLineSha256": "c40183ea4d371dca166762a1dee2a270b113bddb44d6fe9d604da49c37ca4969"
+      "sourceLine": "<LocalizedServerMessage",
+      "sourceLineSha256": "56c4c42c38ffc7bd7f6bf5892cb77645a4b6c6e88271c5f9999de044a7cba52f"
     },
     {
       "file": "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js",
@@ -381,8 +399,8 @@
     {
       "file": "frontend/src/Settings/Notifications/Notifications/EditNotificationModalContent.js",
       "line": 95,
-      "sourceLine": "{translateServerMessage(message.value.message)}",
-      "sourceLineSha256": "255fd0936ae1edf356f999254872e3671e38456de9e6ae2901bb3bdc4edc3b04"
+      "sourceLine": "<LocalizedServerMessage",
+      "sourceLineSha256": "56c4c42c38ffc7bd7f6bf5892cb77645a4b6c6e88271c5f9999de044a7cba52f"
     },
     {
       "file": "frontend/src/Store/Actions/systemActions.js",

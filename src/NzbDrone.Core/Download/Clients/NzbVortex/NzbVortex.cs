@@ -185,7 +185,7 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
             {
                 _logger.Error(ex, "Unable to connect to NZBVortex");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to NZBVortex")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to NZBVortex", "server.message.mea37f4df9a52", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -203,13 +203,13 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
 
                 if (version.Major < 2 || (version.Major == 2 && version.Minor < 3))
                 {
-                    return new ValidationFailure("Host", "NZBVortex needs to be updated");
+                    return NzbDroneValidationFailure.ForMessage("Host", "NZBVortex needs to be updated", "server.message.m8bc3ca6c8331");
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to connect to NZBVortex");
-                return new ValidationFailure("Host", "Unable to connect to NZBVortex");
+                return NzbDroneValidationFailure.ForMessage("Host", "Unable to connect to NZBVortex", "server.message.mea37f4df9a52");
             }
 
             return null;
@@ -223,7 +223,7 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
             }
             catch (NzbVortexAuthenticationException)
             {
-                return new ValidationFailure("ApiKey", "API Key Incorrect");
+                return NzbDroneValidationFailure.ForMessage("ApiKey", "API Key Incorrect", "server.message.m4d72bec4a155");
             }
 
             return null;
@@ -237,7 +237,7 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
             {
                 if (groups.FirstOrDefault(c => c.GroupName == category) == null)
                 {
-                    return new NzbDroneValidationFailure(BookDownloadCategorySettings.GetCategoryFieldName(Settings, category), "Group does not exist")
+                    return new NzbDroneValidationFailure(BookDownloadCategorySettings.GetCategoryFieldName(Settings, category), "Group does not exist", "server.message.m8a7981a2ced3", null)
                     {
                         DetailedDescription = "The Group you entered doesn't exist in NzbVortex. Go to NzbVortex to create it."
                     };

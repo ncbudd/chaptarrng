@@ -1,0 +1,56 @@
+{
+  "allLocaleCatalogKeySetsIdentical": true,
+  "callerReferences": 86,
+  "catalogKeyCountPerLocale": 4165,
+  "cells": 600,
+  "changedCells": 122,
+  "crossReviewDispositions": {
+    "accept-current": 478,
+    "accept-proposal": 121,
+    "revise-proposal": 1
+  },
+  "currentProtectedLiteralFailureCells": 7,
+  "exactSourceHead": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "exactSourceTree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+  "finalProtectedLiteralFailureCells": 0,
+  "frenchW947RootAdjudication": {
+    "acceptedTarget": "La demande de téléchargement échoue si MAM ne peut pas appliquer l’avantage Freeleech personnel requis.",
+    "preservedLiterals": [
+      "MAM",
+      "Freeleech"
+    ],
+    "source": "Fail the grab if MAM cannot apply the required personal freeleech wedge"
+  },
+  "headedBrowserReview": false,
+  "localeCount": 12,
+  "markupMismatches": 0,
+  "mergeReleaseOrTag": false,
+  "nativeSpeakerApproval": false,
+  "perLocaleChangedCells": {
+    "ar": 9,
+    "de": 8,
+    "es": 11,
+    "fr": 9,
+    "hi": 13,
+    "id": 9,
+    "ja": 10,
+    "ko": 14,
+    "pt-BR": 13,
+    "vi": 7,
+    "zh-Hans": 10,
+    "zh-Hant": 9
+  },
+  "placeholderMismatches": 0,
+  "priorDispositionRowsReattested": 10800,
+  "providerOptionPipelineReferences": 20,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "retainedCells": 478,
+  "serverMessagePipelineReferences": 76,
+  "sourceCount": 50,
+  "testsBuildScansCi": false,
+  "w899BoundaryCellsReattested": 12,
+  "w899BoundaryMatchesAllLocales": true,
+  "window": "W900-W949",
+  "workflowFilesTouched": false
+}

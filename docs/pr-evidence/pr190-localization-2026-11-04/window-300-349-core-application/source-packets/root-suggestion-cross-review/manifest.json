@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "packetType": "root-suggestion-translation-cross-review",
+  "reviewer": "independent cross-review",
+  "scope": {
+    "batch": "W300-349-Core",
+    "pullRequest": 190,
+    "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+    "exactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+    "cells": 19,
+    "translationReviewOnly": true,
+    "repositoryWorktreeInspected": false,
+    "nativeSpeakerApprovalProvided": false
+  },
+  "inputs": {
+    "rootHoldProposals": {
+      "filename": "root-hold-proposals.jsonl",
+      "sha256": "f74648a2e9309a469857378d89fd7e6457ca4fb98c3442258e9c6b42a4963cb1",
+      "rows": 19
+    },
+    "candidateFreeInput": {
+      "candidate-free-manifest.json": "7959f70b857f36f82f52af40ccb152f3ccc8444ec050813fe79d06dbb3508e64",
+      "SHA256SUMS.txt": "001d050bdd38a683cf16dc74233ee305a169e89307b6ce8a2762e89542b9a709",
+      "candidate-free-cells.jsonl": "c796a6d6f357480bb25b98c722feceefc2cbef83c5efc065581b4c2f991332a9",
+      "caller-context.jsonl": "cb3360a049a3e398270f3b0325469c07d59cbac0fdcd199651073914275a55dd"
+    }
+  },
+  "review": {
+    "decisionCounts": {
+      "accept": 19
+    },
+    "method": "Per-cell meaning, locale grammar, caller context, and placeholder review; proposal/current/source/candidate-row/caller-context pins were validated against the named inputs.",
+    "confidenceScale": [
+      "low",
+      "moderate",
+      "high"
+    ]
+  },
+  "outputs": {
+    "reviewResults": "review-results.jsonl",
+    "reviewResultsSha256": "524d25250ed3a86124dbf90dc01b866809497f49239bc68494bfe0a5c2483ace",
+    "verifier": "verify-review-packet.py",
+    "verifierSha256": "a994be8cdeb36fe28f08253c835de1913307872a9d916d4ea5dad82ca78275eb",
+    "checksums": "SHA256SUMS.txt"
+  }
+}

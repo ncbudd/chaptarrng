@@ -1,0 +1,156 @@
+{
+  "additionalCorrectionCells": [
+    {
+      "locale": "ar",
+      "recommendedTargetSha256": "2e3bdbaaee2f8a9599dde8fdd937c9644c7b8d4d9783d87705cdd0ce46876686",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "de",
+      "recommendedTargetSha256": "295c81820df5cb6661000e7375291c768aa509d79acaf337af9999591e32b648",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "es",
+      "recommendedTargetSha256": "3f234b35a72ed07e486469ffc94b037494d2020358451cb04b306ff5deeb741e",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "hi",
+      "recommendedTargetSha256": "866fe07a69b8cbe99cb9e6dbbff9d3548761a6ae4a62aba8c8b37213dbc9362a",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "id",
+      "recommendedTargetSha256": "0fd52d3ac4f7e0516a7760ad62fdc199a44d276c3b841cd1df5b51c72a12a81a",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "ja",
+      "recommendedTargetSha256": "3b771ced9d622428853330e0260a956fbf9f9bd0fee4a7b9e56289de8711b761",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "ko",
+      "recommendedTargetSha256": "9ab420fdc022978eece79339f155400f7b78e3a57b64a83808ae2cde7b827923",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "vi",
+      "recommendedTargetSha256": "977c30269c0fd7a6b430a038daebe0e8b2ca9da31c12c033f28c1892eb01fbf2",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "zh-Hans",
+      "recommendedTargetSha256": "eba79152385fa364df58aec57b0ff136d79b38c3f5c8c61a4ae2ce7031e08233",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "zh-Hant",
+      "recommendedTargetSha256": "072353f24ea2aa717eb745521973aa9be4eca501e036bab409cb34dd057fe142",
+      "sourceId": "server.message.me252af6f4c70",
+      "sourceOrdinal": 854
+    },
+    {
+      "locale": "ar",
+      "recommendedTargetSha256": "7a72b1402291e8cee361d0c706c687a2568337fdd0210ccc086f31704f02fa4f",
+      "sourceId": "server.message.me4cb9b13f0b4",
+      "sourceOrdinal": 858
+    },
+    {
+      "locale": "pt-BR",
+      "recommendedTargetSha256": "d7c96a812b0b76f413fd7bed6a4d70f7c13f6e06e889cab28a297f7b8e21d2db",
+      "sourceId": "server.message.mec341ea80e66",
+      "sourceOrdinal": 875
+    },
+    {
+      "locale": "zh-Hans",
+      "recommendedTargetSha256": "0c8cd9fab20aa6aafb94f32460c5239f1331c0cc7e43aaf972b3f5c8b63ce9e1",
+      "sourceId": "server.message.mefbca50c53e7",
+      "sourceOrdinal": 883
+    },
+    {
+      "locale": "zh-Hant",
+      "recommendedTargetSha256": "8fbd76b510effd54f18bc9485c134ead429f82c4400091ca3c8cfdc767cf981d",
+      "sourceId": "server.message.mefbca50c53e7",
+      "sourceOrdinal": 883
+    }
+  ],
+  "additionalCorrections": 14,
+  "browserReview": false,
+  "callerRefsVerified": 74,
+  "confidence": "moderate",
+  "crossReviewDispositionCounts": {
+    "accept-current": 495,
+    "accept-primary-correction": 69,
+    "accept-primary-refinement": 10,
+    "propose-additional-correction": 14,
+    "retain-hold": 12
+  },
+  "exactHead": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "exactTree": "e682581e3c577b62215658c374b15a9d3f8f8bd0",
+  "finalReadbackChecks": 600,
+  "finalReattestationPath": "final-reattestation.json",
+  "finalReattestationUtc": "2026-11-02T20:01:18.567113+00:00",
+  "genericPipelineRefsVerified": 76,
+  "holdsRetained": 12,
+  "languageAuditChecksumRowsVerified": 4,
+  "languageAuditInput": {
+    "acceptedCorrections": 69,
+    "acceptedRefinements": 10,
+    "holds": 12,
+    "languageAuditRowsSha256": "3514bfad168e17663145e66d5fd2f2796331fa3455686fbf11dc6063630c07dd",
+    "manifestSha256": "4c8c8517c81d7be9dbf3f917c2fc0ff994e934fd22f4fc1bc2da7a7bfcd3f2d7",
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0850-0899-primary-20261102/language-audit-addendum"
+  },
+  "nativeSpeakerApproval": false,
+  "primaryChecksumManifestSha256": "c74bc2a0eda46571510b64e7560e925337447ad2da17d6f51946f631ed68c848",
+  "primaryChecksumRowsVerified": 32,
+  "primaryCorrectionsAccepted": 69,
+  "primaryInputChecksumRowsVerified": 99,
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0850-0899-primary-20261102",
+  "primaryProposalsAudited": 79,
+  "primaryRefinementsAccepted": 10,
+  "primaryReviewCellsSha256": "24adb31c97415543c38c8d6df9c4c961a2ebf06b8e45d11d73a637f5a8d76d3a",
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryModified": false,
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "sourceIds": 50,
+    "sourceOrdinals": [
+      850,
+      899
+    ]
+  },
+  "structuralFailures": 0,
+  "structuralReadback": "structural-caller-reattestation.jsonl",
+  "testsBuildCiRun": false,
+  "title": "ChaptarrNG PR #190 W850-W899 independent cross-review",
+  "w884HeldAcrossAllLocales": true,
+  "w884SourceCallerMismatch": "English catalog omits backslash (\\) while the pinned qBittorrent caller forbids it; all 12 remain held."
+}

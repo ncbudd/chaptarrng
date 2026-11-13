@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import AuthorMonitorNewItemsOptionsPopoverContent from 'AddAuthor/AuthorMonitorNewItemsOptionsPopoverContent';
 import Alert from 'Components/Alert';
+import LocalizedServerMessage from 'Components/LocalizedServerMessage';
 import DescriptionList from 'Components/DescriptionList/DescriptionList';
 import DescriptionListItem from 'Components/DescriptionList/DescriptionListItem';
 import FieldSet from 'Components/FieldSet';
@@ -26,7 +27,6 @@ import AdvancedSettingsButton from 'Settings/AdvancedSettingsButton';
 import HardcoverApiKeyModal from 'System/Quickstart/HardcoverApiKeyModal';
 import createAjaxRequest from 'Utilities/createAjaxRequest';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import styles from './EditImportListModalContent.css';
 
 function ImportListMonitoringOptionsPopoverContent() {
@@ -54,6 +54,70 @@ function ImportListMonitoringOptionsPopoverContent() {
       </DescriptionList>
     </>
   );
+}
+
+function renderErrorMessages(messages, messageId, messageParameters) {
+  const visibleMessages = messages.filter((message) => typeof message?.message === 'string' && message.message.trim());
+
+  if (!visibleMessages.length) {
+    return null;
+  }
+
+  return (
+    <>
+      {visibleMessages.map((message, index) => (
+        <React.Fragment key={`save-error-${index}`}>
+          <LocalizedServerMessage
+            message={message.message}
+            messageId={message.messageId || messageId}
+            messageParameters={message.messageParameters || messageParameters}
+          />
+          {index < visibleMessages.length - 1 ? ' ' : null}
+        </React.Fragment>
+      ))}
+    </>
+  );
+}
+
+function getResponseErrorMessages(responseJson) {
+  if (Array.isArray(responseJson)) {
+    return responseJson.map((failure) => typeof failure === 'string' ?
+      { message: failure } :
+      {
+        message: failure?.errorMessage || failure?.message,
+        messageId: failure?.messageId || failure?.errorMessageId,
+        messageParameters: failure?.messageParameters
+      });
+  }
+
+  if (typeof responseJson === 'string') {
+    return [{ message: responseJson }];
+  }
+
+  if (!responseJson || typeof responseJson !== 'object') {
+    return [];
+  }
+
+  const message = responseJson.message || responseJson.errorMessage || responseJson.ErrorMessage ||
+    responseJson.error || responseJson.detail;
+
+  if (typeof message === 'string' && message) {
+    return [{ message }];
+  }
+
+  if (responseJson.errors && typeof responseJson.errors === 'object') {
+    return Object.values(responseJson.errors)
+      .flat()
+      .map((error) => typeof error === 'string' ?
+        { message: error } :
+        {
+          message: error?.errorMessage || error?.message,
+          messageId: error?.messageId || error?.errorMessageId,
+          messageParameters: error?.messageParameters
+        });
+  }
+
+  return [];
 }
 
 function EditImportListModalContent(props) {
@@ -176,68 +240,33 @@ function EditImportListModalContent(props) {
 
     const responseJson = xhr.responseJSON;
     if (responseJson) {
-      // FluentValidation failures come back as an array; surface messages instead of a generic "400 Bad Request".
-      if (Array.isArray(responseJson)) {
-        const messages = responseJson
-          .map((f) => {
-            if (typeof f === 'string') {
-              return f;
-            }
-
-            return f?.errorMessage || f?.message || null;
-          })
-          .filter((v) => typeof v === 'string' && v.trim().length)
-          .map(translateServerMessage);
-
-        if (messages.length) {
-          return messages.join(' ');
-        }
-      }
-
-      if (typeof responseJson === 'string') {
-        return translateServerMessage(responseJson);
-      }
-
-      if (responseJson.message) {
-        return translateServerMessage(responseJson.message);
-      }
-
-      if (responseJson.error) {
-        return translateServerMessage(responseJson.error);
-      }
-
-      if (responseJson.detail) {
-        return translateServerMessage(responseJson.detail);
-      }
-
-      if (responseJson.errors && typeof responseJson.errors === 'object') {
-        const errorValues = Object.values(responseJson.errors)
-          .flat()
-          .filter((v) => typeof v === 'string' && v.trim().length)
-          .map(translateServerMessage);
-
-        if (errorValues.length) {
-          return errorValues.join(' ');
-        }
+      const messages = getResponseErrorMessages(responseJson);
+      if (messages.length) {
+        return renderErrorMessages(messages, responseJson.messageId, responseJson.messageParameters);
       }
     }
 
     if (xhr.responseText) {
       try {
         const parsed = JSON.parse(xhr.responseText);
-        if (parsed?.message) {
-          return parsed.message;
+        const messages = getResponseErrorMessages(parsed);
+        if (messages.length) {
+          return renderErrorMessages(messages, parsed.messageId, parsed.messageParameters);
         }
       } catch (e) {
-        // Ignore JSON parse errors.
+        return <LocalizedServerMessage message={xhr.responseText} />;
       }
+
+      return <LocalizedServerMessage message={xhr.responseText} />;
     }
 
     if (xhr.status && xhr.statusText) {
-      return `${xhr.status} ${xhr.statusText}`;
+      return <LocalizedServerMessage message={`${xhr.status} ${xhr.statusText}`} />;
     }
 
-    return xhr.statusText || translate('ui.error.unknown');
+    return xhr.statusText ?
+      <LocalizedServerMessage message={xhr.statusText} /> :
+      translate('ui.error.unknown');
   };
 
   const renderProviderField = (field) => {
@@ -615,14 +644,18 @@ function EditImportListModalContent(props) {
 
         {
           !isFetching && !error &&
-            <Form {...otherProps}>
+            <Form {...otherProps} serverMessageMode="opaque">
               {
                 !!message &&
                   <Alert
                     className={styles.message}
                     kind={message.value.type}
                   >
-                    {translateServerMessage(message.value.message)}
+                    <LocalizedServerMessage
+                      message={message.value.message}
+                      messageId={message.value.messageId}
+                      messageParameters={message.value.messageParameters}
+                    />
                   </Alert>
               }
 
@@ -644,7 +677,7 @@ function EditImportListModalContent(props) {
                     kind={kinds.WARNING}
                     role="alert"
                   >
-                    {translateServerMessage(goodreadsValidationMessage)}
+                    {goodreadsValidationMessage}
                   </Alert>
               }
 

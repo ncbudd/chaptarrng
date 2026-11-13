@@ -1,0 +1,5 @@
+# ChaptarrNG W1050–W1099 primary packet manifest reconciliation
+
+The independent cross-review correctly identified a review-time metadata mismatch in the primary packet: its `manifest.json` listed `README.md` as 3,020 bytes with SHA-256 `e0fc664e95f555e1daed598e6235fdd98274da9bf76098307816be5ea45f57f0`, while the live README was 3,061 bytes with SHA-256 `897127e176748c01d02b61bb77e9faac82a83571ed33c83bf4a31752ab9efbd4`.
+
+After cross-review, the primary packet author corrected only that README entry and regenerated `SHA256SUMS`. The corrected manifest SHA-256 is `9b3b0bb0d253d2d5d4cd2513f9777c3dd808f25a976dee72be55c0a78bbe4543`; the regenerated `SHA256SUMS` SHA-256 is `ac1781208ec67b943b7a70aaa0492231f93c7f52beb177cd15c113484d333f9a`. All 25 checksum entries now pass, and all 24 manifest artifacts match their recorded size and hash. The cross-review packet remains unchanged and preserves its accurate at-review-time finding; no cell decisions or repository translations changed during this metadata repair.

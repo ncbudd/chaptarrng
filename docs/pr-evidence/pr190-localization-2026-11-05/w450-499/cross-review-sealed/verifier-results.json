@@ -1,0 +1,30 @@
+{
+  "portable": {
+    "result": "PASS",
+    "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    "base": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "cells": 600,
+    "callerBound": 552,
+    "hashOnlyHolds": 48,
+    "changedCells": 111,
+    "retainedCurrent": 441,
+    "portableVerifier": "verify_cross_review.py",
+    "command": "python3 verify_cross_review.py",
+    "exactWorktreeReadback": false
+  },
+  "exactWorktree": {
+    "result": "PASS",
+    "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    "base": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "cells": 600,
+    "callerBound": 552,
+    "hashOnlyHolds": 48,
+    "changedCells": 111,
+    "retainedCurrent": 441,
+    "portableVerifier": "verify_cross_review.py",
+    "command": "python3 verify_cross_review.py --repo /mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+    "exactWorktreeReadback": true
+  }
+}

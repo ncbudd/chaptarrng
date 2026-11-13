@@ -1,0 +1,48 @@
+{
+  "artifacts": [
+    {
+      "bytes": 91320,
+      "path": "inputs/caller-context.jsonl",
+      "sha256": "510305d763ddcdd2548a80684f7dceed13282dbdbee965c6e79c6f57249e24a9"
+    },
+    {
+      "bytes": 5985,
+      "path": "inputs/pinned-files.json",
+      "sha256": "d83b22fda22e3a25f9e3642d3b7acad5801f5d2e49aba4b17ef0a80900819540"
+    },
+    {
+      "bytes": 9535,
+      "path": "inputs/selection-and-catalog-pins.json",
+      "sha256": "762e5ba6474952a874f998c2e66435852beabddcb794a82854fcbd1aef10cf63"
+    },
+    {
+      "bytes": 1830935,
+      "path": "inputs/source-cells.jsonl",
+      "sha256": "e88688db69e07dbf1866e9d98234c090fec26760d71ade6129058dc80b6b19b2"
+    },
+    {
+      "bytes": 42558,
+      "path": "inputs/source-rows.jsonl",
+      "sha256": "3ddd946695e12401f4c854bf68e2abb44b9522aca9fa602fa8bceec3cedac1da"
+    },
+    {
+      "bytes": 2986,
+      "path": "inputs/source-selection.json",
+      "sha256": "87b39f5eada367825476cbcf3d141280cca22fb75ea000dc3809056025bce521"
+    },
+    {
+      "bytes": 767,
+      "path": "inputs/validation.json",
+      "sha256": "3665f539fd5c6932c12bb9f606a61689ad4a64b320dd1bfbb4f2c1ba4a91baa2"
+    }
+  ],
+  "cellCount": 600,
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "extractedFromPinnedGitObject": true,
+  "localeCount": 12,
+  "reviewGuidanceIncluded": false,
+  "schemaVersion": 1,
+  "snapshot": "ChaptarrNG PR #190 W1150-W1199 independent cross-review raw inputs",
+  "sourceCount": 50
+}

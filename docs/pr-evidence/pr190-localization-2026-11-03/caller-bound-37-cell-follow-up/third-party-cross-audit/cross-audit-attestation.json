@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "reviewerRole": "third-party cross-audit",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0",
+  "candidateFreeInputManifestSha256": "05e9feddecb58acd2b4897adadf962f9ea774cf21fef10428f6885c2c9e29382",
+  "primaryLedgerSha256": "f72fa723b120e9b197b72ea3b82a49a1bce4a689ac0879a20b933ceb512b4d2b",
+  "blindLedgerSha256": "20467796ed07ca93a7ce4decb783ba5ec99843ed652f8c650650b2d711cae28f",
+  "candidateFreeInputVerified": true,
+  "sourceAndCallerPinsVerifiedAgainstHead": true,
+  "nativeSpeakerApproval": false,
+  "releaseApproval": false
+}

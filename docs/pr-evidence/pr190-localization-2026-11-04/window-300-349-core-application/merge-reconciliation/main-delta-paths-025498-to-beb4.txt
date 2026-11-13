@@ -1,0 +1,7 @@
+integration/bookshelfng-api-contract.mjs
+integration/bookshelfng-api-differential.mjs
+integration/test-bookshelfng-api-contract.mjs
+src/Chaptarr.Api.V1/ImportLists/ImportListResource.cs
+src/Chaptarr.Api.V1/ProviderResource.cs
+src/Chaptarr.Core.Test/Api/ImportListBookshelfCompatibilityFixture.cs
+src/Chaptarr.Core.Test/Api/ProviderResourceCompatibilityProjectionFixture.cs

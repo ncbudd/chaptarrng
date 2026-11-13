@@ -504,7 +504,7 @@
         var locale = localization.Locale.replace(/_/g, "-");
         var language = locale.toLowerCase().split("-", 1)[0];
         document.documentElement.lang = locale;
-        document.documentElement.dir = ["dv", "fa", "he", "ku", "ps", "sd", "ug", "ur", "yi"].includes(language)
+        document.documentElement.dir = ["ar", "dv", "fa", "he", "ku", "ps", "sd", "ug", "ur", "yi"].includes(language)
           ? "rtl"
           : "ltr";
       }

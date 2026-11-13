@@ -1,0 +1,32 @@
+{
+  "artifact": "ChaptarrNG PR #190 W400-W449 independent semantic cross-review",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateOnlyFirstPassLedger": "candidate-only-first-pass.jsonl",
+  "candidateOnlyFirstPassLedgerSha256": "95d3f75bee285e8dc9a3f9e75a8b62b0ef52e435ee4aff41bb0caa02ee65519e",
+  "cellLedger": "cross-review-ledger.jsonl",
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "hashOnlyHolds": "holds-hash-only.jsonl",
+  "inputPaths": {
+    "blind": "../../blind-review",
+    "candidateFree": "../../candidate-free/input",
+    "primary": "../../primary-review"
+  },
+  "inputSeals": {
+    "blindChecksumListSha256": "408a5c50b85299a7baad53a059e32d89817524ffca2458c3be5cb4bfdb8f64a6",
+    "blindProposalFileSha256": "0cda53b1e8ed722708383644c512582a5fab1957b2a4bd8110989b595b48b152",
+    "callerContextSha256": "626ade4dbc03ff182e9d7f7813808696b2d4df8b719390792b54db74cef34420",
+    "candidateFreeCellsSha256": "1b38676639f05eaa81d64f4d515b8c714e2f50d6550be209f66b526ca0a4a369",
+    "candidateFreeChecksumListSha256": "dc057678d73514d8ad08426a648571472b02ee9969cb0cf67b6c4f998e4a3d4f",
+    "candidateFreeManifestSha256": "5a428a8dc7d9161e54d5891f4140fd4bcc89bd650acfe4f681b0a3a88ca13dc7",
+    "primaryChecksumListSha256": "431c362ff6d745a9af9c7a89da5ad39a749fc5b6cbf9566c1d7a5b51909a2ffe",
+    "primaryProposalFileSha256": "e0e79b48fd2119d93a0d58ba05e4caaf2e5bf525c9d4d69b582ef2c8acc414ff"
+  },
+  "portableVerifier": "verify_cross_review.py",
+  "proposalReconciliation": "proposal-reconciliation.jsonl",
+  "provenance": "packet-provenance.json",
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "summary": "summary.json"
+}

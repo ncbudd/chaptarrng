@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NLog;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.BookLore
 {
@@ -41,12 +42,12 @@ namespace NzbDrone.Core.Notifications.BookLore
             catch (HttpException ex) when (IsCredentialRejection(ex))
             {
                 _logger.Warn(ex, "BookLore rejected the configured credentials at {0}", settings.BaseUrl);
-                return new ValidationFailure(nameof(settings.Password), "BookLore rejected the username or password");
+                return NzbDroneValidationFailure.ForMessage(nameof(settings.Password), "BookLore rejected the username or password", "server.message.mee22efd8ddd1");
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to BookLore at {0}", settings.BaseUrl);
-                return new ValidationFailure(string.Empty, "Unable to connect to BookLore. Check the URL, credentials, and logs.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to BookLore. Check the URL, credentials, and logs.", "server.message.m21d2e06bbd89");
             }
         }
 

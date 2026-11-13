@@ -1,0 +1,152 @@
+{
+  "dispositionsAssigned": false,
+  "rows": [
+    {
+      "currentTarget": "لا توجد علامة تذكر الراوي؛ تطابقت المدة مع الإصدار المثبّت. الفرق: {value0} ثانية؛ هامش المطابقة: {value1} ثانية.",
+      "currentTargetSha256": "243edca89a03c5efb72a9c1a200dc722c47a0eeff1d0f252957f1cc58ca8e7e8",
+      "locale": "ar",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "targetFileGitBlob": "4b390e78ed1db9c69ee2c58f7659db5855ad74a0"
+    },
+    {
+      "currentTarget": "Kein Tag nennt einen Sprecher; die Dauer entsprach der angehefteten Ausgabe. Abweichung: {value0} Sekunden; Abgleichstoleranz: {value1} Sekunden.",
+      "currentTargetSha256": "355486616130631a84398edd7b7c058fcfc0c0d10547107bf5446822f233d7d2",
+      "locale": "de",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "targetFileGitBlob": "5c2b92f60dcef5c2e2bd9a08f2bd91893f9b3197"
+    },
+    {
+      "currentTarget": "Ninguna etiqueta indica un narrador; la duración coincidió con la edición fijada. Diferencia: {value0} segundos; tolerancia de coincidencia: {value1} segundos.",
+      "currentTargetSha256": "6ca849546f991947b9328311019811e0ae445cb37f15a4aa7d23efd89a1d50ec",
+      "locale": "es",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "targetFileGitBlob": "2c756c894f33e8db92f31e2e2438e7052d56a1ab"
+    },
+    {
+      "currentTarget": "Aucune balise ne nomme de narrateur ; la durée correspondait à l’édition épinglée. Écart : {value0} secondes ; tolérance de correspondance : {value1} secondes.",
+      "currentTargetSha256": "f90e494e5e83081f7ff5e310c0293cdcd0e12dccda5b970517d76bc55b0465fa",
+      "locale": "fr",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "targetFileGitBlob": "c4b31bbb75ff621aa77928730afacbcac97899e4"
+    },
+    {
+      "currentTarget": "किसी टैग में कथावाचक का नाम नहीं था; अवधि पिन किए गए संस्करण से मेल खाती थी। अंतर: {value0} सेकंड; मिलान सहनशीलता: {value1} सेकंड।",
+      "currentTargetSha256": "02848046b512b861bed326590de11017388486a560c22915e5e84ef9e04d485f",
+      "locale": "hi",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "targetFileGitBlob": "44039aa716dd3cff58c5b611a06447a172740aac"
+    },
+    {
+      "currentTarget": "Tidak ada tag yang menyebut narator; durasinya cocok dengan edisi yang disematkan. Selisih: {value0} detik; toleransi pencocokan: {value1} detik.",
+      "currentTargetSha256": "ee2bdeee0060035e425462cbd6747272f4caba550f59cefe030d86faee170876",
+      "locale": "id",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "targetFileGitBlob": "f41d0801e4b37a157c9599e7c59dac3e2f176e92"
+    },
+    {
+      "currentTarget": "ナレーターを示すタグはありませんでしたが、長さは固定された版と一致しました。差異：{value0}秒、照合許容差：{value1}秒。",
+      "currentTargetSha256": "43826487950a51805a306d4d26d41f55d80ee825f42bd1c4608a641065bb6f1c",
+      "locale": "ja",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "targetFileGitBlob": "a1c34070b50d9a8662ccf64d668f0ae8e8dfc6c9"
+    },
+    {
+      "currentTarget": "내레이터를 표시하는 태그는 없었지만 재생 시간은 고정된 판본과 일치했습니다. 차이: {value0}초, 일치 허용 오차: {value1}초.",
+      "currentTargetSha256": "7912aa5920b8080d040a4a860ce9ec3aa26897b98ba254a28fd0080b58255521",
+      "locale": "ko",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "targetFileGitBlob": "d9c7623ce6c83557e3226fc0419cf42fb191271a"
+    },
+    {
+      "currentTarget": "Nenhuma tag indica um narrador; a duração correspondeu à edição fixada. Diferença: {value0} segundos; tolerância de correspondência: {value1} segundos.",
+      "currentTargetSha256": "e71ff430fb3830fc4290760701b9399967c6f9af22ccc101ca112ecc1df7b4e5",
+      "locale": "pt-BR",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "targetFileGitBlob": "4ac0a6d7cca0778aba2c15f74b72c50e267d1650"
+    },
+    {
+      "currentTarget": "Không có thẻ nào nêu tên người dẫn chuyện; thời lượng khớp với ấn bản được ghim. Chênh lệch: {value0} giây; dung sai khi khớp: {value1} giây.",
+      "currentTargetSha256": "4b982e92b822bb2b7361eead60cdd1ac911196a10da159c21f15d26dbf52ca79",
+      "locale": "vi",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "targetFileGitBlob": "3b37a85e6f290cce31bb8b33d6b6122a41e17fae"
+    },
+    {
+      "currentTarget": "没有标签标明旁白者；时长与已固定版本匹配。差值：{value0} 秒；匹配容差：{value1} 秒。",
+      "currentTargetSha256": "1c190ac3bd7a8e961550b5df11a3d5f9caee5d0346b8855b264ea6687a267201",
+      "locale": "zh-Hans",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "targetFileGitBlob": "b59754bc4e712ad3353dcd503b1fa975c45b26a3"
+    },
+    {
+      "currentTarget": "沒有標籤標示旁白者；時長與已釘選版本相符。差值：{value0} 秒；比對容差：{value1} 秒。",
+      "currentTargetSha256": "5f9fea0c3aaa5d0bb9b5369dfa3eaf50e0c4edb948fc8e5bb85136b26c010e25",
+      "locale": "zh-Hant",
+      "scope": "boundary context only; no W1100 disposition assigned",
+      "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+      "sourceId": "server.message.m1342cc36e68f",
+      "sourceOrdinal": 1100,
+      "sourceTextSha256": "1342cc36e68f79c7700b3ca25682b1c1ff68a58778eb66d13638528926f1f252",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "targetFileGitBlob": "9f3dcce15c6ddf61b940c6f0e5ead06e0e625cf2"
+    }
+  ],
+  "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
+  "sourceId": "server.message.m1342cc36e68f",
+  "sourceOrdinal": 1100
+}

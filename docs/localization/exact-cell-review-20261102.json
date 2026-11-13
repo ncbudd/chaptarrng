@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "application": "ChaptarrNG",
+  "pullRequest": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "reviewedHead": "220644247f46e0f700f457475d996289ae8130b5",
+  "reviewedTree": "cbc405b72ed1ae965ff5f28b0b2bae63e5f5076f",
+  "reviewedAt": "2026-11-02T00:24:40Z",
+  "hashAlgorithm": "SHA-256 of the UTF-8 cell value",
+  "reviewer": "Codex semantic review; this is not qualified native-speaker signoff",
+  "qualifiedNativeSignoff": false,
+  "cells": [
+    {
+      "key": "UILanguageHelpText",
+      "locale": "es",
+      "source": "Language that Chaptarr will use for UI",
+      "target": "Idioma que Chaptarr usará para la interfaz.",
+      "sourceValueSha256": "ad896a5e721c3abb9e7475e78f935933556b21c6bb6b916b54b9fbae6e6b1753",
+      "targetValueSha256": "4cce871ad4170e137e44c82e8299f8dd63e8d3415e1f3cf2c35857ca17f7e690",
+      "disposition": "accepted_unchanged",
+      "confidence": "high",
+      "checks": [
+        "Meaning matches the source and uses an appropriate Spanish term for the user interface.",
+        "The terminal period separates this sentence from the inherited-language fallback notice appended by the settings UI.",
+        "The Chaptarr product name and translation key remain unchanged."
+      ]
+    },
+    {
+      "key": "ExperienceModeHelpText",
+      "locale": "id",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "target": "Sederhana menjaga tugas perpustakaan sehari-hari tetap terlihat dan menyingkirkan halaman serta kontrol yang jarang digunakan. Lanjutan menampilkan semua area navigasi. Saat Anda beralih ke mode Lanjutan, pengaturan tambahan diaktifkan; setiap bilah alat pengaturan memungkinkan Anda menyembunyikannya kembali. Peralihan mode hanya mengubah antarmuka, bukan perpustakaan atau konfigurasi layanan Anda; gunakan tombol di bagian atas atau pilih mode di sini.",
+      "sourceValueSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "targetValueSha256": "c256a970f0f7aec9b9719086f686aa07239a0dbb83a3492541e986024ce6a84b",
+      "disposition": "accepted_unchanged",
+      "confidence": "moderate",
+      "checks": [
+        "Simple and Advanced are translated and match the visible Indonesian controls Sederhana and Mode lanjutan.",
+        "The help text preserves the settings behavior, navigation coverage, and statement that switching modes does not change library or service configuration.",
+        "No placeholders, product names, or identifiers are altered."
+      ]
+    }
+  ],
+  "catalogSha256": {
+    "src/NzbDrone.Core/Localization/Core/es.json": "0e4e4c56c31f47b858c67b7e6c131a5e0876c6ce945c658ffd7ccea80276575f",
+    "src/NzbDrone.Core/Localization/Core/id.json": "1419ba669238e23cb2af225563196ed690ea604e3a477033b5dada4397c8446b"
+  },
+  "browserReview": {
+    "currentHeadRendered": false,
+    "previousPreviewHead": "64b33a70d8bbfa58ad45dcd1d2185890e79d42ab",
+    "note": "The previous Agentic VM review covered layout and RTL at an earlier preview head. It does not establish rendering of this exact head."
+  },
+  "independentCrossReview": {
+    "status": "accepted",
+    "reviewedHead": "856bc9d4da72f821568a8497fd3d66a815dae77a",
+    "evidence": "docs/localization/independent-exact-cell-cross-review-20261102.json",
+    "sha256": "c76bff17a3b326aee449447943f6f1c988d135c2e947b19168ca8a0bf9fba2f7",
+    "cells": 13,
+    "accepted": 13,
+    "correctionNeeded": 0,
+    "held": 0,
+    "qualifiedNativeSignoff": false
+  }
+}

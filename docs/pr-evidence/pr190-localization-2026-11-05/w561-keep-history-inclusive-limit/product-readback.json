@@ -1,0 +1,134 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W561",
+  "baseHead": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "baseTree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "sourceId": "server.message.m3a79390fb21e",
+  "source": "NzbGet setting KeepHistory must not exceed 25000",
+  "sourceFingerprint": "06241759e7f6ea0f05177b31017f0edd0d9929a73aea7f93daa275dc5b474191",
+  "previousSourceId": "server.message.m453c42aa8de5",
+  "previousFingerprint": "b9965b7f2313db009dd5ef1cc5a6a37993f0afe0be339aa0b62a1c2784f9270f",
+  "callerPath": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs",
+  "predicate": "value > 25000",
+  "predicateUnchanged": true,
+  "callerSourceLine": "return new NzbDroneValidationFailure(string.Empty, \"NzbGet setting KeepHistory must not exceed 25000\", \"server.message.m3a79390fb21e\", null)",
+  "callerSourceLineSha256": "21dff3dda05dad07e17a7f4c26e2b9ffeb8cf29cbc818a9ce84406b3db914da3",
+  "catalogs": {
+    "en": {
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "fileSha256": "434ed335f34badc31844e0f70f329ce5a0d10d350402197e8d9d43116f3bef00",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "NzbGet setting KeepHistory must not exceed 25000",
+      "targetSha256": "3a79390fb21e5a7e7e4ea479d3d5f2643862a645f76312b3f107817fde29c5b4"
+    },
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "fileSha256": "1408db2b28077d36b9ad2f5888a9ca24204323bccbef8bde2ec02c4b84f11306",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "El ajuste KeepHistory de NzbGet no debe superar 25000.",
+      "targetSha256": "949a0bb90f2391df844075c9a48e2a1556a96a4a43c3ccf30070ff27b5d2116a"
+    },
+    "zh-CN": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "fileSha256": "90e9764ea5e500f17e11be43af38e06feb55cdcc1ebc4a37b76a8e82ca771482",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "NzbGet 的 KeepHistory 设置不得超过 25000。",
+      "targetSha256": "989799100c8d6675180996e7ddf8ecfd529f3de825c80b9dc9c6cc5e7722e9d9"
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "fileSha256": "94e07a8191c97a961ce9be6909a90efe668ea4b112f7009e8d1cf4291775bd69",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "NzbGet की KeepHistory सेटिंग 25000 से अधिक नहीं होनी चाहिए।",
+      "targetSha256": "47bb31945bb4df074b36d84fcb1a18d61e77e77b82ada1db2d8caf2d059eec8c"
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "fileSha256": "7fc812b60b45678bdd3c38efcc50b15d6d36d59b2392bcbb371e4627cdae7fce",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "Die KeepHistory-Einstellung von NzbGet darf 25000 nicht überschreiten.",
+      "targetSha256": "733e188d653bbe4138d9544c7670ca820510a6677b1b60151419c8ddf8e62938"
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "fileSha256": "e4ba8a7da43a0e0ba04642f8f01c3873a233fee6da16f2428854f1d5ec849b06",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "NzbGet の KeepHistory 設定は 25000 以下である必要があります。",
+      "targetSha256": "33abc2d361240fa04ca315c7d8aefc1d84d1c0cfc3004d5407e537db3cd92111"
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "fileSha256": "cd19a48ad653a5c6134ded431f902633c768cb87b0ebd90a0c21011deadba3d3",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "La valeur du paramètre KeepHistory de NzbGet ne doit pas dépasser 25000.",
+      "targetSha256": "1943723c0d070951d9b1a95d6a04f2111fdb10d1fe2da2b30575b367b942ef2f"
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "fileSha256": "b562805d52bac712197b7699e98845e80040d9174b02bff1432416827aa96127",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "A configuração KeepHistory do NzbGet não deve exceder 25000.",
+      "targetSha256": "e3a3b0ceaf796c79f9091289f3b31909486142eeba0721c7de46442707d297fd"
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "fileSha256": "4ba0d3d89a1ccd405ff6fa692cd07c1a3d4b5558fdebc7500c059e53625800ae",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "يجب ألا يتجاوز إعداد KeepHistory في NzbGet 25000.",
+      "targetSha256": "6f07dc226cb5d5c8ebde5ed62cd87b79f78a2b0792102edc856cade0a9a8306c"
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "fileSha256": "dc53e8718c3506b4913073f9ed1fe43ed4c32ce7dac0287ab46ac49474f1e3d4",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "NzbGet의 KeepHistory 설정은 25000을 초과하면 안 됩니다.",
+      "targetSha256": "c5e843cdc1468dbb91d620cd42936788ee4919981adc252ac313169700de1af2"
+    },
+    "zh-TW": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "fileSha256": "a7510c308d745012effc81db008ca375dceceb06bc19da35ac4977111d729090",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "NzbGet 的 KeepHistory 設定不得超過 25000。",
+      "targetSha256": "8239f2c103ed2e64c55a767a69222df35e5f8143028e5e0956f19d5169db7528"
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "fileSha256": "a3785d191dd12655474aba8e251f854da9abd30d4a45f9a441fb0fe9c24443e6",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "Cài đặt KeepHistory trong NzbGet không được vượt quá 25000.",
+      "targetSha256": "b38f99760ce6496122603ccca89eaa0b8950e779a428e369721c4408b67f3fa2"
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "fileSha256": "b6e880d41f8b46a2089e3a70a2bd353c049c709b078548aca61d2c29224bf2fe",
+      "keyCount": 4165,
+      "sourceId": "server.message.m3a79390fb21e",
+      "target": "Pengaturan KeepHistory di NzbGet tidak boleh melebihi 25000.",
+      "targetSha256": "9bba378460ca6e2d4627102f6ecea9b1eee47fd01462f05b5961800adff8fc15"
+    }
+  },
+  "catalogKeyParity": true,
+  "catalogKeyCount": 4165,
+  "sourceRecordCount": 618,
+  "sourceBindingCount": 886,
+  "sourceHashRegistryCount": 4165,
+  "reviewLocales": 12,
+  "reviewDecisions": 12,
+  "primaryBlindCrossRootPacketsVerified": true,
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansCiDeployments": false,
+  "releaseOrTagCreated": false
+}

@@ -318,14 +318,18 @@ namespace NzbDrone.Core.Download.Clients.Aria2
 
                 if (new Version(version) < new Version("1.34.0"))
                 {
-                    return new ValidationFailure(string.Empty, "Aria2 version should be at least 1.34.0. Version reported is {0}", version);
+                    return new NzbDroneValidationFailure(string.Empty, "Aria2 version should be at least 1.34.0. Version reported is {0}", version)
+                    {
+                        MessageId = "server.message.m7de0a09b7503",
+                        MessageParameters = new { value0 = version }
+                    };
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test Aria2");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Aria2")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to Aria2", "server.message.ma78299fc1030", null)
                 {
                     DetailedDescription = ex.Message
                 };

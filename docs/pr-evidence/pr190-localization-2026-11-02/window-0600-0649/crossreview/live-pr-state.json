@@ -1,0 +1,12 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "number": 190,
+  "state": "open",
+  "draft": true,
+  "head": "f405a6256c2661e48e412ac4471ce70411baf98c",
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "baseRef": "main",
+  "tree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+  "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "passed": true
+}

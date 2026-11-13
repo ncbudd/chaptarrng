@@ -7,6 +7,7 @@ using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Signal
 {
@@ -74,7 +75,7 @@ namespace NzbDrone.Core.Notifications.Signal
             catch (WebException ex)
             {
                 _logger.Error(ex, "Unable to send test message: {0}", ex.Message);
-                return new ValidationFailure("Host", $"Unable to send test message: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage("Host", $"Unable to send test message: {ex.Message}", "server.message.m8d4c22034dd2", new { value0 = ex.Message });
             }
             catch (HttpException ex)
             {
@@ -84,7 +85,7 @@ namespace NzbDrone.Core.Notifications.Signal
                 {
                     if (ex.Response.Content.ContainsIgnoreCase("400 The plain HTTP request was sent to HTTPS port"))
                     {
-                        return new ValidationFailure("UseSsl", "SSL seems to be required");
+                        return NzbDroneValidationFailure.ForMessage("UseSsl", "SSL seems to be required", "server.message.m460fd8e957c3");
                     }
 
                     var error = Json.Deserialize<SignalError>(ex.Response.Content);
@@ -100,20 +101,20 @@ namespace NzbDrone.Core.Notifications.Signal
                         property = "SenderNumber";
                     }
 
-                    return new ValidationFailure(property, $"Unable to send test message: {error.Error}");
+                    return NzbDroneValidationFailure.ForMessage(property, $"Unable to send test message: {error.Error}", "server.message.m8d4c22034dd2", new { value0 = error.Error });
                 }
 
                 if (ex.Response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    return new ValidationFailure("AuthUsername", "Login/Password invalid");
+                    return NzbDroneValidationFailure.ForMessage("AuthUsername", "Login/Password invalid", "server.message.m7bbc018da582");
                 }
 
-                return new ValidationFailure("Host", $"Unable to send test message: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage("Host", $"Unable to send test message: {ex.Message}", "server.message.m8d4c22034dd2", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message: {0}", ex.Message);
-                return new ValidationFailure("Host", $"Unable to send test message: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage("Host", $"Unable to send test message: {ex.Message}", "server.message.m8d4c22034dd2", new { value0 = ex.Message });
             }
 
             return null;

@@ -1,0 +1,14 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "headBeforeAppend": "9e140498caaad4d5957b0ef16ce659fe77fcebf3",
+  "originalBytes": 62184,
+  "originalSha256": "ff98a2966675d0c331db16845d5608fc0a4b74ddf4faad8f8142b2df7c99d7ce",
+  "suffixBytes": 2066,
+  "suffixSha256": "81a6ca942d2c4beffcbfbed3162fd5e9d8e832a66a05d872d98a86ec2d1ba02c",
+  "expectedBytes": 64252,
+  "expectedSha256": "7431f5cd693019dd3e1f4238704d1e938c2bc16e37d767b1b7f3071bead411f4",
+  "appendSeparator": "\\n\\n",
+  "originalBodyIsExactPrefix": true,
+  "expectedBodyFile": "pr-body-expected-after-append.txt"
+}

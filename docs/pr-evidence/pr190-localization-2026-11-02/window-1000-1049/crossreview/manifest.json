@@ -1,0 +1,67 @@
+{
+  "artifactType": "localization-cross-review",
+  "repo": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W1000-W1049",
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "createdUtc": "2026-11-02T22:12:52.985926+00:00",
+  "artifactCountExcludingManifestAndSums": 11,
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 3789,
+      "sha256": "520d090cdafabf3b289c5f38a745e29c35f24e2e1a35f4136ff82f791b3ee622"
+    },
+    {
+      "path": "caller-pin-reattestation.json",
+      "bytes": 31547,
+      "sha256": "9f3b2152b6d305b83a27d02f9ee3b03f521211eed73f362f017127b3c15925b4"
+    },
+    {
+      "path": "cross-review-ledger.jsonl",
+      "bytes": 2055037,
+      "sha256": "21ea1ecc36fd6a112e02e8321b4f61bdd8e7a1660abd95b2cbdae6c2ea585b41"
+    },
+    {
+      "path": "findings.json",
+      "bytes": 7131,
+      "sha256": "a3c7e24392c8c6af4fcc7e0ef61e619e1b2fa8bbe98ac87ee4953f4cdaef3304"
+    },
+    {
+      "path": "independent-structural-audit.json",
+      "bytes": 948,
+      "sha256": "2f2dd7c8a5985f5f36314ed0f4332b72c63421decd159d96999c7dbb14d22bbc"
+    },
+    {
+      "path": "input-attestation.json",
+      "bytes": 2052,
+      "sha256": "956689cbd97faf2aa6942a9689fcf18b92824b18c1a0d1d904ed873e335db4c7"
+    },
+    {
+      "path": "live-pr-snapshots-end.json",
+      "bytes": 2837,
+      "sha256": "7e8ca13661a13c98091dfe7807bbd1842af92321493ceb9bec8c88c60e5269f9"
+    },
+    {
+      "path": "live-pr-snapshots-start.json",
+      "bytes": 2837,
+      "sha256": "0ea732bd9cc457778617371809e10ff9784f1498078bc1df4b98adce88b6169b"
+    },
+    {
+      "path": "pinned-file-reattestation.json",
+      "bytes": 20272,
+      "sha256": "0d3ec891690b37ea9a20651b2401348a93a215207ece3fe828e13def32fe3bd1"
+    },
+    {
+      "path": "source-caller-context-reattestation.json",
+      "bytes": 178,
+      "sha256": "c60de3b5910629fed1089a1a7e9b42f3b4b166015b797e3c2a5728f6e21ac82b"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 2332,
+      "sha256": "0638f14b2b65ee053a2857a43c1e6db1d0f939af8d7baa1fec7f63dec0b859d6"
+    }
+  ]
+}

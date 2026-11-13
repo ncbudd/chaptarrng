@@ -24,7 +24,8 @@ namespace NzbDrone.Core.ImportLists.Hardcover
 
         public override ProviderMessage Message => new ProviderMessage(
             "Books from your Hardcover lists and reading statuses will be matched by title and author name against your configured metadata source.",
-            ProviderMessageType.Info);
+            ProviderMessageType.Info,
+            "server.message.m73172a5045d6");
 
         public HardcoverImport(IHttpClient httpClient,
                                IImportListStatusService importListStatusService,

@@ -1,0 +1,41 @@
+{
+  "adjustments": 0,
+  "artifact": "ChaptarrNG PR #190 W450-W499 independent second opinion",
+  "baseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "callerlessHashOnlyHoldsPreserved": 48,
+  "callerlessHoldTargetTextIncluded": false,
+  "decisionCounts": {
+    "accept": 111
+  },
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "generatedAtUtc": "2026-11-05T11:07:25.132798+00:00",
+  "holdsAmongSelectedProposals": 0,
+  "independentAssessment": "All 111 caller-backed selected targets were accepted after source, caller surface, terminology, and protected-content review. The two lexicalized octal forms were checked as standard terms, not extra numeric values.",
+  "inputSha256": {
+    "candidate-free/input/caller-context.jsonl": "2a6de527472a324f3746d9c7bae651df73459a0d01ed0c35f4f4b2f1fd0ea330",
+    "candidate-free/input/candidate-free-cells.jsonl": "39b9037342ae28f0ad09d1cfad3d27dae9aa24d243bec36b01fa5bd6c032fc57",
+    "cross-review-sealed/ledger.jsonl": "9edb14d28b6a710b36450eabac1266bfee776fb73d43609baf4e448eb66a8137",
+    "cross-review-sealed/proposals.jsonl": "eed87cae98191f5470ad3ab5950db5c28c63862aaa5facf604d8b70caa43b4e2"
+  },
+  "nativeSpeakerApproval": false,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryOrPullRequestEdits": false,
+  "reviewConfidence": "moderate overall; no native-speaker signoff",
+  "selectedProposalCellsReviewed": 111,
+  "sourceIdsReviewed": 34,
+  "sourceOrdinalRange": [
+    450,
+    499
+  ],
+  "state": "OPEN/draft",
+  "tokenFailures": 0,
+  "verificationRuns": {
+    "blindExactWorktree": "PASS for 600 cells; 48 text-free holds",
+    "candidateFreeExactWorktree": "PASS at the pinned head/tree",
+    "crossReviewExactWorktree": "PASS for 600 cells; 111 selected changes; 48 text-free holds",
+    "livePullRequest": "OPEN draft at the pinned head and base",
+    "primaryCandidateFreeBound": "PASS for 600 cells; 48 text-free holds"
+  }
+}

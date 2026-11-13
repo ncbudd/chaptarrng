@@ -3,6 +3,7 @@ using FluentValidation.Results;
 using NLog;
 using NzbDrone.Core.Localization;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Simplepush
 {
@@ -52,7 +53,7 @@ namespace NzbDrone.Core.Notifications.Simplepush
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message");
-                return new ValidationFailure("ApiKey", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("ApiKey", "Unable to send test message", "server.message.m1041bbcba071");
             }
 
             return null;

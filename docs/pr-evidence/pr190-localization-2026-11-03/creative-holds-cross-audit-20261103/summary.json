@@ -1,0 +1,57 @@
+{
+  "artifact": "ChaptarrNG PR #190 creative-hold reconsideration cross-audit",
+  "confidence": "high for exact-head pins, pairwise differences, and hold disposition; translation naturalness is not approved or claimed.",
+  "head": "712d597e6f27f6485f7c287b70f6dc79003ca714",
+  "operation": {
+    "releaseCut": false,
+    "repositoryOrPrFilesEdited": false,
+    "testsBuildsScansCiRun": false
+  },
+  "pairReconciliation": {
+    "agreementCount": 0,
+    "allDifferencesRecorded": true,
+    "targetDisagreementCount": 20,
+    "winnerSelections": 0
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "resolutions": {
+    "allRowsRemainOnHold": true,
+    "approvedTranslationCount": 0,
+    "holdCount": 20,
+    "qualifiedNativeReviewPending": true,
+    "qualifiedNativeSpeakerReviews": 0
+  },
+  "scope": {
+    "cellCount": 20,
+    "composition": {
+      "dodge-books": 11,
+      "ebook-smell": 8,
+      "provider-option": 1
+    },
+    "excludedIndonesianDodgeCellPresent": false,
+    "sourceCount": 3,
+    "sourceIds": [
+      "provider.option.o7285d46b982d",
+      "ui.loading.dodgeBooks",
+      "ui.loading.newEbookSmell"
+    ]
+  },
+  "tree": "275b19ba948bacd883d845ec970c154511be0e43",
+  "validation": {
+    "blindReviewChecksums": "PASS",
+    "callerLineOccurrenceCount": 25,
+    "callerSourceFileCount": 3,
+    "currentFilePinCount": 16,
+    "dodgeProtectedLiteralCells": 11,
+    "exactHeadTreeReattested": true,
+    "liveInputChecksums": "PASS",
+    "placeholderMarkupNumericAndProtectedLiteralChecksPassed": 40,
+    "primaryAndBlindProposalHashesValidated": 40,
+    "primaryReviewChecksums": "PASS",
+    "sourceCatalogCellsValidated": 3,
+    "targetCatalogCellsValidated": 20,
+    "tokenMismatchCount": 0,
+    "uniqueCallerLineCount": 16
+  }
+}

@@ -14,6 +14,7 @@ using NzbDrone.Core.Exceptions;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.ThingiProvider;
 using NzbDrone.Common.Instrumentation;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Indexers.MyAnonaMouse
 {
@@ -195,7 +196,7 @@ namespace NzbDrone.Core.Indexers.MyAnonaMouse
                 if (firstRequest == null)
                 {
                     _logger.Trace("MAM_TEST_ERROR: No request generated");
-                    return new ValidationFailure(string.Empty, "Failed to generate test request. Check your settings.");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to generate test request. Check your settings.", "server.message.m6a4ba853f563");
                 }
 
                 _logger.Trace("MAM_TEST_REQUEST: Testing JSON API connectivity (should use configured proxy if set)");
@@ -217,12 +218,13 @@ namespace NzbDrone.Core.Indexers.MyAnonaMouse
                     _logger.Warn("MAM account status is unavailable or stale during test for indexer '{0}' ({1})", Definition.Name, ex.GetType().Name);
                     if (Settings.ProtectUnsatisfiedSlots)
                     {
-                        return new ValidationFailure(string.Empty, "MAM account status is unavailable or stale. Cannot verify unsatisfied-slot protection.");
+                        return NzbDroneValidationFailure.ForMessage(string.Empty, "MAM account status is unavailable or stale. Cannot verify unsatisfied-slot protection.", "server.message.m3a3a39354b92");
                     }
 
                     Definition.Message = new ProviderMessage(
                         "Connection succeeded, but MAM account status is unavailable or stale. Cached counts are not shown.",
-                        ProviderMessageType.Warning);
+                        ProviderMessageType.Warning,
+                        "server.message.mddaec7220c51");
                     return null;
                 }
 
@@ -230,16 +232,23 @@ namespace NzbDrone.Core.Indexers.MyAnonaMouse
                 try
                 {
                     var cls = string.IsNullOrWhiteSpace(Settings.UserClass) ? "Unknown" : Settings.UserClass;
-                    var membership = Settings.IsVip
-                        ? $"\u2713 VIP Member - Class: {cls}"
-                        : $"User Class: {cls} (Standard member)";
-                    var slots = Settings.UnsatisfiedCount.HasValue && Settings.UnsatisfiedLimit.HasValue
-                        ? $"; unsatisfied torrents: {Settings.UnsatisfiedCount}/{Settings.UnsatisfiedLimit}"
-                        : string.Empty;
-                    var message = membership + slots;
+                    var hasSlotCounts = Settings.UnsatisfiedCount.HasValue && Settings.UnsatisfiedLimit.HasValue;
+                    var message = Settings.IsVip
+                        ? hasSlotCounts
+                            ? $"\u2713 VIP Member - Class: {cls}; unsatisfied torrents: {Settings.UnsatisfiedCount}/{Settings.UnsatisfiedLimit}"
+                            : $"\u2713 VIP Member - Class: {cls}"
+                        : hasSlotCounts
+                            ? $"User Class: {cls} (Standard member); unsatisfied torrents: {Settings.UnsatisfiedCount}/{Settings.UnsatisfiedLimit}"
+                            : $"User Class: {cls} (Standard member)";
+                    var messageId = Settings.IsVip
+                        ? hasSlotCounts ? "server.message.m9f7f2489aa05" : "server.message.md6a7ade8523b"
+                        : hasSlotCounts ? "server.message.m621dd0308bef" : "server.message.md4a741052e8b";
+                    object messageParameters = hasSlotCounts
+                        ? new { value0 = cls, value1 = Settings.UnsatisfiedCount.Value, value2 = Settings.UnsatisfiedLimit.Value }
+                        : new { value0 = cls };
 
                     // Attach to the temporary definition used during Test so the controller can surface it
-                    Definition.Message = new ProviderMessage(message, ProviderMessageType.Info);
+                    Definition.Message = new ProviderMessage(message, ProviderMessageType.Info, messageId, messageParameters);
                 }
                 catch { }
 
@@ -252,10 +261,10 @@ namespace NzbDrone.Core.Indexers.MyAnonaMouse
 
                 if (ex.Message.Contains("403") || ex.Message.Contains("Forbidden"))
                 {
-                    return new ValidationFailure(string.Empty, "Authentication failed. Verify your mam_id is correct (found under Preferences > Security on MAM). If using a proxy, ensure it's configured in Settings > General > Proxy.");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Authentication failed. Verify your mam_id is correct (found under Preferences > Security on MAM). If using a proxy, ensure it's configured in Settings > General > Proxy.", "server.message.m8e5bd7c589bb");
                 }
 
-                return new ValidationFailure(string.Empty, $"Connection test failed: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Connection test failed: {ex.Message}", "server.message.m12f378d7ddc5", new { value0 = ex.Message });
             }
         }
 

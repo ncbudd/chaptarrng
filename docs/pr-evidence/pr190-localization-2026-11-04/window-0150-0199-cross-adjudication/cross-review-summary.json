@@ -1,0 +1,26 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "pullRequestState": "OPEN",
+  "draft": true,
+  "head": "243f17465cc95fe84f16e17767db04a4a97ad040",
+  "tree": "25e7bd0f3adf871b9030081ebc7c49a28213c50f",
+  "apiBase": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "liveMain": "b5653f44e703438ba66c209d79e2fb3f32696e84",
+  "scope": "W150-W199; 50 source IDs × 12 locales = 600 cells",
+  "dispositions": {
+    "propose-change": 58,
+    "accept-current": 530,
+    "hold-text-free": 12
+  },
+  "selectedChanges": 58,
+  "marketplaceDynamicCallerKeys": 11,
+  "marketplaceCellsReviewed": 132,
+  "marketplaceCorrection": "AudibleMarketplaceUk::id → Britania Raya (.co.uk)",
+  "textFreeHolds": 12,
+  "textFreeHoldKeySha256": "c27f6c15b33d4e739a63f991f22d101533da0ca858a63175010332115b19160f",
+  "primaryPacket": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w150-199-primary-20261104/primary-review",
+  "blindPacket": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w150-199-blind-20261104/decisions-packet",
+  "sourceWorktree": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w150-199-source",
+  "nativeSpeakerValidation": false
+}

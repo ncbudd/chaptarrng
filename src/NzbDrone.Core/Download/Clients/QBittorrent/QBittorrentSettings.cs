@@ -17,15 +17,21 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
 
             RuleFor(c => c.Username).Empty()
                 .WithMessage("Username must be empty when using API Key.")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m3defe1f8a1b2"))
                 .When(c => c.ApiKey.IsNotNullOrWhiteSpace());
             RuleFor(c => c.Password).Empty()
                 .WithMessage("Password must be empty when using API Key.")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m847a995ca781"))
                 .When(c => c.ApiKey.IsNotNullOrWhiteSpace());
 
-            RuleFor(c => c.AudiobookCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'");
-            RuleFor(c => c.EbookCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'");
-            RuleFor(c => c.AudiobookImportedCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'");
-            RuleFor(c => c.EbookImportedCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'");
+            RuleFor(c => c.AudiobookCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mf00d6bc38ae8"));
+            RuleFor(c => c.EbookCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mf00d6bc38ae8"));
+            RuleFor(c => c.AudiobookImportedCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mf00d6bc38ae8"));
+            RuleFor(c => c.EbookImportedCategory).Matches(@"^([^\\\/](\/?[^\\\/])*)?$").WithMessage(@"Can not contain '\', '//', or start/end with '/'")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mf00d6bc38ae8"));
         }
     }
 

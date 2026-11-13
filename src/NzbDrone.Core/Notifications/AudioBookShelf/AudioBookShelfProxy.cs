@@ -7,6 +7,7 @@ using NLog;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.AudioBookShelf
 {
@@ -176,14 +177,14 @@ namespace NzbDrone.Core.Notifications.AudioBookShelf
                 if (response.HasHttpError)
                 {
                     _logger.Warn("AudioBookShelf test failed: {0}", response.StatusCode);
-                    return new ValidationFailure(nameof(AudioBookShelfSettings.Host), $"Unable to connect to AudioBookShelf. Status: {response.StatusCode}");
+                    return NzbDroneValidationFailure.ForMessage(nameof(AudioBookShelfSettings.Host), $"Unable to connect to AudioBookShelf. Status: {response.StatusCode}", "server.message.mb2a894bd2c51", new { value0 = response.StatusCode });
                 }
 
                 var libraries = Json.Deserialize<AudioBookShelfLibrariesResponse>(response.Content);
 
                 if (libraries?.Libraries == null || libraries.Libraries.Count == 0)
                 {
-                    return new ValidationFailure("", "No libraries found on AudioBookShelf server");
+                    return NzbDroneValidationFailure.ForMessage("", "No libraries found on AudioBookShelf server", "server.message.m887410c5e906");
                 }
 
                 _logger.Debug("AudioBookShelf connection test successful. Found {0} libraries", libraries.Libraries.Count);
@@ -195,15 +196,15 @@ namespace NzbDrone.Core.Notifications.AudioBookShelf
 
                 if (ex.Response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
                 {
-                    return new ValidationFailure("ApiKey", "Authentication failed. Check API key");
+                    return NzbDroneValidationFailure.ForMessage("ApiKey", "Authentication failed. Check API key", "server.message.m88ed453f6f14");
                 }
 
-                return new ValidationFailure(nameof(AudioBookShelfSettings.Host), $"Unable to connect to AudioBookShelf: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(nameof(AudioBookShelfSettings.Host), $"Unable to connect to AudioBookShelf: {ex.Message}", "server.message.m5932f2bdbcc6", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "AudioBookShelf connection test failed");
-                return new ValidationFailure(nameof(AudioBookShelfSettings.Host), $"Unable to connect to AudioBookShelf: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(nameof(AudioBookShelfSettings.Host), $"Unable to connect to AudioBookShelf: {ex.Message}", "server.message.m5932f2bdbcc6", new { value0 = ex.Message });
             }
         }
 

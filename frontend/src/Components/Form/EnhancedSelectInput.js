@@ -15,7 +15,6 @@ import { icons, scrollDirections, sizes } from 'Helpers/Props';
 import { isMobile as isMobileUtil } from 'Utilities/browser';
 import * as keyCodes from 'Utilities/Constants/keyCodes';
 import getUniqueElememtId from 'Utilities/getUniqueElementId';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import FormInputHelpText from './FormInputHelpText';
 import HintedSelectInputOption from './HintedSelectInputOption';
 import HintedSelectInputSelectedValue from './HintedSelectInputSelectedValue';
@@ -37,17 +36,28 @@ function getFetchErrorText(error) {
 
   if (Array.isArray(responseJSON)) {
     const messages = responseJSON
-      .map((e) => translateServerMessage(e?.errorMessage))
-      .filter(Boolean);
+      .map((e) => typeof e === 'string' ? e : e?.errorMessage || e?.message)
+      .filter((message) => typeof message === 'string' && message.trim());
 
-    return messages.length ? messages.join(' ') : (translateServerMessage(error.responseText) || null);
+    if (messages.length) {
+      return messages.join(' ');
+    }
+
+    return typeof error.responseText === 'string' && error.responseText.trim() ? error.responseText : null;
+  }
+
+  if (typeof responseJSON === 'string' && responseJSON.trim()) {
+    return responseJSON;
   }
 
   if (responseJSON && typeof responseJSON === 'object') {
-    return translateServerMessage(responseJSON.message || responseJSON.error || error.responseText) || null;
+    return [responseJSON.message, responseJSON.errorMessage, responseJSON.error, error.responseText]
+      .find((message) => typeof message === 'string' && message.trim()) || null;
   }
 
-  return translateServerMessage(error.responseText) || (error.status && error.statusText ? `${error.status} ${error.statusText}` : null);
+  return typeof error.responseText === 'string' && error.responseText.trim() ?
+    error.responseText :
+    (error.status && error.statusText ? `${error.status} ${error.statusText}` : null);
 }
 
 function isArrowKey(keyCode) {
@@ -570,6 +580,7 @@ class EnhancedSelectInput extends Component {
           fetchErrorText ?
             <FormInputHelpText
               text={fetchErrorText}
+              messageMode="opaque"
               isError={true}
             /> :
             null

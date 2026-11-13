@@ -1,0 +1,15 @@
+{
+  "allCurrentTargetsMatchReadback": true,
+  "appliedChanges": 42,
+  "preservedCurrentCells": 558,
+  "productCommit": "7bf3760ea87879304ec8deb6e4e8cf2f2b62c5b0",
+  "productCommitAncestorOfCurrentHead": true,
+  "productCommitTree": "8d821e88af5c3451d608e2bdd87549249d5cf745",
+  "readbackRows": 600,
+  "result": "PASS",
+  "rootCorrectedCell": "AutomaticUpdatesDisabledDocker::id",
+  "rootCorrectedTargetSha256": "fd407430d7d60c282c8412ed3205ac94ec77e794d5d2dce19e6337aa09e9c291",
+  "rootSupplementalAdjudicationSha256": "1e0edcac5ffc40f9621c215e68198fa8da94d946bfe661e451d6f17039f75f74",
+  "sourceHead": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "sourceTree": "f6ae6530b73bf581c1fbc5a8c13eacd7342e9172"
+}

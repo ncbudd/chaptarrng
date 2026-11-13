@@ -1,0 +1,36 @@
+{
+  "appliedChanges": 13,
+  "blindLedgerSha256": "20467796ed07ca93a7ce4decb783ba5ec99843ed652f8c650650b2d711cae28f",
+  "candidateFreeManifestSha256": "05e9feddecb58acd2b4897adadf962f9ea774cf21fef10428f6885c2c9e29382",
+  "counts": {
+    "accept-current": 4,
+    "correction": 7,
+    "hold": 20,
+    "refinement": 6
+  },
+  "excludedNoCallerCells": 24,
+  "excludedSourceOrdinals": [
+    447,
+    498
+  ],
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "keyOrderPreserved": true,
+  "nativeSpeakerApproval": false,
+  "nonTargetChanges": 0,
+  "outputDirectory": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-caller-bound-third-party-cross-audit-20261103",
+  "placeholderMarkupNumericAndProtectedLiteralChecksPassed": 37,
+  "primaryLedgerSha256": "f72fa723b120e9b197b72ea3b82a49a1bce4a689ac0879a20b933ceb512b4d2b",
+  "pullRequest": 190,
+  "readbackCells": 37,
+  "readbackMismatches": 0,
+  "releaseApproval": false,
+  "releaseApprovedByThisReview": false,
+  "repository": "snapetech-org/chaptarrng",
+  "reviewedCallerBackedCells": 37,
+  "schemaVersion": 1,
+  "selectedChanges": 13,
+  "sourceAndCurrentTargetHashesRecomputed": 37,
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0",
+  "verifiedCallerContextLines": 126,
+  "verifiedPinnedFiles": 18
+}

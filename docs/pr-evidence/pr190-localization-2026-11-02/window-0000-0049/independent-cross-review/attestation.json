@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "task": "Independent cross-review re-attestation for ChaptarrNG PR #190 currentMissingIds indices 0–49",
+  "reviewHead": "7bb2b2f977e81d214318b3f873afe8ab17f03ed5",
+  "reviewTree": "5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb",
+  "livePrHeadObservedAtStart": "7bb2b2f977e81d214318b3f873afe8ab17f03ed5",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "headTreeVerified": true,
+  "worktreeStatusInitiallyClean": true,
+  "exactHeadCatalogReadOnly": true,
+  "packetChecksums": {
+    "primarySemantic": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-semantic-20261102",
+      "sha256SumsFileSha256": "0352f1f513eb97b70c2f7b23f2a2fd7df2eafbf10c9d5f3c7538acefbd69cd38",
+      "verified": true
+    },
+    "inputPacket": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102",
+      "sha256SumsFileSha256": "ac560313425747250b558878f290b62d33a1f03ead3e4079f3092f0dd54b62ce",
+      "verified": true,
+      "semanticSummaryInputManifestSha256MatchesSumsFile": true
+    },
+    "exactHeadAudit": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-audit-packet-20261102",
+      "sha256SumsFileSha256": "cae36bae227b838fb5d84173469db8b5ae26ee295653cdd8f66eba1ab2eedd65",
+      "verified": true
+    }
+  },
+  "inputs": {
+    "cellsPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102/input-cells.jsonl",
+    "cellsSha256": "e43c22f4fdea77aab86aba6c212d8227b490c106cfc9bdb14a573884164afd3e",
+    "summarySha256": "f35ab8c6c7e048f3122ba6baa489a2691867c7107ab0066216344b0345ce3364",
+    "sourceFollowupSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "englishCatalogSha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "providerCallerRegistrySha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "sourceMessageHashRegistrySha256": "5ab53498b8131e22f0e93bc5556ec1df9e0cbbe45ae16beb058bd7215017ae26"
+  },
+  "counts": {
+    "sourceIds": 50,
+    "locales": 12,
+    "cells": 600,
+    "candidateCells": 65,
+    "primaryKeepCells": 535,
+    "candidateSourceIds": 20,
+    "candidateHashesChecked": 65,
+    "sourceIdsWithoutCallers": 0
+  },
+  "rowAttestation": {
+    "inputSourceCurrentParityRows": 600,
+    "englishSourceCatalogExact": true,
+    "allCurrentTargetsAndUtf8HashesExact": true,
+    "allCandidateUtf8HashesExact": true,
+    "mismatchCount": 0,
+    "mismatches": []
+  },
+  "targetCatalogSha256": {
+    "es": "0e4e4c56c31f47b858c67b7e6c131a5e0876c6ce945c658ffd7ccea80276575f",
+    "zh-Hans": "5dca19d1aa8b13191584236bc0514082220b87ee39d0079ada8014042c1a8005",
+    "hi": "979451a19a02edbde35db08211c8a3510f7cd9767aa4c707cd7875f5f4e13464",
+    "de": "d9ffbdd9770185f786be393aec5c504f2e1bb6070c229d60fb6cc6f01b576499",
+    "ja": "8ac2d754f8b3ef63a651db66beb09577a9197e84424347eb7886d54f7fff0356",
+    "fr": "9990454f7e41cd945dcc27f4a3a5d0459233b85bbc12d5102a8df3bc01284a3a",
+    "pt-BR": "0aa1fde7b87e3c48cc42fbfd6ffe7f16732e3bfb76169d9f0a1158238c693e89",
+    "ar": "854e7531374344464b94765640ef75af9ac54a978f6db3e1b8d20dc146021ede",
+    "ko": "5a4893c47599702b3c84e593777dbf4902510ea89e74ad30baff983750282524",
+    "zh-Hant": "98ad09577ff385b0e4ab7b1082554fd6a6cc3cfd82cd76d23b04da1917a3645e",
+    "vi": "354294bbc22615d441edf80b2ff7b0b8aa4369cf00237456ccaf70f0db67eb94",
+    "id": "1419ba669238e23cb2af225563196ed690ea604e3a477033b5dada4397c8446b"
+  },
+  "targetCatalogHashMismatches": [],
+  "callerAttestation": {
+    "uniqueSourceCallerReferences": 134,
+    "uniquePhysicalCurrentLines": 95,
+    "uniqueCallerFiles": 19,
+    "registryLineShifts": 86,
+    "allCurrentLocationsUnique": true,
+    "callerMismatchCount": 0,
+    "callerMismatches": [],
+    "callerPinsPath": "caller-pins.jsonl"
+  },
+  "protectedLiteralMetadata": {
+    "semanticPacketProtectedTokensPerCellVerifiedPresentInSourceCurrentAndCandidates": true,
+    "protectedTokenOccurrences": {
+      ".torrent": 24,
+      ".magnet": 12,
+      ".nzb": 12,
+      "[host]": 24,
+      "[port]": 24,
+      "[urlBase]": 24,
+      "[category]": 12,
+      "[protocol]": 12
+    },
+    "inputVsSemanticTokenMetadataDifferences": {
+      "affectedSourceIds": 7,
+      "affectedRows": 84,
+      "details": {
+        "provider.field.f848a6d927677": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            ".torrent"
+          ],
+          "rows": 12
+        },
+        "provider.field.f0fafe62ec9fe": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            ".torrent"
+          ],
+          "rows": 12
+        },
+        "provider.field.f0d53d88c6792": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            ".magnet"
+          ],
+          "rows": 12
+        },
+        "provider.field.f73ea2afd7b35": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            ".nzb"
+          ],
+          "rows": 12
+        },
+        "provider.field.f5948d0bfdf6a": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            "[host]",
+            "[port]",
+            "[urlBase]"
+          ],
+          "rows": 12
+        },
+        "provider.field.f242bd077cedf": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            "[category]"
+          ],
+          "rows": 12
+        },
+        "provider.field.fcba7a5944e56": {
+          "inputTokens": [],
+          "semanticProtectedTokens": [
+            "[protocol]",
+            "[host]",
+            "[port]",
+            "[urlBase]"
+          ],
+          "rows": 12
+        }
+      },
+      "interpretation": "The semantic packet expands an empty input placeholderTokens field to include protected file extensions and bracket literals. These values occur in source/current/candidate strings; this is metadata scope drift, not a source/target hash mismatch."
+    },
+    "protectedLiteralMismatchCount": 0,
+    "protectedLiteralMismatches": []
+  },
+  "priorOverlap": {
+    "exactHead101CellReconciliationIntersection": 0,
+    "repositoryLocalizationJsonExactCellPairIntersection": 0,
+    "recursiveLocalizationJsonFilesScanned": 22,
+    "scanScope": "All JSON files under docs/localization, recursive; exact (id, locale) pairs. No matching W0–49 pairs found.",
+    "priorReconciliationEvidencePath": "docs/localization/exact-head-semantic-reconciliation-20261102.json"
+  },
+  "nativeSpeakerApproval": false,
+  "headedBrowserReview": false,
+  "repositoryOrPrEdited": false,
+  "testsBuildsScansCiOrReleasesRun": false
+}

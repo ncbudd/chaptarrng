@@ -1,0 +1,22 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "head": "28cdae837118a426ac867fb468a5e5a6937cbb9b",
+  "tree": "e6e7f1344d08eddbc421d339f91594847a625c10",
+  "cells": 20,
+  "sourceIds": 3,
+  "selectedTargets": 9,
+  "selectedDispositionCounts": {
+    "correction": 6,
+    "refinement": 3
+  },
+  "textFreeHolds": 11,
+  "primaryReviewerSha256": "92914899d315f87683bf4864073da25db6d8b6004649c3ca26bb5ce9118c87b9",
+  "independentBlindReviewerSha256": "132d166079edfaa98ef7c9c700689a3f60a631ac58c2e1b12c806ff5166d3898",
+  "candidateFreeManifestSha256": "f54a7bd07668f91785fac65f25f8e1b935f36608cecc394853b44b6dfc45655f",
+  "independentBlindSealSha256": "c05f4fca8fc2265136e99a05d9d27a5db9669812ad7a6c27dafc8d2ca19ddaec",
+  "crossReviewer": "root",
+  "nativeSpeakerSignoff": "not claimed",
+  "catalogApplication": "not yet applied",
+  "browserAcceptance": "not performed at this exact head; deployments are zero"
+}

@@ -1,0 +1,278 @@
+{
+  "title": "Independent exact-cell semantic review — ChaptarrNG PR #190",
+  "review_date": "2026-11-02",
+  "pull_request_state_snapshot": {
+    "repository": "snapetech-org/chaptarrng",
+    "number": 190,
+    "state": "OPEN",
+    "is_draft": true,
+    "head_commit": "c7e95620c2a89646eb6a37c7e35441804b4911bb",
+    "head_tree": "78c7aa519cbe3ed7874b2f93b6976237b7d336e9",
+    "query_scope": "GraphQL fields only: state, isDraft, headRefOid, head commit oid, commit tree oid; PR body not requested or read."
+  },
+  "message": {
+    "id": "server.message.md764ed5e74b4",
+    "source": "{value0} conversion was cancelled.",
+    "source_sha256_utf8": "d764ed5e74b487042e8b1b9584e9e3bf5728ac982328afddc95651da24621b64",
+    "source_fingerprint": "6e19b762533b543ae21ef80b06f5285d0fa859a2ee81f4e9060d30c0aa0fdb17",
+    "catalog_source_hash": "6e19b762533b543ae21ef80b06f5285d0fa859a2ee81f4e9060d30c0aa0fdb17",
+    "source_templates": [
+      "{TargetQualityName} conversion was cancelled."
+    ],
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{TargetQualityName}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "{value0} conversion was cancelled."
+    ],
+    "protected_literals": [
+      "M4B"
+    ],
+    "callsite_checks": [
+      {
+        "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "line": 195,
+        "source_line": "MarkCancelled(job, $\"{job.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+        "source_line_sha256_utf8": "8c6b4ea5b8dc186855cb06ec101976b7ee8c90364cce42f5d2b4f594034d6806",
+        "catalog_sha256": "8c6b4ea5b8dc186855cb06ec101976b7ee8c90364cce42f5d2b4f594034d6806",
+        "catalog_hash_matches": true
+      },
+      {
+        "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "line": 603,
+        "source_line": "MarkCancelled(job, $\"{request.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+        "source_line_sha256_utf8": "e60a2173817aeea3829f7590963e82994d2bc0e6ecce3ca48429c02a442bef37",
+        "catalog_sha256": "e60a2173817aeea3829f7590963e82994d2bc0e6ecce3ca48429c02a442bef37",
+        "catalog_hash_matches": true
+      }
+    ],
+    "runtime_behavior": {
+      "dynamic_value": "TargetQualityName, represented as {value0}. The conversion request assigns it from convertedQuality.Quality.Name (src/NzbDrone.Core/MediaFiles/BookImport/ImportApprovedBooks.cs:2498), so the target quality is dynamic data, not fixed English text.",
+      "null_fallback": "Both pinned C# callsites use M4B when TargetQualityName is null; M4B is thus a possible dynamic value, not a fixed prefix that should appear in every translation.",
+      "rendering": "The cancelled conversion message is passed as conversionMessage into QueueStatusCell. For cancelled jobs, the popover body calls translateServerMessage(conversionMessage); pattern matching extracts the dynamic token, translation interpolates it, and string token values receive bidi isolate markers.",
+      "matching_constraints": "The matcher requires the one declared value0 placeholder once in the pattern and an English fixed suffix. Unknown/unmatched messages remain unchanged."
+    }
+  },
+  "cells": [
+    {
+      "locale": "ar",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "تم إلغاء تحويل {value0}.",
+        "sha256_utf8": "04a80a98b60ecde8ee1b1c64d7c6843f16d236de8268d135ce2796d60ddd1931"
+      },
+      "proposed": null,
+      "rationale": "The sentence says that the conversion of/to the named quality was cancelled; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "04a80a98b60ecde8ee1b1c64d7c6843f16d236de8268d135ce2796d60ddd1931"
+    },
+    {
+      "locale": "de",
+      "recommendation": "propose_correction",
+      "confidence": "high",
+      "current": {
+        "text": "M4B-Konvertierung von {value0} wurde abgebrochen.",
+        "sha256_utf8": "0b1aa08ee42c2bc060a7c408ea3ff333bcb9f415c78b6186e3fa233d4e2ecae5"
+      },
+      "proposed": {
+        "text": "Die Konvertierung zu {value0} wurde abgebrochen.",
+        "sha256_utf8": "2fd7cb5ff9e4a7bc19b8bba32485ffa8a24a74635a849f82e79b3c7c1462083a"
+      },
+      "rationale": "The current text hardcodes M4B and makes the dynamic target quality read as the object of an M4B conversion. The callsites use the dynamic target-quality name; M4B is only its null fallback.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": 1,
+      "native_speaker_approval": "not obtained"
+    },
+    {
+      "locale": "es",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "La conversión {value0} fue cancelada.",
+        "sha256_utf8": "0838c73941fa1e8ecd01bc7e61dc6069a50436e47419c24b8bb7ec64ce03476d"
+      },
+      "proposed": null,
+      "rationale": "The conversion of/to the named quality was cancelled; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "0838c73941fa1e8ecd01bc7e61dc6069a50436e47419c24b8bb7ec64ce03476d"
+    },
+    {
+      "locale": "fr",
+      "recommendation": "propose_clarifying_revision",
+      "confidence": "moderate",
+      "current": {
+        "text": "{value0} conversion a été annulée.",
+        "sha256_utf8": "ee2a084b2bfd207c139a52fe280e6ae16c5387d27cff0df198209428ed6673fe"
+      },
+      "proposed": {
+        "text": "La conversion vers {value0} a été annulée.",
+        "sha256_utf8": "e6d14b91ccc9eddfc0769d4634e4e907f8a448efafff8c5f00978894a9e468f9"
+      },
+      "rationale": "The current wording is understandable but follows English word order. The proposal states the target direction and reads naturally as a French UI sentence.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": 1,
+      "native_speaker_approval": "not obtained"
+    },
+    {
+      "locale": "hi",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "{value0} रूपांतरण रद्द कर दिया गया है।",
+        "sha256_utf8": "3961f0fc1b50a6849fe8935a84bd77891f70145cba3a0add4dd3cced23c33e03"
+      },
+      "proposed": null,
+      "rationale": "The sentence communicates cancellation of the named quality conversion and keeps the dynamic slot once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "3961f0fc1b50a6849fe8935a84bd77891f70145cba3a0add4dd3cced23c33e03"
+    },
+    {
+      "locale": "id",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "Konversi {value0} dibatalkan.",
+        "sha256_utf8": "2be6a163eed58c7a310da047fe3cf063841392e777a6bbecec2c7898939e2b0d"
+      },
+      "proposed": null,
+      "rationale": "The sentence communicates that conversion to/of the named quality was cancelled and keeps the dynamic slot once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "2be6a163eed58c7a310da047fe3cf063841392e777a6bbecec2c7898939e2b0d"
+    },
+    {
+      "locale": "ja",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "{value0}の変換がキャンセルされました。",
+        "sha256_utf8": "7f0bfaba4a95fdf1fcc80fb776fa6ab8edcfd0e30318a2ce1c21c93cd76ad6b4"
+      },
+      "proposed": null,
+      "rationale": "The sentence communicates cancellation of the named quality conversion; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "7f0bfaba4a95fdf1fcc80fb776fa6ab8edcfd0e30318a2ce1c21c93cd76ad6b4"
+    },
+    {
+      "locale": "ko",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "{value0} 변환이 취소되었습니다.",
+        "sha256_utf8": "917c293100a0bb5f135086faf16c9526a008799d4b04a633b5e9499d0c7d22f2"
+      },
+      "proposed": null,
+      "rationale": "The sentence communicates cancellation of the named quality conversion; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "917c293100a0bb5f135086faf16c9526a008799d4b04a633b5e9499d0c7d22f2"
+    },
+    {
+      "locale": "pt_BR",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "A conversão {value0} foi cancelada.",
+        "sha256_utf8": "32d9b0a23784b91cece2b5f47cfd925f9439173abc345b831a5b3ff5f5fa0dcb"
+      },
+      "proposed": null,
+      "rationale": "The sentence says that conversion to/of the named quality was cancelled; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "32d9b0a23784b91cece2b5f47cfd925f9439173abc345b831a5b3ff5f5fa0dcb"
+    },
+    {
+      "locale": "vi",
+      "recommendation": "propose_clarifying_revision",
+      "confidence": "low",
+      "current": {
+        "text": "{value0} chuyển đổi đã bị hủy.",
+        "sha256_utf8": "03716ae2adc9a1a4debe4499cff05f123c69d35f3575eab7edfdb2b72b7121dd"
+      },
+      "proposed": {
+        "text": "Quá trình chuyển đổi sang {value0} đã bị hủy.",
+        "sha256_utf8": "7982e77996746f7091385da5939d5debe6a9883f18413cf821f579c66fe5f518"
+      },
+      "rationale": "The current word order is difficult to parse as a Vietnamese sentence. The proposal makes the conversion process and target quality relationship explicit.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": 1,
+      "native_speaker_approval": "not obtained"
+    },
+    {
+      "locale": "zh_CN",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "{value0} 转换已被取消。",
+        "sha256_utf8": "428a97403101ff42db7137e97c4a6e914db6de798d325a0dab840f3b5d31d912"
+      },
+      "proposed": null,
+      "rationale": "The sentence communicates that the named quality conversion has been cancelled; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "428a97403101ff42db7137e97c4a6e914db6de798d325a0dab840f3b5d31d912"
+    },
+    {
+      "locale": "zh_TW",
+      "recommendation": "provisionally_accept_current",
+      "confidence": "moderate",
+      "current": {
+        "text": "{value0} 轉換已被取消。",
+        "sha256_utf8": "ec26cd8399e1cfde4f08dfee6a38691b2c911dc50f0381c91b859d5d5c21c024"
+      },
+      "proposed": null,
+      "rationale": "The sentence communicates that the named quality conversion has been cancelled; the dynamic slot is retained once.",
+      "current_placeholder_count_value0": 1,
+      "proposal_placeholder_count_value0": null,
+      "native_speaker_approval": "not obtained",
+      "provisionally_accepted_current_sha256_utf8": "ec26cd8399e1cfde4f08dfee6a38691b2c911dc50f0381c91b859d5d5c21c024"
+    }
+  ],
+  "scope_and_limits": {
+    "method": "Independent semantic review of exact current strings against the English source and pinned callsite semantics.",
+    "native_speaker_approval": "not obtained for any locale and not claimed.",
+    "limitations": "This is not a native-speaker or in-product visual review. Confidence for locale grammar and idiom is moderate or low. German is a high-confidence semantic mismatch because it hardcodes M4B against the dynamic target-quality parameter; French and Vietnamese proposals are clarity/readability revisions that should be checked by native speakers.",
+    "repo_mutations": "none; review outputs are outside the worktree."
+  },
+  "evidence_file_sha256": {
+    "docs/localization/server-message-sources.json": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825",
+    "docs/localization/server-message-callers.json": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b",
+    "frontend/src/Utilities/Localization/server-messages.json": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+    "frontend/src/Utilities/Localization/server-message-match.cjs": "ae7fcdf639f8016c57d58a9b5e9939b674889a35f5495cf27d7d27b3b99f5abc",
+    "frontend/src/Utilities/String/translateServerMessage.js": "b3f3f5f71fabd5c6bf6aa99acf9a45832e6c2cf333d6a568c4f548248e448477",
+    "frontend/src/Utilities/String/translate.ts": "890856bba45dec251b48abd6d236dad0dcc7836f4cba744915fe1478dbbec292",
+    "frontend/src/Activity/Queue/QueueStatusCell.js": "33826b602dfa21a5ee412f01a757d4f671d13d9addc8e57bfc6856ebff35f7a4",
+    "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47",
+    "src/NzbDrone.Core/Localization/Core/en.json": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+    "src/NzbDrone.Core/Localization/Core/ar.json": "8cafe0591020c8b95850ab83b1fb830c3cd31913c9c46fe73761478aad068ebd",
+    "src/NzbDrone.Core/Localization/Core/de.json": "865c6b5ff350f7cee5996604b17e5133a13cfb97e11ae3ab6d729054aa24bbc8",
+    "src/NzbDrone.Core/Localization/Core/es.json": "f7e83d93ea48c857739e8ba197927dd9a086605d5bba973c71bc650dbc672473",
+    "src/NzbDrone.Core/Localization/Core/fr.json": "2d04a94637af8ed8dea18ce7be48b3171a2d1abdc57040ac0a6488f47d74a802",
+    "src/NzbDrone.Core/Localization/Core/hi.json": "d213459d56aac3adc06254bca122e22f395c5a5e0924787311007499113bcb52",
+    "src/NzbDrone.Core/Localization/Core/id.json": "80237bd1fd558f897abe7fcc21dce677ac6b104d3647a1e68b9214a3c4e4f609",
+    "src/NzbDrone.Core/Localization/Core/ja.json": "83c91059cb694df4e86cc4f364e044e4683cffbd4c2de1a1675e77471cb67084",
+    "src/NzbDrone.Core/Localization/Core/ko.json": "68c31bede0d1b4414fc6f53c0550486b30960369a86e86da13a9145a189f28e9",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": "53d1488a12ae0f3fbf22acfd05835e2d733b48c7db4e219a1bca05f4d666b613",
+    "src/NzbDrone.Core/Localization/Core/vi.json": "57f0274eed51d5771aec40d2487bc55a5b5f62a457eabbd3ccdc4f727c58fac7",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": "ecd45d0324782da4193f1d634b1fb4ccefd19aba738b27bdeec6c417a51d220d",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": "d87d14471bfbd5b8a59a3b6a0e2706ab902118ba0142ea157b2ba7d6d1e2a18d",
+    "src/NzbDrone.Core/MediaFiles/BookImport/ImportApprovedBooks.cs": "7df1f30ca0cf1ab927a2105c1a4217f7e8525087833e2561dcb117e0c7529877"
+  }
+}

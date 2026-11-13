@@ -1,0 +1,42 @@
+{
+  "result": "SEALED_INDEPENDENT_PASS",
+  "batch": "W350-399-Core",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "liveMain": "0d711ce1a9828675e879b2ba97f36fc3b9544188",
+  "firstPosition": 350,
+  "lastPosition": 399,
+  "sourceIds": 50,
+  "cells": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "decisionCounts": {
+    "accept-current": 542,
+    "hold-context": 12,
+    "replace": 46
+  },
+  "candidateLedgersOpenedBeforeSeal": false,
+  "candidateFreeManifestSha256": "c6e30a409f41a8a9b840314012b7d14d2d5ac15e183f4205c9bc37f4e30689cb",
+  "candidateFreeCellsSha256": "50532f50ca1795d1e0f0762a6f77c7f3ec3998f8ed17eda26208c17f43a5dc9e",
+  "callerContextSha256": "9417d3b878073e3fa757491c8494f9816c6e658750b0ec53b15c6992710ef582",
+  "integrityFlagRows": 16,
+  "integrityFlagsReviewed": true,
+  "independentReviewFile": "independent-review.jsonl",
+  "independentReviewSha256": "eb61099dfb57f39f700207c7806e83aad39cf7442168f9471d05a2c03f430267",
+  "tokenSummaryAlgorithm": "SHA-256 of UTF-8 compact JSON with sorted keys for the source/current token fields listed by the ledger",
+  "createdFrom": "candidate-free packet only"
+}

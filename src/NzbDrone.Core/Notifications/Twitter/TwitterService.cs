@@ -6,6 +6,7 @@ using FluentValidation.Results;
 using NLog;
 using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Twitter
 {
@@ -101,7 +102,7 @@ namespace NzbDrone.Core.Notifications.Twitter
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message");
-                return new ValidationFailure("Host", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("Host", "Unable to send test message", "server.message.m1041bbcba071");
             }
 
             return null;

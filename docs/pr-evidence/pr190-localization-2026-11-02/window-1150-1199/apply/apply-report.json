@@ -1,0 +1,30 @@
+{
+  "exact_base_head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exact_base_tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "reviewed_cells": 600,
+  "root_adjudicated_cells": 138,
+  "final_dispositions": {
+    "accept-current": 414,
+    "refinement": 63,
+    "correction": 111,
+    "hold": 12
+  },
+  "candidate_origins": {
+    "primary-cross-agreement": 462,
+    "blind-third": 63,
+    "adjudicator-edit": 20,
+    "current": 21,
+    "independent": 13,
+    "primary": 16,
+    "primary-and-independent": 5
+  },
+  "catalog_changes": 174,
+  "catalog_files_changed": 12,
+  "readback_cells": 600,
+  "readback_mismatches": 0,
+  "catalog_keys_per_locale": 4165,
+  "all_locale_key_sets_match_english": true,
+  "w1187_holds_retained": true,
+  "native_speaker_approval": false,
+  "tests_builds_scans_ci_browser": "not run"
+}

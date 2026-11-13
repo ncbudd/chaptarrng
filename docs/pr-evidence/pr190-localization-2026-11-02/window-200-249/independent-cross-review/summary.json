@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "32686f13760d04de2bba00af47fc561e632741de",
+  "exactTree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+  "scope": {
+    "positions": [
+      200,
+      249
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "parentPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0200-0249-primary-20261102",
+  "parentInputCellsSha256": "0ae5bf4f389ef8ea4360c1f668cdac8e676fce9c35c1ef5541888e015d6df9a6",
+  "parentPrimaryReviewSha256": "fcb4a9cda97bc894fc45a234a71a953434eafecb258fb11ec92fecaafb2abb99",
+  "primaryDispositionCounts": {
+    "propose-correction": 40,
+    "propose-refinement": 12,
+    "accept-current": 548
+  },
+  "crossReviewDispositionCounts": {
+    "accepted": 599,
+    "refined": 1
+  },
+  "crossReviewCountsByLocale": {
+    "es": {
+      "accepted": 50
+    },
+    "zh-Hans": {
+      "accepted": 50
+    },
+    "hi": {
+      "refined": 1,
+      "accepted": 49
+    },
+    "de": {
+      "accepted": 50
+    },
+    "ja": {
+      "accepted": 50
+    },
+    "fr": {
+      "accepted": 50
+    },
+    "pt-BR": {
+      "accepted": 50
+    },
+    "ar": {
+      "accepted": 50
+    },
+    "ko": {
+      "accepted": 50
+    },
+    "zh-Hant": {
+      "accepted": 50
+    },
+    "vi": {
+      "accepted": 50
+    },
+    "id": {
+      "accepted": 50
+    }
+  },
+  "proposalOutcomes": {
+    "primaryProposals": 52,
+    "acceptedAsProposed": 51,
+    "refined": 1,
+    "rejected": 0,
+    "missedCurrentIssues": 0,
+    "held": 0
+  },
+  "overrides": [
+    {
+      "sourceOrdinal": 200,
+      "locale": "hi",
+      "issue": "The primary Hindi candidate ends with the Chinese full stop U+3002. Replace it with the Hindi danda U+0964; the rest of the candidate accurately describes the integration and MAM search improvement."
+    }
+  ],
+  "inputCurrentCallerMismatches": 0,
+  "placeholderMismatches": 0,
+  "markupMismatches": 0,
+  "protectedLiteralMismatches": 0,
+  "localizedUiTermMismatches": 0,
+  "currentCellsReattested": 600,
+  "callerRefsReattested": 52,
+  "uniqueCallerLinesReattested": 32,
+  "uniqueCallerFiles": 7,
+  "uniqueCatalogs": 12,
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "blockers": []
+}

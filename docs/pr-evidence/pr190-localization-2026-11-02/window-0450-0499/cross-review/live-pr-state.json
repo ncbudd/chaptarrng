@@ -1,0 +1,23 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "state": "OPEN",
+  "isDraft": true,
+  "headRefName": "codex/chaptarrng-localization-complete-20261031",
+  "baseRefName": "main",
+  "head": "70f5ad2c2dc8222d8f35e09ba81ffa12acfff856",
+  "tree": "9bd50b4f149f69f7cd5b78937b45fe1745e6c695",
+  "parent": "48584ef3091372705d7774799ff33d77ce582ce6",
+  "checkpoint48584": {
+    "head": "48584ef3091372705d7774799ff33d77ce582ce6",
+    "tree": "33b635d2fa6d5d3f1b3207002daedd6993ce2be1"
+  },
+  "latestCommitChangedPaths": [
+    "M\tdocs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/README.md",
+    "M\tdocs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/SHA256SUMS",
+    "M\tdocs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/apply-summary.json"
+  ],
+  "all12LocaleCatalogsByteIdenticalTo48584": true,
+  "sourceCatalogByteIdenticalToFrozenPrimaryAndCheckpoint": true,
+  "sourceFollowupByteIdenticalToFrozenPrimaryAndCheckpoint": true
+}

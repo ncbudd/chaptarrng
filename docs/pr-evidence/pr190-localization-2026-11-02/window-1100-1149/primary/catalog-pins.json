@@ -1,0 +1,94 @@
+{
+  "allKeySetsIdentical": true,
+  "catalogKeyCount": 4165,
+  "catalogs": {
+    "ar": {
+      "bytes": 431828,
+      "gitBlob": "f90466ffbef6401a6c883602e69caacb90d60c5b",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "38799f39ddaea6f121815bcaea2d99268930c62c52d960fb9543e44fd4f055fd"
+    },
+    "de": {
+      "bytes": 361931,
+      "gitBlob": "0cb4989cac971840b34eb1dc5be3fa9b46f3fa23",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "e56c9be1e08ba1cbe50324fbafa1f1c0257ac8bfc8fb86988ec29b7ddea4068a"
+    },
+    "es": {
+      "bytes": 359571,
+      "gitBlob": "033d18c1e8d8923351e2b87e7868c1bdaea398ad",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "e45dfcf6e23b67cbc65963768ac380d9ce42f21bb4df85afea5875fd0faa05a8"
+    },
+    "fr": {
+      "bytes": 375137,
+      "gitBlob": "9ef777a826e8788d588880f67ed5e9d01b90fceb",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "ffe59fe7b06261163f2fa980a3cd203f591fca191cedd29e1c666868ea0b1384"
+    },
+    "hi": {
+      "bytes": 605859,
+      "gitBlob": "35f960f065f6e9e4f9e99906be671ee6a92f2493",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "e5d5459f8d92408b65b948a6254ade0111582efe8cc120457efd5cad5808bea9"
+    },
+    "id": {
+      "bytes": 333066,
+      "gitBlob": "6a38488336dfc46383059341d5a384ea2474f0fa",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "0b8e41fc53d4bd142450fdb86fb365d0a4c2b2bd6d9cbda0d9e8468c25385df3"
+    },
+    "ja": {
+      "bytes": 409478,
+      "gitBlob": "365f950c4ef649d1da40d7b52553e08a66be9df2",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "177476619689744b0081beb5a38ab1ff6c124e65b90bc737ae320ef110991383"
+    },
+    "ko": {
+      "bytes": 368586,
+      "gitBlob": "51c314f65453e551125140cf03d62152fa29cefe",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "48967df525eab8a326e8f148fb2dfbce7274bd546fa24ff9cd80f387b0dce84c"
+    },
+    "pt-BR": {
+      "bytes": 353090,
+      "gitBlob": "0c1b737f8f95ab918b02c61231c1685b53b2cb15",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "4be5fa95fa80c37d167085827d7b739b786520f2a5125207b59102c7a736f14b"
+    },
+    "vi": {
+      "bytes": 389523,
+      "gitBlob": "9523c87004a927e3d5fb44a338da822fb0c2f10f",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "fc30fcf8a90fc913c083eb8a1440e933cb81593504832c5bc546b520ea1d3f6c"
+    },
+    "zh-Hans": {
+      "bytes": 306745,
+      "gitBlob": "c03433f17f0cb7b3c7187451b2b9d6e8702361da",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "1ff51e10f180c94c994316b41e507cffc3206b92f2049e7f5e65bb89ba239e66"
+    },
+    "zh-Hant": {
+      "bytes": 308195,
+      "gitBlob": "860801645847b1dfd7041b44427dcdbd9b649d6f",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "bd25b50193bbf88974a32bde7d2a1b07e861e36f0109c3c4564f7f11949fb6d6"
+    }
+  },
+  "exactHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "exactTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "orderedCatalogKeysSha256": {
+    "ar": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "de": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "es": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "fr": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "hi": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "id": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "ja": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "ko": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "pt-BR": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "vi": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070",
+    "zh-Hans": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070",
+    "zh-Hant": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+  }
+}

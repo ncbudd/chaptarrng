@@ -1,0 +1,39 @@
+{
+  "notes": [
+    "No external dictionary or CLDR source was used.",
+    "Native-speaker review remains outstanding."
+  ],
+  "readingFormatCodeContext": {
+    "file": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+    "lines": [
+      8849,
+      9791,
+      9854
+    ],
+    "summary": "ReadingFormatMatch compares the candidate ReadingFormatId with expectedRf (3 for ebook, 2 for audiobook); the “native audiobook” phrase is a matching-format concept, not language/native-speaker status."
+  },
+  "records": {
+    "domain.audiobook": {
+      "guidance": "Use the product's established term consistently.",
+      "id": "domain.audiobook",
+      "meaning": "An audio edition of a book.",
+      "preferredTranslations": {},
+      "source": "Audiobook",
+      "sourceId": "AudiobookLabel"
+    },
+    "domain.ebook": {
+      "guidance": "Preserve the product's established capitalization where the target language permits.",
+      "id": "domain.ebook",
+      "meaning": "A digital text edition of a book.",
+      "preferredTranslations": {},
+      "source": "eBook",
+      "sourceId": "EbookLabel"
+    }
+  },
+  "source": {
+    "bytes": 7494,
+    "gitBlob": "4c9bd6f0f4eb8d0c5e1970f788fb85ab115a9382",
+    "path": "docs/localization/terminology.json",
+    "sha256": "4f766592488412e50cd2d166d584d996a93497abdeb38c2039e2e2d8bbdf3444"
+  }
+}

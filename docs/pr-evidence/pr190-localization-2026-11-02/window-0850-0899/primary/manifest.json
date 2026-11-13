@@ -1,0 +1,201 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateCount": 79,
+  "cellCount": 600,
+  "dispositionCounts": {
+    "accept-current": 509,
+    "hold": 12,
+    "propose-correction": 69,
+    "propose-refinement": 10
+  },
+  "files": [
+    {
+      "bytes": 12114,
+      "path": "INPUT-SHA256SUMS",
+      "sha256": "54e0d4950eafefab5cb7834c419122c9ffec07f9a6b5f37fa045f9acea6d0b51"
+    },
+    {
+      "bytes": 2954,
+      "path": "README.md",
+      "sha256": "c55d45b9f255eeb0a8f60eb5f88df46fa8b1b4bfff26c1f7ad147b7e4997e05e"
+    },
+    {
+      "bytes": 4893,
+      "path": "all-seven-pr-heads.json",
+      "sha256": "5da5ed2c1805a8cc302714ac82942a7ca911021b672fa1de3342bdb6ada42409"
+    },
+    {
+      "bytes": 12103,
+      "path": "caller-context-summary.json",
+      "sha256": "981423bcf38eb2b5c1139a4c9bfe053e687b951a104d59761a51f606108459fb"
+    },
+    {
+      "bytes": 94159,
+      "path": "caller-context.jsonl",
+      "sha256": "07eea43843c89a3c9cadefac522cd869e44c77ed516d5a8578d2bb23e3070837"
+    },
+    {
+      "bytes": 280811,
+      "path": "correction-candidates.jsonl",
+      "sha256": "c2a0948ee5796dca82236c481ce03f87ee62fd5aca27dc85cd183e6640c68a84"
+    },
+    {
+      "bytes": 41440,
+      "path": "current-missing-ids.json",
+      "sha256": "bb141161e9f34ff50d1260554ac7d35be9175e009ac9459001108c5403fb445e"
+    },
+    {
+      "bytes": 4726,
+      "path": "final-reattestation.json",
+      "sha256": "32d6b79ea5e0d6d726dbe9f74a671234dccdd7f6148f2e21592d432bf19112cc"
+    },
+    {
+      "bytes": 17301,
+      "path": "finalize_packet.py",
+      "sha256": "609b87fdcdf1934536741aa184fd9825c45bc333971d861ad012bbf4c1b7646d"
+    },
+    {
+      "bytes": 822300,
+      "path": "input-cells.jsonl",
+      "sha256": "e5b75eba0a33178b731cea80b0c85b27f26573d8b457d291f0539627f284828a"
+    },
+    {
+      "bytes": 28945,
+      "path": "input-manifest.json",
+      "sha256": "95dc1d242c2feeef223677637a1115da9287a4f86ac5c2c676b237bf1cecb091"
+    },
+    {
+      "bytes": 1220,
+      "path": "language-audit-addendum/README.md",
+      "sha256": "380f709d3e31482b698d73258a4b257e01753ea419653129a89e359a64a62745"
+    },
+    {
+      "bytes": 333,
+      "path": "language-audit-addendum/SHA256SUMS",
+      "sha256": "bc6ee9e09bbd38dfbb46311b3fabc018064527462113ee457ef4293d7e7465f2"
+    },
+    {
+      "bytes": 12091,
+      "path": "language-audit-addendum/build_language_audit.py",
+      "sha256": "cf89c63cc46bf9acd57e31aaf9065b4c28a0310d4eb96d6a90f2e58b355a7045"
+    },
+    {
+      "bytes": 315113,
+      "path": "language-audit-addendum/language-audit.jsonl",
+      "sha256": "3514bfad168e17663145e66d5fd2f2796331fa3455686fbf11dc6063630c07dd"
+    },
+    {
+      "bytes": 2486,
+      "path": "language-audit-addendum/manifest.json",
+      "sha256": "4c8c8517c81d7be9dbf3f917c2fc0ff994e934fd22f4fc1bc2da7a7bfcd3f2d7"
+    },
+    {
+      "bytes": 24359,
+      "path": "make_primary_review.py",
+      "sha256": "9edda6f497b7d479e841c3529153da9f1a3123aa6c5bd8f66644f83ce476f2f5"
+    },
+    {
+      "bytes": 1013,
+      "path": "manual-protected-literals.json",
+      "sha256": "6cc54d90e04033229a5815bdd14edb683ff02a8a83b6a79dca10f52b64912f76"
+    },
+    {
+      "bytes": 47108,
+      "path": "pipeline-caller-context.jsonl",
+      "sha256": "3f59b3093a3f7a7c816e881d13a8c914208ea2b43f9a80bf6fa6a299afd97e2a"
+    },
+    {
+      "bytes": 1456,
+      "path": "prepare-reattestation.json",
+      "sha256": "c050ea3f6707bf6fa745edaec5f530a3274639d87ce362cc3746e97c763620f9"
+    },
+    {
+      "bytes": 18294,
+      "path": "prepare_input.py",
+      "sha256": "8a9e12ebc68eb09fd7f538c05e9badda5c68f8b370fc0be9be401b233b9ecb51"
+    },
+    {
+      "bytes": 480,
+      "path": "primary-findings.json",
+      "sha256": "be6e7adf58ba94160fc7caf62d9769bbd7bb4e58d24be33c8b3542699db80ad8"
+    },
+    {
+      "bytes": 346906,
+      "path": "prior-disposition-boundary.json",
+      "sha256": "26e35f61abe5027efc81ad9d158fc3f3d4b763c4e917cab4042484bcb01decf8"
+    },
+    {
+      "bytes": 6948967,
+      "path": "prior-disposition-hashes.jsonl",
+      "sha256": "4352a8b0f8625153c8953e69a9a2d0c8671b6dc20c91e75a7f486bf0c1689209"
+    },
+    {
+      "bytes": 633337,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "be55108bdb3194f8b209f933f2ff4eb3b495b8ed5c05c1ed9325e72f94a6a3b3"
+    },
+    {
+      "bytes": 11512,
+      "path": "reconcile_prior.py",
+      "sha256": "0fcdb361927774b57b55dad22295108532ff18cdfa520684b12307ac4f45c8b4"
+    },
+    {
+      "bytes": 471,
+      "path": "reconciliation-reattestation.json",
+      "sha256": "29a2f76a4964318ca195abc18713fe10f35c8816b25ed40d12a93e2da997f6f9"
+    },
+    {
+      "bytes": 2176784,
+      "path": "review-cells.jsonl",
+      "sha256": "24adb31c97415543c38c8d6df9c4c961a2ebf06b8e45d11d73a637f5a8d76d3a"
+    },
+    {
+      "bytes": 29773,
+      "path": "source-slice.jsonl",
+      "sha256": "ebe6f3a6da6246886536188cbfa8023201ac31bf2f0d5aecb898288b16ae2e74"
+    },
+    {
+      "bytes": 2673,
+      "path": "summary.json",
+      "sha256": "25a355ecc8aa0d9a3f2f751cc600459b30b976373393b3a8e7761ca030b3309d"
+    },
+    {
+      "bytes": 299818,
+      "path": "w800-w849-applied-reattestation.jsonl",
+      "sha256": "18b1f0f450fd2047b427d56bfefe4effe0ccd8c47da41e3eb49b979ddefb0ca1"
+    },
+    {
+      "bytes": 20888,
+      "path": "w849-boundary-reattestation.jsonl",
+      "sha256": "06fa3d7df56c000c90a271a06d2e020cc789d639af16f26b82f62e1b8e96c9dd"
+    }
+  ],
+  "finalReattestationSha256": "32d6b79ea5e0d6d726dbe9f74a671234dccdd7f6148f2e21592d432bf19112cc",
+  "head": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "languageAuditAddendum": {
+    "candidateRows": 79,
+    "checksumManifest": "language-audit-addendum/SHA256SUMS",
+    "checksumManifestSha256": "bc6ee9e09bbd38dfbb46311b3fabc018064527462113ee457ef4293d7e7465f2",
+    "holdRows": 12,
+    "manifestSha256": "4c8c8517c81d7be9dbf3f917c2fc0ff994e934fd22f4fc1bc2da7a7bfcd3f2d7",
+    "path": "language-audit-addendum/",
+    "rows": 91
+  },
+  "localeCount": 12,
+  "machineAssistedConfidence": "moderate",
+  "nativeSpeakerApproval": false,
+  "positions": [
+    850,
+    899
+  ],
+  "priorDispositionRows": 10200,
+  "priorOverlapCount": 0,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "schemaVersion": 1,
+  "sourceCount": 50,
+  "sourceQueueCanonicalSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "tree": "e682581e3c577b62215658c374b15a9d3f8f8bd0",
+  "w849BoundaryMatches": 12,
+  "window": "W850-W899"
+}

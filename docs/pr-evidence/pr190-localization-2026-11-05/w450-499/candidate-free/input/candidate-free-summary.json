@@ -1,0 +1,43 @@
+{
+  "batch": "W450-499-Core",
+  "callerContextChangedAgainstMain": 6,
+  "callerContextKeys": 50,
+  "callerReferenceCount": 1448,
+  "candidateFreeOnly": true,
+  "carriedPriorHoldsReattested": 12,
+  "cellOrder": "sourceOrdinal ascending, then locale order in manifest",
+  "cells": 600,
+  "committedW400ApplicationRowsReattested": 140,
+  "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "integrityCheckFailures": {
+    "numeric": 2
+  },
+  "legacyNov2W450SelectionDisposition": "STALE_SELECTION_NO_KEY_OVERLAP",
+  "legacyNov2W450SourceKeyOverlap": 0,
+  "locales": 12,
+  "main": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "noCandidateSuggestionsIncluded": true,
+  "numericHeuristicFlagCells": [
+    {
+      "locale": "ja",
+      "sourceKey": "ChmodFolderHelpText",
+      "sourceOrdinal": 471
+    },
+    {
+      "locale": "ko",
+      "sourceKey": "ChmodFolderHelpText",
+      "sourceOrdinal": 471
+    }
+  ],
+  "priorW400CallerScanFilesReattested": 4350,
+  "priorW400CellsReattested": 600,
+  "result": "PASS",
+  "sourceChangesAgainstMain": 0,
+  "sourceIds": 50,
+  "sourceQueueVerifiedFromFrozenHistoricalScan": true,
+  "targetChangesAgainstMain": 0,
+  "targetKeySetParityVerifiedForAllCatalogs": true,
+  "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "w400CallerlessHoldsReattested": 12,
+  "workflowPathsInPrDiff": []
+}

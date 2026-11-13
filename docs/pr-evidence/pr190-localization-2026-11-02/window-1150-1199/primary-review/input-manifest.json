@@ -1,0 +1,75 @@
+{
+  "artifacts": [
+    {
+      "bytes": 71297,
+      "path": "caller-context.jsonl",
+      "sha256": "41a67039bf8b09cd3132f756ae76741947098ab26e3ac3f935820ba82754328a"
+    },
+    {
+      "bytes": 6159,
+      "path": "catalog-pins.json",
+      "sha256": "06b275e813555de0508363d65c1110f09915b3a020cb95b782438dfb374242d4"
+    },
+    {
+      "bytes": 1376027,
+      "path": "input-cells.jsonl",
+      "sha256": "d5707abb0e4838a62728f0c42dc667e97efdc57cd53b59da1f12e67e615dd7fe"
+    },
+    {
+      "bytes": 7674,
+      "path": "pinned-files.json",
+      "sha256": "6ee4af2429232c0720d02eb23fd1dfcf7dcb3b8b3f372cbc9aeb2bd0f5f60fb9"
+    },
+    {
+      "bytes": 11844458,
+      "path": "prior-disposition-reattestation.jsonl",
+      "sha256": "d390a1037a299ced368f46582eb68dff9e71daaea281a29bff65df3479fb851c"
+    },
+    {
+      "bytes": 19327,
+      "path": "prior-window-reattestation.json",
+      "sha256": "366a6673f973f82fc155f53dd50199abf8a68f1efa32087c11cd32c09989bce1"
+    },
+    {
+      "bytes": 6753,
+      "path": "snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "08a843036f1d3088b2a583620cef1b7f6120d932de4a167b6364ab4de2469443"
+    },
+    {
+      "bytes": 6760,
+      "path": "snapshots/start-all-pr-heads.json",
+      "sha256": "837a32899f6859fef76a0889fff31e5da0d52855f3c390f637983bfe53dc842d"
+    },
+    {
+      "bytes": 2963,
+      "path": "source-selection.json",
+      "sha256": "b706dd45696218607c3338916a4132490be40406bf1186b9524b407cc023c29e"
+    },
+    {
+      "bytes": 100111,
+      "path": "source-slice.jsonl",
+      "sha256": "1c07e345b0605d4c68b21cc022ad1de8dbd1e8e4bcb92f473a8f8ddc32df5d98"
+    },
+    {
+      "bytes": 8437,
+      "path": "w1149-backward-boundary.jsonl",
+      "sha256": "932ba236e7b3cd33eb9354eb8c0fd6e839ba6b37e7f4b48ee68ee7b4f57a9069"
+    },
+    {
+      "bytes": 10835,
+      "path": "w1200-forward-boundary.jsonl",
+      "sha256": "08fc5001c0723b675e82e9d86e60e5e53bf4990e184a88c4ed114d1a1c4f480d"
+    }
+  ],
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "cellCount": 600,
+  "createdAtUtc": "2026-11-03T00:10:03.658744+00:00",
+  "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "localeCount": 12,
+  "packet": "ChaptarrNG PR #190 W1150-W1199 primary exact-head inputs",
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "selectedSourceCount": 50,
+  "tree": "d073e1373021bf715db37461a12654f7e993cdbf"
+}

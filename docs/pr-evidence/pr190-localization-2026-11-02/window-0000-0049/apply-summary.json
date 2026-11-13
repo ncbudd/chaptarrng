@@ -1,0 +1,75 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pull_request": 190,
+  "input_head": "7bb2b2f977e81d214318b3f873afe8ab17f03ed5",
+  "input_tree": "5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb",
+  "source_indices": [
+    0,
+    49
+  ],
+  "source_ids": 50,
+  "cells_reviewed": 600,
+  "independent_review_cells": 600,
+  "primary_candidates": 65,
+  "independent_dispositions": {
+    "accepted": 573,
+    "missed": 25,
+    "refined": 2,
+    "held": 0,
+    "noop": 0
+  },
+  "exact_recommended_replacements": 90,
+  "applied_corrections": 90,
+  "corrections_by_locale": {
+    "ar": 11,
+    "de": 8,
+    "es": 11,
+    "fr": 2,
+    "hi": 6,
+    "id": 9,
+    "ja": 6,
+    "ko": 7,
+    "pt-BR": 9,
+    "vi": 9,
+    "zh-Hans": 5,
+    "zh-Hant": 7
+  },
+  "unique_catalog_keys_by_locale": {
+    "ar": 4165,
+    "de": 4165,
+    "es": 4165,
+    "fr": 4165,
+    "hi": 4165,
+    "id": 4165,
+    "ja": 4165,
+    "ko": 4165,
+    "pt_BR": 4165,
+    "vi": 4165,
+    "zh_CN": 4165,
+    "zh_TW": 4165
+  },
+  "exact_target_readbacks_passed": 90,
+  "source_current_and_candidate_hashes_reverified": true,
+  "caller_references_reattested": 134,
+  "unique_current_caller_lines": 95,
+  "shifted_registry_lines_reconciled": 86,
+  "placeholder_and_protected_literal_parity": "pass; seven source IDs have protected literal metadata omitted from input placeholderTokens, re-attested directly in every source/current/final value",
+  "prior_exact_head_overlap": 0,
+  "repository_cell_evidence_overlap": 0,
+  "native_speaker_approval": false,
+  "headed_browser_review": false,
+  "agent_dispatched_workflows": false,
+  "pre_push_validation": {
+    "invoked_once_during_git_push": true,
+    "hook_path": ".githooks/pre-push",
+    "command": "bash packaging/scripts/test-publish-image-aliases.sh",
+    "host": "kspld0",
+    "private_ephemeral_jit": false,
+    "rerun": false,
+    "reported_output": [
+      "ChaptarrNG and BookshelfNG retirement release-readiness gates passed.",
+      "Single standard image alias contract tests passed."
+    ]
+  },
+  "other_builds_scans_ci_release_tags_merges": false
+}

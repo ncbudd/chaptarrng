@@ -1,0 +1,438 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "task": "Primary semantic review of currentMissingIds positions 100–149 for pt-BR/ar/ko/zh-Hant/vi/id",
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "pullRequestState": {
+    "state": "OPEN",
+    "isDraft": true,
+    "mergeStateStatus": "CLEAN",
+    "headRefOid": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795"
+  },
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "currentMissingIdsCount": 1210,
+    "sliceStart": 100,
+    "sliceStopExclusive": 150,
+    "sliceCount": 50,
+    "sliceIds": [
+      "provider.field.f0efa2f6e6d2b",
+      "provider.field.f39bbc1d8b91b",
+      "provider.field.f0fe46e7d8d2a",
+      "provider.field.fffc595f7f1a9",
+      "provider.field.f40547e6a6702",
+      "provider.field.f1c419054d0a6",
+      "provider.field.ffd06a3b2e208",
+      "provider.field.f198ab7b8b868",
+      "provider.field.ff9db72ced1ee",
+      "provider.field.f3efeb5b0889f",
+      "provider.field.f275b6410b255",
+      "provider.field.f0e1e2d8486b6",
+      "provider.field.f8ae75fc385e8",
+      "provider.field.fa969d04ec2d0",
+      "provider.field.fef4618f47dc6",
+      "provider.field.f8cb711d03db7",
+      "provider.field.fa09f62eec6d8",
+      "provider.field.fdfc03b2059db",
+      "provider.field.faac2240a8e42",
+      "provider.field.f1a8f7d97f354",
+      "provider.field.f5cfc4f47114e",
+      "provider.field.fa837f9239f7c",
+      "provider.field.fe30f57f7c18f",
+      "provider.field.f0c83ef4d603a",
+      "provider.field.f6126605f5ec8",
+      "provider.field.f6407f6d3c82e",
+      "provider.field.f59c7aadcca5d",
+      "provider.field.f4e9aecfd3b92",
+      "provider.field.fbe17b52bf053",
+      "provider.field.f50daa23e691a",
+      "provider.field.fa207a3b75949",
+      "provider.field.f91bc6fc1d38a",
+      "provider.field.ffbbc0487f001",
+      "provider.field.f285fb519aa1a",
+      "provider.field.ffd272adc2f58",
+      "provider.field.f29b6b9e083cc",
+      "provider.field.f4891b0209fad",
+      "provider.field.f1ee0e50bc744",
+      "provider.field.fa4f2502db2e0",
+      "provider.field.fd296d5ee89d3",
+      "provider.field.f1ee868fd9557",
+      "provider.field.f70589413a3c9",
+      "provider.field.f21d73e148c35",
+      "provider.field.f8d223bd1b121",
+      "provider.field.fc2ff59e65c06",
+      "provider.field.f258d6cc199ae",
+      "provider.field.f7c6679a4c0b7",
+      "provider.field.ffb082a613681",
+      "provider.field.f43d5fbd565ae",
+      "provider.field.f5f2d90a6787f"
+    ]
+  },
+  "sourceCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "bytes": 312087,
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "keyCount": 4165
+  },
+  "targetCatalogs": {
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "f010cd8fe109fb57a6925502902180383fe993ea",
+      "sha256": "cf370a5dc5e985b0b784b1b35f658c9f3775ec3f51eb71985e8f0e15c01ac8b5",
+      "keyCount": 4165
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "45a9b34963c920b381f73879b7fbef23de3a0944",
+      "sha256": "682ac96e7d071de1b37263bc81c90f2a6589833ebab2404af5a34baf7330c1ef",
+      "keyCount": 4165
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "75d108f9cf2e13da8b43b722dd302ec9e8e30306",
+      "sha256": "36323207484b532742f3344484daa0eea044963f9389053cce2603b5958856d8",
+      "keyCount": 4165
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "c8ea7cf54310eab73ddb56de67ec24717acfc6a5",
+      "sha256": "81715464d379cb45594768510058daec1dee4febb312a7874e36cb2eab399c59",
+      "keyCount": 4165
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "daf15d59a089179b7086bbac739ac80fd8ef6c3f",
+      "sha256": "bf815642b96fa891bdc6bf1821765512c9a61bffdab5a10beccc0bf0396ca1e4",
+      "keyCount": 4165
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "11fccf03ba088884e1e52fbfa6276b0752eba633",
+      "sha256": "ac86dd1898efa605b1b08b2828de66a917f53dfe5408a6f160b383d0168f9d09",
+      "keyCount": 4165
+    }
+  },
+  "input": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-b-20261102/review-input.jsonl",
+    "sha256": "e0708b0d3c09a3b82a8a93e7c9fa9c5ede96ae1fe4d9aa8e17ae7bf2bcdf9f89",
+    "rows": 300
+  },
+  "scope": {
+    "positions": [
+      100,
+      149
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 300
+  },
+  "rowsReviewed": 300,
+  "counts": {
+    "accept-current": 273,
+    "propose-refinement": 25,
+    "propose-correction": 2
+  },
+  "countsByLocale": {
+    "pt-BR": {
+      "accept-current": 45,
+      "propose-refinement": 5
+    },
+    "ar": {
+      "accept-current": 47,
+      "propose-refinement": 3
+    },
+    "ko": {
+      "accept-current": 44,
+      "propose-refinement": 4,
+      "propose-correction": 2
+    },
+    "zh-Hant": {
+      "accept-current": 48,
+      "propose-refinement": 2
+    },
+    "vi": {
+      "accept-current": 45,
+      "propose-refinement": 5
+    },
+    "id": {
+      "accept-current": 44,
+      "propose-refinement": 6
+    }
+  },
+  "proposals": 27,
+  "proposalTargets": [
+    {
+      "sourcePosition": 115,
+      "sourceId": "provider.field.f8cb711d03db7",
+      "locale": "pt-BR",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID da lista",
+      "recommendedTargetSha256": "c2a9f737c728c7050910b7f787aeb791b65edf825858e2584f47ab36485d7b15",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 115,
+      "sourceId": "provider.field.f8cb711d03db7",
+      "locale": "ar",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "معرّف القائمة",
+      "recommendedTargetSha256": "358020c4d533b60ccea404155c6c20141524d8a7879a5478fb5f22da4eb8f891",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 115,
+      "sourceId": "provider.field.f8cb711d03db7",
+      "locale": "ko",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "목록 ID",
+      "recommendedTargetSha256": "2d376c49f6bdc45a30655b19fc7da023cff8b5388a0c16d69fe3e314ed87e718",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 115,
+      "sourceId": "provider.field.f8cb711d03db7",
+      "locale": "vi",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID danh sách",
+      "recommendedTargetSha256": "8dcda8161583473eecca43d06ffca10598bf2d947dd9618a2808975ddce1ec24",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 115,
+      "sourceId": "provider.field.f8cb711d03db7",
+      "locale": "id",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID daftar",
+      "recommendedTargetSha256": "e051804f248ac5bdb5a10f8bd9c02f2cf6b4bcd7de97509cc0d5ce09a077ecda",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 116,
+      "sourceId": "provider.field.fa09f62eec6d8",
+      "locale": "zh-Hant",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Goodreads 清單 ID",
+      "recommendedTargetSha256": "e9600857bd282ae27c57995b6639fc758a21f1edfa9f68c8f6567e1cc4018534",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 122,
+      "sourceId": "provider.field.fe30f57f7c18f",
+      "locale": "ko",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "이 목록에서 오디오북을 가져올 때 사용할 메타데이터 프로필입니다.",
+      "recommendedTargetSha256": "d5c6bfa1c3302088463a465ecacaea66d6ada7ac1d8ad1e6b996f83a166c9cba",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 122,
+      "sourceId": "provider.field.fe30f57f7c18f",
+      "locale": "vi",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Hồ sơ siêu dữ liệu dùng khi nhập sách nói từ danh sách này.",
+      "recommendedTargetSha256": "f5e53ef206e66692ac63b54b81db8944fea996d2d954d3ea82ba0176f5d5bf51",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 122,
+      "sourceId": "provider.field.fe30f57f7c18f",
+      "locale": "id",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Profil metadata yang digunakan saat mengimpor buku audio dari daftar ini.",
+      "recommendedTargetSha256": "94bacf772ab2ab3dd31f02cfbbcb1f6012bda7b90167adbfc874120ac5365e00",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 123,
+      "sourceId": "provider.field.f0c83ef4d603a",
+      "locale": "ko",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "이 목록에서 전자책을 가져올 때 사용할 메타데이터 프로필입니다.",
+      "recommendedTargetSha256": "3d6f0739019959175b35f8902becbeae1d05d63c88af49213bd20a7cb4b04673",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 123,
+      "sourceId": "provider.field.f0c83ef4d603a",
+      "locale": "vi",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Hồ sơ siêu dữ liệu dùng khi nhập sách điện tử từ danh sách này.",
+      "recommendedTargetSha256": "575d0d0292cef406a461b7a2a2be98324184d65eaebccc1849a1c456098f1b91",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 123,
+      "sourceId": "provider.field.f0c83ef4d603a",
+      "locale": "id",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Profil metadata yang digunakan saat mengimpor buku elektronik dari daftar ini.",
+      "recommendedTargetSha256": "eb48d3938d6441fbdf7c6396948c1dda0cfa6ec7017138323199a4ab233fbf29",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 126,
+      "sourceId": "provider.field.f59c7aadcca5d",
+      "locale": "ko",
+      "disposition": "propose-correction",
+      "recommendedTarget": "선택 사항: 이 목록에서 오디오북을 가져올 때 적용할 태그입니다.",
+      "recommendedTargetSha256": "226c2b2f4de195103e934d7fe439a64df115de21ae4444043432a4ec01ead7cb",
+      "confidence": "high"
+    },
+    {
+      "sourcePosition": 126,
+      "sourceId": "provider.field.f59c7aadcca5d",
+      "locale": "id",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Opsional: tag yang diterapkan saat mengimpor buku audio dari daftar ini.",
+      "recommendedTargetSha256": "fa195a2a9e9a76b85285c8e86dd90b9d7c2e9e5fa2cde39bfe1bbaddc39d439b",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 127,
+      "sourceId": "provider.field.f4e9aecfd3b92",
+      "locale": "ko",
+      "disposition": "propose-correction",
+      "recommendedTarget": "선택 사항: 이 목록에서 전자책을 가져올 때 적용할 태그입니다.",
+      "recommendedTargetSha256": "0dcbdfed5ddabc311007e32e583e730769388bbe696359e8b06ae4d67fe86aa6",
+      "confidence": "high"
+    },
+    {
+      "sourcePosition": 127,
+      "sourceId": "provider.field.f4e9aecfd3b92",
+      "locale": "vi",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Tùy chọn: các thẻ áp dụng khi nhập sách điện tử từ danh sách này.",
+      "recommendedTargetSha256": "ac636c624b65933f1255eb9ffbea345267c1548237c4a29e4bffd7f54dbfe638",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 127,
+      "sourceId": "provider.field.f4e9aecfd3b92",
+      "locale": "id",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Opsional: tag yang diterapkan saat mengimpor buku elektronik dari daftar ini.",
+      "recommendedTargetSha256": "0d40e8fde938c8f4db8846c47728d979c37bc7a205d246b5488fce63f3833676",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 128,
+      "sourceId": "provider.field.fbe17b52bf053",
+      "locale": "pt-BR",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID da série",
+      "recommendedTargetSha256": "1f36e3e4f3452559e932abc57c60995626eaf8e5741da43edd15b61937936df4",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 128,
+      "sourceId": "provider.field.fbe17b52bf053",
+      "locale": "ar",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "معرّف السلسلة",
+      "recommendedTargetSha256": "6d5508badc290c66e83890d68189d34a802cd44f01aa0b333707b043877402f7",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 129,
+      "sourceId": "provider.field.f50daa23e691a",
+      "locale": "pt-BR",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID da série do Goodreads",
+      "recommendedTargetSha256": "938ca27b06d7f00d237b4519c8d419b7c0c7c683c58c70224050d1c3655c1fc7",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 129,
+      "sourceId": "provider.field.f50daa23e691a",
+      "locale": "ar",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "معرّف سلسلة Goodreads",
+      "recommendedTargetSha256": "3a9df272afa01f0c7469c5c0f2a114dd86fc5386375a8e36f7b0855807ded666",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 129,
+      "sourceId": "provider.field.f50daa23e691a",
+      "locale": "zh-Hant",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "Goodreads 系列 ID",
+      "recommendedTargetSha256": "55f89f0c52f6b1d115e717da93ee4e095ba11402e7b367d52df424903157ca36",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 129,
+      "sourceId": "provider.field.f50daa23e691a",
+      "locale": "vi",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID bộ truyện trên Goodreads",
+      "recommendedTargetSha256": "eae1e00d2276b168c8442a8211d5bad91f33e5550c68a27f4bac5343b7a07b85",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 129,
+      "sourceId": "provider.field.f50daa23e691a",
+      "locale": "id",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "ID seri Goodreads",
+      "recommendedTargetSha256": "f8b146502b9686499b696c4e6f826ed36c1377c1b2d2af6d5eccc5a8390f51a2",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 141,
+      "sourceId": "provider.field.f70589413a3c9",
+      "locale": "pt-BR",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "URL base",
+      "recommendedTargetSha256": "f1a52d70f8c5d169c6e94a65b7c011e547cdc017c230c676c2bdfcf13cc5ea82",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 142,
+      "sourceId": "provider.field.f21d73e148c35",
+      "locale": "pt-BR",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "URL base da API do Hardcover",
+      "recommendedTargetSha256": "a425091f38e576c80515f9760900d9306bd16a5a13768d12c950ab73cd604c5e",
+      "confidence": "moderate"
+    },
+    {
+      "sourcePosition": 145,
+      "sourceId": "provider.field.f258d6cc199ae",
+      "locale": "ko",
+      "disposition": "propose-refinement",
+      "recommendedTarget": "선택한 Hardcover 계정에서 동기화할 목록이나 읽기 상태를 선택하세요.",
+      "recommendedTargetSha256": "1e2f96535eebee317cda9fc17f8bd897433c032d1ff833fa3ee054dce9a4a1e3",
+      "confidence": "moderate"
+    }
+  ],
+  "callerReferencesReattested": 4272,
+  "uniqueCallerFiles": 12,
+  "uniqueCallerLines": 705,
+  "sourceTargetCatalogCallerMismatches": 0,
+  "placeholderMismatches": 0,
+  "overlapWithEarlierRowLevelWindows": {
+    "W0_49": 0,
+    "W50_99": 0
+  },
+  "historicalAggregateOverlap": "unknown; not inferred from absent row-level evidence",
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryMutated": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "blockers": []
+}

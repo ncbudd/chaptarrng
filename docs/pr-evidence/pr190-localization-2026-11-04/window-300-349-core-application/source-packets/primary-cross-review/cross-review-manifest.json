@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W300-W349 Core",
+  "source": {
+    "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w300-349-source",
+    "head": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+    "tree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+    "clean": true
+  },
+  "inputs": {
+    "candidateFreePacket": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/candidate-free/input",
+      "sha256SumsPath": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/candidate-free/input/SHA256SUMS.txt",
+      "sha256SumsFileSha256": "001d050bdd38a683cf16dc74233ee305a169e89307b6ce8a2762e89542b9a709",
+      "listedFiles": 23,
+      "candidateCellsPath": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/candidate-free/input/candidate-free-cells.jsonl",
+      "candidateCellsSha256": "c796a6d6f357480bb25b98c722feceefc2cbef83c5efc065581b4c2f991332a9",
+      "candidateCells": 600
+    },
+    "primaryProposalsOnly": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/primary-review/primary-review-proposals.jsonl",
+      "sha256": "bcfbd92eda1e9780b7fb61b9fb7ef21330950a68de1c9e03408e955c36349c46",
+      "rows": 87
+    }
+  },
+  "outputs": {
+    "decisions": "cross-review-decisions.jsonl",
+    "decisionRows": 87,
+    "summary": "cross-review-summary.json"
+  },
+  "boundary": {
+    "blindReviewPacketAccessed": false,
+    "otherPrimaryReviewArtifactsAccessed": false,
+    "prBodyAccessed": false,
+    "outsideProposalsAccessed": false,
+    "catalogsModified": false,
+    "remotePrModified": false,
+    "testsBuildsScansCiRun": false,
+    "firstProposalEmbeddedRationaleExposedDuringSchemaInspection": true,
+    "proposalRationalesUsedForDecisions": false
+  },
+  "reviewer": "independent cross-review based on candidate-free source/caller evidence; native-speaker approval remains outstanding; first proposal rationale field was briefly exposed during schema inspection and not used"
+}

@@ -1,0 +1,460 @@
+{
+  "findings": {
+    "254|vi": [
+      "propose-correction",
+      "Gửi các chỉnh sửa đến thư viện",
+      "Đồng bộ suggests synchronization with the library; this checkbox sends Chaptarr library edits to the AudioBookShelf integration, so the target should state sending edits.",
+      "high"
+    ],
+    "256|hi": [
+      "propose-correction",
+      "AudioBookShelf टैगों को अनदेखा करें",
+      "The current wording has unnatural word order; this restores the Ignore action and names the tags belonging to AudioBookShelf.",
+      "high"
+    ],
+    "256|zh-Hans": [
+      "propose-correction",
+      "忽略 AudioBookShelf 标签",
+      "The current label omits the Ignore action; this renders the full checkbox behavior.",
+      "high"
+    ],
+    "256|ja": [
+      "propose-correction",
+      "AudioBookShelf タグを無視",
+      "The current label omits the Ignore action; this renders the full checkbox behavior.",
+      "high"
+    ],
+    "256|ko": [
+      "propose-refinement",
+      "AudioBookShelf 태그 무시",
+      "The current word order is unnatural; this makes the checkbox label read as “ignore AudioBookShelf tags.”",
+      "moderate"
+    ],
+    "256|zh-Hant": [
+      "propose-correction",
+      "忽略 AudioBookShelf 標籤",
+      "The current label omits the Ignore action; this renders the full checkbox behavior.",
+      "high"
+    ],
+    "259|ar": [
+      "propose-correction",
+      "استخدم AudioBookShelf OpenID Connect (SSO) لإنشاء مفتاح API تلقائيًا. ستفتح نافذة منبثقة في المتصفح بعنوان URL الخاص بـ AudioBookShelf الذي تم إعداده، لذا يجب أن يكون متاحًا من متصفحك. يجب أن يسمح خادم AudioBookShelf بعنوان URL لردّ النداء الخاص بهذا التطبيق ضمن OpenID Connect → Mobile Redirect URIs.",
+      "The current Arabic leaves the word app untranslated in the callback-URL instruction; this uses Arabic for “this application” while preserving the OIDC menu path and API terms.",
+      "moderate"
+    ],
+    "259|ko": [
+      "propose-correction",
+      "AudioBookShelf OpenID Connect(SSO)를 사용해 API 키를 자동으로 생성합니다. 설정된 AudioBookShelf URL을 여는 브라우저 팝업이 표시되므로 해당 URL은 브라우저에서 접근할 수 있어야 합니다. 이 앱의 콜백 URL을 AudioBookShelf 서버의 OpenID Connect → Mobile Redirect URIs에 허용해야 합니다.",
+      "The current text assigns the callback URL to the AudioBookShelf app; the source means the callback URL for this app, Chaptarr.",
+      "high"
+    ],
+    "264|fr": [
+      "propose-refinement",
+      "Permettre à Chaptarr de modifier ou supprimer les livres correspondants sur le serveur de contenu lorsque des livres sont modifiés ou supprimés dans Chaptarr.",
+      "Clarifies that the book changes and deletions occur within Chaptarr; the current “changent en Chaptarr” phrasing is awkward.",
+      "moderate"
+    ],
+    "264|pt-BR": [
+      "propose-refinement",
+      "Permitir que o Chaptarr edite ou exclua livros correspondentes no servidor de conteúdo quando eles forem alterados ou excluídos no Chaptarr.",
+      "Clarifies that the source books are changed or deleted in Chaptarr; the current “mudam em Chaptarr” phrasing is vague.",
+      "moderate"
+    ],
+    "264|ar": [
+      "propose-correction",
+      "السماح لـ Chaptarr بتعديل الكتب المطابقة على خادم المحتوى أو حذفها عند تغيير الكتب في Chaptarr أو حذفها منه.",
+      "The current clause coordination is ungrammatical and obscures that source-book changes or deletions occur in Chaptarr.",
+      "high"
+    ],
+    "264|ja": [
+      "propose-correction",
+      "Chaptarrで書籍が変更または削除された場合に、Chaptarrがコンテンツサーバー上の該当する書籍を編集または削除できるようにします。",
+      "The current Japanese says the books are changed “to Chaptarr,” reversing the meaning of changes made within Chaptarr.",
+      "high"
+    ],
+    "264|ko": [
+      "propose-correction",
+      "Chaptarr에서 책이 변경되거나 삭제되면 Chaptarr가 콘텐츠 서버의 일치하는 책을 수정하거나 삭제하도록 허용합니다.",
+      "The current Korean says books change “to Chaptarr”; this specifies that changes happen in Chaptarr and preserve the remote permission.",
+      "high"
+    ],
+    "270|es": [
+      "propose-refinement",
+      "URL del webhook",
+      "Localizes the generic field label and matches the Spanish wording used by the Discord helper text.",
+      "moderate"
+    ],
+    "270|de": [
+      "propose-refinement",
+      "Webhook-URL",
+      "Uses standard German compound hyphenation for the generic technical field label.",
+      "moderate"
+    ],
+    "270|fr": [
+      "propose-refinement",
+      "URL du webhook",
+      "Localizes the generic field label and matches the French wording used by the Discord helper text.",
+      "moderate"
+    ],
+    "270|pt-BR": [
+      "propose-refinement",
+      "URL do webhook",
+      "Localizes the generic field label and matches the Brazilian Portuguese wording used by the Discord helper text.",
+      "moderate"
+    ],
+    "270|ar": [
+      "propose-refinement",
+      "رابط Webhook",
+      "Localizes URL as “link” while retaining the commonly used Webhook technical term.",
+      "moderate"
+    ],
+    "270|ko": [
+      "propose-refinement",
+      "웹훅 URL",
+      "Uses the established Korean rendering of webhook in the shared field label.",
+      "moderate"
+    ],
+    "270|vi": [
+      "propose-refinement",
+      "URL của webhook",
+      "Localizes the generic field label while retaining the technical term webhook.",
+      "moderate"
+    ],
+    "270|id": [
+      "propose-refinement",
+      "URL webhook",
+      "Localizes the generic field label in the Indonesian order used for technical URL labels.",
+      "moderate"
+    ],
+    "277|ar": [
+      "propose-correction",
+      "اسم المضيف أو عنوان IP لخادم البريد الإلكتروني",
+      "Adds the missing “address” and replaces the awkward “IP from the server” construction.",
+      "high"
+    ],
+    "277|vi": [
+      "propose-refinement",
+      "Tên máy chủ hoặc địa chỉ IP của máy chủ email",
+      "Localizes the English word Hostname and spells out the address relation for this email-server field.",
+      "moderate"
+    ],
+    "277|id": [
+      "propose-refinement",
+      "Nama host atau alamat IP server email",
+      "Localizes Hostname and clarifies that IP refers to an address.",
+      "moderate"
+    ],
+    "278|pt-BR": [
+      "propose-refinement",
+      "Exigir criptografia",
+      "Uses a direct checkbox action; the current wording names the need for encryption rather than requiring it.",
+      "moderate"
+    ],
+    "279|es": [
+      "propose-refinement",
+      "Requiere SSL (solo para el puerto 465) o StartTLS (para cualquier otro puerto)",
+      "Uses natural Spanish for the port-specific conditions; the current “todo otro puerto” is awkward.",
+      "moderate"
+    ],
+    "279|de": [
+      "propose-correction",
+      "SSL ist nur bei Port 465 erforderlich; für alle anderen Ports ist StartTLS erforderlich.",
+      "The current German word order “Port 465 nur” is ungrammatical and leaves the SSL-only condition unclear.",
+      "high"
+    ],
+    "279|ar": [
+      "propose-correction",
+      "يلزم استخدام SSL (على المنفذ 465 فقط) أو StartTLS (على أي منفذ آخر).",
+      "The current Arabic uses ميناء, which means a seaport; المنفذ is the networking term for a port.",
+      "high"
+    ],
+    "279|ko": [
+      "propose-refinement",
+      "SSL(포트 465에서만) 또는 StartTLS(그 밖의 모든 포트에서)를 사용해야 합니다.",
+      "Clarifies the SSL-only port and the StartTLS rule for every other port.",
+      "moderate"
+    ],
+    "288|es": [
+      "propose-refinement",
+      "Adjuntar los libros al importarlos",
+      "Uses a natural email-attachment action and makes the timing explicit; the current “anexo a la importación” is awkward.",
+      "moderate"
+    ],
+    "288|zh-Hans": [
+      "propose-correction",
+      "导入时将书籍作为附件添加",
+      "Uses 导入 for importing books; the current 进口 reads as commercial imports.",
+      "high"
+    ],
+    "288|hi": [
+      "propose-refinement",
+      "आयात के समय पुस्तकों को अनुलग्नक के रूप में जोड़ें",
+      "Recasts the awkward “on import” phrase as an action performed at import time.",
+      "moderate"
+    ],
+    "288|de": [
+      "propose-refinement",
+      "Bücher beim Import als Anhang hinzufügen",
+      "Uses a natural German time phrase and keeps Anhang as an email attachment.",
+      "moderate"
+    ],
+    "288|ja": [
+      "propose-correction",
+      "インポート時に書籍を添付します",
+      "The current Japanese uses 入力 (input) instead of インポート (import) and does not express attachment clearly.",
+      "high"
+    ],
+    "288|fr": [
+      "propose-correction",
+      "Joindre les livres en pièces jointes lors de l’importation",
+      "Uses the French term for email attachments; annexe means an annex or appendix.",
+      "high"
+    ],
+    "288|pt-BR": [
+      "propose-refinement",
+      "Anexar os livros ao importá-los",
+      "Uses a concise, natural action phrase for attaching book files during import.",
+      "moderate"
+    ],
+    "288|ar": [
+      "propose-correction",
+      "إرفاق الكتب عند استيرادها",
+      "Replaces الواردات, which suggests commercial imports, with a natural action at the time books are imported.",
+      "high"
+    ],
+    "288|ko": [
+      "propose-correction",
+      "가져올 때 책을 첨부 파일로 추가",
+      "The current 수입 can mean imports of goods; this states that books are attached when they are imported into the library.",
+      "high"
+    ],
+    "288|zh-Hant": [
+      "propose-correction",
+      "匯入時將書籍作為附件新增",
+      "Uses 匯入 for importing books; the current 進口 reads as commercial imports.",
+      "high"
+    ],
+    "288|id": [
+      "propose-refinement",
+      "Lampirkan buku saat mengimpornya",
+      "Uses a natural action phrase and makes the import timing explicit.",
+      "moderate"
+    ],
+    "290|es": [
+      "propose-correction",
+      "Prefijo de URL",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|zh-Hans": [
+      "propose-correction",
+      "URL 前缀",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|hi": [
+      "propose-correction",
+      "URL उपसर्ग",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|de": [
+      "propose-correction",
+      "URL-Präfix",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|ja": [
+      "propose-correction",
+      "URLプレフィックス",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|fr": [
+      "propose-correction",
+      "Préfixe d’URL",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|pt-BR": [
+      "propose-correction",
+      "Prefixo de URL",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|ar": [
+      "propose-correction",
+      "بادئة URL",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|ko": [
+      "propose-correction",
+      "URL 접두사",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|zh-Hant": [
+      "propose-correction",
+      "URL 前綴",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|vi": [
+      "propose-correction",
+      "Tiền tố URL",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "290|id": [
+      "propose-correction",
+      "Prefiks URL",
+      "Translates the raw code-style label and reflects the reverse-proxy prefix described by both callers.",
+      "high"
+    ],
+    "292|zh-Hans": [
+      "propose-correction",
+      "添加到书架",
+      "The current value leaves Bookshelves untranslated.",
+      "high"
+    ],
+    "292|zh-Hant": [
+      "propose-correction",
+      "新增至書架",
+      "The current value leaves Bookshelves untranslated.",
+      "high"
+    ],
+    "296|de": [
+      "propose-refinement",
+      "Der Kaufort wird auf der Goodreads-Website angezeigt.",
+      "Names the purchase location as the subject; the current opening Sie can read as formal “you.”",
+      "moderate"
+    ],
+    "296|ar": [
+      "propose-refinement",
+      "سيظهر مكان الشراء على موقع Goodreads.",
+      "Names the purchase location explicitly and uses masculine agreement for مكان.",
+      "moderate"
+    ],
+    "297|fr": [
+      "propose-refinement",
+      "Serveur Gotify",
+      "Removes the unnecessary definite article from this field label.",
+      "moderate"
+    ],
+    "298|hi": [
+      "propose-correction",
+      "Gotify सर्वर का URL; आवश्यकता होने पर http(s):// और पोर्ट शामिल करें",
+      "The current text asks for the port twice; this states that the scheme and port are included when needed.",
+      "high"
+    ],
+    "299|hi": [
+      "propose-refinement",
+      "ऐप टोकन",
+      "Uses the standard Hindi spelling ऐप for the app token field.",
+      "moderate"
+    ],
+    "262|ko": [
+      "propose-refinement",
+      "선택 사항이며, 콘텐츠 서버에서 인증이 필요한 경우에만 입력하면 됩니다.",
+      "The current Korean is understandable but has a spacing error and reads as a fragment; the revised help text states clearly that credentials are needed only when the content server requires authentication.",
+      "moderate"
+    ],
+    "263|ar": [
+      "propose-refinement",
+      "السماح بالتحرير والحذف",
+      "This checkbox label has an incorrect initial hamza in the imperative and uses a less precise word for deletion; this noun phrase cleanly names the edit/delete permission.",
+      "moderate"
+    ],
+    "264|es": [
+      "propose-refinement",
+      "Permitir que Chaptarr edite o elimine los libros correspondientes en el servidor de contenido cuando se modifiquen o eliminen en Chaptarr.",
+      "The current Spanish is understandable but repeats the book subject and uses a less natural relative clause; the candidate states the matching-book permission and trigger more clearly.",
+      "moderate"
+    ],
+    "264|hi": [
+      "propose-correction",
+      "जब किताबें Chaptarr में बदलें या वहाँ से हटाई जाएँ, तो Chaptarr को कंटेंट सर्वर पर उनसे मेल खाने वाली किताबों को संपादित करने या हटाने की अनुमति दें।",
+      "The current phrase संगत किताबें means compatible books, while the caller requires books matching the local Chaptarr item; the candidate restores that matching relation and trigger.",
+      "high"
+    ],
+    "264|vi": [
+      "propose-refinement",
+      "Cho phép Chaptarr chỉnh sửa hoặc xóa các sách tương ứng trên máy chủ nội dung khi sách được thay đổi hoặc bị xóa trong Chaptarr.",
+      "The current Vietnamese adds an unnecessary để after cho phép and has awkward wording for deletion from Chaptarr; the candidate states the matching books and trigger more naturally.",
+      "moderate"
+    ],
+    "276|zh-Hant": [
+      "propose-refinement",
+      "伺服器",
+      "The current term 服務器 follows mainland terminology, while this Traditional Chinese catalog consistently uses the Taiwan term 伺服器 elsewhere in the same settings.",
+      "moderate"
+    ],
+    "279|zh-Hant": [
+      "propose-refinement",
+      "需要 SSL（僅限連接埠 465）或 StartTLS（任何其他連接埠）",
+      "This Traditional Chinese target uses 端口, while the same catalog uses the Taiwan networking term 連接埠; this candidate preserves the port-specific security requirement with consistent terminology.",
+      "moderate"
+    ],
+    "297|zh-Hant": [
+      "propose-refinement",
+      "Gotify 伺服器",
+      "The current term 服務器 follows mainland terminology, while this Traditional Chinese catalog uses the Taiwan term 伺服器 in the neighboring Gotify URL help and other settings.",
+      "moderate"
+    ]
+  },
+  "sourceRationales": {
+    "250": "The caller is the AudioBookShelf URL-base textbox; the target must preserve the example URL, path tokens, and service name.",
+    "251": "The caller is the AudioBookShelf password/API credential field; targets preserve the service and API-key meaning.",
+    "252": "The caller is a checkbox controlling removal of missing AudioBookShelf items after Chaptarr deletion.",
+    "253": "The caller is help text for the missing-item cleanup checkbox; it distinguishes AudioBookShelf marking books missing from Chaptarr deleting unavailable library items.",
+    "254": "The label is shared by AudioBookShelf and Calibre Content Server checkboxes that send library edits outward.",
+    "255": "The caller explains when Chaptarr sends updated metadata to the matching AudioBookShelf item and what happens if the files are not renamed.",
+    "256": "The caller is a checkbox for ignoring tags stored on AudioBookShelf items.",
+    "257": "The caller explains that these are AudioBookShelf item tags, gives the literal Processed tag, and distinguishes automatic from manual pushes.",
+    "258": "The caller is the hidden OIDC authentication action for AudioBookShelf.",
+    "259": "The caller explains AudioBookShelf OIDC/SSO key generation, browser reachability, and the exact Mobile Redirect URIs configuration path.",
+    "260": "The caller is the Calibre Content Server URL field and explicitly requires the scheme and port in its example.",
+    "261": "The caller is a warning for the Calibre Content Server connection, explaining that synchronization is one-way from Chaptarr.",
+    "262": "The caller attaches this help to both username and password fields for the Calibre Content Server.",
+    "263": "The caller is a permission checkbox for changing or deleting matching books in Calibre Content Server.",
+    "264": "The caller describes the scope and trigger conditions for that remote edit/delete permission.",
+    "265": "The caller is a checkbox for forwarding books imported through library scans to Calibre Content Server.",
+    "266": "The caller clarifies that scan-imported books, including those added through calibre-web, are also forwarded.",
+    "267": "The caller describes forwarding an updated record to Calibre Content Server when a book changes.",
+    "268": "The caller is a hidden-if-empty label for script arguments.",
+    "269": "The caller is help text for the command-line arguments field.",
+    "270": "The field label is shared by Discord and Slack webhook URL settings.",
+    "271": "The caller is Discord channel webhook URL help text.",
+    "272": "The caller explains the Discord post username and its default when left blank.",
+    "273": "The caller is the Discord avatar textbox label.",
+    "274": "The caller explains the avatar used for notifications from the integration.",
+    "275": "The caller explains the Host override and machine-name fallback for Discord notifications.",
+    "276": "The caller is the email server hostname/IP field label.",
+    "277": "The caller is help text for the email server host field.",
+    "278": "The caller is an email transport checkbox requiring encryption.",
+    "279": "The caller explains the port-dependent SSL versus StartTLS condition.",
+    "280": "The caller is the sender-address label shared by Email, Mailgun, and SendGrid.",
+    "281": "The caller is the recipient-address label; the email provider callers support one or more recipients.",
+    "282": "The caller explains the comma-separated recipient list.",
+    "283": "The caller is the email CC address field.",
+    "284": "The caller explains the comma-separated CC recipient list.",
+    "285": "The caller is the email BCC address field.",
+    "286": "The caller explains the comma-separated BCC recipient list.",
+    "287": "The caller is an email notification checkbox for attaching books.",
+    "288": "The caller explains that books are attached when the email notification is triggered by an import.",
+    "289": "The caller is the SSL checkbox shared by Emby/Jellyfin and Plex settings.",
+    "290": "The caller is a reverse-proxy URL base field; its help text defines it as a URL prefix such as /jellyfin or /emby.",
+    "291": "The caller is a Goodreads bookshelf selector action that removes selected books from shelves.",
+    "292": "The caller is a Goodreads bookshelf selector action that adds books to shelves.",
+    "293": "The caller is a hidden Goodreads user identifier field.",
+    "294": "The caller is the Goodreads owned-book condition textbox; the enum is the book condition.",
+    "295": "The caller is the Goodreads purchase-location textbox.",
+    "296": "The caller is help text for purchase location indicating public display on Goodreads.",
+    "297": "The caller is the Gotify server URL field label.",
+    "298": "The caller explains the Gotify server URL, optional scheme, and port.",
+    "299": "The caller is the Gotify app-token credential field."
+  },
+  "reviewer": "primary semantic reviewer",
+  "nativeSpeakerApproval": false
+}

@@ -1,0 +1,24 @@
+{
+  "changedTranslationCells": 42,
+  "commit": "7bf3760ea87879304ec8deb6e4e8cf2f2b62c5b0",
+  "hookReason": "The configured pre-commit hook runs a local security scan, pre-push runs a test script, and post-commit runs a machine-specific package sync. The user-directed task excludes tests/builds/CI and unrelated external package sync.",
+  "hooksDisabledForCommit": true,
+  "parent": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "paths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+  ],
+  "rootCorrectedCell": "AutomaticUpdatesDisabledDocker::id",
+  "rootCorrectedTargetSha256": "fd407430d7d60c282c8412ed3205ac94ec77e794d5d2dce19e6337aa09e9c291",
+  "subject": "chore(i18n): apply W250-299 cross-review [skip ci]",
+  "testsBuildsCIWorkflowsRun": false,
+  "tree": "8d821e88af5c3451d608e2bdd87549249d5cf745"
+}

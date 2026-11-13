@@ -1,0 +1,30 @@
+{
+  "callerContextHashMismatches": 0,
+  "callerFiles": 7,
+  "callerGaps": 0,
+  "cellCount": 600,
+  "currentTargetHashMismatches": 0,
+  "directCallerReferences": 59,
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "keysetParityWithEnglish": true,
+  "localeCount": 12,
+  "protectedLiteralFailureCells": 11,
+  "protectedLiteralFailuresByLocale": {
+    "ar": 1,
+    "es": 1,
+    "fr": 1,
+    "hi": 1,
+    "id": 1,
+    "ja": 1,
+    "ko": 1,
+    "pt-BR": 1,
+    "vi": 1,
+    "zh-Hans": 1,
+    "zh-Hant": 1
+  },
+  "sourceCount": 50,
+  "sourceIdHashMismatches": 0,
+  "staleCallerLinePins": 0,
+  "w1187CallerValues": "TargetQualityName ?? \"M4B\" at exact lines 195 and 603 in ConversionJobService.cs"
+}

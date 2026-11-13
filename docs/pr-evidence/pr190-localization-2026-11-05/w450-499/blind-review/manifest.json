@@ -1,0 +1,46 @@
+{
+  "apiBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "artifact": "ChaptarrNG PR #190 W450-W499 independent blind semantic localization review",
+  "baseRef": "main",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateFreeChecksumListSha256": "a840674b2e61d495d91dca3a9ea46e08d92ecc2606bef4cd2f2c7e1f0ed7f0e2",
+  "candidateFreeInputOnly": true,
+  "candidateFreeManifestSha256": "f37ed7234202a36eaea93259618d972a545d3ebbed0fd3a57d8c8addcdbc25ee",
+  "cellCount": 600,
+  "checksums": "SHA256SUMS.txt",
+  "decisionCounts": {
+    "accept-current": 483,
+    "correction": 27,
+    "hold-hash-only": 48,
+    "refinement": 42
+  },
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "files": [
+    "README.md",
+    "attestation-entry.json",
+    "attestation-exit.json",
+    "ledger.jsonl",
+    "proposals.jsonl",
+    "holds.jsonl",
+    "summary.json",
+    "verify_blind_review.py"
+  ],
+  "holdCount": 48,
+  "liveMainAtEntry": "4772c3177607feb97402bbef0e0879162156fb90",
+  "liveMainAtExit": "1ff8feb6000b99a5f8ccfbb6047e60846422c080",
+  "localeCount": 12,
+  "mainAdvancedAfterCandidateFreeSeal": true,
+  "mainAdvancedDuringReview": true,
+  "outputVerifier": "verify_blind_review.py",
+  "proposalCount": 69,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "schemaVersion": 1,
+  "sourceIdCount": 50,
+  "sourcePositions": [
+    450,
+    499
+  ],
+  "stateAtReview": "open/draft"
+}

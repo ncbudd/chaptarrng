@@ -1,0 +1,137 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerGaps": [],
+  "callerReferences": 63,
+  "callerRows": 50,
+  "catalogs": [
+    {
+      "blob": "0c747f9a3dd9eb7a6936b0d90543274c80d6b9f4",
+      "keyCount": 4165,
+      "locale": "ar",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "f75d46c7f07e858f84fe0d31e059fb91d03a0d5006672a635b3539587cf11ca2"
+    },
+    {
+      "blob": "b0a8b09439c1382cdb103e02927dfbf053e78c68",
+      "keyCount": 4165,
+      "locale": "de",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "f469a4ae5f866fae5eb60fea8422e983488f906197f171be5265a05b013b77a0"
+    },
+    {
+      "blob": "c674b4cd8f75a80f1725355cc4680ad5c11a3e98",
+      "keyCount": 4165,
+      "locale": "es",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "13e8fa6c25dc86a5b8409e6b48ff02ee80c794dd7ef24d4d89a4844657464b48"
+    },
+    {
+      "blob": "3d7e2f7377026b96b65d692a3a6d62f9f0ca2c31",
+      "keyCount": 4165,
+      "locale": "fr",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "2f7dfb214ae0af8306d1169fcb7fd197ce27997d163675380327947bb10adb6b"
+    },
+    {
+      "blob": "7959fbb1245f8726732806251c6920b420c373bb",
+      "keyCount": 4165,
+      "locale": "hi",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "a5d2bfe8a1e32326e100fcce3731cc87f1099abfb2103411bcccec441db3f85a"
+    },
+    {
+      "blob": "b810a3f28a510b9265894a19a065d9807194c4b1",
+      "keyCount": 4165,
+      "locale": "id",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "a824042f49533b18a9d189506c3d656fcb01e97005a9192cac000d2dea8bfb5e"
+    },
+    {
+      "blob": "a16d937de3181b27ce24f103d7c9ce69ceaa36e1",
+      "keyCount": 4165,
+      "locale": "ja",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "c0ff8f1f8244fa556c8e6dbf6e921dd2eaa89906f71104a34a587903a8255f55"
+    },
+    {
+      "blob": "4f08fdb67cf69a941dca691b47e922530c36789d",
+      "keyCount": 4165,
+      "locale": "ko",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "6ae1a436861b4db4e8309ad86e5c61255904602badaf3faacafe5aac8cb475f0"
+    },
+    {
+      "blob": "20cd1f972c056eda33b4c4260d92e72c919c9ef6",
+      "keyCount": 4165,
+      "locale": "pt-BR",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "0c1719c853aadce78fe3e9683c6b1f8edf4eb3b2f3d18366e0eb55ce2f3bfcef"
+    },
+    {
+      "blob": "9f62392ac513b56ad0e6e94af61fae6d5f7bb1c8",
+      "keyCount": 4165,
+      "locale": "vi",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "fa16f2dfa749325b93c23a599d185978d5d65998c9dada0d22b4293966990063"
+    },
+    {
+      "blob": "4deecb2c4397485680ed64025f9d5c6497c663d1",
+      "keyCount": 4165,
+      "locale": "zh-Hans",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "16dc6ea8d2f5162bd34dc623925a11c24c850e85a26584c3ca5d4fafc9343c32"
+    },
+    {
+      "blob": "1853c3946e979a0930e6e167e4fae459a966fe0b",
+      "keyCount": 4165,
+      "locale": "zh-Hant",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "d93f34e7876d94046095cbc42757374ca4ffaf5bd10533929b6becabef9ae522"
+    }
+  ],
+  "cells": 600,
+  "counts": {
+    "accept-current": 364,
+    "propose-correction": 234,
+    "propose-refinement": 2
+  },
+  "currentMissingIdsCount": 1210,
+  "currentMissingIdsFileSha256": "bb141161e9f34ff50d1260554ac7d35be9175e009ac9459001108c5403fb445e",
+  "currentMissingIdsListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "githubBranchRefHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "githubRemoteBranchHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "markupMismatches": 0,
+  "nativeSpeakerApproval": false,
+  "passed": true,
+  "placeholderMismatches": 0,
+  "priorDispositionCells": 9600,
+  "priorDispositionWindows": 16,
+  "priorOverlap": 0,
+  "priorPacketFiles": 19,
+  "protectedLiteralFinalMismatches": 0,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryModified": false,
+  "sourceIds": 50,
+  "testsBuildsScansCiBrowserRun": false,
+  "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "w799BoundaryCells": 12,
+  "w799MatchesPriorFinal": 12,
+  "worktree": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "status": "",
+    "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6"
+  }
+}

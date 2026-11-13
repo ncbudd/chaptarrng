@@ -1,0 +1,155 @@
+{
+  "allProposalMarkupMatches": true,
+  "allProposalPlaceholdersMatch": true,
+  "allSourceCurrentMarkupMatch": true,
+  "allSourceCurrentPlaceholderSetsMatch": true,
+  "callerFiles": 48,
+  "callerReferencesVerified": true,
+  "callerRefs": 59,
+  "candidateCount": 99,
+  "cellCount": 600,
+  "currentProtectedMismatchCells": 12,
+  "currentProtectedMismatchDetails": [
+    {
+      "locale": "es",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "zh-Hans",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "hi",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "de",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "ja",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "fr",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "pt-BR",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "ar",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "ko",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "zh-Hant",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "vi",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    },
+    {
+      "locale": "id",
+      "missing": [
+        "SABnzbd"
+      ],
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654
+    }
+  ],
+  "exactHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "exactTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "independentCandidateDispositions": {
+    "accept-proposal": 98,
+    "revise-proposal": 1
+  },
+  "independentCellDispositions": {
+    "accept-current": 501,
+    "accept-proposal": 98,
+    "revise-proposal": 1
+  },
+  "localeCount": 12,
+  "localeKeySetsMatchEnglish": true,
+  "markupMismatchCells": 0,
+  "nativeSpeakerReviewStillRecommended": true,
+  "placeholderMismatchCells": 0,
+  "primaryDispositions": {
+    "accept-current": 501,
+    "propose-correction": 99
+  },
+  "proposalCountByLocale": {
+    "ar": 13,
+    "de": 5,
+    "es": 8,
+    "fr": 10,
+    "hi": 5,
+    "id": 6,
+    "ja": 10,
+    "ko": 10,
+    "pt-BR": 8,
+    "vi": 9,
+    "zh-Hans": 7,
+    "zh-Hant": 8
+  },
+  "proposalProtectedMismatchCells": 0,
+  "sourceIdCount": 50,
+  "sourceIdListCount": 1210,
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceSliceSha256": "ecc4e92ee9595dd2cd35e7a246b6e5d12706a791b96414c87e7a7c39d1aaa0d5",
+  "w649CallerRefsReattested": 12,
+  "w650BoundaryRows": 12,
+  "windowOrdinals": [
+    650,
+    699
+  ]
+}

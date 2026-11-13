@@ -1,0 +1,97 @@
+{
+  "acceptedCurrent": 588,
+  "candidateCount": 12,
+  "correctionCandidates": 12,
+  "currentProtectedLiteralFailureCells": 0,
+  "dispositionCounts": {
+    "accept-current": 588,
+    "correction": 12
+  },
+  "exactHead": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+  "exactTree": "c46078c93545042313aa1b35bc3b283b1f3b5406",
+  "finalProtectedLiteralFailureCells": 0,
+  "holdCount": 0,
+  "icuCellCount": 0,
+  "icuMismatchCells": 0,
+  "localeCells": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "machineAssistedConfidence": "moderate",
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 49,
+      "correction": 1
+    },
+    "de": {
+      "accept-current": 47,
+      "correction": 3
+    },
+    "es": {
+      "accept-current": 46,
+      "correction": 4
+    },
+    "fr": {
+      "accept-current": 48,
+      "correction": 2
+    },
+    "hi": {
+      "accept-current": 50
+    },
+    "id": {
+      "accept-current": 50
+    },
+    "ja": {
+      "accept-current": 50
+    },
+    "ko": {
+      "accept-current": 49,
+      "correction": 1
+    },
+    "pt-BR": {
+      "accept-current": 50
+    },
+    "vi": {
+      "accept-current": 49,
+      "correction": 1
+    },
+    "zh-Hans": {
+      "accept-current": 50
+    },
+    "zh-Hant": {
+      "accept-current": 50
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "providerOptionPipelineReferences": 20,
+  "refinementCandidates": 0,
+  "scopeLimitation": "Static primary semantic pass. No native-speaker or browser/runtime approval claimed.",
+  "serverMessagePipelineReferences": 76,
+  "sourceCallerGaps": 0,
+  "sourceCallerReferences": 50,
+  "sourceCallerRows": 50,
+  "sourceCount": 50,
+  "sourceDescription": "All selected source values are language names from the MyAnonaMouse LanguageFilter enum, rendered as provider-option select labels.",
+  "sourcePositions": [
+    950,
+    999
+  ],
+  "spanishFormalAddressApplicability": "not applicable for all 50 source labels: no direct address, instructions, or second-person grammar",
+  "spanishFormalAddressCells": 50,
+  "staleCallerPins": 0,
+  "window": "W950-W999"
+}

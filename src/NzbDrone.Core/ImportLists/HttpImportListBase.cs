@@ -12,6 +12,7 @@ using NzbDrone.Core.ImportLists.Exceptions;
 using NzbDrone.Core.Indexers.Exceptions;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists
 {
@@ -213,7 +214,7 @@ namespace NzbDrone.Core.ImportLists
 
                 if (releases.Empty())
                 {
-                    return new ValidationFailure(string.Empty, "No results were returned from your import list, please check your settings.");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "No results were returned from your import list, please check your settings.", "server.message.m21af9489276f");
                 }
             }
             catch (RequestLimitReachedException)
@@ -224,19 +225,19 @@ namespace NzbDrone.Core.ImportLists
             {
                 _logger.Warn(ex, "Import list feed is not supported");
 
-                return new ValidationFailure(string.Empty, "Import list feed is not supported: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Import list feed is not supported: " + ex.Message, "server.message.mc5e69abdf17a", new { value0 = ex.Message });
             }
             catch (ImportListException ex)
             {
                 _logger.Warn(ex, "Unable to connect to import list");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to import list. " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to import list. " + ex.Message, "server.message.m2b42676aee32", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to import list");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to import list, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to import list, check the log for more details", "server.message.ma28fc67879dd");
             }
 
             return null;

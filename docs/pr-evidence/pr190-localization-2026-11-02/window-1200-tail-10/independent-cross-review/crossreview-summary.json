@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "head": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "tree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "sourceQueuePath": "docs/localization/source-followup-20261101.json",
+  "sourceQueueSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+  "sourceQueueCanonicalIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceQueueCount": 1210,
+  "reviewedPositions": [
+    1200,
+    1209
+  ],
+  "reviewedIds": [
+    "server.message.m73172a5045d6",
+    "server.message.mddaec7220c51",
+    "server.message.md6a7ade8523b",
+    "server.message.m9f7f2489aa05",
+    "server.message.md4a741052e8b",
+    "server.message.m621dd0308bef",
+    "server.message.m4cd205e7d07a",
+    "server.message.mc6073db4b613",
+    "server.message.m12f8b73a2b72",
+    "server.message.m47f0922640fa"
+  ],
+  "localeCount": 12,
+  "cellCount": 120,
+  "callerPinCount": 11,
+  "packetChecksumsVerified": true,
+  "primaryCandidatesReadAfterBlindSeal": true,
+  "blindSealPath": "blind-seal.json",
+  "blindSealSha256": "57d8e3a934d461f889ca38b2418d9352e6aba2fbdba5159720e46abd1e537941",
+  "primaryCandidateFileSha256": "bc4aed90d56ede6f296303480484c1600963aa4cd061c42093f8763652ba33b8",
+  "worktreeHeadAndTreeVerified": true,
+  "remoteBranchRefVerified": true,
+  "targetCatalogHashesVerified": 12,
+  "currentTargetValuesVerified": 120,
+  "callerPinsVerified": 11,
+  "sourceBoundsVerified": "The pinned queue contains positions 1200-1209 only; no 1210-1249 positions were fabricated.",
+  "primaryPlaceholderAndProtectedLiteralChecks": "All 120 primary recommendations preserve the registered placeholder sets and review-protected literals.",
+  "primaryVsIndependentDispositionMatrix": {
+    "accept-current -> accept-current": 39,
+    "accept-current -> correction": 2,
+    "correction -> accept-current": 14,
+    "correction -> correction": 57,
+    "correction -> refinement": 4,
+    "refinement -> accept-current": 3,
+    "refinement -> correction": 1
+  },
+  "fullAgreements": 55,
+  "disagreementCells": 65,
+  "disagreementAxesCounts": {
+    "disposition+recommended-target": 24,
+    "recommended-target": 41
+  },
+  "dispositionDifferingCells": 24,
+  "targetDifferingCells": 65,
+  "disagreementAssessmentPreferenceCounts": {
+    "primary": 37,
+    "equivalent": 22,
+    "independent": 6
+  },
+  "postSealTerminologyCheck": "The primary #1206 recommendations match all three locale UI catalog labels exactly in all 12 locales (36/36): RemoveCompleted, IndexerSettingsNeverMoveOnImport, and provider.field.fcf18cb638b27. The primary #1207 recommendations use exact Settings and Indexers locale catalog labels in all 12 locales (24/24).",
+  "nativeSpeakerApproval": false,
+  "repositoryChanges": false,
+  "testsBuildsScansBrowserCIWorkflowChanges": false,
+  "commitsPRUpdatesReleases": false,
+  "postSealUiLabelMatchCounts": {
+    "source1206OptionLabels": 36,
+    "source1207NavigationLabels": 24
+  },
+  "livePullRequestLastVerified": {
+    "state": "OPEN",
+    "head": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+    "tree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+    "base": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "blindProtocolNote": "The packet manifest was read for verification and exposed aggregate primary disposition counts; no target candidates were read before blind-review-ledger.jsonl was sealed."
+}

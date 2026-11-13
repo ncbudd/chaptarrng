@@ -271,16 +271,24 @@ namespace Chaptarr.Api.V1
             // On success, optionally surface any provider-supplied informational message
             // without changing existing success semantics.
             var successMessages = new List<string>();
+            var successMessageDescriptors = new List<object>();
 
-            var msg = providerDefinition?.Message?.Message;
+            var providerMessage = providerDefinition?.Message;
+            var msg = providerMessage?.Message;
             if (!string.IsNullOrWhiteSpace(msg))
             {
                 successMessages.Add(msg);
+                successMessageDescriptors.Add(new
+                {
+                    message = msg,
+                    messageId = providerMessage.MessageId,
+                    messageParameters = providerMessage.MessageParameters
+                });
             }
 
             // Return an object so the UI can optionally show a green success alert.
             // Frontend callers that ignore the body remain compatible.
-            return new { successMessages };
+            return new { successMessages, successMessageDescriptors };
         }
 
         [HttpPost("testall")]

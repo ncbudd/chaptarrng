@@ -1,0 +1,22 @@
+{
+  "commit": "dcc23d31bf4bcab2affc906be701eabd16ce3e32",
+  "parent": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "tree": "ecad92d85d8286b0a5fe955d4c90896a30980d7d",
+  "changedPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "changedPathCount": 12,
+  "selectedCells": 99,
+  "readbackSha256": "c09efcf4af8b765fdf9881f70540acece5a316f81fb859aeb79ea1272c832b11"
+}

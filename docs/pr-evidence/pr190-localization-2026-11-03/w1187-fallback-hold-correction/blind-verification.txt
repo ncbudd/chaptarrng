@@ -1,0 +1,1 @@
+PASS: 12 exact-hash blind decisions; all accepted unchanged; dynamic placeholder preserved; no static M4B literal; exact live head/tree pinned

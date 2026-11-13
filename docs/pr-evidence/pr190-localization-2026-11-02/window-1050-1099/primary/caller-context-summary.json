@@ -1,0 +1,16 @@
+{
+  "callerGaps": [],
+  "directCallerReferences": 60,
+  "loadingCallerRows": 10,
+  "loadingPipelineReferences": 13,
+  "serverMessageCallerIndex": {
+    "bytes": 21781,
+    "gitBlob": "1531851877466bbfeb0b16072fcf07d6dda925e2",
+    "path": "docs/localization/server-message-callers.json",
+    "sha256": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b"
+  },
+  "serverMessageSourceRows": 40,
+  "sourceRows": 50,
+  "staleRegistryPins": [],
+  "uniqueDirectCallerFiles": 2
+}

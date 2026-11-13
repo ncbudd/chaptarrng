@@ -1,0 +1,162 @@
+{
+  "explanation": "PageSidebar renders Settings and MediaManagement through translate(key); Settings page title also uses translate(Settings). translateServerMessage maps a known source string to the app-locale catalog. Therefore the two breadcrumb phrases are user-facing UI labels and should match the active locale catalog values.",
+  "files": [
+    {
+      "blob": "00701d5bfbf2d5e8deaaf5cb8fdad63e283d94d6",
+      "path": "frontend/src/Components/Page/Sidebar/PageSidebar.js",
+      "sha256": "234d988f9a6badfea3159d598fb9e4e1b0f05cb18d15bc41b33a99fff4210bf3",
+      "snippets": [
+        {
+          "firstLine": 109,
+          "lastLine": 109,
+          "lines": [
+            {
+              "line": 109,
+              "sha256": "7ee5ec132e81d8a6522d9ded0e29cd8f0f945901c5a27345067eb5ba152b3397",
+              "text": "title: () => translate('Settings'),"
+            }
+          ]
+        },
+        {
+          "firstLine": 113,
+          "lastLine": 113,
+          "lines": [
+            {
+              "line": 113,
+              "sha256": "4e32c1e80e6e3b7b09e9c1a91899690e81d2a23c299a577e968dca0697059ae1",
+              "text": "title: () => translate('MediaManagement'),"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blob": "e4009890a642fa19ce7c17ec711f6fa1cf2d6cc7",
+      "path": "frontend/src/Settings/Settings.js",
+      "sha256": "1a42cd96ef371241d28ca4d907aa59d96b7fa99e51bb26232995ff9767672547",
+      "snippets": [
+        {
+          "firstLine": 64,
+          "lastLine": 64,
+          "lines": [
+            {
+              "line": 64,
+              "sha256": "801d18dacf0fa5052c9a53b463b374a5fb36e19d66d9745b6bfda8fed84d2a0a",
+              "text": "<PageContent title={translate('Settings')}>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "blob": "781da6b8f912ddff0fabe5fb5a72685605250994",
+      "path": "frontend/src/Utilities/String/translateServerMessage.js",
+      "sha256": "b3f3f5f71fabd5c6bf6aa99acf9a45832e6c2cf333d6a568c4f548248e448477",
+      "snippets": [
+        {
+          "firstLine": 202,
+          "lastLine": 220,
+          "lines": [
+            {
+              "line": 202,
+              "sha256": "07764c6e27b26864fa3d39120623b5d61b9cde09e109a87bcdee6133dd1864b6",
+              "text": "export default function translateServerMessage(message) {"
+            },
+            {
+              "line": 203,
+              "sha256": "d4a0c47e1d8994666f8c0e56e320efb43e922f6dd5445c31f54be5db4e01408e",
+              "text": "const toolOutputTranslation = typeof message === 'string'"
+            },
+            {
+              "line": 204,
+              "sha256": "717655f1c9f0f44ee12df31293fd3da305b2ea11026a9bb772c1779ab090e7f7",
+              "text": "? translateToolOutputMessage(message)"
+            },
+            {
+              "line": 205,
+              "sha256": "4728b620664330302e05fc147026bac1660dc8729fa201a746a09c4636547a3d",
+              "text": ": null;"
+            },
+            {
+              "line": 206,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text": ""
+            },
+            {
+              "line": 207,
+              "sha256": "11bbcde3dcf0de1d0ce50dd7ea2fbda12c226873d2ee06d7a6aec1ce8ae60b18",
+              "text": "if (toolOutputTranslation) {"
+            },
+            {
+              "line": 208,
+              "sha256": "9a3646a72a971e3079e576acfa07207f06582da5fbe1b0fe70394a35d0a4f221",
+              "text": "return toolOutputTranslation;"
+            },
+            {
+              "line": 209,
+              "sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+              "text": "}"
+            },
+            {
+              "line": 210,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text": ""
+            },
+            {
+              "line": 211,
+              "sha256": "97df2e4f9a7dfacabd1873177d8d1966545f47afe647e83fa60eb778fba055f1",
+              "text": "const match = matchServerMessage(message, matchers);"
+            },
+            {
+              "line": 212,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text": ""
+            },
+            {
+              "line": 213,
+              "sha256": "37fb887131e3030f233c108963483e2c0a26fd0e25650da8db289cca426bd4fe",
+              "text": "if (match) {"
+            },
+            {
+              "line": 214,
+              "sha256": "d39d288b1d4ae5b468fc0722130064c45dc2e5edcae09d99e2da4f51a5fd3a9d",
+              "text": "if (match.id === alternateDownloadClientMessageId) {"
+            },
+            {
+              "line": 215,
+              "sha256": "377f3971d448667a7daee3b4a60a29bb8115246f1b60dc81341400278f1397d7",
+              "text": "return translateAlternateDownloadClients(match) || message;"
+            },
+            {
+              "line": 216,
+              "sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+              "text": "}"
+            },
+            {
+              "line": 217,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text": ""
+            },
+            {
+              "line": 218,
+              "sha256": "741ed1ee2f78c0f3fb72299b3a32c617e1652dfc74ace82df046b96cabe01af2",
+              "text": "return translateMatch(match);"
+            },
+            {
+              "line": 219,
+              "sha256": "d10b36aa74a59bcf4a88185837f658afaf3646eff2bb16c3928d0e9335e945d2",
+              "text": "}"
+            },
+            {
+              "line": 220,
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6"
+}

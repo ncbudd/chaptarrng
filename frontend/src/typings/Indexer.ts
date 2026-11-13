@@ -13,6 +13,8 @@ export interface Field {
 export interface ProviderMessage {
   message: string | null;
   type: 'info' | 'warning' | 'error';
+  messageId?: string | null;
+  messageParameters?: Record<string, string | number> | null;
 }
 
 export type IndexerProtocol = 'unknown' | 'usenet' | 'torrent' | 'direct';

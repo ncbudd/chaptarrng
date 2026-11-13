@@ -47,7 +47,8 @@ namespace NzbDrone.Core.Indexers.Torznab
             RuleFor(c => c.BaseUrl).ValidRootUrl();
             RuleFor(c => c.ApiPath).ValidUrlBase("/api");
             RuleFor(c => c.ApiKey).NotEmpty().When(ShouldHaveApiKey);
-            RuleFor(c => c.NarratorMetadataBaseUrl).Must(IsValidRootUrlOrEmpty).WithMessage("must be valid URL that starts with http(s)://");
+            RuleFor(c => c.NarratorMetadataBaseUrl).Must(IsValidRootUrlOrEmpty).WithMessage("must be valid URL that starts with http(s)://")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.ma38b3893e50f"));
             RuleFor(c => c.AdditionalParameters).Matches(AdditionalParametersRegex)
                                                 .When(c => !c.AdditionalParameters.IsNullOrWhiteSpace());
 

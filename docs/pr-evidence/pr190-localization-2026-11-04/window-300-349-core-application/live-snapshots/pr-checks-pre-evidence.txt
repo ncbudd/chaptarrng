@@ -1,0 +1,10 @@
+Dispatch trusted owner PR validation	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986635525	
+Docker (single standard image)	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986663722	
+Fedora 44 BookshelfNG RPM No/Yes and rollback	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986639271	
+Legacy distribution and runner contracts	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986663686	
+Private runner policy	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986601446	
+Release-note contract	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986645460	
+Report trusted owner PR validation	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986660558	
+build	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986602170	
+owner-pr-validation	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986638901	
+postgres-migrations	skipping	0	https://github.com/snapetech-org/chaptarrng/actions/runs/41948520500/job/126986660815	

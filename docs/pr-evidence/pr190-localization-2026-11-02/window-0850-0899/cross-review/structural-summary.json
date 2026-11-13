@@ -1,0 +1,165 @@
+{
+  "browserReview": false,
+  "callerFiles": 47,
+  "callerRefFailures": 0,
+  "callerRefsVerified": 74,
+  "callerRows": 50,
+  "callerSourceMessageMismatchRows": [
+    {
+      "locale": "ar",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "de",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "es",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "fr",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "hi",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "id",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "ja",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "ko",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "pt-BR",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "vi",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "zh-Hans",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    },
+    {
+      "locale": "zh-Hant",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceOrdinal": 884
+    }
+  ],
+  "cellCount": 600,
+  "genericPipelineFailures": 0,
+  "genericPipelineRefsVerified": 76,
+  "genericPipelineRows": 76,
+  "head": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "languageAuditPending": true,
+  "localeCatalogs": {
+    "ar": {
+      "blob": "c4dcb15b7df55c81dfb663e0a462997cb19a609b",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "e22b6afb2354d1dafb5d4d19e2dd95f0c123f00359b68828400c2889797c8750"
+    },
+    "de": {
+      "blob": "c476d403ca1e2ffbdc0c35c9889409944bea3fbb",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "8ed235c2dbe20e231c0dbaf5dc624ec31fc2b1e0b6f286a69b3cf1d1539f85d8"
+    },
+    "es": {
+      "blob": "aacfac421da7c8e202617c6b12f4b54c5a448e71",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "52f7a5be1ca0a01ab30177632c795a478615e004ba349ebbc171e68658e6e8cb"
+    },
+    "fr": {
+      "blob": "38f9a0520431d9c589319a290647f6e2a1082c6a",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "24067b553c9ba80dff862a33bbc04a30ff80e8e5c81c34e3c0e55dd5ccf6617a"
+    },
+    "hi": {
+      "blob": "8ae9c3abd9912b91daf8cbbbd5be04ad46853315",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "dbaa6d14df87a38d4044caa2da800bcefd4bbd17c145a262d79f3759da5c4960"
+    },
+    "id": {
+      "blob": "3495b32fc8619baefb2e41b9958954d8a31741dd",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "cff349b39434819bdfddebfa127fdd8111e78f14ef903f20e96a3223b1514494"
+    },
+    "ja": {
+      "blob": "6d21271883f93d2788827edfbb9ea305e6ea65cd",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "a0ffe7edd9ddec308f2ad51be8b5bc2b57a0b5d0c3c4f7ab0b1479e293544bc2"
+    },
+    "ko": {
+      "blob": "8b674e281cb8ec74f1598cfa3cb88c3781da69ad",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "f1a4bd5b808011373cea93dd1f2db55e0cbb6dfd22e3f60d71bb7573f0182ecd"
+    },
+    "pt-BR": {
+      "blob": "a83ec58c22d68d85c77c5a8fef352f66855ed51b",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "2b968f9849abe8805f1975f30c711fd38187d8de169caf4aa50f646485da025e"
+    },
+    "vi": {
+      "blob": "2ed973a076c2724c50f378022f3a3fc79f80ee07",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "ec983ec160cfce99f7e87ef9a7105267fa396dbab2418b3fccf8232fcc15cdcf"
+    },
+    "zh-Hans": {
+      "blob": "08cd83eafba9f7c74f10f72dea47a33b87d2a2b5",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "a8e52d8b4a68be64bf1254ede6b730eea690323a73e944a241eb91b7289b4844"
+    },
+    "zh-Hant": {
+      "blob": "ccbdcbbdc73af54ef7f7c8e917cbe6b881c9b417",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "5bd24dd66422651a614184549d74a72db49776f7b3ca44075ae02be588b69bc5"
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "pipelineFiles": 35,
+  "placeholderOrMarkupFailures": 0,
+  "primaryDispositionCounts": {
+    "accept-current": 509,
+    "hold": 12,
+    "propose-correction": 69,
+    "propose-refinement": 10
+  },
+  "priorPacketInputManifestSha256": "95dc1d242c2feeef223677637a1115da9287a4f86ac5c2c676b237bf1cecb091",
+  "pullRequest": 190,
+  "recommendedTargetNoOps": 0,
+  "repoModified": false,
+  "repository": "snapetech-org/ChaptarrNG",
+  "reproducibleEvidence": "structural-caller-reattestation.jsonl, input-provenance.json, and live-seven-pr-heads.json",
+  "schemaVersion": 1,
+  "sourceCatalogBlob": "be4cfe01ea4b4994f434ad9ba85c8f5ec52d45ec",
+  "sourceOrdinals": [
+    850,
+    899
+  ],
+  "sourceQueueCanonicalSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "targetHashesVerified": 600,
+  "testsBuildCiRun": false,
+  "tree": "e682581e3c577b62215658c374b15a9d3f8f8bd0",
+  "w884CallerText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+  "w884HoldCells": 12,
+  "w884SourceText": "Can not contain '', '//', or start/end with '/'"
+}

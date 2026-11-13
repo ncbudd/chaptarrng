@@ -308,13 +308,13 @@ namespace NzbDrone.Core.Download.Clients.UTorrent
 
                 if (version < 25406)
                 {
-                    return new ValidationFailure(string.Empty, "Old uTorrent client with unsupported API, need 3.0 or higher");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Old uTorrent client with unsupported API, need 3.0 or higher", "server.message.m47cc7c36cc3a");
                 }
             }
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new NzbDroneValidationFailure("Username", "Authentication failure", "server.message.md83ae8fb37f8", null)
                 {
                     DetailedDescription = "Please verify your username and password."
                 };
@@ -324,19 +324,19 @@ namespace NzbDrone.Core.Download.Clients.UTorrent
                 _logger.Error(ex, "Unable to connect to uTorrent");
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new NzbDroneValidationFailure("Host", "Unable to connect", "server.message.me40966162b11", null)
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unknown exception: " + ex.Message, "server.message.m98845de47ab9", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test uTorrent");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to uTorrent")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to uTorrent", "server.message.m27001fadea37", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -354,7 +354,7 @@ namespace NzbDrone.Core.Download.Clients.UTorrent
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of torrents: " + ex.Message, "server.message.m451006253bc3", new { value0 = ex.Message });
             }
 
             return null;

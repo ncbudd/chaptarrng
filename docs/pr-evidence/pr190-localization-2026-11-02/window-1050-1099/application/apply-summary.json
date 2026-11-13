@@ -1,0 +1,17 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "W1050-W1099",
+  "inputHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "inputTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "reviewedCells": 600,
+  "changedCells": 42,
+  "changedLocaleCatalogs": 12,
+  "acceptCurrent": 546,
+  "confirmedCorrections": 24,
+  "confirmedRefinements": 18,
+  "protectedDodgeHolds": 12,
+  "fullWindowReadbacks": 600,
+  "nativeSpeakerApproval": false,
+  "testsBuildScansCIOrBrowserRun": false
+}

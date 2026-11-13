@@ -1,0 +1,32 @@
+{
+  "recordedAtUtc": "2026-11-02T19:26:45.257582+00:00",
+  "livePullRequest": {
+    "state": "OPEN",
+    "isDraft": true,
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "githubRef": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "httpsRemoteRef": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "worktree": {
+    "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+    "statusPorcelain": "",
+    "clean": true
+  },
+  "allSevenHeadsReattestedAt": "2026-11-02T19:26:23.790220+00:00",
+  "allSevenApiRefRemoteHeadsAgree": true,
+  "sourceAndTargetCellsExact": 600,
+  "callerRefsExact": 63,
+  "genericPipelineRefsExact": 76,
+  "w799BoundaryExact": 12,
+  "crossReviewCells": 600,
+  "placeholderMismatches": 0,
+  "markupMismatches": 0,
+  "protectedLiteralFailures": 0,
+  "nativeSpeakerApproval": false,
+  "repositoryModified": false,
+  "passed": true
+}

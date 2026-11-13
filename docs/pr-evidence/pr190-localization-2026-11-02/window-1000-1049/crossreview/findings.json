@@ -1,0 +1,127 @@
+{
+  "independentAdditionalRefinements": [
+    {
+      "sourceOrdinal": 1047,
+      "locale": "es",
+      "currentTarget": "¿No hay nada como el olor de abrir un nuevo eBook?",
+      "recommendedTarget": "¿No hay nada como el olor de abrir un nuevo... eBook?",
+      "recommendedTargetSha256": "659e1c65fbb52d0d18c7d0ba739c4a9fc87b1644b258bd0c0dbab33edf61209d",
+      "rationale": "The current Spanish line omits the source ellipsis. Restoring it preserves the delayed eBook reveal that makes the smell joke land; the opening question mark remains correctly paired.",
+      "confidence": "moderate"
+    },
+    {
+      "sourceOrdinal": 1047,
+      "locale": "pt-BR",
+      "currentTarget": "Não há nada como o cheiro de abrir um novo eBook?",
+      "recommendedTarget": "Não há nada como o cheiro de abrir um novo... eBook?",
+      "recommendedTargetSha256": "c0ab5bcb13ae8b73156590115c53eee45e0c38461143b716d853d2049ea81228",
+      "rationale": "The current Brazilian Portuguese line omits the source ellipsis. Restoring it preserves the delayed eBook reveal; eBook casing remains unchanged.",
+      "confidence": "moderate"
+    }
+  ],
+  "reviewNotes": [
+    {
+      "sourceOrdinal": 1048,
+      "locale": "de",
+      "note": "The accepted German target uses formal “Finden Sie Ihren” as a direct imperative, while nearby playful loading copy uses informal “Dein”. This may be intentional; retain the current translation, but ask a German reviewer to check register consistency before final localization sign-off."
+    }
+  ],
+  "retainedHolds": [
+    {
+      "sourceOrdinal": 1000,
+      "sourceId": "provider.option.o7285d46b982d",
+      "locale": "vi",
+      "currentTarget": "Tiếng Tây Ban Nha Castile",
+      "currentTargetSha256": "905525e322b8cea377f7bac7e9de3841b8710f6e09ff51cf7ee4f845d4aae728",
+      "primaryRationale": "“Castilian Spanish” distinguishes a Spanish variety. The current Vietnamese calque is awkward, but the preferred local name for this particular variant was not independently verified; retain pending native-speaker/dictionary review."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "ar",
+      "currentTarget": "لا يوجد شيء مثل رائحة فتح كتاب جديد..",
+      "currentTargetSha256": "51ed8746a8eef5290bb26832dc64f6a5a90c25a3fa5eff1576f54ed40ceffa56",
+      "primaryRationale": "The current target omits the eBook punchline and question. The joke is clear, but a natural Arabic version needs a native speaker."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "hi",
+      "currentTarget": "एक नई किताब खोलने की गंध की तरह कुछ भी नहीं है ... ई-पुस्तक?",
+      "currentTargetSha256": "06b9c029f0bb3d5fb60e25d65a3b19ac2129d4a849c41f90bb8364186319c14f",
+      "primaryRationale": "The current target loses the “new... eBook?” interruption. Keep the current literal version pending a native Hindi joke-preserving rendering."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "id",
+      "currentTarget": "Tidak ada apa-apa seperti bau membuka sebuah ebook baru?",
+      "currentTargetSha256": "0e3afdeaa626e51f45d886fea5c49e105a3404eb8f97a561aec2beda37234f28",
+      "primaryRationale": "The current sentence is awkward and the interruption/punchline is difficult to reproduce naturally. Hold for an Indonesian native reviewer."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "ja",
+      "currentTarget": "新しい電子書籍をオープンするような匂いは何もないのだろうか。",
+      "currentTargetSha256": "cca0eb60c0658743b010c307dcc52b3ce7208089ba0d576ae70a18dd1e739763",
+      "primaryRationale": "The current sentence is an awkward literal construction. Hold for a native Japanese rendering of the smell-of-an-eBook joke."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "ko",
+      "currentTarget": "새 전자책을 펼칠 때의 냄새만큼 좋은 것은 없죠… eBook?",
+      "currentTargetSha256": "0d6fd0261cb7aeee0fa7cb99099eeec57d00aca67e0f9b8818ca1481c636953f",
+      "primaryRationale": "The current target redundantly mentions an electronic book and then eBook; a native reviewer should settle how to preserve the joke."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "vi",
+      "currentTarget": "Không có gì giống như mùi của việc mở một cuốn sách mới... eBook?",
+      "currentTargetSha256": "fea20215c155778a7d1f6b18f73fc35dd04b3abb27c3281e2b566aea99dd193a",
+      "primaryRationale": "The current wording is awkward and repeats the eBook idea. Hold for a native Vietnamese rendering of the joke."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "zh-Hans",
+      "currentTarget": "只是没有什么像开启一个新的电子书的气味?",
+      "currentTargetSha256": "d03d1a4d005ff5d6b9b333a0fd6b0cb71939ae11ddd5b3b7904012c718535d51",
+      "primaryRationale": "The current literal syntax is awkward. Hold for a native Simplified Chinese rendering of the new…eBook punchline."
+    },
+    {
+      "sourceOrdinal": 1047,
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "zh-Hant",
+      "currentTarget": "只是沒有甚麼像開啓一個新的電子書的氣味?",
+      "currentTargetSha256": "bf2b288abf69995e9f0e81e13319ba119fa86f795026a4baef5b86447e98b4d9",
+      "primaryRationale": "The current literal syntax is awkward. Hold for a native Traditional Chinese rendering of the new…eBook punchline."
+    },
+    {
+      "sourceOrdinal": 1049,
+      "sourceId": "ui.loading.rewindAudiobooks",
+      "locale": "ar",
+      "currentTarget": "كن لطيفًا: أعد كتبك الصوتية إلى الوراء.",
+      "currentTargetSha256": "f1fd2f4392e8bcd3407726954c1d28b9579d535416ee0de7fcb5144cdac83f65",
+      "primaryRationale": "The Be Kind: Rewind slogan depends on an English tape-rewind idiom. The current meaning is understandable but awkward; no verified Arabic slogan was available in this non-browser review."
+    },
+    {
+      "sourceOrdinal": 1049,
+      "sourceId": "ui.loading.rewindAudiobooks",
+      "locale": "id",
+      "currentTarget": "Bersikaplah baik: putar mundur buku audio Anda.",
+      "currentTargetSha256": "7dbbe46f8fbe84730bb4d0b51fbb5dc362e748b138a719df4e4b44cd4af473a9",
+      "primaryRationale": "The Indonesian rewind verb needs a natural audio-control idiom while retaining the Be Kind wordplay. The current meaning is recognizable, but hold the phrasing for native-speaker review."
+    }
+  ],
+  "proposalReview": {
+    "primaryCorrectionProposals": 50,
+    "primaryRefinementProposals": 33,
+    "acceptedPrimaryProposals": 83,
+    "refinedOrRejectedPrimaryProposals": 0
+  },
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true
+}

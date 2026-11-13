@@ -1,0 +1,60 @@
+{
+  "window": "W300-W349",
+  "sourceKeys": 50,
+  "candidateCells": 600,
+  "selectedCellCount": 106,
+  "unchangedCellCount": 494,
+  "selectedCellsByLocale": {
+    "ar": 9,
+    "de": 9,
+    "es": 12,
+    "fr": 9,
+    "hi": 8,
+    "id": 18,
+    "ja": 8,
+    "pt-BR": 14,
+    "vi": 6,
+    "zh-Hans": 6,
+    "zh-Hant": 7
+  },
+  "catalogsChecked": 12,
+  "keysPerCatalog": 4165,
+  "keyOrderPreserved": true,
+  "primaryProposals": 87,
+  "primaryCrossReviewAccept": 86,
+  "primaryCrossReviewRevise": 1,
+  "rootSuggestions": 19,
+  "rootSuggestionCrossReviewAccept": 19,
+  "callerlessHashOnlyHoldsExcluded": 48,
+  "productCommit": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+  "productParent": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "productTree": "3e43bcd87bc103d141109053abb52b70508650a1",
+  "productCatalogCount": 11,
+  "productPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "verifiedHead": "4688c998d92c821bbc1464ea4640c90615a69327",
+  "verifiedTree": "e655295664bbe8466e6f5541eb78e17e32cfca12",
+  "targetReadbackMismatches": 0,
+  "sourceTextChanges": 0,
+  "changedContextKeysFromCandidateFree": [
+    "BookMatchingStrictness",
+    "Selected"
+  ],
+  "selectedCellsWithChangedSourceOrContext": [
+    "BookMatchingStrictness::id"
+  ],
+  "workflowPathsAgainstLatestMain": [],
+  "nativeSpeakerSignoff": false,
+  "browserReviewPerformed": false
+}

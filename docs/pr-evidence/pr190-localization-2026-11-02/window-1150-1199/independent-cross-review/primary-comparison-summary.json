@@ -1,0 +1,100 @@
+{
+  "callerContextHashSchemaNote": "Per-cell caller-context digests differ because the two packets canonicalize reference records differently; exact normalized source line, context, file blob/SHA, registry line and surface pins were compared directly.",
+  "comparisonClasses": {
+    "different-candidate-targets": 48,
+    "exact-agreement": 462,
+    "independent-proposal-omitted-by-primary": 16,
+    "primary-proposal-not-independently-confirmed": 62,
+    "same-candidate-different-kind": 12
+  },
+  "crossComparedCells": 600,
+  "crossReviewInterpretation": "Independent disposition is preserved. Candidate target differences are reported for coordinator adjudication; primary recommendations were not used to construct the independent ledger.",
+  "exactCallerPinMismatches": 0,
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "holdsAgreed": true,
+  "independentLedgerSha256": "bee7a858fd79333271bd053e1d5ba1cdcc99e78e4c63c4ae2d22484d5d5b90d1",
+  "perLocaleComparison": {
+    "ar": {
+      "different-candidate-targets": 2,
+      "exact-agreement": 44,
+      "independent-proposal-omitted-by-primary": 1,
+      "primary-proposal-not-independently-confirmed": 1,
+      "same-candidate-different-kind": 2
+    },
+    "de": {
+      "different-candidate-targets": 4,
+      "exact-agreement": 39,
+      "independent-proposal-omitted-by-primary": 2,
+      "primary-proposal-not-independently-confirmed": 4,
+      "same-candidate-different-kind": 1
+    },
+    "es": {
+      "exact-agreement": 44,
+      "independent-proposal-omitted-by-primary": 3,
+      "primary-proposal-not-independently-confirmed": 2,
+      "same-candidate-different-kind": 1
+    },
+    "fr": {
+      "different-candidate-targets": 1,
+      "exact-agreement": 41,
+      "independent-proposal-omitted-by-primary": 2,
+      "primary-proposal-not-independently-confirmed": 5,
+      "same-candidate-different-kind": 1
+    },
+    "hi": {
+      "different-candidate-targets": 2,
+      "exact-agreement": 40,
+      "independent-proposal-omitted-by-primary": 5,
+      "primary-proposal-not-independently-confirmed": 2,
+      "same-candidate-different-kind": 1
+    },
+    "id": {
+      "different-candidate-targets": 1,
+      "exact-agreement": 47,
+      "independent-proposal-omitted-by-primary": 1,
+      "primary-proposal-not-independently-confirmed": 1
+    },
+    "ja": {
+      "different-candidate-targets": 4,
+      "exact-agreement": 35,
+      "primary-proposal-not-independently-confirmed": 8,
+      "same-candidate-different-kind": 3
+    },
+    "ko": {
+      "different-candidate-targets": 5,
+      "exact-agreement": 32,
+      "primary-proposal-not-independently-confirmed": 12,
+      "same-candidate-different-kind": 1
+    },
+    "pt-BR": {
+      "different-candidate-targets": 5,
+      "exact-agreement": 39,
+      "primary-proposal-not-independently-confirmed": 6
+    },
+    "vi": {
+      "different-candidate-targets": 8,
+      "exact-agreement": 31,
+      "primary-proposal-not-independently-confirmed": 11
+    },
+    "zh-Hans": {
+      "different-candidate-targets": 8,
+      "exact-agreement": 35,
+      "independent-proposal-omitted-by-primary": 1,
+      "primary-proposal-not-independently-confirmed": 5,
+      "same-candidate-different-kind": 1
+    },
+    "zh-Hant": {
+      "different-candidate-targets": 8,
+      "exact-agreement": 35,
+      "independent-proposal-omitted-by-primary": 1,
+      "primary-proposal-not-independently-confirmed": 5,
+      "same-candidate-different-kind": 1
+    }
+  },
+  "primaryChecksumFileSha256": "22a4089c87cbd96494e7d1dd09d7af8c16fc77d0bfb9a7a9505f8a0c97351556",
+  "primaryLedgerSha256": "794cbb9dc208ffedee27c90bb568cfc75ef6bdeb6bc252e9d72477eddf527245",
+  "primaryPacketManifestSha256": "153def65165e6ecb84daae3892f4f9d9802846762db9ea1267fdd78b4145fc66",
+  "sourceCurrentHashMismatches": 0,
+  "w1187HoldRows": 12
+}

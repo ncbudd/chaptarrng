@@ -6,6 +6,7 @@ using MQTTnet;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Configuration;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.MqttGateway
 {
@@ -41,7 +42,7 @@ namespace NzbDrone.Core.Notifications.MqttGateway
 
                 if (!client.IsConnected)
                 {
-                    failures.Add(new ValidationFailure("Host", $"The MQTT broker rejected the connection ({connectResult.ResultCode})."));
+                    failures.Add(NzbDroneValidationFailure.ForMessage("Host", $"The MQTT broker rejected the connection ({connectResult.ResultCode}).", "server.message.m2024314e8436", new { value0 = connectResult.ResultCode }));
                     return new ValidationResult(failures);
                 }
 
@@ -52,7 +53,7 @@ namespace NzbDrone.Core.Notifications.MqttGateway
             }
             catch
             {
-                failures.Add(new ValidationFailure("Host", "Unable to connect to the MQTT broker. Check the host, port, TLS configuration, and credentials."));
+                failures.Add(NzbDroneValidationFailure.ForMessage("Host", "Unable to connect to the MQTT broker. Check the host, port, TLS configuration, and credentials.", "server.message.ma74229566030"));
             }
             finally
             {

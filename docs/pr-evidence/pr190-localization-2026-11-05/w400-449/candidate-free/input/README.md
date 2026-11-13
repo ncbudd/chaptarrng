@@ -1,0 +1,9 @@
+# W400–W449 Core candidate-free review packet
+
+This packet is pinned to open draft PR #190 head `8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7` (tree `018e46cd14424204a01be46e13e5b50f9f26ce07`) and live `main` `2badb8c277fb6937f320928893d3bee13435f45d` (tree `624e0b781a72d81d43ef32d930d10e42ce7f4aaf`). It contains the next 50 uncovered English Core source keys, ordinals 400–449, across 12 locale catalogs: 600 current cells.
+
+`candidate-free-cells.jsonl` contains the pinned English source, current target, exact source/catalog file hashes, placeholder/markup/numeric/protected-literal checks, and caller-context hash for each cell. `caller-context.jsonl` pins source callers and neighboring code; the full caller-scan file pins are included. `latest-main-drift.json` compares this window against live `main`: source and target values match; six caller-context fingerprints differ and are enumerated. The PR diff from its API base has no workflow paths. `main` has a newer workflow tree, including `.github/workflows/build.yml` since the PR API base; no workflow file is part of the PR diff.
+
+`source-selection.json` continues the verified W0–W399 selection, excluding direct identifiers in the frozen 392-file historical scan. The previous W350–W399 window is reattested against all 600 committed application readback hashes; its 12 source-copy holds are reattested as text-free hash records. Current candidate-free extraction reports zero exact literal translation calls for `CatalogNumber`; the primary review must keep any such cells as hash-only holds.
+
+This packet includes no translation proposals or primary-review decisions. It does not authorize catalog edits, cross-review, blind review, application, or CI. `verify_candidate_free.py` checks the portable packet and its checksums; `--repo` additionally checks the pinned local Git objects and current worktree.

@@ -1,0 +1,28 @@
+{
+  "allSevenHeadsAndTreesUnchangedFromStart": false,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "chaptarrPrDraft": true,
+  "chaptarrPrHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "chaptarrPrState": "OPEN",
+  "chaptarrPrTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "finalUtc": "2026-11-02T22:40:52.152802+00:00",
+  "passed": true,
+  "perRepositoryUnchangedFromStart": {
+    "chaptarr": true,
+    "questarr": false,
+    "romarr": true,
+    "seerr": true,
+    "slskdn": true,
+    "slskr": true,
+    "torrent": true
+  },
+  "startUtc": "2026-11-02T22:39:50.082121+00:00",
+  "worktreeState": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+    "status": "",
+    "tree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef"
+  }
+}

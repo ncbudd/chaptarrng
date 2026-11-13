@@ -1,0 +1,51 @@
+{
+  "adjacentW299CallerRefsReattested": 1,
+  "adjacentW299CellsCrossReviewed": 12,
+  "cells": 600,
+  "currentProtectedLiteralMismatchCells": 3,
+  "finalProtectedLiteralMismatchCells": 0,
+  "head": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+  "independentDispositionCounts": {
+    "accept-current": 552,
+    "accept-primary-candidate": 36,
+    "propose-cross-review-correction": 2,
+    "propose-cross-review-refinement": 5,
+    "revise-primary-candidate": 5
+  },
+  "liveState": "OPEN/DRAFT",
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": "outstanding",
+  "newCorrectionFindings": 2,
+  "newCrossReviewFindings": 7,
+  "newRefinementFindings": 5,
+  "outputPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0300-0349-crossreview-by-agent-20261102",
+  "placeholderMismatchCells": 0,
+  "primaryCandidateProtectedLiteralMismatchCells": 0,
+  "primaryCandidatesAccepted": 36,
+  "primaryCandidatesIndependentlyReviewed": 41,
+  "primaryCandidatesRevised": 5,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryOrPrModified": false,
+  "sourceIds": 50,
+  "sourcePositionRange": [
+    300,
+    349
+  ],
+  "testsBuildsScansCiBrowserWorkflowsReleasesRun": false,
+  "tree": "d76d887609ae90c9238ffda9b192a4c0c72be227"
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "application": "ChaptarrNG",
+  "pullRequest": 190,
+  "reviewedHead": "0df15f41865bb53cb26691bf9c50c5468638eca6",
+  "reviewedTree": "49e884c110b3661c86269edfd13167761efb7d4b",
+  "changeParent": "0df15f41865bb53cb26691bf9c50c5468638eca6",
+  "reviewedAt": "2026-11-02",
+  "frozenManifestSha256": "e12387dc70e71e6334fe4525ed919cd2cdc513b9ee7b553b0473ca9fd50d23fc",
+  "frozenInputSha256": "f1bc2633b06c34f3411bb9c66b77b9a052aed321865f371da13d8266e55db3f0",
+  "rootDecisionSha256": "286fdd38a73a58c423dc6eb1f9d63cd92718fd998d44896cc7696c6e34bd2da5",
+  "independentCrossReviewLedgerSha256": "a248e38159a27fe3b9cc86e6ef0dfe22103c6b6b02e275e039244769ee389f28",
+  "independentReviewTotals": {
+    "cells": 135,
+    "acceptedCurrent": 133,
+    "correctionNeeded": 2,
+    "held": 0,
+    "unresolved": 0
+  },
+  "sourceCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "gitBlob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "GrabID": "Grab ID"
+  },
+  "appliedCorrections": [
+    {
+      "id": "GrabID",
+      "locale": "hi",
+      "source": "Grab ID",
+      "sourceSha256": "ad6a48ab5ad1ce2a77f2dd918c41d200fcf46ccc86d2386f0c70bb8bb5e37a39",
+      "currentBefore": "ग्रैब ID",
+      "currentBeforeSha256": "6cc39fc207e7f66bae91eb04c7587eca7260577e1554c0fe501fc51575c6cdc4",
+      "reviewedTarget": "डाउनलोड ID",
+      "reviewedTargetSha256": "a37b05554d3a1e7d45f7fb4841154c582ffc348f738a05abddadf3b782579f2a",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "catalogBeforeSha256": "7b6cf3a4dc7121769f7a96184e68f6df1a4e187835e766a5e73bc0c6611fc267",
+      "catalogAfterSha256": "979451a19a02edbde35db08211c8a3510f7cd9767aa4c707cd7875f5f4e13464",
+      "catalogAfterGitBlob": "0b762cd81c27c0d9f3ee4eddfddf1e43cf4b2220",
+      "sourceContextRefs": [
+        "frontend/src/Activity/History/Details/HistoryDetails.js:155",
+        "frontend/src/Activity/History/Details/HistoryDetails.js:543"
+      ],
+      "sourceContextEvidence": [
+        {
+          "excerpt": "153:           !!downloadId &&\n154:             <DescriptionListItem\n155:               title={translate('GrabID')}\n156:               data={downloadId}\n157:             />",
+          "gitBlob": "de2b315c5b9139157836643aaaa4f610adc37bea",
+          "line": 155,
+          "path": "frontend/src/Activity/History/Details/HistoryDetails.js"
+        },
+        {
+          "excerpt": "541:           !!downloadId &&\n542:             <DescriptionListItem\n543:               title={translate('GrabID')}\n544:               data={downloadId}\n545:             />",
+          "gitBlob": "de2b315c5b9139157836643aaaa4f610adc37bea",
+          "line": 543,
+          "path": "frontend/src/Activity/History/Details/HistoryDetails.js"
+        }
+      ],
+      "semanticRationale": "HistoryDetails renders this title for the downloadId field supplied by the download client; “Download ID” describes the displayed value. The old translation means grab/import action.",
+      "placeholderAndLiteralChecks": "pass",
+      "independentDisposition": "correction-needed",
+      "rootDisposition": "correction-needed"
+    },
+    {
+      "id": "GrabID",
+      "locale": "ko",
+      "source": "Grab ID",
+      "sourceSha256": "ad6a48ab5ad1ce2a77f2dd918c41d200fcf46ccc86d2386f0c70bb8bb5e37a39",
+      "currentBefore": "가져오기 ID",
+      "currentBeforeSha256": "ec2375979b6457a6cbbe88828df979f6925e97b760f6f125df56543d2641a880",
+      "reviewedTarget": "다운로드 ID",
+      "reviewedTargetSha256": "c73ed2511658ee68e7596cab3d3ff43fd78e9624c51a4e6f2e379f3bc8456a56",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "catalogBeforeSha256": "542a8adb0456fd7ae4f843b8dd3b9bdd92669edecc5637059f18a7aa4750d5a6",
+      "catalogAfterSha256": "5a4893c47599702b3c84e593777dbf4902510ea89e74ad30baff983750282524",
+      "catalogAfterGitBlob": "eae7c8265856714ebd4162b9fff67b489c59be95",
+      "sourceContextRefs": [
+        "frontend/src/Activity/History/Details/HistoryDetails.js:155",
+        "frontend/src/Activity/History/Details/HistoryDetails.js:543"
+      ],
+      "sourceContextEvidence": [
+        {
+          "excerpt": "153:           !!downloadId &&\n154:             <DescriptionListItem\n155:               title={translate('GrabID')}\n156:               data={downloadId}\n157:             />",
+          "gitBlob": "de2b315c5b9139157836643aaaa4f610adc37bea",
+          "line": 155,
+          "path": "frontend/src/Activity/History/Details/HistoryDetails.js"
+        },
+        {
+          "excerpt": "541:           !!downloadId &&\n542:             <DescriptionListItem\n543:               title={translate('GrabID')}\n544:               data={downloadId}\n545:             />",
+          "gitBlob": "de2b315c5b9139157836643aaaa4f610adc37bea",
+          "line": 543,
+          "path": "frontend/src/Activity/History/Details/HistoryDetails.js"
+        }
+      ],
+      "semanticRationale": "HistoryDetails renders this title for the downloadId field supplied by the download client; “Download ID” describes the displayed value. The old translation means grab/import action.",
+      "placeholderAndLiteralChecks": "pass",
+      "independentDisposition": "correction-needed",
+      "rootDisposition": "correction-needed"
+    }
+  ],
+  "qualifiedNativeSpeakerApproval": false,
+  "browserReviewPerformed": false,
+  "testsBuildsCiRun": false,
+  "focusedValidation": {
+    "all12LocaleCatalogsParse": true,
+    "all12LocaleCatalogsMatchEnglishKeySet": true,
+    "gitDiffCheck": "passed",
+    "workflowSubtreeChanged": false,
+    "testsBuildsCiRun": false,
+    "browserReviewPerformed": false
+  },
+  "localHooks": {
+    "preCommit": "skipped with task-scoped core.hooksPath override; invokes scripts/security-scan-local.sh --staged --semgrep-only, which is a scan job outside the required private ephemeral JIT",
+    "postCommit": "skipped with the same override; invokes scripts/sync-unraid-package.sh, an unrelated package-sync side effect",
+    "prePush": "skipped with the same override; invokes packaging/scripts/test-publish-image-aliases.sh, a test job not authorized/run for this change"
+  }
+}

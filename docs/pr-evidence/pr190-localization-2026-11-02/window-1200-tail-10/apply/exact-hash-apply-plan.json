@@ -1,0 +1,1657 @@
+{
+  "schemaVersion": 1,
+  "planType": "exact-hash, byte-preserving JSON string replacements; plan only, no files changed",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "expectedHead": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "expectedTree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "applyGuards": [
+    "Require exact HEAD and tree above.",
+    "Require each target catalog file SHA-256 to equal expectedFileSha256.",
+    "Require each current JSON value and line SHA-256 to match its operation precondition.",
+    "Apply only listed one-line JSON string substitutions; preserve all other bytes.",
+    "Verify each plannedFileSha256 after application."
+  ],
+  "operationCount": 81,
+  "catalogs": [
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "locale": "ar",
+      "expectedFileSha256": "571eb653789e335d208c47dd38b84884456941d0dc6340d95790ffe2f61a64c6",
+      "plannedFileSha256": "8cafe0591020c8b95850ab83b1fb830c3cd31913c9c46fe73761478aad068ebd",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "locale": "de",
+      "expectedFileSha256": "6cf59f27bbf8c9c4059362e625c0ebad94e125e03db6c97103c038c4873809f4",
+      "plannedFileSha256": "865c6b5ff350f7cee5996604b17e5133a13cfb97e11ae3ab6d729054aa24bbc8",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "locale": "es",
+      "expectedFileSha256": "acf6521d45eda22a3f2e72dd80d3521f0f906185d4dfef70d8c32346122254b9",
+      "plannedFileSha256": "f7e83d93ea48c857739e8ba197927dd9a086605d5bba973c71bc650dbc672473",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "locale": "fr",
+      "expectedFileSha256": "ac7aa438ea0ea83b7ee0e0f2fdfa1456e0d031b10576977172957c6cc297618e",
+      "plannedFileSha256": "2d04a94637af8ed8dea18ce7be48b3171a2d1abdc57040ac0a6488f47d74a802",
+      "operationCount": 7
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "locale": "hi",
+      "expectedFileSha256": "7be758e4f68aa1728b0df1e00d003d74aae743e02d8fdf629e3defe516dc2b3b",
+      "plannedFileSha256": "d213459d56aac3adc06254bca122e22f395c5a5e0924787311007499113bcb52",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "locale": "id",
+      "expectedFileSha256": "3b6872e17f7d40c4c1263957aba2457917cd94d44ffdba234bdead02a91c3e4f",
+      "plannedFileSha256": "80237bd1fd558f897abe7fcc21dce677ac6b104d3647a1e68b9214a3c4e4f609",
+      "operationCount": 7
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "locale": "ja",
+      "expectedFileSha256": "5a90842b7a2dbeee88c7588becc95ac441d55d3ef1872896baab4f98d1075977",
+      "plannedFileSha256": "83c91059cb694df4e86cc4f364e044e4683cffbd4c2de1a1675e77471cb67084",
+      "operationCount": 5
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "locale": "ko",
+      "expectedFileSha256": "025ace067663d66d6b9e88e511726fd27029c22976cd2009bc820fc2e3583fda",
+      "plannedFileSha256": "68c31bede0d1b4414fc6f53c0550486b30960369a86e86da13a9145a189f28e9",
+      "operationCount": 5
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "locale": "pt-BR",
+      "expectedFileSha256": "f97d1c90777339e413822ca519903baf904f7fa9079f79fb48a375193a9325c3",
+      "plannedFileSha256": "53d1488a12ae0f3fbf22acfd05835e2d733b48c7db4e219a1bca05f4d666b613",
+      "operationCount": 7
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "locale": "vi",
+      "expectedFileSha256": "f183c8a412d9004ffbb3a135b0bff5eda5ff19dc899dd6a2c8eff1b3e6d8b09a",
+      "plannedFileSha256": "57f0274eed51d5771aec40d2487bc55a5b5f62a457eabbd3ccdc4f727c58fac7",
+      "operationCount": 9
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "locale": "zh-Hans",
+      "expectedFileSha256": "d6f2cb1bc3f267e274ad2a70076d021111ae925bb0e7e7c6eba1a7702c0912e9",
+      "plannedFileSha256": "ecd45d0324782da4193f1d634b1fb4ccefd19aba738b27bdeec6c417a51d220d",
+      "operationCount": 9
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "locale": "zh-Hant",
+      "expectedFileSha256": "509f3bbc445ca1a6d37ff2703037bb08cf07285e58d122983b3089840bbd3b02",
+      "plannedFileSha256": "d87d14471bfbd5b8a59a3b6a0e2706ab902118ba0142ea157b2ba7d6d1e2a18d",
+      "operationCount": 8
+    }
+  ],
+  "operations": [
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP عضو - فئة: {value0}",
+      "expectedCurrentValueSha256": "4b46e293afa5ff8255d60c57ac3f399d0239e7b5157a65f887cc020ab7927b69",
+      "replacementValue": "✓ عضو VIP – الفئة: {value0}",
+      "replacementValueSha256": "3b2e9adccd5f12cbd00f6b27f11458423b28edeb2a08511114b629bce0813198",
+      "expectedJsonStringLiteral": "\"✓ VIP عضو - فئة: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ عضو VIP – الفئة: {value0}\"",
+      "expectedJsonLineSha256": "72890d00361413cc20f903bf2a0a7b92d4d17dc9bc6506937ac67b34cd03539e",
+      "replacementJsonLineSha256": "5d6a4bb5ac4db58f0a9fc2a71584684c7e4544b8b7ce73ae26bc38eb6f7f6fdf",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ عضو VIP - الفئة: {value0}؛ التورنتات غير المستوفية: {value1}/{value2}",
+      "expectedCurrentValueSha256": "53ce999ad9f753122b4c1ebe68c8a5703d0caa8cfa3fa1e462abd5edcaa001f1",
+      "replacementValue": "✓ عضو VIP - الفئة: {value0}؛ التورنتات التي لا تستوفي الشروط: {value1}/{value2}",
+      "replacementValueSha256": "8e5f70b52be2255bae74dd0f19afca5a1897ff50e1ba660bdf00b0c36cdfe04f",
+      "expectedJsonStringLiteral": "\"✓ عضو VIP - الفئة: {value0}؛ التورنتات غير المستوفية: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ عضو VIP - الفئة: {value0}؛ التورنتات التي لا تستوفي الشروط: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "8f93c2e28b7597075fd497c3c9e79f380ed67c60d88f82f73a5b5227c3a71481",
+      "replacementJsonLineSha256": "46ba9ba102cdaf1bb97e3395f0dbe79a08d3c38e0583ab5169413cf460715f57",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "فئة المستخدم: {value0} (عضو عادي)؛ التورنتات غير المستوفية: {value1}/{value2}",
+      "expectedCurrentValueSha256": "79e804beadd35f6bde03bef1aa2238c716097d241476edab65ddf143d1f6e879",
+      "replacementValue": "فئة المستخدم: {value0} (عضو عادي)؛ التورنتات التي لا تستوفي الشروط: {value1}/{value2}",
+      "replacementValueSha256": "215e3d6561d2d71d6d1f5e4461cab299e68cf4ea861f7b13095fde73974c0505",
+      "expectedJsonStringLiteral": "\"فئة المستخدم: {value0} (عضو عادي)؛ التورنتات غير المستوفية: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"فئة المستخدم: {value0} (عضو عادي)؛ التورنتات التي لا تستوفي الشروط: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "be51935cd4b546aa2264c164a91378eb7e6bec5549525c23d5882490659bd3dd",
+      "replacementJsonLineSha256": "ca9246223ee8b170c92151c5f2367596457a0d7cd3181b6ef836bdc3dec2beae",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "لن يوقف rTorrent التورنتات مؤقتًا عند استيفاء معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا عند تفعيل Remove Completed، وألا يكون التورنت محميًا بواسطة Preserve torrents in client أو Post-Import Category. بعد الاستيراد، سيعيّن أيضًا \"{value0}\" كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك.",
+      "expectedCurrentValueSha256": "3d29d9c503a14c71e867fd36cadd8826ef7a77753c29bb9fad4c0fd18576d314",
+      "replacementValue": "لن يوقف rTorrent التورنتات مؤقتًا عند استيفائها معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا عند تفعيل «إزالة المكتمل»، وألا يكون التورنت محميًا بواسطة «الحفاظ على التورنتات في عميل التنزيل» أو «تصنيف ما بعد الاستيراد». بعد الاستيراد، سيعيّن أيضًا «{value0}» كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك.",
+      "replacementValueSha256": "418ebbc6ccbabb4fc4fc96ca473c377a697587fbcb7df23d9efc90991ce1d815",
+      "expectedJsonStringLiteral": "\"لن يوقف rTorrent التورنتات مؤقتًا عند استيفاء معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا عند تفعيل Remove Completed، وألا يكون التورنت محميًا بواسطة Preserve torrents in client أو Post-Import Category. بعد الاستيراد، سيعيّن أيضًا \\\"{value0}\\\" كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك.\"",
+      "replacementJsonStringLiteral": "\"لن يوقف rTorrent التورنتات مؤقتًا عند استيفائها معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا عند تفعيل «إزالة المكتمل»، وألا يكون التورنت محميًا بواسطة «الحفاظ على التورنتات في عميل التنزيل» أو «تصنيف ما بعد الاستيراد». بعد الاستيراد، سيعيّن أيضًا «{value0}» كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك.\"",
+      "expectedJsonLineSha256": "a8d1004b0ccc6b26217d59cee498b6d82ebd8089f423465e222e1304ef544934",
+      "replacementJsonLineSha256": "c371207590bacabe96f225d2ea106725fe7a8ffda1bb0807410450dee229f7bf",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "سيتولى Chaptarr إزالة التورنتات تلقائيًا وفق معايير المشاركة الحالية في Settings -> Indexers.",
+      "expectedCurrentValueSha256": "ba5d239a390e454e9af70b36159b3873560e94b880465a49b2f8127b2f6bddc7",
+      "replacementValue": "سيتولى Chaptarr إزالة التورنتات تلقائيًا وفق معايير المشاركة الحالية ضمن الإعدادات → مفهرسات.",
+      "replacementValueSha256": "c9a2394302eb4aafb98eccb7150d06f388e9c688af6fb72b431c81880e282be0",
+      "expectedJsonStringLiteral": "\"سيتولى Chaptarr إزالة التورنتات تلقائيًا وفق معايير المشاركة الحالية في Settings -> Indexers.\"",
+      "replacementJsonStringLiteral": "\"سيتولى Chaptarr إزالة التورنتات تلقائيًا وفق معايير المشاركة الحالية ضمن الإعدادات → مفهرسات.\"",
+      "expectedJsonLineSha256": "1575c11b038ea79d95308557a72e322f5c60ade2315df5b482b3542414fe2dfd",
+      "replacementJsonLineSha256": "fce7baeadaea0847c527a8d302b5af066e73482c9784e0cedb2055dd714f5b0f",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "لا يستطيع Chaptarr الاتصال بـ Download Station إذا كانت 2-Factor Authentication مفعّلة في حساب DSM الخاص بك.",
+      "expectedCurrentValueSha256": "a60c5b7916846ce7f67df4d4160c32e7e7634a9578dc03e4d97172d44bfda123",
+      "replacementValue": "إذا كانت المصادقة الثنائية مفعّلة في حساب DSM لديك، فلن يتمكن Chaptarr من الاتصال بـ Download Station.",
+      "replacementValueSha256": "3a1bdb6b22dd47809f0e5e5985366a72d7a50734c41ac5b0d9ded94e2d07faba",
+      "expectedJsonStringLiteral": "\"لا يستطيع Chaptarr الاتصال بـ Download Station إذا كانت 2-Factor Authentication مفعّلة في حساب DSM الخاص بك.\"",
+      "replacementJsonStringLiteral": "\"إذا كانت المصادقة الثنائية مفعّلة في حساب DSM لديك، فلن يتمكن Chaptarr من الاتصال بـ Download Station.\"",
+      "expectedJsonLineSha256": "17476691831ec41bbf275c50e4bb10e3b037fd47588857fd2c2a88d5d1cdf64e",
+      "replacementJsonLineSha256": "16ef877944b11cf398652f08c344d3c473b214f24f93f04506528c36cabc1029",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP Mitglied - Klasse: {value0}",
+      "expectedCurrentValueSha256": "5e895c634cec28c1e5580b29514b2562821f361f29df9b2f35b8c100549bb9fd",
+      "replacementValue": "✓ VIP-Mitglied – Klasse: {value0}",
+      "replacementValueSha256": "db7915bbf4561e8483976a403e9a1f89faa1089155a6850ba1634302a59b79f8",
+      "expectedJsonStringLiteral": "\"✓ VIP Mitglied - Klasse: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP-Mitglied – Klasse: {value0}\"",
+      "expectedJsonLineSha256": "a293038d4148027c96c44e317d742c7d534323d0b2b232e9d2f8e0a417283c3d",
+      "replacementJsonLineSha256": "5bf017bc8471b2e2a2d968d0d54a5959032134713be98fc7a9aef0568dd07bf8",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP-Mitglied – Klasse: {value0}; nicht erfüllte Torrents: {value1}/{value2}",
+      "expectedCurrentValueSha256": "1e9fdff3b760acc3272ec12bf6788509021bc4181c4346756e765bea8a13b827",
+      "replacementValue": "✓ VIP-Mitglied – Klasse: {value0}; Torrents, die die Anforderungen nicht erfüllen: {value1}/{value2}",
+      "replacementValueSha256": "446ce4bac1efb0cb73a0b87b0cdf62a9d9ef7bff6d6d093b0f0c219ea74c454f",
+      "expectedJsonStringLiteral": "\"✓ VIP-Mitglied – Klasse: {value0}; nicht erfüllte Torrents: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP-Mitglied – Klasse: {value0}; Torrents, die die Anforderungen nicht erfüllen: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "df84fc4763ce91fa98659d66aaf3cb6ce31c1f5c73fb6699e82333649c992f44",
+      "replacementJsonLineSha256": "b508c2f0d0f04fa692db555ad6c2a702faaa80a339324884b4f7e854f780e8a7",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "Benutzerklasse: {value0} (Standardmitglied); nicht erfüllte Torrents: {value1}/{value2}",
+      "expectedCurrentValueSha256": "92b4ef72fd95f87cb0afbe520dd37e83d04a1e483e33c08dcbb44245517c54e8",
+      "replacementValue": "Benutzerklasse: {value0} (Standardmitglied); Torrents, die die Anforderungen nicht erfüllen: {value1}/{value2}",
+      "replacementValueSha256": "7bfcdc89cb86a9b5a8c54908b75be1a9127e76c9e0638159309f870af3e63598",
+      "expectedJsonStringLiteral": "\"Benutzerklasse: {value0} (Standardmitglied); nicht erfüllte Torrents: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"Benutzerklasse: {value0} (Standardmitglied); Torrents, die die Anforderungen nicht erfüllen: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "bdfe60a59899f83b1edffcb15ca289bfc97589c4378e8a4cbb6b381998198c0d",
+      "replacementJsonLineSha256": "73c22f6ceb761a35c876ee41af7a584cf80651256cd61c93b7cc614df6503d95",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent pausiert Torrents nicht, wenn sie die Seed-Kriterien erfüllen. Chaptarr kann Torrents nach Abschluss des Seedings nur entfernen, wenn Remove Completed aktiviert ist und der Torrent nicht durch Preserve torrents in client oder Post-Import Category geschützt wird. Nach dem Import wird außerdem \"{value0}\" als rTorrent-Ansicht festgelegt, die in rTorrent-Skripten zur Anpassung des Verhaltens verwendet werden kann.",
+      "expectedCurrentValueSha256": "3f8d30df7bb58818fdf6c87dc92368f02b9135b3fc28f42a1ee80f0d1d163b3d",
+      "replacementValue": "rTorrent pausiert Torrents nicht, wenn sie die Seed-Kriterien erfüllen. Chaptarr kann Torrents nach Abschluss des Seedings nur entfernen, wenn „Abgeschlossene entfernen“ aktiviert ist und der Torrent weder durch „Torrents im Client beibehalten“ noch durch „Kategorie nach dem Import“ geschützt ist. Nach dem Import wird „{value0}“ als rTorrent-Ansicht festgelegt, die in rTorrent-Skripten zur Anpassung des Verhaltens verwendet werden kann.",
+      "replacementValueSha256": "24e05c395b2f226b17e33490fc8bc693ec6c6901e9811d5a778dee59d8dc1bd5",
+      "expectedJsonStringLiteral": "\"rTorrent pausiert Torrents nicht, wenn sie die Seed-Kriterien erfüllen. Chaptarr kann Torrents nach Abschluss des Seedings nur entfernen, wenn Remove Completed aktiviert ist und der Torrent nicht durch Preserve torrents in client oder Post-Import Category geschützt wird. Nach dem Import wird außerdem \\\"{value0}\\\" als rTorrent-Ansicht festgelegt, die in rTorrent-Skripten zur Anpassung des Verhaltens verwendet werden kann.\"",
+      "replacementJsonStringLiteral": "\"rTorrent pausiert Torrents nicht, wenn sie die Seed-Kriterien erfüllen. Chaptarr kann Torrents nach Abschluss des Seedings nur entfernen, wenn „Abgeschlossene entfernen“ aktiviert ist und der Torrent weder durch „Torrents im Client beibehalten“ noch durch „Kategorie nach dem Import“ geschützt ist. Nach dem Import wird „{value0}“ als rTorrent-Ansicht festgelegt, die in rTorrent-Skripten zur Anpassung des Verhaltens verwendet werden kann.\"",
+      "expectedJsonLineSha256": "a0b5a58ceaa11cba0ed8bfec5783dd45f8de736d5bb0aecd95386731137724d6",
+      "replacementJsonLineSha256": "c467ecaf00685c1f393068f55a49bbf4c76e63fbb735d087dd12ad3472d457b5",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr wird die automatische Entfernung von Torrents auf der Grundlage der aktuellen Samenkriterien in Settings -> Indexers verwalten.",
+      "expectedCurrentValueSha256": "2cb26f444ee48dbdfb76e07bdf349538690a7874fb940df9989299618e132ae3",
+      "replacementValue": "Chaptarr übernimmt die automatische Entfernung von Torrents anhand der aktuellen Seeding-Kriterien unter Einstellungen → Indexer.",
+      "replacementValueSha256": "221860fb40f91e4694f91015576fcbd7e03b12eac314caf07e774a969057d9be",
+      "expectedJsonStringLiteral": "\"Chaptarr wird die automatische Entfernung von Torrents auf der Grundlage der aktuellen Samenkriterien in Settings -> Indexers verwalten.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr übernimmt die automatische Entfernung von Torrents anhand der aktuellen Seeding-Kriterien unter Einstellungen → Indexer.\"",
+      "expectedJsonLineSha256": "91034a34f46289e6e2e47df2a1e5ec88f6cda5bbbded75ec6318fe97d209d16a",
+      "replacementJsonLineSha256": "4cdcbcb324cfd4481233c0f2145804bf7f24d0b3edf46bd04f57ec90fbc0719a",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "Chaptarr kann keine Verbindung zu Download Station herstellen, wenn 2-Factor Authentication für dein DSM-Konto aktiviert ist.",
+      "expectedCurrentValueSha256": "0b31366e659d0ac10fee1169651af86cbe1b845bf2083375de2256a7a0c97bff",
+      "replacementValue": "Chaptarr kann keine Verbindung zu Download Station herstellen, wenn die Zwei-Faktor-Authentifizierung für dein DSM-Konto aktiviert ist.",
+      "replacementValueSha256": "61653dda5ec2db6880854915e7aaac223ff3738b4cbb94889425d603f7437d2d",
+      "expectedJsonStringLiteral": "\"Chaptarr kann keine Verbindung zu Download Station herstellen, wenn 2-Factor Authentication für dein DSM-Konto aktiviert ist.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr kann keine Verbindung zu Download Station herstellen, wenn die Zwei-Faktor-Authentifizierung für dein DSM-Konto aktiviert ist.\"",
+      "expectedJsonLineSha256": "67a589f896e1c4fb69c0a08e9167bb36b5c7f97727ba90cee160e0f14e3a79d2",
+      "replacementJsonLineSha256": "9520b6ff2c43d7c78d5a2dfb60cfdb16944b07971530d4e8967ce930faf0f85f",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP Miembro - Clase: {value0}",
+      "expectedCurrentValueSha256": "17774007468e2fca60a8e09c98a73bceb86df272bb7f36ad824811b25f5b5679",
+      "replacementValue": "✓ Miembro VIP – clase: {value0}",
+      "replacementValueSha256": "ba269e0ca201d34bbf7d468a977156c3cf8585983fd0ddfb049c319a4ddec497",
+      "expectedJsonStringLiteral": "\"✓ VIP Miembro - Clase: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ Miembro VIP – clase: {value0}\"",
+      "expectedJsonLineSha256": "9853b167885cecc848c0e7a335738c186aeebd8f01c367d02837fdbe4d307e4e",
+      "replacementJsonLineSha256": "4f2d143e9ea85a679e10bafa2c405e2b215de10cdb9122c1a2d4844ab1e14fc3",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP Miembro - Clase: {value0}; torrents no satisfechos: {value1}/{value2}",
+      "expectedCurrentValueSha256": "9350c3bc9a18c05b5853062bdc5a4b8ecd8489d1dca8ee08ac31b82e88eb5006",
+      "replacementValue": "✓ Miembro VIP – clase: {value0}; torrents que no cumplen los requisitos: {value1}/{value2}",
+      "replacementValueSha256": "de8aa5512de9f32e82cbe419e2496f6931ff8bcfcc131ad35d0e533bbb304e4b",
+      "expectedJsonStringLiteral": "\"✓ VIP Miembro - Clase: {value0}; torrents no satisfechos: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ Miembro VIP – clase: {value0}; torrents que no cumplen los requisitos: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "368e6ea5da9f81952b533a2d282a566434dfe5cd8df851c704543aaf6451bf70",
+      "replacementJsonLineSha256": "ac086fecc8394551d0eb7c1ac659611389ac17a36e0d0503584a924ab1e3cb8e",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "Clase de usuario: {value0} (miembro estándar); torrents no satisfechos: {value1}/{value2}",
+      "expectedCurrentValueSha256": "7498499021036943a1c282216d1cd4d1626ccf45b0601a350f23700ee42c09f8",
+      "replacementValue": "Clase de usuario: {value0} (miembro estándar); torrents que no cumplen los requisitos: {value1}/{value2}",
+      "replacementValueSha256": "b37711abce8d119ea14497c5a8e8b47d78337ae79bde87f7f59d6839a063b075",
+      "expectedJsonStringLiteral": "\"Clase de usuario: {value0} (miembro estándar); torrents no satisfechos: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"Clase de usuario: {value0} (miembro estándar); torrents que no cumplen los requisitos: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "a9e2287729d01853946d5e54f6a327f7f96256aa715582826a74b3ec5b81bb2a",
+      "replacementJsonLineSha256": "666da4b4f586352588eca9f8b9c6f1b4933b4cbabc232eb72026d74963145a41",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent no pausará los torrents cuando cumplan los criterios de seed. Chaptarr solo puede eliminarlos después de que termine el seed si Remove Completed está activado y el torrent no está protegido por Preserve torrents in client ni Post-Import Category. Después de importarlo, también establecerá \"{value0}\" como una vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento.",
+      "expectedCurrentValueSha256": "2b0ccfbfd2818070e26e03a944cbfd46306b22f84a7e2d2acfd7fce3289aa402",
+      "replacementValue": "rTorrent no pausará los torrents cuando cumplan los criterios de seed. Chaptarr solo podrá eliminarlos cuando termine el seeding si está activado «Eliminar completado» y el torrent no está protegido por «Preservar torrents en el cliente» ni por «Categoría tras la importación». Después de la importación, también establecerá «{value0}» como una vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento.",
+      "replacementValueSha256": "07cf9fba3e4f544805b03939e5e815dc6a932ae0ac048289e767d5855a1e2d3a",
+      "expectedJsonStringLiteral": "\"rTorrent no pausará los torrents cuando cumplan los criterios de seed. Chaptarr solo puede eliminarlos después de que termine el seed si Remove Completed está activado y el torrent no está protegido por Preserve torrents in client ni Post-Import Category. Después de importarlo, también establecerá \\\"{value0}\\\" como una vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento.\"",
+      "replacementJsonStringLiteral": "\"rTorrent no pausará los torrents cuando cumplan los criterios de seed. Chaptarr solo podrá eliminarlos cuando termine el seeding si está activado «Eliminar completado» y el torrent no está protegido por «Preservar torrents en el cliente» ni por «Categoría tras la importación». Después de la importación, también establecerá «{value0}» como una vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento.\"",
+      "expectedJsonLineSha256": "1ba4f9b1b9006fdddee90a5741fd9b4ded4cef6d16cf6bec31f33da0b8545ca1",
+      "replacementJsonLineSha256": "ae983d3c5746b5612aba93947c884ee08dd9627836a89703ce882d55003bc4f6",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr gestionará la eliminación automática de torrentes basada en los criterios de semilla actuales en Settings -> Indexers",
+      "expectedCurrentValueSha256": "4a3ef7a17d26ad4eb197e6d23e37e687af351bf79a6990130158b63401dcd95a",
+      "replacementValue": "Chaptarr se encargará de eliminar automáticamente los torrents según los criterios actuales de compartición en Ajustes → Indexadores.",
+      "replacementValueSha256": "2c896a78a6a085c4f8581be3cd8d5d67229ac00b4b5347a27ff68bcda3a65499",
+      "expectedJsonStringLiteral": "\"Chaptarr gestionará la eliminación automática de torrentes basada en los criterios de semilla actuales en Settings -> Indexers\"",
+      "replacementJsonStringLiteral": "\"Chaptarr se encargará de eliminar automáticamente los torrents según los criterios actuales de compartición en Ajustes → Indexadores.\"",
+      "expectedJsonLineSha256": "87b34324e7f6323ba2170dbdc9bcc09a11fc1e00194709b45b520d6a9616ab6b",
+      "replacementJsonLineSha256": "cd86bc217308d024ba6cb7ffe68309a6ab61dd50c59604603f4e88306933607b",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "Chaptarr no puede conectarse a Download Station si 2-Factor Authentication está activada en tu cuenta DSM.",
+      "expectedCurrentValueSha256": "a2526a549ad87eb3c26640743a24fd38561bf250297d4683baec253d0047b8d2",
+      "replacementValue": "Chaptarr no puede conectarse a Download Station si la autenticación de dos factores está activada en tu cuenta de DSM.",
+      "replacementValueSha256": "e9a613853535d381c1f25f3686a617aba93f211bd7c91b9a1585949f8dc7c3ff",
+      "expectedJsonStringLiteral": "\"Chaptarr no puede conectarse a Download Station si 2-Factor Authentication está activada en tu cuenta DSM.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr no puede conectarse a Download Station si la autenticación de dos factores está activada en tu cuenta de DSM.\"",
+      "expectedJsonLineSha256": "13b7009942ea76a88f54d25daf3ee1a33a6f7b019f864f1071397d2e46787475",
+      "replacementJsonLineSha256": "0e587fe8b8ed157fe5ccab0a9dc4387a2dc7aed38aa9124c993c9da3a3733173",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.m73172a5045d6",
+      "expectedCurrentValue": "Les livres de vos listes Hardcover et leurs statuts de lecture seront rapprochés de votre source de métadonnées configurée à partir du titre et du nom de l’auteur.",
+      "expectedCurrentValueSha256": "51709099cf5cd193426882e4b1fdb0bdde427e25271d1a98439734a45ed20f47",
+      "replacementValue": "Les livres de vos listes Hardcover et leurs statuts de lecture seront mis en correspondance avec la source de métadonnées que vous avez configurée, selon le titre et le nom de l’auteur.",
+      "replacementValueSha256": "405b46a2b9b9b387f2ef718e199514fb76c4b4a99157fd375013447c0001ca82",
+      "expectedJsonStringLiteral": "\"Les livres de vos listes Hardcover et leurs statuts de lecture seront rapprochés de votre source de métadonnées configurée à partir du titre et du nom de l’auteur.\"",
+      "replacementJsonStringLiteral": "\"Les livres de vos listes Hardcover et leurs statuts de lecture seront mis en correspondance avec la source de métadonnées que vous avez configurée, selon le titre et le nom de l’auteur.\"",
+      "expectedJsonLineSha256": "8ea87aae0bbc808ac6a457e587e71e6f09e5eeff5cbec13f8333af6e270e73a0",
+      "replacementJsonLineSha256": "9fbdb78cef378a95f0d811945dffd073f2b8f475440d7d55597cd601ecf86a4b",
+      "disposition": "refinement",
+      "callerPinIds": [
+        "server.message.m73172a5045d6#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP Membre - Class: {value0}",
+      "expectedCurrentValueSha256": "1895ba9924e4fbb819cfb9465a1a38da6d8beac932157536012c64a82ba2dfe5",
+      "replacementValue": "✓ Membre VIP – classe : {value0}",
+      "replacementValueSha256": "c772aaeecbbd3a2f9802d53b3256af928818c412d905e55338817b835e7562f8",
+      "expectedJsonStringLiteral": "\"✓ VIP Membre - Class: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ Membre VIP – classe : {value0}\"",
+      "expectedJsonLineSha256": "098ab5420e8ec2c751237b8bfb42727e54c1003a56903256cf920515836ab0df",
+      "replacementJsonLineSha256": "8efec0c0a79d17893dfd8efc676cdbd80b31edc88283ceae6afe8ad0d5aef226",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ Membre VIP – classe : {value0} ; torrents non satisfaits : {value1}/{value2}",
+      "expectedCurrentValueSha256": "475e12e100e3b228ed47c364fe209e46de08eb41539795fe454e5a9bce2854b4",
+      "replacementValue": "✓ Membre VIP – classe : {value0} ; torrents qui ne remplissent pas les conditions : {value1}/{value2}",
+      "replacementValueSha256": "4d7d1d9bdf28367fabb723278b7363df143a94f1c488308d81db2e9f53ab5c98",
+      "expectedJsonStringLiteral": "\"✓ Membre VIP – classe : {value0} ; torrents non satisfaits : {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ Membre VIP – classe : {value0} ; torrents qui ne remplissent pas les conditions : {value1}/{value2}\"",
+      "expectedJsonLineSha256": "ae9677c39050231999c73003b0ea562cdd9efc1aaaf47885f1e98ab6d550f5cc",
+      "replacementJsonLineSha256": "f13304391ecb0f108ce38f32eb108c768f54669d1aab3ef889e929f855c2e32a",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "Classe utilisateur : {value0} (membre standard) ; torrents non satisfaits : {value1}/{value2}",
+      "expectedCurrentValueSha256": "5d6d6d973f0670aae9f95ce9036ea9cc29fc6f1babaa0daab0cbb467e80f17e5",
+      "replacementValue": "Classe utilisateur : {value0} (membre standard) ; torrents qui ne remplissent pas les conditions : {value1}/{value2}",
+      "replacementValueSha256": "41cdb4eebd024782c30ba8dd8b1f81d352f2213099f83977ce1b0a59c1437f4b",
+      "expectedJsonStringLiteral": "\"Classe utilisateur : {value0} (membre standard) ; torrents non satisfaits : {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"Classe utilisateur : {value0} (membre standard) ; torrents qui ne remplissent pas les conditions : {value1}/{value2}\"",
+      "expectedJsonLineSha256": "bb0edd685ca0becf81bfb64c4615ed6756835c9e1f7413c2cf6add1c0e94013c",
+      "replacementJsonLineSha256": "74b4b3980c598884fa7f525724319dacd8c54273dee2734b7dd4260505382466",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent ne met pas les torrents en pause lorsqu’ils remplissent les critères de partage. Chaptarr ne peut les supprimer après le partage que si Remove Completed est activé et si le torrent n’est protégé ni par Preserve torrents in client ni par Post-Import Category. Après l’importation, \"{value0}\" sera également défini comme vue rTorrent, utilisable dans les scripts rTorrent pour personnaliser le comportement.",
+      "expectedCurrentValueSha256": "619333ef60ec8869cee5d8693f6218e2db7e6e72dcd0e41beb2b1dc4205b416d",
+      "replacementValue": "rTorrent ne met pas les torrents en pause lorsqu’ils remplissent les critères de partage. Chaptarr ne peut les supprimer après la fin du partage que si « Supprimer les éléments terminés » est activé et si le torrent n’est protégé ni par « Préserver les torrents dans le client » ni par « Catégorie après importation ». Après l’importation, Chaptarr définira également « {value0} » comme vue rTorrent, utilisable dans les scripts rTorrent pour personnaliser le comportement.",
+      "replacementValueSha256": "32031e9a401729e7ebd7878d8c0df5784024839a6c6293dbe0379b5632366d44",
+      "expectedJsonStringLiteral": "\"rTorrent ne met pas les torrents en pause lorsqu’ils remplissent les critères de partage. Chaptarr ne peut les supprimer après le partage que si Remove Completed est activé et si le torrent n’est protégé ni par Preserve torrents in client ni par Post-Import Category. Après l’importation, \\\"{value0}\\\" sera également défini comme vue rTorrent, utilisable dans les scripts rTorrent pour personnaliser le comportement.\"",
+      "replacementJsonStringLiteral": "\"rTorrent ne met pas les torrents en pause lorsqu’ils remplissent les critères de partage. Chaptarr ne peut les supprimer après la fin du partage que si « Supprimer les éléments terminés » est activé et si le torrent n’est protégé ni par « Préserver les torrents dans le client » ni par « Catégorie après importation ». Après l’importation, Chaptarr définira également « {value0} » comme vue rTorrent, utilisable dans les scripts rTorrent pour personnaliser le comportement.\"",
+      "expectedJsonLineSha256": "520639c37131339901e36a2961907d76b4be14ef296c8cce45cb16a36953b8b8",
+      "replacementJsonLineSha256": "53abf782c7b4ea20eeda81522500885c3e5bd0da5bb7b675761746a78061d72c",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr gérera la suppression automatique des torrents selon les critères de partage actuels dans Settings -> Indexers.",
+      "expectedCurrentValueSha256": "b8306f3f76f1d0903806b9a2638b70657ccb1aef371122e6c300bb397fd73e35",
+      "replacementValue": "Chaptarr supprimera automatiquement les torrents selon les critères de partage actuels dans Paramètres → Indexeurs.",
+      "replacementValueSha256": "b8e723c8428d3dbee04ad1e4c7a5016528ed7bb94996ba149e1519d03a858ba5",
+      "expectedJsonStringLiteral": "\"Chaptarr gérera la suppression automatique des torrents selon les critères de partage actuels dans Settings -> Indexers.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr supprimera automatiquement les torrents selon les critères de partage actuels dans Paramètres → Indexeurs.\"",
+      "expectedJsonLineSha256": "b22f518ece69148977417b110be5473fb539c524b94f3fcec6176833e9256f5f",
+      "replacementJsonLineSha256": "8c0fb90e461802fdf023a82f79d355c5bf274a93773a663a266e3f18d68cf3c5",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "Chaptarr ne peut pas se connecter à Download Station si 2-Factor Authentication est activée sur votre compte DSM.",
+      "expectedCurrentValueSha256": "223bc80015a6583c51226e8ec5b22e84360eb2c44d0a29227ea929867e98c14e",
+      "replacementValue": "Chaptarr ne peut pas se connecter à Download Station si l’authentification à deux facteurs est activée sur votre compte DSM.",
+      "replacementValueSha256": "af25dd9c55ea13c19ff3b2ae40cca0ec016ec760230802c12e3d525fca4c9eb0",
+      "expectedJsonStringLiteral": "\"Chaptarr ne peut pas se connecter à Download Station si 2-Factor Authentication est activée sur votre compte DSM.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr ne peut pas se connecter à Download Station si l’authentification à deux facteurs est activée sur votre compte DSM.\"",
+      "expectedJsonLineSha256": "6c9cd876d8da7ceca3a48846c7dd50b096c5557e94b227e43b11b5080ed0f532",
+      "replacementJsonLineSha256": "abf24fe1bb908ebc780fbdd13049731f5bc8e88dab65f9b53a3c08744c57c12a",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "jsonKey": "server.message.m73172a5045d6",
+      "expectedCurrentValue": "आपकी Hardcover सूचियों और पठन स्थितियों की पुस्तकों का मिलान शीर्षक और लेखक के नाम से आपके कॉन्फ़िगर किए गए मेटाडेटा स्रोत के साथ किया जाएगा।",
+      "expectedCurrentValueSha256": "94cf490d249e638dd6537f4bd5a81008e9009319061f6aa8af185fbefaf50c90",
+      "replacementValue": "आपकी Hardcover सूचियों की पुस्तकों और उनकी पढ़ने की स्थिति का मिलान आपके द्वारा कॉन्फ़िगर किए गए मेटाडेटा स्रोत से शीर्षक और लेखक के नाम के आधार पर किया जाएगा।",
+      "replacementValueSha256": "f55bc19bd1f57e35653e010c454f6fa648afd057fa458eb8be51cf57af1cd845",
+      "expectedJsonStringLiteral": "\"आपकी Hardcover सूचियों और पठन स्थितियों की पुस्तकों का मिलान शीर्षक और लेखक के नाम से आपके कॉन्फ़िगर किए गए मेटाडेटा स्रोत के साथ किया जाएगा।\"",
+      "replacementJsonStringLiteral": "\"आपकी Hardcover सूचियों की पुस्तकों और उनकी पढ़ने की स्थिति का मिलान आपके द्वारा कॉन्फ़िगर किए गए मेटाडेटा स्रोत से शीर्षक और लेखक के नाम के आधार पर किया जाएगा।\"",
+      "expectedJsonLineSha256": "86b8dd246c53e67a6f8cdd426f31d12f9a4ceedb8f850d087c1a1636f4b5a62a",
+      "replacementJsonLineSha256": "5d5b63b9927503da26d7398614d9b1077e927a79fe45477f7677eefb27f8e59b",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m73172a5045d6#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP सदस्य - श्रेणी: {value0}; असंतुष्ट टोरेंट: {value1}/{value2}",
+      "expectedCurrentValueSha256": "b9d2598a8425a83302950323c64dced7789f353fccd81d7286634bd18c25084e",
+      "replacementValue": "✓ VIP सदस्य – श्रेणी: {value0}; शर्तें पूरी न करने वाले टोरेंट: {value1}/{value2}",
+      "replacementValueSha256": "09ce2d013dc3ec72d5eec014048ba63ddb3977753ae096fef82a134eadb78eba",
+      "expectedJsonStringLiteral": "\"✓ VIP सदस्य - श्रेणी: {value0}; असंतुष्ट टोरेंट: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP सदस्य – श्रेणी: {value0}; शर्तें पूरी न करने वाले टोरेंट: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "9a8ec0b6e379094ead766da39719bf0a59d7416823a62207fe1194ea04bcd638",
+      "replacementJsonLineSha256": "bec7cdbbd3034080de819f14707ca354c7f030d2463ba5c4af6611932468da28",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); सीडिंग की ज़रूरी शर्तें अभी तक पूरी न करने वाले टोरेंट: {value1}/{value2}",
+      "expectedCurrentValueSha256": "3d2c8cc3ca995b679cf1475f5726644d9e395660ae70238fddccc3e1a936d39a",
+      "replacementValue": "उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); शर्तें पूरी न करने वाले टोरेंट: {value1}/{value2}",
+      "replacementValueSha256": "0e7eb00dc443e1100b4ac9952b30abea14474c4852c7debf2a17cac9f49c755f",
+      "expectedJsonStringLiteral": "\"उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); सीडिंग की ज़रूरी शर्तें अभी तक पूरी न करने वाले टोरेंट: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); शर्तें पूरी न करने वाले टोरेंट: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "57fb85b4b4c2e55676c2c07e8eb21e96ac40864e6338eeb5606c4ae8e7e06f3c",
+      "replacementJsonLineSha256": "f3e7f2ea42f817776865ba73a6947e19ff9c1798caa959cf4df473c8371f022a",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent सीड मानदंड पूरे होने पर torrents को रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद torrents को तभी हटा सकता है, जब Remove Completed सक्षम हो और torrent, Preserve torrents in client या Post-Import Category से सुरक्षित न हो। आयात के बाद यह \"{value0}\" को rTorrent view के रूप में भी सेट करेगा, जिसका उपयोग rTorrent scripts में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।",
+      "expectedCurrentValueSha256": "aa30cfcb68242905be1d57fc262aff5df843a6d51732b92aeb062150548c03c6",
+      "replacementValue": "rTorrent, torrents के सीडिंग मानदंड पूरे होने पर उन्हें रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद torrents को तभी हटा सकता है, जब \"पूर्ण हटाएँ\" सक्षम हो और torrent \"क्लाइंट में टोरेंट को संरक्षित करें\" या \"आयात के बाद की श्रेणी\" से सुरक्षित न हो। आयात के बाद, यह \"{value0}\" को rTorrent दृश्य के रूप में भी सेट करेगा, जिसका उपयोग rTorrent स्क्रिप्ट में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।",
+      "replacementValueSha256": "595b44a5670d8407b7670d6a29e606585948dbc8d8761a9816d16eb9a0ba7749",
+      "expectedJsonStringLiteral": "\"rTorrent सीड मानदंड पूरे होने पर torrents को रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद torrents को तभी हटा सकता है, जब Remove Completed सक्षम हो और torrent, Preserve torrents in client या Post-Import Category से सुरक्षित न हो। आयात के बाद यह \\\"{value0}\\\" को rTorrent view के रूप में भी सेट करेगा, जिसका उपयोग rTorrent scripts में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।\"",
+      "replacementJsonStringLiteral": "\"rTorrent, torrents के सीडिंग मानदंड पूरे होने पर उन्हें रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद torrents को तभी हटा सकता है, जब \\\"पूर्ण हटाएँ\\\" सक्षम हो और torrent \\\"क्लाइंट में टोरेंट को संरक्षित करें\\\" या \\\"आयात के बाद की श्रेणी\\\" से सुरक्षित न हो। आयात के बाद, यह \\\"{value0}\\\" को rTorrent दृश्य के रूप में भी सेट करेगा, जिसका उपयोग rTorrent स्क्रिप्ट में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।\"",
+      "expectedJsonLineSha256": "087c22b2789fc0c2fa1655e4022c884f9d4993fd0323e08d963337c31458b066",
+      "replacementJsonLineSha256": "dbd32e21c6ae10024ab0d284ba9d92388c97fc898449750b2dfca235c1287279",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr Settings -> Indexers में मौजूदा seed मानदंडों के आधार पर torrents को अपने आप हटाएगा।",
+      "expectedCurrentValueSha256": "b53c527bb8f22da614fcb16f03ba38a1fde7ce7fc313f2ae21290055356722a1",
+      "replacementValue": "Chaptarr समायोजन → इंडेक्सर में मौजूदा सीडिंग मानदंडों के आधार पर टोरेंट अपने आप हटाएगा।",
+      "replacementValueSha256": "de4ca5672d21f5c46c32f186fae64b4f49cae3e555b5afe9911b758abec7e281",
+      "expectedJsonStringLiteral": "\"Chaptarr Settings -> Indexers में मौजूदा seed मानदंडों के आधार पर torrents को अपने आप हटाएगा।\"",
+      "replacementJsonStringLiteral": "\"Chaptarr समायोजन → इंडेक्सर में मौजूदा सीडिंग मानदंडों के आधार पर टोरेंट अपने आप हटाएगा।\"",
+      "expectedJsonLineSha256": "1c14d7e2d578339b6724b90b594f79ef1a4c0f620b27c35c1ff0fc0029c7e011",
+      "replacementJsonLineSha256": "f2e7adbbcf11775f459b97da4fd27ab92d3ec67f0e472fc73950eabc5620fb81",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "यदि आपके DSM खाते में 2-Factor Authentication सक्षम है, तो Chaptarr Download Station से कनेक्ट नहीं कर पाएगा।",
+      "expectedCurrentValueSha256": "869d779d5e2e11018a439f48c94d6eb849f607b476348c1e6a7e1e29dc6c1244",
+      "replacementValue": "यदि आपके DSM खाते पर द्वि-कारक प्रमाणीकरण सक्षम है, तो Chaptarr Download Station से कनेक्ट नहीं कर पाएगा।",
+      "replacementValueSha256": "166cfd0a17d984527bccdb17c9580667782086dfb04e0514286e3c5784820585",
+      "expectedJsonStringLiteral": "\"यदि आपके DSM खाते में 2-Factor Authentication सक्षम है, तो Chaptarr Download Station से कनेक्ट नहीं कर पाएगा।\"",
+      "replacementJsonStringLiteral": "\"यदि आपके DSM खाते पर द्वि-कारक प्रमाणीकरण सक्षम है, तो Chaptarr Download Station से कनेक्ट नहीं कर पाएगा।\"",
+      "expectedJsonLineSha256": "5a4e4ae21747274d059f1195cac8db627f419b0ceedbe02a04111706bace692d",
+      "replacementJsonLineSha256": "f3bb60b8060ca184da3019cf03593a6c17d9e71c3f60c5f2d227743f1b8c314d",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP anggota - Kelas: {value0}",
+      "expectedCurrentValueSha256": "1704a8bd5e5795f0de201ddd62e880915fea5e4aad30a18e07bfbe2c391ec82c",
+      "replacementValue": "✓ Anggota VIP – Kelas: {value0}",
+      "replacementValueSha256": "01fda8edd88540d3806739441b6da96bb5dd1f8387a1a8ff46405246310089d2",
+      "expectedJsonStringLiteral": "\"✓ VIP anggota - Kelas: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ Anggota VIP – Kelas: {value0}\"",
+      "expectedJsonLineSha256": "452a1a3d545d7ee4ac9067f9f74841f9e16ba80445ed847f047f11bf3c8a4277",
+      "replacementJsonLineSha256": "5b6f19c3ae46715d76556dd2e771b63cc89fc56ea078b2b7ac9772a7c5efa3b7",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ Anggota VIP - Kelas: {value0}; torrent yang belum terpenuhi: {value1}/{value2}",
+      "expectedCurrentValueSha256": "76c8bb3e4f8b74f8f8bb85efe36395c76457b297e280d7d65fdff88a51479d03",
+      "replacementValue": "✓ Anggota VIP – Kelas: {value0}; torrent yang tidak memenuhi persyaratan: {value1}/{value2}",
+      "replacementValueSha256": "40467b2a793a4ca9b0e166503ac8bbea24f7b554854c2a65a1dc32e422e77c55",
+      "expectedJsonStringLiteral": "\"✓ Anggota VIP - Kelas: {value0}; torrent yang belum terpenuhi: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ Anggota VIP – Kelas: {value0}; torrent yang tidak memenuhi persyaratan: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "de587f27fe26287f929c8fd8a58375c50032a58496f78cb98a44154293249e24",
+      "replacementJsonLineSha256": "647c3f3af2b8b5d65d299820e4a3408e8e97d3516e3ff4486df0aad1ac076c58",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.md4a741052e8b",
+      "expectedCurrentValue": "Kelas Pengguna: {value0} (Anggota Standard)",
+      "expectedCurrentValueSha256": "d3ad81f9c5c00b1838e8708a74189118b6dc6e86918fb3c5108bed7f4c4ff174",
+      "replacementValue": "Kelas pengguna: {value0} (anggota standar)",
+      "replacementValueSha256": "0bf8a5b02f06c1b7ee5cbf3ee31c289984a707b69a11de09ad71c3f4da9ca402",
+      "expectedJsonStringLiteral": "\"Kelas Pengguna: {value0} (Anggota Standard)\"",
+      "replacementJsonStringLiteral": "\"Kelas pengguna: {value0} (anggota standar)\"",
+      "expectedJsonLineSha256": "6f6c70343c975d491b48baa9d1a1b780850b89620daf4a7e5b13e79e0e5e24fa",
+      "replacementJsonLineSha256": "2652adabcdcc570720a3745d10affa6ef5aa8d8f6b04ee5d53c6ece393212b95",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md4a741052e8b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "Kelas pengguna: {value0} (anggota standar); torrent yang belum terpenuhi: {value1}/{value2}",
+      "expectedCurrentValueSha256": "2109522bebb998fe9869160c059c23696f9b9710a844dae37262d90bd6dba167",
+      "replacementValue": "Kelas pengguna: {value0} (anggota standar); torrent yang tidak memenuhi persyaratan: {value1}/{value2}",
+      "replacementValueSha256": "8106ba1d625fc041212959426d8cf687c1b757a98519a975c32945974d4f00bf",
+      "expectedJsonStringLiteral": "\"Kelas pengguna: {value0} (anggota standar); torrent yang belum terpenuhi: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"Kelas pengguna: {value0} (anggota standar); torrent yang tidak memenuhi persyaratan: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "d5d40831667b1cf2c374f5fc3f3fd9e7fa029c21249c4d00c12293020c7ab52e",
+      "replacementJsonLineSha256": "04275d0a118d9a63f4e8af69f2e92fb9b25ec9fd1c932c8fb0b16334bce16e4c",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent tidak akan menjeda torrent ketika memenuhi kriteria seeding. Chaptarr hanya dapat menghapus torrent setelah seeding selesai jika Remove Completed diaktifkan dan torrent tidak dilindungi oleh Preserve torrents in client atau Post-Import Category. Setelah impor, Chaptarr juga akan menetapkan \"{value0}\" sebagai tampilan rTorrent yang dapat digunakan dalam skrip rTorrent untuk menyesuaikan perilaku.",
+      "expectedCurrentValueSha256": "e5fed401249b53f7fc0bfe1a230094e0046746d6b7a9f4b7baa741d0176a839f",
+      "replacementValue": "rTorrent tidak akan menjeda torrent saat memenuhi kriteria seeding. Chaptarr hanya dapat menghapus torrent setelah seeding selesai jika \"Hapus Selesai\" diaktifkan dan torrent tidak dilindungi oleh \"Pertahankan torrent di klien\" atau \"Kategori pasca impor\". Setelah impor, Chaptarr juga akan menetapkan \"{value0}\" sebagai tampilan rTorrent yang dapat digunakan dalam skrip rTorrent untuk menyesuaikan perilaku.",
+      "replacementValueSha256": "2b95fb9665f75320067039d77453c6430c2e3f8a18e852f4d7b97537b0b92bfe",
+      "expectedJsonStringLiteral": "\"rTorrent tidak akan menjeda torrent ketika memenuhi kriteria seeding. Chaptarr hanya dapat menghapus torrent setelah seeding selesai jika Remove Completed diaktifkan dan torrent tidak dilindungi oleh Preserve torrents in client atau Post-Import Category. Setelah impor, Chaptarr juga akan menetapkan \\\"{value0}\\\" sebagai tampilan rTorrent yang dapat digunakan dalam skrip rTorrent untuk menyesuaikan perilaku.\"",
+      "replacementJsonStringLiteral": "\"rTorrent tidak akan menjeda torrent saat memenuhi kriteria seeding. Chaptarr hanya dapat menghapus torrent setelah seeding selesai jika \\\"Hapus Selesai\\\" diaktifkan dan torrent tidak dilindungi oleh \\\"Pertahankan torrent di klien\\\" atau \\\"Kategori pasca impor\\\". Setelah impor, Chaptarr juga akan menetapkan \\\"{value0}\\\" sebagai tampilan rTorrent yang dapat digunakan dalam skrip rTorrent untuk menyesuaikan perilaku.\"",
+      "expectedJsonLineSha256": "d3a1e6d5c19ce9b8273a3fc11da218484ecccbb9f006c368edba7828b083197e",
+      "replacementJsonLineSha256": "5662f64f0c4c8b9bca8b87156a8fa4bf0ec40e04c6d81694ed7f7cc4998edb8a",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr akan menangani penghapusan otomatis torrent berdasarkan kriteria benih saat ini di Settings -> Indexers",
+      "expectedCurrentValueSha256": "6fb92b65e1fe2bfa2fabd69576ed5c1485d7b6568f286dd7e5d257aa0e0afacf",
+      "replacementValue": "Chaptarr akan menghapus torrent secara otomatis berdasarkan kriteria seeding saat ini di Pengaturan → Pengindeks.",
+      "replacementValueSha256": "3f55bf64feda2790646b750479c597a537d82639f6daa36b59d7daf920b979fd",
+      "expectedJsonStringLiteral": "\"Chaptarr akan menangani penghapusan otomatis torrent berdasarkan kriteria benih saat ini di Settings -> Indexers\"",
+      "replacementJsonStringLiteral": "\"Chaptarr akan menghapus torrent secara otomatis berdasarkan kriteria seeding saat ini di Pengaturan → Pengindeks.\"",
+      "expectedJsonLineSha256": "542c4790c17b0a5ad807fddd2ba1dc221accf1c75344bfbd4b7c3a749ead34da",
+      "replacementJsonLineSha256": "610b83965788256179b91d81986fb137c0f106c973756d246e13b24c3a2daa08",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "Chaptarr tidak dapat terhubung ke Download Station jika 2-Factor Authentication diaktifkan pada akun DSM Anda.",
+      "expectedCurrentValueSha256": "23a633d69833e8bb7662ff9ffcd60afcfe4d2e229acddb24cf5c840c7b734327",
+      "replacementValue": "Chaptarr tidak dapat terhubung ke Download Station jika autentikasi dua faktor diaktifkan pada akun DSM Anda.",
+      "replacementValueSha256": "9b7d2cb104d7b02d6225e818f977a048a391cb90253a6d4f18e64b75778ccc62",
+      "expectedJsonStringLiteral": "\"Chaptarr tidak dapat terhubung ke Download Station jika 2-Factor Authentication diaktifkan pada akun DSM Anda.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr tidak dapat terhubung ke Download Station jika autentikasi dua faktor diaktifkan pada akun DSM Anda.\"",
+      "expectedJsonLineSha256": "811196d62a555a245a3eadc1824370ab5503bfb5d53d4e2f538e9bdb32cd1c65",
+      "replacementJsonLineSha256": "c800487a44c23ac0f840ae281b3896a170127f77c6de1b41e0b47d81159f829c",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP 会員 - クラス：{value0}；未達成のトレント：{value1}/{value2}",
+      "expectedCurrentValueSha256": "7b7c09e26ccd652800615564adde7170676e79478f3eb7106c169248e7b1c75e",
+      "replacementValue": "✓ VIP 会員 – クラス：{value0}；条件を満たしていないトレント：{value1}/{value2}",
+      "replacementValueSha256": "da1b3b82d1ec64b6e5811fa3f3f93bf5430bd1d6cfc9cb79e30d4e8a9ed2c343",
+      "expectedJsonStringLiteral": "\"✓ VIP 会員 - クラス：{value0}；未達成のトレント：{value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP 会員 – クラス：{value0}；条件を満たしていないトレント：{value1}/{value2}\"",
+      "expectedJsonLineSha256": "866d2c6767730ade8b7688cd843ebfc60919d5070157813bcf39f45c5c18381b",
+      "replacementJsonLineSha256": "6452735e25883040c5b2348fe03e67900a45815092e3865e266f4f5b39f85d1d",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "ユーザークラス：{value0}（標準メンバー）；未達成のトレント：{value1}/{value2}",
+      "expectedCurrentValueSha256": "7676ebd1163847a545f10c9a05b100256ef2ae4a1ee12bc65c1b6c484c999764",
+      "replacementValue": "ユーザークラス：{value0}（標準メンバー）；条件を満たしていないトレント：{value1}/{value2}",
+      "replacementValueSha256": "8dd1a7e4bd422b9a8afcf145490a9c2d1fc1819063b5c37b4875c8f39fdbe5b4",
+      "expectedJsonStringLiteral": "\"ユーザークラス：{value0}（標準メンバー）；未達成のトレント：{value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"ユーザークラス：{value0}（標準メンバー）；条件を満たしていないトレント：{value1}/{value2}\"",
+      "expectedJsonLineSha256": "3365738161cfbefe5d9c628e195933751c5e6e7c809d86853c3c88cc3b0b5b98",
+      "replacementJsonLineSha256": "73f5b18878e0ba84639cc8960511997cc926bc4b06cf522885c23097b62ab083",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent は torrent がシード条件を満たしても一時停止しません。Chaptarr がシード完了後に torrent を削除できるのは、Remove Completed が有効で、Preserve torrents in client または Post-Import Category による保護がない場合のみです。インポート後は \"{value0}\" を rTorrent のビューとして設定します。このビューは rTorrent スクリプトで動作をカスタマイズするために使えます。",
+      "expectedCurrentValueSha256": "aacef29d8ebf92866ce064fb62d902e6712c6365207b915d9339b8026c33a252",
+      "replacementValue": "rTorrent はトレントがシード条件を満たしても一時停止しません。Chaptarr がシード完了後にトレントを削除できるのは、「完了削除」が有効で、トレントが「クライアントでトレントを保存」または「インポート後のカテゴリ」で保護されていない場合のみです。インポート後、Chaptarr は「{value0}」を rTorrent のビューとして設定します。このビューは rTorrent スクリプトで動作をカスタマイズするために使えます。",
+      "replacementValueSha256": "0c151b292a1d7e42603a3b8dff35c04cc7d50fae04959c83de5b36da9bd6bc41",
+      "expectedJsonStringLiteral": "\"rTorrent は torrent がシード条件を満たしても一時停止しません。Chaptarr がシード完了後に torrent を削除できるのは、Remove Completed が有効で、Preserve torrents in client または Post-Import Category による保護がない場合のみです。インポート後は \\\"{value0}\\\" を rTorrent のビューとして設定します。このビューは rTorrent スクリプトで動作をカスタマイズするために使えます。\"",
+      "replacementJsonStringLiteral": "\"rTorrent はトレントがシード条件を満たしても一時停止しません。Chaptarr がシード完了後にトレントを削除できるのは、「完了削除」が有効で、トレントが「クライアントでトレントを保存」または「インポート後のカテゴリ」で保護されていない場合のみです。インポート後、Chaptarr は「{value0}」を rTorrent のビューとして設定します。このビューは rTorrent スクリプトで動作をカスタマイズするために使えます。\"",
+      "expectedJsonLineSha256": "3694d2a567c3b568694cf3d330e5181cb833d24a312e4fc460574bb6a495a4c7",
+      "replacementJsonLineSha256": "38fdaae029481991f26c4e3557986c2296618f23d15c612423beb5e8ec32d3f8",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr は、Settings -> Indexers の現在の種子基準に基づいてトレントの自動除去を処理します。",
+      "expectedCurrentValueSha256": "882e96d8862c9ce6fc2d2549bb2b011b67d436a97e4c55314548706dbe8987c5",
+      "replacementValue": "Chaptarr は、設定 → インデクサー の現在のシード条件に基づいてトレントを自動的に削除します。",
+      "replacementValueSha256": "b2427150cea04f3cdbf108d05141a0a34c1ad28b29e1eba324c50963c37dd0b1",
+      "expectedJsonStringLiteral": "\"Chaptarr は、Settings -> Indexers の現在の種子基準に基づいてトレントの自動除去を処理します。\"",
+      "replacementJsonStringLiteral": "\"Chaptarr は、設定 → インデクサー の現在のシード条件に基づいてトレントを自動的に削除します。\"",
+      "expectedJsonLineSha256": "6529348ae90878aa26ea216a5eed3a83608d3a901dfe60979c7367c73932191d",
+      "replacementJsonLineSha256": "63818ece8e3a7b71f6374586cb78e4951b1b2cd07eedf7cfe8009b850754c8d1",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "DSM アカウントで 2-Factor Authentication が有効になっていると、Chaptarr は Download Station に接続できません。",
+      "expectedCurrentValueSha256": "80193efed213db126b12b9f73a8fb39cc5cc2dbcae9e836a156caf6e8cb63585",
+      "replacementValue": "DSM アカウントで二要素認証が有効になっていると、Chaptarr は Download Station に接続できません。",
+      "replacementValueSha256": "01481d705924d05a3aea328f3312c54c68a40b3bbf99f3bc575c65327508af29",
+      "expectedJsonStringLiteral": "\"DSM アカウントで 2-Factor Authentication が有効になっていると、Chaptarr は Download Station に接続できません。\"",
+      "replacementJsonStringLiteral": "\"DSM アカウントで二要素認証が有効になっていると、Chaptarr は Download Station に接続できません。\"",
+      "expectedJsonLineSha256": "e4a172d9e06f98cc3048492a1d65073978fc5b32f3069a48ee4dfe6010c70d28",
+      "replacementJsonLineSha256": "193d471f70a6f7d6329d759a50c46d49b1773561a06fdeed4e7b43e1c8f6d87c",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP 회원 - 등급: {value0}; 미충족 토렌트: {value1}/{value2}",
+      "expectedCurrentValueSha256": "f61f99f0bc55acc29d70416c3cda8aec240534537d95f603a570c8e45db712f3",
+      "replacementValue": "✓ VIP 회원 – 등급: {value0}; 조건을 충족하지 못한 토렌트: {value1}/{value2}",
+      "replacementValueSha256": "30e79bf363ea5ee22d705aa3dc13c91e198bf780e57777922bf72a7c5d615c3c",
+      "expectedJsonStringLiteral": "\"✓ VIP 회원 - 등급: {value0}; 미충족 토렌트: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP 회원 – 등급: {value0}; 조건을 충족하지 못한 토렌트: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "83a1287b78a1f045af03befbc58144aa06f95318f8f37c5c2e6eee0f85705155",
+      "replacementJsonLineSha256": "bbcdec29392e8f957c611edf1ccd40c655b8dac2a58c2daf2d2fb208c41a2f2e",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "사용자 등급: {value0} (일반 회원); 미충족 토렌트: {value1}/{value2}",
+      "expectedCurrentValueSha256": "c5a63c4a1c237f22311193d5dd0534f5a5cd4bb8f14a8f68671c761845882773",
+      "replacementValue": "사용자 등급: {value0} (일반 회원); 조건을 충족하지 못한 토렌트: {value1}/{value2}",
+      "replacementValueSha256": "0ee2094ee0d172b4737e5804540c270379ab492936f6cfb3882b9748eb944b0b",
+      "expectedJsonStringLiteral": "\"사용자 등급: {value0} (일반 회원); 미충족 토렌트: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"사용자 등급: {value0} (일반 회원); 조건을 충족하지 못한 토렌트: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "a4de395d3a1699b5c76c57ced0216b3ecccc09c4d9d4bade9666f8ae5cb07f34",
+      "replacementJsonLineSha256": "8be28c610e0b765f6fecadc15f7e6f7203f9d429a6706f9cd8b7c8090e00cab8",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent는 토렌트가 시드 기준을 충족해도 일시 중지하지 않습니다. Chaptarr가 시딩 완료 후 토렌트를 제거하려면 Remove Completed가 활성화되어 있고 토렌트가 Preserve torrents in client 또는 Post-Import Category로 보호되지 않아야 합니다. 가져온 후에는 \"{value0}\"를 rTorrent 보기로 설정하며, rTorrent 스크립트에서 동작을 사용자 지정하는 데 사용할 수 있습니다.",
+      "expectedCurrentValueSha256": "64314cfeb881cae3492d15b4a530681b3515bbff12ab0d6ed431a623322f859f",
+      "replacementValue": "rTorrent는 토렌트가 시드 기준을 충족해도 일시 중지하지 않습니다. Chaptarr는 시딩 완료 후에만 토렌트를 제거할 수 있으며, \"완료된 항목 제거\"가 활성화되어 있고 토렌트가 \"클라이언트에 토렌트 유지\" 또는 \"가져오기 후 분류\"로 보호되지 않아야 합니다. 가져온 후 Chaptarr는 \"{value0}\"를 rTorrent 보기로 설정하며, 이 보기는 rTorrent 스크립트에서 동작을 사용자 지정하는 데 사용할 수 있습니다.",
+      "replacementValueSha256": "8d476c935ec225fa9e27af0bb078b49fa0b424817e56a605190273d104a915af",
+      "expectedJsonStringLiteral": "\"rTorrent는 토렌트가 시드 기준을 충족해도 일시 중지하지 않습니다. Chaptarr가 시딩 완료 후 토렌트를 제거하려면 Remove Completed가 활성화되어 있고 토렌트가 Preserve torrents in client 또는 Post-Import Category로 보호되지 않아야 합니다. 가져온 후에는 \\\"{value0}\\\"를 rTorrent 보기로 설정하며, rTorrent 스크립트에서 동작을 사용자 지정하는 데 사용할 수 있습니다.\"",
+      "replacementJsonStringLiteral": "\"rTorrent는 토렌트가 시드 기준을 충족해도 일시 중지하지 않습니다. Chaptarr는 시딩 완료 후에만 토렌트를 제거할 수 있으며, \\\"완료된 항목 제거\\\"가 활성화되어 있고 토렌트가 \\\"클라이언트에 토렌트 유지\\\" 또는 \\\"가져오기 후 분류\\\"로 보호되지 않아야 합니다. 가져온 후 Chaptarr는 \\\"{value0}\\\"를 rTorrent 보기로 설정하며, 이 보기는 rTorrent 스크립트에서 동작을 사용자 지정하는 데 사용할 수 있습니다.\"",
+      "expectedJsonLineSha256": "b5309e5c0d969fe997bf744fa58680d4b983168b198e17d20d30e6b95709d181",
+      "replacementJsonLineSha256": "16c13b83b77463cca7f254f7ed1ae9c3d04ce6b5ddbde08a34cbb62a5ce76711",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr는 Settings -> Indexers의 현재 씨앗 기준을 바탕으로 토렌트의 자동 제거를 처리합니다.",
+      "expectedCurrentValueSha256": "1465207a727f263512163a530895706947b71ad65621ab75af0986a1c323bbd5",
+      "replacementValue": "Chaptarr는 설정 → 인덱서의 현재 시드 기준에 따라 토렌트를 자동으로 제거합니다.",
+      "replacementValueSha256": "f90d063595c35db6052fb0f29d6a953a5b3b8742cd3772233ae6be6aae4fe226",
+      "expectedJsonStringLiteral": "\"Chaptarr는 Settings -> Indexers의 현재 씨앗 기준을 바탕으로 토렌트의 자동 제거를 처리합니다.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr는 설정 → 인덱서의 현재 시드 기준에 따라 토렌트를 자동으로 제거합니다.\"",
+      "expectedJsonLineSha256": "c2e8771f3d6fb26234eeb24c95cc25415f3be8b003839d5c8e16aec89b47f1df",
+      "replacementJsonLineSha256": "943c1d44350aff4bdd101a0c578b57f9e0ede85b3f76f962cb77172e39990ae6",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "DSM 계정에서 2-Factor Authentication이 활성화되어 있으면 Chaptarr가 Download Station에 연결할 수 없습니다.",
+      "expectedCurrentValueSha256": "39e700a63ee4a3a8a87f8ec7b032392f5c27e06755d60c3fdb9161cec288888b",
+      "replacementValue": "DSM 계정에서 이중 인증이 활성화되어 있으면 Chaptarr가 Download Station에 연결할 수 없습니다.",
+      "replacementValueSha256": "8c5f6e3d2737392095d4b520757f8c23fcab1049662664ebdf13057deba1398e",
+      "expectedJsonStringLiteral": "\"DSM 계정에서 2-Factor Authentication이 활성화되어 있으면 Chaptarr가 Download Station에 연결할 수 없습니다.\"",
+      "replacementJsonStringLiteral": "\"DSM 계정에서 이중 인증이 활성화되어 있으면 Chaptarr가 Download Station에 연결할 수 없습니다.\"",
+      "expectedJsonLineSha256": "9bd7ec35730a68b6abd44628973ed1c67238542de5dfe58605aa0e69e0461d7b",
+      "replacementJsonLineSha256": "11777807f389687182e4adf88af27343e628e3b7afdc0cd05e3627cc045f7616",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP Membro - Classe: {value0}",
+      "expectedCurrentValueSha256": "8a2a09fedd557ad2404cd553b0035734b293cb3b2cc7566248f4c574b67d308e",
+      "replacementValue": "✓ Membro VIP – classe: {value0}",
+      "replacementValueSha256": "87252a3ad7a457a5c70d1ea6fa300a7a0be734cf1b137fcf480bd76bcbafdcda",
+      "expectedJsonStringLiteral": "\"✓ VIP Membro - Classe: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ Membro VIP – classe: {value0}\"",
+      "expectedJsonLineSha256": "7358e0f8c46925748e318d593e6b73c9da9cc7053cce1d35e54e3e81d9a0a329",
+      "replacementJsonLineSha256": "b5ec53117b1313c1be8e06e04861fad13f927258574ce480370637b9c1927842",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ Membro VIP - Classe: {value0}; torrents não satisfeitos: {value1}/{value2}",
+      "expectedCurrentValueSha256": "c69f9f4ab587c9b85401916e5cb8cc2c427181f1e11c1f56cf45d09b3b7eb9a5",
+      "replacementValue": "✓ Membro VIP – classe: {value0}; torrents que não atendem aos requisitos: {value1}/{value2}",
+      "replacementValueSha256": "498fc656cfee61c04874a5032ede1967ae8be24c4709739f21759a1cdcd52284",
+      "expectedJsonStringLiteral": "\"✓ Membro VIP - Classe: {value0}; torrents não satisfeitos: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ Membro VIP – classe: {value0}; torrents que não atendem aos requisitos: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "145dfec7500582dd8c97a8d5e7ba7c6b8995beac8603f464dd6a4cd79e387f6e",
+      "replacementJsonLineSha256": "e22b4436aad3c2e02b27b174b75963e288b3f697b2e84de9e6cc13a19d6e3415",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.md4a741052e8b",
+      "expectedCurrentValue": "Clase de usuário: {value0} (membro padrão)",
+      "expectedCurrentValueSha256": "833011611d77f3e1460869440f7c303e554c2b90b18327433ea8c3d457f88666",
+      "replacementValue": "Classe do usuário: {value0} (membro padrão)",
+      "replacementValueSha256": "5415de67a0033a2f2616c0265273837fd8fa3579f5295ec8016dc2b115c2f8b7",
+      "expectedJsonStringLiteral": "\"Clase de usuário: {value0} (membro padrão)\"",
+      "replacementJsonStringLiteral": "\"Classe do usuário: {value0} (membro padrão)\"",
+      "expectedJsonLineSha256": "94dec60d5d1bc61fb316e2b69c1dda88470143538723242872be3134323351c1",
+      "replacementJsonLineSha256": "987567245cac48a20abe723911b5a0986acdbdf86e7bf13d60354dd4c1db3cdc",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md4a741052e8b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "Classe do usuário: {value0} (membro padrão); torrents não satisfeitos: {value1}/{value2}",
+      "expectedCurrentValueSha256": "73c4f9db00dfdb3db442006a41ef55deb23c5f0e4d1290adccfc833c62543bbe",
+      "replacementValue": "Classe do usuário: {value0} (membro padrão); torrents que não atendem aos requisitos: {value1}/{value2}",
+      "replacementValueSha256": "73df1704026d471a608cdf48444f4875e3daf9a961a2fc1d76c878dd53001ffe",
+      "expectedJsonStringLiteral": "\"Classe do usuário: {value0} (membro padrão); torrents não satisfeitos: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"Classe do usuário: {value0} (membro padrão); torrents que não atendem aos requisitos: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "cdf3efd5e770fa72a2583546800527076901e59facc78c218b07f34d2add2d2f",
+      "replacementJsonLineSha256": "e0ecc68589cb43b62b65e71972db8b151caad66653268edb4c4cbf848537f029",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "O rTorrent não pausa os torrents quando eles atendem aos critérios de semeadura. O Chaptarr só pode removê-los após o fim da semeadura se Remove Completed estiver ativado e se o torrent não estiver protegido por Preserve torrents in client nem por Post-Import Category. Depois da importação, também definirá \"{value0}\" como uma visualização do rTorrent, que pode ser usada em scripts do rTorrent para personalizar o comportamento.",
+      "expectedCurrentValueSha256": "aebdf64f60007e4941c4e88602974817fcf317f6163168cd1daba26f39941bb0",
+      "replacementValue": "O rTorrent não pausa os torrents quando eles atingem os critérios de compartilhamento. O Chaptarr só pode removê-los após o fim do compartilhamento se \"Remover Concluídos\" estiver ativado e se o torrent não estiver protegido por \"Preservar os torrents no cliente\" nem por \"Categoria após a importação\". Depois da importação, também definirá \"{value0}\" como uma visualização do rTorrent, que pode ser usada em scripts do rTorrent para personalizar o comportamento.",
+      "replacementValueSha256": "5dec4e65c69068ebdb1726fe7b32517050533df681b7d9e41c97052af9351a5c",
+      "expectedJsonStringLiteral": "\"O rTorrent não pausa os torrents quando eles atendem aos critérios de semeadura. O Chaptarr só pode removê-los após o fim da semeadura se Remove Completed estiver ativado e se o torrent não estiver protegido por Preserve torrents in client nem por Post-Import Category. Depois da importação, também definirá \\\"{value0}\\\" como uma visualização do rTorrent, que pode ser usada em scripts do rTorrent para personalizar o comportamento.\"",
+      "replacementJsonStringLiteral": "\"O rTorrent não pausa os torrents quando eles atingem os critérios de compartilhamento. O Chaptarr só pode removê-los após o fim do compartilhamento se \\\"Remover Concluídos\\\" estiver ativado e se o torrent não estiver protegido por \\\"Preservar os torrents no cliente\\\" nem por \\\"Categoria após a importação\\\". Depois da importação, também definirá \\\"{value0}\\\" como uma visualização do rTorrent, que pode ser usada em scripts do rTorrent para personalizar o comportamento.\"",
+      "expectedJsonLineSha256": "9712bba7c5ba6a947989d9ccbb74d18b25582041d0d943f4a53dd0cf0cfb0025",
+      "replacementJsonLineSha256": "0697704dc260690839170f5a6c3604eb5f29c136a4c206729f85132114ff8160",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr irá lidar com a remoção automática de torrentes com base nos critérios de semente atuais em Settings -> Indexers",
+      "expectedCurrentValueSha256": "4214b764a8da2a3190be435ccc252e652d11385534f3c8be2d07f9652bd2c4ef",
+      "replacementValue": "O Chaptarr removerá os torrents automaticamente com base nos critérios atuais de compartilhamento em Configurações → Indexadores.",
+      "replacementValueSha256": "a0b813cd68203fc55539a57a18639dc879d1eca1a17b0db40ee4254729d68cef",
+      "expectedJsonStringLiteral": "\"Chaptarr irá lidar com a remoção automática de torrentes com base nos critérios de semente atuais em Settings -> Indexers\"",
+      "replacementJsonStringLiteral": "\"O Chaptarr removerá os torrents automaticamente com base nos critérios atuais de compartilhamento em Configurações → Indexadores.\"",
+      "expectedJsonLineSha256": "305de9733701004593e4f20e6f853a88f853e44c2eb22b698129db948b012826",
+      "replacementJsonLineSha256": "1fc955df06962fecde1905e6d580e79071add05926a4a6c48984262d61eafef4",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "O Chaptarr não consegue se conectar ao Download Station se a 2-Factor Authentication estiver ativada na sua conta DSM.",
+      "expectedCurrentValueSha256": "8a120d2e7e529b2693a33c5de33bb0e9d27306f7a9ca0555b737dcffe038f926",
+      "replacementValue": "O Chaptarr não consegue se conectar ao Download Station se a autenticação de dois fatores estiver ativada na sua conta DSM.",
+      "replacementValueSha256": "b7d2a3077623eec0d6f3a20431f17259ee47ce76f27239abdb5cc9dedc15359e",
+      "expectedJsonStringLiteral": "\"O Chaptarr não consegue se conectar ao Download Station se a 2-Factor Authentication estiver ativada na sua conta DSM.\"",
+      "replacementJsonStringLiteral": "\"O Chaptarr não consegue se conectar ao Download Station se a autenticação de dois fatores estiver ativada na sua conta DSM.\"",
+      "expectedJsonLineSha256": "307e05e75dae6a7a7cbba690743f06305337c6c6e5567b321b06569426915b2d",
+      "replacementJsonLineSha256": "01b107d2569e98ebd271245c7b4abc040e25ce866495f8f81bc2dc16d1288b6f",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.m73172a5045d6",
+      "expectedCurrentValue": "Sách trong danh sách Hardcover và trạng thái đọc của chúng sẽ được đối chiếu với nguồn siêu dữ liệu đã cấu hình theo tiêu đề và tên tác giả.",
+      "expectedCurrentValueSha256": "5b93ead8e941695df23680197758544d86b45599191104d6b74609e494b5f96b",
+      "replacementValue": "Sách trong các danh sách Hardcover của bạn và trạng thái đọc của chúng sẽ được đối chiếu với nguồn siêu dữ liệu đã cấu hình dựa trên tiêu đề và tên tác giả.",
+      "replacementValueSha256": "e798a21b47ebce59dd3e08dca676d145001691105b0c4f6e7b14a35c2d7890aa",
+      "expectedJsonStringLiteral": "\"Sách trong danh sách Hardcover và trạng thái đọc của chúng sẽ được đối chiếu với nguồn siêu dữ liệu đã cấu hình theo tiêu đề và tên tác giả.\"",
+      "replacementJsonStringLiteral": "\"Sách trong các danh sách Hardcover của bạn và trạng thái đọc của chúng sẽ được đối chiếu với nguồn siêu dữ liệu đã cấu hình dựa trên tiêu đề và tên tác giả.\"",
+      "expectedJsonLineSha256": "6b8518f53d20eccb40b7debd8f48a6ca2b4a2cd2e6e793412ae29c81d2c2cebf",
+      "replacementJsonLineSha256": "47f9829bf852c813bb212f70035df85ce336f1bb31c0ed5f174481c86a562369",
+      "disposition": "refinement",
+      "callerPinIds": [
+        "server.message.m73172a5045d6#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.mddaec7220c51",
+      "expectedCurrentValue": "Kết nối thành công nhưng trạng thái tài khoản MAM không khả dụng hoặc đã cũ. Các số đếm trong bộ nhớ đệm sẽ không hiển thị.",
+      "expectedCurrentValueSha256": "a7c7b3b8eb02fd57be5822d83b917ee7da27dfd38a1d5f8a735d214aa531266f",
+      "replacementValue": "Kết nối thành công, nhưng trạng thái tài khoản MAM không khả dụng hoặc đã cũ. Số lượng được lưu trong bộ nhớ đệm sẽ không được hiển thị.",
+      "replacementValueSha256": "a33e593c21d7823541a44c86a29fd58d777eb660485a9984ade89f4becd46fc6",
+      "expectedJsonStringLiteral": "\"Kết nối thành công nhưng trạng thái tài khoản MAM không khả dụng hoặc đã cũ. Các số đếm trong bộ nhớ đệm sẽ không hiển thị.\"",
+      "replacementJsonStringLiteral": "\"Kết nối thành công, nhưng trạng thái tài khoản MAM không khả dụng hoặc đã cũ. Số lượng được lưu trong bộ nhớ đệm sẽ không được hiển thị.\"",
+      "expectedJsonLineSha256": "8d250ffbf520ed5f6bf6efa4cd00819c7b740d461e33977b094c1ce97a3eb969",
+      "replacementJsonLineSha256": "ef6002ac3ad2e9d81e016e72f13fc05f8b539694b4a8df304cb938701c792a51",
+      "disposition": "refinement",
+      "callerPinIds": [
+        "server.message.mddaec7220c51#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP Thành viên - Lớp: {value0}",
+      "expectedCurrentValueSha256": "e00a3aa3add9d8fa73b72e1933ce86bd8c73fefc12d3e4d0a25064484fe12014",
+      "replacementValue": "✓ Thành viên VIP - Hạng: {value0}",
+      "replacementValueSha256": "e18273cf50f708391661ae4f06fb175379804bd422db0bba14a986e2831bbc3c",
+      "expectedJsonStringLiteral": "\"✓ VIP Thành viên - Lớp: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ Thành viên VIP - Hạng: {value0}\"",
+      "expectedJsonLineSha256": "7ef7431c1d53c2fdab4a3ec4e40085f772a9f4855f31a0b88f344abd14420073",
+      "replacementJsonLineSha256": "6d73bb72b9870a08541d30002ab4fd073bb8cb1378fe678bcf4121a952293af6",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ Thành viên VIP - Hạng: {value0}; torrent chưa đáp ứng: {value1}/{value2}",
+      "expectedCurrentValueSha256": "515ea6a6b44f7b3803babb3bb53cbf4dfad0a0539d0d094f4bc2a38dc9dbaa44",
+      "replacementValue": "✓ Thành viên VIP – hạng: {value0}; torrent không đáp ứng yêu cầu: {value1}/{value2}",
+      "replacementValueSha256": "4e7ec0a2057c3971bb57606c992b989545911fd2cb816a6c6d12403faffed885",
+      "expectedJsonStringLiteral": "\"✓ Thành viên VIP - Hạng: {value0}; torrent chưa đáp ứng: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ Thành viên VIP – hạng: {value0}; torrent không đáp ứng yêu cầu: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "38ddb956d765c7f575a4970aaf4893aff1a2d8682f8d6582007a28b06586f7b5",
+      "replacementJsonLineSha256": "a730c802fd0054414b12d07353a4f56546de32eab75ce27d029bb68a8c5bb44e",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.md4a741052e8b",
+      "expectedCurrentValue": "Lớp người dùng: {value0} (Các thành viên tiêu chuẩn)",
+      "expectedCurrentValueSha256": "d02d17c56de2e1b431c918893f5c913489a07c7ee907b76a6d05c9708ccf2212",
+      "replacementValue": "Lớp người dùng: {value0} (thành viên tiêu chuẩn)",
+      "replacementValueSha256": "38c4d9fd0a94d1f880295d2d96672965019477aa54c5ac3d4dfe6e663b7ad460",
+      "expectedJsonStringLiteral": "\"Lớp người dùng: {value0} (Các thành viên tiêu chuẩn)\"",
+      "replacementJsonStringLiteral": "\"Lớp người dùng: {value0} (thành viên tiêu chuẩn)\"",
+      "expectedJsonLineSha256": "3166b0c1a28403a346a28597d6ee73b0416f841bcc1dcee387fa4b129b312026",
+      "replacementJsonLineSha256": "7aa56c04b62c62e3809c0fdaef508425e5f8c83627a23e96bb81c0da92eaae31",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md4a741052e8b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "Hạng người dùng: {value0} (thành viên tiêu chuẩn); torrent chưa đáp ứng: {value1}/{value2}",
+      "expectedCurrentValueSha256": "60da981df04908d66378d9a17f89766a433e75f0e974cfa1c0c2e2d56b789170",
+      "replacementValue": "Hạng người dùng: {value0} (thành viên tiêu chuẩn); torrent không đáp ứng yêu cầu: {value1}/{value2}",
+      "replacementValueSha256": "c153047b2bacbce66ac5d6d2588e1555b5e4594a17f81ac33b1a8a401a602d49",
+      "expectedJsonStringLiteral": "\"Hạng người dùng: {value0} (thành viên tiêu chuẩn); torrent chưa đáp ứng: {value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"Hạng người dùng: {value0} (thành viên tiêu chuẩn); torrent không đáp ứng yêu cầu: {value1}/{value2}\"",
+      "expectedJsonLineSha256": "e43a1e8882b2a2a5cc5942f64b2fd16571ee767c8b5df87cdc3943ca484732d9",
+      "replacementJsonLineSha256": "0dffe9c7bb57f7eb2782860f3b1ec0627338c986c8094c1d39bc844b13115e33",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent sẽ không tạm dừng torrent khi chúng đạt tiêu chí seeding. Chaptarr chỉ có thể xóa torrent sau khi seeding hoàn tất nếu Remove Completed được bật và torrent không được bảo vệ bởi Preserve torrents in client hoặc Post-Import Category. Sau khi nhập, ứng dụng cũng đặt \"{value0}\" làm chế độ xem rTorrent, có thể dùng trong tập lệnh rTorrent để tùy chỉnh hành vi.",
+      "expectedCurrentValueSha256": "a23a59c8b0deda7c485c7612786793b166c1ee14bf83196bace3c063ad646be9",
+      "replacementValue": "rTorrent sẽ không tạm dừng torrent khi chúng đạt tiêu chí seeding. Chaptarr chỉ có thể xóa torrent sau khi seeding hoàn tất nếu \"Gỡ bỏ hoàn tất\" được bật và torrent không được bảo vệ bởi \"Giữ torrent trong ứng dụng khách\" hoặc \"Danh mục sau khi nhập\". Sau khi nhập, Chaptarr cũng sẽ đặt \"{value0}\" làm chế độ xem rTorrent, có thể dùng trong tập lệnh rTorrent để tùy chỉnh hành vi.",
+      "replacementValueSha256": "518faa6577e4b0a5ede802328b0d6bd1f185865defe1f4ba2a51c41958b59151",
+      "expectedJsonStringLiteral": "\"rTorrent sẽ không tạm dừng torrent khi chúng đạt tiêu chí seeding. Chaptarr chỉ có thể xóa torrent sau khi seeding hoàn tất nếu Remove Completed được bật và torrent không được bảo vệ bởi Preserve torrents in client hoặc Post-Import Category. Sau khi nhập, ứng dụng cũng đặt \\\"{value0}\\\" làm chế độ xem rTorrent, có thể dùng trong tập lệnh rTorrent để tùy chỉnh hành vi.\"",
+      "replacementJsonStringLiteral": "\"rTorrent sẽ không tạm dừng torrent khi chúng đạt tiêu chí seeding. Chaptarr chỉ có thể xóa torrent sau khi seeding hoàn tất nếu \\\"Gỡ bỏ hoàn tất\\\" được bật và torrent không được bảo vệ bởi \\\"Giữ torrent trong ứng dụng khách\\\" hoặc \\\"Danh mục sau khi nhập\\\". Sau khi nhập, Chaptarr cũng sẽ đặt \\\"{value0}\\\" làm chế độ xem rTorrent, có thể dùng trong tập lệnh rTorrent để tùy chỉnh hành vi.\"",
+      "expectedJsonLineSha256": "77b5c160d5f543c5cd3f771622a3c727e20ac19b5e456d1edef904dd8704cd4b",
+      "replacementJsonLineSha256": "1b60464f57ea01083df3e4eecff023a4abea2a8cd62cc13f8d0615d60278a636",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr sẽ tự động xóa torrent dựa trên tiêu chí seeding hiện tại trong Settings -> Indexers.",
+      "expectedCurrentValueSha256": "82d4b59415420f4ff7b64b1d60b424fd34138d39b8870b0232f89526db095fae",
+      "replacementValue": "Chaptarr sẽ tự động xóa torrent theo tiêu chí seeding hiện tại trong Cài đặt → Người lập chỉ mục.",
+      "replacementValueSha256": "479ae7c613d014b23cd97568bee34cec93b18adf37b9c29cd719986cc23d3d2a",
+      "expectedJsonStringLiteral": "\"Chaptarr sẽ tự động xóa torrent dựa trên tiêu chí seeding hiện tại trong Settings -> Indexers.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr sẽ tự động xóa torrent theo tiêu chí seeding hiện tại trong Cài đặt → Người lập chỉ mục.\"",
+      "expectedJsonLineSha256": "4aa021ac556540ee74b6d8bd23f5a4607ed5e5ccc2b315253f281c86583aa551",
+      "replacementJsonLineSha256": "24ddd9173beb4d98f2bd587f9a3f9164edfd71ef068b66f0b845f46bab7d339f",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "Chaptarr không thể kết nối với Download Station nếu 2-Factor Authentication được bật trên tài khoản DSM của bạn.",
+      "expectedCurrentValueSha256": "5b890d09e2955f29ebc495ca882bfa99ff364070e4c0bdcd0db044e3afd37c58",
+      "replacementValue": "Chaptarr không thể kết nối với Download Station nếu xác thực hai yếu tố được bật trên tài khoản DSM của bạn.",
+      "replacementValueSha256": "188ee32614b3805035bd8b7ec05827e837a3c1541b117ff1a30ce9f7547f9f2e",
+      "expectedJsonStringLiteral": "\"Chaptarr không thể kết nối với Download Station nếu 2-Factor Authentication được bật trên tài khoản DSM của bạn.\"",
+      "replacementJsonStringLiteral": "\"Chaptarr không thể kết nối với Download Station nếu xác thực hai yếu tố được bật trên tài khoản DSM của bạn.\"",
+      "expectedJsonLineSha256": "a82cce7eca43de3854d6b2a635f5db935e70482423eb20e503cdc848c720336e",
+      "replacementJsonLineSha256": "8008cadbec06ccdd2d867858191b397a4e8cc19df1f4ec385423a38ddd1d81c3",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.m73172a5045d6",
+      "expectedCurrentValue": "系统会将你 Hardcover 清单中的书籍及其阅读状态，与配置的元数据来源按标题和作者姓名进行匹配。",
+      "expectedCurrentValueSha256": "2195d962053177eb55800d04a7112fa95c2124e2139dc8a0a543aff406bb2e19",
+      "replacementValue": "系统会根据书名和作者姓名，将你 Hardcover 书单中的书籍及其阅读状态与已配置的元数据源进行匹配。",
+      "replacementValueSha256": "7aade413d594b8403b74c13e22c7026779e02dc192824422c7c0423ddc52595c",
+      "expectedJsonStringLiteral": "\"系统会将你 Hardcover 清单中的书籍及其阅读状态，与配置的元数据来源按标题和作者姓名进行匹配。\"",
+      "replacementJsonStringLiteral": "\"系统会根据书名和作者姓名，将你 Hardcover 书单中的书籍及其阅读状态与已配置的元数据源进行匹配。\"",
+      "expectedJsonLineSha256": "a4cf085592df16069f7bb7b9dcdb643eaa48c532a17f84bf17134477ae9a480a",
+      "replacementJsonLineSha256": "68aaa841fc272e6d8e609a4fad4cdb9dec930e74216089a29189d135f096c864",
+      "disposition": "refinement",
+      "callerPinIds": [
+        "server.message.m73172a5045d6#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.mddaec7220c51",
+      "expectedCurrentValue": "连接成功，但 MAM 账户状态不可用或已过期。不会显示缓存的计数。",
+      "expectedCurrentValueSha256": "5a88e4f33f4d05ae7b390d270ad5033f7e1da61756015d1cfb1f2cb4da3454e5",
+      "replacementValue": "连接成功，但 MAM 账户状态不可用或已过时。缓存的计数不会显示。",
+      "replacementValueSha256": "1985e15fd212f2765e1617e8bc9f959381bf8a100b951723ff7c4f8ce98a58ac",
+      "expectedJsonStringLiteral": "\"连接成功，但 MAM 账户状态不可用或已过期。不会显示缓存的计数。\"",
+      "replacementJsonStringLiteral": "\"连接成功，但 MAM 账户状态不可用或已过时。缓存的计数不会显示。\"",
+      "expectedJsonLineSha256": "cc23f73327c8fdf3c2865719a345d13fcde67f27e98164e307c76db74f46f315",
+      "replacementJsonLineSha256": "6f3b331ebe9c6bcc021f181170c9820b2e91e9c8c8e3c3ce09ec5645ff5958a1",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mddaec7220c51#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP 會員 - 類別: {value0}",
+      "expectedCurrentValueSha256": "87090fb4ada4c4a0f0f2054f65021259e1619d345e97304a9ed718fc81fb92eb",
+      "replacementValue": "✓ VIP 会员 – 等级：{value0}",
+      "replacementValueSha256": "9da3da709d3df028eb8cddf6713e1914fd5e39e71501bf80fe64d7bfb293f7c9",
+      "expectedJsonStringLiteral": "\"✓ VIP 會員 - 類別: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP 会员 – 等级：{value0}\"",
+      "expectedJsonLineSha256": "41e41ee9dc53e5d4993bd1c12b4ee10272bc91219ec3e4418eb32350f29e7574",
+      "replacementJsonLineSha256": "26b9f34e5baee1124dd082b4201226585f1aabb9edfa13beb167371280f0d7f9",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP 会员 - 等级：{value0}；未满足条件的 torrent：{value1}/{value2}",
+      "expectedCurrentValueSha256": "687d6f50b9cab8eba2ee4da0aaf70bdb451b211778543bbdf97ed16ecdae301a",
+      "replacementValue": "✓ VIP 会员 – 等级：{value0}；未满足条件的种子：{value1}/{value2}",
+      "replacementValueSha256": "40f4c553e4a70ba7a95d1f2de5912bb9ce5dbf33c05e7a5fe433f2d99e10f1c2",
+      "expectedJsonStringLiteral": "\"✓ VIP 会员 - 等级：{value0}；未满足条件的 torrent：{value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP 会员 – 等级：{value0}；未满足条件的种子：{value1}/{value2}\"",
+      "expectedJsonLineSha256": "9f2e54e85a8c9f7450e68acf55e031d06c95c3b9ad68fbd6618b043640ed1f5d",
+      "replacementJsonLineSha256": "3075d710f16261895afdbc2e9f24939ccaea9307dc7987b3eafa4951e1321b40",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.md4a741052e8b",
+      "expectedCurrentValue": "用户类: {value0}(标准会员)",
+      "expectedCurrentValueSha256": "ce566c132c77117d9bf66a3b0dca2405184afdfab8698612a1a0cd6b95589c21",
+      "replacementValue": "用户等级：{value0}（标准会员）",
+      "replacementValueSha256": "d976239fb7cf5332766c434d40dc917a1a1b41ad3a351267c81407343594761e",
+      "expectedJsonStringLiteral": "\"用户类: {value0}(标准会员)\"",
+      "replacementJsonStringLiteral": "\"用户等级：{value0}（标准会员）\"",
+      "expectedJsonLineSha256": "1a301b1924467ed0ee7e458607a1d60503beca417662e096cd8e5f1526791c20",
+      "replacementJsonLineSha256": "279867fdf9df18374700076542af47cb7db03406adcb32a0b7c77c7c2723b3f3",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md4a741052e8b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "用户等级：{value0}（标准会员）；未满足条件的 torrent：{value1}/{value2}",
+      "expectedCurrentValueSha256": "59df61e51fb3db6665537599eaf991fe3ccd08b48ee5c2d9bbd5ee2916b22e46",
+      "replacementValue": "用户等级：{value0}（标准会员）；未满足条件的种子：{value1}/{value2}",
+      "replacementValueSha256": "7aeaba136948e079e0e502d056eb99450a0d73ec0deac02a19018a5497b7ad3b",
+      "expectedJsonStringLiteral": "\"用户等级：{value0}（标准会员）；未满足条件的 torrent：{value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"用户等级：{value0}（标准会员）；未满足条件的种子：{value1}/{value2}\"",
+      "expectedJsonLineSha256": "358fdb610a48f83e67ead1a7958438a482a957821dc1bca66ea861b88b9d12fd",
+      "replacementJsonLineSha256": "1b6f6fe906cc362710c5d8ba4c01497056cd98735edde0b96088265a2e222015",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent 在 torrent 满足做种条件时不会暂停它们。只有启用 Remove Completed，且 torrent 未受 Preserve torrents in client 或 Post-Import Category 保护时，Chaptarr 才能在做种完成后移除它们。导入后，Chaptarr 还会将“{value0}”设置为 rTorrent 视图，可在 rTorrent 脚本中用于自定义行为。",
+      "expectedCurrentValueSha256": "0138938c4f1d166ed623c9f4d2dbfa109f5f4865e9665fd06cd85caaf7e9b815",
+      "replacementValue": "rTorrent 在种子满足做种条件时不会暂停它们。只有启用“移除已完成”，且种子未受“在客户端中保留种子”或“导入后类别”保护时，Chaptarr 才能在做种完成后移除它们。导入后，Chaptarr 还会将“{value0}”设置为 rTorrent 视图，可在 rTorrent 脚本中用于自定义行为。",
+      "replacementValueSha256": "fdd0879cfc72ea1f851f34788443ec1ced74f29ab8327f5ec33869dec27308da",
+      "expectedJsonStringLiteral": "\"rTorrent 在 torrent 满足做种条件时不会暂停它们。只有启用 Remove Completed，且 torrent 未受 Preserve torrents in client 或 Post-Import Category 保护时，Chaptarr 才能在做种完成后移除它们。导入后，Chaptarr 还会将“{value0}”设置为 rTorrent 视图，可在 rTorrent 脚本中用于自定义行为。\"",
+      "replacementJsonStringLiteral": "\"rTorrent 在种子满足做种条件时不会暂停它们。只有启用“移除已完成”，且种子未受“在客户端中保留种子”或“导入后类别”保护时，Chaptarr 才能在做种完成后移除它们。导入后，Chaptarr 还会将“{value0}”设置为 rTorrent 视图，可在 rTorrent 脚本中用于自定义行为。\"",
+      "expectedJsonLineSha256": "88becd31fda35ac59b9f1fb84918ef2d97eaf4a43956a758fe251efe422e495a",
+      "replacementJsonLineSha256": "1ed4ff1b2162b84c6f0797890936a1ea0bfac950aa414687dd7dca65bcb99cbe",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr 将根据 Settings -> Indexers 的当前种子标准进行自动删除 torrents。",
+      "expectedCurrentValueSha256": "f9698e58f8bb8e36b89ff52bba48c2819012f51fa37074f3b33c8d7b16296e35",
+      "replacementValue": "Chaptarr 将根据 设置 → 索引器 中的当前做种条件自动移除种子。",
+      "replacementValueSha256": "75eace47fa2eb8f1b3cb6faf15600a58b7e4e74964393c8f82bbe0a2ff342235",
+      "expectedJsonStringLiteral": "\"Chaptarr 将根据 Settings -> Indexers 的当前种子标准进行自动删除 torrents。\"",
+      "replacementJsonStringLiteral": "\"Chaptarr 将根据 设置 → 索引器 中的当前做种条件自动移除种子。\"",
+      "expectedJsonLineSha256": "128d247aa005b36f6646cf71c732e049f6f79b1cd157ada51c7c7bb9d96e5a24",
+      "replacementJsonLineSha256": "ba3661bd3909de353c7b8f0c70525eca26c0e03f0b688c42cd9f1ea3fc72de85",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "如果 DSM 账户启用了 2-Factor Authentication，Chaptarr 将无法连接到 Download Station。",
+      "expectedCurrentValueSha256": "b87c1a0799b2c99e05129d69fda6add2bdb4cac7521978dec0f54310caad0d52",
+      "replacementValue": "如果 DSM 账户启用了双重身份验证，Chaptarr 将无法连接到 Download Station。",
+      "replacementValueSha256": "def21344a0549e0b5fec2824554f7f1050061e1c2145d39eb30bb32abcb4e7bc",
+      "expectedJsonStringLiteral": "\"如果 DSM 账户启用了 2-Factor Authentication，Chaptarr 将无法连接到 Download Station。\"",
+      "replacementJsonStringLiteral": "\"如果 DSM 账户启用了双重身份验证，Chaptarr 将无法连接到 Download Station。\"",
+      "expectedJsonLineSha256": "d28fe61f8aff3847b0ac6f97c259e400f91412fdf3532193e7e21e9d07a42c89",
+      "replacementJsonLineSha256": "a71b2c6d577e4c6098ad756f71c3d44bb324847b2113e2b29cb8e98088909d79",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    },
+    {
+      "sourceOrdinal": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.m73172a5045d6",
+      "expectedCurrentValue": "系統會將你 Hardcover 清單中的書籍及其閱讀狀態，依標題和作者姓名與已設定的中繼資料來源進行比對。",
+      "expectedCurrentValueSha256": "9599efcac0becc14950cbf434685e195f6af8baf58975b0976520c7b919dac25",
+      "replacementValue": "系統會依據書名和作者姓名，將你在 Hardcover 上的書單中的書籍及其閱讀狀態與已設定的中繼資料來源進行比對。",
+      "replacementValueSha256": "9b0435ec1159bf8dd844720023c317d3f064d197dbea85eca6d1aa1c59867018",
+      "expectedJsonStringLiteral": "\"系統會將你 Hardcover 清單中的書籍及其閱讀狀態，依標題和作者姓名與已設定的中繼資料來源進行比對。\"",
+      "replacementJsonStringLiteral": "\"系統會依據書名和作者姓名，將你在 Hardcover 上的書單中的書籍及其閱讀狀態與已設定的中繼資料來源進行比對。\"",
+      "expectedJsonLineSha256": "1330639ef061c0bdc744e7663c311461546265942d667fe0fce248a8d687f6fb",
+      "replacementJsonLineSha256": "6d136a22ee8595495eba1c0565633fba53e1da40d4ba69f88e05318a074997f1",
+      "disposition": "refinement",
+      "callerPinIds": [
+        "server.message.m73172a5045d6#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.md6a7ade8523b",
+      "expectedCurrentValue": "✓ VIP 會員 - 類別: {value0}",
+      "expectedCurrentValueSha256": "87090fb4ada4c4a0f0f2054f65021259e1619d345e97304a9ed718fc81fb92eb",
+      "replacementValue": "✓ VIP 會員 - 等級：{value0}",
+      "replacementValueSha256": "30a43cdee57721b5256aca6114ebd1b4403c8a831337bc5bd53d4d4320de770e",
+      "expectedJsonStringLiteral": "\"✓ VIP 會員 - 類別: {value0}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP 會員 - 等級：{value0}\"",
+      "expectedJsonLineSha256": "41e41ee9dc53e5d4993bd1c12b4ee10272bc91219ec3e4418eb32350f29e7574",
+      "replacementJsonLineSha256": "1cac30a38e1ad9b9bce41392b5985fea52b3e298783941356051975d321d9145",
+      "disposition": "refinement",
+      "callerPinIds": [
+        "server.message.md6a7ade8523b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.m9f7f2489aa05",
+      "expectedCurrentValue": "✓ VIP 會員 - 等級：{value0}；未滿足條件的 torrent：{value1}/{value2}",
+      "expectedCurrentValueSha256": "42dcc27b243c7b1e39515b5feeb3516746bb9d2b7d237a08cab9304ce3abe4ca",
+      "replacementValue": "✓ VIP 會員－等級：{value0}；未滿足條件的種子：{value1}/{value2}",
+      "replacementValueSha256": "e3a0e6e130d6cd39af3521e13a6b738a108894cfff6f3ad5e0f43990a8ab3704",
+      "expectedJsonStringLiteral": "\"✓ VIP 會員 - 等級：{value0}；未滿足條件的 torrent：{value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"✓ VIP 會員－等級：{value0}；未滿足條件的種子：{value1}/{value2}\"",
+      "expectedJsonLineSha256": "555f5738723ce7918555757f57297c45468a411fcaac0988e7a9db1ee37415a9",
+      "replacementJsonLineSha256": "21483111d50970b5bdec724fd04ceefe091a4c516d05b8a59b1bc9eb1a8d34d3",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m9f7f2489aa05#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.md4a741052e8b",
+      "expectedCurrentValue": "用戶類: {value0}(標準會員)",
+      "expectedCurrentValueSha256": "9c688e763c5b49912bc069c865944b97dfb5f28c1c1b7cd9f86d1f70cf986c73",
+      "replacementValue": "使用者等級：{value0}（標準會員）",
+      "replacementValueSha256": "683d8e1f90040e1da39760de449fb350505098b487da795d2b23614d52a17fa5",
+      "expectedJsonStringLiteral": "\"用戶類: {value0}(標準會員)\"",
+      "replacementJsonStringLiteral": "\"使用者等級：{value0}（標準會員）\"",
+      "expectedJsonLineSha256": "557195eaa3b523047138be4f02299077bf86315a2130829ac8a4b01f1d0b3019",
+      "replacementJsonLineSha256": "cd4c8ec0b6d193673ab1a3424260bc8e444368be523a542e7fc0d80174f0407b",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.md4a741052e8b#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.m621dd0308bef",
+      "expectedCurrentValue": "使用者等級：{value0}（標準會員）；未滿足條件的 torrent：{value1}/{value2}",
+      "expectedCurrentValueSha256": "dbf88e7b5ac2c41da0040a68778e3498b14f1a43e92c3c4d3fb356ca83131907",
+      "replacementValue": "使用者等級：{value0}（標準會員）；未滿足條件的種子：{value1}/{value2}",
+      "replacementValueSha256": "4389ecac5d293309db7da62f4c206cac80f6c4ecd585c2a5332e125b73e5b173",
+      "expectedJsonStringLiteral": "\"使用者等級：{value0}（標準會員）；未滿足條件的 torrent：{value1}/{value2}\"",
+      "replacementJsonStringLiteral": "\"使用者等級：{value0}（標準會員）；未滿足條件的種子：{value1}/{value2}\"",
+      "expectedJsonLineSha256": "299407c6de2a595b5460ba6aa0815e8c42b479ce65f8de4b3c99d20032978ed7",
+      "replacementJsonLineSha256": "b79ef0958967d7e3a86ad7428bc19c35c30bbab5c2a938cf9f954d4825cd0ce7",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m621dd0308bef#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.m4cd205e7d07a",
+      "expectedCurrentValue": "rTorrent 在 torrent 符合做種條件時不會暫停它們。只有在啟用 Remove Completed，且 torrent 未受 Preserve torrents in client 或 Post-Import Category 保護時，Chaptarr 才能在做種完成後移除它們。匯入後，Chaptarr 也會將「{value0}」設為 rTorrent 檢視，可在 rTorrent 指令碼中用來自訂行為。",
+      "expectedCurrentValueSha256": "76f35db05201aa09a1729fda86f3d5b4c6f4e55ebf6c4897d7158d6a889256a2",
+      "replacementValue": "rTorrent 在種子符合做種條件時不會暫停它們。只有啟用「移除已完成」，且種子未受「在用戶端中保留種子」或「匯入後類別」保護時，Chaptarr 才能在做種完成後移除它們。匯入後，Chaptarr 也會將「{value0}」設為 rTorrent 檢視，可在 rTorrent 指令碼中用來自訂行為。",
+      "replacementValueSha256": "da1eb18446f5c55bdc3cb78758abfd6cd4b346f7afb8de846207fba04235290b",
+      "expectedJsonStringLiteral": "\"rTorrent 在 torrent 符合做種條件時不會暫停它們。只有在啟用 Remove Completed，且 torrent 未受 Preserve torrents in client 或 Post-Import Category 保護時，Chaptarr 才能在做種完成後移除它們。匯入後，Chaptarr 也會將「{value0}」設為 rTorrent 檢視，可在 rTorrent 指令碼中用來自訂行為。\"",
+      "replacementJsonStringLiteral": "\"rTorrent 在種子符合做種條件時不會暫停它們。只有啟用「移除已完成」，且種子未受「在用戶端中保留種子」或「匯入後類別」保護時，Chaptarr 才能在做種完成後移除它們。匯入後，Chaptarr 也會將「{value0}」設為 rTorrent 檢視，可在 rTorrent 指令碼中用來自訂行為。\"",
+      "expectedJsonLineSha256": "8688a714b9d3aa443903584f6ec6d5b219ea908096cd66d773b677477b6aa6f7",
+      "replacementJsonLineSha256": "37c3ae53ab0c408d3e650309029c94dc4892c660ad6cd0bc8918d1cc39d7e223",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m4cd205e7d07a#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.mc6073db4b613",
+      "expectedCurrentValue": "Chaptarr 將根據 Settings -> Indexers 的當前種子標準進行自動刪除 torrents。",
+      "expectedCurrentValueSha256": "c231032a1c83d8a7492d787ea3ed54376f584bc94f72d510518f9e3c9b0d03ce",
+      "replacementValue": "Chaptarr 將根據 設定 → 索引器 中的目前做種條件自動移除種子。",
+      "replacementValueSha256": "cac933d10472f9b65f680065e15208424d20383f15ee9ef9313150d84f64f5cd",
+      "expectedJsonStringLiteral": "\"Chaptarr 將根據 Settings -> Indexers 的當前種子標準進行自動刪除 torrents。\"",
+      "replacementJsonStringLiteral": "\"Chaptarr 將根據 設定 → 索引器 中的目前做種條件自動移除種子。\"",
+      "expectedJsonLineSha256": "7210d44c494f891a25647baeb6ec982620beaaae1f52120cd80bb75d88f2e0d0",
+      "replacementJsonLineSha256": "a68c53d59da55e30131c9f467af02b7d6c808943c9ac69d334d8c16879312c1f",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.mc6073db4b613#1"
+      ]
+    },
+    {
+      "sourceOrdinal": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "jsonKey": "server.message.m12f8b73a2b72",
+      "expectedCurrentValue": "如果 DSM 帳戶啟用了 2-Factor Authentication，Chaptarr 將無法連線到 Download Station。",
+      "expectedCurrentValueSha256": "d6104516e5683066d0d5a371d7cf1e4e9b05f84bb4f7153b0e47ba53014f5258",
+      "replacementValue": "如果 DSM 帳戶啟用了雙重因素驗證，Chaptarr 將無法連線到 Download Station。",
+      "replacementValueSha256": "2966125a69b998a0930d64b9beb74345f774a27f82c88da8a2e1e6656ad1ed94",
+      "expectedJsonStringLiteral": "\"如果 DSM 帳戶啟用了 2-Factor Authentication，Chaptarr 將無法連線到 Download Station。\"",
+      "replacementJsonStringLiteral": "\"如果 DSM 帳戶啟用了雙重因素驗證，Chaptarr 將無法連線到 Download Station。\"",
+      "expectedJsonLineSha256": "877167769b5e2f6a269fb4221db458af430a37d4efcf7547f3c2359fa574946f",
+      "replacementJsonLineSha256": "1ecc9df12e40e6727215de3d5eadd12a1053fd9604491580c381473e9b3a488a",
+      "disposition": "correction",
+      "callerPinIds": [
+        "server.message.m12f8b73a2b72#1",
+        "server.message.m12f8b73a2b72#2"
+      ]
+    }
+  ],
+  "writesPerformed": false
+}

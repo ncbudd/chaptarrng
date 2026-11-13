@@ -1,0 +1,76 @@
+{
+  "candidate-free": {
+    "command": "python3 verify_candidate_free.py",
+    "exitCode": 0,
+    "result": "PASS",
+    "summary": {
+      "cells": 600,
+      "sources": 50,
+      "locales": 12,
+      "head": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+      "tree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af"
+    }
+  },
+  "primary-review": {
+    "command": "python3 verify_primary_review.py",
+    "exitCode": 0,
+    "result": "PASS",
+    "summary": {
+      "cells": 600,
+      "proposals": 87,
+      "acceptCurrent": 465,
+      "callerlessHolds": 48,
+      "nativeSpeakerApproval": 0
+    }
+  },
+  "primary-cross-review": {
+    "command": "python3 verify_cross_review.py",
+    "exitCode": 0,
+    "result": "PASS",
+    "summary": {
+      "proposalRows": 87,
+      "decisions": {
+        "accept": 86,
+        "revise": 1
+      }
+    }
+  },
+  "independent-blind-review": {
+    "command": "python3 verify_blind_packet.py",
+    "exitCode": 0,
+    "result": "PASS",
+    "summary": {
+      "cells": 600,
+      "acceptCurrent": 497,
+      "holds": 103,
+      "callerlessHoldCells": 48
+    }
+  },
+  "root-suggestion-cross-review": {
+    "command": "python3 verify-review-packet.py",
+    "exitCode": 0,
+    "result": "PASS",
+    "summary": {
+      "cells": 19,
+      "decisions": {
+        "accept": 19
+      }
+    }
+  },
+  "original-root-manual-review": {
+    "command": "sha256sum -c SHA256SUMS.txt",
+    "exitCode": 0,
+    "result": "PASS"
+  },
+  "current-root-manual-review": {
+    "command": "sha256sum -c SHA256SUMS.txt",
+    "exitCode": 0,
+    "result": "PASS"
+  },
+  "fresh-review-4688": {
+    "command": "sha256sum -c SHA256SUMS.txt && python3 verify-sealed-review-decision.py",
+    "exitCode": 0,
+    "result": "PASS",
+    "sealSha256": "f07d6bb3fbc623f7e6bbf71973555ea9a1b33673bf8c9bc2edf375087a3cda0"
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "tree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "expectedHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "expectedTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "scope": {
+    "positions": [
+      500,
+      549
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "currentMissingIdsCount": 1210,
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "window": [
+      500,
+      549
+    ],
+    "sourceIds": 50,
+    "firstId": "server.message.m261f5494dc87",
+    "lastId": "server.message.m3e949d41e2c8"
+  },
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "bytes": 312087
+  },
+  "registry": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "bytes": 395755,
+    "records": 409
+  },
+  "catalogs": {
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "blob": "8dff5916f456e6e794a5c9362700ef42ddde830f",
+      "sha256": "4e1aa26ff7cba9c6f7023741b8d57a2e321d2cbc33397441e662b0ddc4b4bceb",
+      "bytes": 358703
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "blob": "1eb53cb29ea237ec21b04328653bf0d3d92b8859",
+      "sha256": "d8bcc14f50bc646ded9e0434707410b46727efdbc0bada353c095bdb04e42823",
+      "bytes": 305748
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "blob": "b789b56a56cd5429129a2e1bb91f223e9eaedb85",
+      "sha256": "4286d9bf2a835b551670aec2f5b48b4b30bea044326d88cfa243a91ddba59992",
+      "bytes": 605184
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "blob": "29510fe2f14815057ab37f285d80f15732f0087e",
+      "sha256": "39d395ddbc0fcdc331804f61eb38e5da8ac64f60a1d36435ec8283d965f082cb",
+      "bytes": 360538
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "blob": "aae4b91df607d8479540a5b64e1f857404aa79c0",
+      "sha256": "185ff0c45e857f27471b02fa9eb7da53e46c19bdc0b95bf59928a20714ad2921",
+      "bytes": 408265
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "blob": "306e9c245fbfc28a8e0a44d5a31bccf26fb55964",
+      "sha256": "a47ee6b016f127419fd35d53e942dcfdfc9fac2417468f7d6eded005ca776abb",
+      "bytes": 374177
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "afeaf1f7bf8bfa87cf6b9d01cddf56e3b0b56381",
+      "sha256": "3f2541784b8fffff717452701b7f52868e263481dd6509b42d5fbb8a5d8032b2",
+      "bytes": 352132
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "1b00da36bfe3b0a6201c7acb5bf44ad1f20e999c",
+      "sha256": "01b4b02cd8bf0000c012312ee9f059950a9e29e3b70dc758b6e925093893a7b6",
+      "bytes": 431232
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "7b152c0975fa89f4b0c9d9c239e95208282957b5",
+      "sha256": "5d888e05132098eae6af075bb1ffd8cbe23d9c736e1922516667d5c8b11f9333",
+      "bytes": 367520
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "f71a42ccef8db1a3b66955d219405aaab7a3f063",
+      "sha256": "14ff2a37e765b91f708042788a6dcf1c52456825b9442c2f377bf6a5ea576f5c",
+      "bytes": 307072
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "d23e033215f36c951f86b8cefba515bf5aad99d2",
+      "sha256": "f904d8a60708b418ec9ff57275583fcef8f7e16a9245f316a9c09feb4fac7b4f",
+      "bytes": 388809
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "5e9749033aedfa28674669ec3896eda6e85ef94f",
+      "sha256": "613c8fb66a7c7fa273b47fdb3b37d166c4e84d89cf57f6c1174d504ec55528fa",
+      "bytes": 332683
+    }
+  },
+  "sourceSlice": {
+    "path": "source-slice.jsonl",
+    "rows": 50,
+    "sha256": "d2a8ac3fd076b4a9f1f798a222d6014a43a7c36bec11b1919e235dac32c65f0e"
+  },
+  "inputCells": {
+    "path": "input-cells.jsonl",
+    "rows": 600,
+    "sha256": "65478bde5abd661611ee81b3f0f5e4eb73aeadc419721b81b76efa1f17bcfbe0"
+  },
+  "callerContext": {
+    "path": "caller-context.jsonl",
+    "sha256": "7ed2e5417d78baebc45f646c284237f1d8c8c6895b2b18c86e264008d70896b8",
+    "sourceIds": 50,
+    "sourceIdsWithCallerPins": 50,
+    "callerRefs": 71,
+    "uniqueCallerFiles": 49,
+    "lineNumberShifts": 0,
+    "callerMismatches": 0,
+    "callerGaps": []
+  },
+  "review": {
+    "path": "review-cells.jsonl",
+    "rows": 600,
+    "sha256": "bb6d42427006ee48b76da22da4e32c9ae54bd2aa8e2943b63e0b85d30d8dd726",
+    "dispositions": {
+      "accept-current": 426,
+      "propose-correction": 131,
+      "propose-refinement": 43,
+      "hold": 0
+    }
+  },
+  "protectedLiteralIntegrity": {
+    "path": "protected-literal-integrity.jsonl",
+    "sha256": "4dcd540dff5d2f9e9d98f419b306c78f11563ac7c4c6d1f83ce3bb03c9099711",
+    "rows": 600,
+    "currentMismatches": 5,
+    "currentMismatchCells": [
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "hi",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "fr",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "ko",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 518,
+        "sourceId": "server.message.m2e3799b32682",
+        "locale": "zh-Hans",
+        "missingLiterals": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 518,
+        "sourceId": "server.message.m2e3799b32682",
+        "locale": "zh-Hant",
+        "missingLiterals": [
+          "SABnzbd"
+        ]
+      }
+    ],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "correctionCandidates": {
+    "path": "correction-candidates.jsonl",
+    "rows": 174,
+    "sha256": "c2b53324091f23c485ff704d002fc84a0c1c365993f3030e5dc78714282113e6"
+  },
+  "inputChecksumManifest": {
+    "path": "INPUT-SHA256SUMS",
+    "sha256": "79c9fdffd7ce86db550868aed79d008725d12d58dc1a768eabe765fc6afad721",
+    "verification": "pass"
+  },
+  "localizedUiTerms": {
+    "path": "localized-ui-terms.json",
+    "sha256": "d5a78e900573c297351e7a102637930f6a34632d4344e8d93bc67208f5d64bc2"
+  },
+  "reviewDecisionInput": {
+    "path": "review-decisions.json",
+    "sha256": "cf53b3fd1f2c497a958fb08ed88c0efdc7872279e49e6dc8684b529e02cfda9a",
+    "findings": 174,
+    "sourceRationales": 50
+  },
+  "reviewerProvenance": {
+    "path": "reviewer-provenance.json",
+    "sha256": "671101f6fd24fb0b8ee6939210799b2f8397c42e7bba8c3d3f4cacf52e8b73f8"
+  },
+  "priorContextDispositionRows": 12,
+  "priorContextAttestation": {
+    "sourceOrdinal": 499,
+    "sourceId": "server.message.m2546d2b6166c",
+    "cells": 12,
+    "primaryDispositions": {
+      "propose-correction": 10,
+      "accept-current": 1,
+      "propose-refinement": 1
+    },
+    "priorPrimaryCurrentTargetsMatchingLive": 12,
+    "callerRefsReattested": 1,
+    "priorCallerRefsMatchLive": 12
+  },
+  "priorContextDispositionSha256": "e89d1c02781128ccb0bc16e1bddb894e035a17930a2594da394214f227c9fce5",
+  "priorDispositionBoundaryPath": "prior-disposition-boundary.json",
+  "priorDispositionBoundarySha256": "578cbb8aea7475d571db1804733241bf2612225f30bcd99a9f2b57af002c31cf",
+  "previousWindowAttestation": {
+    "reviewedPositions": [
+      0,
+      499
+    ],
+    "sourceIdSetOverlap": 0,
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c"
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false,
+  "finalReattestation": {
+    "path": "final-reattestation.json",
+    "sha256": "2401d08f8677a30ff855fe8fdf6ea0d5628f5d8cd855fd36b7420f9985aa9b2a",
+    "checks": "pass",
+    "head": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+    "tree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+    "cellMismatches": 0,
+    "callerMismatches": 0
+  }
+}

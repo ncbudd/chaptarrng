@@ -1,0 +1,23 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "baseHead": "28cdae837118a426ac867fb468a5e5a6937cbb9b",
+  "applicationHead": "cfb92c0d326127765480de313dcea8b2a9a8e483",
+  "applicationTree": "f4f851d6d96854882e711bff388b9557516fe7a6",
+  "prState": "OPEN",
+  "isDraft": true,
+  "prHead": "cfb92c0d326127765480de313dcea8b2a9a8e483",
+  "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "deploymentsObserved": 0,
+  "workflowRunsObserved": [
+    {
+      "conclusion": "skipped",
+      "databaseId": 41773768513,
+      "name": "Build ChaptarrNG",
+      "status": "completed"
+    }
+  ],
+  "ciDispatch": "none; the push produced one skipped workflow event",
+  "observedAtUtc": "2026-11-04T04:35:25.357255+00:00"
+}

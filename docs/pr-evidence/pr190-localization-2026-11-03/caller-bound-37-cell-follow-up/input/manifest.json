@@ -1,0 +1,48 @@
+{
+  "candidateFree": true,
+  "catalogLocaleCount": 12,
+  "cellCount": 37,
+  "exactCurrentHeadFilePins": true,
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "localeOrder": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "nativeSpeakerApproval": false,
+  "priorReviewVerdictsIncluded": false,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "selection": "37 locale cells with exact production/UI callers from the current 61-cell hold audit; the 24 no-caller cells at source ordinals 447 and 498 are excluded and remain held.",
+  "sourceAndCurrentTargetHashesRecomputed": true,
+  "sourceCount": 7,
+  "sourceIds": [
+    "provider.option.o7285d46b982d",
+    "provider.option.oe4d40d318e99",
+    "server.message.m453c42aa8de5",
+    "server.message.mf00d6bc38ae8",
+    "ui.loading.dodgeBooks",
+    "ui.loading.newEbookSmell",
+    "ui.loading.rewindAudiobooks"
+  ],
+  "sourceOrdinals": [
+    561,
+    884,
+    963,
+    1000,
+    1047,
+    1049,
+    1054
+  ],
+  "translationCandidatesIncluded": false,
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0"
+}

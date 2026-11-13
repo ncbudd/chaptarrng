@@ -7,6 +7,7 @@ using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Telegram
 {
@@ -82,7 +83,7 @@ namespace NzbDrone.Core.Notifications.Telegram
                     return new ValidationFailure(property, error.Description);
                 }
 
-                return new ValidationFailure("BotToken", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("BotToken", "Unable to send test message", "server.message.m1041bbcba071");
             }
 
             return null;

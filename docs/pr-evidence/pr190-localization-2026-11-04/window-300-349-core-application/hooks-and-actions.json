@@ -1,0 +1,49 @@
+{
+  "persistentGitConfig": {
+    "core.hooksPath": ".githooks",
+    "modified": false
+  },
+  "commandScopedBypass": {
+    "value": "core.hooksPath=/dev/null",
+    "usedFor": "Product/evidence commits and non-force pushes only",
+    "persistentConfigChanged": false
+  },
+  "skippedHooks": [
+    {
+      "hook": ".githooks/pre-commit",
+      "command": "scripts/security-scan-local.sh --staged --semgrep-only",
+      "reason": "The requested delivery explicitly prohibited local scans."
+    },
+    {
+      "hook": ".githooks/pre-push",
+      "command": "packaging/scripts/test-publish-image-aliases.sh",
+      "reason": "The requested delivery explicitly prohibited tests; no local hook test was run."
+    }
+  ],
+  "manualTestsBuildsScans": 0,
+  "manualCiDispatches": 0,
+  "automaticGitHubActions": [
+    {
+      "runId": 41948520500,
+      "head": "4688c998d92c821bbc1464ea4640c90615a69327",
+      "event": "pull_request_target",
+      "conclusion": "skipped",
+      "checkRunCount": 10,
+      "checkConclusions": [
+        "skipped"
+      ],
+      "commitStatusCount": 0
+    },
+    {
+      "runId": 41952452511,
+      "head": "9e140498caaad4d5957b0ef16ce659fe77fcebf3",
+      "event": "pull_request_target",
+      "conclusion": "skipped",
+      "checkRunCount": 10,
+      "checkConclusions": [
+        "skipped"
+      ],
+      "commitStatusCount": 0
+    }
+  ]
+}

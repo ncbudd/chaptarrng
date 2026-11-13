@@ -1,0 +1,1752 @@
+{
+  "AutomaticUpdatesDisabledDocker": {
+    "callerContextSha256": "bd2a4cbaf8219712691ab40670cbe147884b6a9b9b6e5c2d1b0696a8ce25feb6",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "            onChange={onInputChange}",
+          "            {...updateAutomatically}",
+          "          />"
+        ],
+        "contextBefore": [
+          "            name=\"updateAutomatically\"",
+          "            helpText={translate('UpdateAutomaticallyHelpText')}"
+        ],
+        "fileGitBlob": "8448dcc9aaf429884264def8aa6049ee941268fd",
+        "fileSha256": "e724075997b57a28e6ddb701b013b4c5667a33f47dee8bf9117800ea8f10303a",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 81,
+        "lineSha256": "e42843bed2491b69e3adfc7e40b9ea02ad71d0b0915cad7db7fa6809cca926db",
+        "lineText": "            helpTextWarning={updateMechanism.value === 'docker' ? translate('AutomaticUpdatesDisabledDocker') : undefined}",
+        "path": "frontend/src/Settings/General/UpdateSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "AutomaticallySwitchEdition": {
+    "callerContextSha256": "3d926fdff9ea8ed93d1ca3522ada8601f89bf558a5c4b888a872f444f96652a8",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "              </FormLabel>",
+          "",
+          "              <FormInputGroup"
+        ],
+        "contextBefore": [
+          "            <FormGroup>",
+          "              <FormLabel>"
+        ],
+        "fileGitBlob": "7c2daeda2727d7115d289bef00c1f6b0db3c4a44",
+        "fileSha256": "58a0df2de82e97f353d75dd14bf90999e46c2b4d9a46a4e78dedd102a959d5b4",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 87,
+        "lineSha256": "21d3aa4c4fa8f06723c624f639fb958fba31ae2266a3f5ae918f3d54b6863513",
+        "lineText": "                {translate('AutomaticallySwitchEdition')}",
+        "path": "frontend/src/Book/Edit/EditBookModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "Back": {
+    "callerContextSha256": "637db7334b0f5fea0aaf5958602a8762dbc45c6623bb59d58238a65361e361b6",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "              </button>",
+          "            </div>",
+          "          </div>"
+        ],
+        "contextBefore": [
+          "                aria-label={translate('FlipCardShowSummary')}",
+          "              >"
+        ],
+        "fileGitBlob": "857057d2eb5495443bdb094f9da03f580ab980ab",
+        "fileSha256": "4f95514cc7f601f7d0a8f9f851b45647e7c16256b4ce4163006e379c1576bae5",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 33,
+        "lineSha256": "5283b6ce500203517ed73f448b7c520f15e63835d240e215d4bf37e34da79524",
+        "lineText": "                {translate('Back')}",
+        "path": "frontend/src/Components/FlipCard/FlipCard.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackToQuickstart": {
+    "callerContextSha256": "6351accdc69371d410098286d4d0c074a2e86916d430882c60718b4927260c56",
+    "callerReferenceCount": 2,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                  to=\"/system/quickstart\"",
+          "                >",
+          "                  <span className={styles.quickstartReturnButtonContent}>"
+        ],
+        "contextBefore": [
+          "                <Button",
+          "                  kind={kinds.PRIMARY}"
+        ],
+        "fileGitBlob": "f46486509f17fe49b6826f66b80a0a419ad647c8",
+        "fileSha256": "6be91b5dd499f38e379cacac7062886dfb21d69dc50aaa9cf0bfbeec6558a47b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 33,
+        "lineSha256": "6e033f996e579bf4e2ded7f2c09fdd375cb2be79e3c509a2828b5698c8ce37e4",
+        "lineText": "                  title={translate('BackToQuickstart')}",
+        "path": "frontend/src/Settings/CustomFormats/CustomFormatSettingsConnector.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "                  </span>",
+          "                </Button>",
+          "              </div>"
+        ],
+        "contextBefore": [
+          "                  <span className={styles.quickstartReturnButtonContent}>",
+          "                    <Icon name={icons.ARROW_LEFT} />"
+        ],
+        "fileGitBlob": "f46486509f17fe49b6826f66b80a0a419ad647c8",
+        "fileSha256": "6be91b5dd499f38e379cacac7062886dfb21d69dc50aaa9cf0bfbeec6558a47b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 38,
+        "lineSha256": "3b62aec9be3d9b3a8e1fe0442fc1edbc96b7bb38f38c8b8b144841aebc3673f9",
+        "lineText": "                    <span>{translate('BackToQuickstart')}</span>",
+        "path": "frontend/src/Settings/CustomFormats/CustomFormatSettingsConnector.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BackfillAuthorRootFoldersHelpText": {
+    "callerContextSha256": "2c87da5298a3cb31ce59968d16e9016a127099f2cb574e5895e3c771ee175857",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        <p>{translate('BackfillAuthorRootFoldersSummary', [updated, candidates])}</p>",
+          "        {",
+          "          this.state.backfillCommandError &&"
+        ],
+        "contextBefore": [
+          "    return (",
+          "      <div>"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 276,
+        "lineSha256": "c52e7df003a58af1eb526b197193900f9ffcd08beca4330c175f03697b8fc386",
+        "lineText": "        <p>{translate('BackfillAuthorRootFoldersHelpText')}</p>",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackfillAuthorRootFoldersSkippedManuallyOverridden": {
+    "callerContextSha256": "dde4257c7f25d579c17876cc2200a644ab97657823e78484d3fdcea1ebf1fe5d",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                  Number(backfillPreview.skippedManuallyOverridden) || 0",
+          "                ])}",
+          "              </li>"
+        ],
+        "contextBefore": [
+          "            <ul>",
+          "              <li>"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 289,
+        "lineSha256": "672f236b3088fc38dff29062af1cf4d013aca1f09fb43ec0eefe97787dd919f4",
+        "lineText": "                {translate('BackfillAuthorRootFoldersSkippedManuallyOverridden', [",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackfillAuthorRootFoldersSkippedNoDefault": {
+    "callerContextSha256": "7de84855529ca358f4245601c268c6c874d7b78077dd192385a2a00cd589fc73",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                  Number(backfillPreview.skippedNoDefault) || 0",
+          "                ])}",
+          "              </li>"
+        ],
+        "contextBefore": [
+          "              </li>",
+          "              <li>"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 294,
+        "lineSha256": "9f077f1aca4378a4c76a8b6c0c39d7e34cd956a9b43cce41538365988d574f36",
+        "lineText": "                {translate('BackfillAuthorRootFoldersSkippedNoDefault', [",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackfillAuthorRootFoldersSkippedNoProfile": {
+    "callerContextSha256": "2eec17a3ea53d0a9107dae71473ad73031f6cee6d0092c61462d8fa58d69ea9d",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                  Number(backfillPreview.skippedNoProfile) || 0",
+          "                ])}",
+          "              </li>"
+        ],
+        "contextBefore": [
+          "              </li>",
+          "              <li>"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 299,
+        "lineSha256": "57fcbed825b1e98fea697dd0c2e7bdf6e152bf72357896dbbf916cff33973f81",
+        "lineText": "                {translate('BackfillAuthorRootFoldersSkippedNoProfile', [",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackfillAuthorRootFoldersSummary": {
+    "callerContextSha256": "49c32c7ec24b085f9717b4a5a38cc187eb28cd5546287ee94bd69bc101060e90",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        {",
+          "          this.state.backfillCommandError &&",
+          "            <p className={styles.backfillError} role=\"alert\">"
+        ],
+        "contextBefore": [
+          "      <div>",
+          "        <p>{translate('BackfillAuthorRootFoldersHelpText')}</p>"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 277,
+        "lineSha256": "17fcfbf14095bad25a40c5aceaad0a8444df1d3b0c8056572d962d4484d49a67",
+        "lineText": "        <p>{translate('BackfillAuthorRootFoldersSummary', [updated, candidates])}</p>",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackfillAuthorRootFoldersTitle": {
+    "callerContextSha256": "aafa6c4fa52be3c88caf706e7a303c55f68dedf06fdc6dd9ae14d769cc5bd204",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "            message={this.renderAuthorRootBackfillPreview()}",
+          "            hideCancelButton={!canBackfill}",
+          "            confirmLabel={canBackfill ?"
+        ],
+        "contextBefore": [
+          "            isOpen={this.state.isBackfillPreviewModalOpen}",
+          "            kind={canBackfill ? kinds.PRIMARY : kinds.DEFAULT}"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 446,
+        "lineSha256": "8f8b8b5dfb53a41ac7ef75e202aabb0922441bdace1b85a603c64cbfc7589c34",
+        "lineText": "            title={translate('BackfillAuthorRootFoldersTitle')}",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "Backup": {
+    "callerContextSha256": "04ed4c165dec4f3caa6b42d7cefa85ae21001c0babcc663d9906ac80b61282d0",
+    "callerReferenceCount": 54,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        to: '/system/backup',",
+          "        simple: true",
+          "      },"
+        ],
+        "contextBefore": [
+          "      },",
+          "      {"
+        ],
+        "fileGitBlob": "00701d5bfbf2d5e8deaaf5cb8fdad63e283d94d6",
+        "fileSha256": "234d988f9a6badfea3159d598fb9e4e1b0f05cb18d15bc41b33a99fff4210bf3",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 186,
+        "lineSha256": "b74262da3e6622b578d7413e63bd14003f8eac085e39540e07d2876a94663b5c",
+        "lineText": "        title: () => translate('Backup'),",
+        "path": "frontend/src/Components/Page/Sidebar/PageSidebar.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "          </SpinnerButton>",
+          "        </ModalFooter>",
+          "      </ModalContent>"
+        ],
+        "contextBefore": [
+          "            isSpinning={isSaving}",
+          "          >"
+        ],
+        "fileGitBlob": "3a1722f64dc68f82b075c77f7fbb78882970f177",
+        "fileSha256": "48847eace058b6aae3933aa6251c8c4ea668b883e1a8124fb445f65de7ac3ff0",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 313,
+        "lineSha256": "e285c7f83f82df9c3d0f7b4fdf36ffc2f2116ee7b8c6e86ad464a3d77e755d88",
+        "lineText": "            {translate('Backup')}",
+        "path": "frontend/src/System/SettingsBackup/SettingsBackupModal.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BackupFolderHelpText": {
+    "callerContextSha256": "2309fa50aa163644ed707cef4b44b5afd84c942909f2d500ab140c117d86033e",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          onChange={onInputChange}",
+          "          {...backupFolder}",
+          "        />"
+        ],
+        "contextBefore": [
+          "          type={inputTypes.PATH}",
+          "          name=\"backupFolder\""
+        ],
+        "fileGitBlob": "61a3691823fa9e071ff34ba2e8a265d660684676",
+        "fileSha256": "770775e44751565ce2577526a1a0f36a9507bf540b827726066b84d2a7eb5d92",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 40,
+        "lineSha256": "9d00f7a1c9c8ce437a03554e7c492b67696b3ecf1d156e64ac5d4a5e9f692f4d",
+        "lineText": "          helpText={translate('BackupFolderHelpText')}",
+        "path": "frontend/src/Settings/General/BackupSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackupIntervalHelpText": {
+    "callerContextSha256": "50e83ee38c8d15cdd6a1ce22a3705eabcb5f0f214d15e593e70b391de95b0393",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          onChange={onInputChange}",
+          "          {...backupInterval}",
+          "        />"
+        ],
+        "contextBefore": [
+          "          name=\"backupInterval\"",
+          "          unit=\"days\""
+        ],
+        "fileGitBlob": "61a3691823fa9e071ff34ba2e8a265d660684676",
+        "fileSha256": "770775e44751565ce2577526a1a0f36a9507bf540b827726066b84d2a7eb5d92",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 58,
+        "lineSha256": "0f5394c14566804e72ca1c11cf8498bdcfa013e2c7e9829e359d6642ffce7c32",
+        "lineText": "          helpText={translate('BackupIntervalHelpText')}",
+        "path": "frontend/src/Settings/General/BackupSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackupNow": {
+    "callerContextSha256": "410002fc563d351816f5d9be71ed3f8672b35b414db7fb33de0d616675a64d6b",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "              iconName={icons.BACKUP}",
+          "              isSpinning={backupExecuting}",
+          "              onPress={onBackupPress}"
+        ],
+        "contextBefore": [
+          "          <PageToolbarSection>",
+          "            <PageToolbarButton"
+        ],
+        "fileGitBlob": "fd27c56a69611125224d86b3679502bc8f9a133e",
+        "fileSha256": "46334dcec064df41bcdd2c87a348a400a0ce099ab78c89b6b3992d42a2bbd651",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 102,
+        "lineSha256": "4ea83dd771874718da94cb32e25753ee0de497034ee36ccad4fe83da3438ffc0",
+        "lineText": "              label={translate('BackupNow')}",
+        "path": "frontend/src/System/Backup/Backups.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BackupRetentionHelpText": {
+    "callerContextSha256": "26991baef1d4e4f5779bafdbc95eb1b0f0d33ea8f8aab31178b5349a2404d670",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          onChange={onInputChange}",
+          "          {...backupRetention}",
+          "        />"
+        ],
+        "contextBefore": [
+          "          name=\"backupRetention\"",
+          "          unit=\"days\""
+        ],
+        "fileGitBlob": "61a3691823fa9e071ff34ba2e8a265d660684676",
+        "fileSha256": "770775e44751565ce2577526a1a0f36a9507bf540b827726066b84d2a7eb5d92",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 76,
+        "lineSha256": "e9289d02aa12b704006afb6572f2ebd5974241e9a2ded4d4b1b10c4ca2c8fbf0",
+        "lineText": "          helpText={translate('BackupRetentionHelpText')}",
+        "path": "frontend/src/Settings/General/BackupSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "Backups": {
+    "callerContextSha256": "13ec542cf940384df3748d947353cdf9a66d00c1287faca043f6562518e0c0d7",
+    "callerReferenceCount": 8,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      <FormGroup",
+          "        advancedSettings={advancedSettings}",
+          "        isAdvanced={true}"
+        ],
+        "contextBefore": [
+          "",
+          "  return ("
+        ],
+        "fileGitBlob": "61a3691823fa9e071ff34ba2e8a265d660684676",
+        "fileSha256": "770775e44751565ce2577526a1a0f36a9507bf540b827726066b84d2a7eb5d92",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 28,
+        "lineSha256": "226e2999309ffe85a74c882775d7815598afc7ca7dc9a1d3ae08c4ce684eca61",
+        "lineText": "    <FieldSet legend={translate('Backups')}>",
+        "path": "frontend/src/Settings/General/BackupSettings.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "        <PageToolbar>",
+          "          <PageToolbarSection>",
+          "            <PageToolbarButton"
+        ],
+        "contextBefore": [
+          "",
+          "    return ("
+        ],
+        "fileGitBlob": "fd27c56a69611125224d86b3679502bc8f9a133e",
+        "fileSha256": "46334dcec064df41bcdd2c87a348a400a0ce099ab78c89b6b3992d42a2bbd651",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 98,
+        "lineSha256": "9fa1f18472654d21402d225e8ea942ff52b3c827836d0feed23009660dfa0439",
+        "lineText": "      <PageContent title={translate('Backups')}>",
+        "path": "frontend/src/System/Backup/Backups.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BackupsContainUnencryptedCredentials": {
+    "callerContextSha256": "a27379e183f8766212c47070cf9380636bf8705d0ef597ce05dbbbf6cd70b154",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          </Alert>",
+          "",
+          "          {"
+        ],
+        "contextBefore": [
+          "        <PageContentBody>",
+          "          <Alert kind={kinds.WARNING}>"
+        ],
+        "fileGitBlob": "fd27c56a69611125224d86b3679502bc8f9a133e",
+        "fileSha256": "46334dcec064df41bcdd2c87a348a400a0ce099ab78c89b6b3992d42a2bbd651",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 124,
+        "lineSha256": "765284a7fc1649ffe9650f71521203694dc2e7355f989eb0c4a964f1c204f182",
+        "lineText": "            {translate('BackupsContainUnencryptedCredentials')}",
+        "path": "frontend/src/System/Backup/Backups.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BindAddress": {
+    "callerContextSha256": "15a10c5f76f45d4eb68f96935d2f40e10d4cb771c0f5787b3b806ac676c61575",
+    "callerReferenceCount": 17,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        </FormLabel>",
+          "",
+          "        <FormInputGroup"
+        ],
+        "contextBefore": [
+          "      >",
+          "        <FormLabel>"
+        ],
+        "fileGitBlob": "dff0b8b8e5f65abd9a08df84476393ecf422c302",
+        "fileSha256": "915894f53eda31930f9c758e8ecdcd72c89d55f64b91a078040123e3454bd360",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 39,
+        "lineSha256": "919e45a6e5a0745574434c7383d6ec18e18d091f9953dc480a5aa5e712371908",
+        "lineText": "          {translate('BindAddress')}",
+        "path": "frontend/src/Settings/General/HostSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BindAddressHelpText": {
+    "callerContextSha256": "193a7221820705f6b6c9c1cbdd85028e97407863995cd51d3e2f78572a04ca19",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          helpTextWarning={translate('BindAddressHelpTextWarning')}",
+          "          onChange={onInputChange}",
+          "          {...bindAddress}"
+        ],
+        "contextBefore": [
+          "          type={inputTypes.TEXT}",
+          "          name=\"bindAddress\""
+        ],
+        "fileGitBlob": "dff0b8b8e5f65abd9a08df84476393ecf422c302",
+        "fileSha256": "915894f53eda31930f9c758e8ecdcd72c89d55f64b91a078040123e3454bd360",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 45,
+        "lineSha256": "c80e10912bf2b9b0b5942895dfe071cde4de1533fc4296c65996a966b5fc935e",
+        "lineText": "          helpText={translate('BindAddressHelpText')}",
+        "path": "frontend/src/Settings/General/HostSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BindAddressHelpTextWarning": {
+    "callerContextSha256": "1e5acd4db0b7b736c408b784f834bf6486a2ec0ccd134c7297ba3c6503b0d9d5",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          onChange={onInputChange}",
+          "          {...bindAddress}",
+          "        />"
+        ],
+        "contextBefore": [
+          "          name=\"bindAddress\"",
+          "          helpText={translate('BindAddressHelpText')}"
+        ],
+        "fileGitBlob": "dff0b8b8e5f65abd9a08df84476393ecf422c302",
+        "fileSha256": "915894f53eda31930f9c758e8ecdcd72c89d55f64b91a078040123e3454bd360",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 46,
+        "lineSha256": "0633cc8b9aef6792976639ff828105fe1bb58b6069795959cbda7bbc95fbcec4",
+        "lineText": "          helpTextWarning={translate('BindAddressHelpTextWarning')}",
+        "path": "frontend/src/Settings/General/HostSettings.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "Blocklist": {
+    "callerContextSha256": "45e38775e9c89b8b2a9983b954d353067b0789f1cf459876151b869962c77898",
+    "callerReferenceCount": 58,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        <PageToolbar>",
+          "          <PageToolbarSection>",
+          "            <PageToolbarButton"
+        ],
+        "contextBefore": [
+          "",
+          "    return ("
+        ],
+        "fileGitBlob": "59cf1525676b62bb5efbe482258251477d0008a6",
+        "fileSha256": "a1df88b7d573a991657eb57346dd335fe19c7ffc1c43b59c59fcfa181248d71c",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 128,
+        "lineSha256": "9c1b90968058e158c2e31b2b989c3d0bd6866284b94bdfac3fb3dc8c14dbc03c",
+        "lineText": "      <PageContent title={translate('Blocklist')}>",
+        "path": "frontend/src/Activity/Blocklist/Blocklist.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "        to: '/activity/blocklist'",
+          "      },",
+          "      {"
+        ],
+        "contextBefore": [
+          "      },",
+          "      {"
+        ],
+        "fileGitBlob": "00701d5bfbf2d5e8deaaf5cb8fdad63e283d94d6",
+        "fileSha256": "234d988f9a6badfea3159d598fb9e4e1b0f05cb18d15bc41b33a99fff4210bf3",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 80,
+        "lineSha256": "d84a8591913125e37cc52def8dcce10021c9c255e88e5694e6710aa94ae64e0e",
+        "lineText": "        title: () => translate('Blocklist'),",
+        "path": "frontend/src/Components/Page/Sidebar/PageSidebar.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BlocklistAndSearch": {
+    "callerContextSha256": "2358476e9f0c36abcf80dc48bc91d5ffde80263c3991e60eb2fea779921baa63",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        hint: multipleSelected",
+          "          ? translate('BlocklistAndSearchMultipleHint')",
+          "          : translate('BlocklistAndSearchHint'),"
+        ],
+        "contextBefore": [
+          "      {",
+          "        key: 'blocklistAndSearch',"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 120,
+        "lineSha256": "79e2f24b88126fa2465440272ef700b28c9cad1784868003a2a8948f6955d907",
+        "lineText": "        value: translate('BlocklistAndSearch'),",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistAndSearchHint": {
+    "callerContextSha256": "3db3196cf5487b31537fb718a82def985d225a9ce5081320b46608e04546a514",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      },",
+          "      {",
+          "        key: 'blocklistOnly',"
+        ],
+        "contextBefore": [
+          "        hint: multipleSelected",
+          "          ? translate('BlocklistAndSearchMultipleHint')"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 123,
+        "lineSha256": "786ea16b4a6f3c2b80306c6c03ef3c91227b0d5858403e4fbc898401c9cb6dbc",
+        "lineText": "          : translate('BlocklistAndSearchHint'),",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistAndSearchMultipleHint": {
+    "callerContextSha256": "19a46470db27de0632043975487a3d4079c4a8fac32708014a626d1c930f7add",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          : translate('BlocklistAndSearchHint'),",
+          "      },",
+          "      {"
+        ],
+        "contextBefore": [
+          "        value: translate('BlocklistAndSearch'),",
+          "        hint: multipleSelected"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 122,
+        "lineSha256": "16b2cbc54bd22f3e77d414b053d66af8fea5dc983460f96c283c87530ec4b26c",
+        "lineText": "          ? translate('BlocklistAndSearchMultipleHint')",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistMultipleOnlyHint": {
+    "callerContextSha256": "2967a136c46c7137648376b2de5dcb742f41be903079a6673de81bedb717e34f",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          : translate('BlocklistOnlyHint'),",
+          "      },",
+          "    ];"
+        ],
+        "contextBefore": [
+          "        value: translate('BlocklistOnly'),",
+          "        hint: multipleSelected"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 129,
+        "lineSha256": "6d4990400b6eca70342d2701417616c5c8272ec846477fe245033b36a005427f",
+        "lineText": "          ? translate('BlocklistMultipleOnlyHint')",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistOnly": {
+    "callerContextSha256": "04239805ee49c43ef56be5459a0a24a843a114ac59e5bd0e06a43eb01fadebd6",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        hint: multipleSelected",
+          "          ? translate('BlocklistMultipleOnlyHint')",
+          "          : translate('BlocklistOnlyHint'),"
+        ],
+        "contextBefore": [
+          "      {",
+          "        key: 'blocklistOnly',"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 127,
+        "lineSha256": "642639e9924a2f19a8c8a198c71e3b99a557ae2ef000c9857eb7ddcb3515c110",
+        "lineText": "        value: translate('BlocklistOnly'),",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistOnlyHint": {
+    "callerContextSha256": "51fef0cc84bf954fd26ba4bb192905f7a196556ae1e43139e877edbfbc69016f",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      },",
+          "    ];",
+          "  }, [multipleSelected]);"
+        ],
+        "contextBefore": [
+          "        hint: multipleSelected",
+          "          ? translate('BlocklistMultipleOnlyHint')"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 130,
+        "lineSha256": "83444fc9d6f453c86c9a71e5436694a5d57958f5ff46c6ca12f5536757d5bc82",
+        "lineText": "          : translate('BlocklistOnlyHint'),",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistRelease": {
+    "callerContextSha256": "5119475ca342c9d9485ca98d27d11e037235e887399166ff04c7c31b832d0301",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "            </FormLabel>",
+          "",
+          "            <FormInputGroup"
+        ],
+        "contextBefore": [
+          "              {multipleSelected",
+          "                ? translate('BlocklistReleases')"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 204,
+        "lineSha256": "db0c56670c205923564ffd7618102d1792355a5b05900ec36bad2e7de5f75372",
+        "lineText": "                : translate('BlocklistRelease')}",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistReleaseHelpText": {
+    "callerContextSha256": "b678c1a2f4d9e8fae8f6eb2cad18848a78140bd16a6a38a094a35f6b8f4e12f8",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "              onChange={handleBlocklistMethodChange}",
+          "            />",
+          "          </FormGroup>"
+        ],
+        "contextBefore": [
+          "              value={blocklistMethod}",
+          "              values={blocklistMethodOptions}"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 212,
+        "lineSha256": "d7721c775948d8404767929d03da79784b446271143db050916ce96aca06f818",
+        "lineText": "              helpText={translate('BlocklistReleaseHelpText')}",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BlocklistReleases": {
+    "callerContextSha256": "0b69fd28b86e0e169baf44e6c72ae31b326fdfd69742985b71414572c251a678",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                : translate('BlocklistRelease')}",
+          "            </FormLabel>",
+          ""
+        ],
+        "contextBefore": [
+          "            <FormLabel>",
+          "              {multipleSelected"
+        ],
+        "fileGitBlob": "4348f818cc9c2644397571fde250bfa98bdf15e5",
+        "fileSha256": "469e82788bc3013f60128e1c579022f2f874b56e78d94e58bc96695d12d45b10",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 203,
+        "lineSha256": "849d57e68fc6c5b3ece8c83353117bd859f972c5b9953fbd98a20c79725e8d57",
+        "lineText": "                ? translate('BlocklistReleases')",
+        "path": "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "Book": {
+    "callerContextSha256": "480a2002afefcda60d3bac3608f0b6c4372b3990b4ccc3fa3c7ff12b00be38f1",
+    "callerReferenceCount": 2629,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "    isVisible: true",
+          "  },",
+          "  {"
+        ],
+        "contextBefore": [
+          "  {",
+          "    name: 'book',"
+        ],
+        "fileGitBlob": "5b46c8f7e59c5ebbaf8a063856ec88e1f39c534a",
+        "fileSha256": "c39adc8e8f0aa070111bbcfd669a515d6e321052b98385ad541cade1d346164c",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 22,
+        "lineSha256": "37e865ceca5630dfec4be24bc445c0b913ffdaf10caaf2798976188f19bd601b",
+        "lineText": "    label: () => translate('Book'),",
+        "path": "frontend/src/Author/History/AuthorHistoryTableContent.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "    isVisible: true",
+          "  },",
+          "  {"
+        ],
+        "contextBefore": [
+          "  {",
+          "    name: 'book',"
+        ],
+        "fileGitBlob": "8511fd92d79c2b36c414f145b5cb739921f823f5",
+        "fileSha256": "f1cf9bdf7b9d5f706d6957914cbe2eac7f80c03c3702d3e0b71ec194c1349512",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 21,
+        "lineSha256": "37e865ceca5630dfec4be24bc445c0b913ffdaf10caaf2798976188f19bd601b",
+        "lineText": "    label: () => translate('Book'),",
+        "path": "frontend/src/InteractiveImport/Edition/SelectEditionModalContent.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "    isVisible: true",
+          "  },",
+          "  {"
+        ],
+        "contextBefore": [
+          "  {",
+          "    name: 'book',"
+        ],
+        "fileGitBlob": "47926233a1a1cf8029430f3ab444ae6b05e8b4e7",
+        "fileSha256": "8c6be1bd61b823161740d2d9592e8bcad02543e4cef497cc0e58d6a33d4e9d7f",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 72,
+        "lineSha256": "37e865ceca5630dfec4be24bc445c0b913ffdaf10caaf2798976188f19bd601b",
+        "lineText": "    label: () => translate('Book'),",
+        "path": "frontend/src/InteractiveImport/Interactive/InteractiveImportModalContent.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "          </div>",
+          "          <div>",
+          "            {translate('ImportListHardcoverWantToReadExplainerPrefix')} <strong>{translate('ImportListHardcoverWantToReadName')}</strong>{translate('ImportListHardcoverWantToReadExplainerMid')} <strong>{translate('ImportListHardcoverOwnedName')}</strong> {translate('ImportListHardcoverWantToReadExplainerSuffix')}"
+        ],
+        "contextBefore": [
+          "        >",
+          "          <div>"
+        ],
+        "fileGitBlob": "fe25e5fbdaf4ec668b89d7dc773c9f17f34d94f7",
+        "fileSha256": "6320debe55959afd13effe97e17a8269d8e258a55dc13ebb569e197c2251d079",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 605,
+        "lineSha256": "d5d02e7595055adf1ed52f10c97fb7db9b48dfe8f9344503846ef879681150bf",
+        "lineText": "            {translate('ImportListHardcoverTrackingExplainerPrefix')} <strong>{translate('Book')}</strong> {translate('ImportListHardcoverTrackingExplainerMid')} <strong>{translate('Edition')}</strong> {translate('ImportListHardcoverTrackingExplainerSuffix')}",
+        "path": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "                    <div className={styles.groups}>",
+          "                      {",
+          "                        bookTokens.map(({ token, example }) => {"
+        ],
+        "contextBefore": [
+          "              book &&",
+          "                <div>"
+        ],
+        "fileGitBlob": "73a2306b1ff5113b0b0bb4e61bcfe3da780ea2e2",
+        "fileSha256": "f033dda58d816111f55db1799f777fa103c12a6f092f50ac3765482eae8f9df1",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 317,
+        "lineSha256": "22226d7478e2d4000cd65e2397b5f768c1a9c3ad218c2c4988ed1091586351a3",
+        "lineText": "                  <FieldSet legend={translate('Book')}>",
+        "path": "frontend/src/Settings/MediaManagement/Naming/NamingModal.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "          <span className={`${styles.legendItem} ${styles.green}`}>{translate('Series')}</span>",
+          "          <span className={`${styles.legendItem} ${styles.orange}`}>{translate('Narrator')}</span>",
+          "          <span className={`${styles.legendItem} ${styles.gray}`}>{translate('NamingTokenCategorySeparators')}</span>"
+        ],
+        "contextBefore": [
+          "        <div className={styles.colorLegend}>",
+          "          <span className={`${styles.legendItem} ${styles.blue}`}>{translate('Author')}</span>"
+        ],
+        "fileGitBlob": "520ec913941d9147529fdcfe02f97afd07040a6c",
+        "fileSha256": "8d2edb0e521647481d33e850feefcaa004d1962ec0a8f55d71aedbdb23731361",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 283,
+        "lineSha256": "cd51a158c907e0fce26906b2476b22c953ed43ba64eaa833a3f3a283d7a22024",
+        "lineText": "          <span className={`${styles.legendItem} ${styles.purple}`}>{translate('Book')}</span>",
+        "path": "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/NamingCanvas.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "      isSortable: true,",
+          "      isVisible: true,",
+          "      isModifiable: false"
+        ],
+        "contextBefore": [
+          "    {",
+          "      name: 'title',"
+        ],
+        "fileGitBlob": "76b0a0de66aaba7007fd6569eb7513c5c87a4cb2",
+        "fileSha256": "8630049a37b562a3c7730ed2abef42b082ce94455e725ff430e10a86031e61a5",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 79,
+        "lineSha256": "e83626ffe04de808c9bca5dfebbae1b71f1962b223f75f6432ec61af64217428",
+        "lineText": "      label: () => translate('Book'),",
+        "path": "frontend/src/Store/Actions/bookIndexActions.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "      isSortable: true,",
+          "      isVisible: true",
+          "    },"
+        ],
+        "contextBefore": [
+          "    {",
+          "      name: 'books.title',"
+        ],
+        "fileGitBlob": "e81b22da2f4e9303cc5e540fae451e46f316417f",
+        "fileSha256": "c4a4957e589d5c3aff2c952abfbc9ca493df2b46bf2e4a7c75bd1bfa58bb3070",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 46,
+        "lineSha256": "e83626ffe04de808c9bca5dfebbae1b71f1962b223f75f6432ec61af64217428",
+        "lineText": "      label: () => translate('Book'),",
+        "path": "frontend/src/Store/Actions/historyActions.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "        isSortable: true,",
+          "        isVisible: true",
+          "      },"
+        ],
+        "contextBefore": [
+          "      {",
+          "        name: 'books.title',"
+        ],
+        "fileGitBlob": "b74425382450eee408b6dee8d0fc465739eaf8e0",
+        "fileSha256": "1dd394d19b38ea9f8028d140862917b29fff67bf6d848738afaa774c0c0c7478",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 41,
+        "lineSha256": "0badc396dde4381896977eb37fd1eed2c69d5dd7f4008f6af932afd26c70d8cb",
+        "lineText": "        label: () => translate('Book'),",
+        "path": "frontend/src/Store/Actions/wantedActions.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "        isSortable: true,",
+          "        isVisible: true",
+          "      },"
+        ],
+        "contextBefore": [
+          "      {",
+          "        name: 'books.title',"
+        ],
+        "fileGitBlob": "b74425382450eee408b6dee8d0fc465739eaf8e0",
+        "fileSha256": "1dd394d19b38ea9f8028d140862917b29fff67bf6d848738afaa774c0c0c7478",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 123,
+        "lineSha256": "0badc396dde4381896977eb37fd1eed2c69d5dd7f4008f6af932afd26c70d8cb",
+        "lineText": "        label: () => translate('Book'),",
+        "path": "frontend/src/Store/Actions/wantedActions.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 10
+  },
+  "BookAvailableButMissing": {
+    "callerContextSha256": "728ebf5ba345ec32104195dce917295528a991d8cffdce8a1837001ff4ce3825",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          kind={kinds.DANGER}",
+          "        >",
+          "          {translate('Missing')}"
+        ],
+        "contextBefore": [
+          "      <div className={styles.center}>",
+          "        <Label"
+        ],
+        "fileGitBlob": "08918d559424ca6426403baddcaf75cf20db4a62",
+        "fileSha256": "528f8e1078a9cf00959be53808fa651adf53ab90559ce10b81739c07dd7fd0f1",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 91,
+        "lineSha256": "5393a6345f85a0ecb1de8200e5ec9a9bd5fb910bb409ad762bdbf04c794c2688",
+        "lineText": "          title={translate('BookAvailableButMissing')}",
+        "path": "frontend/src/Author/Details/BookStatus.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BookCount": {
+    "callerContextSha256": "13d08d9efe10e3fd265f9962f2fe849fc0719b533462079c08fe7b5878abaeff",
+    "callerReferenceCount": 50,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      iconName: icons.BOOK,",
+          "      label: books",
+          "    };"
+        ],
+        "contextBefore": [
+          "",
+          "    return {"
+        ],
+        "fileGitBlob": "b086e6065aa0e6460a5576d185bcfd8be4a9956a",
+        "fileSha256": "d033e745d52b90167e984501bf5ac32775802340f69244bdf593af3386ad5f2b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 146,
+        "lineSha256": "ab19fd5e145c9aee23d678bde2f14981dabb782c9e0dfd11f456611a75fc1377",
+        "lineText": "      title: translate('BookCount'),",
+        "path": "frontend/src/Author/Index/Overview/AuthorIndexOverviewInfo.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "      type: filterBuilderTypes.NUMBER",
+          "    },",
+          "    {"
+        ],
+        "contextBefore": [
+          "    {",
+          "      name: 'bookCount',"
+        ],
+        "fileGitBlob": "57b0e2c119c6ad0d8d9e59341d55596776b36012",
+        "fileSha256": "2690d62c799cda33c7d79aaf0f9921972b85b85e8669678f0b3a2f84e5bad062",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 272,
+        "lineSha256": "cbf0b5dbb548ce4b6adad272704d636a0148ae07e68edd0ff0d96740ea4a611f",
+        "lineText": "      label: () => translate('BookCount'),",
+        "path": "frontend/src/Store/Actions/authorIndexActions.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BookEditor": {
+    "callerContextSha256": "156ec9e5ff7318d3d24402676d18f6252ffd8fe33689ba068e64adf4ff7a779c",
+    "callerReferenceCount": 2,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                  iconName={icons.EDIT}",
+          "                  onPress={this.onBookEditorTogglePress}",
+          "                />"
+        ],
+        "contextBefore": [
+          "                /> :",
+          "                <PageToolbarButton"
+        ],
+        "fileGitBlob": "c688b42eceb4cb611dd4f7e4db8c98eac40644c0",
+        "fileSha256": "a99e6c28fe74c5ac75132f88171d75c04b621ad849188f04531e0c3ee1b3f5fa",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 405,
+        "lineSha256": "71a96a222b53dede2d9c98e0b1fea8a8244ea56c0e3b5141a257cbad8835a39e",
+        "lineText": "                  label={translate('BookEditor')}",
+        "path": "frontend/src/Author/Details/AuthorDetails.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "                  iconName={icons.EDIT}",
+          "                  isDisabled={hasNoAuthor}",
+          "                  onPress={this.onEditorTogglePress}"
+        ],
+        "contextBefore": [
+          "                /> :",
+          "                <PageToolbarButton"
+        ],
+        "fileGitBlob": "61119de61c7141a171e7a910bdbce27c0b7459a2",
+        "fileSha256": "6870b6072d495429d8b24844e2f5c306884ae481413367d0c45e0e209d35a39b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 873,
+        "lineSha256": "71a96a222b53dede2d9c98e0b1fea8a8244ea56c0e3b5141a257cbad8835a39e",
+        "lineText": "                  label={translate('BookEditor')}",
+        "path": "frontend/src/Book/Index/BookIndex.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BookFileCount": {
+    "callerContextSha256": "40150068ca5f02431b9c5c97eaf1bb0aa9c4a2990e490ca7c59a67a7cb4d4c8c",
+    "callerReferenceCount": 32,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      isSortable: true,",
+          "      isVisible: true",
+          "    },"
+        ],
+        "contextBefore": [
+          "    {",
+          "      name: 'bookFileCount',"
+        ],
+        "fileGitBlob": "76b0a0de66aaba7007fd6569eb7513c5c87a4cb2",
+        "fileSha256": "8630049a37b562a3c7730ed2abef42b082ce94455e725ff430e10a86031e61a5",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 125,
+        "lineSha256": "daeadf75043976fe00ec2d6dcfac9e6d9745310b57ae1dce0568673ed75194c8",
+        "lineText": "      label: () => translate('BookFileCount'),",
+        "path": "frontend/src/Store/Actions/bookIndexActions.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "      type: filterBuilderTypes.NUMBER",
+          "    },",
+          "    {"
+        ],
+        "contextBefore": [
+          "    {",
+          "      name: 'bookFileCount',"
+        ],
+        "fileGitBlob": "76b0a0de66aaba7007fd6569eb7513c5c87a4cb2",
+        "fileSha256": "8630049a37b562a3c7730ed2abef42b082ce94455e725ff430e10a86031e61a5",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 269,
+        "lineSha256": "daeadf75043976fe00ec2d6dcfac9e6d9745310b57ae1dce0568673ed75194c8",
+        "lineText": "      label: () => translate('BookFileCount'),",
+        "path": "frontend/src/Store/Actions/bookIndexActions.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BookFilesCountMessage": {
+    "callerContextSha256": "b97d6120e5201b6bc0c423300865e30ec6b464201cb46665fe92996dd2ef5dea",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "",
+          "    if (bookFileCount === 1) {",
+          "      bookFilesCountMessage = translate('BookFilesCountSingularMessage');"
+        ],
+        "contextBefore": [
+          "    const marqueeWidth = titleWidth - (isSmallScreen ? 85 : 160);",
+          ""
+        ],
+        "fileGitBlob": "8a551b6ab07fc563d26adb105a95da7c0a80e807",
+        "fileSha256": "105f89782418be982723be7e173c52a92e231f1ecda4d33f0ddd1f39d768d2c1",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 126,
+        "lineSha256": "636ffc912f45f4a9ca64270302d7d1afe9f0ac83b6d00186fce2078bed6a9410",
+        "lineText": "    let bookFilesCountMessage = translate('BookFilesCountMessage');",
+        "path": "frontend/src/Author/Details/AuthorDetailsHeader.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "BookFilesTotalingSize": {
+    "callerContextSha256": "d9804e399df04830fd1d759b592df31fd2904864e65db809dd390cc5f26ea58a",
+    "callerReferenceCount": 2,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                }",
+          "              </div>",
+          "          }"
+        ],
+        "contextBefore": [
+          "                {",
+          "                  !!bookFileCount &&"
+        ],
+        "fileGitBlob": "92625abe083aeacd46f685086ac8f50fea4c4267",
+        "fileSha256": "9f888699a78419dae09d7f23f8d975b7c33e1a449a81821671cf259892fe25dc",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 179,
+        "lineSha256": "c325fc0bbbb2985e64728c0b17d5bf914cced1f6a7e2201ccaf3ce0ac2285c90",
+        "lineText": "                    <div>{translate('BookFilesTotalingSize', { count: bookFileCount, size: formatBytes(sizeOnDisk) })}</div>",
+        "path": "frontend/src/Author/Delete/DeleteAuthorModalContent.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "                }",
+          "",
+          "                {"
+        ],
+        "contextBefore": [
+          "                {",
+          "                  !!totalBookFileCount &&"
+        ],
+        "fileGitBlob": "207980d5f7806a5ad7d1d4b6c49297a0b232d3ed",
+        "fileSha256": "8b7c022a6045b68e267129f203d7bb4dba91c49f61936a6458510fc6f64bf6d9",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 245,
+        "lineSha256": "ba8d47fc161db22b773e817116b6a78450ed417d4fc4fc7e4deb3c7f8e3f28ba",
+        "lineText": "                    <div>{translate('BookFilesTotalingSize', { count: totalBookFileCount, size: formatBytes(totalSizeOnDisk) })}</div>",
+        "path": "frontend/src/Book/Delete/DeleteBookModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "BookIndex": {
+    "callerContextSha256": "b68926853697b2b7af1705f62c56827aa7dabcccc0807ccce594b41a5cd281af",
+    "callerReferenceCount": 7,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                  iconName={icons.AUTHOR_CONTINUING}",
+          "                  isDisabled={hasNoAuthor}",
+          "                  onPress={this.onEditorTogglePress}"
+        ],
+        "contextBefore": [
+          "              isEditorActive ?",
+          "                <PageToolbarButton"
+        ],
+        "fileGitBlob": "61119de61c7141a171e7a910bdbce27c0b7459a2",
+        "fileSha256": "6870b6072d495429d8b24844e2f5c306884ae481413367d0c45e0e209d35a39b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 867,
+        "lineSha256": "7deadce1030001a7c431077ce0e27fa3433e0f4a3367b298812b819ca00323ed",
+        "lineText": "                  label={translate('BookIndex')}",
+        "path": "frontend/src/Book/Index/BookIndex.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "DownloadEncryptedBackup": {
+    "callerContextSha256": "7db0b23898a414acff3d68a467c09f6bdced04b0489afd738f992cce5a31ada9",
+    "callerReferenceCount": 2,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "              iconName={icons.BACKUP}",
+          "              onPress={this.onEncryptedBackupPress}",
+          "            />"
+        ],
+        "contextBefore": [
+          "",
+          "            <PageToolbarButton"
+        ],
+        "fileGitBlob": "fd27c56a69611125224d86b3679502bc8f9a133e",
+        "fileSha256": "46334dcec064df41bcdd2c87a348a400a0ce099ab78c89b6b3992d42a2bbd651",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 115,
+        "lineSha256": "05153429de1be632eacb8c538695beb1007af42ffa8145b0cd3b0b7c7b264454",
+        "lineText": "              label={translate('DownloadEncryptedBackup')}",
+        "path": "frontend/src/System/Backup/Backups.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "          </SpinnerButton>",
+          "        </ModalFooter>",
+          "      </ModalContent>"
+        ],
+        "contextBefore": [
+          "            onPress={this.onExportPress}",
+          "          >"
+        ],
+        "fileGitBlob": "01f8c4a0d1c8d213515483f6c38cc7aff2d268a1",
+        "fileSha256": "9cc406e7b3b76685a2ea09b6e085428cca0e25b1e5bc553734e1cee2a373a977",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 134,
+        "lineSha256": "1321be13a0ce1a340cfd52cc573d0a2f046bbbc29b015697beb7532bc5d4c8c2",
+        "lineText": "            {translate('DownloadEncryptedBackup')}",
+        "path": "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "EncryptedBackupPassphraseHelpText": {
+    "callerContextSha256": "a1f0f1784ae3f91de98f3eef280e1d4382296b6e88babefe776e49e8d1256754",
+    "callerReferenceCount": 2,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      return;",
+          "    }",
+          ""
+        ],
+        "contextBefore": [
+          "",
+          "    if (!isValidPassphrase(passphrase)) {"
+        ],
+        "fileGitBlob": "01f8c4a0d1c8d213515483f6c38cc7aff2d268a1",
+        "fileSha256": "9cc406e7b3b76685a2ea09b6e085428cca0e25b1e5bc553734e1cee2a373a977",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 56,
+        "lineSha256": "ec3b2325b10477ff31e5d5a83e8db9e921f9bf2ea258f287fdd2ba7ec0214800",
+        "lineText": "      this.setState({ error: translate('EncryptedBackupPassphraseHelpText') });",
+        "path": "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "          </Alert>",
+          "",
+          "          <FormGroup>"
+        ],
+        "contextBefore": [
+          "        <ModalBody>",
+          "          <Alert kind={kinds.INFO}>"
+        ],
+        "fileGitBlob": "01f8c4a0d1c8d213515483f6c38cc7aff2d268a1",
+        "fileSha256": "9cc406e7b3b76685a2ea09b6e085428cca0e25b1e5bc553734e1cee2a373a977",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 90,
+        "lineSha256": "55e80517d52ca19d4baf31009dc442b1cb110a8368afa8592e3f4ad4a8f9beb2",
+        "lineText": "            {translate('EncryptedBackupPassphraseHelpText')}",
+        "path": "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "EncryptedBackupPassphraseMismatch": {
+    "callerContextSha256": "60e5423ecec98638eb64e6245b1d6ac081b718988572ee8584416d0722e5fd37",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      return;",
+          "    }",
+          ""
+        ],
+        "contextBefore": [
+          "",
+          "    if (passphrase !== confirmation) {"
+        ],
+        "fileGitBlob": "01f8c4a0d1c8d213515483f6c38cc7aff2d268a1",
+        "fileSha256": "9cc406e7b3b76685a2ea09b6e085428cca0e25b1e5bc553734e1cee2a373a977",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 61,
+        "lineSha256": "7900dfd98a260c7ee6eddad2fab0a43175f3b93786feb0283e16779da0bacab3",
+        "lineText": "      this.setState({ error: translate('EncryptedBackupPassphraseMismatch') });",
+        "path": "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "EncryptedBackupRestoreHelpText": {
+    "callerContextSha256": "a1ecc5c1abd8684b92e52aac59ee804d1cdf4c3e12ea1b334091d5c12e3ef685",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "                </Alert>",
+          "",
+          "                <FormGroup>"
+        ],
+        "contextBefore": [
+          "              <>",
+          "                <Alert kind={kinds.INFO}>"
+        ],
+        "fileGitBlob": "69ef61d24bf8290c4ac80afeedbbb55880e9ca8f",
+        "fileSha256": "ccd627c5de3bd071dad86a5c7f21f69aeab062ff554c0fa638ddeac36c557e18",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 204,
+        "lineSha256": "9055f84b15fbaee22604d60b131da2bd82a5587280938a705ccbe6e084a21ba8",
+        "lineText": "                  {translate('EncryptedBackupRestoreHelpText')}",
+        "path": "frontend/src/System/Backup/RestoreBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "ExportEncryptedBackup": {
+    "callerContextSha256": "a4f3a76bfc33fa3f4940943f1c80b73bc26151444f8b9deeea8bf28640f28bad",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "",
+          "        <ModalBody>",
+          "          <Alert kind={kinds.INFO}>"
+        ],
+        "contextBefore": [
+          "    return (",
+          "      <ModalContent onModalClose={this.onModalClose}>"
+        ],
+        "fileGitBlob": "01f8c4a0d1c8d213515483f6c38cc7aff2d268a1",
+        "fileSha256": "9cc406e7b3b76685a2ea09b6e085428cca0e25b1e5bc553734e1cee2a373a977",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 86,
+        "lineSha256": "6e8157e559c272864ec112a4d7feb8be2d4469c9dde92e1a199d5473a47069b9",
+        "lineText": "        <ModalHeader>{translate('ExportEncryptedBackup')}</ModalHeader>",
+        "path": "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "UnableToQueueAuthorRefresh": {
+    "callerContextSha256": "0c3abebda8eb4d12690249c87eaeb515e6006a579d7e2d8e38438cc8bd9e56d9",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        });",
+          "      })",
+          "      .then(() => {"
+        ],
+        "contextBefore": [
+          "        this.setState({",
+          "          isStartingRefresh: false,"
+        ],
+        "fileGitBlob": "676b1907175e5312b2ce2e7c84233dde580643c3",
+        "fileSha256": "304b85e732ca048e9aa49c191f3bbeed7861a8aeba2588a1e8647a7ad2ac66c5",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 345,
+        "lineSha256": "a598c2514b5972bec01c4a5460971ddb47c80c6ec4714206232c3365236bc38c",
+        "lineText": "          refreshError: getErrorMessage(error, translate('UnableToQueueAuthorRefresh'))",
+        "path": "frontend/src/Author/Index/AuthorIndex.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "UnableToQueueAuthorRootFolderBackfill": {
+    "callerContextSha256": "f003febdf4c1e867ff33ee72d3b4632240167c7687b49d12b7d3fcb29cb0ebc9",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      });",
+          "    });",
+          "  };"
+        ],
+        "contextBefore": [
+          "      this.setState({",
+          "        isSubmittingAuthorRootBackfill: false,"
+        ],
+        "fileGitBlob": "ba3b3a4955948e19d1cb657fa386a37cd1d27670",
+        "fileSha256": "b7180ae3ac1ad873d1db7b0cc9d33b4d2b42af3aa686795a12f6df41d4783aab",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 258,
+        "lineSha256": "bed4f62ce62e4d64f5fa57724226442894d9874622347d7b32751e132b9fdca6",
+        "lineText": "        backfillCommandError: translate('UnableToQueueAuthorRootFolderBackfill')",
+        "path": "frontend/src/Settings/MediaManagement/RootFolder/RootFolders.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "UnableToStartBookSearch": {
+    "callerContextSha256": "691e8c6c2c206bb875fdb30cb89131ef1aaf7c95202b69ede8ab851427460bb9",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "          searchBookIdsErrorKind: kinds.DANGER,",
+          "          searchBookIdsErrorHelp: translate('RetryToStartBookSearch')",
+          "        });"
+        ],
+        "contextBefore": [
+          "          isResolvingSearchBookIds: false,",
+          "          isSubmittingBookSearch: false,"
+        ],
+        "fileGitBlob": "61119de61c7141a171e7a910bdbce27c0b7459a2",
+        "fileSha256": "6870b6072d495429d8b24844e2f5c306884ae481413367d0c45e0e209d35a39b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 708,
+        "lineSha256": "c906718e7d021a72aaa4cdddd760fb29790a3b3e5d703cc4ba687a628b9d4d5e",
+        "lineText": "          searchBookIdsError: getErrorMessage(error, translate('UnableToStartBookSearch')),",
+        "path": "frontend/src/Book/Index/BookIndex.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "UnableToStartCommand": {
+    "callerContextSha256": "9cc8da429b2bd67b9d6cf9f2f3326a46f8869810580b68fa00c836f2684b7dfd",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        type: messageTypes.ERROR,",
+          "        hideAfter: 8",
+          "      }));"
+        ],
+        "contextBefore": [
+          "        id: 'command-start-error',",
+          "        name: 'CommandStartFailed',"
+        ],
+        "fileGitBlob": "e4515b429f3348c3a83498486ce72423d65ef640",
+        "fileSha256": "b8617ce17ac784c09e9fc13fc35ac8c01c04aa830b164e3d066ec0a5ab315f2f",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 192,
+        "lineSha256": "5e288ccace291be46f5b3351cede895e87cab1ec5d269639b4e11cf712ec84b6",
+        "lineText": "        message: translate('UnableToStartCommand'),",
+        "path": "frontend/src/Store/Actions/commandActions.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "UnableToStartLibraryUpdate": {
+    "callerContextSha256": "797e04c364d49d89a7bbfaf7195dbd089e79d6edc9af4e7d839f07ca09794b39",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        });",
+          "      });",
+          "  };"
+        ],
+        "contextBefore": [
+          "        this.setState({",
+          "          isStartingRefresh: false,"
+        ],
+        "fileGitBlob": "61119de61c7141a171e7a910bdbce27c0b7459a2",
+        "fileSha256": "6870b6072d495429d8b24844e2f5c306884ae481413367d0c45e0e209d35a39b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 529,
+        "lineSha256": "629bc86cd29349620d48a99666eba38d56752c977df7ade6b66bc569c30bce52",
+        "lineText": "          refreshError: getErrorMessage(error, translate('UnableToStartLibraryUpdate'))",
+        "path": "frontend/src/Book/Index/BookIndex.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  },
+  "UnableToStartRssSync": {
+    "callerContextSha256": "adf10aae90bb486f0b7cf3263881dd69f98756d05f16c909a0f0b7907496a3b6",
+    "callerReferenceCount": 2,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "        });",
+          "      });",
+          "  };"
+        ],
+        "contextBefore": [
+          "        this.setState({",
+          "          isStartingRssSync: false,"
+        ],
+        "fileGitBlob": "676b1907175e5312b2ce2e7c84233dde580643c3",
+        "fileSha256": "304b85e732ca048e9aa49c191f3bbeed7861a8aeba2588a1e8647a7ad2ac66c5",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 387,
+        "lineSha256": "3a3ec2844c6da027a86cc6d3dc7882dbb17782829ecfbedc08ea445c5d944578",
+        "lineText": "          rssSyncError: getErrorMessage(error, translate('UnableToStartRssSync'))",
+        "path": "frontend/src/Author/Index/AuthorIndex.js",
+        "referenceKind": "literal-translate-call"
+      },
+      {
+        "contextAfter": [
+          "        });",
+          "      });",
+          "  };"
+        ],
+        "contextBefore": [
+          "        this.setState({",
+          "          isStartingRssSync: false,"
+        ],
+        "fileGitBlob": "61119de61c7141a171e7a910bdbce27c0b7459a2",
+        "fileSha256": "6870b6072d495429d8b24844e2f5c306884ae481413367d0c45e0e209d35a39b",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 562,
+        "lineSha256": "3a3ec2844c6da027a86cc6d3dc7882dbb17782829ecfbedc08ea445c5d944578",
+        "lineText": "          rssSyncError: getErrorMessage(error, translate('UnableToStartRssSync'))",
+        "path": "frontend/src/Book/Index/BookIndex.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 2
+  },
+  "ui.backup.encryptedDownloadFailed": {
+    "callerContextSha256": "ab34aa7d13c08a5f254915dafa6880d1b993354f4d4806ef2c555a6bbf856ada",
+    "callerReferenceCount": 1,
+    "directRuntimeTranslationCallsites": [
+      {
+        "contextAfter": [
+          "      .then(() => {",
+          "        this.setState({ isExporting: false }, this.onModalClose);",
+          "      })"
+        ],
+        "contextBefore": [
+          "    this.setState({ isExporting: true, error: null });",
+          ""
+        ],
+        "fileGitBlob": "01f8c4a0d1c8d213515483f6c38cc7aff2d268a1",
+        "fileSha256": "9cc406e7b3b76685a2ea09b6e085428cca0e25b1e5bc553734e1cee2a373a977",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "line": 67,
+        "lineSha256": "d0340290fbf4cafb750756eb99e5c6fd35a4f2cd2ab034df39847dc060035eb1",
+        "lineText": "    downloadEncryptedBackup(passphrase, translate('ui.backup.encryptedDownloadFailed'))",
+        "path": "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "referenceKind": "literal-translate-call"
+      }
+    ],
+    "literalCallCount": 1
+  }
+}

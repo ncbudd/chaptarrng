@@ -1,0 +1,86 @@
+{
+  "acceptedPrimaryCandidateRows": 79,
+  "additionalProposals": 0,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerReferencesReusedAndPinned": true,
+  "candidateRows": 79,
+  "candidateVerdicts": {
+    "accept-primary-correction": 69,
+    "accept-primary-refinement": 10
+  },
+  "confidence": "moderate machine-assisted static language review",
+  "head": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "holdRows": 12,
+  "holdVerdicts": 12,
+  "localeVerdicts": {
+    "ar": {
+      "accept-primary-correction": 2,
+      "hold": 1
+    },
+    "de": {
+      "accept-primary-correction": 3,
+      "hold": 1
+    },
+    "es": {
+      "accept-primary-correction": 5,
+      "hold": 1
+    },
+    "fr": {
+      "accept-primary-correction": 5,
+      "hold": 1
+    },
+    "hi": {
+      "accept-primary-correction": 8,
+      "accept-primary-refinement": 1,
+      "hold": 1
+    },
+    "id": {
+      "accept-primary-correction": 6,
+      "accept-primary-refinement": 3,
+      "hold": 1
+    },
+    "ja": {
+      "accept-primary-correction": 10,
+      "hold": 1
+    },
+    "ko": {
+      "accept-primary-correction": 8,
+      "accept-primary-refinement": 2,
+      "hold": 1
+    },
+    "pt-BR": {
+      "accept-primary-correction": 5,
+      "hold": 1
+    },
+    "vi": {
+      "accept-primary-correction": 3,
+      "accept-primary-refinement": 1,
+      "hold": 1
+    },
+    "zh-Hans": {
+      "accept-primary-correction": 7,
+      "accept-primary-refinement": 2,
+      "hold": 1
+    },
+    "zh-Hant": {
+      "accept-primary-correction": 7,
+      "accept-primary-refinement": 1,
+      "hold": 1
+    }
+  },
+  "markupMismatchRows": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "placeholderMismatchRows": 0,
+  "primaryPacketRootSha256": "932ea4d6944a18e6e06233cfc502bab56e28b9e57db95047bcd3a9246fb6da32",
+  "primaryReviewCellsSha256": "24adb31c97415543c38c8d6df9c4c961a2ebf06b8e45d11d73a637f5a8d76d3a",
+  "protectedLiteralFailureRows": 0,
+  "reviewedAtUtc": "2026-11-02T19:54:47.861765+00:00",
+  "revisions": 0,
+  "rows": 91,
+  "schemaVersion": 1,
+  "scope": "All 79 primary correction/refinement candidates plus all 12 holds; the 509 accept-current cells remain in the primary ledger and are not re-audited here.",
+  "sourceCallerMismatch": "W884 has caller backslash restriction missing from English source; all 12 cells held.",
+  "title": "ChaptarrNG PR #190 W850-W899 language audit addendum",
+  "tree": "e682581e3c577b62215658c374b15a9d3f8f8bd0"
+}

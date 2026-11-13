@@ -1,0 +1,37 @@
+{
+  "sourceId": "server.message.md764ed5e74b4",
+  "sourceText": "{value0} conversion was cancelled.",
+  "sourceSha256": "d764ed5e74b487042e8b1b9584e9e3bf5728ac982328afddc95651da24621b64",
+  "sourceFingerprint": "6e19b762533b543ae21ef80b06f5285d0fa859a2ee81f4e9060d30c0aa0fdb17",
+  "sourceRegistryPath": "docs/localization/server-message-sources.json",
+  "sourceRegistryBaseSha256": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825",
+  "sourceRegistryBaseGitBlob": "88e18b12684ca7ece5b4680094188d2ff644d663",
+  "sourceRegistryAfterSha256": "070ad52cfc57a1f9b135c2ca19b79a2119676f809b626d53af15a9026b5bf6f1",
+  "sourceRegistryRecordIndex": 520,
+  "sourceRegistryProtectedLiteralsBefore": [
+    "M4B"
+  ],
+  "sourceRegistryProtectedLiteralsAfter": [],
+  "callerEvidence": {
+    "path": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+    "blob": "b6f56b1660fa1d70f54bc131fb4b1d26f0896aff",
+    "fileSha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47",
+    "callers": [
+      {
+        "line": 195,
+        "lineText": "                    MarkCancelled(job, $\"{job.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+        "trimmedLineUtf8Sha256": "8c6b4ea5b8dc186855cb06ec101976b7ee8c90364cce42f5d2b4f594034d6806",
+        "registryLineSha256": "8c6b4ea5b8dc186855cb06ec101976b7ee8c90364cce42f5d2b4f594034d6806",
+        "matchesRegistry": true
+      },
+      {
+        "line": 603,
+        "lineText": "            MarkCancelled(job, $\"{request.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+        "trimmedLineUtf8Sha256": "e60a2173817aeea3829f7590963e82994d2bc0e6ecce3ca48429c02a442bef37",
+        "registryLineSha256": "e60a2173817aeea3829f7590963e82994d2bc0e6ecce3ca48429c02a442bef37",
+        "matchesRegistry": true
+      }
+    ]
+  },
+  "runtimeValueSource": "TargetQualityName with null fallback M4B is passed through {value0}; the catalog placeholder preserves either runtime value."
+}

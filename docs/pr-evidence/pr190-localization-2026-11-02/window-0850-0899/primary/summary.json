@@ -1,0 +1,126 @@
+{
+  "callerSourceMismatchRows": [
+    884
+  ],
+  "candidateCount": 79,
+  "correctionCandidates": 69,
+  "dispositionCounts": {
+    "accept-current": 509,
+    "hold": 12,
+    "propose-correction": 69,
+    "propose-refinement": 10
+  },
+  "exactHead": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "exactTree": "e682581e3c577b62215658c374b15a9d3f8f8bd0",
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "holdCount": 12,
+  "localeCells": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "machineAssistedConfidence": "moderate",
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 47,
+      "hold": 1,
+      "propose-correction": 2
+    },
+    "de": {
+      "accept-current": 46,
+      "hold": 1,
+      "propose-correction": 3
+    },
+    "es": {
+      "accept-current": 44,
+      "hold": 1,
+      "propose-correction": 5
+    },
+    "fr": {
+      "accept-current": 44,
+      "hold": 1,
+      "propose-correction": 5
+    },
+    "hi": {
+      "accept-current": 40,
+      "hold": 1,
+      "propose-correction": 8,
+      "propose-refinement": 1
+    },
+    "id": {
+      "accept-current": 40,
+      "hold": 1,
+      "propose-correction": 6,
+      "propose-refinement": 3
+    },
+    "ja": {
+      "accept-current": 39,
+      "hold": 1,
+      "propose-correction": 10
+    },
+    "ko": {
+      "accept-current": 39,
+      "hold": 1,
+      "propose-correction": 8,
+      "propose-refinement": 2
+    },
+    "pt-BR": {
+      "accept-current": 44,
+      "hold": 1,
+      "propose-correction": 5
+    },
+    "vi": {
+      "accept-current": 45,
+      "hold": 1,
+      "propose-correction": 3,
+      "propose-refinement": 1
+    },
+    "zh-Hans": {
+      "accept-current": 40,
+      "hold": 1,
+      "propose-correction": 7,
+      "propose-refinement": 2
+    },
+    "zh-Hant": {
+      "accept-current": 41,
+      "hold": 1,
+      "propose-correction": 7,
+      "propose-refinement": 1
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "priorCoverageThrough849": true,
+  "priorDispositionRows": 10200,
+  "priorOverlapCount": 0,
+  "protectedLiteralFailureCells": 0,
+  "pullRequest": 190,
+  "refinementCandidates": 10,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryModified": false,
+  "schemaVersion": 1,
+  "sourceCallerGaps": [],
+  "sourceCallerReferences": 74,
+  "sourceCallerRows": 50,
+  "sourceIds": 50,
+  "sourcePositions": [
+    850,
+    899
+  ],
+  "testsBuildsCiBrowserRun": false,
+  "w849BoundaryMatches": 12,
+  "window": "W850-W899"
+}

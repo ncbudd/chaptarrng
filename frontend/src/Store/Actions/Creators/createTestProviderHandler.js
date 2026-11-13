@@ -58,7 +58,9 @@ function createTestProviderHandler(section, url) {
         isTesting: false,
         saveError: null,
         // If backend returned success messages, surface them for display
-        successMessages: (data && data.successMessages) ? data.successMessages : []
+        successMessages: Array.isArray(data?.successMessageDescriptors) ?
+          data.successMessageDescriptors :
+          (data && data.successMessages) ? data.successMessages : []
       }));
     });
 

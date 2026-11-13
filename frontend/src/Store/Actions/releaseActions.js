@@ -383,7 +383,12 @@ export const actionHandlers = handleThunks({
       isGrabbing: true,
       existingTorrentAvailable: false,
       existingTorrentMessage: null,
-      grabError: null
+      existingTorrentMessageId: null,
+      existingTorrentMessageParameters: null,
+      grabError: null,
+      grabErrorMessageId: null,
+      grabErrorMessageParameters: null,
+      grabErrorIsLocalized: false
     }));
 
     const promise = createAjaxRequest({
@@ -406,7 +411,9 @@ export const actionHandlers = handleThunks({
 
     promise.fail((xhr) => {
       const response = xhr.responseJSON || {};
-      const grabError = response.message || translate('ui.release.queueFailed');
+      const responseMessage = typeof response === 'string' ? response : response.message;
+      const hasMessage = typeof responseMessage === 'string' && responseMessage.length > 0;
+      const grabError = hasMessage ? responseMessage : translate('ui.release.queueFailed');
 
       dispatch(updateRelease({
         guid,
@@ -414,8 +421,13 @@ export const actionHandlers = handleThunks({
         isGrabbing: false,
         isGrabbed: false,
         grabError,
+        grabErrorMessageId: typeof response === 'object' ? response.messageId || null : null,
+        grabErrorMessageParameters: typeof response === 'object' ? response.messageParameters || null : null,
+        grabErrorIsLocalized: !hasMessage && !(typeof response === 'object' && response.messageId),
         existingTorrentAvailable: response.code === 'existingTorrent',
-        existingTorrentMessage: response.code === 'existingTorrent' ? grabError : null
+        existingTorrentMessage: response.code === 'existingTorrent' ? responseMessage : null,
+        existingTorrentMessageId: response.code === 'existingTorrent' ? response.messageId || null : null,
+        existingTorrentMessageParameters: response.code === 'existingTorrent' ? response.messageParameters || null : null
       }));
     });
   }

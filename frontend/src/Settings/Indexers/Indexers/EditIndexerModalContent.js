@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Alert from 'Components/Alert';
+import LocalizedServerMessage from 'Components/LocalizedServerMessage';
 import Form from 'Components/Form/Form';
 import FormGroup from 'Components/Form/FormGroup';
 import FormInputGroup from 'Components/Form/FormInputGroup';
@@ -17,7 +18,6 @@ import { inputTypes, kinds } from 'Helpers/Props';
 import AdvancedSettingsButton from 'Settings/AdvancedSettingsButton';
 import titleCase from 'Utilities/String/titleCase';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import styles from './EditIndexerModalContent.css';
 
 function isPrivateHost(hostname) {
@@ -136,7 +136,7 @@ function EditIndexerModalContent(props) {
 
         {
           !isFetching && !error &&
-            <Form {...otherProps}>
+            <Form {...otherProps} serverMessageMode="opaque">
               {
                 showProxyWarning &&
                   <Alert kind={kinds.WARNING}>
@@ -147,7 +147,11 @@ function EditIndexerModalContent(props) {
               {
                 isDirectDownload && item.message?.message &&
                   <Alert kind={kinds.INFO}>
-                    {translateServerMessage(item.message.message)}
+                    <LocalizedServerMessage
+                      message={item.message.message}
+                      messageId={item.message.messageId}
+                      messageParameters={item.message.messageParameters}
+                    />
                   </Alert>
               }
 

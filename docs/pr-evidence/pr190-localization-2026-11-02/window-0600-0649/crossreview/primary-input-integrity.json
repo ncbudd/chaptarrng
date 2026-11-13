@@ -1,0 +1,556 @@
+{
+  "primaryPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0600-0649-primary-20261102",
+  "primaryChecksumManifestSha256": "953d11509d8fbec61b361b3306f0a4f2cf1b3f51af3559bd823b3d6d2351e42f",
+  "primaryFilesVerified": [
+    {
+      "file": "INPUT-SHA256SUMS",
+      "sha256": "ff07d87007bc797b249eb424ee212893fe5f5551d36cf7e1e287bd530d26e415",
+      "passed": true
+    },
+    {
+      "file": "README.md",
+      "sha256": "fd614f56d0a453661099c3a71f6bb1424bbc976a5a40062c99ed77176bfdaab6",
+      "passed": true
+    },
+    {
+      "file": "build_primary_packet.py",
+      "sha256": "64d3ed7a29aef6bcb9895146f1f3f13e7ecec187bc2b713e8d5d84343c92451b",
+      "passed": true
+    },
+    {
+      "file": "caller-context.jsonl",
+      "sha256": "6a6b0c101e0ba8e71fb61b1ec6edf070c75864d4eb80aef7418a0947a43bcae5",
+      "passed": true
+    },
+    {
+      "file": "correction-candidates.jsonl",
+      "sha256": "acd5d3d2b4f117543953deb670845f042971e6c834531695ef3a6d21394b2271",
+      "passed": true
+    },
+    {
+      "file": "final-reattestation.json",
+      "sha256": "f3e8c4642e376062410f9ecd3f87ec52a4b5f15912c676e8ffcd9b85b89c119e",
+      "passed": true
+    },
+    {
+      "file": "input-cells.jsonl",
+      "sha256": "295e4562b41d8a9dd3f362effca8c95a5e1d298fabc2b7dfb875ee00e1eea8b7",
+      "passed": true
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "447b37ba99c3a3e9b34652a2f077b445259f255d83fb10967ac31d77d236792f",
+      "passed": true
+    },
+    {
+      "file": "prior-context-dispositions.jsonl",
+      "sha256": "324950f53ef037c6fe2140e7d779b832f8034f1ee319117ad13f9998ad903c6f",
+      "passed": true
+    },
+    {
+      "file": "prior-disposition-boundary.json",
+      "sha256": "ee4de2abd8f88625719c1bcebe1c9c27bdb838e0b0b252638d7a9814b8a19e1c",
+      "passed": true
+    },
+    {
+      "file": "protected-literal-integrity.jsonl",
+      "sha256": "4070d13a1adb5df25beb9250d52aca4d0c5b1595b5446bbd751e4bfbe03b3f80",
+      "passed": true
+    },
+    {
+      "file": "review-cells.jsonl",
+      "sha256": "872462d44157bf57db1336cbf2969cfa50e44ad3879244cd606dd07b5f0ae1d1",
+      "passed": true
+    },
+    {
+      "file": "review-decisions.json",
+      "sha256": "3e7b6bc76024b9b87c79a38ca22d1986cfac6d3509e323d18f40789a1375d9fe",
+      "passed": true
+    },
+    {
+      "file": "review-plan.json",
+      "sha256": "852e3f49f6fd31729c6027e5f7402ae8bf7d136786042519c516c97c887027d0",
+      "passed": true
+    },
+    {
+      "file": "reviewer-provenance.json",
+      "sha256": "28030ff1ec27a6618e4eff30a3227d361704b2c72e8d89b5896f5dc7501a3479",
+      "passed": true
+    },
+    {
+      "file": "source-slice.jsonl",
+      "sha256": "6def2da55d49e6daa32b4a10563e47d86b029f420b105725be0d1221fda05866",
+      "passed": true
+    },
+    {
+      "file": "summary.json",
+      "sha256": "aa6451a21bfb2beaea903c80da374bdeb30d7011f4864b97fa9c2841130d5731",
+      "passed": true
+    }
+  ],
+  "inputChecksumManifestSha256": "ff07d87007bc797b249eb424ee212893fe5f5551d36cf7e1e287bd530d26e415",
+  "exactHeadInputFilesVerified": [
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+      "passed": true
+    },
+    {
+      "path": "docs/localization/source-followup-20261101.json",
+      "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+      "passed": true
+    },
+    {
+      "path": "docs/localization/provider-field-sources.json",
+      "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "72eecbce2d2f3a96c6e26349d7975afd7918da4a731ac1d7d84c78ee3f1120df",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "41dbbcba8c25d8dc030c21311ad79ea046f1d426f59a19c6e0039687dfadaa9a",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "baeec109943af42c27adb6cf5cf3c94150c52ef9aaaaf084e37b117e4dd5ed83",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "d99b5a6bcfa383c4b8a7865e4cc08415396f1284188301f42dbf17a0eddc9eef",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "0c4ee6a5116110c913e4fe0f66aa1337c1c94936c6a78b0e64aac03e5d10e2c9",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "23c01d3236d0ffffeaf35a1e42a65cf1e2cf20244fdd63bfbcec2c5da219aa0c",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "153740656eb7d3bbda84187ad5892f0f693e60fdcb5dba07c614028caa8318b7",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "6ee60cc84b84a7a66d794bedb946fb90b5fe7fa1cd7e101633300498fac511df",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "2516e485dc44929334fea241ba2f4d1bc2e5389fc9ee8e53d94a8dec23387836",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "a934ecb9527a751189f4432a9e38f64b0ac051bfaac9fa3e284bc553b124bdf5",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "06aa4f081740dfb414afd48130092c298dd4979a28527b4d2fa4d1496c63cb9f",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "b17e5b9cb97b47b9b1bf41cfc826d56b8a033f312622c9fae9c199cff85617bb",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Validation/QualityProfileExistsValidator.cs",
+      "sha256": "7fdc52f803015ec56ca6d85de9e4a2d8b9b21ea6290a780ca27fc5de4cf3451d",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfProxy.cs",
+      "sha256": "c51b127c696297d0ffc2e4c155f1316d98aa88b8cdf3549bbb052dde7a7b1e24",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/Deluge/Deluge.cs",
+      "sha256": "e4c1d44bb6216df148bdfd35c18fa523c3436b8c4a5eddd95d69ebd773781906",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/PendingImport/PendingAuthorImportController.cs",
+      "sha256": "a26143a14e841b9a791c0cd0cad7a05970f6962b6f1943daf502088574a1f2c2",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "sha256": "5867b1968488296ae963f67414acc6fdf0cf9cc1f3a027b9ea517267c1c74f7c",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Validation/Paths/MappedNetworkDriveValidator.cs",
+      "sha256": "84e6846d2f8e5f6747dec859d4ea7de38f4cb6bab053cf1e7f953b83b151c2dc",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Validation/ProviderIdValidator.cs",
+      "sha256": "4e2e799da0d06d44cfa2bcf7f0a4c38a0b705d928a98c14dadd055f2f6d6ee3f",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServer.cs",
+      "sha256": "2c39ade9545099143c5df9c35cf2654fd24307e59c9094095b8cce14264eaf17",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Validation/Paths/AuthorPathValidator.cs",
+      "sha256": "8b0fcda7a355f012f2959490c916ee2aacc629c15ee5aef2d633eb71897ead48",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/HttpIndexerBase.cs",
+      "sha256": "4b8a7aa0b414c0bb428f1c748829aed6faa05759d3debbab9958477c2a262da6",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs",
+      "sha256": "642be969f1fc1c78d4462dc932af0386cf96678eaf63d87faabb6c3f84684f6f",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/TorrentDownloadStation.cs",
+      "sha256": "ad78fb0f798b5be0f174bd60717a9b21827eb5885ea1b23d311b9cc9575d6446",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+      "sha256": "1b1742cd77410a2b260777c3d691b1ebefc1d057e7f2742ca87a4c60d645ecc7",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Plex/Server/PlexServerService.cs",
+      "sha256": "a3fed08ce59edfd03162b7c70dd4e4ec898112063bd14e7e65dd9839d39c1f27",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
+      "sha256": "3b7e920c95032ec6ec0002a208c15084b5790f07749c90a5c66f613126dfa48e",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Queue/QueueController.cs",
+      "sha256": "b9e0170688a7a088d94c87ba5fba4b9690e0123d59fca54428d364949115f6e8",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "sha256": "b9c8f5088ed7ffbcf40dfb765624ed3bd3ac6b8431bdf0bea85739064305e270",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
+      "sha256": "f2647088aac714589f2ea506e39a1e42b7fe53eedc13405135c993c41f9e49f2",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs",
+      "sha256": "8e0c2bbefb32b0aeb0906c63869dae7f3db2e9b701b1f4b35d7ffb9eddaf83e5",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Goodreads/GoodreadsNotificationBase.cs",
+      "sha256": "c2f9f72a2160874f025e7610b729bdd4a3dc8ab83abc276fbe7b20a10680ee85",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs",
+      "sha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs",
+      "sha256": "78ae7eda5718915c769519a5c78d5c9c48fb094ddf16ddc2f99dbabe3dd82120",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Ntfy/NtfyProxy.cs",
+      "sha256": "0ce114ee33e8f84afe9be1287b5f439aa9951f047961e02e931dbc44bb29af6d",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/ProviderControllerBase.cs",
+      "sha256": "6cf222f7431af50f581b12193a6d12514eb2ee5b766e7fd03ac4e414dbdd1774",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+      "sha256": "847d10d53cce891a8ee9ec84a3047171dbe04bb0cd50101b28503a559dffa286",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs",
+      "sha256": "ca79e8aa41aa5091bec4221e8880b06ba34865ee07202d29d55bb1e9e2f70190",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Validation/Paths/RootFolderAncestorValidator.cs",
+      "sha256": "b337dfdb38b0ce647ee29962988b2ce6f00667c11da2a060275cbc9f79f0e1b8",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/RemotePathMappings/RemotePathMappingController.cs",
+      "sha256": "b2182bff8c3d9f31672e229deeaa844518b896d2dd6fc520f6a7670c45aae959",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs",
+      "sha256": "b09e865e5c023f004ecf8f28a3847d318feea0c67e9a49f0aceaa94c6ff419f6",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+      "sha256": "987f4712fefaeb1a8b936c68e29919a3eb28a98b89847befce5fd7df71d3ec47",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs",
+      "sha256": "7d9564eb92ac68a02cf40be01b4f5593716987c9a1582da469120885908a19d2",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs",
+      "sha256": "a18d66c921856787011872e2cc91bb5b1dafca7aa92808cb0446abd111e9b30b",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/CustomFormats/Specifications/RegexSpecificationBase.cs",
+      "sha256": "cdda698b3406691fee8715e13e1af61be72c0778687dc70c1289513786fbaf6d",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Config/ConversionConfigController.cs",
+      "sha256": "c7cdcca150c866f2081ce9539b50ef3870ca86563ea7fc078389314b10fd7ce8",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Books/BookController.cs",
+      "sha256": "27a2af1a16c38f8fad81fde5d18839aadb6206db83f58f582be3c444ada0c9d1",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Series/AddSeriesController.cs",
+      "sha256": "ccd03b0b7f9ddacb2bdaba94b782d978418b0cb69257f60aac2b62c32b514fa0",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Organizer/FileNameValidation.cs",
+      "sha256": "7616c14c15a9cd04a1c5bf594236a00ac6bc0bf7142a85ffb1dcfa1943de433f",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
+      "sha256": "a213edcb694d6d1ece93b0c2034d71c1b7b27ad8100bcf2b77c60406f97e3d34",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Author/AuthorMediaMoveController.cs",
+      "sha256": "a2419911cbed58c7940fd2c326924a61c4ca4b5fb3ae8e070752bbe175a0c6ed",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/Config/HostConfigController.cs",
+      "sha256": "d3ec39e6378942fd289c6562953cc9c74dac3d28d4c535ded9514eb275c0a54b",
+      "passed": true
+    },
+    {
+      "path": "src/Chaptarr.Api.V1/System/Backup/BackupController.cs",
+      "sha256": "726b1aac6aee5f2a6ac5bd2edbcd86f62cb88575098bc6cd7dd22de710f2e394",
+      "passed": true
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Chaptarr/ChaptarrV1Proxy.cs",
+      "sha256": "ef40892112243b445b108e411b08ae8378c28b4fa7e9f8c1bc3cedc9d7b1adfc",
+      "passed": true
+    }
+  ],
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "bytes": 312087
+  },
+  "sourceFollowupFile": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "bytes": 50936
+  },
+  "registryFile": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "bytes": 395755
+  },
+  "localeCatalogs": {
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "blob": "03f769ec1752ced073c8f589156c6d8aacd38210",
+      "sha256": "72eecbce2d2f3a96c6e26349d7975afd7918da4a731ac1d7d84c78ee3f1120df",
+      "bytes": 359068
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "blob": "6f0c48f1e6771c1cbd3816226528ff5039e7b649",
+      "sha256": "41dbbcba8c25d8dc030c21311ad79ea046f1d426f59a19c6e0039687dfadaa9a",
+      "bytes": 306161
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "blob": "0466ad3e8d4c7bf28dd0c37ded5da96ce24a0f72",
+      "sha256": "baeec109943af42c27adb6cf5cf3c94150c52ef9aaaaf084e37b117e4dd5ed83",
+      "bytes": 605370
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "blob": "471ad9d071860038d92cff5e648343fdc27561b7",
+      "sha256": "d99b5a6bcfa383c4b8a7865e4cc08415396f1284188301f42dbf17a0eddc9eef",
+      "bytes": 361169
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "blob": "bda24c669e3ab53a3e5b44c577aafa87a3d88880",
+      "sha256": "0c4ee6a5116110c913e4fe0f66aa1337c1c94936c6a78b0e64aac03e5d10e2c9",
+      "bytes": 408727
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "blob": "3b1ea5d3e3f5ca7154be4b61e57c3d42ec366dab",
+      "sha256": "23c01d3236d0ffffeaf35a1e42a65cf1e2cf20244fdd63bfbcec2c5da219aa0c",
+      "bytes": 374686
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "77e07c3ad1eb88d38fed7320fd99a26f2ec5c250",
+      "sha256": "153740656eb7d3bbda84187ad5892f0f693e60fdcb5dba07c614028caa8318b7",
+      "bytes": 352487
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "121c87a96561ea3218e02074a644588488df8830",
+      "sha256": "6ee60cc84b84a7a66d794bedb946fb90b5fe7fa1cd7e101633300498fac511df",
+      "bytes": 431543
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "b5478d2a73ada2be5196560238cfb14ceb98ce59",
+      "sha256": "2516e485dc44929334fea241ba2f4d1bc2e5389fc9ee8e53d94a8dec23387836",
+      "bytes": 368035
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "7780b8ff3f5c2651a8853240f5e29c7010c68964",
+      "sha256": "a934ecb9527a751189f4432a9e38f64b0ac051bfaac9fa3e284bc553b124bdf5",
+      "bytes": 307505
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "b9c74083b4fa00820ee4a6bcb747998cff1fc0e4",
+      "sha256": "06aa4f081740dfb414afd48130092c298dd4979a28527b4d2fa4d1496c63cb9f",
+      "bytes": 389112
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "6d27bf6daa11289023e144af9e039effb69fda78",
+      "sha256": "b17e5b9cb97b47b9b1bf41cfc826d56b8a033f312622c9fae9c199cff85617bb",
+      "bytes": 332839
+    }
+  },
+  "priorW599PacketChecksum": {
+    "checksumFileSha256": "89f8b6141ee4d2a15434f442c08530056d381d84e95ea1dc524b86ad67ab9987",
+    "entries": [
+      {
+        "file": "INPUT-SHA256SUMS",
+        "sha256": "557f5bd89cadcb0f4e10049b5248364799464109ba83da492d5cbe42d46819a7",
+        "passed": true
+      },
+      {
+        "file": "README.md",
+        "sha256": "a5a8be6370af2e750c53a35aaf0fc1a79110a148c7360e2a651f3532c683a0a0",
+        "passed": true
+      },
+      {
+        "file": "build_primary_packet.py",
+        "sha256": "be3fc7a507c23881f8b97ada542096d7395ee3414e3fedc8a8c289766a3f06d9",
+        "passed": true
+      },
+      {
+        "file": "caller-context.jsonl",
+        "sha256": "b5209ad4824a1b5a33a079a3caea45e52075fee413fc1f9c906035be61860992",
+        "passed": true
+      },
+      {
+        "file": "correction-candidates.jsonl",
+        "sha256": "8d4f5ea18b71889e6e514421c69f11987dd9d2815945ed3307b877d9fbe4fab9",
+        "passed": true
+      },
+      {
+        "file": "final-reattestation.json",
+        "sha256": "e5a4d3863b88eecb4739f3734cb48a074814e0cc82d138844587138490357e4c",
+        "passed": true
+      },
+      {
+        "file": "input-cells.jsonl",
+        "sha256": "535f3ef60ce9081c51e7e7dbea686c6a0d9ccf9d932ca0ade39ed0f7f001c687",
+        "passed": true
+      },
+      {
+        "file": "manifest.json",
+        "sha256": "9a307b73d3c9390f643c9a2292e31a2fe80526306aaa32d640d345be6731b3d9",
+        "passed": true
+      },
+      {
+        "file": "prior-context-dispositions.jsonl",
+        "sha256": "8783a81ea34fe9c33b75abe736ca51fd56e62d3a3318910c81a8999338d25eb0",
+        "passed": true
+      },
+      {
+        "file": "prior-disposition-boundary.json",
+        "sha256": "58700cd5cdf29b1bd4a0cd8702c064d8b07fbad9c3eab8f4f7e5ca43a14c7372",
+        "passed": true
+      },
+      {
+        "file": "protected-literal-integrity.jsonl",
+        "sha256": "fa5f1aa20b9b9327fd0bc8fefbbd1cb8a4caaa7de72460468fd08e119f8f160b",
+        "passed": true
+      },
+      {
+        "file": "review-cells.jsonl",
+        "sha256": "1fa810cad0c276ef8bae5017c1bcab90d25b68ce3563f811270f8ff7be47244c",
+        "passed": true
+      },
+      {
+        "file": "review-decisions.json",
+        "sha256": "80a6c928ca345fc886ed718d94810a3a6be2d0fdeabe3e855642f45632a4b0c8",
+        "passed": true
+      },
+      {
+        "file": "reviewer-provenance.json",
+        "sha256": "3f9fe32ac8c8a2a7b9e9361678857e54f335ea03abe05cdff497705510b0639c",
+        "passed": true
+      },
+      {
+        "file": "source-slice.jsonl",
+        "sha256": "ccc84c966593b5af3accdbb6a8c75b70deacbd4fa8d476870c0d7c59c5c8820a",
+        "passed": true
+      },
+      {
+        "file": "summary.json",
+        "sha256": "ff82d67b46b7436f4c18fe23a57bb47ff5feedfd3171771c1e14500df8c8ac72",
+        "passed": true
+      }
+    ]
+  }
+}

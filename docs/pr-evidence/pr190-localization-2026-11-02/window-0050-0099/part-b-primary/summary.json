@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "task": "Primary semantic review of W50–99 for pt-BR/ar/ko/zh-Hant/vi/id",
+  "pullRequestState": "OPEN",
+  "isDraft": true,
+  "mergeStateStatus": "CLEAN",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "exactHead": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+  "exactTree": "605a751ae9c3b454f4189dd89d021a5976e95237",
+  "baseHead": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "input": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-20261102/input-cells.jsonl",
+    "sha256": "d4bd73d9e9c5fce62594c0be054c0d14c410fc5dafc017c8be7c419b17dce9c0",
+    "totalRows": 600,
+    "assignedRows": 300
+  },
+  "scope": {
+    "window": "currentMissingIds positions 50–99",
+    "sourcePositions": [
+      50,
+      99
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 300
+  },
+  "rowsReviewed": 300,
+  "counts": {
+    "accept-current": 292,
+    "propose-refinement": 8
+  },
+  "countsByLocale": {
+    "pt-BR": {
+      "accept-current": 48,
+      "propose-refinement": 2
+    },
+    "ar": {
+      "accept-current": 50
+    },
+    "ko": {
+      "accept-current": 49,
+      "propose-refinement": 1
+    },
+    "zh-Hant": {
+      "accept-current": 47,
+      "propose-refinement": 3
+    },
+    "vi": {
+      "accept-current": 49,
+      "propose-refinement": 1
+    },
+    "id": {
+      "accept-current": 49,
+      "propose-refinement": 1
+    }
+  },
+  "proposalCount": 8,
+  "proposals": [
+    {
+      "windowOrdinal": 68,
+      "sourceId": "provider.field.fcf9692863aa6",
+      "locale": "pt-BR",
+      "target": "Baixar em ordem sequencial (qBittorrent 4.1.0+)",
+      "targetSha256": "123a132f857042393a2241bdb019a4ab91e5d307b16821a193daeaf04dff7f19",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 68,
+      "sourceId": "provider.field.fcf9692863aa6",
+      "locale": "zh-Hant",
+      "target": "依序下載（qBittorrent 4.1.0+）",
+      "targetSha256": "1e9a427d6da677f0a21e748423d0e097b4570eb9e2b64e3e49e6bfe4fbb185d1",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 78,
+      "sourceId": "provider.field.f0dfe7337cc47",
+      "locale": "zh-Hant",
+      "target": "URL 路徑",
+      "targetSha256": "ccf254827cc917fbef402aeab8425358e68ef74fe7517733915c868f92cd950e",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 85,
+      "sourceId": "provider.field.f25db4afacbd7",
+      "locale": "pt-BR",
+      "target": "Estado inicial dos torrents adicionados ao uTorrent",
+      "targetSha256": "9026618595a5044ce2bbaa1ebae39c83d8181b7dadb06005189edc13cea159db",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 85,
+      "sourceId": "provider.field.f25db4afacbd7",
+      "locale": "ko",
+      "target": "uTorrent에 추가된 토렌트의 초기 상태",
+      "targetSha256": "f012ca2a7413ecf82cfd2fc7a487f81017ad8b2de0ff2fa10f5c3dee75b2f547",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 85,
+      "sourceId": "provider.field.f25db4afacbd7",
+      "locale": "zh-Hant",
+      "target": "加入 uTorrent 的種子的初始狀態",
+      "targetSha256": "15ffd73c3380d332705bf35d1d5792642548b694a22d4d5a1dc7e08619a9ef04",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 85,
+      "sourceId": "provider.field.f25db4afacbd7",
+      "locale": "vi",
+      "target": "Trạng thái ban đầu của torrent được thêm vào uTorrent",
+      "targetSha256": "a8235ebe4775a98be458478eb38cda6f2b16eef7676dff7502d43bf905f894cb",
+      "disposition": "propose-refinement"
+    },
+    {
+      "windowOrdinal": 85,
+      "sourceId": "provider.field.f25db4afacbd7",
+      "locale": "id",
+      "target": "Status awal torrent yang ditambahkan ke uTorrent",
+      "targetSha256": "33348ece4a9e4d760f66218cc92684cd02b23456e4d1efd3fca1e53ed694ae8e",
+      "disposition": "propose-refinement"
+    }
+  ],
+  "inputCurrentCatalogCallerMismatches": 0,
+  "callerReferencesReattested": 4314,
+  "uniqueCallerFiles": 27,
+  "placeholderMismatches": 0,
+  "priorDispositionNote": "Input records no row-level W0–49 disposition for these IDs; aggregate historical overlap remains unknown as stated in the pinned manifest. This packet is a fresh exact-head review.",
+  "livePullRequestVerification": {
+    "state": "OPEN",
+    "isDraft": true,
+    "mergeStateStatus": "CLEAN",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795"
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryMutated": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "blockers": []
+}

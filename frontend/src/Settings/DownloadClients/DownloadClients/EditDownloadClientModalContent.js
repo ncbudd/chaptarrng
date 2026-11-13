@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Alert from 'Components/Alert';
+import LocalizedServerMessage from 'Components/LocalizedServerMessage';
 import FieldSet from 'Components/FieldSet';
 import Form from 'Components/Form/Form';
 import FormGroup from 'Components/Form/FormGroup';
@@ -21,7 +22,6 @@ import { icons, inputTypes, kinds, sizes } from 'Helpers/Props';
 import AdvancedSettingsButton from 'Settings/AdvancedSettingsButton';
 import titleCase from 'Utilities/String/titleCase';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import styles from './EditDownloadClientModalContent.css';
 
 function LinkToggleButton({ isLinked, onPress, isLastButton, title, className }) {
@@ -275,14 +275,18 @@ class EditDownloadClientModalContent extends Component {
 
           {
             !isFetching && !error &&
-              <Form {...otherProps}>
+              <Form {...otherProps} serverMessageMode="opaque">
                 {
                   message && message.value &&
                     <Alert
                       className={styles.message}
                       kind={message.value.type}
                     >
-                      {translateServerMessage(message.value.message)}
+                      <LocalizedServerMessage
+                        message={message.value.message}
+                        messageId={message.value.messageId}
+                        messageParameters={message.value.messageParameters}
+                      />
                     </Alert>
                 }
 

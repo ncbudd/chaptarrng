@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "review": "Exact-head semantic primary review of ChaptarrNG PR #190 positions 50-99 for es, zh-Hans, hi, de, ja, fr",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+  "exactTree": "605a751ae9c3b454f4189dd89d021a5976e95237",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "livePullRequestVerification": {
+    "repository": "snapetech-org/chaptarrng",
+    "pullRequest": 190,
+    "state": "OPEN",
+    "headRefOid": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "baseRefName": "main",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "verifiedAtUtc": "2026-11-02 11:06 UTC",
+    "verification": "gh pr view 190 --repo snapetech-org/chaptarrng"
+  },
+  "input": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-20261102/input-cells.jsonl",
+    "sha256": "d4bd73d9e9c5fce62594c0be054c0d14c410fc5dafc017c8be7c419b17dce9c0",
+    "packetRows": 600,
+    "assignedRows": 300,
+    "inputManifest": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-20261102/SHA256SUMS"
+  },
+  "scope": {
+    "windowOrdinals": [
+      50,
+      99
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr"
+    ],
+    "cells": 300
+  },
+  "counts": {
+    "accept-current": 276,
+    "propose-refinement": 22,
+    "propose-correction": 2
+  },
+  "proposals": 24,
+  "inputAndCallerPinMismatches": 0,
+  "tokenMismatchesInRecommendations": 0,
+  "holds": 0,
+  "blockers": [],
+  "nativeSpeakerApproval": false,
+  "validationNotes": [
+    "The live PR was OPEN at the required head before review.",
+    "The worktree head/tree, catalog file blobs, source/current values and hashes, 710 unique caller source lines, and supplied placeholder pins all re-attested with zero mismatches.",
+    "All recommended targets were checked to retain the exact bracketed host/path/category token set where present.",
+    "No repository files or PR state were changed; no tests, builds, scans, CI, workflows, releases, tags, or merges were run.",
+    "This machine review is not native-speaker approval."
+  ]
+}

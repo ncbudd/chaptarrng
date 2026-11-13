@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "sealedAtUtc": "2026-11-03T01:45:01+00:00",
+  "sealedReviewPath": "review.json",
+  "sealedReviewSha256": "c66d0b09eaea96679220cc23e220def9bf36c9cb303272dd51ce4898c32d7119",
+  "sealedCellCount": 12,
+  "dispositionCounts": {
+    "accept-current": 9,
+    "correction": 3,
+    "hold": 0
+  },
+  "independentFromPriorCellEvidence": true,
+  "processLimitationDisclosed": true,
+  "note": "The PR-body aggregate W1150–W1199 summary was seen before sealing; no cell-level W1187 candidate/hold content or prior packet/README was consulted."
+}

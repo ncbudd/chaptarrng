@@ -787,7 +787,7 @@ namespace NzbDrone.Core.Notifications.AudioBookShelf
                 {
                     throw new ValidationException(new[]
                     {
-                        new ValidationFailure(nameof(AudioBookShelfSettings.Host), "Host is required")
+                        NzbDroneValidationFailure.ForMessage(nameof(AudioBookShelfSettings.Host), "Host is required", "server.message.m100ee5f8c87f")
                     });
                 }
 
@@ -939,7 +939,7 @@ namespace NzbDrone.Core.Notifications.AudioBookShelf
                 {
                     throw new ValidationException(new[]
                     {
-                        new ValidationFailure(nameof(AudioBookShelfSettings.ApiKey), "AudioBookShelf requires an admin user to create API keys. Sign in as an admin, or create an API key manually in AudioBookShelf and paste it here.")
+                        NzbDroneValidationFailure.ForMessage(nameof(AudioBookShelfSettings.ApiKey), "AudioBookShelf requires an admin user to create API keys. Sign in as an admin, or create an API key manually in AudioBookShelf and paste it here.", "server.message.m354806fe14c2")
                     });
                 }
 
@@ -1028,7 +1028,7 @@ namespace NzbDrone.Core.Notifications.AudioBookShelf
 
                     throw new ValidationException(new[]
                     {
-                        new ValidationFailure(nameof(AudioBookShelfSettings.Host), $"Unable to retrieve libraries from AudioBookShelf: {message}")
+                        NzbDroneValidationFailure.ForMessage(nameof(AudioBookShelfSettings.Host), $"Unable to retrieve libraries from AudioBookShelf: {message}", "server.message.mf59d87558dd2", new { value0 = message })
                     });
                 }
             }

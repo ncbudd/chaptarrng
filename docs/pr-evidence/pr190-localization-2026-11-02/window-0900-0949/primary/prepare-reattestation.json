@@ -1,0 +1,32 @@
+{
+  "allSevenAfterFreezeHeadsSha256": "6686edb0ba50d09a892100af6c85cc8a5d6dd7793ffcf228afe1ff28d2e1dbb1",
+  "allSevenPRHeadsUnchangedDuringFreeze": true,
+  "allSevenStartHeadsSha256": "9bdb3f445700e2e27b222eb57dfc9113d39474574a6bcb01fda01c891d08fd56",
+  "callerGaps": [],
+  "catalogCount": 12,
+  "directCallerReferences": 86,
+  "head": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "localeCells": 600,
+  "passed": true,
+  "priorDispositionRows": 10800,
+  "priorOverlapCount": 0,
+  "providerOptionPipelineReferences": 20,
+  "providerPipelineGaps": [],
+  "selectedSourceIdsSha256": "7a5488da19d156d9e25643a356375af1241fc02d9ca8cf399308c562726bde12",
+  "serverPipelineGaps": [],
+  "serverPipelineReferences": 76,
+  "sourceIds": 50,
+  "sourceQueueCanonicalSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceQueueCount": 1210,
+  "staleRegistryPins": [],
+  "tree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+  "w884FollowupSourceContextOnly": true,
+  "w899BoundaryMatches": 12,
+  "w899BoundaryRows": 12,
+  "worktree": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+    "status": "",
+    "tree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe"
+  }
+}

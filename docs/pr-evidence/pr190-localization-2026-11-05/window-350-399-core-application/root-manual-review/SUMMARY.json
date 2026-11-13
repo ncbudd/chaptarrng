@@ -1,0 +1,29 @@
+{
+  "artifact": "ChaptarrNG PR #190 W350-W399 root manual review",
+  "status": "SEALED",
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "window": "W350-W399",
+  "cellCount": 600,
+  "crossDispositionCounts": {
+    "accept-current": 488,
+    "hold-source-copy": 12,
+    "recommend-revision": 100
+  },
+  "rootReviewedRows": 112,
+  "rootAcceptedChanges": 99,
+  "rootNoopCurrentRows": 1,
+  "rootMaintainedHolds": 12,
+  "rootDecisionCounts": {
+    "accept-recommended": 99,
+    "maintain-current-noop": 1,
+    "maintain-hold": 12
+  },
+  "crossReviewSummarySha256": "7d857f4e6da11903fd0f5a8b8f9642b72c15190a3c19576c629ce922897e8cd1",
+  "crossReviewLedgerSha256": "3770147adad1df87b8b271c28713ba5a127f3c15dc79fe957f1e41a3f070a6d8",
+  "candidateFreeManifestSha256": "c6e30a409f41a8a9b840314012b7d14d2d5ac15e183f4205c9bc37f4e30689cb",
+  "nativeSpeakerApprovalClaimed": false,
+  "catalogChangesMade": false,
+  "rootReviewLedgerSha256": "cbec17c2d1df9929db5dd6131495c34475293ce65f19246faf1a5a8810219754",
+  "candidateFreeManifestFile": "candidate-free/input/candidate-free-manifest.json"
+}

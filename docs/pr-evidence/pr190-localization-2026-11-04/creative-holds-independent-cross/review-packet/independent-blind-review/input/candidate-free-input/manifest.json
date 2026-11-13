@@ -1,0 +1,30 @@
+{
+  "candidateFree": true,
+  "filesPinned": 18,
+  "head": "28cdae837118a426ac867fb468a5e5a6937cbb9b",
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "priorHoldHashDrifts": 0,
+  "priorHoldHashMatches": 24,
+  "priorHoldReattestationRows": 24,
+  "priorReviewVerdictsIncluded": false,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "selectedCellCount": 20,
+  "selectionSource": "task scope confirmed by root; prior cross-audit used only as a hash-only scope identifier",
+  "sourceCount": 3,
+  "translationCandidatesIncluded": false,
+  "tree": "e6e7f1344d08eddbc421d339f91594847a625c10"
+}

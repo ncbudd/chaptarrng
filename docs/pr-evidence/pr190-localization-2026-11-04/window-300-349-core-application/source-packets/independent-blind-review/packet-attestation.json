@@ -1,0 +1,126 @@
+{
+  "blindnessAttestation": {
+    "PRBodyAccessed": false,
+    "currentTargetTextCopiedIntoOutput": false,
+    "currentWindowProposalsAccessed": false,
+    "otherW300ReviewSuggestionsAccessed": false,
+    "primaryReviewDirectoryAccessed": false,
+    "priorCrossReviewOutputAccessed": false,
+    "proposalTextIncluded": false
+  },
+  "callerClarificationSourceFilesRead": [
+    "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+    "frontend/src/Settings/ImportLists/ImportLists/ImportList.js",
+    "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+    "frontend/src/Settings/MediaManagement/MediaManagement.js",
+    "frontend/src/Book/Index/BookIndex.js"
+  ],
+  "callerlessKeys": [
+    "BookOnePlaceholder",
+    "BookTwoPlaceholder",
+    "ConflictsConsidered",
+    "SiblingTitlePlaceholder"
+  ],
+  "decisions": {
+    "acceptCurrent": 497,
+    "callerlessHoldCells": 48,
+    "hold": 103,
+    "semanticHoldCells": 55
+  },
+  "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "exactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "inputAttestations": {
+    "callerContextSha256": "cb3360a049a3e398270f3b0325469c07d59cbac0fdcd199651073914275a55dd",
+    "candidateFreeCellsSha256": "c796a6d6f357480bb25b98c722feceefc2cbef83c5efc065581b4c2f991332a9",
+    "candidateFreeChecksumIndexSha256": "001d050bdd38a683cf16dc74233ee305a169e89307b6ce8a2762e89542b9a709",
+    "candidateFreeChecksumVerification": "PASS (sha256sum -c SHA256SUMS.txt)",
+    "candidateFreeInputDirectory": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/candidate-free/input",
+    "candidateFreeManifestSha256": "7959f70b857f36f82f52af40ccb152f3ccc8444ec050813fe79d06dbb3508e64",
+    "candidateFreeVerifier": "PASS (verify_candidate_free.py)",
+    "inputExactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+    "inputExactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+    "verifiedInputFiles": {
+      "PR-attestation-after-candidate-free.json": "824f2e7b19fd1d322e3de08dff313fddf47833b9f4ed39f4c095707a5136dd4d",
+      "PR-attestation-before.json": "8a6dbe2047172a2de8dcb660798dbbefabd896c05825375202bda3a12924bf1d",
+      "PR-attestation-final.json": "0526dea5acfbb5ac5678b20f52f806075748eedb85465d624ada6d49f9c77061",
+      "README.md": "cceb8ded2b3cb9d41ed22fdf3472d1060d281474a0b32b19fabc3eaeb736b817",
+      "caller-context.jsonl": "cb3360a049a3e398270f3b0325469c07d59cbac0fdcd199651073914275a55dd",
+      "caller-scan-file-pins.json": "45a499e998d49182b3dc1fa924e1d22a384b429a8fc3b3031d068975148f3f93",
+      "candidate-free-cells.jsonl": "c796a6d6f357480bb25b98c722feceefc2cbef83c5efc065581b4c2f991332a9",
+      "candidate-free-manifest.json": "7959f70b857f36f82f52af40ccb152f3ccc8444ec050813fe79d06dbb3508e64",
+      "candidate-free-summary.json": "4bb831b399bfe70dc5cdd92498698fabe8f5bae8cb31748bc0703d669312436e",
+      "dynamic-translation-callers.jsonl": "e4e43e6b712ff7e4698e6e960d5e6bc5532027be1782087642e45da29b14d927",
+      "live-main-caller-drift-final.json": "3dd61e7962f1df66a9126edea269afcc370cca722fea82df81f489f147feff21",
+      "live-main-caller-drift.json": "1a10724bbf38579b9c78e620048e82276cb0e2caa0972272a937bed2e4cc9f0e",
+      "prior-W200-application-reattestation.jsonl": "17ccff2242e77fffd67fd92958ebc3dfa00063413aee63755a1d91f9942eb1a3",
+      "prior-W250-application-reattestation.jsonl": "d4500bd5e67f7a4fa11332278761cbfbe888aeca9667226ee982723cf237e85c",
+      "prior-W250-application-summary.json": "d1a85b8619d9591cde7e3c240d94e784f3142d1b6a16196b675493389d7c4cc7",
+      "prior-W250-root-adjudication-attestation.json": "c6f750b2646ded4904237b6fa9e21c842ce251b13a033a0ac0518b3a2b44c8a9",
+      "prior-historical-evidence-scan.json": "e1ea54c8c7124384cadce3262248dc31a4eff652d6cd061cbd497ddfb42fd2c8",
+      "prior-lineage-summary.json": "2a0b320665bcd2c00e3f169e18bfaca2b0e05de9c7f5182105d64617977e3356",
+      "prior-selected-hold-reattestations.jsonl": "dc27183cfcb4af7665f97e76156675844d876e6098ec345e31ccfde6cbee59ce",
+      "runtime-source-pins.json": "57143fdc83def4d08a9704309fd9f6694d4cc35b658f87a24adf9cbfee9fad56",
+      "selection-boundary.jsonl": "79a051230822cb11e50770c259015d31c63dd601ec9481e753f17241c217758e",
+      "source-selection.json": "35d535cb12193550959bf3bd8d0716b6b75fa93bdf430a0a02d92072b2ff6a60",
+      "verify_candidate_free.py": "561e627187b1c3cea553edbc01741347640f70fd1f4cb1cc12f643a9617861fc"
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "numericIntegrityMismatchReview": [
+    {
+      "automaticCheck": "numeric-token mismatch",
+      "currentTargetSha256": "13d29c88b884a49acc40bd69a9de12a144ce1f8bc353904f259ccc11a7c957b5",
+      "locale": "ko",
+      "semanticReview": "callerless-hold; no current wording is being endorsed or proposed",
+      "sourceKey": "BookOnePlaceholder",
+      "sourceTextSha256": "3aefd7556ca13016f8cdf5037884d7a67d2d21e015753ca22bc5221ca9fbb6db"
+    },
+    {
+      "automaticCheck": "numeric-token mismatch",
+      "currentTargetSha256": "97a25cf348a5cdd00979b5c7b9d433d964e0e709c8ce40bd9309b23db8f8a22d",
+      "locale": "de",
+      "semanticReview": "callerless-hold; no current wording is being endorsed or proposed",
+      "sourceKey": "BookTwoPlaceholder",
+      "sourceTextSha256": "0b886cd2f368ac949da2af903ce86e04321ebfef36a24088a30e76cf1919bbed"
+    },
+    {
+      "automaticCheck": "numeric-token mismatch",
+      "currentTargetSha256": "6109f872e1f83043170bb5d7895ab079c3aedd6c71c0b0eb427ab48bc42a0d53",
+      "locale": "ko",
+      "semanticReview": "callerless-hold; no current wording is being endorsed or proposed",
+      "sourceKey": "BookTwoPlaceholder",
+      "sourceTextSha256": "0b886cd2f368ac949da2af903ce86e04321ebfef36a24088a30e76cf1919bbed"
+    },
+    {
+      "automaticCheck": "numeric-token mismatch",
+      "currentTargetSha256": "b8da420bfad52e4293a4c5631ca76e7a8ca46a8908cdeb7c862c66712bfb2bb1",
+      "locale": "ja",
+      "semanticReview": "accept-current; the localized phrase preserves the cardinal minimum of one",
+      "sourceKey": "NamingBuilderErrorEmptyGroup",
+      "sourceTextSha256": "0f12cee582e3492b20dc027f31b2a1d428489a271672e010d1701ed7a74b7f1c"
+    },
+    {
+      "automaticCheck": "numeric-token mismatch",
+      "currentTargetSha256": "3c57c56ac1f1c12f29f35c705012c607ea998d525ac2f697f4bfe6eec9ef9922",
+      "locale": "ar",
+      "semanticReview": "accept-current; the value one is expressed lexically rather than as a numeric glyph",
+      "sourceKey": "NamingBuilderGroupItem",
+      "sourceTextSha256": "d1ecad4ae1d1a4ce93d02ec5ce19b2431af23651266d9d08c5c31ce192bfc168"
+    }
+  ],
+  "packet": "ChaptarrNG PR #190 W300-W349 independent blind semantic review",
+  "repositoryModified": false,
+  "reviewLimit": "Semantic review only; accepted rows mean no material semantic defect was identified, not native-speaker certification.",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "firstPosition": 300,
+    "lastPosition": 349,
+    "locales": 12,
+    "sourceKeys": 50
+  },
+  "sourceWorktree": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w300-349-source",
+  "sourceWorktreeClean": true,
+  "sourceWorktreeHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "sourceWorktreeTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af"
+}

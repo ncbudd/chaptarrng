@@ -1,0 +1,96 @@
+{
+  "apiBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "artifact": "ChaptarrNG PR #190 W450-W474 sealed cross-review part",
+  "blindChecksumsSha256": "e6d93b4dff595b01833f708b5173a6b6350056ad79ea96ad34ad7d4ea0c239eb",
+  "blindInput": "../../blind-review",
+  "blindManifestSha256": "33f425d5d3c2b06045b7cd364ced94677a3f01672776653d850c735565c15ef0",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerBackedCells": 276,
+  "candidateFreeChecksumsSha256": "a840674b2e61d495d91dca3a9ea46e08d92ecc2606bef4cd2f2c7e1f0ed7f0e2",
+  "candidateFreeInput": "../../candidate-free/input",
+  "candidateFreeManifestSha256": "f37ed7234202a36eaea93259618d972a545d3ebbed0fd3a57d8c8addcdbc25ee",
+  "cells": 300,
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "files": [
+    {
+      "bytes": 1835,
+      "path": "README.md",
+      "sha256": "63688dedc56247a7e8efbd7470b2b0c8c5af4c2cab040e982230815570ed4ac2"
+    },
+    {
+      "bytes": 25375,
+      "path": "build_cross_review.py",
+      "sha256": "97354df101e7289b74766bb956ebd470c61f8489b31c8680beca77dfb8a9c93d"
+    },
+    {
+      "bytes": 1030,
+      "path": "entry-refs.json",
+      "sha256": "c45345c05d019ea53959a928cbd370c8104259062ccd3ddcb66d3c15e59dd52f"
+    },
+    {
+      "bytes": 1030,
+      "path": "exit-refs.json",
+      "sha256": "966da8f4e68a4f34ae8af9dc02ab6d5475d46e64e525716e829db3665d203a75"
+    },
+    {
+      "bytes": 29378,
+      "path": "holds.jsonl",
+      "sha256": "0cb1d9720f2ea856aa1d34060481e8a81177163f20fa157e217f35807f90e0bb"
+    },
+    {
+      "bytes": 1764,
+      "path": "input-reattestation.json",
+      "sha256": "1cba94a3514492e8b03dd032ff059085ee8af18d6ac0e081406b14f37ead3f21"
+    },
+    {
+      "bytes": 509512,
+      "path": "ledger.jsonl",
+      "sha256": "43e7f5152ba866f5825b6ca7ea3869053b1951a0bb6cb17d28860463dd90e6a4"
+    },
+    {
+      "bytes": 2694,
+      "path": "summary.json",
+      "sha256": "320adcc3ff08ef3d257bcc08a1f4aaccd867fa2566ff0ae1c7779727c7a2709d"
+    },
+    {
+      "bytes": 13344,
+      "path": "verify_cross_review.py",
+      "sha256": "0dc1109fbfd909b481f394d7c612ffd8d84dee2b85700f38d07ad9b18375a8ab"
+    }
+  ],
+  "hashOnlyHoldCells": 24,
+  "holdTextIncluded": false,
+  "liveMainAdvancedDuringCrossReview": true,
+  "liveMainAtEntry": "73515010a360d64248c54bc51ebd66c6d50344a8",
+  "liveMainAtExit": "2ade9a5280a64ce7de8f1016961f88e93bd6cb8e",
+  "liveMainTreeAtEntry": "9869da6384264008e67cca176ddff770ac9a6e66",
+  "liveMainTreeAtExit": "bf48eb2492ca4ebde48fa39f974ebe5dd7abf6bd",
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "primaryChecksumsSha256": "fec9bf143e67931bb4a348955b484c0136ae4829c3fb49b50bf9d3969b532ac8",
+  "primaryInput": "../../primary-review",
+  "primaryManifestSha256": "c5b658defee366ecdbfa046cd21c073ce0100e7c030b038955c244b6c9e38edf",
+  "proposalTargetsIncluded": true,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryOrPREdited": false,
+  "schemaVersion": 1,
+  "sourceIds": 25,
+  "sourceOrdinalRange": [
+    450,
+    474
+  ]
+}

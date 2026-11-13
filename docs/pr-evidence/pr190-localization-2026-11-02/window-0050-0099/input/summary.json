@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+  "tree": "605a751ae9c3b454f4189dd89d021a5976e95237",
+  "slice": "currentMissingIds positions 50-99 inclusive",
+  "sourceIds": 50,
+  "targetCells": 600,
+  "catalogsAtExactKeyParity": true,
+  "allCurrentTargetValuesPresent": true,
+  "uniqueCallerFiles": 27,
+  "uniqueCallerLines": 710,
+  "historicalAggregateOverlap": "unknown; aggregate 14,520-cell ledger was not present per-cell",
+  "semanticReview": "not yet performed",
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryMutated": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false
+}

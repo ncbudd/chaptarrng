@@ -1,0 +1,32 @@
+{
+  "result": "PASS",
+  "sourcePin": {
+    "head": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+    "tree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af"
+  },
+  "candidateCells": 600,
+  "selectedChanges": 106,
+  "unchangedCells": 494,
+  "callerlessHashOnlyHoldsPreserved": 48,
+  "blindSemanticHoldsAdjudicated": 55,
+  "callerlessHoldMismatches": 0,
+  "unselectedCellMismatches": 0,
+  "catalogs": 12,
+  "changedCatalogFiles": 11,
+  "changedCatalogPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "keyCountPerCatalog": 4165,
+  "keyOrderPreserved": true,
+  "nativeSpeakerApproval": false
+}

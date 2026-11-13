@@ -11,10 +11,22 @@ const records = require('../src/Utilities/Localization/server-messages.json');
 const ledger = require('../../docs/localization/source-followup-20261031.json');
 const ui = require('../../docs/localization/followup-ui-sources.json');
 const english = require('../../src/NzbDrone.Core/Localization/Core/en.json');
+const sourceEqualities = require('../../docs/localization/source-equalities.json');
 const root = path.resolve(__dirname, '../..');
 const digest = (value) => crypto.createHash('sha256').update(value).digest('hex');
 const digestText = (value) => digest(String(value).replace(/\r\n?/g, '\n'));
 const digestTextFile = (relativePath) => digestText(fs.readFileSync(path.join(root, relativePath), 'utf8'));
+
+function loadBidiSanitizer() {
+  const file = path.join(root, 'frontend/src/Utilities/String/isolateBidiText.js');
+  const { code } = transformSync(fs.readFileSync(file, 'utf8'), {
+    filename: file, babelrc: false, configFile: false,
+    plugins: ['@babel/plugin-transform-modules-commonjs']
+  });
+  const sandbox = { exports: {} };
+  vm.runInNewContext(code, sandbox, { filename: file });
+  return sandbox.exports.sanitizeBidiText;
+}
 
 function loadFunctions(relativePath, names, present) {
   const file = path.join(root, relativePath);
@@ -28,6 +40,9 @@ function loadFunctions(relativePath, names, present) {
       if (name === 'react' || name === 'prop-types') return require(name);
       if (name === 'Utilities/String/translate') return { __esModule: true, default: (id) => `localized:${id}` };
       if (name === 'Utilities/String/translateServerMessage') return { __esModule: true, default: present };
+      if (name === 'Utilities/String/isolateBidiText') {
+        return { sanitizeBidiText: loadBidiSanitizer() };
+      }
       if (name.endsWith('.css') || name === 'Helpers/Props') return {};
       return () => null;
     }
@@ -50,7 +65,7 @@ function present(message) {
   return source.replace(/\{(value\d+)\}/g, (token, name) => `\u2068${match.tokens[name]}\u2069`);
 }
 
-test('new source ledger binds 69 absent keys and ten reused keys to current registries', () => {
+test('new source ledger translates 69 previously absent keys and retains ten reused keys', () => {
   assert.equal(ledger.newSourceIds.length, 69);
   assert.equal(new Set(ledger.newSourceIds).size, 69);
   assert.equal(ledger.newServerIds.length, 51);
@@ -77,24 +92,34 @@ test('new source ledger binds 69 absent keys and ten reused keys to current regi
   const wrapperAudit = serverInventory.sourceExtensions.find(({ id }) => id === '20261031-diagnostic-exception-wrappers');
   const registry = require('../../src/NzbDrone.Core/Localization/Core/ui-locales.json');
   const tags = ['es', 'zh-Hans', 'hi', 'de', 'ja', 'fr', 'pt-BR', 'ar', 'ko', 'zh-Hant', 'vi', 'id'];
-  let missing = 0;
+  let translated = 0;
   for (const locale of registry.locales.filter((entry) => tags.includes(entry.tag))) {
     const catalog = JSON.parse(fs.readFileSync(path.join(root, 'src/NzbDrone.Core/Localization/Core', `${locale.file}.json`), 'utf8'));
-    assert.equal(Object.keys(english).filter((id) => typeof catalog[id] === 'string' && catalog[id].trim()).length, 2955);
-    assert.equal(Object.keys(english).filter((id) => typeof catalog[id] !== 'string' || !catalog[id].trim()).length, 1146);
+    assert.equal(Object.keys(english).filter((id) => typeof catalog[id] === 'string' && catalog[id].trim()).length, 4165);
+    assert.equal(Object.keys(english).filter((id) => typeof catalog[id] !== 'string' || !catalog[id].trim()).length, 0);
     for (const id of ledger.newSourceIds) {
       assert.equal(typeof english[id], 'string', id);
-      assert.equal(Object.hasOwn(catalog, id), false, `${locale.tag}/${id}`);
-      missing++;
+      assert.equal(typeof catalog[id], 'string', `${locale.tag}/${id}`);
+      if (catalog[id] === english[id]) {
+        const equality = sourceEqualities.entries[locale.tag]?.[id];
+        assert.equal(equality?.category, 'native-equivalent', `${locale.tag}/${id}`);
+        assert.equal(equality.sourceFingerprint, digest(`${id}\0${english[id]}`), `${locale.tag}/${id}`);
+      }
+      translated++;
     }
     for (const id of wrapperAudit.sourceIds) {
       assert.equal(typeof english[id], 'string', id);
-      assert.equal(Object.hasOwn(catalog, id), false, `${locale.tag}/${id}`);
+      assert.equal(typeof catalog[id], 'string', `${locale.tag}/${id}`);
+      if (catalog[id] === english[id]) {
+        const equality = sourceEqualities.entries[locale.tag]?.[id];
+        assert.equal(equality?.category, 'native-equivalent', `${locale.tag}/${id}`);
+        assert.equal(equality.sourceFingerprint, digest(`${id}\0${english[id]}`), `${locale.tag}/${id}`);
+      }
     }
     for (const id of ledger.reusedSourceIds) assert.equal(typeof catalog[id], 'string', `${locale.tag}/${id}`);
   }
-  assert.equal(Object.keys(english).length, 4101);
-  assert.equal(missing, 828);
+  assert.equal(Object.keys(english).length, 4165);
+  assert.equal(translated, 828);
   for (const [file, hash] of Object.entries(ledger.targetCatalogSha256)) assert.equal(digestTextFile(file), hash, file);
 });
 
@@ -115,7 +140,7 @@ test('book evidence translates fixed detail tooltips and preserves observed/prov
 test('grab-error tooltip uses the bounded presenter without translating opaque diagnostics or action labels', () => {
   const { getDownloadTooltip } = loadFunctions('frontend/src/InteractiveSearch/InteractiveSearchRow.js', ['getDownloadTooltip'], present);
   const raw = "This torrent is already present in client/{value1} as 'book/العربية'.";
-  assert.equal(getDownloadTooltip(false, false, raw, false), 'موجود في \u2068client/{value1}\u2069: \u2068book/العربية\u2069');
+  assert.equal(getDownloadTooltip(false, false, present(raw), false, true), 'موجود في \u2068client/{value1}\u2069: \u2068book/العربية\u2069');
   const provider = 'Downloading';
   assert.equal(getDownloadTooltip(false, false, provider, false), provider);
   assert.equal(getDownloadTooltip(false, true, raw, false), 'localized:AddedToDownloadedQueue');

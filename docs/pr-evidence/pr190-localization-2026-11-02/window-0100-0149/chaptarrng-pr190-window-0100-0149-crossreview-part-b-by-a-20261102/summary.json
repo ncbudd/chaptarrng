@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "review": "Independent exact-head cross-review of ChaptarrNG PR #190 W100–149 part B, locales pt-BR/ar/ko/zh-Hant/vi/id",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequestVerification": {
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "verifiedAtUtc": "2026-11-02 11:29:01 UTC"
+  },
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "primaryPacket": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-b-20261102/review.jsonl",
+    "sha256": "ed41b93f5abddbca9d5560bef1b946075d41a08b429d3c868b9ef2e5da27ab0e",
+    "rows": 300
+  },
+  "scope": {
+    "sourcePositions": [
+      100,
+      149
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 300
+  },
+  "counts": {
+    "accepted": 296,
+    "missed": 3,
+    "refined": 1
+  },
+  "countsByLocale": {
+    "pt-BR": {
+      "accepted": 50
+    },
+    "ar": {
+      "accepted": 50
+    },
+    "ko": {
+      "accepted": 50
+    },
+    "zh-Hant": {
+      "accepted": 50
+    },
+    "vi": {
+      "accepted": 46,
+      "missed": 3,
+      "refined": 1
+    },
+    "id": {
+      "accepted": 50
+    }
+  },
+  "crossReviewRecommendations": 4,
+  "primaryTargetsReattested": 27,
+  "primaryProposalsAcceptedUnchanged": 26,
+  "primaryProposalsRefined": 1,
+  "primaryProposalsRejected": 0,
+  "callerReferencesReattested": 4272,
+  "uniqueCallerFileLinePins": 705,
+  "uniqueCallerFiles": 25,
+  "inputCurrentCatalogCallerMismatches": 0,
+  "placeholderMismatches": 0,
+  "protectedLiteralMismatches": 0,
+  "holds": 0,
+  "noops": 0,
+  "blockers": [],
+  "nativeSpeakerApproval": false,
+  "missedCurrentIssues": [
+    {
+      "sourcePosition": 120,
+      "sourceId": "provider.field.f5cfc4f47114e",
+      "locale": "vi",
+      "target": "Hồ sơ chất lượng dùng khi nhập sách nói từ danh sách này.",
+      "targetSha256": "159c778e984313b293ca2aecc787fcb95524c8e31736ff10e2dd09af6f7de06d"
+    },
+    {
+      "sourcePosition": 124,
+      "sourceId": "provider.field.f6126605f5ec8",
+      "locale": "vi",
+      "target": "Thư mục gốc dùng khi nhập sách nói từ danh sách này.",
+      "targetSha256": "845b7547cc434b4893dcf29a77ec8dc7f0c8dce346e2b78183458bd1d5431493"
+    },
+    {
+      "sourcePosition": 126,
+      "sourceId": "provider.field.f59c7aadcca5d",
+      "locale": "vi",
+      "target": "Tùy chọn: các thẻ áp dụng khi nhập sách nói từ danh sách này.",
+      "targetSha256": "6caf6ff351d196b797d37543bb00dab2b065f002710302d928aa49e9f86d926f"
+    }
+  ],
+  "refinements": [
+    {
+      "sourcePosition": 129,
+      "sourceId": "provider.field.f50daa23e691a",
+      "locale": "vi",
+      "target": "ID bộ sách trên Goodreads",
+      "targetSha256": "f612c7bb06cb39a1ca12e2513b9927794af6dae0642430bb25762cbb6b1fd13d"
+    }
+  ],
+  "validationNotes": [
+    "The live PR was OPEN/DRAFT at the required head, and the current worktree tree was exact before review.",
+    "The primary packet checksums passed; all 300 source/current targets, hashes, exact-head catalog blobs, caller lines, placeholders, and protected literals re-attested with zero mismatches.",
+    "All 27 primary proposals were reviewed: 26 accepted unchanged and one Vietnamese candidate refined; three missed current Vietnamese term/consistency issues are recorded.",
+    "No repository/catalog changes, PR actions, tests, builds, scans, CI/workflow changes, releases, tags, or merges were made. Native-speaker approval is not claimed."
+  ]
+}

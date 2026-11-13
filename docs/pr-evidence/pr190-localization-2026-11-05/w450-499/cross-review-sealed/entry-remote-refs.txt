@@ -1,0 +1,3 @@
+16c809b4787d70616a1a296ab0d90cf17923ba86	refs/heads/codex/chaptarrng-localization-complete-20261031
+c83969e8137fa50a4780881e5b76bcb6eb44a6d0	refs/heads/main
+16c809b4787d70616a1a296ab0d90cf17923ba86	refs/pull/190/head

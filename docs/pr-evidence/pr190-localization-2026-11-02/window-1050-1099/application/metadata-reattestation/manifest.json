@@ -1,0 +1,41 @@
+{
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1913,
+      "sha256": "a5d4a0603e64b9e03855c941ea193727d8d34850085c5bdd8c7db835008c48c0"
+    },
+    {
+      "path": "attestation.json",
+      "bytes": 1868,
+      "sha256": "83972e229b967a0c66ad9797139b6e7347d0a943e7a24cead5560a3e7766619c"
+    },
+    {
+      "path": "build_attestation.py",
+      "bytes": 13865,
+      "sha256": "2a59eb98ebd39ae5501b08b57b6d1741f1320f70888bf919bd6af33d344eb144"
+    },
+    {
+      "path": "checksum-audit.jsonl",
+      "bytes": 5442,
+      "sha256": "8fe4f925e17f986b9fdd28acef7b7a8e98e138969693ccb56f42578385003240"
+    },
+    {
+      "path": "content-parity.jsonl",
+      "bytes": 204038,
+      "sha256": "1d6aa5c4c5e288be7537444d7218d7b63c18da3959c7ad771965a36821e45b40"
+    },
+    {
+      "path": "manifest-artifact-audit.jsonl",
+      "bytes": 6230,
+      "sha256": "a82e10a129777d3a8e2d3cc0f2dc2bc9ee718fb074db78b47f41079cea20788d"
+    },
+    {
+      "path": "pin-and-history-audit.json",
+      "bytes": 954,
+      "sha256": "7d6bb1bda3ba51c3e31d0b971fc0f6178026ea675cba36bc6cdfdc232d557257"
+    }
+  ]
+}

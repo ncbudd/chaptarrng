@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "application": "ChaptarrNG",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "W1187",
+  "sourceOrdinal": 1187,
+  "sourceId": "server.message.md764ed5e74b4",
+  "head": "00d37b25ce5534135c2dacaf6a84d9d15fe0bb0b",
+  "tree": "13e57e7826db4db86556f244fb066e4915022511",
+  "sourceRegistryProtectedLiterals": [],
+  "m4bClassification": "dynamic placeholder fallback, not protected source text",
+  "cellCount": 12,
+  "blindAcceptCurrent": 12,
+  "priorPrimaryAndCrossHolds": 12,
+  "priorHoldConflictsAdjudicated": 12,
+  "priorTargetHashesStillCurrent": 9,
+  "priorTargetHashesSupersededByAppliedResolution": 3,
+  "crossAuditDispositions": {
+    "accept-current": 12
+  },
+  "updateCount": 0,
+  "noOpCount": 12,
+  "holdCount": 0,
+  "placeholderMismatchCount": 0,
+  "numericMismatchCount": 0,
+  "markupMismatchCount": 0,
+  "protectedLiteralMismatchCount": 0,
+  "staticM4BInSelectedTargets": 0,
+  "priorHoldsReattested": 12,
+  "currentTargetHashesMatchLaterRootSelection": 12,
+  "candidateFreeVerifier": {
+    "exitCode": 0,
+    "output": "PASS 12 cells 2 caller pins server.message.md764ed5e74b4"
+  },
+  "blindVerifier": {
+    "exitCode": 0,
+    "output": "PASS: 12 exact-hash blind decisions; all accepted unchanged; dynamic placeholder preserved; no static M4B literal; exact live head/tree pinned"
+  },
+  "checksumCounts": {
+    "candidateFree": {
+      "verified": 4,
+      "missing": []
+    },
+    "blind": {
+      "verified": 6,
+      "missing": []
+    },
+    "priorWindow": {
+      "verified": 86,
+      "missing": [
+        "independent-cross-review/__pycache__/compare-primary-after-independent.cpython-314.pyc"
+      ]
+    },
+    "priorPrimary": {
+      "verified": 36,
+      "missing": []
+    },
+    "priorCross": {
+      "verified": 35,
+      "missing": [
+        "__pycache__/compare-primary-after-independent.cpython-314.pyc"
+      ]
+    },
+    "priorIndependentReview": {
+      "verified": 11,
+      "missing": []
+    },
+    "laterResolutionEvidence": {
+      "verified": 14,
+      "missing": []
+    },
+    "laterReview1": {
+      "verified": 3,
+      "missing": []
+    }
+  },
+  "priorEvidenceChecksumLimitations": [
+    "The prior top-level and independent-cross SHA256SUMS list reference one missing generated __pycache__/compare-primary-after-independent.cpython-314.pyc file; all other listed entries verified, and the primary and independent-review subpacket checksum lists passed."
+  ],
+  "repositoryFilesEdited": false,
+  "pullRequestEdited": false,
+  "testsBuildCIorBrowserRun": false,
+  "browserReview": "not performed",
+  "nativeSpeakerApproval": "not obtained",
+  "createdAtUtc": "2026-11-03T18:18:45.975086+00:00"
+}

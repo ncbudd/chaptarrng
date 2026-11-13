@@ -1,0 +1,54 @@
+{
+  "applicationPerformed": false,
+  "baseRef": "main",
+  "baseSha": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerContextLinesReattested": 25,
+  "callerReferencesReattested": 5,
+  "callerlessHashCellsPreserved": 24,
+  "callerlessSourceAndTargetHashesUnchanged": 24,
+  "callerlessTargetTextsIncluded": false,
+  "crossConfidenceCounts": {
+    "low": 3,
+    "moderate": 17
+  },
+  "crossDecisionCounts": {
+    "advance-to-qualified-native-review": 17,
+    "hold-for-qualified-native-review": 3
+  },
+  "currentTargetPreimagesReattested": 20,
+  "draftAtSeal": true,
+  "hashOnlyEvidencePinsReattested": 2,
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "holdRows": [
+    {
+      "locale": "ar",
+      "reason": "The recommendation keeps the reveal, but the postposed إلكتروني after كتاب جديد may read as a fragment rather than a natural Arabic ebook phrase. Keep it on hold until a qualified Arabic reviewer confirms grammar and comic timing.",
+      "sourceId": "ui.loading.newEbookSmell"
+    },
+    {
+      "locale": "ar",
+      "reason": "The recommendation changes the English fragment into an Arabic first-person present-tense sentence (أراوغ). I cannot confirm that this person and register fit the loading-message voice without a qualified Arabic reviewer; keep it on hold.",
+      "sourceId": "ui.loading.dodgeBooks"
+    },
+    {
+      "locale": "hi",
+      "reason": "The proposal uses बचते हुए, a dependent while-avoiding construction. I cannot establish that this is a natural standalone Hindi loading quip without a native reviewer, so keep the cell on hold.",
+      "sourceId": "ui.loading.dodgeBooks"
+    }
+  ],
+  "localeCount": 12,
+  "nativeReviewRequiredForAll20": true,
+  "nativeSpeakerSignoff": false,
+  "pullRequest": 190,
+  "recommendationCount": 20,
+  "repoOrPrModified": false,
+  "repository": "snapetech-org/ChaptarrNG",
+  "result": "PASS",
+  "sourceCallerCatalogPinsReattested": 16,
+  "sourceCount": 3,
+  "stateAtSeal": "OPEN",
+  "testsBuildsScansCiBrowserOrWorkflowChanges": false,
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "window": "creative-hold W1200-W1209"
+}

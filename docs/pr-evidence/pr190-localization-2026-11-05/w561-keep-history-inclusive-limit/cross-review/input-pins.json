@@ -1,0 +1,49 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "window": "W561",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "proposedSourceId": "server.message.m3a79390fb21e",
+  "currentEnglish": "NzbGet setting KeepHistory should be less than 25000",
+  "proposedEnglish": "NzbGet setting KeepHistory must not exceed 25000",
+  "currentEnglishSha256": "453c42aa8de536feb62fa62896136529ab6d16edf996511f0fb44b037ba2dc1f",
+  "proposedEnglishSha256": "3a79390fb21e5a7e7e4ea479d3d5f2643862a645f76312b3f107817fde29c5b4",
+  "primaryChecksumListSha256": "d3f72270e5e5a9c428b8d1f3f8401eb7ff75ee1a7cc12db23c4962a086109da5",
+  "primaryManifestSha256": "81e6e7fe436c9620743dbeaaf22bb416fb19f80a7f917a701d93929cee3be9dc",
+  "blindChecksumListSha256": "646fba281e0ac10be541cae9d4190fcb43767e7ebbc73984e05bbd18c6a9514e",
+  "blindManifestSha256": "ca4b3f4bb9f51ddba5643100fbaf2eed0ddbc12feefb8e11bb647e17bb3ce3b8",
+  "caller": {
+    "path": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs",
+    "fileSha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c",
+    "gitBlob": "a3a899a8b318a9739e03c7b34eea630b8ef418d1",
+    "predicateLine": 348,
+    "predicate": "value > 25000",
+    "currentMessageLine": 350,
+    "currentMessageId": "server.message.m453c42aa8de5",
+    "currentConditionText": "NzbGet setting KeepHistory should be less than 25000",
+    "value25000Accepted": true,
+    "valuesAbove25000Rejected": true,
+    "primaryContextSha256": "8b2ea641372c1a044241240918ad60ee4b64e04d604979a207c7d0449b1f61e1",
+    "blindContextWindowSha256": "cd5e270bb926a64ef7f37feb0102e5e198c1e51fffa85e11bdb53b0062642aa1"
+  },
+  "inputPaths": {
+    "primary": "../primary-review/",
+    "blind": "../blind-review/"
+  },
+  "proposalComparisonsByLocale": {
+    "es": "primary",
+    "zh-CN": "both-agree",
+    "hi": "both-agree",
+    "de": "blind",
+    "ja": "blind",
+    "fr": "blind",
+    "pt-BR": "primary",
+    "ar": "primary",
+    "ko": "both-agree",
+    "zh-TW": "both-agree",
+    "vi": "primary",
+    "id": "both-agree"
+  }
+}

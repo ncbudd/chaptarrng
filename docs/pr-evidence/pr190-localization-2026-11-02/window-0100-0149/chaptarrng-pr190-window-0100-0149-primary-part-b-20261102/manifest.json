@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "pullRequestState": {
+    "state": "OPEN",
+    "isDraft": true,
+    "mergeStateStatus": "CLEAN",
+    "headRefOid": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795"
+  },
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "currentMissingIdsCount": 1210,
+    "sliceStart": 100,
+    "sliceStopExclusive": 150,
+    "sliceCount": 50,
+    "sliceIds": [
+      "provider.field.f0efa2f6e6d2b",
+      "provider.field.f39bbc1d8b91b",
+      "provider.field.f0fe46e7d8d2a",
+      "provider.field.fffc595f7f1a9",
+      "provider.field.f40547e6a6702",
+      "provider.field.f1c419054d0a6",
+      "provider.field.ffd06a3b2e208",
+      "provider.field.f198ab7b8b868",
+      "provider.field.ff9db72ced1ee",
+      "provider.field.f3efeb5b0889f",
+      "provider.field.f275b6410b255",
+      "provider.field.f0e1e2d8486b6",
+      "provider.field.f8ae75fc385e8",
+      "provider.field.fa969d04ec2d0",
+      "provider.field.fef4618f47dc6",
+      "provider.field.f8cb711d03db7",
+      "provider.field.fa09f62eec6d8",
+      "provider.field.fdfc03b2059db",
+      "provider.field.faac2240a8e42",
+      "provider.field.f1a8f7d97f354",
+      "provider.field.f5cfc4f47114e",
+      "provider.field.fa837f9239f7c",
+      "provider.field.fe30f57f7c18f",
+      "provider.field.f0c83ef4d603a",
+      "provider.field.f6126605f5ec8",
+      "provider.field.f6407f6d3c82e",
+      "provider.field.f59c7aadcca5d",
+      "provider.field.f4e9aecfd3b92",
+      "provider.field.fbe17b52bf053",
+      "provider.field.f50daa23e691a",
+      "provider.field.fa207a3b75949",
+      "provider.field.f91bc6fc1d38a",
+      "provider.field.ffbbc0487f001",
+      "provider.field.f285fb519aa1a",
+      "provider.field.ffd272adc2f58",
+      "provider.field.f29b6b9e083cc",
+      "provider.field.f4891b0209fad",
+      "provider.field.f1ee0e50bc744",
+      "provider.field.fa4f2502db2e0",
+      "provider.field.fd296d5ee89d3",
+      "provider.field.f1ee868fd9557",
+      "provider.field.f70589413a3c9",
+      "provider.field.f21d73e148c35",
+      "provider.field.f8d223bd1b121",
+      "provider.field.fc2ff59e65c06",
+      "provider.field.f258d6cc199ae",
+      "provider.field.f7c6679a4c0b7",
+      "provider.field.ffb082a613681",
+      "provider.field.f43d5fbd565ae",
+      "provider.field.f5f2d90a6787f"
+    ]
+  },
+  "sourceCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "bytes": 312087,
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "keyCount": 4165
+  },
+  "targetCatalogs": {
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "f010cd8fe109fb57a6925502902180383fe993ea",
+      "sha256": "cf370a5dc5e985b0b784b1b35f658c9f3775ec3f51eb71985e8f0e15c01ac8b5",
+      "keyCount": 4165
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "45a9b34963c920b381f73879b7fbef23de3a0944",
+      "sha256": "682ac96e7d071de1b37263bc81c90f2a6589833ebab2404af5a34baf7330c1ef",
+      "keyCount": 4165
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "75d108f9cf2e13da8b43b722dd302ec9e8e30306",
+      "sha256": "36323207484b532742f3344484daa0eea044963f9389053cce2603b5958856d8",
+      "keyCount": 4165
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "c8ea7cf54310eab73ddb56de67ec24717acfc6a5",
+      "sha256": "81715464d379cb45594768510058daec1dee4febb312a7874e36cb2eab399c59",
+      "keyCount": 4165
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "daf15d59a089179b7086bbac739ac80fd8ef6c3f",
+      "sha256": "bf815642b96fa891bdc6bf1821765512c9a61bffdab5a10beccc0bf0396ca1e4",
+      "keyCount": 4165
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "11fccf03ba088884e1e52fbfa6276b0752eba633",
+      "sha256": "ac86dd1898efa605b1b08b2828de66a917f53dfe5408a6f160b383d0168f9d09",
+      "keyCount": 4165
+    }
+  },
+  "targetCells": 300,
+  "locales": [
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "priorWindows": [
+    {
+      "positions": [
+        0,
+        49
+      ],
+      "rowLevelEvidence": {
+        "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-semantic-20261102/primary-decisions.jsonl",
+        "sha256": "c481a5aacf8ce6b550c00a8baae964ad145ebe6ac639bd68bd10267e78788229",
+        "rows": 600,
+        "uniqueSourceIds": 50,
+        "listPositions": [
+          0,
+          49
+        ],
+        "matchesPinnedCurrentMissingIdSlice": true,
+        "overlapWithW100149": 0
+      },
+      "matchesPinnedCurrentList": true
+    },
+    {
+      "positions": [
+        50,
+        99
+      ],
+      "rowLevelEvidence": [
+        {
+          "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-a-20261102/review-cells.jsonl",
+          "sha256": "634aef6f0ea6e5ce512f0d9ee77939ae82fb219a9f118abe4953159e207b3ce3",
+          "rows": 300,
+          "uniqueSourceIds": 50,
+          "listPositions": [
+            50,
+            99
+          ],
+          "matchesPinnedCurrentMissingIdSlice": true,
+          "overlapWithW100149": 0
+        },
+        {
+          "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-b-20261102/review.jsonl",
+          "sha256": "9fffb8fb773c3f498c272cba018eb3d791f33021b07cae4f4e58643d0121b704",
+          "rows": 300,
+          "uniqueSourceIds": 50,
+          "listPositions": [
+            50,
+            99
+          ],
+          "matchesPinnedCurrentMissingIdSlice": true,
+          "overlapWithW100149": 0
+        }
+      ],
+      "matchesPinnedCurrentList": true
+    }
+  ],
+  "overlapChecks": {
+    "W100_149_uniqueIds": 50,
+    "overlapW0_49": 0,
+    "overlapW50_99": 0,
+    "sourcePositionOverlap": false
+  },
+  "callerEvidence": {
+    "references": 4272,
+    "uniqueSourceIds": 50,
+    "uniqueCallerFiles": 12,
+    "uniqueCallerLines": 705
+  },
+  "inputCellCount": 300,
+  "inputMismatchCount": 0
+}

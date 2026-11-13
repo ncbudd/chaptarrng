@@ -1,0 +1,42 @@
+{
+  "reviewerRole": "independent cross-reviewer",
+  "reviewType": "source-context-aware independent adjudication of all frozen cells and all primary recommendations",
+  "exactHead": "32686f13760d04de2bba00af47fc561e632741de",
+  "exactTree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+  "scope": {
+    "positions": [
+      200,
+      249
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "inputs": [
+    "English source catalog",
+    "12 target catalogs",
+    "provider-field source/caller registry",
+    "all 600 primary review rows",
+    "52 primary correction/refinement proposals",
+    "localized-ui-terms.json",
+    "protected-literal-integrity.jsonl"
+  ],
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryOrPrEdits": false,
+  "testsBuildsScansCiRun": false,
+  "workflowsTouched": false
+}

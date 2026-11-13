@@ -1,0 +1,40 @@
+{
+  "reviewerRole": "primary semantic reviewer",
+  "reviewType": "source-context-aware language and terminology review of all frozen current cells",
+  "exactHead": "e9de5ac22aba7780f4ff55b3fd903731fea89269",
+  "exactTree": "1c8212fcc3623723b306865ac4d7f765ecf72a22",
+  "scope": {
+    "positions": [
+      350,
+      399
+    ],
+    "cells": 600,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ]
+  },
+  "inputSources": [
+    "English source catalog",
+    "12 target catalogs",
+    "provider-field source/caller registry",
+    "exact current C# callsites"
+  ],
+  "protectedLiteralPolicy": "Keep source product names, acronyms, literal URL schemes/paths, and numeric constraints exact; allow standard script transliterations of Twitter in Hindi, Arabic, and Japanese; allow ordinary technical vocabulary to follow established locale terminology.",
+  "uiTermPolicy": "No source in this window uses a separate localized UI-term comparison.",
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryOrPrEdits": false,
+  "testsBuildsScansCiRun": false,
+  "workflowsTouched": false
+}

@@ -1,0 +1,7 @@
+# ChaptarrNG PR #190 W600–649 exact-head localization review
+
+The primary packet and distinct independent cross-review are pinned to PR #190 head `f405a6256c2661e48e412ac4471ce70411baf98c` / tree `fe3272572b68460f1d8c8083a5dcc44cd3307b74`. They cover 600 cells (50 source IDs × 12 locales). The cross-review reattested 64 caller references across 42 files, the W599 boundary, and the next W650 boundary. All 600 source/current target hashes matched the live catalog. Each locale has the same 4,165-key set.
+
+Root adjudication applies 201 exact-hash corrections/refinements: 198 cross-reviewed primary proposals plus three independent corrected replacements. The three W621 primary targets incorrectly changed “Category is recommended” into unrelated questions about which books to monitor. The exact qBittorrent caller emits a warning for an absent audiobook category; the final Spanish, Japanese, and Vietnamese targets say that a category should be specified. There are no held cells. All final target placeholders, markup, and protected literals pass; 15 current protected-literal misses were corrected.
+
+`root-adjudication.jsonl` records all 600 cell dispositions; the exact apply plan and application readback accompany it. The primary packet’s current-catalog input manifest was verified against the pinned tree; the independent review packet was checksummed as supplied. Native-speaker approval remains outstanding. No tests, builds, scans, CI, workflow edits, releases, tags, or merges were performed.

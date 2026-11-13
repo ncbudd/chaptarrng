@@ -1,0 +1,168 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerReferences": 63,
+  "candidateCount": 236,
+  "cellCount": 600,
+  "counts": {
+    "accept-current": 364,
+    "propose-correction": 234,
+    "propose-refinement": 2
+  },
+  "currentMissingIdsFileSha256": "bb141161e9f34ff50d1260554ac7d35be9175e009ac9459001108c5403fb445e",
+  "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "files": [
+    {
+      "bytes": 12616,
+      "path": "INPUT-SHA256SUMS",
+      "sha256": "22ea3854fd56d299ff148e3dd18f86c8aec28e40dc63711ae0e436ccb3b3b346"
+    },
+    {
+      "bytes": 2828,
+      "path": "README.md",
+      "sha256": "a9f1ca0be644942c77ae8c897ed0616fd335b78a685f5193ba12049c65b00949"
+    },
+    {
+      "bytes": 6024,
+      "path": "caller-context-summary.json",
+      "sha256": "eb11aad9e935b7c10bd677797da838771242472c8a333b41f4b6a8a8892666a6"
+    },
+    {
+      "bytes": 95236,
+      "path": "caller-context.jsonl",
+      "sha256": "0ff50ec011555d7e0f70835475d1083d7c899dcecc131cabf5f33a5725c7a737"
+    },
+    {
+      "bytes": 660553,
+      "path": "correction-candidates.jsonl",
+      "sha256": "97eecf703fc52466b2b70205c930f93c397428193c791831b038a45e5ee17413"
+    },
+    {
+      "bytes": 41440,
+      "path": "current-missing-ids.json",
+      "sha256": "bb141161e9f34ff50d1260554ac7d35be9175e009ac9459001108c5403fb445e"
+    },
+    {
+      "bytes": 4996,
+      "path": "final-reattestation.json",
+      "sha256": "7d97d44fd83ab055e029fbbcaab1d54f91f40fa451e16286fc523b97b8e40c1e"
+    },
+    {
+      "bytes": 15684,
+      "path": "finalize_packet.py",
+      "sha256": "f76772a29b7d821dd2e439be794268da056a7b2ffc86c5d037e57f0ab405f388"
+    },
+    {
+      "bytes": 827107,
+      "path": "input-cells.jsonl",
+      "sha256": "767a2aa0c8b75dcada4a118b75562cee2358250d7035c0fa23da5d906ec5ba68"
+    },
+    {
+      "bytes": 29746,
+      "path": "input-manifest.json",
+      "sha256": "bfd2dba5ddec844343cfbe96c3f5b7529421389e215bde61f6fa4c659ce936b9"
+    },
+    {
+      "bytes": 31826,
+      "path": "make_review_plan.py",
+      "sha256": "53b6d60249f25d3176ddf7acfd3490cf328909a2a83c5020f3fee26ed44affb5"
+    },
+    {
+      "bytes": 4972,
+      "path": "manual-protected-literals.json",
+      "sha256": "f4349b6094a9f305290c401c0be96a7e1e716b113741d2049a229e4d921f11c6"
+    },
+    {
+      "bytes": 47108,
+      "path": "pipeline-caller-context.jsonl",
+      "sha256": "3f59b3093a3f7a7c816e881d13a8c914208ea2b43f9a80bf6fa6a299afd97e2a"
+    },
+    {
+      "bytes": 1349,
+      "path": "prepare-reattestation.json",
+      "sha256": "dd9300901bd7777b153e78187e452233bc26105e6457b04fb74d175aa5e88713"
+    },
+    {
+      "bytes": 18263,
+      "path": "prepare_input.py",
+      "sha256": "e392f49d3eba736906f210d2c2571aa2ebc4be65af9425fcb67c6ee267078e95"
+    },
+    {
+      "bytes": 1694433,
+      "path": "primary-review-ledger.jsonl",
+      "sha256": "b26a40ecee2b7f1857a3871b6b80c5663daab49887b94004d6aec98ac4e32bff"
+    },
+    {
+      "bytes": 16918,
+      "path": "prior-disposition-boundary.json",
+      "sha256": "ff47f0fd186f6e787bccc27d446e273acb6c4ca79c9b0ee597d88a388ba1a1eb"
+    },
+    {
+      "bytes": 6528449,
+      "path": "prior-disposition-hashes.jsonl",
+      "sha256": "ec785969d7243f28d3c78ef0568159637e3afb209106dc2d8ce3d085b046daf9"
+    },
+    {
+      "bytes": 590513,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "9b3e8fde60a99c21244a6755e4f618b38e6a58e6ee1e6d7e55b3bd8a0706ec1c"
+    },
+    {
+      "bytes": 7434,
+      "path": "reattest_prior.py",
+      "sha256": "47077fe1969094a35b4d530cf1b0b4bb785f191328bf23f56dd3e14830a4b05d"
+    },
+    {
+      "bytes": 1962560,
+      "path": "review-plan.json",
+      "sha256": "1ce94d5d0eb049e9cfdebf58a1a5a773bc647bc594e44d344d31e493fd3723c7"
+    },
+    {
+      "bytes": 29992,
+      "path": "source-slice.jsonl",
+      "sha256": "5eaef6a1e9916f932c51cae24736ac5490e22beda1e7a80660a67d892ce76b12"
+    },
+    {
+      "bytes": 2341,
+      "path": "summary.json",
+      "sha256": "ec2f20c9ed11cc9a12bf2e0d4185abeb73cb389dbbd168d9ad8cf6efe2e20bb5"
+    },
+    {
+      "bytes": 9187,
+      "path": "w799-boundary-reattestation.jsonl",
+      "sha256": "d798e52dd58fa7a82ca662b8359be36d41480e851ea3b021997c95715c457cdf"
+    }
+  ],
+  "genericPipelineReferences": 76,
+  "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "nativeSpeakerApproval": false,
+  "positions": [
+    800,
+    849
+  ],
+  "priorDispositionCellCount": 9600,
+  "priorOverlapCount": 0,
+  "priorPacketFileCount": 19,
+  "priorWindowCount": 16,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "schemaVersion": 1,
+  "sourceCount": 50,
+  "sourceIdListSha256": "6328f7e2287bbecfb477f4571547f93ae136f251bb5808a6fbbe2804d1076b01",
+  "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "w799BoundaryMatches": 12,
+  "window": "W800-W849"
+}

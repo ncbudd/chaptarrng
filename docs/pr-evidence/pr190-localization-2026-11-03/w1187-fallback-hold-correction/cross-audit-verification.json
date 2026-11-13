@@ -1,0 +1,75 @@
+{
+  "pass": true,
+  "livePR": {
+    "state": "OPEN",
+    "draft": true,
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "00d37b25ce5534135c2dacaf6a84d9d15fe0bb0b",
+    "tree": "13e57e7826db4db86556f244fb066e4915022511"
+  },
+  "cells": 12,
+  "priorHoldsReattested": 12,
+  "priorTargetHashesStillCurrent": 9,
+  "priorTargetHashesSupersededByAppliedResolution": 3,
+  "blindAcceptCurrent": 12,
+  "crossAuditDispositions": {
+    "accept-current": 12
+  },
+  "plan": {
+    "updates": 0,
+    "noOps": 12,
+    "holds": 0
+  },
+  "m4bClassification": "dynamic placeholder fallback, not protected source text",
+  "protectedLiteralMismatches": 0,
+  "candidateFreeVerifier": "PASS",
+  "blindVerifier": "PASS",
+  "checksums": {
+    "candidateFree": {
+      "verified": 4,
+      "missing": []
+    },
+    "blind": {
+      "verified": 6,
+      "missing": []
+    },
+    "priorWindow": {
+      "verified": 86,
+      "missing": [
+        "independent-cross-review/__pycache__/compare-primary-after-independent.cpython-314.pyc"
+      ]
+    },
+    "priorPrimary": {
+      "verified": 36,
+      "missing": []
+    },
+    "priorCross": {
+      "verified": 35,
+      "missing": [
+        "__pycache__/compare-primary-after-independent.cpython-314.pyc"
+      ]
+    },
+    "priorIndependentReview": {
+      "verified": 11,
+      "missing": []
+    },
+    "laterResolutionEvidence": {
+      "verified": 14,
+      "missing": []
+    },
+    "laterReview1": {
+      "verified": 3,
+      "missing": []
+    }
+  },
+  "outputChecksumList": {
+    "verified": 11,
+    "missing": []
+  },
+  "priorEvidenceChecksumLimitations": [
+    "The prior top-level and independent-cross SHA256SUMS list reference one missing generated __pycache__/compare-primary-after-independent.cpython-314.pyc file; all other listed entries verified, and the primary and independent-review subpacket checksum lists passed."
+  ],
+  "nativeSpeakerApproval": "not obtained",
+  "browserReview": "not performed",
+  "repositoryOrPRFilesEdited": false
+}

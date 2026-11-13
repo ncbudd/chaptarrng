@@ -56,8 +56,9 @@ function checkServerMessageCatalogs(root, { allowPending = false } = {}) {
   let pendingTargets = 0;
   const tokens = (value) => (value.match(/\{[^{}]+\}/g) || []).sort();
 
-  const expectedRuntime = inventory.records.map(({ id, source, parameters, patterns }) => ({
-    id, source, parameters, patterns
+  const expectedRuntime = inventory.records.map(({ id, source, parameters, patterns, explicitOnly }) => ({
+    id, source, parameters, patterns,
+    ...(explicitOnly ? { explicitOnly } : {})
   }));
 
   if (JSON.stringify(runtime) !== JSON.stringify(expectedRuntime)) {

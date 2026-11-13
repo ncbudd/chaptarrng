@@ -1,0 +1,18 @@
+{
+  "sealed": true,
+  "sealedDate": "2026-11-03",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0",
+  "candidateFreeInputManifestSha256": "05e9feddecb58acd2b4897adadf962f9ea774cf21fef10428f6885c2c9e29382",
+  "inputPacketSha256SumsFileSha256": "67b758004fcfca76b0e0d9292d4161b274f888c52ff20416b34443faa336ebc6",
+  "blindLedger": "blind-ledger.jsonl",
+  "blindLedgerSha256": "20467796ed07ca93a7ce4decb783ba5ec99843ed652f8c650650b2d711cae28f",
+  "blindLedgerRows": 37,
+  "blindSummary": "blind-summary.json",
+  "blindSummarySha256": "c2247ffafee5de841dc914ede72acd4cb61b16a8c7130ff811e61bc24c102474",
+  "priorReviewLedgersOrHoldReasonsConsultedBeforeSeal": false,
+  "priorReviewLedgersOrHoldReasonsConsultedAfterSeal": false,
+  "sealScope": "Independent machine semantic observations over candidate-free supplied input only; no release approval."
+}

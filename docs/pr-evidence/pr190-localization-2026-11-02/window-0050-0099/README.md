@@ -1,0 +1,7 @@
+# ChaptarrNG PR #190 W50–99 root application bundle
+
+This bundle combines the 600-cell primary packet, independent reviews for both six-locale partitions, exact source/current target pins, and the final 43-row apply plan at PR head `22e3dc28193113e29d256307b4c75b856d7cd84f` / tree `605a751ae9c3b454f4189dd89d021a5976e95237`. The source slice covers positions 50–99 of the frozen `currentMissingIds` list.
+
+Part A cross-review accepted 23 primary proposals, rejected one unrelated Hindi proposal while retaining its accurate current URL label, and found two missed issues (Hindi danda punctuation and Spanish field-label capitalization). Part B cross-review accepted seven primary proposals, refined one Traditional Chinese target, and found ten missed issues. Root review further adjusted the Vietnamese unique-books description to improve word order while keeping the unlimited-zero rule.
+
+The final exact-hash plan changes 43 catalog cells across the twelve locales; all other 557 cells in this window remain unchanged. All 43 targets were applied and read back by exact hash in `readback.jsonl`. Placeholder sets and current/source hashes were re-attested. All catalogs retain 4,165 keys with exact English key-set parity; no catalog ordering was changed. This machine-assisted semantic review is not native-speaker approval. No tests, builds, scans, CI, workflow changes, releases, tags, or merges were performed.

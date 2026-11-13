@@ -1,0 +1,118 @@
+{
+  "callerContextSha256": "aa3aa4f8069b66fc41456a4ea71119a4aaabe7fe399c63c2652c93d01dd42cbf",
+  "candidateFree": "candidate-free-cells.jsonl contains no suggested wording or decision fields.",
+  "candidateFreeCellsSha256": "e2b7edf7a485c9f9c7798e00484787008851b1fb808c8b9a2d44a6cc0628bc7e",
+  "catalogs": {
+    "ar": {
+      "gitBlob": "8c1486041a8a2119269433b8a4b314b69a8e6923",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "064282bd3f7a84087aff72a79ddfa5b4b9cf333f5fcd4085d717296173129ff9"
+    },
+    "de": {
+      "gitBlob": "db6c07bc115ad81da2d1e9f6cd5b093db769d108",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "21eaab7f5bb56c943487d7006354b965a4d0749d196030fa7f6ab0dd7e3d12fd"
+    },
+    "en": {
+      "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+    },
+    "es": {
+      "gitBlob": "917d7a5d6d627c62d0c767343118ae5c57e7b815",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "ac3dfd4e576b5579bb091b191f2f59a98c9707f357dac0a94e40a929be4574e2"
+    },
+    "fr": {
+      "gitBlob": "60c14db660921411b5d9f7a0e073be1c0617a887",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "61289bb8e01eec4c60a2f9e09f38aa9dc1d0f03730c74f66497553aa359702ea"
+    },
+    "hi": {
+      "gitBlob": "876c3ac7bd7f8a7ddc2111d98abd3ac686073a48",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "cfdd376b42cbaa387a647af88cd8a44af50ed60066fd199dac53ace82171ba48"
+    },
+    "id": {
+      "gitBlob": "cc6fec4e4e6678ed40e89aec05cdb81230baff01",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "d71b2a73c990a6dcf3cb8f5f899b0bf5507eaa4b8be5c33603b319cabf02359e"
+    },
+    "ja": {
+      "gitBlob": "9d8db41a323678b642a00dd349c8234a787fd61f",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "5066c260e82a97cc84b849a1d1c22d1c8f3994264fa4c08475ebee32a12ca86f"
+    },
+    "ko": {
+      "gitBlob": "461474c93aded61222100fb0345ebef71a9d6838",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "32f045c974f3c5d7b5bd9647ff96d0c9accad7471347bc138b4fd17a0a5116b5"
+    },
+    "pt-BR": {
+      "gitBlob": "5696559e4e6e2b44ad542c2c936f76f7b08ade2f",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "e7c540d2baf70243f22fe57c4cbfc742c7f53cbe26c458144fc634ca46e6f582"
+    },
+    "vi": {
+      "gitBlob": "e5e592fcab239b50836c0da9686223ac61a2599d",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "fec2e4d9f168267bee04a8d3fbdc0935930a75d484b389bd2a4abd346625f11a"
+    },
+    "zh-Hans": {
+      "gitBlob": "f5923256692791b9776df5147ea69608a78e1b45",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "ff37f3101e07d42103b2340c287adf3c0b8ff555d525eba684cd77831af506af"
+    },
+    "zh-Hant": {
+      "gitBlob": "29a5a7d816645e6643446bf911b7967689683544",
+      "keyCount": 4165,
+      "keySetMatchesEnglish": true,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "65cc6e2c9b7964e81e97dceacb9cfe2bf5f5273f8e41e094bd856da4dc12e52b"
+    }
+  },
+  "counts": {
+    "cells": 600,
+    "keysUncovered": 50,
+    "locales": 12,
+    "overlapCoreKeys": 0,
+    "priorDirectCoreKeyCount": 1160,
+    "priorSemanticDecisionRows": 31229,
+    "priorSemanticLedgerFiles": 102,
+    "sourceKeys": 50
+  },
+  "createdOnHost": "kspls0",
+  "exactHead": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "exactTree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "packet": "ChaptarrNG PR #190 full-Core W0-49 candidate-free inputs",
+  "placeholderRule": "Placeholder counters must match exactly before recommendation.",
+  "protectedLiteralRule": "Source technical/product literals retain exact spelling/case.",
+  "repoBranch": "codex/chaptarrng-localization-complete-20261031",
+  "repoStatus": "clean",
+  "repoWorktree": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-creative-holds-fresh-exact-20261103/repo",
+  "sourceSelectionSha256": "6c187cbcf531cae84b8cef619be14c32fb8ce317ce0c7044a3a290d95e016caa"
+}

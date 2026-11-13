@@ -1,0 +1,76 @@
+{
+  "exactHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "exactTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "files": [
+    {
+      "bytes": 2180,
+      "path": "README.md",
+      "sha256": "4faaf63ff3056131eb70b55fde3982ed9941b7cde03131786969f17b7361c3ab"
+    },
+    {
+      "bytes": 47901,
+      "path": "caller-pin-reattestation.jsonl",
+      "sha256": "6b0c37ddd81f83b30dd05d383b831895517b5c6de808d14c4583ecf6502f6715"
+    },
+    {
+      "bytes": 491530,
+      "path": "candidate-adjudication.jsonl",
+      "sha256": "c9279326fa9a6fdb299b6b11fba57e1297cbab27470db4ca6c6376d577440346"
+    },
+    {
+      "bytes": 846138,
+      "path": "cell-crossreview.jsonl",
+      "sha256": "04ce777b9c3f6d1468ea14c61ffc3de58c511b648167e34e751b7a75709d8ad5"
+    },
+    {
+      "bytes": 597793,
+      "path": "cell-readbacks.jsonl",
+      "sha256": "e7138415827c7870ad249ac3a94db4174baf85950b2d7b0c379e7b94034c8c74"
+    },
+    {
+      "bytes": 35398,
+      "path": "cross_review.py",
+      "sha256": "d04ea5c3404828c2f90423dbaaea604e79c3a41e526dd2600e53745199696317"
+    },
+    {
+      "bytes": 533,
+      "path": "live-pin-reattestation.json",
+      "sha256": "7e60b7b2f780c9458dc69fa59d841e0432975f2051c16c75be70a38cc8a2fa4f"
+    },
+    {
+      "bytes": 18296,
+      "path": "missed-corrections.jsonl",
+      "sha256": "2e88124355052c261dd38dfe3d7d0682175deae068eb80e22787308c833a921d"
+    },
+    {
+      "bytes": 34483,
+      "path": "pipeline-pin-reattestation.jsonl",
+      "sha256": "28cadcf640f1d0c9063153da4bceaba705f80094abcd90b4624caa9bd01e009a"
+    },
+    {
+      "bytes": 16136,
+      "path": "source-readbacks.jsonl",
+      "sha256": "4cc2b72d0252088fc3d69c1b01d004300147faf8cd4ce826e54460068c9c6fa4"
+    },
+    {
+      "bytes": 2024,
+      "path": "structural-reattestation.json",
+      "sha256": "02c8d223a5ed970f0a7291c597a4d19b24afdacb4d6a99397b359117c0c0fb6e"
+    },
+    {
+      "bytes": 3117,
+      "path": "summary.json",
+      "sha256": "92d8c82a65ae8242f0d448cf230210c35ef4117640e3413558470bb190708ebe"
+    },
+    {
+      "bytes": 19888,
+      "path": "w699-boundary-reattestation.jsonl",
+      "sha256": "0d154d51809a498290edaf58ab996959dff2bf24c5c2405aef361a3bbc381f7c"
+    }
+  ],
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "sourcePrimaryChecksumManifestSha256": "41b0308d2bbdd289e0c4835a1129f847befc22701c3e0dc38f9ef9c3eebfb363",
+  "sourcePrimaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0700-0749-primary-20261102"
+}

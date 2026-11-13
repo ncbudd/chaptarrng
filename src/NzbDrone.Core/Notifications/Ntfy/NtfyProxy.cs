@@ -6,6 +6,7 @@ using NLog;
 using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Ntfy
 {
@@ -85,26 +86,26 @@ namespace NzbDrone.Core.Notifications.Ntfy
                     if (!settings.AccessToken.IsNullOrWhiteSpace())
                     {
                         _logger.Error(ex, "Invalid token");
-                        return new ValidationFailure("AccessToken", "Invalid token");
+                        return NzbDroneValidationFailure.ForMessage("AccessToken", "Invalid token", "server.message.m086efea7640e");
                     }
 
                     if (!settings.UserName.IsNullOrWhiteSpace() && !settings.Password.IsNullOrWhiteSpace())
                     {
                         _logger.Error(ex, "Invalid username or password");
-                        return new ValidationFailure("UserName", "Invalid username or password");
+                        return NzbDroneValidationFailure.ForMessage("UserName", "Invalid username or password", "server.message.m87703d685945");
                     }
 
                     _logger.Error(ex, "Authorization is required");
-                    return new ValidationFailure("AccessToken", "Authorization is required");
+                    return NzbDroneValidationFailure.ForMessage("AccessToken", "Authorization is required", "server.message.m66985c5dac1d");
                 }
 
                 _logger.Error(ex, "Unable to send test message");
-                return new ValidationFailure("ServerUrl", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("ServerUrl", "Unable to send test message", "server.message.m1041bbcba071");
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message");
-                return new ValidationFailure("", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("", "Unable to send test message", "server.message.m1041bbcba071");
             }
 
             return null;

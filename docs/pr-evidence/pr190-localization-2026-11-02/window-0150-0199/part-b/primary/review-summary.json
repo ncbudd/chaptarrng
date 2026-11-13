@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "0117311b672af8d828fb45bad7e6026763b201da",
+  "exactTree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "scope": {
+    "positions": [
+      150,
+      199
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 300
+  },
+  "input": {
+    "path": "input-cells.jsonl",
+    "sha256": "e75c1217126c27eaa1a277ca54e4656ab0f496e05d36e4b8bc3d14d31bf8cd89"
+  },
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f"
+  },
+  "sourceFollowup": {
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "positions": [
+      150,
+      199
+    ],
+    "overlapWithEarlierWindows": 0
+  },
+  "registry": {
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55"
+  },
+  "callerPins": {
+    "sourceIds": 50,
+    "callerRefs": 96,
+    "uniqueFiles": 15,
+    "mismatches": 0,
+    "allAttestedAtHead": true
+  },
+  "preflight": {
+    "liveState": "OPEN",
+    "isDraft": true,
+    "liveHeadVerified": true,
+    "worktreeClean": true,
+    "worktreeTree": "a6500c8078f193af52555398525ec6f832241fd0",
+    "priorPacketSumsVerified": true
+  },
+  "counts": {
+    "accept-current": 264,
+    "propose-correction": 17,
+    "propose-refinement": 19,
+    "hold": 0
+  },
+  "perLocale": {
+    "pt-BR": {
+      "accept-current": 44,
+      "propose-correction": 4,
+      "propose-refinement": 2,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 45,
+      "propose-correction": 4,
+      "propose-refinement": 1,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 45,
+      "propose-correction": 3,
+      "propose-refinement": 2,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 42,
+      "propose-correction": 1,
+      "propose-refinement": 7,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 44,
+      "propose-correction": 2,
+      "propose-refinement": 4,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 44,
+      "propose-correction": 3,
+      "propose-refinement": 3,
+      "hold": 0
+    }
+  },
+  "placeholderMismatches": 0,
+  "protectedLiteralMismatches": 0,
+  "review": {
+    "path": "review-cells.jsonl",
+    "rows": 300,
+    "sha256": "2276fb9b0f88b9d8d2b0da0c5523a3afc5ac14fb9597c9f3e3ed6ba5d182d916"
+  },
+  "candidates": {
+    "path": "correction-candidates.jsonl",
+    "rows": 36,
+    "sha256": "42bdcccb4d9d89491e57fdcc1c13052c5763f29f583ac02a753fe6dfecbfa0ac"
+  },
+  "protectedLiteralIntegrity": {
+    "path": "protected-literal-integrity.jsonl",
+    "rows": 300,
+    "mismatches": 0,
+    "sha256": "b8231be8e157f0cf47070bf2f3d0428ef641cd87fe5dd636d45e3044e562663a"
+  }
+}

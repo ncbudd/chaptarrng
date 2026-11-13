@@ -1,0 +1,290 @@
+{
+  "artifactCountExcludingManifestAndSums": 30,
+  "artifacts": [
+    {
+      "bytes": 6891,
+      "path": "README.md",
+      "sha256": "c04af52df8ec8b5acb1caab9748c7aadd74bc16918f4ed96c54abca381896c23"
+    },
+    {
+      "bytes": 321,
+      "path": "caller-context-summary.json",
+      "sha256": "278df0bf73240f148e0fce02d5345b688086bee977eca74bc918d37ffbf11690"
+    },
+    {
+      "bytes": 84549,
+      "path": "caller-context.jsonl",
+      "sha256": "5416aa6437e8005bbf14359e49d66639ccb082659543a7a0921fafda5e2e6ed0"
+    },
+    {
+      "bytes": 220262,
+      "path": "correction-candidates.jsonl",
+      "sha256": "bdee9c866ab5637b41de951af0c8a14686120a249ab6642c3ea0609f4fcb05d3"
+    },
+    {
+      "bytes": 791,
+      "path": "final-reattestation.json",
+      "sha256": "94359c9da2bd5a93685a950b9000a773ecf0be6f8caa6ed0161c46edcac5584e"
+    },
+    {
+      "bytes": 41748,
+      "path": "holds.jsonl",
+      "sha256": "9bfd14cfee9c167854eae7fe69bf5bf276993c7175f8f34d3332bcacfbfe6934"
+    },
+    {
+      "bytes": 5600,
+      "path": "independent-focus-review.json",
+      "sha256": "9d828e23ac34447ecce9275725d2b47e7a674a54804c89ff939254a7cedac27e"
+    },
+    {
+      "bytes": 860903,
+      "path": "input-cells.jsonl",
+      "sha256": "2d03edc0b743477270b211e064f6eef364b703268295dc831f2aa545e8ec3ac3"
+    },
+    {
+      "bytes": 12842,
+      "path": "input-manifest.json",
+      "sha256": "6afd5ddda8357bc699b823fb7e3e0639ee1e5a4f045f0380032f2a10b0d40a02"
+    },
+    {
+      "bytes": 1213,
+      "path": "internal-terminology-references.json",
+      "sha256": "f57d69d19150f112bde778545cd8a016ba70e555d81195ddc2462b9debf0c7bf"
+    },
+    {
+      "bytes": 556680,
+      "path": "language-audit.jsonl",
+      "sha256": "9a9738b4ae3df9c89f066cc9f662954ed13eccd9f3dfeedb1b970218f33b2dcb"
+    },
+    {
+      "bytes": 6038,
+      "path": "loading-message-pipeline-context.jsonl",
+      "sha256": "919c5ea1cb81d54446667613441824e1a2fb3765924ddce18343b382ac1ce172"
+    },
+    {
+      "bytes": 2997,
+      "path": "locale-formality-review.json",
+      "sha256": "729ce03f93d31a824cd5963cc581fd1ddbc5865e459df60acb6a4bb03753965c"
+    },
+    {
+      "bytes": 65576,
+      "path": "make_packet.py",
+      "sha256": "1bd574808f95f117ffa405200f128204e656851fb1603c02641dba0212ecefc5"
+    },
+    {
+      "bytes": 18961,
+      "path": "pinned-files.json",
+      "sha256": "a98393bbf8ac80ffdc615917fad9ca6ef9904ba14d83cc045ac526d8eb304c2c"
+    },
+    {
+      "bytes": 12353599,
+      "path": "prior-dispositions-through-W999.jsonl",
+      "sha256": "3d5d8905051d6e93a3b30ff43658575af3ef820075c652621fd09f5f0b143ab4"
+    },
+    {
+      "bytes": 1594,
+      "path": "prior-review-evidence-pins.json",
+      "sha256": "3f8320d10d163e5ac1328411eee628c29a4a06a75c6b02d4a589c82077531690"
+    },
+    {
+      "bytes": 542942,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "2cb6398ee17377b24e7bef17e30587fedcb3ed4d019fc7000caa398f9d13e84c"
+    },
+    {
+      "bytes": 12632,
+      "path": "provider-option-pipeline-context.jsonl",
+      "sha256": "94c911e0818bd481d8d0fdbf98ae2d87ab2382787df8f88c904b8c2499d7393c"
+    },
+    {
+      "bytes": 143619,
+      "path": "refinement-candidates.jsonl",
+      "sha256": "9f49c29dd394e53872714201c2037bdfbf95bfe350a7141d5c57477db74b9bbc"
+    },
+    {
+      "bytes": 2481858,
+      "path": "review-cells.jsonl",
+      "sha256": "09212ecb43b54f2e66b6ee643fc6d2aa12ac171ec417e32eff5b76ecd7aaa6d1"
+    },
+    {
+      "bytes": 3353,
+      "path": "selected-queue-window.json",
+      "sha256": "cecba2082de2da99c7e0f0c9a5a94d1dcb1d793da74006870ebc5db4a7d8b4f6"
+    },
+    {
+      "bytes": 48096,
+      "path": "server-message-pipeline-context.jsonl",
+      "sha256": "1cbe8b6ec963f5a381e0cad1f4413c31551413f4013a0506641836229adf7176"
+    },
+    {
+      "bytes": 8039,
+      "path": "snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "fcc4df5d8e480680bca3bb71e3721906a3192bfe3b17157a2fd0eab7b3dc80cc"
+    },
+    {
+      "bytes": 8041,
+      "path": "snapshots/final-seal-all-pr-heads.json",
+      "sha256": "7ef68beae0c193aa39c4f6625f7af4aca2e81dfa53b931c46f7f0d1fb7bd2de8"
+    },
+    {
+      "bytes": 8046,
+      "path": "snapshots/start-all-pr-heads.json",
+      "sha256": "5df2a3adb040531400c73c2fe176f280bfe1aba413ba9b5fc04f534ca21c8e12"
+    },
+    {
+      "bytes": 53978,
+      "path": "source-slice.jsonl",
+      "sha256": "195919ac346c6734599fb456ec52c3883e6f961c78df2e8432b0ebcc16efde6b"
+    },
+    {
+      "bytes": 2709,
+      "path": "summary.json",
+      "sha256": "040084f85ab0794e3921738951f0e429996516acbb46207fba4f1314ec0d0b4e"
+    },
+    {
+      "bytes": 7723,
+      "path": "w1050-forward-boundary.json",
+      "sha256": "186e4f6e869329f527301c10b029ac9f5214b6be9bb2beb2ebd5c21d2a92f54e"
+    },
+    {
+      "bytes": 13285,
+      "path": "w999-boundary-reattestation.json",
+      "sha256": "5d59f2bffe5d44da3d13fc1db5673cf2df78a48d26169b952b02057c7dc88e44"
+    }
+  ],
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "finalHeadReattestation": {
+    "path": "snapshots/final-seal-all-pr-heads.json",
+    "queryCompletedUtc": "2026-11-02T22:06:09.017401+00:00",
+    "queryStartedUtc": "2026-11-02T22:06:07.918510+00:00"
+  },
+  "liveHeadSnapshots": [
+    "snapshots/start-all-pr-heads.json",
+    "snapshots/after-source-selection-all-pr-heads.json",
+    "snapshots/final-seal-all-pr-heads.json"
+  ],
+  "packet": "ChaptarrNG PR #190 primary localization review W1000-W1049",
+  "schemaVersion": 1,
+  "sealedAtUtc": "2026-11-02T22:06:09.018399+00:00",
+  "summary": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "currentProtectedLiteralFailureCells": 0,
+    "directCallerGaps": 0,
+    "directCallerReferences": 58,
+    "dispositionCounts": {
+      "accept-current": 506,
+      "correction": 50,
+      "hold": 11,
+      "refinement": 33
+    },
+    "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+    "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+    "finalProtectedLiteralFailureCells": 0,
+    "icuMismatchCells": 0,
+    "independentFocusCells": 348,
+    "limitations": "Static machine-assisted review; no native speaker, browser, runtime, or external dictionary approval is claimed.",
+    "localeCellCount": 600,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "markupMismatchCells": 0,
+    "nativeSpeakerApproval": false,
+    "nativeSpeakerReviewOutstanding": true,
+    "overallConfidence": "moderate",
+    "perLocaleDispositionCounts": {
+      "ar": {
+        "accept-current": 43,
+        "hold": 2,
+        "refinement": 5
+      },
+      "de": {
+        "accept-current": 47,
+        "correction": 3
+      },
+      "es": {
+        "accept-current": 39,
+        "correction": 8,
+        "refinement": 3
+      },
+      "fr": {
+        "accept-current": 43,
+        "correction": 6,
+        "refinement": 1
+      },
+      "hi": {
+        "accept-current": 38,
+        "correction": 5,
+        "hold": 1,
+        "refinement": 6
+      },
+      "id": {
+        "accept-current": 39,
+        "correction": 2,
+        "hold": 2,
+        "refinement": 7
+      },
+      "ja": {
+        "accept-current": 43,
+        "correction": 2,
+        "hold": 1,
+        "refinement": 4
+      },
+      "ko": {
+        "accept-current": 39,
+        "correction": 9,
+        "hold": 1,
+        "refinement": 1
+      },
+      "pt-BR": {
+        "accept-current": 44,
+        "correction": 5,
+        "refinement": 1
+      },
+      "vi": {
+        "accept-current": 43,
+        "correction": 4,
+        "hold": 2,
+        "refinement": 1
+      },
+      "zh-Hans": {
+        "accept-current": 44,
+        "correction": 3,
+        "hold": 1,
+        "refinement": 2
+      },
+      "zh-Hant": {
+        "accept-current": 44,
+        "correction": 3,
+        "hold": 1,
+        "refinement": 2
+      }
+    },
+    "placeholderMismatchCells": 0,
+    "priorDispositionRowsThroughW999": 12000,
+    "priorLiveTargetsDifferingFromFinalHash": 195,
+    "priorLiveTargetsMatchingFinalHash": 11805,
+    "priorW950W999AdjudicationRows": 182,
+    "priorW950W999CrossReviewRows": 182,
+    "priorW950W999PrimaryRows": 600,
+    "protectedLiteralCellCount": 144,
+    "queuePositionsAreZeroBased": true,
+    "sourceCount": 50,
+    "staleRegistryPins": 0,
+    "w1050BoundaryDispositionsAssigned": false,
+    "w999BoundaryAll12Match": true,
+    "window": "W1000-W1049"
+  }
+}

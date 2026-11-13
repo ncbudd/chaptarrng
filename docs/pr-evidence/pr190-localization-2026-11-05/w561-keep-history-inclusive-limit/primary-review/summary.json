@@ -1,0 +1,31 @@
+{
+  "allProposalsUseInclusiveMaximum": true,
+  "allRequiredLiteralsPreserved": true,
+  "artifact": "ChaptarrNG W561 NzbGet KeepHistory maximum primary semantic review",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "localeCount": 12,
+  "locales": [
+    "es",
+    "zh-CN",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-TW",
+    "vi",
+    "id"
+  ],
+  "nativeSpeakerApproval": false,
+  "proposedEnglish": "NzbGet setting KeepHistory must not exceed 25000",
+  "proposedSourceId": "server.message.m3a79390fb21e",
+  "repoEdited": false,
+  "result": "PASS",
+  "sourceSemanticConfidence": "high",
+  "sourceSemanticDecision": "accept-proposed-wording",
+  "testsBuildsCiRun": false,
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3"
+}

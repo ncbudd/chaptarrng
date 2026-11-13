@@ -64,7 +64,8 @@ namespace Chaptarr.Api.V1.Series
                 return BadRequest(new AddSeriesResult
                 {
                     Success = false,
-                    ErrorMessage = "foreignSeriesId is required"
+                    ErrorMessage = "foreignSeriesId is required",
+                    MessageId = "server.message.m8500a62118c5"
                 });
             }
 
@@ -76,7 +77,8 @@ namespace Chaptarr.Api.V1.Series
                     return BadRequest(new AddSeriesResult
                     {
                         Success = false,
-                        ErrorMessage = "selectedMediaType is required"
+                        ErrorMessage = "selectedMediaType is required",
+                        MessageId = "server.message.m96982c5f8302"
                     });
                 }
 
@@ -86,7 +88,8 @@ namespace Chaptarr.Api.V1.Series
                     return BadRequest(new AddSeriesResult
                     {
                         Success = false,
-                        ErrorMessage = "selectedBooks is required"
+                        ErrorMessage = "selectedBooks is required",
+                        MessageId = "server.message.m7132fb6d87f4"
                     });
                 }
 
@@ -101,7 +104,8 @@ namespace Chaptarr.Api.V1.Series
                     return BadRequest(new AddSeriesResult
                     {
                         Success = false,
-                        ErrorMessage = "Invalid selectedMediaType (expected 'audiobook' or 'ebook')"
+                        ErrorMessage = "Invalid selectedMediaType (expected 'audiobook' or 'ebook')",
+                        MessageId = "server.message.m55acf0a44748"
                     });
                 }
 
@@ -123,7 +127,8 @@ namespace Chaptarr.Api.V1.Series
                     return BadRequest(new AddSeriesResult
                     {
                         Success = false,
-                        ErrorMessage = "selectedBooks must include foreignAuthorId values"
+                        ErrorMessage = "selectedBooks must include foreignAuthorId values",
+                        MessageId = "server.message.m52a644e8b0f9"
                     });
                 }
 
@@ -137,7 +142,8 @@ namespace Chaptarr.Api.V1.Series
                     return BadRequest(new AddSeriesResult
                     {
                         Success = false,
-                        ErrorMessage = ex.Message
+                        ErrorMessage = ex.Message,
+                        MessageId = "server.message.mf302387c1b79"
                     });
                 }
 
@@ -584,6 +590,7 @@ namespace Chaptarr.Api.V1.Series
     {
         public bool Success { get; set; }
         public string ErrorMessage { get; set; }
+        public string MessageId { get; set; }
         public string SeriesTitle { get; set; }
         public List<AuthorResource> AddedAuthors { get; set; }
         public List<BookResource> MonitoredBooks { get; set; }

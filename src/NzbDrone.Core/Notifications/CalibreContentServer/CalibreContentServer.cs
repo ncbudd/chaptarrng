@@ -17,6 +17,7 @@ using NzbDrone.Core.MediaCover;
 using NzbDrone.Core.MediaFiles;
 using NzbDrone.Core.Qualities;
 using NzbDrone.Core.RootFolders;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.CalibreContentServer
 {
@@ -281,7 +282,7 @@ namespace NzbDrone.Core.Notifications.CalibreContentServer
 
             if (conflictingRootFolder != null)
             {
-                failures.Add(new ValidationFailure("Url", $"This Calibre content server already backs the root folder '{conflictingRootFolder.Path}'. Chaptarr manages that library directly, so pushing to it again would create duplicates."));
+                failures.Add(NzbDroneValidationFailure.ForMessage("Url", $"This Calibre content server already backs the root folder '{conflictingRootFolder.Path}'. Chaptarr manages that library directly, so pushing to it again would create duplicates.", "server.message.mb1ace47af8d6", new { value0 = conflictingRootFolder.Path }));
                 return new ValidationResult(failures);
             }
 
@@ -303,26 +304,26 @@ namespace NzbDrone.Core.Notifications.CalibreContentServer
                 if (response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     failures.Add(anonymousProbe
-                        ? new ValidationFailure("Username", "The content server requires authentication, enter a username and password")
-                        : new ValidationFailure("Username", "Authentication failed"));
+                        ? NzbDroneValidationFailure.ForMessage("Username", "The content server requires authentication, enter a username and password", "server.message.mc87b96cb40ec")
+                        : NzbDroneValidationFailure.ForMessage("Username", "Authentication failed", "server.message.m93821eb7ce8c"));
                 }
                 else if (response.StatusCode == HttpStatusCode.Forbidden)
                 {
-                    failures.Add(new ValidationFailure("Username", "The content server does not accept anonymous changes, a username and password are required to push books"));
+                    failures.Add(NzbDroneValidationFailure.ForMessage("Username", "The content server does not accept anonymous changes, a username and password are required to push books", "server.message.m5e7b4e24492a"));
                 }
                 else if (response.StatusCode == HttpStatusCode.NotFound || ((int)response.StatusCode >= 300 && (int)response.StatusCode < 400))
                 {
-                    failures.Add(new ValidationFailure("Url", "Not a Calibre content server, check the URL"));
+                    failures.Add(NzbDroneValidationFailure.ForMessage("Url", "Not a Calibre content server, check the URL", "server.message.mf32ea06ceff2"));
                 }
                 else if ((int)response.StatusCode >= 500)
                 {
-                    failures.Add(new ValidationFailure("Url", $"The content server returned {(int)response.StatusCode} to a Calibre API request"));
+                    failures.Add(NzbDroneValidationFailure.ForMessage("Url", $"The content server returned {(int)response.StatusCode} to a Calibre API request", "server.message.m0ffa12a85bcc", new { value0 = (int)response.StatusCode }));
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to connect to Calibre content server");
-                failures.Add(new ValidationFailure("Url", "Unable to connect: " + ex.Message));
+                failures.Add(NzbDroneValidationFailure.ForMessage("Url", "Unable to connect: " + ex.Message, "server.message.mc76459e52a3e", new { value0 = ex.Message }));
             }
 
             return new ValidationResult(failures);

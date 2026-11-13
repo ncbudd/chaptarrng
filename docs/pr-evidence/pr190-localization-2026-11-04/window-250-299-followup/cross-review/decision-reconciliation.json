@@ -1,0 +1,199 @@
+{
+  "blindOnlyHoldCells": [
+    "AutomaticUpdatesDisabledDocker::id",
+    "BackupsContainUnencryptedCredentials::ar",
+    "BackupsContainUnencryptedCredentials::fr",
+    "BindAddress::de",
+    "BindAddress::es",
+    "BindAddress::pt-BR",
+    "BlocklistAndSearchMultipleHint::de",
+    "BlocklistAndSearchMultipleHint::zh-Hans",
+    "BlocklistReleaseHelpText::de",
+    "Book::ar",
+    "Book::de",
+    "Book::es",
+    "Book::fr",
+    "Book::hi",
+    "Book::id",
+    "Book::ja",
+    "Book::ko",
+    "Book::pt-BR",
+    "Book::vi",
+    "Book::zh-Hans",
+    "Book::zh-Hant"
+  ],
+  "blindReviewerDisclosure": {
+    "currentW250ProposalsOrDecisionsExposedBeforeThisReview": false,
+    "fullPullRequestBodyRetrieved": false,
+    "historicalPerCellDecisionsRead": false,
+    "historicalTranslationTextsRead": false,
+    "occurred": true,
+    "primaryOrProviderReviewContentsRead": false,
+    "restrictedReviewContentsRead": false,
+    "restrictedReviewDirectoriesOpened": false,
+    "restrictedReviewDirectoryNamesEnumerated": true,
+    "scope": "Limited aggregate metadata exposure from running the candidate-free verifier: it read text-free prior-lineage reattestations and emitted aggregate W200 dispositions (489 accept-current, 99 selected-applied, 12 hold-text-free) and prior row counts. No per-row historical decision content or prior target translations were inspected or used in W250 judgments. The initial task-directory filename listing also showed filenames in sibling primary/provider directories while locating the actual candidate-free/input path; no contents from those directories were read."
+  },
+  "findingAdjudications": [
+    {
+      "cells": [
+        "AutomaticUpdatesDisabledDocker::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F001",
+      "rationale": "Indonesian verb coordination is uneven; the cross candidate coordinates both alternatives."
+    },
+    {
+      "cells": [
+        "BackfillAuthorRootFoldersHelpText::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F002",
+      "rationale": "The current Indonesian means newly/recently assigned, while the helper selects authors with a root for only one format. Use the primary correction."
+    },
+    {
+      "cells": [
+        "BlocklistReleaseHelpText::de",
+        "BlocklistReleaseHelpText::es",
+        "BlocklistReleaseHelpText::fr",
+        "BlocklistReleaseHelpText::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F003",
+      "rationale": "In the pinned queue caller, grabbing means downloading/fetching files again. Use primary targets for es/fr/id and a cross target for de."
+    },
+    {
+      "cells": [
+        "BackupRetentionHelpText::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F004",
+      "rationale": "“Periode penahanan” means detention; use the primary retention-period correction."
+    },
+    {
+      "cells": [
+        "BackupsContainUnencryptedCredentials::ar"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F005",
+      "rationale": "The final clause changes the named Settings Backup export into “support”; the cross candidate names the backup and states its separate passphrase encryption."
+    },
+    {
+      "cells": [
+        "BackupsContainUnencryptedCredentials::fr"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F006",
+      "rationale": "The masculine plural pronoun can refer to credentials; the cross candidate explicitly names the backups as the stored object."
+    },
+    {
+      "cells": [
+        "DownloadEncryptedBackup::vi"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F007",
+      "rationale": "The primary correction gives the Vietnamese button a natural verb-object order."
+    },
+    {
+      "cells": [
+        "BindAddress::de",
+        "BindAddress::es",
+        "BindAddress::hi",
+        "BindAddress::pt-BR"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F008",
+      "rationale": "The setting is the server listening/bind address. Use a technical noun label in de, es, pt-BR, and the primary Hindi correction."
+    },
+    {
+      "cells": [
+        "BlocklistAndSearchMultipleHint::de",
+        "BlocklistAndSearchMultipleHint::vi",
+        "BlocklistAndSearchMultipleHint::zh-Hans"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F009",
+      "rationale": "The multiple-selection caller requires plural alternatives and an unambiguous post-blocklist search. Use cross targets in de/zh-Hans and refine the primary Vietnamese target."
+    },
+    {
+      "cells": [
+        "BlocklistOnlyHint::vi"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F010",
+      "rationale": "The current Vietnamese calls the replacement a person; use the primary release/item wording."
+    },
+    {
+      "cells": [
+        "Book::ar",
+        "Book::de",
+        "Book::es",
+        "Book::fr",
+        "Book::hi",
+        "Book::id",
+        "Book::ja",
+        "Book::ko",
+        "Book::pt-BR",
+        "Book::vi",
+        "Book::zh-Hans",
+        "Book::zh-Hant"
+      ],
+      "disposition": "reject-false-positive",
+      "findingId": "F011",
+      "rationale": "The pinned literal caller uses Book as the history table column for each book, and AuthorHistoryRow renders its book title. All 12 current targets are lexical book labels, not count labels (Chinese and Japanese forms are number-neutral); the separate BookCount source key names the numeric count. Keep the current targets."
+    }
+  ],
+  "placeholderReordering": {
+    "assessment": "{0} and {1} are placeholders; their order is intentionally changed to match each locale’s “{1} of {0}” word order. Placeholder names/counts are preserved.",
+    "cells": 5,
+    "crossCheck": "Placeholder identifiers and occurrence counts are preserved; order may follow locale grammar.",
+    "locales": [
+      "hi",
+      "ja",
+      "ko",
+      "zh-Hans",
+      "zh-Hant"
+    ]
+  },
+  "primaryBlindProposalHoldOverlap": {
+    "cells": [
+      "BackfillAuthorRootFoldersHelpText::id",
+      "BackupRetentionHelpText::id",
+      "BindAddress::hi",
+      "BlocklistAndSearchMultipleHint::vi",
+      "BlocklistOnlyHint::vi",
+      "BlocklistReleaseHelpText::es",
+      "BlocklistReleaseHelpText::fr",
+      "BlocklistReleaseHelpText::id",
+      "DownloadEncryptedBackup::vi"
+    ],
+    "count": 9
+  },
+  "protectedLiteralScannerExceptions": {
+    "cells": [
+      "BackupIntervalHelpText::ar",
+      "BackupIntervalHelpText::es",
+      "BackupIntervalHelpText::fr",
+      "BackupIntervalHelpText::pt-BR",
+      "BackupIntervalHelpText::zh-Hans",
+      "BackupIntervalHelpText::zh-Hant"
+    ],
+    "count": 6,
+    "decision": "accept-current",
+    "rationale": "DB is expanded as a localized term for database; the Chaptarr brand remains intact and the source meaning is preserved."
+  },
+  "rejectedF011FalsePositiveCells": [
+    "Book::ar",
+    "Book::de",
+    "Book::es",
+    "Book::fr",
+    "Book::hi",
+    "Book::id",
+    "Book::ja",
+    "Book::ko",
+    "Book::pt-BR",
+    "Book::vi",
+    "Book::zh-Hans",
+    "Book::zh-Hant"
+  ]
+}

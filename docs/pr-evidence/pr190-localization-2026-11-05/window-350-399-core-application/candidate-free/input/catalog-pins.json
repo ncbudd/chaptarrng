@@ -1,0 +1,119 @@
+{
+  "ar": {
+    "bytes": 432353,
+    "gitBlob": "0e567a52ffcb137f9a34d591e58976a8561dc45b",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+    "sha256": "3fbe88d5a777486add703ba2f8742faaecca221f75330d7be39e2b812e84a0cc"
+  },
+  "de": {
+    "bytes": 362463,
+    "gitBlob": "051d6c890c80204c4efedb02334ed0aeee75d9c1",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/de.json",
+    "sha256": "a85062eea9d7dbce4ebd2d10709f07d54ee1e083b8fad83bee62a6f9f7a8f1bc"
+  },
+  "en": {
+    "bytes": 312097,
+    "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "keyCount": 4165,
+    "keyOrderSha256": "1267e6eb650f0ebf2a5c96dc0e898e37a1f571b8e7ded72bb3a4142fed72bcad",
+    "orderMatchesEnglish": true,
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+  },
+  "es": {
+    "bytes": 359915,
+    "gitBlob": "436fd76cd9207daed64dbbd9955a072d53c02b8a",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/es.json",
+    "sha256": "d4ef20d212da7b11a0ee095b5854670acce9a86b56e6034d402b1d1b9366912c"
+  },
+  "fr": {
+    "bytes": 375706,
+    "gitBlob": "6402d2ee9527e06755a98ebec362b022a7e07247",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+    "sha256": "d4f259e5d1ab0ad9a806e5f387a0067fb0e2bec4a571b457404058a41ee111af"
+  },
+  "hi": {
+    "bytes": 607006,
+    "gitBlob": "cd5fdb626d84345283457dd96580a1f6358a7a51",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+    "sha256": "87fd2052b54978854fafb810e9e66809f1b1e6b9dd361a1d21cb20cab26be29e"
+  },
+  "id": {
+    "bytes": 333510,
+    "gitBlob": "449f6e39fc89c09a42589f3cdf24288a77e5ae2e",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/id.json",
+    "sha256": "8503ec8c38af4b8b3321b3c5103a0fc8eee437dab337a6b5112ee19a734e7282"
+  },
+  "ja": {
+    "bytes": 409847,
+    "gitBlob": "c3b4ba69aa07d022cf8ad94734d3df668327b3c4",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+    "sha256": "41ca6555af1c501af62e622534316b310c044d04a188038d60786800c1ca736e"
+  },
+  "ko": {
+    "bytes": 368921,
+    "gitBlob": "91e78259d468626d80f7b0ed602de479290a3854",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+    "sha256": "3b82ca7b833c48efa4bf667b1fe78d4e720cae1695d92282dbbbc48ecd2ab5bb"
+  },
+  "pt-BR": {
+    "bytes": 353528,
+    "gitBlob": "284979f9f0a118ae7615c135ca0b216bb37f7003",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "sha256": "2525a8ab2550b1c85c8d75e3c8bff207ffdb078751444144a261170d77c76d12"
+  },
+  "vi": {
+    "bytes": 390263,
+    "gitBlob": "b09a6bcb1f8435f88211cbf3995b085ec7e2eccf",
+    "keyCount": 4165,
+    "keyOrderSha256": "00af8c8f66d793c62cc4d9685d3ab0701565bbf9bb5f5ab619a134441b3f4f1d",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+    "sha256": "a8b5d4fb3a28ce11b6fea8622d7a42ed4712b429fdb605456cce7b30541fa0cb"
+  },
+  "zh-Hans": {
+    "bytes": 307034,
+    "gitBlob": "3e5df51c5736d0daba4eafbffc0b3171aed514f9",
+    "keyCount": 4165,
+    "keyOrderSha256": "00af8c8f66d793c62cc4d9685d3ab0701565bbf9bb5f5ab619a134441b3f4f1d",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "sha256": "e62ef35ce3ccd3078daaa6930b934053c6d45ecdc43da8eabb626886495ceffb"
+  },
+  "zh-Hant": {
+    "bytes": 308516,
+    "gitBlob": "a9af8eee31110127ac3ba81cdcc2b1d95bc82d5c",
+    "keyCount": 4165,
+    "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+    "orderMatchesEnglish": false,
+    "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+    "sha256": "2b6673f95abed5419e8ec86a75bbb9b9002fd33920664239816c89e670a41e7b"
+  }
+}

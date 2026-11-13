@@ -44,7 +44,8 @@ namespace NzbDrone.Core.Indexers.DirectDownload
 
         public override ProviderMessage Message => new(
             "This indexer supports ebook searches only. Configured URLs remain in the order you enter them.",
-            ProviderMessageType.Info);
+            ProviderMessageType.Info,
+            "server.message.m566bae95cfdb");
 
         public override Task<IList<ReleaseInfo>> FetchRecent()
         {

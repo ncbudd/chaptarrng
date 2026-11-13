@@ -35,7 +35,7 @@ namespace NzbDrone.Core.Notifications.CustomScript
 
         public override string Link => "https://discord.gg/5PyXBfvS6T";
 
-        public override ProviderMessage Message => new ProviderMessage("Testing will execute the script with the EventType set to Test, ensure your script handles this correctly", ProviderMessageType.Warning);
+        public override ProviderMessage Message => new ProviderMessage("Testing will execute the script with the EventType set to Test, ensure your script handles this correctly", ProviderMessageType.Warning, "server.message.m47f0922640fa");
 
         public override void OnGrab(GrabMessage message)
         {
@@ -283,7 +283,7 @@ namespace NzbDrone.Core.Notifications.CustomScript
 
             if (!_diskProvider.FileExists(Settings.Path))
             {
-                failures.Add(new NzbDroneValidationFailure("Path", "File does not exist"));
+                failures.Add(NzbDroneValidationFailure.ForMessage("Path", "File does not exist", "server.message.m7db986dd5235"));
             }
 
             if (failures.Empty())
@@ -297,7 +297,7 @@ namespace NzbDrone.Core.Notifications.CustomScript
 
                     if (processOutput.ExitCode != 0)
                     {
-                        failures.Add(new NzbDroneValidationFailure(string.Empty, $"Script exited with code: {processOutput.ExitCode}"));
+                        failures.Add(NzbDroneValidationFailure.ForMessage(string.Empty, $"Script exited with code: {processOutput.ExitCode}", "server.message.m7b4ba97e5a80", new { value0 = processOutput.ExitCode }));
                     }
                 }
                 catch (Exception ex)

@@ -1,0 +1,111 @@
+{
+  "acceptedCurrent": 478,
+  "candidateCount": 122,
+  "correctionCandidates": 71,
+  "currentProtectedLiteralFailureCells": 7,
+  "dispositionCounts": {
+    "accept-current": 478,
+    "correction": 71,
+    "refinement": 51
+  },
+  "exactHead": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "exactTree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+  "finalProtectedLiteralFailureCells": 0,
+  "holdCount": 0,
+  "localeCells": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "machineAssistedConfidence": "moderate",
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 41,
+      "correction": 5,
+      "refinement": 4
+    },
+    "de": {
+      "accept-current": 42,
+      "correction": 4,
+      "refinement": 4
+    },
+    "es": {
+      "accept-current": 39,
+      "correction": 8,
+      "refinement": 3
+    },
+    "fr": {
+      "accept-current": 41,
+      "correction": 4,
+      "refinement": 5
+    },
+    "hi": {
+      "accept-current": 37,
+      "correction": 10,
+      "refinement": 3
+    },
+    "id": {
+      "accept-current": 41,
+      "correction": 6,
+      "refinement": 3
+    },
+    "ja": {
+      "accept-current": 40,
+      "correction": 3,
+      "refinement": 7
+    },
+    "ko": {
+      "accept-current": 36,
+      "correction": 7,
+      "refinement": 7
+    },
+    "pt-BR": {
+      "accept-current": 37,
+      "correction": 6,
+      "refinement": 7
+    },
+    "vi": {
+      "accept-current": 43,
+      "correction": 3,
+      "refinement": 4
+    },
+    "zh-Hans": {
+      "accept-current": 40,
+      "correction": 8,
+      "refinement": 2
+    },
+    "zh-Hant": {
+      "accept-current": 41,
+      "correction": 7,
+      "refinement": 2
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "providerOptionPipelineReferences": 20,
+  "recommendedProtectedLiteralFailureCells": 0,
+  "refinementCandidates": 51,
+  "scopeLimitation": "Static primary semantic pass. No native-speaker or browser/runtime approval claimed.",
+  "serverMessagePipelineReferences": 76,
+  "sourceCallerGaps": 0,
+  "sourceCallerReferences": 86,
+  "sourceCallerRows": 50,
+  "sourceCount": 50,
+  "sourcePositions": [
+    900,
+    949
+  ],
+  "window": "W900-W949"
+}

@@ -1,0 +1,48 @@
+{
+  "purpose": "Reference lookups for selected lexical corrections only; these do not substitute for native-speaker approval.",
+  "references": [
+    {
+      "id": "ar-icelandic",
+      "supports": "Arabic spelling used for Icelandic.",
+      "title": "Arabic Academy of Cairo research PDF using الأيسلندية",
+      "url": "https://www.arabicacademy.gov.eg/storage/options/pdfs/154_research.pdf"
+    },
+    {
+      "id": "de-koreanisch",
+      "supports": "Koreanisch is the noun naming the Korean language; German capitalization.",
+      "title": "Duden: Koreanisch",
+      "url": "https://www.duden.de/rechtschreibung/Koreanisch"
+    },
+    {
+      "id": "de-pandschabi",
+      "supports": "Pandschabi is the neuter German noun for the language.",
+      "title": "Duden: Pandschabi",
+      "url": "https://www.duden.de/rechtschreibung/Pandschabi"
+    },
+    {
+      "id": "es-manes",
+      "supports": "Manés is the name of the language spoken on the Isle of Man.",
+      "title": "DLE (RAE-ASALE): manés, sa",
+      "url": "https://dle.rae.es/man%C3%A9s"
+    },
+    {
+      "id": "es-punyabi",
+      "supports": "Recommends punyabí in Spanish.",
+      "title": "FundéuRAE: panyabí / punyabí",
+      "url": "https://www.fundeu.es/consulta/panyabi-1586/"
+    },
+    {
+      "id": "fr-grec-ancien",
+      "supports": "Uses grec ancien for ancient Greek.",
+      "title": "Larousse English-French: Greek",
+      "url": "https://www.larousse.fr/dictionnaires/anglais-francais/Greek/584473"
+    },
+    {
+      "id": "fr-pendjabi",
+      "supports": "Lists pendjabi as the French form for Punjabi.",
+      "title": "Larousse French-English: pendjabi",
+      "url": "https://www.larousse.fr/dictionnaires/francais-anglais/pendjabi/1011640"
+    }
+  ],
+  "retrievedAtUtc": "2026-11-02"
+}

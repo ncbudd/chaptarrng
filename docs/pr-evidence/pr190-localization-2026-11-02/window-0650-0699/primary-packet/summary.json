@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "exactTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "4701933a50d367406fd6749c4baaf4befee22129",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "remoteBranchHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "scope": {
+    "positions": [
+      650,
+      699
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceSliceIdsSha256": "ecc4e92ee9595dd2cd35e7a246b6e5d12706a791b96414c87e7a7c39d1aaa0d5",
+  "counts": {
+    "accept-current": 501,
+    "propose-correction": 99,
+    "propose-refinement": 0,
+    "hold": 0
+  },
+  "proposalCount": 99,
+  "perLocale": {
+    "es": {
+      "accept-current": 42,
+      "propose-refinement": 0,
+      "propose-correction": 8,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 43,
+      "propose-refinement": 0,
+      "propose-correction": 7,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 45,
+      "propose-refinement": 0,
+      "propose-correction": 5,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 45,
+      "propose-refinement": 0,
+      "propose-correction": 5,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 40,
+      "propose-refinement": 0,
+      "propose-correction": 10,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 40,
+      "propose-refinement": 0,
+      "propose-correction": 10,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 42,
+      "propose-refinement": 0,
+      "propose-correction": 8,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 37,
+      "propose-refinement": 0,
+      "propose-correction": 13,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 40,
+      "propose-refinement": 0,
+      "propose-correction": 10,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 42,
+      "propose-refinement": 0,
+      "propose-correction": 8,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 41,
+      "propose-refinement": 0,
+      "propose-correction": 9,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 44,
+      "propose-refinement": 0,
+      "propose-correction": 6,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "callerRefs": 59,
+    "uniqueCallerFiles": 48,
+    "mismatches": 0,
+    "gaps": [],
+    "allCallersAttestedAtExactHead": true
+  },
+  "placeholders": {
+    "sourcesWithPlaceholders": 14,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourcesWithMarkup": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 12,
+    "currentMismatchCells": [
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "es",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "zh-Hans",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "hi",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "de",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "ja",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "fr",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "pt-BR",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "ar",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "ko",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "zh-Hant",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "vi",
+        "missing": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 654,
+        "sourceId": "server.message.m783307436ce0",
+        "locale": "id",
+        "missing": [
+          "SABnzbd"
+        ]
+      }
+    ],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdOverlap": 0,
+    "scannedPriorLedgerFiles": 79,
+    "priorSourceIdCount": 650,
+    "contextOnlyW649Rows": 12,
+    "w650AdjacentBoundaryRows": 12,
+    "w649SourceRowsMatchingLive": 12,
+    "w649CrossReviewFinalTargetsMatchingLive": 12,
+    "w649PriorPrimaryTargetsMatchingLive": 4,
+    "w649AppliedRecommendationsMatchingLive": 8,
+    "w649CallerRefsReattested": 1,
+    "w650BoundaryRows": 12,
+    "w650CallerPinsReattested": 12,
+    "w650CatalogFileHashesChangedAfterApply": 12
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

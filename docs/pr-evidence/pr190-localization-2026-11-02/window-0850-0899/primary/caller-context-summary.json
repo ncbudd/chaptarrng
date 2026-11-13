@@ -1,0 +1,256 @@
+{
+  "genericPipelineFiles": 35,
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "sourceCallerGaps": [],
+  "sourceCallerReferences": 74,
+  "sourceCallerRows": 50,
+  "staleRegistryPinsRefreshed": [
+    {
+      "currentHits": [
+        {
+          "line": 178,
+          "sha256": "d28235fdf468814f6cc6dcb68eb45833ff9a97db3e722eb62c41877f0d38f37f",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect to Hadouken\", \"server.message.mdd0fed37bc8b\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Hadouken/Hadouken.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 178,
+      "registryLineSha256": "3088020f69f245a1a804f4244043ed9c030497833d0b07f370dc021ef915da05",
+      "sourceId": "server.message.mdd0fed37bc8b",
+      "sourceOrdinal": 850
+    },
+    {
+      "currentHits": [
+        {
+          "line": 475,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        },
+        {
+          "line": 536,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Deluge/Deluge.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 475,
+      "registryLineSha256": "6132b291ca0b19991c0896b9b45c2f5762b2e02ce7d18607cd52bc316f6db79d",
+      "sourceId": "server.message.me40966162b11",
+      "sourceOrdinal": 857
+    },
+    {
+      "currentHits": [
+        {
+          "line": 475,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        },
+        {
+          "line": 536,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Deluge/Deluge.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 536,
+      "registryLineSha256": "6132b291ca0b19991c0896b9b45c2f5762b2e02ce7d18607cd52bc316f6db79d",
+      "sourceId": "server.message.me40966162b11",
+      "sourceOrdinal": 857
+    },
+    {
+      "currentHits": [
+        {
+          "line": 550,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/TorrentDownloadStation.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 550,
+      "registryLineSha256": "6132b291ca0b19991c0896b9b45c2f5762b2e02ce7d18607cd52bc316f6db79d",
+      "sourceId": "server.message.me40966162b11",
+      "sourceOrdinal": 857
+    },
+    {
+      "currentHits": [
+        {
+          "line": 306,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 306,
+      "registryLineSha256": "6132b291ca0b19991c0896b9b45c2f5762b2e02ce7d18607cd52bc316f6db79d",
+      "sourceId": "server.message.me40966162b11",
+      "sourceOrdinal": 857
+    },
+    {
+      "currentHits": [
+        {
+          "line": 690,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 690,
+      "registryLineSha256": "6132b291ca0b19991c0896b9b45c2f5762b2e02ce7d18607cd52bc316f6db79d",
+      "sourceId": "server.message.me40966162b11",
+      "sourceOrdinal": 857
+    },
+    {
+      "currentHits": [
+        {
+          "line": 327,
+          "sha256": "559f839b5aa0e3e60c6328540218ddc7ff2006ed08c479305a4a855ffaafcc85",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect\", \"server.message.me40966162b11\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/uTorrent/UTorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 327,
+      "registryLineSha256": "6132b291ca0b19991c0896b9b45c2f5762b2e02ce7d18607cd52bc316f6db79d",
+      "sourceId": "server.message.me40966162b11",
+      "sourceOrdinal": 857
+    },
+    {
+      "currentHits": [
+        {
+          "line": 506,
+          "sha256": "a109cb3a5e05fbf667715b3a407de56fcc326a45c46e491194993292e9a58247",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Invalid hostname\", \"server.message.mea3737f42d3c\", null)"
+        },
+        {
+          "line": 530,
+          "sha256": "a109cb3a5e05fbf667715b3a407de56fcc326a45c46e491194993292e9a58247",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Invalid hostname\", \"server.message.mea3737f42d3c\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Deluge/Deluge.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 506,
+      "registryLineSha256": "c61f7f50e55ac16c0382dc9a1c70e7f11fcb6c26c5ac4708ce051dc7587c1a85",
+      "sourceId": "server.message.mea3737f42d3c",
+      "sourceOrdinal": 867
+    },
+    {
+      "currentHits": [
+        {
+          "line": 506,
+          "sha256": "a109cb3a5e05fbf667715b3a407de56fcc326a45c46e491194993292e9a58247",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Invalid hostname\", \"server.message.mea3737f42d3c\", null)"
+        },
+        {
+          "line": 530,
+          "sha256": "a109cb3a5e05fbf667715b3a407de56fcc326a45c46e491194993292e9a58247",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Invalid hostname\", \"server.message.mea3737f42d3c\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Deluge/Deluge.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 530,
+      "registryLineSha256": "c61f7f50e55ac16c0382dc9a1c70e7f11fcb6c26c5ac4708ce051dc7587c1a85",
+      "sourceId": "server.message.mea3737f42d3c",
+      "sourceOrdinal": 867
+    },
+    {
+      "currentHits": [
+        {
+          "line": 188,
+          "sha256": "73fd27f6110926a311381dbf6ac93d8d13439e6321dd11d71f72a76355d2f6d2",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect to NZBVortex\", \"server.message.mea37f4df9a52\", null)"
+        },
+        {
+          "line": 212,
+          "sha256": "347c004fd2494c2526c3ceafdf5363a33dfc2671ed954763370bbc486fc2c5bd",
+          "text": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to NZBVortex\", \"server.message.mea37f4df9a52\");"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortex.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 188,
+      "registryLineSha256": "f811f949816f4788a092bbc43be54fb20f05da83f97209c5a5c0f9d755b9d62b",
+      "sourceId": "server.message.mea37f4df9a52",
+      "sourceOrdinal": 868
+    },
+    {
+      "currentHits": [
+        {
+          "line": 485,
+          "sha256": "b8a5ba9223c73b3ef71b7dc1e757f2aa015b58e073053b784162bb51717c43b0",
+          "text": "return new NzbDroneValidationFailure(\"UseSsl\", \"Unable to connect through SSL\", \"server.message.mecf5ccdf0093\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Deluge/Deluge.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 485,
+      "registryLineSha256": "9f715474e4176a510d92a663ce7d0f9e323bbfd401ccfe9e67106ccaa3f9ab6d",
+      "sourceId": "server.message.mecf5ccdf0093",
+      "sourceOrdinal": 876
+    },
+    {
+      "currentHits": [
+        {
+          "line": 387,
+          "sha256": "dece483af48e8ec8e455eebf7efaa47fe671fa1483a4cc1e78ea8520bfa0229e",
+          "text": "return new NzbDroneValidationFailure(\"Host\", \"Unable to connect to rTorrent\", \"server.message.mecf985c120fb\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 387,
+      "registryLineSha256": "16f85387cd24bc29b31ec3b57c93ca32f07d3c792991784376efa51234d809e6",
+      "sourceId": "server.message.mecf985c120fb",
+      "sourceOrdinal": 877
+    },
+    {
+      "currentHits": [
+        {
+          "line": 781,
+          "sha256": "1da2147df95df1e1b36bf8dc25ed26b0650fc1db1d8cb38c47b61aca4ce26c89",
+          "text": "return new NzbDroneValidationFailure(nameof(Settings.RecentTvPriority), \"Queueing not enabled\", \"server.message.mf4433d3129ba\", null) { DetailedDescription = \"Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority.\" };"
+        },
+        {
+          "line": 785,
+          "sha256": "eab11176d70933178f467f0c2584b89ae98ef9e67cfe51e7e48d7b6185b20fb0",
+          "text": "return new NzbDroneValidationFailure(nameof(Settings.OlderTvPriority), \"Queueing not enabled\", \"server.message.mf4433d3129ba\", null) { DetailedDescription = \"Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority.\" };"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 781,
+      "registryLineSha256": "515fb3e2cd8578e4e2124a043a5c8a7689d579a1af04d95409b26d5b60d5c8da",
+      "sourceId": "server.message.mf4433d3129ba",
+      "sourceOrdinal": 894
+    },
+    {
+      "currentHits": [
+        {
+          "line": 781,
+          "sha256": "1da2147df95df1e1b36bf8dc25ed26b0650fc1db1d8cb38c47b61aca4ce26c89",
+          "text": "return new NzbDroneValidationFailure(nameof(Settings.RecentTvPriority), \"Queueing not enabled\", \"server.message.mf4433d3129ba\", null) { DetailedDescription = \"Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority.\" };"
+        },
+        {
+          "line": 785,
+          "sha256": "eab11176d70933178f467f0c2584b89ae98ef9e67cfe51e7e48d7b6185b20fb0",
+          "text": "return new NzbDroneValidationFailure(nameof(Settings.OlderTvPriority), \"Queueing not enabled\", \"server.message.mf4433d3129ba\", null) { DetailedDescription = \"Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority.\" };"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 785,
+      "registryLineSha256": "43897c96d2f5c50efa577c5f61375e780156382ed43d5b32958b5437068c482e",
+      "sourceId": "server.message.mf4433d3129ba",
+      "sourceOrdinal": 894
+    }
+  ],
+  "uniqueSourceCallerFiles": 47
+}

@@ -1,0 +1,1384 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Fresh independent contextual review for one W300-349 Core cell at the latest merged PR head; caller context changed since the prior exact-head packet.",
+  "reviewCell": {
+    "sourceOrdinal": 305,
+    "sourceKey": "BookMatchingStrictness",
+    "locale": "id",
+    "cellId": "BookMatchingStrictness::id"
+  },
+  "repositoryPin": {
+    "head": "4688c998d92c821bbc1464ea4640c90615a69327",
+    "tree": "e655295664bbe8466e6f5541eb78e17e32cfca12",
+    "parentShas": [
+      "4f099a90891b1a70a3c3ed76e30764ba02f03777",
+      "025498c1a9deb999a4acd1eafc4c807a252e0c29"
+    ],
+    "previousMain": "8c7fb4c772c3cf58fc0e951830815d9e4d8d5230",
+    "currentMain": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "sourcePath": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sourceBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "sourceCatalogSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+    "targetPath": "src/NzbDrone.Core/Localization/Core/id.json",
+    "targetBlob": "449f6e39fc89c09a42589f3cdf24288a77e5ae2e",
+    "targetCatalogSha256": "8503ec8c38af4b8b3321b3c5103a0fc8eee437dab337a6b5112ee19a734e7282"
+  },
+  "source": {
+    "key": "BookMatchingStrictness",
+    "text": "Match mode",
+    "textSha256": "0fd71ca8dca4ed849986b90247aae2704a4e60fadb9632310b0b30377aae8e69"
+  },
+  "currentTarget": {
+    "locale": "id",
+    "text": "Mode pencocokan",
+    "textSha256": "090a911382592d233ea1afe53f75e3e48093473175be32458c88baeb01adfdd8"
+  },
+  "priorAndCurrentContext": {
+    "priorReviewedMain": "8c7fb4c772c3cf58fc0e951830815d9e4d8d5230",
+    "currentMain": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "priorReviewedHead": "4f099a90891b1a70a3c3ed76e30764ba02f03777",
+    "currentHead": "4688c998d92c821bbc1464ea4640c90615a69327",
+    "priorContextSha256": "cdfffba5a3f1930f4ca0c3b6ddf1141fd18874654bf0889a379a7815e85c47a5",
+    "currentContextSha256": "f920d5f6a8031a4b828e03f93d56f7e0c06653e56202f41fed4b784f670fb74f",
+    "fingerprintNormalization": "SHA-256 of UTF-8 compact canonical JSON (sorted keys, ensure_ascii=false) over {sourceKey, literalAndIndirectReferences, relatedDynamicTranslationCallsites}; newline removed before hashing.",
+    "changedReferenceSnippets": [
+      {
+        "kind": "key-reference",
+        "prior": {
+          "path": "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs",
+          "line": 524,
+          "lineText": "                    _configService?.BookMatchingStrictness ?? BookMatchingStrictness.Balanced))",
+          "lineSha256": "4869a37bf7df7059e14dfa0849cea9224b39451132c422d91e68a773fa619469",
+          "fileSha256": "acab2a1f5e0332d311adbfe6aadff947e95317fc32ce7e6c4d8647faee10cd28",
+          "fileGitBlob": "78eb94965d0bffe5a3d8941c6c527cb0ed92c633",
+          "contextBefore": [
+            "                    candidate.Match,",
+            "                    candidate.Identity,"
+          ],
+          "contextAfter": [
+            "                .ToList();",
+            "",
+            "            var selected = viableMatches.Count == 1 ? viableMatches[0] : null;"
+          ]
+        },
+        "current": {
+          "path": "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs",
+          "line": 524,
+          "lineText": "                    _configService?.BookMatchingStrictness ?? BookMatchingStrictness.Balanced))",
+          "lineSha256": "4869a37bf7df7059e14dfa0849cea9224b39451132c422d91e68a773fa619469",
+          "fileSha256": "b1f790f1330eb12735936865d8de5b2c4be6a03b36e3d803afea473510390812",
+          "fileGitBlob": "654c2fc4d2a4ff287c0eb863e38b940071e7b468",
+          "contextBefore": [
+            "                    candidate.Match,",
+            "                    candidate.Identity,"
+          ],
+          "contextAfter": [
+            "                .ToList();",
+            "",
+            "            var selected = viableMatches.Count == 1 ? viableMatches[0] : null;"
+          ]
+        }
+      }
+    ],
+    "changedDynamicTranslationCallsites": [],
+    "exactPinnedCallerSourceDiffs": [
+      {
+        "path": "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs",
+        "priorMainBlob": "78eb94965d0bffe5a3d8941c6c527cb0ed92c633",
+        "currentMainBlob": "654c2fc4d2a4ff287c0eb863e38b940071e7b468",
+        "diffSha256": "865c87814c70996282b0f283d14de1f89191471479382f29ba9ca44a2dc0ced0",
+        "diffText": "diff --git a/src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs b/src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs\nindex 78eb9496..654c2fc4 100644\n--- a/src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs\n+++ b/src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs\n@@ -768,7 +768,7 @@ private static bool IsAllowedByAuthorProfile(Author author, Quality quality)\n             return profile?.Items?.Any(item => item.Allowed && item.GetQualities().Any(q => q.Id == quality.Id)) == true;\n         }\n \n-        private static int CompareDetectedQuality(Quality left, Quality right, Author author)\n+        private int CompareDetectedQuality(Quality left, Quality right, Author author)\n         {\n             var leftProfile = author.GetQualityProfileForQuality(left);\n             var rightProfile = author.GetQualityProfileForQuality(right);\n@@ -780,7 +780,9 @@ private static int CompareDetectedQuality(Quality left, Quality right, Author au\n                 return new QualityModelComparer(leftProfile).Compare(left, right);\n             }\n \n-            return new QualityModel(left).CompareTo(new QualityModel(right));\n+            return _configService?.BookshelfMatchCompatibility == true\n+                ? BookshelfQualityCompatibility.Compare(left, right)\n+                : new QualityModel(left).CompareTo(new QualityModel(right));\n         }\n \n         private DownloadDecision GetDecisionForReport(RemoteBook remoteBook, SearchCriteriaBase searchCriteria = null)\n"
+      }
+    ]
+  },
+  "callerContext": {
+    "callerContextSha256": "f920d5f6a8031a4b828e03f93d56f7e0c06653e56202f41fed4b784f670fb74f",
+    "fingerprintNormalization": "SHA-256 of UTF-8 compact canonical JSON (sorted keys, ensure_ascii=false) over {sourceKey, literalAndIndirectReferences, relatedDynamicTranslationCallsites}; newline removed before hashing.",
+    "callerReferenceCount": 60,
+    "literalCallCount": 2,
+    "indirectKeyReferenceCount": 58,
+    "relatedDynamicTranslationCallsiteCount": 4,
+    "literalAndIndirectReferences": [
+      {
+        "referenceKind": "literal-translate-call",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "frontend/src/Settings/MediaManagement/MediaManagement.js",
+        "line": 276,
+        "lineText": "                      {translate('BookMatchingStrictness')}",
+        "lineSha256": "a11b7d3e4d956df1a02a1df542bfeda2e4d2df1711eff73f15a6739c8b563bf6",
+        "fileSha256": "af5c1da8d9d211b28ea169e0d877a814eec023a7ac9d452e658b9812afad7b8e",
+        "fileGitBlob": "fc2312532b710fb9ab2e3636bacbf7e997d8aac4",
+        "contextBefore": [
+          "                  <FormGroup size={sizes.MEDIUM}>",
+          "                    <FormLabel>"
+        ],
+        "contextAfter": [
+          "                    </FormLabel>",
+          "",
+          "                    <FormInputGroup"
+        ]
+      },
+      {
+        "referenceKind": "literal-translate-call",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+        "line": 222,
+        "lineText": "                {translate('BookMatchingStrictness')}",
+        "lineSha256": "078418f3053071695e9acac01507892ec644fe527395a83c02e161cd6f68c6b0",
+        "fileSha256": "9e92adb911c0d8dc08db2d26d8e65f97587976a6834c4a96eafa7f63fe2ffb4b",
+        "fileGitBlob": "d74d1877ada2711df9cd1a89fd2e72db425538e2",
+        "contextBefore": [
+          "            <div className={styles.quickstartMatchingControls}>",
+          "              <div className={styles.subsectionHeader}>"
+        ],
+        "contextAfter": [
+          "              </div>",
+          "",
+          "              <div className={styles.quickstartMatchingControl}>"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/Chaptarr.Api.V1/Config/MediaManagementConfigResource.cs",
+        "line": 29,
+        "lineText": "        public BookMatchingStrictness BookMatchingStrictness { get; set; }",
+        "lineSha256": "a8be07307eb70b058e88cd42d39a845eb1e6ffc94bc72bd3793b374b986124a4",
+        "fileSha256": "360724ab04fcbb5b0fb9edf2e673667eecfd707258891a51b4c9525b5511175b",
+        "fileGitBlob": "efc259f6fe5c2d3f622c1be32c0ab1d3de011cc4",
+        "contextBefore": [
+          "        public RescanAfterRefreshType RescanAfterRefresh { get; set; }",
+          "        public AllowFingerprinting AllowFingerprinting { get; set; }"
+        ],
+        "contextAfter": [
+          "        public int BookImportMinimumMatchPercent { get; set; }",
+          "        public bool UsePathAsTagsFallback { get; set; }",
+          "        public bool AutoAddMissingAuthorsFromCompletedDownloads { get; set; }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/Chaptarr.Api.V1/Config/MediaManagementConfigResource.cs",
+        "line": 119,
+        "lineText": "                BookMatchingStrictness = model.BookMatchingStrictness,",
+        "lineSha256": "82663056943c37e09eb272dd78484ce0ebf413cd846f762e2734ad1e0d5fa770",
+        "fileSha256": "360724ab04fcbb5b0fb9edf2e673667eecfd707258891a51b4c9525b5511175b",
+        "fileGitBlob": "efc259f6fe5c2d3f622c1be32c0ab1d3de011cc4",
+        "contextBefore": [
+          "                RescanAfterRefresh = model.RescanAfterRefresh,",
+          "                AllowFingerprinting = model.AllowFingerprinting,"
+        ],
+        "contextAfter": [
+          "                BookImportMinimumMatchPercent = model.BookImportMinimumMatchPercent,",
+          "                UsePathAsTagsFallback = model.UsePathAsTagsFallback,",
+          "                AutoAddMissingAuthorsFromCompletedDownloads = model.AutoAddMissingAuthorsFromCompletedDownloads,"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Configuration/BookMatchingStrictness.cs",
+        "line": 3,
+        "lineText": "    public enum BookMatchingStrictness",
+        "lineSha256": "d1a75c6f897c8ea719ae847f1a262ce5474afd565a97e8cd8e56a55db762e5d3",
+        "fileSha256": "c861cc1def7ba178d3d7b0bcda5a8ae81c46518d1a67d34f045cb587e69d13b7",
+        "fileGitBlob": "10961c223043084cd922f2ac7dd1d81c9dd877d8",
+        "contextBefore": [
+          "namespace NzbDrone.Core.Configuration",
+          "{"
+        ],
+        "contextAfter": [
+          "    {",
+          "        Aggressive,",
+          "        Balanced,"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Configuration/ConfigService.cs",
+        "line": 307,
+        "lineText": "        public BookMatchingStrictness BookMatchingStrictness",
+        "lineSha256": "46b3060d80e036201e4fd9b8ffe470015350c583dd77d2112098e6482b7f6b5a",
+        "fileSha256": "7fb5b4e25bb4e13302c232f3fc93ad5c05811ef8a3626b3532bfc7e9369517d6",
+        "fileGitBlob": "5584f9b4f814966dbc51a2b963fc921b29b56cfb",
+        "contextBefore": [
+          "        }",
+          ""
+        ],
+        "contextAfter": [
+          "        {",
+          "            get { return GetValueEnum(\"BookMatchingStrictness\", BookMatchingStrictness.Balanced); }",
+          ""
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Configuration/ConfigService.cs",
+        "line": 309,
+        "lineText": "            get { return GetValueEnum(\"BookMatchingStrictness\", BookMatchingStrictness.Balanced); }",
+        "lineSha256": "7531295d4bae1a57267a814f1f932ab216baae4b9e5ef7c7f4d45893933933e8",
+        "fileSha256": "7fb5b4e25bb4e13302c232f3fc93ad5c05811ef8a3626b3532bfc7e9369517d6",
+        "fileGitBlob": "5584f9b4f814966dbc51a2b963fc921b29b56cfb",
+        "contextBefore": [
+          "        public BookMatchingStrictness BookMatchingStrictness",
+          "        {"
+        ],
+        "contextAfter": [
+          "",
+          "            set { SetValue(\"BookMatchingStrictness\", value); }",
+          "        }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Configuration/ConfigService.cs",
+        "line": 311,
+        "lineText": "            set { SetValue(\"BookMatchingStrictness\", value); }",
+        "lineSha256": "2f62968a945e0de99269ed9304136f4d46f4799468d4e32368da9cb934283edf",
+        "fileSha256": "7fb5b4e25bb4e13302c232f3fc93ad5c05811ef8a3626b3532bfc7e9369517d6",
+        "fileGitBlob": "5584f9b4f814966dbc51a2b963fc921b29b56cfb",
+        "contextBefore": [
+          "            get { return GetValueEnum(\"BookMatchingStrictness\", BookMatchingStrictness.Balanced); }",
+          ""
+        ],
+        "contextAfter": [
+          "        }",
+          "",
+          "        public int BookImportMinimumMatchPercent"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Configuration/IConfigService.cs",
+        "line": 44,
+        "lineText": "        BookMatchingStrictness BookMatchingStrictness { get; set; }",
+        "lineSha256": "f33213ef00d7c4fcd80a229e4b553244956ac0ba054def10672fa5838eefda14",
+        "fileSha256": "83da28876a80fff720c2523d41f1157d32118c0e247035e017886248479b5d34",
+        "fileGitBlob": "3ec575f02e3e64643de9db4f22b14a1ad82b538d",
+        "contextBefore": [
+          "        RescanAfterRefreshType RescanAfterRefresh { get; set; }",
+          "        AllowFingerprinting AllowFingerprinting { get; set; }"
+        ],
+        "contextAfter": [
+          "        int BookImportMinimumMatchPercent { get; set; }",
+          "        bool BookshelfMatchCompatibility { get; set; }",
+          "        bool UsePathAsTagsFallback { get; set; }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+        "line": 2213,
+        "lineText": "            BookMatchingStrictness? legacyMappedStrictness = null;",
+        "lineSha256": "11b3e1b1c8bbd59897c39b55671eaaa5b5393268434e323e1041e3528da534b6",
+        "fileSha256": "4dcbed2e7f2c64aae50e9c84bb767253456dda7a6a962494c3bd7a3d55815684",
+        "fileGitBlob": "afd1c05f80fc63c9fa725eb190363dc22a0d19df",
+        "contextBefore": [
+          "                : null;",
+          "            int? legacyPercent = null;"
+        ],
+        "contextAfter": [
+          "",
+          "            if (legacyRows.Count == 1)",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+        "line": 2230,
+        "lineText": "                if (!Enum.TryParse(existingStrictnessValue, ignoreCase: true, out BookMatchingStrictness parsedStrictness) ||",
+        "lineSha256": "c4de5c8b39985145f8efb7cd19280ef25113d51d7bc03998c58a9e63c6ed1b65",
+        "fileSha256": "4dcbed2e7f2c64aae50e9c84bb767253456dda7a6a962494c3bd7a3d55815684",
+        "fileGitBlob": "afd1c05f80fc63c9fa725eb190363dc22a0d19df",
+        "contextBefore": [
+          "            if (!string.IsNullOrWhiteSpace(existingStrictnessValue))",
+          "            {"
+        ],
+        "contextAfter": [
+          "                    !Enum.IsDefined(typeof(BookMatchingStrictness), parsedStrictness))",
+          "                {",
+          "                    throw new InvalidDataException(\"BookshelfNG config contains an invalid BookMatchingStrictness value; conversion stopped before promotion.\");"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+        "line": 2231,
+        "lineText": "                    !Enum.IsDefined(typeof(BookMatchingStrictness), parsedStrictness))",
+        "lineSha256": "0b4b331882e2e222a5ffbaffc1b7b4c16c512e8053444c4a56c52af6db1b215a",
+        "fileSha256": "4dcbed2e7f2c64aae50e9c84bb767253456dda7a6a962494c3bd7a3d55815684",
+        "fileGitBlob": "afd1c05f80fc63c9fa725eb190363dc22a0d19df",
+        "contextBefore": [
+          "            {",
+          "                if (!Enum.TryParse(existingStrictnessValue, ignoreCase: true, out BookMatchingStrictness parsedStrictness) ||"
+        ],
+        "contextAfter": [
+          "                {",
+          "                    throw new InvalidDataException(\"BookshelfNG config contains an invalid BookMatchingStrictness value; conversion stopped before promotion.\");",
+          "                }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+        "line": 2233,
+        "lineText": "                    throw new InvalidDataException(\"BookshelfNG config contains an invalid BookMatchingStrictness value; conversion stopped before promotion.\");",
+        "lineSha256": "0a2e5db5b94a74dd4be1997fc957f081319e01a95e54e4b365494378767f770a",
+        "fileSha256": "4dcbed2e7f2c64aae50e9c84bb767253456dda7a6a962494c3bd7a3d55815684",
+        "fileGitBlob": "afd1c05f80fc63c9fa725eb190363dc22a0d19df",
+        "contextBefore": [
+          "                    !Enum.IsDefined(typeof(BookMatchingStrictness), parsedStrictness))",
+          "                {"
+        ],
+        "contextAfter": [
+          "                }",
+          "",
+          "                matchSettingDisposition = legacyRows.Count == 0"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+        "line": 2261,
+        "lineText": "                matchSettingDisposition = $\"BookshelfNG BookImportMinimumMatchPercent={legacyPercent.Value.ToString(CultureInfo.InvariantCulture)} remains active for fuzzy RSS-title fallback and candidate acceptance, and was also mapped to ChaptarrNG BookMatchingStrictness='{mappedValue}' for its additional safety rules.\";",
+        "lineSha256": "175793f092820c1e8be18fedb0ae300a17c5d309749868054f33b066caa847b7",
+        "fileSha256": "4dcbed2e7f2c64aae50e9c84bb767253456dda7a6a962494c3bd7a3d55815684",
+        "fileGitBlob": "afd1c05f80fc63c9fa725eb190363dc22a0d19df",
+        "contextBefore": [
+          "                }",
+          ""
+        ],
+        "contextAfter": [
+          "            }",
+          "",
+          "            if (matchCompatibilityRows.Count == 0)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs",
+        "line": 7,
+        "lineText": "        public static bool TryMapMinimumMatchPercent(int percent, out BookMatchingStrictness strictness)",
+        "lineSha256": "2a5919273cc20a90b46d3f2abc16c02cfbd02ed220bcad38e3de32e76fbfbe80",
+        "fileSha256": "649b556e79b78da7f0995a36f14757f481096f38c4435a01fed40561a9dcbf6d",
+        "fileGitBlob": "61fcccd3653da66f0414d9c0c8d3f118882eeac8",
+        "contextBefore": [
+          "    internal static class BookshelfMatchSettingMigration",
+          "    {"
+        ],
+        "contextAfter": [
+          "        {",
+          "            if (percent < 50 || percent > 99)",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs",
+        "line": 17,
+        "lineText": "                <= 66 => BookMatchingStrictness.Aggressive,",
+        "lineSha256": "fc58547303a14a61c4b2a7bbc48de1ec7009a7723c4b359e83d1ae26f4c0190e",
+        "fileSha256": "649b556e79b78da7f0995a36f14757f481096f38c4435a01fed40561a9dcbf6d",
+        "fileGitBlob": "61fcccd3653da66f0414d9c0c8d3f118882eeac8",
+        "contextBefore": [
+          "            strictness = percent switch",
+          "            {"
+        ],
+        "contextAfter": [
+          "                <= 82 => BookMatchingStrictness.Balanced,",
+          "                _ => BookMatchingStrictness.Strict",
+          "            };"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs",
+        "line": 18,
+        "lineText": "                <= 82 => BookMatchingStrictness.Balanced,",
+        "lineSha256": "f819ce3fc89412a776a63eb602ede6d7feb7ab5e76f367283df49887a3007298",
+        "fileSha256": "649b556e79b78da7f0995a36f14757f481096f38c4435a01fed40561a9dcbf6d",
+        "fileGitBlob": "61fcccd3653da66f0414d9c0c8d3f118882eeac8",
+        "contextBefore": [
+          "            {",
+          "                <= 66 => BookMatchingStrictness.Aggressive,"
+        ],
+        "contextAfter": [
+          "                _ => BookMatchingStrictness.Strict",
+          "            };",
+          ""
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/Datastore/BookshelfMatchSettingMigration.cs",
+        "line": 19,
+        "lineText": "                _ => BookMatchingStrictness.Strict",
+        "lineSha256": "4fd4604e8c919f7524626d58466b316f18888b1bf4cb3a4196aeef01ff33eddb",
+        "fileSha256": "649b556e79b78da7f0995a36f14757f481096f38c4435a01fed40561a9dcbf6d",
+        "fileGitBlob": "61fcccd3653da66f0414d9c0c8d3f118882eeac8",
+        "contextBefore": [
+          "                <= 66 => BookMatchingStrictness.Aggressive,",
+          "                <= 82 => BookMatchingStrictness.Balanced,"
+        ],
+        "contextAfter": [
+          "            };",
+          "",
+          "            return true;"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs",
+        "line": 524,
+        "lineText": "                    _configService?.BookMatchingStrictness ?? BookMatchingStrictness.Balanced))",
+        "lineSha256": "4869a37bf7df7059e14dfa0849cea9224b39451132c422d91e68a773fa619469",
+        "fileSha256": "b1f790f1330eb12735936865d8de5b2c4be6a03b36e3d803afea473510390812",
+        "fileGitBlob": "654c2fc4d2a4ff287c0eb863e38b940071e7b468",
+        "contextBefore": [
+          "                    candidate.Match,",
+          "                    candidate.Identity,"
+        ],
+        "contextAfter": [
+          "                .ToList();",
+          "",
+          "            var selected = viableMatches.Count == 1 ? viableMatches[0] : null;"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs",
+        "line": 79,
+        "lineText": "            if (IsAcceptedMatch(best, identity, _configService?.BookMatchingStrictness ?? BookMatchingStrictness.Balanced))",
+        "lineSha256": "2aea0e9366337e5a5ed3339c34561dfb14e2923f27c9f264f2b54ec8ff955c31",
+        "fileSha256": "2eea6c9550137392845afa1b2138a2fe124651d9f59ad0abdab9d819e141a88f",
+        "fileGitBlob": "6cb713c913c983b5de488b16622170d4667909c2",
+        "contextBefore": [
+          "            }",
+          ""
+        ],
+        "contextAfter": [
+          "            {",
+          "                return Decision.Accept();",
+          "            }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs",
+        "line": 124,
+        "lineText": "        internal static bool IsAcceptedMatch(TitleMatchResult match, ReleaseIdentityEvidence identity, BookMatchingStrictness strictness)",
+        "lineSha256": "bf67c976aec7e06eb660aff398edd0378cb6fc8d4815b2a13bcd59d5c1bec80b",
+        "fileSha256": "2eea6c9550137392845afa1b2138a2fe124651d9f59ad0abdab9d819e141a88f",
+        "fileGitBlob": "6cb713c913c983b5de488b16622170d4667909c2",
+        "contextBefore": [
+          "        }",
+          ""
+        ],
+        "contextAfter": [
+          "        {",
+          "            if (match?.IsMatch == true ||",
+          "                (identity?.HasPositiveIdentityEvidence == true && match?.ProblemCode == TitleMatchProblemCode.None))"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/DecisionEngine/Specifications/ReleaseTitleMatchSpecification.cs",
+        "line": 132,
+        "lineText": "            if (strictness == BookMatchingStrictness.Strict ||",
+        "lineSha256": "459c1a11808d63499095c6c1e28a07718fb41e756c61fbf2175bc0648015afc6",
+        "fileSha256": "2eea6c9550137392845afa1b2138a2fe124651d9f59ad0abdab9d819e141a88f",
+        "fileGitBlob": "6cb713c913c983b5de488b16622170d4667909c2",
+        "contextBefore": [
+          "            }",
+          ""
+        ],
+        "contextAfter": [
+          "                match?.Problems?.Any() != true)",
+          "            {",
+          "                return false;"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 756,
+        "lineText": "        private BookMatchingStrictness GetConfiguredMatchingStrictness()",
+        "lineSha256": "f63bcaca3784dcd616a098cb6c22168fe77305e7a41bec2d1f613c06e34fa851",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "        }",
+          ""
+        ],
+        "contextAfter": [
+          "        {",
+          "            try",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 760,
+        "lineText": "                return _configService?.BookMatchingStrictness ?? BookMatchingStrictness.Balanced;",
+        "lineSha256": "2b0f97aa5680821a6e7fedc3656975bf468a1b4f2e2ae4ccc67c52954fb38234",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "            try",
+          "            {"
+        ],
+        "contextAfter": [
+          "            }",
+          "            catch",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 764,
+        "lineText": "                return BookMatchingStrictness.Balanced;",
+        "lineSha256": "1117a236277a71144a6eab62e64b8bd676467b9336c9d1736cabe18ba0d102f6",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "            catch",
+          "            {"
+        ],
+        "contextAfter": [
+          "            }",
+          "        }",
+          ""
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 768,
+        "lineText": "        private bool IsConfiguredPathAsTagsFallbackEnabled(BookMatchingStrictness strictness)",
+        "lineSha256": "588506022fa47dd304a742aaf6e959c99451fc35fd1d74d4ba28a8c20df5df9b",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "        }",
+          ""
+        ],
+        "contextAfter": [
+          "        {",
+          "            if (strictness == BookMatchingStrictness.Strict)",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 770,
+        "lineText": "            if (strictness == BookMatchingStrictness.Strict)",
+        "lineSha256": "d24f574035812e0d85f0d7beccc58cdd214097b9b60dd409f80ede4a5600e177",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "        private bool IsConfiguredPathAsTagsFallbackEnabled(BookMatchingStrictness strictness)",
+          "        {"
+        ],
+        "contextAfter": [
+          "            {",
+          "                return false;",
+          "            }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 5345,
+        "lineText": "                BookMatchingStrictness strictness = BookMatchingStrictness.Balanced,",
+        "lineSha256": "3731f146afa61c8fa8c3dfcbb670bc3c7f81d765bd7727a0cce8cbd337d870fe",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                IDictionary<string, List<string>> allTags,",
+          "                IDictionary<int, Book> booksById = null,"
+        ],
+        "contextAfter": [
+          "                SeriesPositionEvidence seriesPositionEvidence = null)",
+          "            {",
+          "                if (candidate == null || evidenceFields == null || evidenceFields.Count == 0)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 5360,
+        "lineText": "            var nearDistanceTokens = strictness == BookMatchingStrictness.Aggressive ? 1 : 3;",
+        "lineSha256": "b08be043d4cf79169ae24c7610542f3acfa2c5dd767bd0998c071468acd3835a",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "            var boundaryTokens = new HashSet<string>(StringComparer.OrdinalIgnoreCase);",
+          ""
+        ],
+        "contextAfter": [
+          "",
+          "            void AddExplainable(string text)",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 5641,
+        "lineText": "                if (strictness == BookMatchingStrictness.Strict ||",
+        "lineSha256": "c8b75a4c3b420a3b394ebc0fa3f7231032d0b03c08c2e124de33c97d0b31475e",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "            bool CanTolerateUnexplainedLeftovers(IReadOnlyList<string> leftovers)",
+          "            {"
+        ],
+        "contextAfter": [
+          "                    leftovers == null ||",
+          "                    leftovers.Count == 0)",
+          "                {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 5648,
+        "lineText": "                if (strictness == BookMatchingStrictness.Aggressive)",
+        "lineSha256": "11ed48b053428dbed00e61571ba6d7c214c4fa6a23911e038c8907bb8994cfe5",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                }",
+          ""
+        ],
+        "contextAfter": [
+          "                {",
+          "                    return true;",
+          "                }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 5669,
+        "lineText": "                    (strictness != BookMatchingStrictness.Strict &&",
+        "lineSha256": "7f02cf07934e051c307b8d97d5ca6ef08c8b1b12f9025a20fad6d18e58f442d7",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                var consumeRecognizedSeriesDecoration =",
+          "                    fieldPositionEvidence?.Disposition == SeriesPositionDisposition.Match ||"
+        ],
+        "contextAfter": [
+          "                     fieldPositionEvidence?.Disposition == SeriesPositionDisposition.Mismatch);",
+          "",
+          "                bool IsObservedSeriesPositionToken(string token)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 5833,
+        "lineText": "                                if (strictness == BookMatchingStrictness.Strict)",
+        "lineSha256": "7446cca4c2546b7906db672fb6bc11e4d8c5913d432c13a95e8139d890e3e68f",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                            if (allNumericLeftovers)",
+          "                            {"
+        ],
+        "contextAfter": [
+          "                                {",
+          "                                    // Strict: require explicit packaging markers (e.g., \"Track\", \"Disc\", \"Part\") to tolerate numeric leftovers.",
+          "                                    if (originalFieldTokens.Any(IsNumericPackagingMarkerToken))"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 6017,
+        "lineText": "                    if (strictness == BookMatchingStrictness.Strict)",
+        "lineSha256": "fdb26e3ff75f036bbe4e7b242d63b35519c527edee336565625a496f5278042c",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                    }",
+          ""
+        ],
+        "contextAfter": [
+          "                    {",
+          "                        contradictions.Add(tok);",
+          "                        return;"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 6023,
+        "lineText": "                    if (strictness == BookMatchingStrictness.Balanced)",
+        "lineSha256": "c54e3ddf1a24736a2b37b0ad67caf1c0f16510aaf708a7024b3b897747fdfc47",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                    }",
+          ""
+        ],
+        "contextAfter": [
+          "                    {",
+          "                        ambiguousNumeric.Add(tok);",
+          "                    }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 6136,
+        "lineText": "                                if (strictness == BookMatchingStrictness.Strict)",
+        "lineSha256": "7446cca4c2546b7906db672fb6bc11e4d8c5913d432c13a95e8139d890e3e68f",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                                var distinct = contradictions.Distinct(StringComparer.OrdinalIgnoreCase).ToList();",
+          ""
+        ],
+        "contextAfter": [
+          "                                {",
+          "                                    _logger.Debug(\"[HOLY-GRAIL] Rejecting candidate '{0}' (EditionId={1}) due to leftovers in field '{2}' (strict): [{3}]\",",
+          "                                        candidate.EditionTitle, candidate.EditionId, ev.FieldName, string.Join(\", \", distinct.Take(8)));"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 6160,
+        "lineText": "                if (strictness == BookMatchingStrictness.Balanced && ambiguousNumeric.Count > 0)",
+        "lineSha256": "7384301d38f0607f1804359724d536544363b2d973085e443edda3f0b147fcea",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                        }",
+          ""
+        ],
+        "contextAfter": [
+          "                {",
+          "                    var distinct = ambiguousNumeric.Distinct(StringComparer.OrdinalIgnoreCase).ToList();",
+          "                    RecordPassingLeftovers(distinct);"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 7966,
+        "lineText": "                        if (strictness != BookMatchingStrictness.Strict)",
+        "lineSha256": "b9ef254f7d7f7ad85f03ab6f39b773c77f92b757d4e78d9331ca4e87a119ab3b",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                        }",
+          ""
+        ],
+        "contextAfter": [
+          "                        {",
+          "                            return true;",
+          "                        }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 8071,
+        "lineText": "                        if (strictness == BookMatchingStrictness.Strict && invalidatedTitleEvidenceFields.Count > 0)",
+        "lineSha256": "e7e9b85ad9be20652f45999b584bfa9820a2661bf3649e894dbc1b83039dab5a",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                    if (evidence == null || evidence.Count == 0)",
+          "                    {"
+        ],
+        "contextAfter": [
+          "                        {",
+          "                            MarkContradictoryEvidence();",
+          "                            strictSeriesPositionRejectedCount++;"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 8347,
+        "lineText": "                    if (strictness == BookMatchingStrictness.Strict &&",
+        "lineSha256": "0cb6c6402db427a19c43584c69c139cb33be579c596157162e7f586e557a1d02",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                        ? scoredCandidate.TitleOccurrenceExplanations.Any(explanation => explanation.NearbyUnexplainedTokens.Count == 0)",
+          "                        : null;"
+        ],
+        "contextAfter": [
+          "                        hasStrictlyCleanTitleOccurrence == false)",
+          "                    {",
+          "                        MarkContradictoryEvidence();"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 9529,
+        "lineText": "                BookMatchingStrictness strictness,",
+        "lineSha256": "b787ac4a36720dcdab4e3d8da9fb3fc9b5a6ce02d72c1ad701f8f3113520ebff",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                int? observedDurationSeconds,",
+          "                int? observedYear,"
+        ],
+        "contextAfter": [
+          "                string phase,",
+          "                IDictionary<int, Book> booksById)",
+          "            {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 9682,
+        "lineText": "                                Detail = strictness == BookMatchingStrictness.Strict",
+        "lineSha256": "c9e5eebf992d9c486a09abab7b3733861e617571129ce8aea48cc2d414c4f52e",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "                                Observed = observed,",
+          "                                Expected = expected,"
+        ],
+        "contextAfter": [
+          "                                    ? \"This field's position conflicted, so Strict did not use that field as title proof.\"",
+          "                                    : \"The position conflicted, but this mode did not let position override stronger title proof.\"",
+          "                            });"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 14531,
+        "lineText": "            BookMatchingStrictness strictness,",
+        "lineSha256": "50bd195cbe3c09b0bcf7d6e7c6c65deda15bcf4d17b1af9cf6ae5d49416a2749",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "        private MatchProvenance BuildIdentifierMatchProvenance(",
+          "            IReadOnlyCollection<IdentifierEvidenceCandidate> evidence,"
+        ],
+        "contextAfter": [
+          "            out MatchIdentityProof identityProof,",
+          "            IDictionary<string, List<string>> embeddedTags,",
+          "            IdentifierCandidateProof candidateProof)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "line": 14674,
+        "lineText": "            BookMatchingStrictness strictness,",
+        "lineSha256": "50bd195cbe3c09b0bcf7d6e7c6c65deda15bcf4d17b1af9cf6ae5d49416a2749",
+        "fileSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+        "fileGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+        "contextBefore": [
+          "            FileMatch match,",
+          "            IDictionary<string, List<string>> embeddedTags,"
+        ],
+        "contextAfter": [
+          "            string route)",
+          "        {",
+          "            if (match == null)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs",
+        "line": 135,
+        "lineText": "                    var matchingStrictness = BookMatchingStrictness.Balanced;",
+        "lineSha256": "82d1e9c414ab35741a9c2f485addcedbaa13529e3384e6fda31b1e88a7eaed3c",
+        "fileSha256": "5b238d3289192263f9818d511a27ca921fe8afd02228402cdb58aa6a988fda71",
+        "fileGitBlob": "6aaaa2b69f328427821f3622f587cff933afc3f0",
+        "contextBefore": [
+          "                    if (string.IsNullOrWhiteSpace(rootPath)) return 0;",
+          ""
+        ],
+        "contextAfter": [
+          "                    var usePathAsTagsFallback = true;",
+          "                    try",
+          "                    {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs",
+        "line": 141,
+        "lineText": "                            matchingStrictness = _configService.BookMatchingStrictness;",
+        "lineSha256": "d06081b43e4b5d70c8f164fc486faed2de458df1250ffa22e7be1081b8b8ad66",
+        "fileSha256": "5b238d3289192263f9818d511a27ca921fe8afd02228402cdb58aa6a988fda71",
+        "fileGitBlob": "6aaaa2b69f328427821f3622f587cff933afc3f0",
+        "contextBefore": [
+          "                        if (_configService != null)",
+          "                        {"
+        ],
+        "contextAfter": [
+          "                            usePathAsTagsFallback = _configService.UsePathAsTagsFallback;",
+          "                        }",
+          "                    }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs",
+        "line": 147,
+        "lineText": "                        matchingStrictness = BookMatchingStrictness.Balanced;",
+        "lineSha256": "69c14f83ae1f9e6a494f1242a97ad33d34b11a1462db0df6b795a91415ef9a21",
+        "fileSha256": "5b238d3289192263f9818d511a27ca921fe8afd02228402cdb58aa6a988fda71",
+        "fileGitBlob": "6aaaa2b69f328427821f3622f587cff933afc3f0",
+        "contextBefore": [
+          "                    catch",
+          "                    {"
+        ],
+        "contextAfter": [
+          "                        usePathAsTagsFallback = true;",
+          "                    }",
+          ""
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.Core/MediaFiles/BookImport/Services/DiscoveryWorker.cs",
+        "line": 151,
+        "lineText": "                    if (matchingStrictness == BookMatchingStrictness.Strict)",
+        "lineSha256": "436854a449b79018b2a2c079164dad452323d0cc3e24399540e9c34a241d5041",
+        "fileSha256": "5b238d3289192263f9818d511a27ca921fe8afd02228402cdb58aa6a988fda71",
+        "fileGitBlob": "6aaaa2b69f328427821f3622f587cff933afc3f0",
+        "contextBefore": [
+          "                    }",
+          ""
+        ],
+        "contextAfter": [
+          "                    {",
+          "                        usePathAsTagsFallback = false;",
+          "                    }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 869,
+        "lineText": "            var originalStrictness = configService.BookMatchingStrictness;",
+        "lineSha256": "30543cc20e5785bbf9f7cc00563623bc65c97e235e6327e053e19f6004c2ca17",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "            var matcher = services.GetRequiredService<IFileMatchingService>();",
+          "            var configService = services.GetRequiredService<IConfigService>();"
+        ],
+        "contextAfter": [
+          "            var originalPathFallback = configService.UsePathAsTagsFallback;",
+          "",
+          "            var report = new AuditReport"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 895,
+        "lineText": "                    configService.BookMatchingStrictness = strictness.Value;",
+        "lineSha256": "51721c95b9bdc408fe189bc73884b6f40d15a3590acbef80d5b3d8937ccce199",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "                if (strictness.HasValue)",
+          "                {"
+        ],
+        "contextAfter": [
+          "                }",
+          "                else",
+          "                {"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 899,
+        "lineText": "                    configService.BookMatchingStrictness = originalStrictness;",
+        "lineSha256": "443e5803e5574b6b45a122c838fa3540a44f37546edd57bad868b6d618cf70a5",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "                else",
+          "                {"
+        ],
+        "contextAfter": [
+          "                }",
+          "",
+          "                foreach (var pathFallback in pathFallbackValues)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 928,
+        "lineText": "                            configService.BookMatchingStrictness,",
+        "lineSha256": "ba105772ea7591653f56787c9abafba633c9e277aeda145993c6d7254f0212ef",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "                            dbPath,",
+          "                            flow,"
+        ],
+        "contextAfter": [
+          "                            configService.UsePathAsTagsFallback,",
+          "                            inputs,",
+          "                            matchResult,"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 958,
+        "lineText": "            configService.BookMatchingStrictness = originalStrictness;",
+        "lineSha256": "8ef17f32f3c63b532fa6b61199616065af2fb2afdb64eee7957d0e9942f99b10",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "            }",
+          ""
+        ],
+        "contextAfter": [
+          "            configService.UsePathAsTagsFallback = originalPathFallback;",
+          "",
+          "            WriteAuditReport(report, outputPath);"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1069,
+        "lineText": "        private static List<BookMatchingStrictness?> ParseStrictnessValues(string raw)",
+        "lineSha256": "86da2bc16f759c379fc941cd289ec1de6986099f84e73ae4e438a209a226faa5",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "        }",
+          ""
+        ],
+        "contextAfter": [
+          "        {",
+          "            var values = ExpandCsv(raw, \"current\");",
+          "            if (values.Any(v => string.Equals(v, \"all\", StringComparison.OrdinalIgnoreCase)))"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1074,
+        "lineText": "                return new List<BookMatchingStrictness?> { BookMatchingStrictness.Aggressive, BookMatchingStrictness.Balanced, BookMatchingStrictness.Strict };",
+        "lineSha256": "e080a5f3b582610224846053440280ba590b5bb6013551a5430cf124f0966782",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "            if (values.Any(v => string.Equals(v, \"all\", StringComparison.OrdinalIgnoreCase)))",
+          "            {"
+        ],
+        "contextAfter": [
+          "            }",
+          "",
+          "            var parsed = new List<BookMatchingStrictness?>();"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1077,
+        "lineText": "            var parsed = new List<BookMatchingStrictness?>();",
+        "lineSha256": "977b3a5d13c0905e2dec24e325e40926fc2625ca52b5ef6f269d8bf9d9b13187",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "            }",
+          ""
+        ],
+        "contextAfter": [
+          "            foreach (var value in values)",
+          "            {",
+          "                if (value.Equals(\"current\", StringComparison.OrdinalIgnoreCase))"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1088,
+        "lineText": "                    parsed.Add(BookMatchingStrictness.Aggressive);",
+        "lineSha256": "0c73b091aa5a1d5ea9f9a1a42f6c37b30e9b49f3688b929e9ef102b522fb375d",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "                if (value.Equals(\"loose\", StringComparison.OrdinalIgnoreCase))",
+          "                {"
+        ],
+        "contextAfter": [
+          "                    continue;",
+          "                }",
+          ""
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1092,
+        "lineText": "                if (Enum.TryParse<BookMatchingStrictness>(value, ignoreCase: true, out var strictness))",
+        "lineSha256": "01f40162d036022ca170470766dcd90005474b56151f72577144b8faac5192e1",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "                }",
+          ""
+        ],
+        "contextAfter": [
+          "                {",
+          "                    parsed.Add(strictness);",
+          "                }"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1098,
+        "lineText": "            return parsed.Count > 0 ? parsed : new List<BookMatchingStrictness?> { null };",
+        "lineSha256": "e7b01cec23b176faa093ba761959a5f5c7accfe6a746e63401d6bcf647780140",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "            }",
+          ""
+        ],
+        "contextAfter": [
+          "        }",
+          "",
+          "        private static List<bool?> ParsePathFallbackValues(string raw)"
+        ]
+      },
+      {
+        "referenceKind": "indirect-key-literal-reference",
+        "isComment": false,
+        "isRuntimeReference": true,
+        "path": "src/NzbDrone.MatchBench/Program.cs",
+        "line": 1533,
+        "lineText": "            BookMatchingStrictness strictness,",
+        "lineSha256": "50bd195cbe3c09b0bcf7d6e7c6c65deda15bcf4d17b1af9cf6ae5d49416a2749",
+        "fileSha256": "67d881a4a47235149c4206e60f93423e05ee712e07a152673f9f41c7210130c6",
+        "fileGitBlob": "787ff4beedfbf4b76193cea975c9d827a884fea4",
+        "contextBefore": [
+          "            string dbPath,",
+          "            string flow,"
+        ],
+        "contextAfter": [
+          "            bool pathFallback,",
+          "            IReadOnlyList<AuditInputFile> inputs,",
+          "            FileMatchResult matchResult,"
+        ]
+      }
+    ],
+    "relatedDynamicTranslationCallsites": [
+      {
+        "path": "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+        "line": 72,
+        "lineText": "        {translate(labelKey)}",
+        "lineSha256": "e5218675dd791740bb8a9183c84b11314844c5a8f6e9512701e2e052339d673b",
+        "callExpression": "translate(labelKey",
+        "argumentExpression": "labelKey",
+        "fileSha256": "9e92adb911c0d8dc08db2d26d8e65f97587976a6834c4a96eafa7f63fe2ffb4b",
+        "fileGitBlob": "d74d1877ada2711df9cd1a89fd2e72db425538e2",
+        "contextBefore": [
+          "    <div className={`${styles.matchingExampleField} ${sectionClassName}`}>",
+          "      <span className={styles.matchingExampleFieldLabel}>"
+        ],
+        "contextAfter": [
+          "      </span>",
+          ""
+        ]
+      },
+      {
+        "path": "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+        "line": 89,
+        "lineText": "              {translate(part.text)}",
+        "lineSha256": "b053d4e5f6aa904f725345e9d6be6c734eef72ba1d648a1512fdc6e050ff29d8",
+        "callExpression": "translate(part.text",
+        "argumentExpression": "part.text",
+        "fileSha256": "9e92adb911c0d8dc08db2d26d8e65f97587976a6834c4a96eafa7f63fe2ffb4b",
+        "fileGitBlob": "d74d1877ada2711df9cd1a89fd2e72db425538e2",
+        "contextBefore": [
+          "              className={`${styles.matchingToken} ${tokenClassName}`}",
+          "            >"
+        ],
+        "contextAfter": [
+          "            </span>",
+          "          );"
+        ]
+      },
+      {
+        "path": "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+        "line": 107,
+        "lineText": "        <span>{translate(example.label)}</span>",
+        "lineSha256": "7a24627d92f87162edf60196a36bab8072e4c10d8e7daf48f631122c50036257",
+        "callExpression": "translate(example.label",
+        "argumentExpression": "example.label",
+        "fileSha256": "9e92adb911c0d8dc08db2d26d8e65f97587976a6834c4a96eafa7f63fe2ffb4b",
+        "fileGitBlob": "d74d1877ada2711df9cd1a89fd2e72db425538e2",
+        "contextBefore": [
+          "    >",
+          "      <div className={styles.matchingExampleHeader}>"
+        ],
+        "contextAfter": [
+          "      </div>",
+          ""
+        ]
+      },
+      {
+        "path": "frontend/src/System/Quickstart/QuickstartMatchingSection.js",
+        "line": 111,
+        "lineText": "        {translate(example.explanation)}",
+        "lineSha256": "1a9d9f9fa2c4636b4937ffd31763b17fd59c4f708ccd84974531219f55513a56",
+        "callExpression": "translate(example.explanation",
+        "argumentExpression": "example.explanation",
+        "fileSha256": "9e92adb911c0d8dc08db2d26d8e65f97587976a6834c4a96eafa7f63fe2ffb4b",
+        "fileGitBlob": "d74d1877ada2711df9cd1a89fd2e72db425538e2",
+        "contextBefore": [
+          "",
+          "      <div className={styles.matchingExampleExplanation}>"
+        ],
+        "contextAfter": [
+          "      </div>",
+          ""
+        ]
+      }
+    ]
+  },
+  "excluded": [
+    "prior proposals",
+    "prior rationales",
+    "recommendation targets",
+    "review dispositions"
+  ]
+}

@@ -1,0 +1,9 @@
+# ChaptarrNG exact-hash review gap closure
+
+PR #190 was reviewed at head `580538d38f92e0ec005366ff6bea3f2634400c2e` (tree `b61f7ca1f5b496c01a32ba7b8f3520076ec5cfc1`). The packet covers 31 previously uncovered cells across seven source IDs: 24 cells at corrected-source ranks 654 and 695, plus seven changed existing target cells. It contains all 12 locale snapshots for each source ID, pinned caller/source context, and exact source, target, and catalog hashes.
+
+Primary review, independent blind review, and cross-audit all recommend accept-current for all 31 cells. No translation changes were needed. The reviewers verified the corrected source hashes for ranks 654 and 695 and the exact current targets for the seven changes. There is one confidence variance for Traditional Chinese notification wording, with matching target text and hash.
+
+The accompanying full catalog audit reattests 14,520 current target hashes. All 12 locale catalogs have the same 4,165 keys, no blank values, and no placeholder mismatches. It also records 61 active holds: 37 cells across seven IDs have exact production or UI callers, and 24 cells at ranks 447/498 still lack an exact direct caller. These holds remain active pending their own review; this packet does not release them.
+
+All nested checksum manifests pass. The portable candidate-free packet README has one trailing blank line normalized for the repository whitespace check; the original packet and its original checksums remain in task scratch, and `candidate-free-packet/SHA256SUMS.txt` covers the portable copy. This is machine-assisted semantic review, not native-speaker approval. Exact-head visual review remains outstanding while the isolated headed-browser pool coordinator is unavailable. No tests, builds, scans, or CI were run. No workflow changes, merge, release, or tag were made.

@@ -16,6 +16,7 @@ using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Exceptions;
 using NzbDrone.Core.ImportLists.Goodreads;
 using NzbDrone.Core.MetadataSource.Goodreads;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Goodreads
 {
@@ -140,13 +141,13 @@ namespace NzbDrone.Core.Notifications.Goodreads
             catch (Common.Http.HttpException ex)
             {
                 _logger.Warn(ex, "Goodreads Authentication Error");
-                return new ValidationFailure(string.Empty, $"Goodreads authentication error: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Goodreads authentication error: {ex.Message}", "server.message.m65fe7c1758c8", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to Goodreads");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to Goodreads, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to Goodreads, check the log for more details", "server.message.ma0fce9d22095");
             }
         }
 

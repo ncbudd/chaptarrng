@@ -1,0 +1,27 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "state": "open",
+  "draft": true,
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "headSha": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "headTree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "baseRef": "main",
+  "baseSha": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "originBranch": "codex/chaptarrng-localization-complete-20261031",
+  "originBranchSha": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "githubApiHeadSha": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "githubApiTreeSha": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "localBranch": "codex/chaptarrng-localization-complete-20261031",
+  "localWorktree": "/mnt/disks/scratch/task-worktrees/localization-20261030/chaptarrng-main-699b0a",
+  "localStatusPorcelain": "",
+  "checks": {
+    "localHeadMatchesAssigned": true,
+    "localTreeMatchesAssigned": true,
+    "originRefMatchesHead": true,
+    "apiHeadMatchesAssigned": true,
+    "apiTreeMatchesAssigned": true,
+    "worktreeClean": true
+  },
+  "capturedAtUtc": "2026-11-03T01:03:43.770347+00:00"
+}

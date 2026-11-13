@@ -1,0 +1,13 @@
+{
+  "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261030/chaptarrng-main-699b0a",
+  "worktree_clean": true,
+  "source_current_caller_rows_checked": 138,
+  "exact_source_value_match": true,
+  "exact_current_target_match": true,
+  "source_and_target_file_hashes_match": true,
+  "caller_file_hash_and_line_hash_matches": true,
+  "checks_failed": 0,
+  "reattested_at": "2026-11-03 00:41:38 UTC"
+}

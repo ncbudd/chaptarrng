@@ -7,6 +7,7 @@ using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Apprise
 {
@@ -95,7 +96,7 @@ namespace NzbDrone.Core.Notifications.Apprise
                 if (httpException.Response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     _logger.Error(ex, $"HTTP Auth credentials are invalid: {0}", ex.Message);
-                    return new ValidationFailure("AuthUsername", $"HTTP Auth credentials are invalid: {ex.Message}");
+                    return NzbDroneValidationFailure.ForMessage("AuthUsername", $"HTTP Auth credentials are invalid: {ex.Message}", "server.message.m00ca141bf2d2", new { value0 = ex.Message });
                 }
 
                 if (httpException.Response.Content.IsNotNullOrWhiteSpace())
@@ -103,16 +104,16 @@ namespace NzbDrone.Core.Notifications.Apprise
                     var error = Json.Deserialize<AppriseError>(httpException.Response.Content);
 
                     _logger.Error(ex, $"Unable to send test message. Response from API: {0}", error.Error);
-                    return new ValidationFailure(string.Empty, $"Unable to send test message. Response from API: {error.Error}");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, $"Unable to send test message. Response from API: {error.Error}", "server.message.md7cf291e278c", new { value0 = error.Error });
                 }
 
                 _logger.Error(ex, "Unable to send test message. Server connection failed: ({0}) {1}", httpException.Response.StatusCode, ex.Message);
-                return new ValidationFailure("Url", $"Unable to connect to Apprise API. Server connection failed: ({httpException.Response.StatusCode}) {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage("Url", $"Unable to connect to Apprise API. Server connection failed: ({httpException.Response.StatusCode}) {ex.Message}", "server.message.m7b1e864e07d8", new { value0 = httpException.Response.StatusCode, value1 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message: {0}", ex.Message);
-                return new ValidationFailure("Url", $"Unable to send test message: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage("Url", $"Unable to send test message: {ex.Message}", "server.message.m8d4c22034dd2", new { value0 = ex.Message });
             }
 
             return null;

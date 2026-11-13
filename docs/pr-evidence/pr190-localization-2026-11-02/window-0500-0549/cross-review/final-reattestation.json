@@ -1,0 +1,38 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequest": {
+    "baseRefName": "main",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "2625ad8bda30c7070bcc84ec8e4b31906a3d2288",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "exactHead": "2625ad8bda30c7070bcc84ec8e4b31906a3d2288",
+  "exactTree": "128cbbef8788d11f0978529cf31eeab3f039b680",
+  "matchesExpectedLiveHead": true,
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceIdsAttested": 50,
+  "cellCountReattested": 600,
+  "cellMismatches": [],
+  "candidateCount": 174,
+  "candidateHashMismatches": 0,
+  "candidateVerdictCounts": {
+    "accept-primary-candidate": 163,
+    "revise-primary-candidate": 9,
+    "no-op-accept-current": 2
+  },
+  "callerRefsReattested": 71,
+  "callerMismatches": [],
+  "assignedCheckpointHead": "70f5ad2c2dc8222d8f35e09ba81ffa12acfff856",
+  "assignedCheckpointTree": "9bd50b4f149f69f7cd5b78937b45fe1745e6c695",
+  "priorBoundaryOrdinal": 499,
+  "priorBoundaryCellsReattested": 12,
+  "priorBoundaryMismatches": [],
+  "priorBoundaryCallerRefsReattested": 12,
+  "priorBoundaryCallerMismatches": [],
+  "checks": "pass",
+  "worktreeStatus": "",
+  "recheckedAtUtc": "2026-11-02T16:17:23Z"
+}

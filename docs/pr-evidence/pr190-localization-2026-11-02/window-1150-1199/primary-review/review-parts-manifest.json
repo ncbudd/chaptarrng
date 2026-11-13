@@ -1,0 +1,35 @@
+{
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "mergedArtifact": "review-cells.jsonl",
+  "mergedArtifactSha256": "794cbb9dc208ffedee27c90bb568cfc75ef6bdeb6bc252e9d72477eddf527245",
+  "mergedRows": 600,
+  "partitions": [
+    {
+      "artifact": "locale-review-ja-ko-pt-vi-zh.jsonl",
+      "dispositions": {
+        "accept-current": 192,
+        "correction": 75,
+        "hold": 6,
+        "refinement": 27
+      },
+      "name": "ja-ko-pt-vi-zh",
+      "rows": 300,
+      "sha256": "599491809bc442c981087e13dcec926207b26f9b2b7de88b712e81a91c0ef945"
+    },
+    {
+      "artifact": "locale-review-ar-de-es-fr-hi-id.jsonl",
+      "dispositions": {
+        "accept-current": 217,
+        "correction": 58,
+        "hold": 6,
+        "refinement": 19
+      },
+      "name": "ar-de-es-fr-hi-id",
+      "rows": 300,
+      "sha256": "b8ffcadfe0d94ffbcee11c51594bace9e9fbbbfb0cb76d76946363a7493e3145"
+    }
+  ],
+  "rowsNormalizedAgainstFrozenInputs": true,
+  "schemaVersion": 1
+}

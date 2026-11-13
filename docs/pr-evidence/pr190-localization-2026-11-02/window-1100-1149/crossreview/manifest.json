@@ -1,0 +1,62 @@
+{
+  "artifactCountExcludingManifestAndSums": 10,
+  "artifactType": "localization-cross-review",
+  "artifacts": [
+    {
+      "bytes": 3551,
+      "path": "README.md",
+      "sha256": "126a57eb5fd60ac080a62cb3a235432af40d5f628ed2b9414cb98c379764f4e9"
+    },
+    {
+      "bytes": 29543,
+      "path": "caller-pin-reattestation.json",
+      "sha256": "bb819a76bae0b873a12163717bd855b912f80aa858ec45b752fbe1180883124a"
+    },
+    {
+      "bytes": 2456963,
+      "path": "cross-review-ledger.jsonl",
+      "sha256": "ea6e9ed18aaf7714ad242e48660c9ffee043d21ab2cd5145816b738c5341cb74"
+    },
+    {
+      "bytes": 3948,
+      "path": "findings.json",
+      "sha256": "9337aab574de6e5106ea95f79e131089e6318e5977f6ff609cd0ac8b39d215ff"
+    },
+    {
+      "bytes": 1529,
+      "path": "independent-structural-audit.json",
+      "sha256": "dd6f2e1790e5701823e36b8af879f3e3ccce5504037a2eb64f3de52e49504487"
+    },
+    {
+      "bytes": 934,
+      "path": "input-attestation.json",
+      "sha256": "ebd8c0bd4abc4ea344ed66e74757f788322e85caf10e3f19840c85c22f0cd65c"
+    },
+    {
+      "bytes": 570,
+      "path": "live-pr-reattestation.json",
+      "sha256": "36ed16bd4124ee6efd6c2d968030ffd13a7b91d4683e03779192ceb329b05777"
+    },
+    {
+      "bytes": 20204,
+      "path": "pinned-file-reattestation.json",
+      "sha256": "702954dc8b49f5c81d8979c410de8d8fe8f7fb113f14dc756f198bb5080c34d4"
+    },
+    {
+      "bytes": 306,
+      "path": "source-caller-context-reattestation.json",
+      "sha256": "eb31f493c37020e22ac50771a012dbd6a0fd4f5c2349259c88344f01f21ffd0e"
+    },
+    {
+      "bytes": 1678,
+      "path": "summary.json",
+      "sha256": "d43d0b950f8835bed03f9474c028f4905b0f32dc4704774c766ab090424cd5cb"
+    }
+  ],
+  "createdUtc": "2026-11-02T23:19:54+00:00",
+  "exactHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "exactTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "pullRequest": 190,
+  "repo": "snapetech-org/ChaptarrNG",
+  "window": "W1100-W1149"
+}

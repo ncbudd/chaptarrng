@@ -1,0 +1,43 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "observedAtUTC": "2026-11-04T16:35:50Z",
+  "pr": {
+    "state": "OPEN",
+    "draft": true,
+    "mergeable": true,
+    "headRef": "codex/chaptarrng-localization-complete-20261031",
+    "headSha": "dc91bdcdf60ba422bb176cc7c58b9b1cab27facd",
+    "baseRef": "main",
+    "baseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "branchApi": {
+    "name": "codex/chaptarrng-localization-complete-20261031",
+    "sha": "dc91bdcdf60ba422bb176cc7c58b9b1cab27facd"
+  },
+  "pullRef": {
+    "ref": "refs/pull/190/head",
+    "sha": "dc91bdcdf60ba422bb176cc7c58b9b1cab27facd"
+  },
+  "remoteHeads": {
+    "refs/heads/codex/chaptarrng-localization-complete-20261031": "dc91bdcdf60ba422bb176cc7c58b9b1cab27facd",
+    "refs/heads/main": "dbbb46abf8bee2f88e5a8a6ca7d8e141bf4d15a2",
+    "refs/pull/190/head": "dc91bdcdf60ba422bb176cc7c58b9b1cab27facd"
+  },
+  "currentMain": "dbbb46abf8bee2f88e5a8a6ca7d8e141bf4d15a2",
+  "apiBaseDiffersFromMain": true,
+  "baseDrift": {
+    "compareStatus": "ahead",
+    "aheadBy": 8,
+    "changedFiles": [
+      ".github/workflows/bookshelfng-standalone-macos-acceptance.yml",
+      ".github/workflows/standalone-asset-validation.yml",
+      "AGENTS.md",
+      "docs/BOOKSHELFNG_RETIREMENT.md",
+      "packaging/scripts/test-bookshelf-legacy-channels.mjs",
+      "scripts/test_workflow_runner_policy.py"
+    ],
+    "localizationSourceOrCatalogChanges": false
+  }
+}

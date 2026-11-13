@@ -1,0 +1,152 @@
+{
+  "dispositionsAssigned": false,
+  "rows": [
+    {
+      "currentTarget": "تحميل مغامرتك القادمة ..",
+      "currentTargetSha256": "5d945c85e0f149402b39ff2a9020b40d42dd85a4986b436504382f756acbf1b0",
+      "locale": "ar",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "targetFileGitBlob": "f1d73e5758feca4c2e6a1a432d34632d1f47ee1c"
+    },
+    {
+      "currentTarget": "Dein nächstes Abenteuer wird geladen …",
+      "currentTargetSha256": "1df5a7b71f46b3b500e15c9fdb4f00147e0b11d6899c8310365333b01e450a85",
+      "locale": "de",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "targetFileGitBlob": "130dd13b8e2de58602d22542e0490b47f94a2228"
+    },
+    {
+      "currentTarget": "Cargando tu próxima aventura...",
+      "currentTargetSha256": "9e7761881f682298193958d81e589f518a05a14a7a3c21a9d7081cd3992598a1",
+      "locale": "es",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "targetFileGitBlob": "5f282bcf88a5e89b61c22cc10b5da3352ca45c39"
+    },
+    {
+      "currentTarget": "Chargement de votre prochaine aventure…",
+      "currentTargetSha256": "f6d8d8f0c62cbb324c81272f0a76d829f79034e212e0bfe3978570c658a7f708",
+      "locale": "fr",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "targetFileGitBlob": "06f873c2a09365a9cb8041ba13d43cebff7fddd5"
+    },
+    {
+      "currentTarget": "अपने अगले एडवेंचर को लोड करने के लिए ...",
+      "currentTargetSha256": "a78dbcba3dce4277612bcd9b6ee7929413bab4e4f80e2e0b4dcc8d713e9f9f9b",
+      "locale": "hi",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "targetFileGitBlob": "d732c9ceb4271c4f8711d0428ba72d5baccd47fa"
+    },
+    {
+      "currentTarget": "Memuat petualangan Anda berikutnya...",
+      "currentTargetSha256": "6bc0c31b771887738b4298933555e71d626e98a072464aef89f81f938735c104",
+      "locale": "id",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "targetFileGitBlob": "f963fd1e1417e028a1d2a713e6c93abae4a74274"
+    },
+    {
+      "currentTarget": "次の冒険を読み込んでいます…",
+      "currentTargetSha256": "8956b7f425c23433645d0eae26c2982d679c224d332aa0647e163652b54a1056",
+      "locale": "ja",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "targetFileGitBlob": "2eef7f381827e2cbb3d7b333f1649cf3f5ea5a8c"
+    },
+    {
+      "currentTarget": "다음 모험을 불러오는 중...",
+      "currentTargetSha256": "c0b8a3c0e9479aa9fe695f47e3943c84861deeaaff30ff95d0009591bc13ca52",
+      "locale": "ko",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "targetFileGitBlob": "f575f492707957e73fc6714a5943139ea00fc819"
+    },
+    {
+      "currentTarget": "Carregando sua próxima aventura...",
+      "currentTargetSha256": "4a706c1475af08d792b833169b6f967cf6b3e0f53154bbec3ffc0d95c65e912b",
+      "locale": "pt-BR",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "targetFileGitBlob": "f97e3e80debb0fcffc442217d4848561c4a51a48"
+    },
+    {
+      "currentTarget": "Đang tải cuộc phiêu lưu tiếp theo...",
+      "currentTargetSha256": "03ca57a3ccc1ea0a46ede1929d912d09fa6361aeaed77c1ecdb4b3caa6a455d7",
+      "locale": "vi",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "targetFileGitBlob": "e57fdda0fc8c393ba58c17741e354266361c5365"
+    },
+    {
+      "currentTarget": "加载你的下一个冒险",
+      "currentTargetSha256": "40e897b44bd35990f8355b48186c83092777745123fdd7d646a91e58a8b1ee46",
+      "locale": "zh-Hans",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "targetFileGitBlob": "c300012b99ffc485301f1fc254c04c200eab5aa2"
+    },
+    {
+      "currentTarget": "加載你的下一個冒險",
+      "currentTargetSha256": "49f0c6eda05d166b37ab155f0c4da092fc2e376713d7d9fdb5e0c85aeaf75967",
+      "locale": "zh-Hant",
+      "scope": "boundary context only; no W1050 disposition assigned",
+      "source": "Loading your next adventure...",
+      "sourceId": "ui.loading.nextAdventure",
+      "sourceOrdinal": 1050,
+      "sourceTextSha256": "0727388ad7aa01c325021d458f2f61098074bfd8aa3e2340f41ff52b35c61fec",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "targetFileGitBlob": "447ce420ca8c308c93f2c69bf1f7f483a2c55830"
+    }
+  ],
+  "source": "Loading your next adventure...",
+  "sourceId": "ui.loading.nextAdventure",
+  "sourceOrdinal": 1050
+}

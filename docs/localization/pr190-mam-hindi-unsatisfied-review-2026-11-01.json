@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "artifact": "ChaptarrNG PR #190 Hindi MAM unsatisfied-torrent terminology re-review",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "reviewedHead": "8c2c1563bb90109a9bc703920c1775f4574425e7",
+  "reviewedTree": "cf6d7fac49f4714cec469a5ceed14c21dca4f7b5",
+  "locale": "hi",
+  "sourceId": "server.message.m621dd0308bef",
+  "source": "User Class: {value0} (Standard member); unsatisfied torrents: {value1}/{value2}",
+  "sourceSha256": "621dd0308bef534855f0bd0650624892e2f4ce97e47e3058e11687668fd7358f",
+  "previousTarget": "उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); असंतुष्ट टोरेंट: {value1}/{value2}",
+  "previousTargetSha256": "1df363355e200d419bd939e32fe364242ac6b4d55a3006bb71e41e5af9d04a85",
+  "target": "उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); सीडिंग की ज़रूरी शर्तें अभी तक पूरी न करने वाले टोरेंट: {value1}/{value2}",
+  "targetSha256": "3d2c8cc3ca995b679cf1475f5726644d9e395660ae70238fddccc3e1a936d39a",
+  "disposition": "correction-applied",
+  "confidence": "moderate",
+  "reviewMethod": "source-context review plus MAM rules terminology evidence",
+  "semanticReason": "The code identifies value1/value2 as the account unsatisfied-count/limit. MAM Rule 2.8 defines this status by whether the torrent has met the site seeding requirements. The previous literal Hindi can read as dissatisfied torrents; the new wording describes the unmet seeding requirement and retains all placeholders.",
+  "placeholders": [
+    "{value0}",
+    "{value1}",
+    "{value2}"
+  ],
+  "placeholdersPreserved": true,
+  "nativeSpeakerReviewPerformed": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "sourceEvidence": [
+    {
+      "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+      "lines": [
+        238,
+        248
+      ],
+      "sha256": "847d10d53cce891a8ee9ec84a3047171dbe04bb0cd50101b28503a559dffa286",
+      "meaning": "Renders the user class, account unsatisfied count, and class limit."
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MamUnsatisfiedSlotGuard.cs",
+      "lines": [
+        193,
+        210
+      ],
+      "sha256": "fa2c50331e7c87146b3e650f59ccc71f5121088ce41beb2f1af9c988d51ba6c0",
+      "meaning": "Implements the unsatisfied-slot limit guard."
+    },
+    {
+      "url": "https://www.scribd.com/document/1034481321/Www-Myanonamouse-Net-Rules-Php",
+      "section": "MAM Rules 2.8, lines 130-139 on the public copy",
+      "sourceType": "third-party-hosted copy of MAM rules",
+      "meaning": "Defines the unsatisfied count as torrents not yet seeded to the site requirements and lists class-specific limits. The official rules.php endpoint was not retrievable in the browser fetch."
+    }
+  ],
+  "supersedesPriorHold": {
+    "path": "/mnt/disks/scratch/task-worktrees/localization-20261030/chaptarrng-followup-fix-998ada-artifacts-20261101/mam-held-reconciliation-20261101.jsonl",
+    "sha256": "b2a0c2c400f73fcac6ad0e09571412fcb8e1c9b50ebad0d160dc08a128269322"
+  },
+  "catalogPath": "src/NzbDrone.Core/Localization/Core/hi.json"
+}

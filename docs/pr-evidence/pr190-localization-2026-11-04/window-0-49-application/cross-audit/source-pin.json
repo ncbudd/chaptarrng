@@ -1,0 +1,11 @@
+{
+  "repository": "ChaptarrNG",
+  "reviewedPullRequest": 190,
+  "batch": "W0-49",
+  "head": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "tree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "sourceWorktreePathAtReview": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w0-49-apply",
+  "sourceWorktreeCleanAtReview": true,
+  "repositoryOrPullRequestModified": false,
+  "nativeSpeakerApproval": false
+}

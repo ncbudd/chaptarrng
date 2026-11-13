@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "exactHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "exactTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "pullRequestState": "OPEN",
+  "isDraft": true,
+  "headRefName": "codex/chaptarrng-localization-complete-20261031",
+  "remoteBranchHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "sourceIds": 50,
+  "localeCells": 600,
+  "sourceTextHashes": 50,
+  "callerRefs": 59,
+  "callerContextHashes": 50,
+  "w649ContextRows": 12,
+  "w650BoundaryRows": 12,
+  "w649SourceRowsMatchingLive": 12,
+  "w649CrossReviewFinalTargetsMatchingLive": 12,
+  "w649LiveTargetHashesRecorded": 12,
+  "w650BoundaryTargetsMatchingPrior": 12,
+  "repositoryClean": true,
+  "repositoryModified": false
+}

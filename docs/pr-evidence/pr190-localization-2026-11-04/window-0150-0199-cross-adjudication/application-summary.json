@@ -1,0 +1,39 @@
+{
+  "result": "PASS",
+  "appliedTargets": 58,
+  "localeCounts": {
+    "ar": 6,
+    "de": 3,
+    "es": 4,
+    "fr": 2,
+    "hi": 8,
+    "id": 13,
+    "ja": 4,
+    "ko": 5,
+    "pt-BR": 1,
+    "vi": 7,
+    "zh-Hans": 1,
+    "zh-Hant": 4
+  },
+  "catalogFiles": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "headBefore": "243f17465cc95fe84f16e17767db04a4a97ad040",
+  "treeBefore": "25e7bd0f3adf871b9030081ebc7c49a28213c50f",
+  "headAfter": "243f17465cc95fe84f16e17767db04a4a97ad040",
+  "treeAfter": "25e7bd0f3adf871b9030081ebc7c49a28213c50f",
+  "postApplyStatus": "M src/NzbDrone.Core/Localization/Core/ar.json\n M src/NzbDrone.Core/Localization/Core/de.json\n M src/NzbDrone.Core/Localization/Core/es.json\n M src/NzbDrone.Core/Localization/Core/fr.json\n M src/NzbDrone.Core/Localization/Core/hi.json\n M src/NzbDrone.Core/Localization/Core/id.json\n M src/NzbDrone.Core/Localization/Core/ja.json\n M src/NzbDrone.Core/Localization/Core/ko.json\n M src/NzbDrone.Core/Localization/Core/pt_BR.json\n M src/NzbDrone.Core/Localization/Core/vi.json\n M src/NzbDrone.Core/Localization/Core/zh_CN.json\n M src/NzbDrone.Core/Localization/Core/zh_TW.json",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w150-199-source",
+  "method": "hash-guarded exact string token replacement; JSON duplicate-key check and parsed readback; no tests/builds run"
+}

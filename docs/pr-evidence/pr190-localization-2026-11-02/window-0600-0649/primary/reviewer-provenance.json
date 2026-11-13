@@ -1,0 +1,40 @@
+{
+  "reviewerRole": "primary semantic reviewer",
+  "reviewType": "independent caller-context-aware language and terminology review of all frozen current cells",
+  "exactHead": "f405a6256c2661e48e412ac4471ce70411baf98c",
+  "exactTree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+  "scope": {
+    "positions": [
+      600,
+      649
+    ],
+    "cells": 600,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ]
+  },
+  "evidenceSources": [
+    "English source catalog",
+    "12 locale catalogs",
+    "exact production C# source-ID references and pinned English source/template callsites",
+    "pinned English-source, normalized-validator-template, or source-fragment production caller pins",
+    "W599 adjacent primary packet and current target reattestation"
+  ],
+  "protectedLiteralPolicy": "Preserve exact source placeholders, product names, API field names, protocol URLs, enum tokens, version and range values, and machine-readable identifiers; localize ordinary user-facing language.",
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryOrPrEdits": false,
+  "testsBuildsScansCiRun": false,
+  "workflowsTouched": false
+}

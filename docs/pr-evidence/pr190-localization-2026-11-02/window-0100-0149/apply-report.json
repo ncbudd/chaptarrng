@@ -1,0 +1,92 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "inputHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "inputTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "sourceIds": 50,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "reviewedCells": 600,
+  "primaryProposals": 53,
+  "crossReviewMissedIssues": 3,
+  "finalChangedCells": 56,
+  "crossReviewCounts": {
+    "accepted": 596,
+    "refined": 1,
+    "missed": 3
+  },
+  "currentCellsKept": 544,
+  "changedCatalogFiles": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "afterCatalogs": {
+    "src/NzbDrone.Core/Localization/Core/ar.json": {
+      "sha256": "bbc42e4d36fd8c5e12febf9896269a3ff0309db9d89f16ca85cbf64ad029d874",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/de.json": {
+      "sha256": "07765df48cf24e0cee43d422d70b1f7255df8904923c9fdaeba53aba95ed1bd6",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/fr.json": {
+      "sha256": "52f9814c18480b71ea1466d7db9a4cf62f5f851739385a1e619d2910cea2b47c",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/hi.json": {
+      "sha256": "7a134ce89f16d0974de82f6aeca85beb13dce53f915530bf344a4df42d25e0a0",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/id.json": {
+      "sha256": "6b86687d4ff1c61e4f8560178a8bafd94fef8b20fc98ad6f3e77c6f3d282d9ad",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/ko.json": {
+      "sha256": "15a94430e132afd0359331351755f46e0bd596ef411ad36e03229bf37f8dbc3f",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": {
+      "sha256": "ac91523c7ad28c7feba864a1588218f250848b7ce9848cdf89274c66c994516b",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/vi.json": {
+      "sha256": "dfdf16e4275944154ac1df5de30abbef7f2d025cb1e89e2c170a52270be1183a",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": {
+      "sha256": "b4ddfec57f76b2341b86489c24af25b249d7ff9e0a53f5c76decdbd2615273ce",
+      "keyCount": 4165
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": {
+      "sha256": "6694eade2c2ecc0b0c1d1e953a12c4e6e3e91eafbeae60791b0ebefb33bcbf0f",
+      "keyCount": 4165
+    }
+  },
+  "readbackCells": 56,
+  "allReadbackMatches": true,
+  "allCatalogsKeyParityWithEnglish": true,
+  "gitDiffCheck": "pass",
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "catalogKeyParity": "pass: 12 direct catalogs, 4,165 keys each, duplicate-free, exact English keyset"
+}

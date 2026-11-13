@@ -1,0 +1,5 @@
+# Base reconciliation
+
+The product's last integrated base is `025498c1a9deb999a4acd1eafc4c807a252e0c29`; live `main` is `beb4f9550ec3340b3f6d9b34c721055610e68847`. The cumulative delta has seven paths, listed in `main-delta-paths-025498-to-beb4.txt`. Direct comparison across all 50 W300 source contexts and all 600 target cells found no source-text, target-value, or caller-context changes. The delta has no path overlap with the PR diff, and no workflow path changed. The PR API reports clean/mergeable and the local merge-tree is conflict-free. No merge commit was added for these unrelated main changes.
+
+The earlier integration conflict was limited to `docs/localization/server-message-sources.json`. The dry-run and resolution records plus `resolve_server_message_manifest.py` show the merge preserving PR-only inventory additions and main-side valid source/callsite updates. The final manifest hash was `14c5f189094a33544ff2fabed0ab147d97f6f2655a37df2b92edcfa54308c6cc`. No workflow path was edited.

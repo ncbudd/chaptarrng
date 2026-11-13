@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "BookMatchingStrictness::id",
+  "reviewType": "blind semantic review of current translation cell",
+  "decision": "ACCEPT",
+  "confidence": "high",
+  "rationale": "“Mode pencocokan” accurately and naturally translates “Match mode” in the supplied caller context. It labels the book matching setting and the Quickstart matching control, where the value is a matching mode.",
+  "correctionRequired": false,
+  "correction": null,
+  "binding": {
+    "head": "4f099a90891b1a70a3c3ed76e30764ba02f03777",
+    "tree": "041b17ad06d0cbdfa66b24e6b2a5ba06351d60ab",
+    "source": {
+      "key": "BookMatchingStrictness",
+      "locale": "en",
+      "text": "Match mode",
+      "textSha256": "0fd71ca8dca4ed849986b90247aae2704a4e60fadb9632310b0b30377aae8e69"
+    },
+    "target": {
+      "locale": "id",
+      "text": "Mode pencocokan",
+      "textSha256": "090a911382592d233ea1afe53f75e3e48093473175be32458c88baeb01adfdd8"
+    },
+    "currentCallerContextSha256": "cdfffba5a3f1930f4ca0c3b6ddf1141fd18874654bf0889a379a7815e85c47a5",
+    "contextNormalization": "SHA-256 of UTF-8 compact canonical JSON (sorted keys, ensure_ascii=false) over {sourceKey, literalAndIndirectReferences, relatedDynamicTranslationCallsites}; newline removed before hashing.",
+    "inputJsonSha256": "8a7e53c8b139a264a02dbca0a3ed73e71839f7cfa9e68c91c7efddc467eb4e0a",
+    "readmeSha256": "bb2d30779d6a6f6088c26ff8aeef5ad3dfa13c5b106d9dc599e45af1f3029e20"
+  },
+  "nativeSpeakerSignoff": false,
+  "seal": {
+    "algorithm": "SHA-256",
+    "canonicalization": "UTF-8 compact canonical JSON (sorted keys, ensure_ascii=false, separators=(',', ':')); omit the top-level seal member before hashing.",
+    "sha256": "82c694a7b3afbe66a318a2d0b4be1e468783584f63cfd1058c1c023b58d37e1d"
+  }
+}

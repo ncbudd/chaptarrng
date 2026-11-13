@@ -1,0 +1,23 @@
+{
+  "additionalEllipsisRefinements": 2,
+  "approvedPrimaryProposals": 83,
+  "decision": "Accept all 83 independently confirmed primary proposals and two ellipsis-only refinements; retain all 11 holds unchanged and retain the W1048 German style note without a text change.",
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "finalDispositionCounts": {
+    "accept-current": 503,
+    "accept-current-with-style-note": 1,
+    "correction": 50,
+    "hold": 11,
+    "refinement": 35
+  },
+  "heldCellsUnchanged": 11,
+  "localeCount": 12,
+  "nativeSpeakerApproval": false,
+  "plannedCatalogValueChanges": 85,
+  "rows": 600,
+  "semanticConfidence": "moderate",
+  "sourceCount": 50,
+  "structuralConfidence": "high",
+  "w1047HumorHolds": 8
+}

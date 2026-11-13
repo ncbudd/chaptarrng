@@ -1,0 +1,21 @@
+{
+  "result": "APPLIED_AND_READ_BACK",
+  "pullRequest": 190,
+  "inputHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "inputTree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "window": "W800-W849",
+  "cellsReviewed": 600,
+  "locales": 12,
+  "catalogKeyCount": 4165,
+  "catalogValuesChanged": 256,
+  "acceptCurrent": 344,
+  "acceptedPrimary": 228,
+  "revisedPrimary": 8,
+  "additionalCorrections": 20,
+  "holds": 0,
+  "allTargetsReadBack": true,
+  "catalogKeySetsPreserved": true,
+  "serializationPreserved": true,
+  "unplannedChanges": 0,
+  "testsBuildsCiRun": false
+}

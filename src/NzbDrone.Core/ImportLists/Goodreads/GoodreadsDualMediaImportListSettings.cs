@@ -11,6 +11,7 @@ using NzbDrone.Core.Profiles.Metadata;
 using NzbDrone.Core.Profiles.Qualities;
 using NzbDrone.Core.RootFolders;
 using NzbDrone.Core.Tags;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists.Goodreads
 {
@@ -34,21 +35,25 @@ namespace NzbDrone.Core.ImportLists.Goodreads
         {
             validator.RuleFor(c => c)
                 .Must(c => c.MonitorAudiobooks || c.MonitorEbooks)
-                .WithMessage("Select at least one media type to monitor");
+                .WithMessage("Select at least one media type to monitor")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m1f70cc839b57"));
 
             validator.RuleFor(c => c.ImportLimit)
                 .GreaterThanOrEqualTo(0)
-                .WithMessage("Import limit must be 0 or greater");
+                .WithMessage("Import limit must be 0 or greater")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mb2b9d54cbbeb"));
 
             validator.RuleFor(c => c.AudiobookRootFolderPath)
                 .NotEmpty()
                 .When(c => c.MonitorAudiobooks)
-                .WithMessage("Audiobook root folder is required when monitoring audiobooks");
+                .WithMessage("Audiobook root folder is required when monitoring audiobooks")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m6d69cc1ffcc4"));
 
             validator.RuleFor(c => c.EbookRootFolderPath)
                 .NotEmpty()
                 .When(c => c.MonitorEbooks)
-                .WithMessage("Ebook root folder is required when monitoring ebooks");
+                .WithMessage("Ebook root folder is required when monitoring ebooks")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m7a3bf57a5ad5"));
         }
     }
 
@@ -169,39 +174,39 @@ namespace NzbDrone.Core.ImportLists.Goodreads
         {
             if (rootFolderPath.IsNullOrWhiteSpace())
             {
-                return new ValidationFailure(fieldName, "Root folder is required");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Root folder is required", "server.message.m305661a25dbf");
             }
 
             var rootFolder = rootFolderService.GetBestRootFolder(rootFolderPath);
             if (rootFolder == null)
             {
-                return new ValidationFailure(fieldName, $"Root folder '{rootFolderPath}' is not configured in Chaptarr");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Root folder '{rootFolderPath}' is not configured in Chaptarr", "server.message.m6db923fcd485", new { value0 = rootFolderPath });
             }
 
             if (mediaType == BookMediaType.Audiobook && rootFolder.FolderType == FolderType.Ebook)
             {
-                return new ValidationFailure(fieldName, "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder", "server.message.m45461e168bdc");
             }
 
             if (mediaType == BookMediaType.Ebook && rootFolder.FolderType == FolderType.Audiobook)
             {
-                return new ValidationFailure(fieldName, "Selected root folder is Audiobook-only; choose an Ebook or Mixed root folder");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Selected root folder is Audiobook-only; choose an Ebook or Mixed root folder", "server.message.mb5750cd165f2");
             }
 
             var resolved = rootFolderSettingsResolver.ResolveSettings(rootFolder, mediaType);
             if (resolved == null || !resolved.IsConfigured)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' does not have {mediaType} defaults configured");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' does not have {mediaType} defaults configured", "server.message.mf2463602ee31", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             if (overrideQualityProfileId <= 0 && (resolved.QualityProfileId ?? 0) <= 0)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} quality profile default");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} quality profile default", "server.message.m0df8751db78b", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             if (overrideMetadataProfileId <= 0 && (resolved.MetadataProfileId ?? 0) <= 0)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} metadata profile default");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} metadata profile default", "server.message.md5295352b8ae", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             return null;

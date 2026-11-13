@@ -1,0 +1,109 @@
+{
+  "artifact": "ChaptarrNG PR #190 W350-W399 hash-guarded application plan",
+  "sourcePin": {
+    "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+    "tree": "be10d71209076f753ef295038a9f3c3646a918a3"
+  },
+  "window": "W350-W399",
+  "localeOrder": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "candidateCellCount": 600,
+  "crossDecisionCounts": {
+    "accept-current": 488,
+    "recommend-revision": 100,
+    "hold-source-copy": 12
+  },
+  "rootAcceptedChanges": 99,
+  "rootNoopRecommendations": 1,
+  "rootMaintainedSourceCopyHolds": 12,
+  "evidenceInputs": {
+    "candidateFreeManifest": {
+      "path": "candidate-free/input/candidate-free-manifest.json",
+      "sha256": "c6e30a409f41a8a9b840314012b7d14d2d5ac15e183f4205c9bc37f4e30689cb"
+    },
+    "candidateFreeChecksums": {
+      "path": "candidate-free/input/SHA256SUMS.txt",
+      "sha256": "76a08b9a42e17fb0d9fac340497e41d1a3ffc5c2d570fc03cf262dd7a9a9b2ef"
+    },
+    "primaryManifest": {
+      "path": "primary-review/primary-review-summary.json",
+      "sha256": "27b90cd07188e96272cd70be4126ad3cbf240810f89b39f6919f6931830ab5e6"
+    },
+    "primaryChecksums": {
+      "path": "primary-review/SHA256SUMS.txt",
+      "sha256": "65f040cba44c7c073f063928d5a3b458914a9c0ade05be119adebc926d5d0b5a"
+    },
+    "blindSeal": {
+      "path": "blind-review/seal.json",
+      "sha256": "b0002a5b2435382f7fdbb99cd1f5712261b0843981ae3a6319025ed888d0afa3"
+    },
+    "blindChecksums": {
+      "path": "blind-review/SHA256SUMS.txt",
+      "sha256": "4402f5f6c6ff15574ee02b96b62503e097c3801b4b03321f7a8df37b750ef267"
+    },
+    "crossSummary": {
+      "path": "cross-review/cross-review-summary.json",
+      "sha256": "7d857f4e6da11903fd0f5a8b8f9642b72c15190a3c19576c629ce922897e8cd1"
+    },
+    "crossChecksums": {
+      "path": "cross-review/SHA256SUMS.txt",
+      "sha256": "ee58c84c51d2134d1d5128cf39ea3e3070b4009a29c05d01608425815f1e873d"
+    },
+    "rootSummary": {
+      "path": "root-manual-review/SUMMARY.json",
+      "sha256": "1b104e7066b09e491b5bc844142bbc3fa7110afc4248ab9c2af57e2c96551655"
+    },
+    "rootChecksums": {
+      "path": "root-manual-review/SHA256SUMS.txt",
+      "sha256": "aaa9566c117d22c5159cb4f3edc10516a4f9bc919c84911cf3e94412b0cee0e4"
+    },
+    "rootLedger": {
+      "path": "root-manual-review/root-review.jsonl",
+      "sha256": "cbec17c2d1df9929db5dd6131495c34475293ce65f19246faf1a5a8810219754"
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "workflowChanges": false,
+  "testsBuildsScansCiRun": false,
+  "changeCount": 99,
+  "changedLocales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "changedCatalogPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ]
+}

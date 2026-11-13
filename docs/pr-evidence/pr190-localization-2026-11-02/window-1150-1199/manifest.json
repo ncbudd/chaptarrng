@@ -1,0 +1,36 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pull_request": 190,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "baseline_head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "baseline_tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "reviewed_cells": 600,
+  "source_ids": 50,
+  "locale_count": 12,
+  "final_dispositions": {
+    "accept-current": 414,
+    "refinement": 63,
+    "correction": 111,
+    "hold": 12
+  },
+  "catalog_changes": 174,
+  "catalog_files_changed": 12,
+  "readback_cells": 600,
+  "readback_mismatches": 0,
+  "catalog_keys_per_locale": 4165,
+  "w1187_holds_retained": true,
+  "qualified_native_speaker_approval": false,
+  "current_head_browser_acceptance": "outstanding",
+  "tests_builds_scans_ci_browser": "not run",
+  "workflow_changes": false,
+  "merge_release_tag": false,
+  "review_packet_sha256": {
+    "primary_SHA256SUMS": "22a4089c87cbd96494e7d1dd09d7af8c16fc77d0bfb9a7a9505f8a0c97351556",
+    "cross_SHA256SUMS": "9938afeb7069a254a79ae2328b339074ae038ee59edb02b55a5ff8d2e2456967",
+    "cross_INDEPENDENT_REVIEW_SHA256SUMS": "6f9ae46077079f66cdd5d1940f5c202b37fb5684a555ade9e400c4a4b7794ca8",
+    "third_SHA256SUMS": "077132e3307193911baa522d15f8e84f1a74701ff2bf7b3fdebf79be2dc02156",
+    "root_SHA256SUMS": "6261f522c50f37707e91057fd2d44cf1ad7f96a11131aaeb901630be9359bf05",
+    "third_source_only_input": "e578c2b2afa22028d0cf4a0b2a39b05013bb463d697510656a5d0ab01e87104a",
+    "root_adjudication_input": "bd8dcb0b3d49c29d03428e2d18240bda4c54f943d055030714ec402801922c4e"
+  }
+}

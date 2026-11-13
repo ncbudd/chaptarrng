@@ -1,0 +1,68 @@
+{
+  "additionalFindingCounts": {
+    "additional_correction": 3,
+    "additional_refinement": 5
+  },
+  "allCatalogKeySetsEqual": true,
+  "boundaryReadbackFailures": 0,
+  "boundaryReadbackRows": 24,
+  "callerLinePinsVerified": 63,
+  "callerRefFailures": 0,
+  "catalogKeyCounts": {
+    "ar": 4165,
+    "de": 4165,
+    "es": 4165,
+    "fr": 4165,
+    "hi": 4165,
+    "id": 4165,
+    "ja": 4165,
+    "ko": 4165,
+    "pt-BR": 4165,
+    "vi": 4165,
+    "zh-Hans": 4165,
+    "zh-Hant": 4165
+  },
+  "catalogReadbackMismatches": 0,
+  "crossReviewDispositionCounts": {
+    "accept_primary_proposal": 68,
+    "additional_correction": 3,
+    "additional_refinement": 5,
+    "confirm_accept_current": 524
+  },
+  "exactHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "exactTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "icuParityFailures": 0,
+  "inputCellCount": 600,
+  "localeOrder": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "markupParityFailures": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "pinnedFileCount": 42,
+  "pinnedFileFailures": 0,
+  "placeholderParityFailures": 0,
+  "primaryDispositionCounts": {
+    "accept-current": 532,
+    "correction": 57,
+    "refinement": 11
+  },
+  "protectedLiteralFailures": 0,
+  "reviewCellCount": 600,
+  "semanticConfidence": "moderate",
+  "sourceQueueIdsMatch": true,
+  "structuralConfidence": "high",
+  "uniqueCallerRefs": 63,
+  "uniqueCells": 600
+}

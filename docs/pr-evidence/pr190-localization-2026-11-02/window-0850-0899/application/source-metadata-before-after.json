@@ -1,0 +1,42 @@
+{
+  "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+  "callerFileSha256BeforeAndAfter": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+  "callers": [
+    {
+      "line": 27,
+      "lineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb",
+      "lineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+    },
+    {
+      "line": 29,
+      "lineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b",
+      "lineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+    },
+    {
+      "line": 31,
+      "lineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5",
+      "lineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+    },
+    {
+      "line": 33,
+      "lineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661",
+      "lineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+    }
+  ],
+  "heldLocaleCells": 12,
+  "heldSourceId": "server.message.mf00d6bc38ae8",
+  "heldSourceOrdinal": 884,
+  "newSource": "Can not contain '\\', '//', or start/end with '/'",
+  "newSourceFingerprint": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+  "newSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+  "oldSource": "Can not contain '', '//', or start/end with '/'",
+  "oldSourceFingerprint": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+  "oldSourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d",
+  "semanticConclusion": "The four validators reject backslash anywhere, reject //, and disallow a leading or trailing slash. The catalog source with empty quotes was wrong; source text now matches all four callers.",
+  "sourceId": "server.message.mf00d6bc38ae8",
+  "sourceMessageHashesSha256After": "f13e8b8db5ec55fb2228bd8462f3f842373c86f6349ea3a400b98ec6d8d6468d",
+  "sourceMessageHashesSha256Before": "7c21ed396c1340c77b5635f2f5c1e6f966bf4342b03052397d39997c7920747b",
+  "stableIdRetained": true,
+  "translationReviewState": "held pending fresh exact-head review against the corrected source",
+  "validationRule": "^([^\\\\\\/](\\/?[^\\\\\\/])*)?$"
+}

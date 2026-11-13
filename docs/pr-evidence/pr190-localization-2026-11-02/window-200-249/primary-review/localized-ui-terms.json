@@ -1,0 +1,82 @@
+{
+  "sourceKey": "InteractiveSearch",
+  "sourceValue": "Interactive Search",
+  "localeTerms": [
+    {
+      "locale": "es",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "Búsqueda interactiva",
+      "currentCatalogValue": "Búsqueda interactiva"
+    },
+    {
+      "locale": "zh-Hans",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "手动搜索",
+      "currentCatalogValue": "手动搜索"
+    },
+    {
+      "locale": "hi",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "इंटरएक्टिव खोज",
+      "currentCatalogValue": "इंटरएक्टिव खोज"
+    },
+    {
+      "locale": "de",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "Interaktive Suche",
+      "currentCatalogValue": "Interaktive Suche"
+    },
+    {
+      "locale": "ja",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "インタラクティブ検索",
+      "currentCatalogValue": "インタラクティブ検索"
+    },
+    {
+      "locale": "fr",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "Recherche interactive",
+      "currentCatalogValue": "Recherche interactive"
+    },
+    {
+      "locale": "pt-BR",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "Pesquisa interativa",
+      "currentCatalogValue": "Pesquisa interativa"
+    },
+    {
+      "locale": "ar",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "بحث تفاعلي",
+      "currentCatalogValue": "بحث تفاعلي"
+    },
+    {
+      "locale": "ko",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "대화형 검색",
+      "currentCatalogValue": "대화형 검색"
+    },
+    {
+      "locale": "zh-Hant",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "互動性搜尋",
+      "currentCatalogValue": "互動性搜尋"
+    },
+    {
+      "locale": "vi",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "Tìm kiếm tương tác",
+      "currentCatalogValue": "Tìm kiếm tương tác"
+    },
+    {
+      "locale": "id",
+      "sourceUiKey": "InteractiveSearch",
+      "expectedLocalizedUiTerm": "Pencarian Interaktif",
+      "currentCatalogValue": "Pencarian Interaktif"
+    }
+  ],
+  "useInSourceIds": [
+    "provider.field.fd2727e11e19f",
+    "provider.field.f00d387283c10"
+  ]
+}

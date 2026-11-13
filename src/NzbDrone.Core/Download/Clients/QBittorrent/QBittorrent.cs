@@ -638,7 +638,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 if (version < Version.Parse("1.5"))
                 {
                     // API version 5 introduced the "save_path" property in /query/torrents
-                    return new NzbDroneValidationFailure("Host", "Unsupported client version")
+                    return new NzbDroneValidationFailure("Host", "Unsupported client version", "server.message.m6c1fa02a292a", null)
                     {
                         DetailedDescription = "Please upgrade to qBittorrent version 3.2.4 or higher."
                     };
@@ -648,7 +648,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                     // API version 6 introduced support for labels
                     if (BookDownloadCategorySettings.GetConfiguredCategories(Settings).Any())
                     {
-                        return new NzbDroneValidationFailure("Category", "Category is not supported")
+                        return new NzbDroneValidationFailure("Category", "Category is not supported", "server.message.m0b8f5729c27f", null)
                         {
                             DetailedDescription = "Labels are not supported until qBittorrent version 3.3.0. Please upgrade or try again with an empty Category."
                         };
@@ -657,7 +657,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 else if (!BookDownloadCategorySettings.GetConfiguredCategories(Settings).Any())
                 {
                     // warn if labels are supported, but category is not provided
-                    return new NzbDroneValidationFailure(nameof(QBittorrentSettings.AudiobookCategory), "Category is recommended")
+                    return new NzbDroneValidationFailure(nameof(QBittorrentSettings.AudiobookCategory), "Category is recommended", "server.message.m648eddf3f253", null)
                     {
                         IsWarning = true,
                         DetailedDescription = "Chaptarr will not attempt to import completed downloads without a category."
@@ -668,7 +668,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 var config = Proxy.GetConfig(Settings);
                 if (RemovesCompletedDownloads(config))
                 {
-                    return new NzbDroneValidationFailure(string.Empty, "qBittorrent is configured to remove torrents when they reach their Share Ratio Limit")
+                    return new NzbDroneValidationFailure(string.Empty, "qBittorrent is configured to remove torrents when they reach their Share Ratio Limit", "server.message.m064256735f51", null)
                     {
                         DetailedDescription = "Chaptarr will be unable to perform Completed Download Handling as configured. You can fix this in qBittorrent ('Tools -> Options...' in the menu) by changing 'Options -> BitTorrent -> Share Ratio Limiting' from 'Remove them' to 'Pause them'."
                     };
@@ -677,7 +677,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new NzbDroneValidationFailure("Username", "Authentication failure", "server.message.md83ae8fb37f8", null)
                 {
                     DetailedDescription = "Please verify your username and password."
                 };
@@ -687,19 +687,19 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 _logger.Error(ex, "Unable to connect to qBittorrent");
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new NzbDroneValidationFailure("Host", "Unable to connect", "server.message.me40966162b11", null)
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unknown exception: " + ex.Message, "server.message.m98845de47ab9", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to test qBittorrent");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to qBittorrent")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to qBittorrent", "server.message.ma5add25e2d2b", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -750,7 +750,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
 
                 if (!labels.ContainsKey(pair.Value))
                 {
-                    return new NzbDroneValidationFailure(pair.Field, "Configuration of label failed")
+                    return new NzbDroneValidationFailure(pair.Field, "Configuration of label failed", "server.message.m712918a2c28f", null)
                     {
                         DetailedDescription = "Chaptarr was unable to add the label to qBittorrent."
                     };
@@ -778,18 +778,18 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
                 {
                     if (!recentPriorityDefault)
                     {
-                        return new NzbDroneValidationFailure(nameof(Settings.RecentTvPriority), "Queueing not enabled") { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
+                        return new NzbDroneValidationFailure(nameof(Settings.RecentTvPriority), "Queueing not enabled", "server.message.mf4433d3129ba", null) { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
                     }
                     else if (!olderPriorityDefault)
                     {
-                        return new NzbDroneValidationFailure(nameof(Settings.OlderTvPriority), "Queueing not enabled") { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
+                        return new NzbDroneValidationFailure(nameof(Settings.OlderTvPriority), "Queueing not enabled", "server.message.mf4433d3129ba", null) { DetailedDescription = "Torrent Queueing is not enabled in your qBittorrent settings. Enable it in qBittorrent or select 'Last' as priority." };
                     }
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test qBittorrent");
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unknown exception: " + ex.Message, "server.message.m98845de47ab9", new { value0 = ex.Message });
             }
 
             return null;
@@ -804,7 +804,7 @@ namespace NzbDrone.Core.Download.Clients.QBittorrent
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of torrents: " + ex.Message, "server.message.m451006253bc3", new { value0 = ex.Message });
             }
 
             return null;

@@ -23,10 +23,12 @@ namespace NzbDrone.Core.Notifications.MqttGateway
             RuleFor(c => c.Host).NotEmpty().ValidHost();
             RuleFor(c => c.Port).ValidPort();
             RuleFor(c => c.InstanceId).NotEmpty().MaximumLength(64).Matches("^[A-Za-z0-9_-]+$");
-            RuleFor(c => c.TopicPrefix).Must(IsValidTopicPrefix).WithMessage("Topic prefix must be a valid MQTT topic prefix.");
+            RuleFor(c => c.TopicPrefix).Must(IsValidTopicPrefix).WithMessage("Topic prefix must be a valid MQTT topic prefix.")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m80830c01b9f4"));
             RuleFor(c => c.ClientId).MaximumLength(128);
             RuleFor(c => c.EventQos).IsInEnum();
-            RuleFor(c => c.DiscoveryPrefix).Must(IsValidTopicPrefix).WithMessage("Home Assistant discovery prefix must be a valid MQTT topic prefix.").When(c => c.PublishHomeAssistantDiscovery);
+            RuleFor(c => c.DiscoveryPrefix).Must(IsValidTopicPrefix).WithMessage("Home Assistant discovery prefix must be a valid MQTT topic prefix.")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m05b73e4fe269")).When(c => c.PublishHomeAssistantDiscovery);
             RuleFor(c => c.SensorRefreshIntervalMinutes).InclusiveBetween(1, 1440);
             RuleFor(c => c.UpcomingReleaseWindowDays).InclusiveBetween(1, 365);
         }

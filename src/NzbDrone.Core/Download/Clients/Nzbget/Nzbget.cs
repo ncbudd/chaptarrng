@@ -295,18 +295,18 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
 
                 if (Version.Parse(version) < Version.Parse("12.0"))
                 {
-                    return new ValidationFailure(string.Empty, "Nzbget version too low, need 12.0 or higher");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Nzbget version too low, need 12.0 or higher", "server.message.m3152a88fbafe");
                 }
             }
             catch (Exception ex)
             {
                 if (ex.Message.ContainsIgnoreCase("Authentication failed"))
                 {
-                    return new ValidationFailure("Username", "Authentication failed");
+                    return NzbDroneValidationFailure.ForMessage("Username", "Authentication failed", "server.message.m93821eb7ce8c");
                 }
 
                 _logger.Error(ex, "Unable to connect to NZBGet");
-                return new ValidationFailure("Host", "Unable to connect to NZBGet");
+                return NzbDroneValidationFailure.ForMessage("Host", "Unable to connect to NZBGet", "server.message.m1656774009b1");
             }
 
             return null;
@@ -321,7 +321,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
             {
                 if (!categories.Any(v => v.Name == category))
                 {
-                    return new NzbDroneValidationFailure(BookDownloadCategorySettings.GetCategoryFieldName(Settings, category), "Category does not exist")
+                    return new NzbDroneValidationFailure(BookDownloadCategorySettings.GetCategoryFieldName(Settings, category), "Category does not exist", "server.message.m661c5d4d3f03", null)
                     {
                         InfoLink = _proxy.GetBaseUrl(Settings),
                         DetailedDescription = "The Category you entered doesn't exist in NzbGet. Go to NzbGet to create it."
@@ -339,7 +339,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
             var keepHistory = config.GetValueOrDefault("KeepHistory", "7");
             if (!int.TryParse(keepHistory, NumberStyles.None, CultureInfo.InvariantCulture, out var value) || value == 0)
             {
-                return new NzbDroneValidationFailure(string.Empty, "NzbGet setting KeepHistory should be greater than 0")
+                return new NzbDroneValidationFailure(string.Empty, "NzbGet setting KeepHistory should be greater than 0", "server.message.m6b5f4e5a738f", null)
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings),
                     DetailedDescription = "NzbGet setting KeepHistory is set to 0. Which prevents Chaptarr from seeing completed downloads."
@@ -347,7 +347,7 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
             }
             else if (value > 25000)
             {
-                return new NzbDroneValidationFailure(string.Empty, "NzbGet setting KeepHistory should be less than 25000")
+                return new NzbDroneValidationFailure(string.Empty, "NzbGet setting KeepHistory must not exceed 25000", "server.message.m3a79390fb21e", null)
                 {
                     InfoLink = _proxy.GetBaseUrl(Settings),
                     DetailedDescription = "NzbGet setting KeepHistory is set too high."

@@ -86,7 +86,10 @@ namespace Chaptarr.Api.V1.Indexers
             {
                 _logger.Debug("Couldn't find requested release in cache, cache timeout probably expired.");
 
-                throw new NzbDroneClientException(HttpStatusCode.NotFound, "Couldn't find requested release in cache, try searching again");
+                throw NzbDroneClientException.WithMessageId(
+                    HttpStatusCode.NotFound,
+                    "Couldn't find requested release in cache, try searching again",
+                    "server.message.m300cfa158919");
             }
 
             var remoteBook = decision.RemoteBook;
@@ -100,7 +103,10 @@ namespace Chaptarr.Api.V1.Indexers
                         var book = GetBookByCompatibleId(release.BookId.Value);
                         if (book == null)
                         {
-                            throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to find the requested book");
+                            throw NzbDroneClientException.WithMessageId(
+                                HttpStatusCode.NotFound,
+                                "Unable to find the requested book",
+                                "server.message.md4447ebc7318");
                         }
 
                         remoteBook.Author = _authorService.GetAuthor(book.AuthorId);
@@ -113,7 +119,10 @@ namespace Chaptarr.Api.V1.Indexers
 
                         if (books.Empty())
                         {
-                            throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
+                            throw NzbDroneClientException.WithMessageId(
+                                HttpStatusCode.NotFound,
+                                "Unable to parse books in the release",
+                                "server.message.m5034981304b3");
                         }
 
                         remoteBook.Author = author;
@@ -121,7 +130,10 @@ namespace Chaptarr.Api.V1.Indexers
                     }
                     else
                     {
-                        throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to find matching author and books");
+                        throw NzbDroneClientException.WithMessageId(
+                            HttpStatusCode.NotFound,
+                            "Unable to find matching author and books",
+                            "server.message.mf5b2847afd2c");
                     }
                 }
                 else if (remoteBook.Books.Empty())
@@ -133,7 +145,10 @@ namespace Chaptarr.Api.V1.Indexers
                         var book = GetBookByCompatibleId(release.BookId.Value);
                         if (book == null)
                         {
-                            throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to find the requested book");
+                            throw NzbDroneClientException.WithMessageId(
+                                HttpStatusCode.NotFound,
+                                "Unable to find the requested book",
+                                "server.message.md4447ebc7318");
                         }
 
                         books = new List<Book> { book };
@@ -144,12 +159,18 @@ namespace Chaptarr.Api.V1.Indexers
 
                 if (remoteBook.Books.Empty())
                 {
-                    throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
+                    throw NzbDroneClientException.WithMessageId(
+                        HttpStatusCode.NotFound,
+                        "Unable to parse books in the release",
+                        "server.message.m5034981304b3");
                 }
 
                 if (ShouldBlockInteractiveDownload(decision))
                 {
-                    throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to parse books in the release");
+                    throw NzbDroneClientException.WithMessageId(
+                        HttpStatusCode.NotFound,
+                        "Unable to parse books in the release",
+                        "server.message.m5034981304b3");
                 }
 
                 if (release.AdoptExistingTorrent)
@@ -166,7 +187,13 @@ namespace Chaptarr.Api.V1.Indexers
                 return Conflict(new
                 {
                     code = "existingTorrent",
-                    message = ex.Message
+                    message = ex.Message,
+                    messageId = "server.message.m6849ebee10e9",
+                    messageParameters = new
+                    {
+                        value0 = ex.DownloadClientName,
+                        value1 = ex.DownloadTitle
+                    }
                 });
             }
             catch (ExistingTorrentNotFoundException ex)
@@ -174,7 +201,8 @@ namespace Chaptarr.Api.V1.Indexers
                 return Conflict(new
                 {
                     code = "existingTorrentUnavailable",
-                    message = ex.Message
+                    message = ex.Message,
+                    messageId = "server.message.me59dec254c7d"
                 });
             }
             catch (DownloadClientRejectedReleaseException ex)
@@ -186,7 +214,11 @@ namespace Chaptarr.Api.V1.Indexers
                     ? ex.Message
                     : $"{ex.Message}: {detail}";
 
-                throw new NzbDroneClientException(HttpStatusCode.Conflict, $"Download client rejected release: {message}");
+                throw NzbDroneClientException.WithMessageId(
+                    HttpStatusCode.Conflict,
+                    $"Download client rejected release: {message}",
+                    "server.message.m6026247dc0f2",
+                    new { value0 = message });
             }
             catch (ReleaseDownloadException ex)
             {
@@ -225,7 +257,10 @@ namespace Chaptarr.Api.V1.Indexers
             {
                 if (!authorId.HasValue)
                 {
-                    throw new NzbDroneClientException(HttpStatusCode.BadRequest, "An authorId is required when searching for a series pack");
+                    throw NzbDroneClientException.WithMessageId(
+                        HttpStatusCode.BadRequest,
+                        "An authorId is required when searching for a series pack",
+                        "server.message.mb8615e9f5606");
                 }
 
                 return ProjectLegacyReleaseBookIds(await GetLegacySeriesReleases(seriesId.Value, authorId.Value));
@@ -256,7 +291,10 @@ namespace Chaptarr.Api.V1.Indexers
             {
                 if (!authorId.HasValue)
                 {
-                    throw new NzbDroneClientException(HttpStatusCode.BadRequest, "An authorId is required when searching for a series pack");
+                    throw NzbDroneClientException.WithMessageId(
+                        HttpStatusCode.BadRequest,
+                        "An authorId is required when searching for a series pack",
+                        "server.message.mb8615e9f5606");
                 }
 
                 return Ok(ProjectLegacyReleaseBookIds(await GetSeriesReleases(seriesId.Value, authorId.Value, bypassFilters)));
@@ -267,7 +305,10 @@ namespace Chaptarr.Api.V1.Indexers
                 return Ok(ProjectLegacyReleaseBookIds(await GetAuthorReleases(authorId.Value, bypassFilters)));
             }
 
-            throw new NzbDroneClientException(HttpStatusCode.BadRequest, "A bookId, authorId, or seriesId is required for interactive search");
+            throw NzbDroneClientException.WithMessageId(
+                HttpStatusCode.BadRequest,
+                "A bookId, authorId, or seriesId is required for interactive search",
+                "server.message.m4b07093e17b8");
         }
 
         private async Task<List<ReleaseResource>> GetLegacyBookReleases(int bookId)
@@ -280,7 +321,10 @@ namespace Chaptarr.Api.V1.Indexers
             var books = targetBookIds.Select(targetBookId => _bookService.GetBook(targetBookId)).ToList();
             if (books.Count == 0 || books.Any(book => book == null))
             {
-                throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to find the requested book");
+                throw NzbDroneClientException.WithMessageId(
+                    HttpStatusCode.NotFound,
+                    "Unable to find the requested book",
+                    "server.message.md4447ebc7318");
             }
 
             try
@@ -384,7 +428,10 @@ namespace Chaptarr.Api.V1.Indexers
                 var book = GetBookByCompatibleId(bookId);
                 if (book == null)
                 {
-                    throw new NzbDroneClientException(HttpStatusCode.NotFound, "Unable to find the requested book");
+                    throw NzbDroneClientException.WithMessageId(
+                        HttpStatusCode.NotFound,
+                        "Unable to find the requested book",
+                        "server.message.md4447ebc7318");
                 }
                 var author = _authorService.GetAuthor(book.AuthorId);
 

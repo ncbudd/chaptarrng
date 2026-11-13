@@ -1,0 +1,35 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "exactHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "exactTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "headMatchesFrozenPacket": true,
+  "sourceListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceIdsAttested": 50,
+  "cellCountReattested": 600,
+  "cellMismatches": [],
+  "callerRefsReattested": 90,
+  "callerMismatches": [],
+  "priorContextSourceIdsAttested": 1,
+  "priorContextCellsReattested": 12,
+  "priorContextCallerRefsReattested": 3,
+  "priorContextMismatches": [],
+  "callerGaps": [
+    {
+      "sourceOrdinal": 447,
+      "sourceId": "server.message.m00dbcd234174",
+      "reason": "no exact source-ID or approved literal-source caller found in production C# at pinned head"
+    }
+  ],
+  "checks": "pass",
+  "worktreeStatus": "",
+  "recheckedAtUtc": "2026-11-02T15:31:39Z"
+}

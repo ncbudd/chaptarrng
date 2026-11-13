@@ -1,0 +1,7 @@
+{
+  "sourceKey": null,
+  "sourceValue": null,
+  "localeTerms": [],
+  "useInSourceIds": [],
+  "note": "The exact API field MonitorNewItems and its enum values All, New, and None are protected literals; no separate UI-term inventory is needed."
+}

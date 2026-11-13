@@ -1,0 +1,658 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "primary semantic reviewer",
+  "scope": [
+    650,
+    699
+  ],
+  "findings": {
+    "650|ja": [
+      "propose-correction",
+      "パス '{value0}' は、すでにルートフォルダーとして設定されています。",
+      "This is a path-validation error for a duplicate root folder; Japanese/Korean current wording uses a literal plant-root term rather than the filesystem root-folder term.",
+      "high"
+    ],
+    "650|ko": [
+      "propose-correction",
+      "경로 '{value0}'은(는) 이미 루트 폴더로 설정되어 있습니다。",
+      "This is a path-validation error for a duplicate root folder; Japanese/Korean current wording uses a literal plant-root term rather than the filesystem root-folder term.",
+      "high"
+    ],
+    "651|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بخادم Kavita.",
+      "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+      "high"
+    ],
+    "651|de": [
+      "propose-correction",
+      "Verbindung zum Kavita-Server nicht möglich.",
+      "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+      "high"
+    ],
+    "651|ja": [
+      "propose-correction",
+      "Kavita サーバーに接続できません。",
+      "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+      "high"
+    ],
+    "651|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao servidor Kavita.",
+      "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+      "high"
+    ],
+    "652|ar": [
+      "propose-correction",
+      "يلزم إدخال معرّف مستخدم Goodreads أو بيانات اعتماد OAuth موجودة.",
+      "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+      "high"
+    ],
+    "652|es": [
+      "propose-correction",
+      "Se requiere un ID de usuario de Goodreads o unas credenciales OAuth existentes.",
+      "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+      "high"
+    ],
+    "652|pt-BR": [
+      "propose-correction",
+      "É necessário informar o ID de usuário do Goodreads ou credenciais OAuth existentes.",
+      "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+      "high"
+    ],
+    "652|zh-Hans": [
+      "propose-correction",
+      "需要 Goodreads 用户 ID 或现有 OAuth 凭据。",
+      "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+      "high"
+    ],
+    "652|zh-Hant": [
+      "propose-correction",
+      "需要 Goodreads 使用者 ID 或現有 OAuth 認證資料。",
+      "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+      "high"
+    ],
+    "654|ar": [
+      "propose-correction",
+      "عطّل خيار 'Check before download' في SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|de": [
+      "propose-correction",
+      "Deaktivieren Sie die Option \"Check before download\" in SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|es": [
+      "propose-correction",
+      "Desactiva la opción 'Check before download' en SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|fr": [
+      "propose-correction",
+      "Désactivez l’option « Check before download » dans SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|hi": [
+      "propose-correction",
+      "SABnzbd में 'Check before download' विकल्प को अक्षम करें।",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|id": [
+      "propose-correction",
+      "Nonaktifkan opsi 'Check before download' di SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|ja": [
+      "propose-correction",
+      "SABnzbd で 'Check before download' オプションを無効にしてください。",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|ko": [
+      "propose-correction",
+      "SABnzbd에서 'Check before download' 옵션을 비활성화하세요.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|pt-BR": [
+      "propose-correction",
+      "Desative a opção 'Check before download' no SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|vi": [
+      "propose-correction",
+      "Tắt tùy chọn 'Check before download' trong SABnzbd.",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|zh-Hans": [
+      "propose-correction",
+      "在 SABnzbd 中禁用“Check before download”选项。",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "654|zh-Hant": [
+      "propose-correction",
+      "在 SABnzbd 中停用「Check before download」選項。",
+      "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+      "moderate"
+    ],
+    "659|ja": [
+      "propose-correction",
+      "電子書籍を監視する場合は、電子書籍のルートフォルダーが必要です。",
+      "This configuration validation requires an ebook root folder for ebook monitoring; Japanese and Korean currently leave the core UI term in English.",
+      "high"
+    ],
+    "659|ko": [
+      "propose-correction",
+      "전자책을 모니터링하려면 전자책 루트 폴더가 필요합니다.",
+      "This configuration validation requires an ebook root folder for ebook monitoring; Japanese and Korean currently leave the core UI term in English.",
+      "high"
+    ],
+    "663|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بواجهة Apprise API. فشل الاتصال بالخادم: ({value0}) {value1}",
+      "The source contains a two-part Apprise API/server connection error; these revisions repair missing articles, sentence casing, and awkward failure wording while preserving both diagnostic placeholders.",
+      "moderate"
+    ],
+    "663|id": [
+      "propose-correction",
+      "Tidak dapat terhubung ke Apprise API. Koneksi server gagal: ({value0}) {value1}",
+      "The source contains a two-part Apprise API/server connection error; these revisions repair missing articles, sentence casing, and awkward failure wording while preserving both diagnostic placeholders.",
+      "moderate"
+    ],
+    "663|vi": [
+      "propose-correction",
+      "Không thể kết nối với Apprise API. Kết nối máy chủ thất bại: ({value0}) {value1}",
+      "The source contains a two-part Apprise API/server connection error; these revisions repair missing articles, sentence casing, and awkward failure wording while preserving both diagnostic placeholders.",
+      "moderate"
+    ],
+    "664|ar": [
+      "propose-correction",
+      "انتهى البرنامج النصي برمز الخروج: {value0}.",
+      "The source reports a script exit code; these revisions restore idiomatic status wording and keep the exit-code placeholder intact.",
+      "moderate"
+    ],
+    "664|hi": [
+      "propose-correction",
+      "स्क्रिप्ट कोड {value0} के साथ समाप्त हुई।",
+      "The source reports a script exit code; these revisions restore idiomatic status wording and keep the exit-code placeholder intact.",
+      "moderate"
+    ],
+    "667|fr": [
+      "propose-correction",
+      "Impossible de se connecter à l’API Join. Veuillez réessayer plus tard.",
+      "The source is a Join API connection failure with a retry instruction; these revisions correct incomplete or unidiomatic target phrasing.",
+      "moderate"
+    ],
+    "667|id": [
+      "propose-correction",
+      "Tidak dapat terhubung ke Join API. Silakan coba lagi nanti.",
+      "The source is a Join API connection failure with a retry instruction; these revisions correct incomplete or unidiomatic target phrasing.",
+      "moderate"
+    ],
+    "667|vi": [
+      "propose-correction",
+      "Không thể kết nối với Join API. Vui lòng thử lại sau.",
+      "The source is a Join API connection failure with a retry instruction; these revisions correct incomplete or unidiomatic target phrasing.",
+      "moderate"
+    ],
+    "668|es": [
+      "propose-correction",
+      "No se encontró en Grimmory la biblioteca de libros electrónicos seleccionada.",
+      "The message is specifically about an ebook library in Grimmory; the Spanish target omitted the ebook qualifier.",
+      "moderate"
+    ],
+    "670|ar": [
+      "propose-correction",
+      "لا يمكن أن تحتوي المجلدات المخصصة للكتب الإلكترونية فقط على إعدادات الكتب الصوتية.",
+      "This validation prohibits audiobook settings on folders reserved for ebooks; the Arabic target had awkward agreement and word order.",
+      "moderate"
+    ],
+    "671|fr": [
+      "propose-correction",
+      "Impossible de récupérer l’utilisateur Hardcover actuel.",
+      "This is a Hardcover connection/user lookup failure; French current text lacks a grammatical subject.",
+      "high"
+    ],
+    "672|ar": [
+      "propose-correction",
+      "Chaptarr قيد بدء التشغيل، يُرجى المحاولة مرة أخرى لاحقًا.",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|de": [
+      "propose-correction",
+      "Chaptarr wird gestartet. Bitte versuchen Sie es später erneut.",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|fr": [
+      "propose-correction",
+      "Chaptarr démarre. Veuillez réessayer plus tard.",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|ja": [
+      "propose-correction",
+      "Chaptarr は起動中です。後でもう一度お試しください。",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|ko": [
+      "propose-correction",
+      "Chaptarr가 시작 중입니다. 나중에 다시 시도하세요.",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|vi": [
+      "propose-correction",
+      "Chaptarr đang khởi động, vui lòng thử lại sau.",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|zh-Hans": [
+      "propose-correction",
+      "Chaptarr 正在启动，请稍后再试。",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "672|zh-Hant": [
+      "propose-correction",
+      "Chaptarr 正在啟動，請稍後再試。",
+      "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+      "high"
+    ],
+    "673|zh-Hans": [
+      "propose-correction",
+      "至少需要一个媒体库。",
+      "The caller requires a Chaptarr media library; Chinese targets used a word that can mean a physical library, so these name the software media library directly.",
+      "moderate"
+    ],
+    "673|zh-Hant": [
+      "propose-correction",
+      "至少需要一個媒體庫。",
+      "The caller requires a Chaptarr media library; Chinese targets used a word that can mean a physical library, so these name the software media library directly.",
+      "moderate"
+    ],
+    "675|ja": [
+      "propose-correction",
+      "ファイルが存在しません。",
+      "This is a file-existence error; the Japanese and Korean targets used unnatural or blunt negative forms.",
+      "moderate"
+    ],
+    "675|ko": [
+      "propose-correction",
+      "파일이 존재하지 않습니다.",
+      "This is a file-existence error; the Japanese and Korean targets used unnatural or blunt negative forms.",
+      "moderate"
+    ],
+    "676|id": [
+      "propose-correction",
+      "Versi Aria2 harus minimal 1.34.0. Versi yang dilaporkan adalah {value0}.",
+      "The Indonesian target had a lowercase second sentence and an unnatural version phrase; the revision preserves aria2, minimum version, and reported-version placeholder.",
+      "moderate"
+    ],
+    "677|es": [
+      "propose-correction",
+      "Formatos de salida no válidos.",
+      "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+      "high"
+    ],
+    "677|ja": [
+      "propose-correction",
+      "出力形式が無効です。",
+      "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+      "high"
+    ],
+    "677|zh-Hans": [
+      "propose-correction",
+      "输出格式无效。",
+      "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+      "high"
+    ],
+    "677|zh-Hant": [
+      "propose-correction",
+      "輸出格式無效。",
+      "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+      "high"
+    ],
+    "678|es": [
+      "propose-correction",
+      "No se pudo conectar a BookOrbit. Comprueba la URL, las credenciales y los registros.",
+      "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+      "high"
+    ],
+    "678|fr": [
+      "propose-correction",
+      "Impossible de se connecter à BookOrbit. Vérifiez l’URL, les identifiants et les journaux.",
+      "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+      "high"
+    ],
+    "678|ja": [
+      "propose-correction",
+      "BookOrbitに接続できません。URL、認証情報、ログを確認してください。",
+      "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+      "high"
+    ],
+    "678|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao BookOrbit. Verifique a URL, as credenciais e os logs.",
+      "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+      "high"
+    ],
+    "678|zh-Hans": [
+      "propose-correction",
+      "无法连接到 BookOrbit。请检查 URL、凭据和日志。",
+      "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+      "high"
+    ],
+    "678|zh-Hant": [
+      "propose-correction",
+      "無法連接到 BookOrbit。請檢查 URL、認證資料和日誌。",
+      "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+      "high"
+    ],
+    "680|ar": [
+      "propose-correction",
+      "هذا ليس جهاز Synology أو أن synoindex غير متاح.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|de": [
+      "propose-correction",
+      "Dies ist kein Synology-Gerät oder synoindex ist nicht verfügbar.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|es": [
+      "propose-correction",
+      "No es un dispositivo Synology o synoindex no está disponible.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|fr": [
+      "propose-correction",
+      "Ce n’est pas un appareil Synology, ou synoindex n’est pas disponible.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|hi": [
+      "propose-correction",
+      "यह Synology डिवाइस नहीं है या synoindex उपलब्ध नहीं है।",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|id": [
+      "propose-correction",
+      "Bukan perangkat Synology atau synoindex tidak tersedia.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|ja": [
+      "propose-correction",
+      "Synology製デバイスではないか、synoindexを利用できません。",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|ko": [
+      "propose-correction",
+      "Synology 장치가 아니거나 synoindex를 사용할 수 없습니다.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|pt-BR": [
+      "propose-correction",
+      "Não é um dispositivo Synology ou o synoindex não está disponível.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|vi": [
+      "propose-correction",
+      "Không phải thiết bị Synology hoặc synoindex không khả dụng.",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|zh-Hans": [
+      "propose-correction",
+      "这不是 Synology 设备，或者 synoindex 不可用。",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "680|zh-Hant": [
+      "propose-correction",
+      "這不是 Synology 裝置，或 synoindex 無法使用。",
+      "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+      "moderate"
+    ],
+    "682|ar": [
+      "propose-correction",
+      "يجب تحديد authorId أو bookId.",
+      "The API validation requires either authorId or bookId; these revisions correct agreement/coordination while preserving field names.",
+      "moderate"
+    ],
+    "682|de": [
+      "propose-correction",
+      "Es muss entweder authorId oder bookId angegeben werden.",
+      "The API validation requires either authorId or bookId; these revisions correct agreement/coordination while preserving field names.",
+      "moderate"
+    ],
+    "682|fr": [
+      "propose-correction",
+      "L’un des champs authorId ou bookId doit être renseigné.",
+      "The API validation requires either authorId or bookId; these revisions correct agreement/coordination while preserving field names.",
+      "moderate"
+    ],
+    "683|ar": [
+      "propose-correction",
+      "تعذّر العثور على الإصدار المحدد {value0}: {value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "683|es": [
+      "propose-correction",
+      "No se encontró la edición seleccionada {value0}: {value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "683|fr": [
+      "propose-correction",
+      "L’édition sélectionnée {value0} est introuvable : {value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "683|hi": [
+      "propose-correction",
+      "चयनित संस्करण {value0} नहीं मिला: {value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "683|ko": [
+      "propose-correction",
+      "선택한 에디션 {value0}을(를) 찾을 수 없습니다: {value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "683|pt-BR": [
+      "propose-correction",
+      "A edição selecionada {value0} não foi encontrada: {value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "683|zh-Hant": [
+      "propose-correction",
+      "找不到所選版本 {value0}：{value1}",
+      "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+      "moderate"
+    ],
+    "687|ar": [
+      "propose-correction",
+      "يجب ألا تكون كلمة المرور فارغة.",
+      "This validation requires a nonempty password; current Arabic/Korean/Vietnamese wording is grammatically weak or overly literal.",
+      "high"
+    ],
+    "687|ko": [
+      "propose-correction",
+      "비밀번호는 비어 있으면 안 됩니다.",
+      "This validation requires a nonempty password; current Arabic/Korean/Vietnamese wording is grammatically weak or overly literal.",
+      "high"
+    ],
+    "687|vi": [
+      "propose-correction",
+      "Mật khẩu không được để trống.",
+      "This validation requires a nonempty password; current Arabic/Korean/Vietnamese wording is grammatically weak or overly literal.",
+      "high"
+    ],
+    "688|ar": [
+      "propose-correction",
+      "يفتقر خادم البيانات الوصفية إلى الإمكانية المطلوبة '{value0}'.",
+      "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+      "moderate"
+    ],
+    "688|es": [
+      "propose-correction",
+      "Al servidor de metadatos le falta la capacidad requerida '{value0}'.",
+      "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+      "moderate"
+    ],
+    "688|fr": [
+      "propose-correction",
+      "Le serveur de métadonnées ne dispose pas de la fonctionnalité requise '{value0}'.",
+      "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+      "moderate"
+    ],
+    "688|hi": [
+      "propose-correction",
+      "मेटाडेटा सर्वर में आवश्यक क्षमता '{value0}' उपलब्ध नहीं है।",
+      "The metadata server lacks a required capability; candidates restore the missing-feature sense and preserve the capability value.",
+      "high"
+    ],
+    "688|ko": [
+      "propose-correction",
+      "메타데이터 서버에 필요한 기능 '{value0}'가 없습니다.",
+      "The metadata server lacks a required capability; candidates restore the missing-feature sense and preserve the capability value.",
+      "high"
+    ],
+    "688|pt-BR": [
+      "propose-correction",
+      "O servidor de metadados não tem o recurso obrigatório '{value0}'.",
+      "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+      "moderate"
+    ],
+    "688|vi": [
+      "propose-correction",
+      "Máy chủ siêu dữ liệu thiếu tính năng bắt buộc '{value0}'.",
+      "The metadata server lacks a required capability; candidates restore the missing-feature sense and preserve the capability value.",
+      "high"
+    ],
+    "690|pt-BR": [
+      "propose-correction",
+      "'{value0}' foi adicionado à biblioteca com sucesso.",
+      "This is a success notification for adding a named item to the library; these revisions use natural subject/verb order.",
+      "moderate"
+    ],
+    "690|vi": [
+      "propose-correction",
+      "Đã thêm thành công '{value0}' vào thư viện.",
+      "This is a success notification for adding a named item to the library; these revisions use natural subject/verb order.",
+      "moderate"
+    ],
+    "691|vi": [
+      "propose-correction",
+      "Dịch vụ máy chủ siêu dữ liệu '{value0}' không như mong đợi (giá trị mong đợi là '{value1}').",
+      "This reports an unexpected metadata-service name and the expected name; the current Vietnamese translation mistranslates “expected”.",
+      "high"
+    ],
+    "692|fr": [
+      "propose-correction",
+      "La clé API n’est pas valide.",
+      "This API-key validation says the key is invalid; current French/Indonesian word order is unnatural.",
+      "high"
+    ],
+    "692|id": [
+      "propose-correction",
+      "Kunci API tidak valid.",
+      "This API-key validation says the key is invalid; current French/Indonesian word order is unnatural.",
+      "high"
+    ],
+    "696|ar": [
+      "propose-correction",
+      "عند استخدام مفتاح API، يجب أن تكون كلمة المرور فارغة.",
+      "The validation requires the password field to remain empty when API-key auth is used; these revisions improve sentence structure and agreement.",
+      "moderate"
+    ],
+    "696|ja": [
+      "propose-correction",
+      "APIキーを使用する場合、パスワードは空欄にしてください。",
+      "The validation requires the password field to remain empty when API-key auth is used; these revisions improve sentence structure and agreement.",
+      "moderate"
+    ],
+    "696|ko": [
+      "propose-correction",
+      "API 키를 사용할 때 암호는 비워 두어야 합니다.",
+      "The validation requires the password field to remain empty when API-key auth is used; these revisions improve sentence structure and agreement.",
+      "moderate"
+    ]
+  },
+  "sourceRationales": {
+    "650": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "651": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "652": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "653": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "654": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "655": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "656": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "657": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "658": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "659": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "660": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "661": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "662": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "663": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "664": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "665": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "666": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "667": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "668": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "669": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "670": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "671": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "672": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "673": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "674": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "675": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "676": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "677": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "678": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "679": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "680": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "681": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "682": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "683": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "684": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "685": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "686": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "687": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "688": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "689": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "690": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "691": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "692": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "693": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "694": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "695": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "696": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "697": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "698": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "699": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers."
+  },
+  "acceptedCellRationale": "Current target preserves source meaning in the exact pinned production caller context; no material issue found.",
+  "nativeSpeakerApproval": false
+}

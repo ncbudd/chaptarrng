@@ -20,14 +20,22 @@ function normalizeFieldValue(raw) {
     return [value];
   };
 
+  const markServerMessages = (messages) => toArray(messages).map((message) => {
+    if (message && typeof message === 'object') {
+      return { ...message, messageOrigin: 'server' };
+    }
+
+    return { message, messageOrigin: 'server' };
+  });
+
   // Already wrapped with value/errors/warnings structure
   if (raw && typeof raw === 'object' && Object.prototype.hasOwnProperty.call(raw, 'value')) {
     // Normalize undefined to null for controlled components
     const value = raw.value === undefined ? null : raw.value;
     return {
       value,
-      errors: toArray(raw.errors),
-      warnings: toArray(raw.warnings)
+      errors: markServerMessages(raw.errors),
+      warnings: markServerMessages(raw.warnings)
     };
   }
 
@@ -50,6 +58,9 @@ function getValidationFailures(saveError) {
 function mapFailure(failure) {
   return {
     message: failure.errorMessage,
+    messageId: failure.messageId,
+    messageParameters: failure.messageParameters,
+    messageOrigin: 'server',
     link: failure.infoLink,
     detailedMessage: failure.detailedDescription
   };

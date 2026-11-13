@@ -1,0 +1,19 @@
+{
+  "candidateFreePacketPath": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w100-149-primary-20261104",
+  "candidateFreeManifestSha256": "b97b35f303f446ae27c0d08c7189880e7f91bde2b2666d1feef5fb951a3207b0",
+  "candidateFreeChecksumListSha256": "5d94fd577a9cd03104b8a70e3a6ee269c88fd7e8ef6e943388f2cff8b5554857",
+  "candidateFreeCellsSha256": "26ff212ddc2f244dfcd0e0e5a227640cc352d608ad200c56c17786f57aa962b9",
+  "primaryPacketPath": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w100-149-primary-20261104/primary-review",
+  "primaryChecksumListSha256": "f3d64b353531125c16f563c6558cfdd1b63e6669a32ea2d054c68b3d359b117b",
+  "primaryCellsSha256": "69d602316eb4555cc5c0fae62f3fe478a706dff51d3af9022135b67c69a6dedd",
+  "primaryProposalsSha256": "67ebb20be6349248eeeb674f0e7b6d1e7afc348d022d81d941e147644b25ac89",
+  "exactHead": "9fd23606fbb4c8928505772413e5c23e85352adc",
+  "exactTree": "cba466021a9a0c9699ef171ddc6a510a69209083",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "base": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "candidateFreeVerifierResult": "PASS",
+  "primaryVerifierResult": "PASS",
+  "callerAndRuntimePinVerifier": "candidate-free verifier re-read exact head/tree, all source/catalog/caller/runtime pins",
+  "sourceWorktree": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w100-149-source",
+  "sourceWorktreeStatus": "clean and detached at exact head"
+}

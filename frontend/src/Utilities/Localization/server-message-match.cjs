@@ -40,7 +40,8 @@ function compileServerMessageMatchers(records) {
     if (!record || typeof record.id !== 'string' || !record.id ||
         typeof record.source !== 'string' || !record.source ||
         !Array.isArray(record.parameters) || !Array.isArray(record.patterns) ||
-        !record.patterns.length || ids.has(record.id)) {
+        (!record.patterns.length && record.explicitOnly !== true) ||
+        (record.patterns.length && record.explicitOnly === true) || ids.has(record.id)) {
       throw new Error('Invalid or duplicate server-message record');
     }
 
@@ -144,4 +145,4 @@ function matchServerMessage(message, matchers) {
   return result;
 }
 
-module.exports = { compileServerMessageMatchers, matchServerMessage };
+module.exports = { MAX_MESSAGE_LENGTH, compileServerMessageMatchers, matchServerMessage };

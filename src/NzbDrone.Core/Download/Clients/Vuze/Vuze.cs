@@ -7,6 +7,7 @@ using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Download.Clients.Transmission;
 using NzbDrone.Core.MediaFiles.TorrentInfo;
 using NzbDrone.Core.RemotePathMappings;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Download.Clients.Vuze
 {
@@ -59,7 +60,7 @@ namespace NzbDrone.Core.Download.Clients.Vuze
             if (!int.TryParse(versionString, out var version) || version < MINIMUM_SUPPORTED_PROTOCOL_VERSION)
             {
                 {
-                    return new ValidationFailure(string.Empty, "Protocol version not supported, use Vuze 5.0.0.0 or higher with Vuze Web Remote plugin.");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Protocol version not supported, use Vuze 5.0.0.0 or higher with Vuze Web Remote plugin.", "server.message.m2e04fe8133c7");
                 }
             }
 

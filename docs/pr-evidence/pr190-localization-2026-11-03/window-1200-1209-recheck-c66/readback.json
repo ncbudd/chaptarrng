@@ -1,0 +1,978 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "W1200-W1209 exact-head re-review",
+  "inputHead": "c66ef0bccc0635f047cebeda95b9aaa0ae8130a4",
+  "inputTree": "e2142a119ce8d9d765927bb44a47f71364863995",
+  "targetCells": 120,
+  "changedCells": 8,
+  "dispositions": {
+    "accept-current": 112,
+    "refinement": 7,
+    "correction": 1
+  },
+  "catalogKeyOrderPreserved": true,
+  "targetFileCountChanged": 7,
+  "readback": [
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "76e861b63d4e06fbdf5614e26f2c100dca63d87f8030321f26c0e6a6a0542e54"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "904e3abf51512050a1ea1d7cb451e44e803a8579afe24e4bab0c0c461bd6479d"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "7f5d08e5ae4f780aef85526b973f408b740c05a9a005cd42159ee585816545fa"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "405b46a2b9b9b387f2ef718e199514fb76c4b4a99157fd375013447c0001ca82"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "f55bc19bd1f57e35653e010c454f6fa648afd057fa458eb8be51cf57af1cd845"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "1d4f58c4b0da46081a4bfd3402415c8318b5c8d5de603ab5dc569ca70fd3e232"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "2026a53c5266c732caf0c911e1f28d14590559e4c0647ce3ddbb7711a05d33ae"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "a0f25727f5ef74135730473b58b8c5512f2c5cb19630200c4e3980bd524480dc"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "e85d2ab2a4d6c69c2fc32b75584d2d609601e9c807aa52c72e8d774d2603f7d5"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "e798a21b47ebce59dd3e08dca676d145001691105b0c4f6e7b14a35c2d7890aa"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "7aade413d594b8403b74c13e22c7026779e02dc192824422c7c0423ddc52595c"
+    },
+    {
+      "queuePosition": 1200,
+      "sourceId": "server.message.m73172a5045d6",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "9b0435ec1159bf8dd844720023c317d3f064d197dbea85eca6d1aa1c59867018"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "a88d6ae3528271b5b44d731dd727ad21db46b4d8632c45bf8efc209a5b0deb84"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "9bda192e5ab634159b8267e288083c7b4d544f36c875e4378ed34afd6edf4e21"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "f4e96d7b0880e390f5b96400a899459ab2b3e577b34568b066382a9d19350897"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "aaefb22d8817d04d80e354f6d5db1a63f36e80b9fcf763df7251d1ed4dbc6ba9"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "c9f0786e7a4829219d7e5dd43ddd1533895d3843e7bc036a1d1cc040281b0319"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "c40176eb1f6954236150874fa0b3de83426763c33caf897a238a593d1c840420"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "f87c9fb8f79c843fbb9ec74b4518878e135fbdd1e5c69c9c635065d612c19858"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "2b91b01bfbca37df3bc794109562d3c7239058b0f39b4a661f3108568e63d7af"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "4d22625cac5a9b49ecc4d7a93f9aad5a5c1e2a3c3f8e5313c15bf05afc71e3f5"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "a33e593c21d7823541a44c86a29fd58d777eb660485a9984ade89f4becd46fc6"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "1985e15fd212f2765e1617e8bc9f959381bf8a100b951723ff7c4f8ce98a58ac"
+    },
+    {
+      "queuePosition": 1201,
+      "sourceId": "server.message.mddaec7220c51",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "14bb75647c9846af5b76de1e0eeaf500284fc36f1f4623064e7c211215d10705"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "3b2e9adccd5f12cbd00f6b27f11458423b28edeb2a08511114b629bce0813198"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "db7915bbf4561e8483976a403e9a1f89faa1089155a6850ba1634302a59b79f8"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "ba269e0ca201d34bbf7d468a977156c3cf8585983fd0ddfb049c319a4ddec497"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "c772aaeecbbd3a2f9802d53b3256af928818c412d905e55338817b835e7562f8"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "0116f1d247582d3ed69f236af23c676108d13fdbe297a7b86abb7a67f010691b"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "01fda8edd88540d3806739441b6da96bb5dd1f8387a1a8ff46405246310089d2"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "c709f08356330f96227b5a937c6ded5a0f46ce3f10bf589f16c5d1fab6a85b69"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "0c77b081eb3b750b6a56fc6c80d58f4d6cdc65cca978c17d605383a16ba1aa47"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "87252a3ad7a457a5c70d1ea6fa300a7a0be734cf1b137fcf480bd76bcbafdcda"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "e18273cf50f708391661ae4f06fb175379804bd422db0bba14a986e2831bbc3c"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "9da3da709d3df028eb8cddf6713e1914fd5e39e71501bf80fe64d7bfb293f7c9"
+    },
+    {
+      "queuePosition": 1202,
+      "sourceId": "server.message.md6a7ade8523b",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "30a43cdee57721b5256aca6114ebd1b4403c8a831337bc5bd53d4d4320de770e"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "8e5f70b52be2255bae74dd0f19afca5a1897ff50e1ba660bdf00b0c36cdfe04f"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "446ce4bac1efb0cb73a0b87b0cdf62a9d9ef7bff6d6d093b0f0c219ea74c454f"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "de8aa5512de9f32e82cbe419e2496f6931ff8bcfcc131ad35d0e533bbb304e4b"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "4d7d1d9bdf28367fabb723278b7363df143a94f1c488308d81db2e9f53ab5c98"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "09ce2d013dc3ec72d5eec014048ba63ddb3977753ae096fef82a134eadb78eba"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "40467b2a793a4ca9b0e166503ac8bbea24f7b554854c2a65a1dc32e422e77c55"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "da1b3b82d1ec64b6e5811fa3f3f93bf5430bd1d6cfc9cb79e30d4e8a9ed2c343"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "30e79bf363ea5ee22d705aa3dc13c91e198bf780e57777922bf72a7c5d615c3c"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "498fc656cfee61c04874a5032ede1967ae8be24c4709739f21759a1cdcd52284"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "4e7ec0a2057c3971bb57606c992b989545911fd2cb816a6c6d12403faffed885"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "40f4c553e4a70ba7a95d1f2de5912bb9ce5dbf33c05e7a5fe433f2d99e10f1c2"
+    },
+    {
+      "queuePosition": 1203,
+      "sourceId": "server.message.m9f7f2489aa05",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "e3a0e6e130d6cd39af3521e13a6b738a108894cfff6f3ad5e0f43990a8ab3704"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "8a5b764528d556919196ba7a8b081df32c18bc12596180f752a16aea2c8f2d87"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "85a1ef94fe06827e188834214929f0026f8eb338b9302a9cfa5c363759a41090"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "b5faa2534c1732ae8d1c3a082776a2c86496dda911441debaae87eca823a9291"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "9b20fe2dc71470ffc4d582470aee7b232da8d43484cadc095432d50eab19565a"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "54ddd4900f16959c7da4884c8b12957cf2d71d80189dec110ade11a208648be3"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "0bf8a5b02f06c1b7ee5cbf3ee31c289984a707b69a11de09ad71c3f4da9ca402"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "68d4424dc25e5187d5084189d43cb40894b41f5b83bda6c45dee90de8026cf30"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "3ef5239428d575f8b7294b16f3e0d56f31c76b9d1704bc0b7fa978bc93bc0460"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "5415de67a0033a2f2616c0265273837fd8fa3579f5295ec8016dc2b115c2f8b7"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "07b6a8cf8f2d7243a3741199e4c0bed3309ee4f21640fba55da0711f726e75c6"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "d976239fb7cf5332766c434d40dc917a1a1b41ad3a351267c81407343594761e"
+    },
+    {
+      "queuePosition": 1204,
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "683d8e1f90040e1da39760de449fb350505098b487da795d2b23614d52a17fa5"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "215e3d6561d2d71d6d1f5e4461cab299e68cf4ea861f7b13095fde73974c0505"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "7bfcdc89cb86a9b5a8c54908b75be1a9127e76c9e0638159309f870af3e63598"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "b37711abce8d119ea14497c5a8e8b47d78337ae79bde87f7f59d6839a063b075"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "41cdb4eebd024782c30ba8dd8b1f81d352f2213099f83977ce1b0a59c1437f4b"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "0e7eb00dc443e1100b4ac9952b30abea14474c4852c7debf2a17cac9f49c755f"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "8106ba1d625fc041212959426d8cf687c1b757a98519a975c32945974d4f00bf"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "8dd1a7e4bd422b9a8afcf145490a9c2d1fc1819063b5c37b4875c8f39fdbe5b4"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "0ee2094ee0d172b4737e5804540c270379ab492936f6cfb3882b9748eb944b0b"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "73df1704026d471a608cdf48444f4875e3daf9a961a2fc1d76c878dd53001ffe"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "c153047b2bacbce66ac5d6d2588e1555b5e4594a17f81ac33b1a8a401a602d49"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "7aeaba136948e079e0e502d056eb99450a0d73ec0deac02a19018a5497b7ad3b"
+    },
+    {
+      "queuePosition": 1205,
+      "sourceId": "server.message.m621dd0308bef",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "4389ecac5d293309db7da62f4c206cac80f6c4ecd585c2a5332e125b73e5b173"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "correction",
+      "finalTargetSha256": "0f0ab71d34b9b18aabfd9ad3d95015bce5690d3e8c7042c5edf70a0a5e09692d"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "24e05c395b2f226b17e33490fc8bc693ec6c6901e9811d5a778dee59d8dc1bd5"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "41df2185eaec1f6334f2b9359f315d87b363776e8f3f68d53ba2a4272e935aef"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "32031e9a401729e7ebd7878d8c0df5784024839a6c6293dbe0379b5632366d44"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "f94b3f1caba81d21d710478d8355f394429539a668f87a9d8a518428473252e6"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "2b95fb9665f75320067039d77453c6430c2e3f8a18e852f4d7b97537b0b92bfe"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "0c151b292a1d7e42603a3b8dff35c04cc7d50fae04959c83de5b36da9bd6bc41"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "8d476c935ec225fa9e27af0bb078b49fa0b424817e56a605190273d104a915af"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "5dec4e65c69068ebdb1726fe7b32517050533df681b7d9e41c97052af9351a5c"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "518faa6577e4b0a5ede802328b0d6bd1f185865defe1f4ba2a51c41958b59151"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "fdd0879cfc72ea1f851f34788443ec1ced74f29ab8327f5ec33869dec27308da"
+    },
+    {
+      "queuePosition": 1206,
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "da1eb18446f5c55bdc3cb78758abfd6cd4b346f7afb8de846207fba04235290b"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "c9a2394302eb4aafb98eccb7150d06f388e9c688af6fb72b431c81880e282be0"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "221860fb40f91e4694f91015576fcbd7e03b12eac314caf07e774a969057d9be"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "2c896a78a6a085c4f8581be3cd8d5d67229ac00b4b5347a27ff68bcda3a65499"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "b8e723c8428d3dbee04ad1e4c7a5016528ed7bb94996ba149e1519d03a858ba5"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "de4ca5672d21f5c46c32f186fae64b4f49cae3e555b5afe9911b758abec7e281"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "3f55bf64feda2790646b750479c597a537d82639f6daa36b59d7daf920b979fd"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "b2427150cea04f3cdbf108d05141a0a34c1ad28b29e1eba324c50963c37dd0b1"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "f90d063595c35db6052fb0f29d6a953a5b3b8742cd3772233ae6be6aae4fe226"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "a0b813cd68203fc55539a57a18639dc879d1eca1a17b0db40ee4254729d68cef"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "479ae7c613d014b23cd97568bee34cec93b18adf37b9c29cd719986cc23d3d2a"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "1301ce46a50f1f5c81c875dfced29da6eba084c94f376709d5944fa317f7aac5"
+    },
+    {
+      "queuePosition": 1207,
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "refinement",
+      "finalTargetSha256": "b61220719752375652f9b186973da5edfe16ba3f038d08f7310a576b2aae00d9"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "3a1bdb6b22dd47809f0e5e5985366a72d7a50734c41ac5b0d9ded94e2d07faba"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "61653dda5ec2db6880854915e7aaac223ff3738b4cbb94889425d603f7437d2d"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "e9a613853535d381c1f25f3686a617aba93f211bd7c91b9a1585949f8dc7c3ff"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "af25dd9c55ea13c19ff3b2ae40cca0ec016ec760230802c12e3d525fca4c9eb0"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "166cfd0a17d984527bccdb17c9580667782086dfb04e0514286e3c5784820585"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "9b7d2cb104d7b02d6225e818f977a048a391cb90253a6d4f18e64b75778ccc62"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "01481d705924d05a3aea328f3312c54c68a40b3bbf99f3bc575c65327508af29"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "8c5f6e3d2737392095d4b520757f8c23fcab1049662664ebdf13057deba1398e"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "b7d2a3077623eec0d6f3a20431f17259ee47ce76f27239abdb5cc9dedc15359e"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "188ee32614b3805035bd8b7ec05827e837a3c1541b117ff1a30ce9f7547f9f2e"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "def21344a0549e0b5fec2824554f7f1050061e1c2145d39eb30bb32abcb4e7bc"
+    },
+    {
+      "queuePosition": 1208,
+      "sourceId": "server.message.m12f8b73a2b72",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "2966125a69b998a0930d64b9beb74345f774a27f82c88da8a2e1e6656ad1ed94"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "595361ce76bf8744a2e25e402e81b597a52bbf4def791b93fc2e3a7ef757dd6d"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "6d7536943d0a0ed44aee03940638d8296f599c44992c614a65930f9cbd2b3af6"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "765e148ac5276c50973f3f428863c77cc122f0af0917af62121b4bdc3afaa2e4"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "521656ba758424ce5e67c13f831470ce468e88631026ae6889b41e0d9dcc7a0a"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "5dd686af7346cded5641107b56d4fc045e4ccd9ca3327b6d78022fe0cc20a3d8"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "e5d8782ccf32edc8ae91e48e026ee80f6d9133e5ae467af50e987a440502d27c"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "be3941cecbb44a094c5ed8062d8f3ffc97444efe442080f8f8ab6418a9194bd6"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "9939db3750b5cb0d945a498fe62dc7815feb4939ce9239313b7f87392a58b285"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "8454d122da30f0d553c20231b9d6fedaee71c911221e33aef56478713fc30442"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "610e5a151266e615dcab389dab88afa38062a579a9651edfcc9723eb4a57fe71"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "341ba5a9b2c06c0a0352a41475a4c154bffef22236437c6329c677d00bd92666"
+    },
+    {
+      "queuePosition": 1209,
+      "sourceId": "server.message.m47f0922640fa",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "finalDisposition": "accept-current",
+      "finalTargetSha256": "6c650f09e1ed5deaaac216c0b5e78e51d609d85a77efc9b10bb211250560e16e"
+    }
+  ]
+}

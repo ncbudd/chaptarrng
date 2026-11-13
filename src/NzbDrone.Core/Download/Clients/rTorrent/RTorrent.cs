@@ -145,7 +145,7 @@ namespace NzbDrone.Core.Download.Clients.RTorrent
 
         public override string Name => "rTorrent";
 
-        public override ProviderMessage Message => new ProviderMessage($"rTorrent will not pause torrents when they meet the seed criteria. Chaptarr can remove torrents after seeding is done only when Remove Completed is enabled and the torrent is not protected by Preserve torrents in client or Post-Import Category. After importing it will also set \"{_imported_view}\" as an rTorrent view, which can be used in rTorrent scripts to customize behavior.", ProviderMessageType.Info);
+        public override ProviderMessage Message => new ProviderMessage($"rTorrent will not pause torrents when they meet the seed criteria. Chaptarr can remove torrents after seeding is done only when Remove Completed is enabled and the torrent is not protected by Preserve torrents in client or Post-Import Category. After importing it will also set \"{_imported_view}\" as an rTorrent view, which can be used in rTorrent scripts to customize behavior.", ProviderMessageType.Info, "server.message.m4cd205e7d07a", new { value0 = _imported_view });
 
         public override IEnumerable<DownloadClientItem> GetItems()
         {
@@ -375,14 +375,18 @@ namespace NzbDrone.Core.Download.Clients.RTorrent
 
                 if (new Version(version) < new Version("0.9.0"))
                 {
-                    return new ValidationFailure(string.Empty, "rTorrent version should be at least 0.9.0. Version reported is {0}", version);
+                    return new NzbDroneValidationFailure(string.Empty, "rTorrent version should be at least 0.9.0. Version reported is {0}", version)
+                    {
+                        MessageId = "server.message.m06254ce94096",
+                        MessageParameters = new { value0 = version }
+                    };
                 }
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to test rTorrent");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to rTorrent")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to rTorrent", "server.message.mecf985c120fb", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -400,7 +404,7 @@ namespace NzbDrone.Core.Download.Clients.RTorrent
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of torrents: " + ex.Message, "server.message.m451006253bc3", new { value0 = ex.Message });
             }
 
             return null;

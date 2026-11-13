@@ -6,6 +6,7 @@ using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Join
 {
@@ -57,7 +58,7 @@ namespace NzbDrone.Core.Notifications.Join
             catch (JoinInvalidDeviceException ex)
             {
                 _logger.Error(ex, "Unable to send test Join message. Invalid Device IDs supplied.");
-                return new ValidationFailure("DeviceIds", "Device IDs appear invalid.");
+                return NzbDroneValidationFailure.ForMessage("DeviceIds", "Device IDs appear invalid.", "server.message.mbb1b33553dcd");
             }
             catch (JoinException ex)
             {
@@ -67,7 +68,7 @@ namespace NzbDrone.Core.Notifications.Join
             catch (HttpException ex)
             {
                 _logger.Error(ex, "Unable to send test Join message. Server connection failed.");
-                return new ValidationFailure("ApiKey", "Unable to connect to Join API. Please try again later.");
+                return NzbDroneValidationFailure.ForMessage("ApiKey", "Unable to connect to Join API. Please try again later.", "server.message.m7be856d3afbe");
             }
             catch (Exception ex)
             {

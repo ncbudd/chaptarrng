@@ -1,0 +1,11 @@
+{
+  "currentWindow": "W300-W349-Core",
+  "currentWindowBlindOrCrossOutputsAccessed": false,
+  "disclosure": "This was inadvertent; the parent agent was notified immediately. The W300 primary review uses the W300 candidate-free packet, exact pinned production caller context, W250 apply readbacks, and root supplemental adjudication only.",
+  "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "observedOutput": "Only filenames and OK/checksum status were emitted. No cross-review file contents were printed for analysis or used to derive W300 recommendations.",
+  "operation": "An omnibus sha256sum -c was run at the top level of the prior W250-W299 follow-up evidence directory. Its checksum manifest included files under that prior window’s cross-review subdirectory, so the checksum operation read those file bytes.",
+  "priorWindowCrossFolderChecksumRead": true,
+  "priorWindowCrossReviewSemanticallyUsed": false,
+  "recordType": "review-process-exposure-disclosure"
+}

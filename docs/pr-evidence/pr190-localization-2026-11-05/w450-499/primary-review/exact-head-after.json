@@ -1,0 +1,28 @@
+{
+  "attestedUtc": "2026-11-05T09:21:07.717518Z",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "state": "OPEN",
+  "isDraft": true,
+  "headRefName": "codex/chaptarrng-localization-complete-20261031",
+  "headRefOid": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "baseRefName": "main",
+  "baseRefOid": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "apiCommitSha": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "apiCommitTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "branchRefOid": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "pullRefOid": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "liveMainRefOid": "f5b81e68aeb1d7fa82b19833913d911534760c13",
+  "candidateFreeBaselineMain": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "candidateFreeBaselineMainTree": "2cc37a8008f8aefba42bca3ec1bc325acbbebc55",
+  "liveMainAdvancedSinceCandidateFreeBaseline": true,
+  "exactWorktree": {
+    "path": "/mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+    "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    "statusPorcelain": ""
+  },
+  "candidateFreePortableVerifier": "PASS",
+  "candidateFreeExactWorktreeVerifier": "PASS"
+}

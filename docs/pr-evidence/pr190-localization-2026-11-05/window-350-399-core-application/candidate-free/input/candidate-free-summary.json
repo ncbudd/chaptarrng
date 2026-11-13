@@ -1,0 +1,42 @@
+{
+  "batch": "W350-399-Core",
+  "callerContextChangedAgainstMain": 7,
+  "callerContextKeys": 50,
+  "callerReferenceCount": 1936,
+  "candidateFreeOnly": true,
+  "cellOrder": "sourceOrdinal ascending, then locale order in manifest",
+  "cells": 600,
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "locales": 12,
+  "main": "0d711ce1a9828675e879b2ba97f36fc3b9544188",
+  "noCandidateSuggestionsIncluded": true,
+  "result": "PASS_WITH_PROTECTED_LITERAL_HEURISTIC_FLAGS",
+  "sourceChangesAgainstMain": 0,
+  "sourceIds": 50,
+  "sourceQueueVerifiedFromFrozenHistoricalScan": true,
+  "targetChangesAgainstMain": 0,
+  "targetKeySetParityVerifiedForAllCatalogs": true,
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "workflowPathsInPrDiff": [],
+  "mainAdvancePathCountSincePrApiBase": 8,
+  "mainAdvancePaths": [
+    "docs/localization/server-message-sources.json",
+    "integration/bookshelfng-api-contract.mjs",
+    "integration/bookshelfng-api-differential.mjs",
+    "integration/test-bookshelfng-api-contract.mjs",
+    "src/Chaptarr.Api.V1/ImportLists/ImportListResource.cs",
+    "src/Chaptarr.Api.V1/ProviderResource.cs",
+    "src/Chaptarr.Core.Test/Api/ImportListBookshelfCompatibilityFixture.cs",
+    "src/Chaptarr.Core.Test/Api/ProviderResourceCompatibilityProjectionFixture.cs"
+  ],
+  "mainAdvanceWorkflowPaths": [],
+  "mainAdvanceCallerPathOverlap": [
+    "src/Chaptarr.Api.V1/ImportLists/ImportListResource.cs"
+  ],
+  "mainAdvanceCallerReferenceOverlapCount": 1,
+  "translationCallsiteChangesAgainstMain": 0,
+  "sourceManifestW350IdOverlap": 0,
+  "protectedLiteralHeuristicFlags": 16,
+  "nonProtectedIntegrityFailures": {},
+  "liveMainTree": "6d3fcdf8e076306946734f70c629f92e2d36e04b"
+}

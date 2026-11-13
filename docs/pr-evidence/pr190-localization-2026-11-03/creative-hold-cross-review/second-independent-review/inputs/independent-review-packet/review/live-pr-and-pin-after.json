@@ -1,0 +1,137 @@
+{
+  "afterLedger": {
+    "baseRef": "main",
+    "baseSha": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "branchRef": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+    "checkoutClean": true,
+    "draft": true,
+    "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+    "observedAtUtc": "2026-11-03T22:05:51.751606+00:00",
+    "pullRef": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+    "pullRequest": 190,
+    "repository": "snapetech-org/ChaptarrNG",
+    "state": "OPEN",
+    "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "callerlessHoldHashCount": 24,
+  "callerlessHoldTargetsHashOnly": true,
+  "creativeTargetCount": 20,
+  "creativeTargetsReattested": true,
+  "pins": [
+    {
+      "byteCount": 1099,
+      "gitBlob": "41cdcd7537bb75bbc9d07a1f73bddc872cf8588b",
+      "kind": "production-caller",
+      "path": "frontend/src/Components/Loading/LoadingMessage.js",
+      "sha256": "13b9006f2438d72e7a285cf3e81583df1660b8308faa5a707e301c61aaf5a4c6"
+    },
+    {
+      "byteCount": 1680,
+      "gitBlob": "1589452c0d61933f0ab187bcbc2e17c9a06b98ef",
+      "kind": "production-caller",
+      "path": "frontend/src/Components/Loading/loading-messages.json",
+      "sha256": "9f3eaa1f0a8f838611194a085e4a127ceb90b5a4fed13a735845e4abc1e14a3f"
+    },
+    {
+      "byteCount": 13606,
+      "gitBlob": "ee8840d33d12fdc98a83a8f5b4a84c2b5bb80638",
+      "kind": "production-caller",
+      "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs",
+      "sha256": "4b5ec60660c36dfcf88a5e4ec1ffcbad7159475429b57c15e5769b661da30ae2"
+    },
+    {
+      "byteCount": 432051,
+      "gitBlob": "936368a6415f3a630aa1dd7b5a20584bf0f2f502",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "186f8b9aef094189136473a3c2c2e3cd09d84a59b054545793c84dc60cd0cd39"
+    },
+    {
+      "byteCount": 362192,
+      "gitBlob": "db6c07bc115ad81da2d1e9f6cd5b093db769d108",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "21eaab7f5bb56c943487d7006354b965a4d0749d196030fa7f6ab0dd7e3d12fd"
+    },
+    {
+      "byteCount": 312097,
+      "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+      "kind": "source-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+    },
+    {
+      "byteCount": 359700,
+      "gitBlob": "917d7a5d6d627c62d0c767343118ae5c57e7b815",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "ac3dfd4e576b5579bb091b191f2f59a98c9707f357dac0a94e40a929be4574e2"
+    },
+    {
+      "byteCount": 375374,
+      "gitBlob": "60c14db660921411b5d9f7a0e073be1c0617a887",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "61289bb8e01eec4c60a2f9e09f38aa9dc1d0f03730c74f66497553aa359702ea"
+    },
+    {
+      "byteCount": 606373,
+      "gitBlob": "1467df6dbb6b67af40b0949b262e386f976d4dd1",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "924b198626202a4fffac0c0f7b367aa375161e7b5fa0410e3d649da3a76d942c"
+    },
+    {
+      "byteCount": 333166,
+      "gitBlob": "0dac7379933313fc74641d296cc32a93f7a5e2bb",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "f18e6f64b3ebd5c7c137e1c56af78fd47b43050bc2396300e09a16a52fe8cebe"
+    },
+    {
+      "byteCount": 409690,
+      "gitBlob": "49950f3ab639408d5b503e954975f553934e4942",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "5f771bfd479f5e3af42df001972e55aed0c3778b2b40548ac843e21fb22acff2"
+    },
+    {
+      "byteCount": 368709,
+      "gitBlob": "ef48c763ee9f46510e009737474280113a630913",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "844f2fc0973da81c6121638dd3ca86f43306a60febb81b76712ea5bc542d5dd9"
+    },
+    {
+      "byteCount": 353256,
+      "gitBlob": "5696559e4e6e2b44ad542c2c936f76f7b08ade2f",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "e7c540d2baf70243f22fe57c4cbfc742c7f53cbe26c458144fc634ca46e6f582"
+    },
+    {
+      "byteCount": 389709,
+      "gitBlob": "704a78029608d67d361b9bb2af8a52f87db7d775",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "35abc39b5d16790292b02bf5045c78601ce147c3d7a0effbc1c07c3813a19286"
+    },
+    {
+      "byteCount": 306923,
+      "gitBlob": "0f670ada88db353e6704d6b2d2578b2a50424412",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "41acb5e21ae30d379e3db5d74e48895ff910e69467c6debe8660af27d8e60a88"
+    },
+    {
+      "byteCount": 308371,
+      "gitBlob": "9fc6668e836e23b3d5f5e677b21f0ad4c1aa2ee5",
+      "kind": "locale-catalog",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "349b39ec160f39a3292ef2a48f9c1f5f440a78180981b45698a824ac0742cb2e"
+    }
+  ],
+  "sourceCallerCatalogPinCount": 16
+}

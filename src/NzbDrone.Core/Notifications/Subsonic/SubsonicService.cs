@@ -1,6 +1,7 @@
 using System;
 using FluentValidation.Results;
 using NLog;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Subsonic
 {
@@ -51,12 +52,12 @@ namespace NzbDrone.Core.Notifications.Subsonic
             catch (SubsonicAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to connect to Subsonic Server");
-                return new ValidationFailure("Username", "Incorrect username or password");
+                return NzbDroneValidationFailure.ForMessage("Username", "Incorrect username or password", "AuthIncorrectCredentials");
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to connect to Subsonic Server");
-                return new ValidationFailure("Host", "Unable to connect to Subsonic Server");
+                return NzbDroneValidationFailure.ForMessage("Host", "Unable to connect to Subsonic Server", "server.message.m467034a6f197");
             }
 
             return null;

@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "headBeforeApply": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+  "cellsReadBack": 68,
+  "catalogs": [
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "keyCount": 4165,
+      "changedCells": 5,
+      "fileSha256": "c894d7287bbd22b0d14336a87c11f48943fdeee7e3d5a7c0e624e0e58b17499c",
+      "targets": [
+        {
+          "sourceOrdinal": 254,
+          "sourceId": "provider.field.f2a41808a7b7a",
+          "locale": "vi",
+          "value": "Gửi các chỉnh sửa đến thư viện",
+          "sha256": "f5129c4e2e55e71ee9c2b02d6a7e930b735f8d5a24ddd093884b96a92f743a27"
+        },
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "vi",
+          "value": "Cho phép Chaptarr chỉnh sửa hoặc xóa các sách tương ứng trên máy chủ nội dung khi sách được thay đổi hoặc bị xóa trong Chaptarr.",
+          "sha256": "0d4bd9b91c904f605fc306bd5a9ab0c7d7d45e962f7293e1b34c74b7829717c6"
+        },
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "vi",
+          "value": "URL của webhook",
+          "sha256": "17b429825e0c19080c250caec53f29bb906843bb6e14c20aa0f8a6b753fbe173"
+        },
+        {
+          "sourceOrdinal": 277,
+          "sourceId": "provider.field.fd7f4ba9ed2d0",
+          "locale": "vi",
+          "value": "Tên máy chủ hoặc địa chỉ IP của máy chủ email",
+          "sha256": "d9c948a8d4bbebf46d224a825959ada600835cbfd523c989fdb23dc8c9810ff8"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "vi",
+          "value": "Tiền tố URL",
+          "sha256": "0d0489db0425559182ebcd62d25921c942ed78ece9f80aed82410c55f62b33ad"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "keyCount": 4165,
+      "changedCells": 4,
+      "fileSha256": "7732c47440ef63f81fadd6c0049a46ab432baa2f6bb2d26c3fea56ed5ea6b592",
+      "targets": [
+        {
+          "sourceOrdinal": 256,
+          "sourceId": "provider.field.f8d36ffb94feb",
+          "locale": "zh-Hans",
+          "value": "忽略 AudioBookShelf 标签",
+          "sha256": "b0444aafccec8411cbce8743064e8f23b300f799671cb7050d94987e935433c0"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "zh-Hans",
+          "value": "导入时将书籍作为附件添加",
+          "sha256": "ecb147601361a2758e9b1c13132860f44db3dcca2010a71d0b5f0cb31b3ff76f"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "zh-Hans",
+          "value": "URL 前缀",
+          "sha256": "83f187501cf2e330ade2036dfafed10b95855221857b38a5fba2a585b20f3afb"
+        },
+        {
+          "sourceOrdinal": 292,
+          "sourceId": "provider.field.f29cf0df66cfa",
+          "locale": "zh-Hans",
+          "value": "添加到书架",
+          "sha256": "9b4cd40d4c5c1446144550769a30940557f12d171519947683c7d607f489fb0a"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "keyCount": 4165,
+      "changedCells": 6,
+      "fileSha256": "15f66d4efb50599aa19339fbb1e779443d49d74bbab257cbd213620a347e3061",
+      "targets": [
+        {
+          "sourceOrdinal": 256,
+          "sourceId": "provider.field.f8d36ffb94feb",
+          "locale": "hi",
+          "value": "AudioBookShelf टैगों को अनदेखा करें",
+          "sha256": "ffaeb7626aec1b7f05b3f522efec64c86d94e325022cd2e8c520858503e90dd3"
+        },
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "hi",
+          "value": "जब किताबें Chaptarr में बदलें या वहाँ से हटाई जाएँ, तो Chaptarr को कंटेंट सर्वर पर उनसे मेल खाने वाली किताबों को संपादित करने या हटाने की अनुमति दें।",
+          "sha256": "afad30105f6142a527e4809531e3cbc8fce09d48b636e0454f76c51688a1339f"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "hi",
+          "value": "आयात के समय पुस्तकों को अनुलग्नक के रूप में जोड़ें",
+          "sha256": "8db4855608ada18764a8bf478cb2c1122dfddc4f513993ce43b809deb773b977"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "hi",
+          "value": "URL उपसर्ग",
+          "sha256": "0ff31084d2af824ea48257e24e0e2664e428f1ab97c4219efbfe58b17097478f"
+        },
+        {
+          "sourceOrdinal": 298,
+          "sourceId": "provider.field.fcf600202ff5b",
+          "locale": "hi",
+          "value": "Gotify सर्वर का URL; आवश्यकता होने पर http(s):// और पोर्ट शामिल करें",
+          "sha256": "0a1d88a025351b586afe929255fcb85147d6ed2deb01647ff5bbecefc09d23b6"
+        },
+        {
+          "sourceOrdinal": 299,
+          "sourceId": "provider.field.f947c6197dfcb",
+          "locale": "hi",
+          "value": "ऐप टोकन",
+          "sha256": "d4e09507e5416b0bdb2a7ee67e33f0d9ea9cd5208fe272b37bef448c6f80872a"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "keyCount": 4165,
+      "changedCells": 4,
+      "fileSha256": "209a73418cb764d5afcebb553e89f184acd34964b158b67fd75abc25cf586059",
+      "targets": [
+        {
+          "sourceOrdinal": 256,
+          "sourceId": "provider.field.f8d36ffb94feb",
+          "locale": "ja",
+          "value": "AudioBookShelf タグを無視",
+          "sha256": "1d5edf50f0152b51399ebfa5831083f9ed4e36c99291ba65d0e3a250cc27ec46"
+        },
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "ja",
+          "value": "Chaptarrで書籍が変更または削除された場合に、Chaptarrがコンテンツサーバー上の該当する書籍を編集または削除できるようにします。",
+          "sha256": "d675cdeb5c7cb88a4abac0269fd4dd60cdb6e6923d317975c0602b15c0cd68a6"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "ja",
+          "value": "インポート時に書籍を添付します",
+          "sha256": "cf3eb699675eee781a5573b24c943cee69b6e36f5ea9b7238ae3f88678624e80"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "ja",
+          "value": "URLプレフィックス",
+          "sha256": "d5193988930926404f23db1805ba86b5d8b2a4661c7a01f1cc260cd5429574c0"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "keyCount": 4165,
+      "changedCells": 8,
+      "fileSha256": "ea6a45df5792411a122b795bf313cf553cbbf8e9824986546b6a225fcc7bf309",
+      "targets": [
+        {
+          "sourceOrdinal": 256,
+          "sourceId": "provider.field.f8d36ffb94feb",
+          "locale": "ko",
+          "value": "AudioBookShelf 태그 무시",
+          "sha256": "3760641f17fabf5692ef6af234642c456de00eb2025a81906f7bd3dc9f305674"
+        },
+        {
+          "sourceOrdinal": 259,
+          "sourceId": "provider.field.fc4e474afa1aa",
+          "locale": "ko",
+          "value": "AudioBookShelf OpenID Connect(SSO)를 사용해 API 키를 자동으로 생성합니다. 설정된 AudioBookShelf URL을 여는 브라우저 팝업이 표시되므로 해당 URL은 브라우저에서 접근할 수 있어야 합니다. 이 앱의 콜백 URL을 AudioBookShelf 서버의 OpenID Connect → Mobile Redirect URIs에 허용해야 합니다.",
+          "sha256": "179021ae361a59360abad040d93775f8b35b87562fdc05669ce2bc9aa5ebaecd"
+        },
+        {
+          "sourceOrdinal": 262,
+          "sourceId": "provider.field.f8709fb3ef39f",
+          "locale": "ko",
+          "value": "선택 사항이며, 콘텐츠 서버에서 인증이 필요한 경우에만 입력하면 됩니다.",
+          "sha256": "821699421b741ebceb2d471600751090c8eab14b3f3f2a412eb134cf2ddd1c6a"
+        },
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "ko",
+          "value": "Chaptarr에서 책이 변경되거나 삭제되면 Chaptarr가 콘텐츠 서버의 일치하는 책을 수정하거나 삭제하도록 허용합니다.",
+          "sha256": "8d7d14c5f2740bce686bb1b0dfd0b9a8c1b7364f748c7b1cf103a951790d6e84"
+        },
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "ko",
+          "value": "웹훅 URL",
+          "sha256": "6e965dd280c74d0f06591a7de52ffe48fdbeeb6ba8e49fc1355cdc1251d19a12"
+        },
+        {
+          "sourceOrdinal": 279,
+          "sourceId": "provider.field.f895167b520ae",
+          "locale": "ko",
+          "value": "SSL(포트 465에서만) 또는 StartTLS(그 밖의 모든 포트에서)를 사용해야 합니다.",
+          "sha256": "7d9fccae41dd8231936f7ed09605b0b0e12525767cfab3269b1b8a24bddce253"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "ko",
+          "value": "가져올 때 책을 첨부 파일로 추가",
+          "sha256": "a4440f38d246ce156badf5491ef0d5350283c9b8b351c1b6d7b3acd4b9f92c76"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "ko",
+          "value": "URL 접두사",
+          "sha256": "69e17c177c8a4be5a5369b459b33841a12fbac86f9cc2def2b95c3a862e8fec7"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "keyCount": 4165,
+      "changedCells": 7,
+      "fileSha256": "98e1e56539d5fdaafe4be42fdab2bb97788b07aa946aa7a9f1433aaf9c710f3d",
+      "targets": [
+        {
+          "sourceOrdinal": 256,
+          "sourceId": "provider.field.f8d36ffb94feb",
+          "locale": "zh-Hant",
+          "value": "忽略 AudioBookShelf 標籤",
+          "sha256": "82963146a0505ff9b6f5eff14092c1f596d2f95eb62bc71f71bb906e4113acce"
+        },
+        {
+          "sourceOrdinal": 276,
+          "sourceId": "provider.field.faef7de28d529",
+          "locale": "zh-Hant",
+          "value": "伺服器",
+          "sha256": "c8b15cf1fb532283f4a645942aa2cc709d853128143c7125a2056d329aeee97d"
+        },
+        {
+          "sourceOrdinal": 279,
+          "sourceId": "provider.field.f895167b520ae",
+          "locale": "zh-Hant",
+          "value": "需要 SSL（僅限連接埠 465）或 StartTLS（任何其他連接埠）",
+          "sha256": "f3b63b02f9f365ed0d51296f1a25bf5bf7e7e803398213c23fbfac196d35aa36"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "zh-Hant",
+          "value": "匯入時將書籍作為附件新增",
+          "sha256": "ce37a5ec782dddc7fb4de8a41bd5256b8ad784caab56805a581168bc845f2492"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "zh-Hant",
+          "value": "URL 前綴",
+          "sha256": "350184bdad8f10f0e3f3f9ae1cba8c3a836a11365fdbf858906b371210c7df38"
+        },
+        {
+          "sourceOrdinal": 292,
+          "sourceId": "provider.field.f29cf0df66cfa",
+          "locale": "zh-Hant",
+          "value": "新增至書架",
+          "sha256": "30f37b0ad85dc827f5a715abf3310e938e364b20c22e785be8d65d126144354b"
+        },
+        {
+          "sourceOrdinal": 297,
+          "sourceId": "provider.field.f54d8ab35aca1",
+          "locale": "zh-Hant",
+          "value": "Gotify 伺服器",
+          "sha256": "f11dd6fe006df5ec929969aa25410b1743c6a3bfa46e9eda7ee3e892abb2eebb"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "keyCount": 4165,
+      "changedCells": 9,
+      "fileSha256": "c435bed9e45001e1543298c825437e1f3c5508bd586c2a48e27900bba5e50944",
+      "targets": [
+        {
+          "sourceOrdinal": 259,
+          "sourceId": "provider.field.fc4e474afa1aa",
+          "locale": "ar",
+          "value": "استخدم AudioBookShelf OpenID Connect (SSO) لإنشاء مفتاح API تلقائيًا. ستفتح نافذة منبثقة في المتصفح بعنوان URL الخاص بـ AudioBookShelf الذي تم إعداده، لذا يجب أن يكون متاحًا من متصفحك. يجب أن يسمح خادم AudioBookShelf بعنوان URL لردّ النداء الخاص بهذا التطبيق ضمن OpenID Connect → Mobile Redirect URIs.",
+          "sha256": "03abd9905ae4d58fc10f2fa066e2503a83560302e393fa090c9a5fd07345d503"
+        },
+        {
+          "sourceOrdinal": 263,
+          "sourceId": "provider.field.f1be8def5571a",
+          "locale": "ar",
+          "value": "السماح بالتحرير والحذف",
+          "sha256": "83843fa01891c130aa84301d89b83c148249d26a5d0145699ecbe4f5cbe48786"
+        },
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "ar",
+          "value": "السماح لـ Chaptarr بتعديل الكتب المطابقة على خادم المحتوى أو حذفها عند تغيير الكتب في Chaptarr أو حذفها منه.",
+          "sha256": "96065b6749a668a240942b4ff62b873e8f7e4a6ff8945e14e1a1635272c7917a"
+        },
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "ar",
+          "value": "رابط Webhook",
+          "sha256": "63010eccdab5648af51af8cce596ca7c733aaaa37d27fa8b25755ca6372a9dba"
+        },
+        {
+          "sourceOrdinal": 277,
+          "sourceId": "provider.field.fd7f4ba9ed2d0",
+          "locale": "ar",
+          "value": "اسم المضيف أو عنوان IP لخادم البريد الإلكتروني",
+          "sha256": "800bd1edcd811c7c9c8d73d819a58489c924e5360d6ee27f9a5910c79daacf0f"
+        },
+        {
+          "sourceOrdinal": 279,
+          "sourceId": "provider.field.f895167b520ae",
+          "locale": "ar",
+          "value": "يلزم استخدام SSL (على المنفذ 465 فقط) أو StartTLS (على أي منفذ آخر).",
+          "sha256": "0fefd477a51e9ab0839e9c087d88174dfb2d1bd27b422cd7e5d3e2927e6d51c4"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "ar",
+          "value": "إرفاق الكتب عند استيرادها",
+          "sha256": "45d2d1dc1d913f7def9bbec3c2db1d5459b25124ad7cce39c3ea64616eedcc1c"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "ar",
+          "value": "بادئة URL",
+          "sha256": "be626a06e91a6fb3a7735059a9ce7a03f71c49183a5667d03d55c84e186688f7"
+        },
+        {
+          "sourceOrdinal": 296,
+          "sourceId": "provider.field.f106db5facb2e",
+          "locale": "ar",
+          "value": "سيظهر مكان الشراء على موقع Goodreads.",
+          "sha256": "9e61934162cbf4ea221e008af8629b02b535a7994c57050d4eaa46280a9d6bd6"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "keyCount": 4165,
+      "changedCells": 6,
+      "fileSha256": "8684822f2ff1ab8cb0e4bfeed0c84762c8873e92a78ac79a99f09d9770bed735",
+      "targets": [
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "es",
+          "value": "Permitir que Chaptarr edite o elimine los libros correspondientes en el servidor de contenido cuando se modifiquen o eliminen en Chaptarr.",
+          "sha256": "795ef0a4fe64cd2aef3defd7e8aab6d92d1753ae4753a1bc57abfab544add350"
+        },
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "es",
+          "value": "URL del webhook",
+          "sha256": "75fdbae4994e2a5410ca1f5b894f36a5ca893411c50408f8a6a61c7728d6818d"
+        },
+        {
+          "sourceOrdinal": 279,
+          "sourceId": "provider.field.f895167b520ae",
+          "locale": "es",
+          "value": "Requiere SSL (solo para el puerto 465) o StartTLS (para cualquier otro puerto)",
+          "sha256": "c6a0a0209c91255224295a6b3bdd68b702e1a27e8997938547d8028e62188a8a"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "es",
+          "value": "Adjuntar los libros al importarlos",
+          "sha256": "8a639466325e19c2b0e0f9f3ba8136e52690d4910bf7f8f9a060a27b1e39353f"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "es",
+          "value": "Prefijo de URL",
+          "sha256": "d802cbba1ea91dceba250afc06bea92cce46a2b6b2d26cfaaba310fa62f61222"
+        },
+        {
+          "sourceOrdinal": 265,
+          "sourceId": "provider.field.fe2fa8b9f4041",
+          "locale": "es",
+          "value": "Enviar los libros importados durante los escaneos de la biblioteca",
+          "sha256": "10e8ede614ea282b940624d93e5e318fcea29fe53a8829b14d6fbddd1d2e375e"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "keyCount": 4165,
+      "changedCells": 5,
+      "fileSha256": "9df06663690cf402bc3da425e5007c0d37c0f52d8e9e9fd7f61de61041b28810",
+      "targets": [
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "fr",
+          "value": "Permettre à Chaptarr de modifier ou supprimer les livres correspondants sur le serveur de contenu lorsque des livres sont modifiés ou supprimés dans Chaptarr.",
+          "sha256": "fe0715b7326016807e419691fe11bc0a85254f0dcc4fae6cd27ddd574a0c8bf5"
+        },
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "fr",
+          "value": "URL du webhook",
+          "sha256": "36b59fc190080d005aa875af0762de2bf4a9e5b9e1108e4a5942f0c3e76a441d"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "fr",
+          "value": "Joindre les livres au courriel lors de l’importation",
+          "sha256": "29abfaa034ce504688e340d4bdec161b42c4f05c59477a8fc0b4eaf515401f98"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "fr",
+          "value": "Préfixe d’URL",
+          "sha256": "1565355697866d7d528ffbcebfb66f8d57815540d9008fc0d791374764532a72"
+        },
+        {
+          "sourceOrdinal": 297,
+          "sourceId": "provider.field.f54d8ab35aca1",
+          "locale": "fr",
+          "value": "Serveur Gotify",
+          "sha256": "d1dd99801308cefac269b9f33cf25de2a7364df263d53f902bfbb84893eaec55"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "keyCount": 4165,
+      "changedCells": 5,
+      "fileSha256": "c67dd41b9d5c6221ad5a21cc0b0dc0ce29d975912075455d36580815faf146aa",
+      "targets": [
+        {
+          "sourceOrdinal": 264,
+          "sourceId": "provider.field.fbcbcfeb99134",
+          "locale": "pt-BR",
+          "value": "Permitir que o Chaptarr edite ou exclua livros correspondentes no servidor de conteúdo quando eles forem alterados ou excluídos no Chaptarr.",
+          "sha256": "93b8021ffead69dfc729fe1800858fd27a374a8c1c5b510969ede7d6d53a8770"
+        },
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "pt-BR",
+          "value": "URL do webhook",
+          "sha256": "e70485a30964e2257fb1a576cf60f64d704a19ed620dc025fbb9e86aa00174b3"
+        },
+        {
+          "sourceOrdinal": 278,
+          "sourceId": "provider.field.f79e669c0dcf4",
+          "locale": "pt-BR",
+          "value": "Exigir criptografia",
+          "sha256": "c681649ae260c02dd5f80a0d2a9aa24ead65b7c2c8d1dce1d6cd48a078996cb0"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "pt-BR",
+          "value": "Anexar os livros ao importá-los",
+          "sha256": "9783e8d883419ae2cab5d1cd8090981f2612ff748499b1f07eb6512424784317"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "pt-BR",
+          "value": "Prefixo de URL",
+          "sha256": "ac626f0ae4eeacd7dde4e07ef00f68d7a5c79bcdafd60363d7a4721f7b936176"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "keyCount": 4165,
+      "changedCells": 5,
+      "fileSha256": "88948f094c0c51d06c0d3a8b8469fc18983f7b28a961c12db9042ab789792c41",
+      "targets": [
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "de",
+          "value": "Webhook-URL",
+          "sha256": "4462ed9930a57db74c1d9e078b6e4709796c09d6a6a8d8a78642c45af7ef2a98"
+        },
+        {
+          "sourceOrdinal": 279,
+          "sourceId": "provider.field.f895167b520ae",
+          "locale": "de",
+          "value": "SSL ist nur bei Port 465 erforderlich; für alle anderen Ports ist StartTLS erforderlich.",
+          "sha256": "d14035ad76766a76f52d465d737dc5eed9b154b184618d4ce3663e74ccf68291"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "de",
+          "value": "Bücher beim Import als Anhang hinzufügen",
+          "sha256": "ae026661cd55b00bf2c7ecb3f431c72f75cbabee68cfcf2e01b7b270b172aa5d"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "de",
+          "value": "URL-Präfix",
+          "sha256": "9020ddfa246fe753d3f5b8f678ca5f5bdb85a8affd05fc64c17d1d7952415448"
+        },
+        {
+          "sourceOrdinal": 296,
+          "sourceId": "provider.field.f106db5facb2e",
+          "locale": "de",
+          "value": "Der Kaufort wird auf der Goodreads-Website angezeigt.",
+          "sha256": "afe56af35abf4b5193d9fb95bcc4d9df852a3f93d16da0b485b96aff73d9efb6"
+        }
+      ]
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "keyCount": 4165,
+      "changedCells": 4,
+      "fileSha256": "ca57e3fa6b22832872d71f1614bb62bfcd6be2b468d5f9c136cf03bbc2a9e47d",
+      "targets": [
+        {
+          "sourceOrdinal": 270,
+          "sourceId": "provider.field.f84805a7574a8",
+          "locale": "id",
+          "value": "URL webhook",
+          "sha256": "cbec0f5228535f54d3fb0ca7334abf5785d6aa356bdb1873011e670bbc1c21b2"
+        },
+        {
+          "sourceOrdinal": 277,
+          "sourceId": "provider.field.fd7f4ba9ed2d0",
+          "locale": "id",
+          "value": "Nama host atau alamat IP server email",
+          "sha256": "40d9c7d66834d18a4cecdf966944ee06b97c2c457d7859ec9e6f0f9f22dddaf3"
+        },
+        {
+          "sourceOrdinal": 288,
+          "sourceId": "provider.field.fab071934a5ed",
+          "locale": "id",
+          "value": "Lampirkan buku saat mengimpornya",
+          "sha256": "6f36b044f317ccb11dba2566a5feeb6d09c6bf72a4ff3b9bfbe5acf4006312d1"
+        },
+        {
+          "sourceOrdinal": 290,
+          "sourceId": "provider.field.f39e9193cf08e",
+          "locale": "id",
+          "value": "Prefiks URL",
+          "sha256": "439f253dbb855d84283f1f30f8cb71fdf157174fc90578f3604ed76ba4bb4df5"
+        }
+      ]
+    }
+  ]
+}

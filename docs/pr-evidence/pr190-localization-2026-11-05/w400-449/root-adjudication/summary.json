@@ -1,0 +1,27 @@
+{
+  "artifact": "ChaptarrNG PR #190 W400-W449 root adjudication",
+  "schemaVersion": 1,
+  "batch": "W400-449-Core",
+  "pullRequest": 190,
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "cellsReviewed": 140,
+  "decisionCounts": {
+    "accept-cross-recommendation": 134,
+    "accept-adjusted-target": 6
+  },
+  "callerlessHashOnlyHolds": 12,
+  "callerlessHoldTextIncluded": false,
+  "rootAdjustedCountInterpolations": 4,
+  "rootAdjustedNarrationMediumOverreach": 2,
+  "catalogApplicationPerformed": true,
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansOrCI": false,
+  "inputSha256": {
+    "secondOpinionLedger": "5c4b7be80c100db4a41d853e970390259e3853392a454300e9d3d67c1ad9a85b",
+    "crossReviewLedger": "5b9a089c178e8ce2fd01c39b1e5a70a75ca99c59373fb78db93abd005dc83773",
+    "candidateFreeCells": "1b38676639f05eaa81d64f4d515b8c714e2f50d6550be209f66b526ca0a4a369"
+  },
+  "applicationCommit": "3efb8f4ec37de7a9e9a7664623b1dc5fbe6f2526",
+  "applicationTree": "60e09f39a1f1f961c137c4f5a17a1e2f3f931443"
+}

@@ -3,7 +3,6 @@ import React from 'react';
 import Link from 'Components/Link/Link';
 import { inputTypes, kinds } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import AutoCompleteInput from './AutoCompleteInput';
 import BookEditionSelectInputConnector from './BookEditionSelectInputConnector';
 import BookshelfInputConnector from './BookshelfInputConnector';
@@ -264,9 +263,12 @@ function FormInputGroup(props) {
             <FormInputHelpText
               key={index}
               id={`${name}-error-${index}`}
-              text={translateServerMessage(error.message)}
+              text={error.message}
+              messageId={error.messageId}
+              messageParameters={error.messageParameters}
+              messageMode={error.messageOrigin === 'server' ? 'opaque' : 'source'}
               link={error.link}
-              tooltip={translateServerMessage(error.detailedMessage)}
+              tooltip={error.detailedMessage}
               isError={true}
               isCheckInput={checkInput}
             />
@@ -280,9 +282,12 @@ function FormInputGroup(props) {
             <FormInputHelpText
               key={index}
               id={`${name}-warning-${index}`}
-              text={translateServerMessage(warning.message)}
+              text={warning.message}
+              messageId={warning.messageId}
+              messageParameters={warning.messageParameters}
+              messageMode={warning.messageOrigin === 'server' ? 'opaque' : 'source'}
               link={warning.link}
-              tooltip={translateServerMessage(warning.detailedMessage)}
+              tooltip={warning.detailedMessage}
               isWarning={true}
               isCheckInput={checkInput}
             />

@@ -1,0 +1,82 @@
+{
+  "findings": [
+    {
+      "confidence": "moderate",
+      "decision": "additional_refinement",
+      "locale": "fr",
+      "rationale": "The current repeats the waiting idea awkwardly; this keeps the OAuth authorization wait and timeout meaning in a natural French construction.",
+      "sourceOrdinal": 1114,
+      "target": "Le délai d’attente d’OAuth a expiré en attendant l’autorisation.",
+      "targetSha256": "12c1ab88cb357009f1a668809aafe2bcdf5f664e48704d367739ded19caf28f5"
+    },
+    {
+      "confidence": "moderate",
+      "decision": "additional_refinement",
+      "locale": "ja",
+      "rationale": "Use a natural Japanese task label for message cleanup; the current transliteration reads like “message cleaning.”",
+      "sourceOrdinal": 1119,
+      "target": "メッセージのクリーンアップ",
+      "targetSha256": "2e32e46151e70601ec47958643b9755b3440eacf7107a94b706fde5638f4ffe5"
+    },
+    {
+      "confidence": "moderate",
+      "decision": "additional_correction",
+      "locale": "es",
+      "rationale": "The current reads as a review of an application update; this scheduled task checks for application updates.",
+      "sourceOrdinal": 1120,
+      "target": "Comprobación de actualizaciones de la aplicación",
+      "targetSha256": "7eaed9a6bd4ff1aec956bfe7abe91c02be22c68e79677eb9b7bdc333a807584a"
+    },
+    {
+      "confidence": "moderate",
+      "decision": "additional_refinement",
+      "locale": "fr",
+      "rationale": "Use “for the authenticated user”; the current preposition can be read as “to the user.”",
+      "sourceOrdinal": 1131,
+      "target": "Goodreads n’a renvoyé aucun ID de compte pour l’utilisateur authentifié.",
+      "targetSha256": "d69f3c71ba754a922895c6064d634daffdaeeaa4e5bc9ff8d55cb72c0e88661d"
+    },
+    {
+      "confidence": "moderate",
+      "decision": "additional_refinement",
+      "locale": "es",
+      "rationale": "Translate the unprotected “status” label and keep the formal instruction; the current leaves “status” in English.",
+      "sourceOrdinal": 1141,
+      "target": "AudioBookShelf OIDC no redirigió (estado {value0}). Asegúrese de que OpenID Connect esté habilitado y configurado en su servidor AudioBookShelf.",
+      "targetSha256": "5afaf049990f1376de9085f7090c9497dfbce2c0ca5e5b7bc7dd5982572d68d9"
+    },
+    {
+      "confidence": "moderate",
+      "decision": "additional_refinement",
+      "locale": "fr",
+      "rationale": "Translate “status” as “statut”; the current leaves that label in English.",
+      "sourceOrdinal": 1141,
+      "target": "AudioBookShelf OIDC n’a pas redirigé (statut {value0}). Assurez-vous que OpenID Connect est activé et configuré sur votre serveur AudioBookShelf.",
+      "targetSha256": "52632d65eb40b6df30ea5aa03f0e3395e81d7a24083b9f125299fd3d5400098a"
+    },
+    {
+      "confidence": "high",
+      "decision": "additional_correction",
+      "locale": "id",
+      "rationale": "The current starts the second sentence with lowercase “memastikan,” which is not a complete user instruction; use the Indonesian imperative.",
+      "sourceOrdinal": 1141,
+      "target": "AudioBookShelf OIDC tidak mengalihkan (status {value0}). Pastikan OpenID Connect diaktifkan dan dikonfigurasi di server AudioBookShelf Anda.",
+      "targetSha256": "1439f4d6481c8620945da1eb0e6029e17dc00c15d0741117f3d6c80aadd87018"
+    },
+    {
+      "confidence": "high",
+      "decision": "additional_correction",
+      "locale": "ar",
+      "rationale": "The source says the session expired; the current says only that it ended.",
+      "sourceOrdinal": 1145,
+      "target": "انتهت صلاحية جلسة OIDC. يُرجى المحاولة مرة أخرى.",
+      "targetSha256": "c71f0f6e62574cb307bed1e2dc58dc8cae26b453e25682d0fe2ea20893b209fa"
+    }
+  ],
+  "holds": [],
+  "nativeSpeakerApproval": false,
+  "primaryProposals": {
+    "accepted": 68,
+    "rejectedOrRewritten": 0
+  }
+}

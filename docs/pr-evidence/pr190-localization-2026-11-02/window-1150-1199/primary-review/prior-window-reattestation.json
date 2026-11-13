@@ -1,0 +1,376 @@
+{
+  "checksumsPassed": true,
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "expectedHistoricFinalMismatchCount": 195,
+  "historicFinalMismatchCountStable": true,
+  "historicalPriorRowsThroughW1099": 13200,
+  "oldFinalVsCurrentMismatchesThroughW1099": 195,
+  "oldLiveCurrentDriftThroughW1099": 0,
+  "previousW1150Boundary": [
+    {
+      "currentTargetSha256": "657a300e32c962e228f10e942be62b3a41d7b8b9f68ec1dbfbd9834275aac5a7",
+      "expectedSha256": "657a300e32c962e228f10e942be62b3a41d7b8b9f68ec1dbfbd9834275aac5a7",
+      "locale": "ar",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "718ea7f6fff91360002123af84c89410dd9ff1627bf686f584d3316e8ccd22d9",
+      "expectedSha256": "718ea7f6fff91360002123af84c89410dd9ff1627bf686f584d3316e8ccd22d9",
+      "locale": "de",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "5adf888f672527fdb4eb33e49ab2db6be808ba79114b9a673d79fa6d0f90c40a",
+      "expectedSha256": "5adf888f672527fdb4eb33e49ab2db6be808ba79114b9a673d79fa6d0f90c40a",
+      "locale": "es",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "4213de799c80f3ad814829f707c3a700192e5e4757b73a132b57c6642024bb24",
+      "expectedSha256": "4213de799c80f3ad814829f707c3a700192e5e4757b73a132b57c6642024bb24",
+      "locale": "fr",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "6fb5a884548b28b6054757330059ce3ffe849b05be22b732d2d95f068cf0498d",
+      "expectedSha256": "6fb5a884548b28b6054757330059ce3ffe849b05be22b732d2d95f068cf0498d",
+      "locale": "hi",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "48b627aac89136dd58d08380920905e934e4d3c6f21c1a2d426508924cb5a4c0",
+      "expectedSha256": "48b627aac89136dd58d08380920905e934e4d3c6f21c1a2d426508924cb5a4c0",
+      "locale": "id",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "3cb10d878bc24749d4e323f188b553ca5853b4f64033c0a853d479ba65eb87dd",
+      "expectedSha256": "3cb10d878bc24749d4e323f188b553ca5853b4f64033c0a853d479ba65eb87dd",
+      "locale": "ja",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "de3e978fe7b89e1ffac06c6d4467019533904e44f3aae0398eb20850205c7fe7",
+      "expectedSha256": "de3e978fe7b89e1ffac06c6d4467019533904e44f3aae0398eb20850205c7fe7",
+      "locale": "ko",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "5da0a2423079da7300bf2606e931a6b4b868ae609edd59b5d263f2460ffd748e",
+      "expectedSha256": "5da0a2423079da7300bf2606e931a6b4b868ae609edd59b5d263f2460ffd748e",
+      "locale": "pt-BR",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "857d39c277e89f4be53f263791d91c58adf54233929121f4fc5da1346cd4ccf7",
+      "expectedSha256": "857d39c277e89f4be53f263791d91c58adf54233929121f4fc5da1346cd4ccf7",
+      "locale": "vi",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "a84febe1e0cecbe0d16ee534a50ee50dca30d21c77d86d6835f38c13801dcb35",
+      "expectedSha256": "a84febe1e0cecbe0d16ee534a50ee50dca30d21c77d86d6835f38c13801dcb35",
+      "locale": "zh-Hans",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    },
+    {
+      "currentTargetSha256": "4a7e12ba44e1715b806c7c6b779d6da20252cf506cd183699eb5cbb28cd861bb",
+      "expectedSha256": "4a7e12ba44e1715b806c7c6b779d6da20252cf506cd183699eb5cbb28cd861bb",
+      "locale": "zh-Hant",
+      "matches": true,
+      "sourceId": "server.message.m14f003cf32a3"
+    }
+  ],
+  "previousW1150BoundaryAll12Match": true,
+  "priorDispositionRowsReattested": 13800,
+  "priorRowsThroughW1149": 13800,
+  "sourceSelectionConfirmed": true,
+  "verifiedPriorChecksumFiles": [
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/SHA256SUMS",
+      "sha256": "93b6304a751773fed607eb70fbd66ec94dfdcd301108038270c7c71782ea2c8c",
+      "verifiedEntries": 56
+    },
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/SHA256SUMS",
+      "sha256": "ac1781208ec67b943b7a70aaa0492231f93c7f52beb177cd15c113484d333f9a",
+      "verifiedEntries": 25
+    },
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/SHA256SUMS",
+      "sha256": "c99491b9e553a371c3aa5f74402185f97814e904447810266e82d12ce99e77e8",
+      "verifiedEntries": 9
+    },
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/SHA256SUMS",
+      "sha256": "00fe1ed27893fdda6edb389455a6d2e70a629db7bd355c0e0019c7edc0dc5ba3",
+      "verifiedEntries": 4
+    },
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/primary/SHA256SUMS",
+      "sha256": "a9839bb9b3bbea0cf3444bef72e27f963a1f0976caeefd800cf11e723d3709f9",
+      "verifiedEntries": 25
+    },
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/crossreview/SHA256SUMS",
+      "sha256": "d1385c60726bf8e90b58745431ae4cbbeba1d11351c554a14790f568c959f284",
+      "verifiedEntries": 11
+    },
+    {
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/application/SHA256SUMS",
+      "sha256": "749f427748d36b9c11f174138520e22f57799c38de4f5ef6ef9c3d1bf1754bf7",
+      "verifiedEntries": 4
+    }
+  ],
+  "w1050AppliedReadback": {
+    "mismatchCount": 0,
+    "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/full-window-readback.jsonl",
+    "rows": 600,
+    "samples": [],
+    "sha256": "9f3c0e55a937090315e81af997aad6428be8572600d56d33065f0aaa8e59cc89"
+  },
+  "w1050DodgeHoldCount": 12,
+  "w1050DodgeHoldsPreserved": true,
+  "w1099Boundary": [
+    {
+      "currentTargetSha256": "c104361be4d92173ff338b6827f223775b99990b1195a2658f032c988747dde5",
+      "expectedSha256": "c104361be4d92173ff338b6827f223775b99990b1195a2658f032c988747dde5",
+      "locale": "ar",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "bf7149934a817219734c18844b80d08cb6ee18f21abcd61f8a02a6d3b7ccae80",
+      "expectedSha256": "bf7149934a817219734c18844b80d08cb6ee18f21abcd61f8a02a6d3b7ccae80",
+      "locale": "de",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "d08705866d7f436cb02ccaf6f34e6889b9b6e2f304f9258559e54b370ad612ce",
+      "expectedSha256": "d08705866d7f436cb02ccaf6f34e6889b9b6e2f304f9258559e54b370ad612ce",
+      "locale": "es",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "35c43ccc2257efb860fc61f5df30eddbfc780f19cb07e6389ff4e20fdb21afd1",
+      "expectedSha256": "35c43ccc2257efb860fc61f5df30eddbfc780f19cb07e6389ff4e20fdb21afd1",
+      "locale": "fr",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "c7d9c36074b6786b7d812e26f8d3cd321125cbfdd3b67934e2fc356981ce2dc0",
+      "expectedSha256": "c7d9c36074b6786b7d812e26f8d3cd321125cbfdd3b67934e2fc356981ce2dc0",
+      "locale": "hi",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "91a0af9cfb905b16fc8025258502730874722dec10bd7e2f149c8e12df15f103",
+      "expectedSha256": "91a0af9cfb905b16fc8025258502730874722dec10bd7e2f149c8e12df15f103",
+      "locale": "id",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "eefb0eb7e9ef4351127b3af08b79b1aa35a81360ea78394044dd7b44d7beac42",
+      "expectedSha256": "eefb0eb7e9ef4351127b3af08b79b1aa35a81360ea78394044dd7b44d7beac42",
+      "locale": "ja",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "f00d04c39ce31a5883c7e7e6cc6644e239e7b2df7bce6734c32f655ad8fa8fbc",
+      "expectedSha256": "f00d04c39ce31a5883c7e7e6cc6644e239e7b2df7bce6734c32f655ad8fa8fbc",
+      "locale": "ko",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "1547fa06a31ce97315231ea4c0d88486f0cf9730de393b1b79625d61260d0f60",
+      "expectedSha256": "1547fa06a31ce97315231ea4c0d88486f0cf9730de393b1b79625d61260d0f60",
+      "locale": "pt-BR",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "b96a90f7f03c72b427b01f06944582a4d6dd4393d534aebf1e8663031bac8668",
+      "expectedSha256": "b96a90f7f03c72b427b01f06944582a4d6dd4393d534aebf1e8663031bac8668",
+      "locale": "vi",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "978d8ce9100f6a18b15d319412d3f6fd432a6faeaddc441ea16935811869f0de",
+      "expectedSha256": "978d8ce9100f6a18b15d319412d3f6fd432a6faeaddc441ea16935811869f0de",
+      "locale": "zh-Hans",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    },
+    {
+      "currentTargetSha256": "cc8922492ed7a4a3e70c35e8d0071c56add1c363f36650125a6796335e3224d9",
+      "expectedSha256": "cc8922492ed7a4a3e70c35e8d0071c56add1c363f36650125a6796335e3224d9",
+      "locale": "zh-Hant",
+      "matches": true,
+      "sourceId": "server.message.mf4b3a5b30180"
+    }
+  ],
+  "w1099BoundaryAll12Match": true,
+  "w1100AppliedReadback": {
+    "mismatchCount": 0,
+    "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/application/readback-600-cells.jsonl",
+    "rows": 600,
+    "samples": [],
+    "sha256": "723d6dce9b3ccf8025a0c2f3d7c9c1407e567d940967d49597d3e11a6383f998"
+  },
+  "w1100CrossReviewRows": 600,
+  "w1149BackwardBoundary": [
+    {
+      "appliedFinalTarget": "لم يُعثر على عميل تنزيل بلا علامات أو بعلامة تطابق المؤلف. يُرجى التحقق من الإعدادات.",
+      "appliedFinalTargetSha256": "7ebcd7df1d26775fb53f2a993507a3050902e992bd3dec7eca37f15cfcf055b9",
+      "currentTarget": "لم يُعثر على عميل تنزيل بلا علامات أو بعلامة تطابق المؤلف. يُرجى التحقق من الإعدادات.",
+      "currentTargetSha256": "7ebcd7df1d26775fb53f2a993507a3050902e992bd3dec7eca37f15cfcf055b9",
+      "locale": "ar",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "Es wurde kein Downloadclient ohne Tags oder mit einem zum Autor passenden Tag gefunden. Bitte überprüfe deine Einstellungen.",
+      "appliedFinalTargetSha256": "6d6abc88052d6a5c23f1603385b5c9bf1d0326e144ce27f41315f4c338f5970d",
+      "currentTarget": "Es wurde kein Downloadclient ohne Tags oder mit einem zum Autor passenden Tag gefunden. Bitte überprüfe deine Einstellungen.",
+      "currentTargetSha256": "6d6abc88052d6a5c23f1603385b5c9bf1d0326e144ce27f41315f4c338f5970d",
+      "locale": "de",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "No se encontró ningún cliente de descarga sin etiquetas o con una etiqueta que coincida con el autor. Comprueba la configuración.",
+      "appliedFinalTargetSha256": "ff61b36537e46878841ad9c49ccfc678922e4d18e72dd798fbb945acc0814609",
+      "currentTarget": "No se encontró ningún cliente de descarga sin etiquetas o con una etiqueta que coincida con el autor. Comprueba la configuración.",
+      "currentTargetSha256": "ff61b36537e46878841ad9c49ccfc678922e4d18e72dd798fbb945acc0814609",
+      "locale": "es",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "Aucun client de téléchargement sans balise ou doté d’une balise correspondant à l’auteur n’a été trouvé. Vérifiez vos paramètres.",
+      "appliedFinalTargetSha256": "8ead8f193c7ae677fef04b604a3ce794b499323d670320c1441fa9de56fb0c46",
+      "currentTarget": "Aucun client de téléchargement sans balise ou doté d’une balise correspondant à l’auteur n’a été trouvé. Vérifiez vos paramètres.",
+      "currentTargetSha256": "8ead8f193c7ae677fef04b604a3ce794b499323d670320c1441fa9de56fb0c46",
+      "locale": "fr",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "बिना टैग वाला या लेखक से मेल खाने वाला टैग रखने वाला कोई डाउनलोड क्लाइंट नहीं मिला। कृपया सेटिंग जाँचें।",
+      "appliedFinalTargetSha256": "f706c5890bb9e812466ef59467dfe71f587d701fac5ae5bbff0f83d172a5ca88",
+      "currentTarget": "बिना टैग वाला या लेखक से मेल खाने वाला टैग रखने वाला कोई डाउनलोड क्लाइंट नहीं मिला। कृपया सेटिंग जाँचें।",
+      "currentTargetSha256": "f706c5890bb9e812466ef59467dfe71f587d701fac5ae5bbff0f83d172a5ca88",
+      "locale": "hi",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "Tidak ditemukan klien unduhan tanpa tag atau dengan tag yang cocok dengan penulis. Periksa pengaturan Anda.",
+      "appliedFinalTargetSha256": "f8b85738395c4ba242ee54efca3a58fb5db802e16062a7743051a2c0c6865e13",
+      "currentTarget": "Tidak ditemukan klien unduhan tanpa tag atau dengan tag yang cocok dengan penulis. Periksa pengaturan Anda.",
+      "currentTargetSha256": "f8b85738395c4ba242ee54efca3a58fb5db802e16062a7743051a2c0c6865e13",
+      "locale": "id",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "タグがないか、作者と一致するタグを持つダウンロードクライアントが見つかりませんでした。設定を確認してください。",
+      "appliedFinalTargetSha256": "b98f8c414369eb348bfa0162a2ddf9400679b34282f9a817071e2ecb35c3c0cb",
+      "currentTarget": "タグがないか、作者と一致するタグを持つダウンロードクライアントが見つかりませんでした。設定を確認してください。",
+      "currentTargetSha256": "b98f8c414369eb348bfa0162a2ddf9400679b34282f9a817071e2ecb35c3c0cb",
+      "locale": "ja",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "태그가 없거나 저자와 일치하는 태그가 있는 다운로드 클라이언트를 찾지 못했습니다. 설정을 확인하세요.",
+      "appliedFinalTargetSha256": "eaea0d54ab4aad969530c4f2035e0442769e29be3677e399eacd2806b70e5d78",
+      "currentTarget": "태그가 없거나 저자와 일치하는 태그가 있는 다운로드 클라이언트를 찾지 못했습니다. 설정을 확인하세요.",
+      "currentTargetSha256": "eaea0d54ab4aad969530c4f2035e0442769e29be3677e399eacd2806b70e5d78",
+      "locale": "ko",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "Não foi encontrado nenhum cliente de download sem tags ou com uma tag correspondente ao autor. Verifique as configurações.",
+      "appliedFinalTargetSha256": "4d2f058fbaf2c48fb8b75b12679d873e8c240ccb06f463a78d42d0abe7664064",
+      "currentTarget": "Não foi encontrado nenhum cliente de download sem tags ou com uma tag correspondente ao autor. Verifique as configurações.",
+      "currentTargetSha256": "4d2f058fbaf2c48fb8b75b12679d873e8c240ccb06f463a78d42d0abe7664064",
+      "locale": "pt-BR",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "Không tìm thấy ứng dụng tải xuống nào không có thẻ hoặc có thẻ khớp với tác giả. Vui lòng kiểm tra cài đặt.",
+      "appliedFinalTargetSha256": "92f99d214e45e52e0f3cf358a60d655c30d07c20cf7b787b1d4798e08f564d4f",
+      "currentTarget": "Không tìm thấy ứng dụng tải xuống nào không có thẻ hoặc có thẻ khớp với tác giả. Vui lòng kiểm tra cài đặt.",
+      "currentTargetSha256": "92f99d214e45e52e0f3cf358a60d655c30d07c20cf7b787b1d4798e08f564d4f",
+      "locale": "vi",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "未找到符合以下条件的下载客户端：没有标签，或至少有一个标签与作者匹配。请检查设置。",
+      "appliedFinalTargetSha256": "3a0379fff4bec0fc31ff477b1cce69d097377404af016ecba04458f50aa06353",
+      "currentTarget": "未找到符合以下条件的下载客户端：没有标签，或至少有一个标签与作者匹配。请检查设置。",
+      "currentTargetSha256": "3a0379fff4bec0fc31ff477b1cce69d097377404af016ecba04458f50aa06353",
+      "locale": "zh-Hans",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    },
+    {
+      "appliedFinalTarget": "找不到符合以下條件的下載用戶端：沒有標籤，或至少有一個標籤與作者相符。請檢查設定。",
+      "appliedFinalTargetSha256": "ea7eace1215d7b6c98d6cb50682bdcdc641894bb416e2c567993660535783276",
+      "currentTarget": "找不到符合以下條件的下載用戶端：沒有標籤，或至少有一個標籤與作者相符。請檢查設定。",
+      "currentTargetSha256": "ea7eace1215d7b6c98d6cb50682bdcdc641894bb416e2c567993660535783276",
+      "locale": "zh-Hant",
+      "matchesAppliedReadback": true,
+      "scope": "backward boundary; prior disposition unchanged",
+      "sourceId": "server.message.m131b7c5d7656",
+      "sourceOrdinal": 1149
+    }
+  ],
+  "w1149BackwardBoundaryAll12Match": true
+}

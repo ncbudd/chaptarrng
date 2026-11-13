@@ -1,0 +1,39 @@
+{
+  "callerBackedKeys": 46,
+  "callerRefs": 220,
+  "callerlessKeys": [
+    "BookOnePlaceholder",
+    "BookTwoPlaceholder",
+    "ConflictsConsidered",
+    "SiblingTitlePlaceholder"
+  ],
+  "candidateFreeContainsProposals": false,
+  "currentWindowBlindOrCrossOutputsAccessed": false,
+  "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "exactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "integrityMismatchCounts": {
+    "numeric": 5
+  },
+  "priorW0W199RowsReattested": 1519,
+  "priorW200RowsReattested": 600,
+  "priorW250AppliedChanges": 42,
+  "priorW250PreservedCurrent": 558,
+  "priorW250RootSupplementSha256": "1e0edcac5ffc40f9621c215e68198fa8da94d946bfe661e451d6f17039f75f74",
+  "priorW250RowsReattested": 600,
+  "repositoryModified": false,
+  "requiredSourceAndCallerInventoryPerformed": true,
+  "result": "PASS",
+  "scope": {
+    "cells": 600,
+    "locales": 12,
+    "positions": [
+      300,
+      349
+    ],
+    "sourceKeys": 50
+  },
+  "securityScansOrCiRun": false,
+  "sourceSelectionMethod": "Continue the frozen W0-W299 Core queue from the exact 392-blob historical direct-identifier scan; reattest prior selections and select the next 50 uncovered English Core keys at the exact current head.",
+  "testsBuildsCiWorkflowsRun": false,
+  "uniqueCallerFiles": 61
+}

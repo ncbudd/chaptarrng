@@ -1,0 +1,12 @@
+{"beforeSha256": "f75d46c7f07e858f84fe0d31e059fb91d03a0d5006672a635b3539587cf11ca2", "locale": "ar", "path": "src/NzbDrone.Core/Localization/Core/ar.json"}
+{"beforeSha256": "f469a4ae5f866fae5eb60fea8422e983488f906197f171be5265a05b013b77a0", "locale": "de", "path": "src/NzbDrone.Core/Localization/Core/de.json"}
+{"beforeSha256": "13e8fa6c25dc86a5b8409e6b48ff02ee80c794dd7ef24d4d89a4844657464b48", "locale": "es", "path": "src/NzbDrone.Core/Localization/Core/es.json"}
+{"beforeSha256": "2f7dfb214ae0af8306d1169fcb7fd197ce27997d163675380327947bb10adb6b", "locale": "fr", "path": "src/NzbDrone.Core/Localization/Core/fr.json"}
+{"beforeSha256": "a5d2bfe8a1e32326e100fcce3731cc87f1099abfb2103411bcccec441db3f85a", "locale": "hi", "path": "src/NzbDrone.Core/Localization/Core/hi.json"}
+{"beforeSha256": "a824042f49533b18a9d189506c3d656fcb01e97005a9192cac000d2dea8bfb5e", "locale": "id", "path": "src/NzbDrone.Core/Localization/Core/id.json"}
+{"beforeSha256": "c0ff8f1f8244fa556c8e6dbf6e921dd2eaa89906f71104a34a587903a8255f55", "locale": "ja", "path": "src/NzbDrone.Core/Localization/Core/ja.json"}
+{"beforeSha256": "6ae1a436861b4db4e8309ad86e5c61255904602badaf3faacafe5aac8cb475f0", "locale": "ko", "path": "src/NzbDrone.Core/Localization/Core/ko.json"}
+{"beforeSha256": "0c1719c853aadce78fe3e9683c6b1f8edf4eb3b2f3d18366e0eb55ce2f3bfcef", "locale": "pt-BR", "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"}
+{"beforeSha256": "fa16f2dfa749325b93c23a599d185978d5d65998c9dada0d22b4293966990063", "locale": "vi", "path": "src/NzbDrone.Core/Localization/Core/vi.json"}
+{"beforeSha256": "16dc6ea8d2f5162bd34dc623925a11c24c850e85a26584c3ca5d4fafc9343c32", "locale": "zh-Hans", "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"}
+{"beforeSha256": "d93f34e7876d94046095cbc42757374ca4ffaf5bd10533929b6becabef9ae522", "locale": "zh-Hant", "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"}

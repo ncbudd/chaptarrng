@@ -1,0 +1,50 @@
+{
+  "artifacts": {
+    "README.md": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1150-1199-third-review-20261103-ledger/README.md",
+      "sha256": "811d85d7277f21843fb2c62f928b1520aed57744120d1e41141b76678cf946af"
+    },
+    "third-review-ledger.jsonl": {
+      "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1150-1199-third-review-20261103-ledger/third-review-ledger.jsonl",
+      "sha256": "e13f2fc615aff90b9e3d84ec58894eb499d398cdd4a8a67c3cd04f9f5283b359"
+    }
+  },
+  "expected_head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "expected_tree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "input_packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1150-1199-third-review-20261103/source-only-review-input.jsonl",
+  "input_packet_sha256": "e578c2b2afa22028d0cf4a0b2a39b05013bb463d697510656a5d0ab01e87104a",
+  "input_sha256sums_verified_before_packet_open": true,
+  "machine_review_only": true,
+  "native_speaker_approval": false,
+  "pinned_source_target_and_caller_references_verified": {
+    "caller_file_and_line_pins_matched": true,
+    "caller_references": 175,
+    "rows": 138,
+    "source_target_cells_matched": true
+  },
+  "post": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "clean": true,
+    "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "status_porcelain_v1": "",
+    "status_short_branch": "## codex/chaptarrng-localization-complete-20261031...origin/codex/chaptarrng-localization-complete-20261031",
+    "tree": "d073e1373021bf715db37461a12654f7e993cdbf"
+  },
+  "pre": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "clean": true,
+    "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "status_porcelain_v1": "",
+    "status_short_branch": "## codex/chaptarrng-localization-complete-20261031...origin/codex/chaptarrng-localization-complete-20261031",
+    "tree": "d073e1373021bf715db37461a12654f7e993cdbf"
+  },
+  "repo_files_edited": false,
+  "repository": "/mnt/disks/scratch/task-worktrees/localization-20261030/chaptarrng-main-699b0a",
+  "results": {
+    "accept-current": 37,
+    "correction/refinement": 101
+  },
+  "review_scope": "138 localization cells",
+  "task": "Blind third semantic review for ChaptarrNG PR #190 W1150-W1199 source-only cells",
+  "tests_builds_scans_packages_ci_browser_github_not_run": true
+}

@@ -1,0 +1,43 @@
+{
+  "artifact": "ChaptarrNG PR #190 W561 third-party cross-review",
+  "schemaVersion": 1,
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "window": "W561",
+  "cellCount": 12,
+  "currentEnglishDecision": "correct the inclusive-boundary wording",
+  "currentEnglish": "NzbGet setting KeepHistory should be less than 25000",
+  "proposedEnglishDecision": "accept",
+  "proposedEnglish": "NzbGet setting KeepHistory must not exceed 25000",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "prospectiveNewSourceId": "server.message.m3a79390fb21e",
+  "sourceIdTransition": "current caller/catalog key remains the existing ID; proposed English text hashes to the distinct prospective ID and has not been applied.",
+  "primaryLocaleProposals": 12,
+  "blindLocaleProposals": 12,
+  "identicalPrimaryBlindTargets": 5,
+  "differentPrimaryBlindTargets": 7,
+  "finalLocaleRecommendations": 12,
+  "finalActions": {
+    "correction": 12,
+    "retain": 0,
+    "hold": 0
+  },
+  "finalChoices": {
+    "both-agree": 5,
+    "primary": 4,
+    "blind": 3
+  },
+  "requiredLiterals": [
+    "NzbGet",
+    "KeepHistory",
+    "25000"
+  ],
+  "allFinalTargetsPreserveRequiredLiterals": true,
+  "sourceSemanticConfidence": "high",
+  "localeConfidence": "moderate",
+  "nativeSpeakerApproval": false,
+  "repoEdited": false,
+  "testsBuildsScansCiRun": false,
+  "productHeadAdvanced": false,
+  "verifier": "verify_cross_review.py"
+}

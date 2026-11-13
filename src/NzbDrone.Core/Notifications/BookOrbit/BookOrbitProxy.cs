@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using NLog;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.BookOrbit
 {
@@ -41,22 +42,22 @@ namespace NzbDrone.Core.Notifications.BookOrbit
             catch (HttpException ex) when (IsBookDockPermissionRejection(ex))
             {
                 _logger.Warn("BookOrbit denied Book Dock access with HTTP {0} at {1}", (int)ex.Response.StatusCode, settings.BaseUrl);
-                return new ValidationFailure(string.Empty, "The BookOrbit account must have Book Dock Access permission.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "The BookOrbit account must have Book Dock Access permission.", "server.message.mb2a0b21e8fd0");
             }
             catch (HttpException ex) when (IsCredentialRejection(ex))
             {
                 _logger.Warn("BookOrbit rejected the configured login with HTTP {0} at {1}", (int)ex.Response.StatusCode, settings.BaseUrl);
-                return new ValidationFailure(nameof(settings.Password), "BookOrbit rejected the login. Check the credentials and password-login policy.");
+                return NzbDroneValidationFailure.ForMessage(nameof(settings.Password), "BookOrbit rejected the login. Check the credentials and password-login policy.", "server.message.m39858dcc08fa");
             }
             catch (HttpException ex)
             {
                 _logger.Warn("BookOrbit returned HTTP {0} at {1}", (int)ex.Response.StatusCode, settings.BaseUrl);
-                return new ValidationFailure(string.Empty, "Unable to connect to BookOrbit. Check the URL, credentials, and logs.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to BookOrbit. Check the URL, credentials, and logs.", "server.message.m7e0e0494a488");
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to BookOrbit at {0}", settings.BaseUrl);
-                return new ValidationFailure(string.Empty, "Unable to connect to BookOrbit. Check the URL, credentials, and logs.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to BookOrbit. Check the URL, credentials, and logs.", "server.message.m7e0e0494a488");
             }
         }
 

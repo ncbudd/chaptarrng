@@ -1,0 +1,14 @@
+{
+  "allPriorWindowJsonlFilesScanned": 392,
+  "candidateFieldsAbsent": true,
+  "cells": 600,
+  "exactHead": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "exactTree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "locales": 12,
+  "placeholdersMatch": true,
+  "priorDirectOverlap": 0,
+  "protectedLiteralsPresent": true,
+  "repositoryClean": true,
+  "result": "PASS",
+  "sourceKeys": 50
+}

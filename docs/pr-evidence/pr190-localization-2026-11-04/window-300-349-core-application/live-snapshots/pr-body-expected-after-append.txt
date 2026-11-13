@@ -1,0 +1,424 @@
+### Localization hold cross-audit: creative prompts (2026-11-03)
+
+- Reconciled 20 previously held cells across three strings. All 20 primary/blind suggestions differ; every difference is recorded and all 20 remain held with no target selected pending qualified native-speaker review.
+- Source and caller review is pinned to PR head 712d597e6f27f6485f7c287b70f6dc79003ca714 / tree 275b19ba948bacd883d845ec970c154511be0e43. Commit 00d37b25 records evidence only; it adds no application or catalog changes.
+- The cross-audit rechecks 16 file pins, 20 source/target cells, 25 caller occurrences across 16 unique lines, and 40 placeholder, markup, numeric, and protected-literal checks.
+- Evidence and verifier: docs/pr-evidence/pr190-localization-2026-11-03/creative-holds-cross-audit-20261103/.
+- Browser and qualified native-speaker review remain outstanding. No tests, builds, scans, CI dispatches, workflow changes, merge, release, or tag occurred.
+
+<!-- runtime-null-parameters-20261103 -->
+### Runtime localization correction — null parameters (2026-11-03)
+
+Applied in commit [712d597e6f27f6485f7c287b70f6dc79003ca714](https://github.com/snapetech-org/chaptarrng/commit/712d597e6f27f6485f7c287b70f6dc79003ca714), from parent 257ee0bfd45f0b8e4e280d663f4a09264697a989 (tree 2f4d6eeadb8c0bf34e4dd99d12a9e341d855ea38).
+
+- An independent static source review found that translateServerMessageById rejected null parameter bags, causing the no-parameter existingTorrentUnavailable message to fall back to raw English.
+- The translator now treats null as an empty object only for descriptors without declared parameters. Null for parameterized descriptors, arrays, primitives, and unknown message IDs keep the previous fallback behavior.
+- Evidence: [runtime correction review and caller pins](https://github.com/snapetech-org/chaptarrng/tree/712d597e6f27f6485f7c287b70f6dc79003ca714/docs/pr-evidence/pr190-localization-2026-11-03/runtime-null-parameters/README.md).
+- No locale catalog or workflow changed. Static diff and whitespace review passed; the push produced a workflow run with ten skipped jobs, and no build, test, or scan executed. Qualified native-speaker review and exact-head headed-browser review remain outstanding; this exact head has no checks or deployment.
+
+\n\n<!-- localization-caller-bound-37-cell-follow-up-20261103 -->
+### Latest caller-bound localization follow-up — 37 cells (2026-11-03)
+
+PR #190 remains open and draft at exact head `257ee0bfd45f0b8e4e280d663f4a09264697a989`, tree `2f4d6eeadb8c0bf34e4dd99d12a9e341d855ea38`.
+
+- Primary, independent blind, and third-party cross-audit reconciled 37 caller-backed cells: 4 accept-current, 7 corrections, 6 refinements, and 20 locale-review holds.
+- Applied 13 selected translation changes across the 12 locale catalogs. All 37 caller-backed cells read back exactly; zero mismatches, zero non-target catalog changes, and key order was preserved.
+- The Hindi qBittorrent correction restores the literal backslash required by the validator. The Indonesian `Dodge-ing` copy now refers to book stacks and retains the protected word `Dodge`.
+- The 20 locale-review holds remain unchanged. The 24 cells at ordinals 447 and 498 remain held because no exact caller was available.
+- Evidence: [caller-bound 37-cell follow-up](docs/pr-evidence/pr190-localization-2026-11-03/caller-bound-37-cell-follow-up/README.md).
+- This is machine review, not qualified native-speaker approval. Exact-head browser review remains pending; this head has no product deployment. GitHub run 41616009652 completed with all 10 jobs SKIPPED, so it supplies no validation. The local pre-commit Semgrep hook and pre-push packaging test hook were skipped because scans/tests require authorized private JIT; no tests, builds, scans, or CI dispatches were run by this localization session. Workflow files are untouched. No merge, release, or tag was made.
+
+## Latest localization checkpoint — exact-hash gap closure
+
+PR #190 is open and draft at head `ba6142ff16921ea09364c2c1ecedb9498d9fa430`. At the reviewed code head `580538d38f92e0ec005366ff6bea3f2634400c2e`, primary, blind, and cross-audit reviewed 31 previously uncovered cells across seven source IDs; all 31 were accept-current, with no translation changes. The review covers 24 corrected-source cells at ranks 654 and 695 and seven changed existing cells. Evidence: [`review-gap-31`](docs/pr-evidence/pr190-localization-2026-11-03/review-gap-31/README.md).
+
+The full catalog audit reattests 14,520 current target hashes. All twelve catalogs have identical 4,165-key sets, no blank values, and zero placeholder mismatches. After the caller-bound 37-cell follow-up, 44 cells remain held: 20 caller-backed cells pending locale-qualified review and 24 cells at ordinals 447 and 498 without exact callers. No hold was released.
+
+The pre-commit hook automatically ran Semgrep CE on two staged evidence scripts outside private ephemeral JIT while creating the evidence commit. The commit succeeded, but its detailed scan output was truncated at the tool limit, so this checkpoint does not attest scan findings. The push bypassed the configured pre-push hook to avoid its non-JIT packaging contract test. No tests, builds, or CI were manually launched. Exact-head browser review and qualified native-speaker review remain outstanding. No workflow changes, merge, release, or tag was made.
+
+## Historical localization follow-up — Arabic login RTL
+
+The Arabic direction fix is commit `46049fadfc1ad02775a4a096178bc08ca78407ad`. The standalone login page had its own right-to-left language list and omitted Arabic even though the shared locale helper treats `ar` as RTL. Arabic is now included in that page-specific list. This changes no catalog text or translation values. Source evidence: [`arabic-login-rtl`](docs/pr-evidence/pr190-localization-2026-11-03/arabic-login-rtl/README.md).
+
+The first push automatically ran the repository pre-push hook's retirement gates and image-alias contract test outside private ephemeral JIT; no tests or builds were manually launched for this fix. The isolated headed-browser pool coordinator remains unavailable, so exact-head visual review is still outstanding. No merge, release, or tag was made.
+
+## Historical localization checkpoint — W1200–W1209 exact-head re-review
+
+At that checkpoint, PR #190 was open and draft at head edbfa7cb12b7eb0e3591981d32b2643c9a7b0987 (tree 9d4c5c089dabf44d574e3f1e03c9867b8102e22b).
+
+The original W1200–W1209 tail had already been applied at c7e95620c2a89646eb6a37c7e35441804b4911bb. At the later exact input head c66ef0bccc0635f047cebeda95b9aaa0ae8130a4, a full 120-cell caller-pinned re-review found eight additional exact-hash changes: seven refinements and one Arabic grammar correction. The other 112 cells were accepted unchanged. All 120 cells read back against the ratified cross-review ledger.
+
+All twelve direct locale catalogs still have 4,165 keys with exact key-set parity. Placeholder and protected-literal mismatches were zero, and all non-target cells remained unchanged. Evidence, apply plan, readback hashes, and checksum correction note: window-1200-1209-recheck-c66 (docs/pr-evidence/pr190-localization-2026-11-03/window-1200-1209-recheck-c66/README-application.md). The original independent-review summary has a count mismatch; summary-correction.json preserves the original and explains why the sealed 120-row cross-review ledger is authoritative.
+
+The exact-head Agentic VM browser pass could not reach the local preview (192.168.50.148:5067 refused the connection), and this commit has no deployment. Product visual acceptance and qualified native-speaker approval remain outstanding. No tests, builds, scans, or CI were run. The repository pre-push hook runs a packaging contract test outside private JIT, so hooks were bypassed for this localization-only commit. No workflow files changed, and no review was submitted. No merge, release, or tag was created.
+
+<!-- localization-w1187-dynamic-target-quality -->
+## Latest localization review: W1187 dynamic target quality
+
+Pushed exact head `c66ef0bccc0635f047cebeda95b9aaa0ae8130a4` (tree `e2142a119ce8d9d765927bb44a47f71364863995`). Root adjudication resolved all 12 cells: 9 accept-current, 1 German correction, 2 refinements (French and Vietnamese), and 0 holds. The earlier 12-cell hold is superseded: `M4B` is a runtime fallback passed through `{value0}`, not a fixed catalog literal. The incorrect `protectedLiterals: ["M4B"]` source-review annotation is cleared; source text and fingerprint are unchanged.
+
+Both independent reviews and exact-hash readback are archived at [`docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/`](docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/). One reviewer disclosed seeing aggregate prior-window counts before sealing; a second blind review did not read the PR body or prior packets. Native-speaker approval and exact-head browser review remain outstanding; this SHA has no deployment. No tests, builds, scans, or CI ran. No release or tag was created.
+
+## Summary
+
+### Latest catalog checkpoint — 2026-11-03
+
+The prior catalog checkpoint in this historical summary was at c7e95620c2a89646eb6a37c7e35441804b4911bb / tree 78c7aa519cbe3ed7874b2f93b6976237b7d336e9; the later W1187 source clarification advanced the PR to c66ef0bccc0635f047cebeda95b9aaa0ae8130a4 / tree e2142a119ce8d9d765927bb44a47f71364863995, followed by the exact-head re-review and application recorded above.
+
+W1150–W1199 reviewed 600 cells across 50 source IDs and all 12 locales. Final dispositions were 414 accept-current, 111 corrections, 63 refinements, and 12 holds; 174 exact-hash changes were applied and all 600 targets read back. Evidence: [W1150–W1199 review and application](docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/README.md).
+
+W1200–W1209 is the available queue tail: 10 IDs × 12 locales = 120 cells. The pinned source queue contains 1,210 IDs and ends at 1209; positions 1210–1249 do not exist. Primary review, blind independent cross-review, and root adjudication resolved all 65 differences. Final dispositions were 39 accept-current, 75 corrections, and 6 refinements. Applied 81 exact-hash changes across the twelve catalogs; all 120 final cells read back with matching hashes. Evidence: [W1200–W1209 tail review and application](docs/pr-evidence/pr190-localization-2026-11-02/window-1200-tail-10/README.md). The cross-review packet records that its manifest exposed aggregate counts before the blind ledger was sealed; it did not expose candidate text before sealing.
+
+The exact-SHA deployment query for this head returned zero, so current-head headed-app review remains outstanding. Qualified native-speaker approval also remains outstanding; machine review does not establish either. No tests, builds, scans, browser app review, CI dispatch, workflow edits, merges, releases, or tags were made for W1200–W1209.
+
+No tests, builds, scans, or CI were deliberately dispatched for the earlier translation milestone. The push of commit 0f8012dc431d4f0aac439d1122eaa5f3c8080132 automatically ran the configured local pre-push script packaging/scripts/test-publish-image-aliases.sh outside private ephemeral JIT; it reported the retirement-readiness and image-alias checks passed. This is disclosed in [the push-hook record](docs/localization/push-hook-disclosure-20261103.md), does not qualify as private-JIT validation, and will not be repeated. No workflow files changed, and no merge, release, or tag was created.
+
+### Follow-up corrections at current head
+
+- `4564200d` fixes invalid construction of localized `NzbDroneValidationFailure` callsites by using the four-argument constructor and factory. The earlier local publish exposed this C# compiler error.
+- `8d0c0f14` adds terminal punctuation to Spanish `UILanguageHelpText`, separating it from the appended fallback notice.
+- `22064424` replaces the English `Simple` and `Advanced` terms in Indonesian `ExperienceModeHelpText` with the same localized labels shown by the controls: `Sederhana` and `Lanjutan`.
+
+Older Agent Desktop Pool V2 HTTP 409 notes in the history below describe an earlier browser route and are historical.
+
+MAM terminology reconciliation from head `0df15f41865bb53cb26691bf9c50c5468638eca6` (strings unchanged through current head `45e8e228433da1ed107ff7825652d6d1d903e5ea`): Spanish/French `provider.field.f515ca00fdbc1` remains `Freeleech Wedges` as the named MAM preference. Hindi `server.message.m621dd0308bef` now reads `उपयोगकर्ता वर्ग: {value0} (मानक सदस्य); सीडिंग की ज़रूरी शर्तें अभी तक पूरी न करने वाले टोरेंट: {value1}/{value2}`. MAM Rules 2.8 defines this count by whether a torrent has met the site seeding requirements; the wording describes that status instead of calling the torrent dissatisfied. Review evidence: `docs/localization/pr190-mam-hindi-unsatisfied-review-2026-11-01.json` (SHA-256 `ad5d8d2cf0417fd7ef8f72ec58e146c5dfa58841112a3e81a5e89727c1c4e00b`); it links a public copy of the rules at [MAM Rules 2.8](https://www.scribd.com/document/1034481321/Www-Myanonamouse-Net-Rules-Php). This supersedes the previous held disposition; native-speaker review remains outstanding.
+
+## Exact-head semantic reconciliation — 2026-11-02
+
+At head `b296df8ed6f590cdbb9f163445c9a0bdb16e5fac`, all 63 former semantic-review-v4 uncertain cells and all 38 no-op proposals were reattested against exact current source and target hashes. Outcomes: 41 correction decisions and 22 accepted current values among the 63; 36 accepted unchanged and 2 corrections applied among the 38. There are no held or unresolved cells in these scopes. An independent read-only cross-review confirmed all 101 source/target hash pairs. Evidence: [`docs/localization/exact-head-semantic-reconciliation-20261102.json`](docs/localization/exact-head-semantic-reconciliation-20261102.json), SHA-256 `c4305fb85cdb0c9156240bb2c131a3d2915a027e21721dca97257c35d1496f55`. This does not establish qualified native-speaker signoff or current-head browser review.
+
+## Source-boundary follow-ups
+
+Commit `aa2be26bf0a08e3438992955cc548e7e183d57ef` fixed mixed-origin errors in AddSeries diagnostics, release grabs, and narrator search. Fixed app messages carry trusted IDs; provider, exception, and raw XHR text render opaquely; the AddSeries toast re-renders from its ID and opaque parameters after locale changes. The 53 IDs in the source-fix inventory account for 636 pending target cells.
+
+Commit `bbf3c4780a4788d7760b796ae785b50c14001900` carries fixed app-authored provider-test notices through explicit IDs. Arbitrary provider/API strings stay opaque; the 11 IDs account for 132 pending target cells.
+
+Commit `0652dea5c3880ca49cf3198e2367f0d6e2c153ab` carries existing app-authored ImportList validation IDs and opaque parameters through validation JSON and the settings field renderer. Unknown validation/provider errors remain opaque. Goodreads `BookshelfIds.NotEmpty()` remains FluentValidation's default, unkeyed message because it is library-generated. OAuth UI errors use local message keys only from their fixed frontend producer; API errors require explicit server IDs or stay opaque. Generic option-provider fetch errors no longer pass through source matching.
+
+Commit `2138adf1f5bb96428672ed738e74d0c4dfa36686` binds existing IDs to provider validation sources and preserves downstream HTTP status. It adds bindings at 65 provider-setting field callsites / 38 IDs and 196 provider `Test()` failure callsites / 133 IDs. These groups have no overlapping callsites or IDs: 261 distinct provider callsites / 171 IDs. Of those IDs, `AuthIncorrectCredentials` and `UsernameRequired` are already populated; 169 server-message IDs are absent in all twelve target locales (169 cells per locale / 2,028 total). Three additional shared host/URL validator callsites use existing IDs that are also missing in all locales, so the complete source diff covers 264 bindings / 174 IDs, with 172 missing IDs per locale / 2,064 cells. All affected IDs were already in the pinned 1,210-ID / 14,520-cell missing input. Those source-boundary commits added no English source IDs or target-catalog values. Exception text, API-reported versions, seed thresholds, URL examples, and system-folder paths stay parameters; unkeyed provider/exception values remain opaque.
+
+The source-binding inventory SHA-256 is `e00a584477c1a268408f49151716c2fe44a31f5a56154d94379129391acdec49`. The frozen missing-ID list fingerprint is `a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c`.
+
+Commit `e1be5cb184329ceafa2a08264bb9a628e6829525` fixes five validation-warning chains: `.AsWarning()` now runs before localized `.WithState(...)`, and each final state preserves its message ID and `isWarning: true`. The other newly bound warning chains were reviewed and already keep this ordering.
+
+## Review and validation
+
+- The previous structural check parsed all twelve target catalogs and verified 4,165 keys and English-key parity in each at the earlier audit head. The current follow-ups add no keys or missing-value targets. `id.json` parsed and `git diff --check` passed for the Indonesian copy correction. The exact-cell manifest `docs/localization/exact-cell-review-20261102.json` records UTF-8 value hashes for both changed target strings and current Spanish/Indonesian catalog hashes. JSON parsing and `git diff --check` passed for the evidence updates. Exact-head rendering and qualified native-speaker review remain open.
+- The task-scoped `core.hooksPath=/dev/null` override was used for commits `8c2c1563`, `64b33a70`, `4564200d`, `8d0c0f14`, and `22064424`. It bypassed the Semgrep pre-commit scan, packaging pre-push test, and unrelated post-commit package sync. The initial local build/publish was from the earlier head and exposed an invalid C# object-initializer pattern; commit `4564200d` corrected it, but no build/test/scan was rerun on that correction or later catalog updates. The current PR run is skipped under the repository's private-JIT policy.
+- All jobs in automatic `pull_request_target` runs `41333544956` (head `8c2c1563`), `41351191240` (head `64b33a70`), `41366176419` (head `220644247f46e0f700f457475d996289ae8130b5`), and `41383689326` (head `0df15f41865bb53cb26691bf9c50c5468638eca6`) concluded `skipped`; no build/test ran. The current docs-only PR head `b296df8ed6f590cdbb9f163445c9a0bdb16e5fac` has automatic run `41389866722`; all jobs concluded `skipped`, and no build/test ran. No manual CI dispatch was made. No release, tag, workflow change, or force push was made.
+- The Hindi catalog file SHA-256 is `7b6cf3a4dc7121769f7a96184e68f6df1a4e187835e766a5e73bc0c6611fc267`; at current head, `id.json` SHA-256 is `1419ba669238e23cb2af225563196ed690ea604e3a477033b5dada4397c8446b` and `es.json` SHA-256 is `0e4e4c56c31f47b858c67b7e6c131a5e0876c6ce945c658ffd7ccea80276575f`. The terminology evidence hash is recorded above. Prior applied-catalog hashes remain in `/mnt/disks/scratch/task-worktrees/localization-20261030/chaptarrng-followup-fix-998ada-artifacts-20261101/apply-summary.json` (SHA-256 `baf3e3a401cfaa650db9d3cb4b7ada434c1cb74f8b3943c87a12595a2ef29493`).
+
+### Push-hook disclosure — 2026-11-02
+
+Commit `841f0a514d38f28476179d0c3f91774f5c10063c` (`docs(i18n): refresh Chaptarr review status`), parent `45e8e228433da1ed107ff7825652d6d1d903e5ea`, changed only `docs/localization/server-copy-review.md`. Its push used `git push origin HEAD:refs/heads/codex/chaptarrng-localization-complete-20261031` without a hooks override, so local pre-push hooks unexpectedly ran on `kspld0` and printed: “ChaptarrNG and BookshelfNG retirement release-readiness gates passed. Single standard image alias contract tests passed.” This output is recorded in `docs/localization/push-hook-disclosure-20261102.md`; it occurred outside private ephemeral JIT and does not satisfy or replace private-JIT validation. The disclosure note is commit `b296df8ed6f590cdbb9f163445c9a0bdb16e5fac` (`docs(i18n): disclose local push hook output`), pushed with hooks disabled. No tests/builds/scans/CI were intentionally invoked or manually dispatched for these documentation follow-ups.
+
+### Independent populated-cell correction — 2026-11-02
+
+An independent exact-head cross-review of 135 previously populated cells at `0df15f41865bb53cb26691bf9c50c5468638eca6` found 133 accepted current values, 2 corrections, and 0 held or unresolved cells. Applied only these two `GrabID` corrections: Hindi `ग्रैब ID` → `डाउनलोड ID`, and Korean `가져오기 ID` → `다운로드 ID`. The History Details callsite displays the download client's `downloadId`, so the corrected label names the displayed value.
+
+Evidence: `docs/localization/grabid-independent-correction-20261102.json` (SHA-256 `db67df6a3bd3960aebcc455677ad86ae860c7159e2d57d3acd779d4314eb7ac7`). The Hindi and Korean catalog file SHA-256 values are `979451a19a02edbde35db08211c8a3510f7cd9767aa4c707cd7875f5f4e13464` and `5a4893c47599702b3c84e593777dbf4902510ea89e74ad30baff983750282524`. All 12 direct locale catalogs parse and retain English key parity; `git diff --check` passed; the workflow subtree is unchanged. No tests, builds, CI, or browser review ran for this focused change. The local Semgrep pre-commit, package-sync post-commit, and packaging test pre-push hooks were skipped because they are outside the required private ephemeral JIT or are unrelated side effects. The PR remains draft; qualified native-speaker review remains outstanding.
+
+
+
+
+## Exact-head localization audit — 2026-11-02
+
+A read-only audit reconfirmed the live head `7bb2b2f977e81d214318b3f873afe8ab17f03ed5` / tree `5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb`: the English catalog and all 12 direct locales have 4,165 nonblank keys each (49,980 populated target values; zero missing, extra, or blank). Current locale hashes match the prior exact-head reconciliation; only two documentation files changed since it.
+
+The available aggregate review records 14,520 cells (6,304 accepted current and 8,216 corrections applied) with zero holds, plus exact-hash closure for the 173-cell follow-up and 101 former uncertain/no-op rows. The corresponding full 14,520-row per-cell semantic ledger was not found in the inspected evidence. Because the frozen matrix is machine-draft input, it cannot establish individual dispositions or safely identify a non-overlapping review slice.
+
+Current-head headed-browser review, qualified native-speaker signoff for all 12 locales, and private-JIT functional validation remain pending. The latest Actions run for this head completed as skipped; it provides no JIT pass. Evidence and details: `docs/localization/exact-head-semantic-reconciliation-20261102.json`, `docs/localization/exact-cell-review-20261102.json`, and `docs/localization/server-copy-review.md`. No tests, builds, scans, or CI were run for this audit; no catalog or workflow changes were made.
+
+## Localization review window 0–49
+
+Reviewed 600 provider-field cells (50 source IDs × 12 locales) at input head `7bb2b2f977e81d214318b3f873afe8ab17f03ed5`. Independent review accepted 573 cells, identified 25 missed corrections and refined two primary candidates. Applied 90 exact-hash corrections across all 12 locales; all 90 readbacks passed and each locale retains 4,165 catalog keys. All 134 caller references were re-attested, including 86 shifted registry line pins reconciled at unique current locations.
+
+Evidence: [primary and independent review, root reconciliation, and readbacks](https://github.com/snapetech-org/chaptarrng/blob/22e3dc28193113e29d256307b4c75b856d7cd84f/docs/pr-evidence/pr190-localization-2026-11-02/window-0000-0049/README.md). Catalog commit: `dd134281aed2f0a9283311a1f6151988e244d834`; evidence correction commit: `22e3dc28193113e29d256307b4c75b856d7cd84f`.
+
+Validation note: the local `.githooks/pre-push` ran `bash packaging/scripts/test-publish-image-aliases.sh` once during the catalog push on `kspld0`, outside private JIT. Its output reported the ChaptarrNG and BookshelfNG retirement release-readiness gates passed and the standard image alias contract tests passed. It was not rerun. The GitHub workflow run has four jobs, all `SKIPPED`; no GitHub job ran. No release, tag, merge, or workflow edit. The PR remains open and draft.
+
+Qualified native-speaker approval and current-head headed-browser review remain outstanding.
+
+## Exact-head semantic review window 50–99
+
+At input head `22e3dc28193113e29d256307b4c75b856d7cd84f` / tree `605a751ae9c3b454f4189dd89d021a5976e95237`, W50–99 reviewed 600 cells across 50 provider-field IDs and all 12 locales. The two six-locale primary packets were independently cross-reviewed; current values, source hashes, target hashes, caller pins, and placeholder tokens re-attested with no mismatches.
+
+Cross-review applied 43 exact-hash catalog corrections across all 12 locales. Part A rejected one unrelated Hindi proposal, found missed Hindi punctuation and Spanish label-capitalization issues, and accepted 23 primary proposals. Part B found ten missed issues and refined a Traditional Chinese uTorrent label. Root review further refined the Vietnamese unique-book limit wording. All catalogs retain 4,165 entries with exact English key-set parity, and catalog ordering was unchanged. Evidence and 43-row readback are in [window 50–99](docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/README.md). Commit: `a5556ed5fc6869e4818ff11813c2d689775651a7`.
+
+Machine-assisted review does not establish native-speaker approval; that review remains outstanding. No catalog-specific tests, builds, scans, or CI were intentionally run. The push triggered server-side gates that reported `ChaptarrNG and BookshelfNG retirement release-readiness gates passed` and `Single standard image alias contract tests passed`; GitHub CI jobs were skipped by the `[skip ci]` commit. No workflow file changed, no merge/release/tag occurred, and the PR remains OPEN/DRAFT.
+
+## Exact-head semantic correction milestone — 2026-11-02 (W100–149)
+
+- Reviewed 50 provider-field source IDs across all 12 target locales (600 cells) at input head/tree `a5556ed5fc6869e4818ff11813c2d689775651a7` / `995e552aa07064ba19da3f63425a6d26046d8c25`.
+- Independent review retained 544 current values and reconciled 53 primary proposals: 52 were accepted as proposed, one Vietnamese Goodreads series ID was refined, and three missed Vietnamese audiobook terminology issues were corrected. Applied 56 exact-hash catalog changes across ten locale files.
+- All 12 direct catalogs retain 4,165 keys with exact English key parity. Source, catalog, and caller pins; placeholders; target hashes; duplicate-free JSON; and `git diff --check` were verified. Evidence, packets, exact apply plan, and readback are in [W100–149 evidence](docs/pr-evidence/pr190-localization-2026-11-02/window-0100-0149/README.md). Commit: `0117311b672af8d828fb45bad7e6026763b201da`.
+- Current-head browser review and qualified native-speaker approval remain outstanding. This is machine-assisted semantic review; no native-speaker approval is claimed. No tests, builds, scans, CI jobs, workflow changes, merges, releases, or tags were made. PR #190 remains open and draft.
+
+## Exact-head semantic correction window 150–199 — 2026-11-02
+
+- Reviewed 600 populated cells across 50 provider-field source IDs and all 12 direct locales at input head `0117311b672af8d828fb45bad7e6026763b201da` / tree `a6500c8078f193af52555398525ec6f832241fd0`.
+- Independent exact-head cross-review accepted the proposed corrections and added three refinements/corrections: a French RSS URL refinement and mixed-language Hindi correction in part A, plus two Brazilian Portuguese refinements in part B. Applied 74 exact-hash changes across all 12 locale catalogs.
+- All catalogs retain 4,165 keys with exact English key parity. Source, current-target, caller, placeholder, and protected-literal pins passed across all 600 cells; no rows are held. Evidence and checksums: [W150–199 semantic review](docs/pr-evidence/pr190-localization-2026-11-02/window-0150-0199/README.md). Commit: `32686f13760d04de2bba00af47fc561e632741de`.
+- The push automatically created Actions run [41442628094](https://github.com/snapetech-org/chaptarrng/actions/runs/41442628094); it concluded `skipped`, with all ten jobs skipped. No tests, builds, scans, or CI jobs ran. The push response printed the repository gate messages “ChaptarrNG and BookshelfNG retirement release-readiness gates passed” and “Single standard image alias contract tests passed.”
+- Machine semantic review is not qualified native-speaker approval. Qualified native-speaker approval and exact-head browser review remain outstanding. No workflow files changed, and no merge, release, or tag was made. PR #190 remains open and draft.
+
+## Exact-head semantic review window 200–249 — 2026-11-02
+
+At input head `32686f13760d04de2bba00af47fc561e632741de` / tree `13de6a00cb6eb7206523f000d6ef345084f3c78e`, primary review and independent cross-review covered all 600 cells across 50 provider-field IDs and 12 direct locales. The cross-review accepted 51 primary targets and refined one Hindi punctuation mark from U+3002 to the Hindi danda U+0964. Applied 52 exact-hash changes across all 12 catalogs; the other 548 current values were retained. All catalogs keep 4,165 keys, and caller, placeholder, markup, protected-literal, and localized UI term checks passed.
+
+Evidence, original review packets, exact apply plan, and readback: [W200–249 evidence](docs/pr-evidence/pr190-localization-2026-11-02/window-200-249/README.md). Commit: `46a6abd437c78fafcec73f93f79944b5f84d3a39`.
+
+The local `.githooks/pre-push` ran `packaging/scripts/test-publish-image-aliases.sh` during the push. It printed “ChaptarrNG and BookshelfNG retirement release-readiness gates passed” and “Single standard image alias contract tests passed.” It was not rerun. No other tests, builds, scans, or CI jobs were invoked for this window. No workflow, release, tag, or merge changes were made. Qualified native-speaker approval and current-head browser review remain outstanding; PR #190 remains open and draft.
+
+### ChaptarrNG semantic review W250–299 (2026-11-02)
+
+- Primary review and independent cross-review covered 600 cells across 50 source IDs and 12 locales, with 59 pinned caller references and the prior W249 context reattested.
+- Applied 68 exact-hash changes: 66 independently accepted proposals, one French refinement for the email-attachment setting, and one additional Spanish correction for books forwarded from library scans. The other 532 cells were accepted as current.
+- All 12 locale catalogs retain 4,165 keys. Placeholder, markup, and protected-literal checks had zero mismatches.
+- Evidence: `docs/pr-evidence/pr190-localization-2026-11-02/window-0250-0299/`.
+- Commit: `4b862646fbd038cfa4c16a94f7b6ac16f181751c` (`[skip ci] fix(i18n): apply ChaptarrNG review window 250-299`). No tests, builds, scans, CI, workflow changes, releases, tags, or merges were performed. Browser review and qualified native-speaker approval remain outstanding.
+
+## Exact-head semantic review: source ordinals 300–349 (2026-11-02)
+
+At input head 4b862646, the primary review covered 600 cells across 50 source IDs and 12 locales. Independent cross-review accepted 36 of 41 primary proposals, revised five, and found seven additional issues. The final exact-hash apply changed 48 cells across all 12 catalogs; all 4,165-key catalog sets, placeholders, markup, and protected literals were preserved.
+
+The primary ledger, independent review, exact apply plan, checksums, and readback are in [window 300–349 review evidence](docs/pr-evidence/pr190-localization-2026-11-02/window-0300-0349/README.md). The corrected write on update term is preserved exactly in the three affected locale targets.
+
+This review is machine-assisted and does not establish native-speaker signoff. Current-head browser review and qualified native-speaker review remain outstanding. The PR remains draft; no release or tag was created.
+
+### Localization review window 350–399 (2eb0ae6eb15e)
+
+- Reviewed all 600 cells for 50 source strings across the 12 target locales. Independent cross-review classified 525 as current, 16 as corrections, 59 as refinements, and found no holds.
+- Applied 75 exact-hash catalog updates across all 12 locale files. Each catalog still contains the same 4,165 keys.
+- Primary and independent review packets, cell-level decisions, apply plan, and readback are committed under `docs/pr-evidence/pr190-localization-2026-11-02/window-0350-0399/`.
+- Head: `2eb0ae6eb15ebc366eea44dd969265c0f6366445`; tree: `1340ba7d0642217aa81e3789e908931bd6fa74f1`. `git diff --check`, JSON parsing, locale key parity, and commit hooks passed. No hosted CI was dispatched; the PR remains draft pending current-head browser and qualified native-speaker review.
+
+
+### W400–449 exact-hash review
+
+Primary and independent cross-review covered 600 cells (50 source IDs × 12 direct locales) against input head `2eb0ae6eb15ebc366eea44dd969265c0f6366445`. The cross-review reattested 90 caller references across 27 files with zero mismatches and rechecked the W399 boundary. Final dispositions: 488 accept-current, 53 correction proposals, 47 refinement proposals, and 12 holds.
+
+Applied 100 exact-hash target changes across all 12 locale catalogs. Each catalog retains 4,165 keys; all 100 readbacks match the reviewed targets. Placeholder, markup, and protected-literal mismatch counts are zero. The 12 held cells are ordinal 447 (`Failed to import author: {value0}`); the nearby API validation interpolates arbitrary exception text and does not call the localized key.
+
+Evidence: `docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/`. The commit-time Semgrep Community Edition hook scanned three staged evidence-builder Python files with `p/default` (290 rules; zero findings); no tests, builds, or CI were run for this window. Current-head browser review and qualified native-speaker review remain outstanding.
+
+
+### W450–499 exact-hash review
+
+Primary and independent cross-review covered 600 cells (50 source IDs × 12 locales). All 600 source/current-target hashes and 69 caller references across 51 files were reattested at apply head `70f5ad2c2dc8222d8f35e09ba81ffa12acfff856`; the W449 boundary and its two caller references also matched. Final dispositions: 432 accept-current, 102 corrections, 54 refinements, and 12 holds. Independent review retained 151 primary proposals and revised 5.
+
+Applied 156 exact-hash changes across all 12 locale catalogs; each catalog retains 4,165 keys. All 600 reviewed outcomes match the readback. The 12 held cells are ordinal 498 (`server.message.m23e7ac60ea9c`); no exact direct caller was found.
+
+Evidence: `docs/pr-evidence/pr190-localization-2026-11-02/window-0450-0499/`. The commit-time Semgrep Community Edition hook scanned two staged evidence-builder Python files with `p/default` (290 rules; zero findings); it did not scan product source. No tests, builds, or CI were run for this window. Post-apply headed-browser review and qualified native-speaker approval remain outstanding.
+
+
+### W500–549 exact-hash review
+
+Primary and independent cross-review covered 600 cells (50 source IDs × 12 locales). All 600 source/current-target hashes and 71 caller references were reattested at apply head `2625ad8bda30c7070bcc84ec8e4b31906a3d2288`; all 12 W499 boundary targets and caller references matched the prior cross-reviewed outcomes. The cross-review adjudicated 174 candidates: 163 retained, 9 revised, and 2 no-op suggestions accepted as current. Final dispositions: 428 accept-current, 131 corrections, 41 refinements, and no holds.
+
+Applied 172 exact-hash target changes across all 12 locale catalogs, each retaining 4,165 keys. All 600 reviewed values match the readback. The five primary protected-literal gaps in W516 and W518 were corrected and independently accepted.
+
+Evidence: `docs/pr-evidence/pr190-localization-2026-11-02/window-0500-0549/`. The commit-time Semgrep Community Edition hook scanned two staged evidence-builder Python files with `p/default` (290 rules; zero findings); it did not scan product source. No tests, builds, or CI were run for this window. Post-apply headed-browser review and qualified native-speaker approval remain outstanding.
+
+
+### ChaptarrNG semantic review W550–599 (2026-11-02)
+
+- Primary review and independent cross-review covered 600 cells across 50 source IDs and all 12 direct locales. The cross-review reattested 69 caller references across 42 files; placeholders, markup, protected literals, and exact-hash inputs had zero mismatches.
+- Final dispositions: 322 accept-current, 233 corrections, 33 refinements, and 12 holds. Applied 266 exact-hash updates across all 12 locale catalogs. All retain 4,165 keys, and all 600 reviewed outcomes match the final ledger.
+- The 12 holds are source ordinal 561: the English says KeepHistory should be less than 25,000, but the pinned NzbGet caller rejects only values above 25,000 and accepts 25,000. The source wording and translations remain unchanged pending resolution of that boundary.
+- Evidence, primary and independent review packets, exact apply plan, and readback: `docs/pr-evidence/pr190-localization-2026-11-02/window-0550-0599/`. Commit: `f405a6256c2661e48e412ac4471ce70411baf98c`; tree: `fe3272572b68460f1d8c8083a5dcc44cd3307b74`.
+
+No tests, builds, scans, CI, workflow changes, merges, releases, or tags were performed for W550–599. Current-head browser review and qualified native-speaker approval remain outstanding; PR #190 remains open and draft.
+
+
+### Exact-head semantic review window 600–649 — 2026-11-02
+
+- Primary and independent cross-review covered 600 cells (50 provider-field IDs × 12 locales), reattested 64 caller references across 42 files, and verified the W599/W650 boundaries.
+- Applied 201 exact-hash corrections/refinements across the 12 catalogs: 198 cross-reviewed primary targets and three independent corrected replacements. The three replaced proposals were W621 category recommendations; the pinned qBittorrent warning requires specifying a category. All 15 protected-literal misses in this window were corrected; zero cells are held.
+- Each locale retains 4,165 keys. Exact readbacks, source/target hashes, catalog parity, and `git diff --check` passed.
+- Commit: `4701933a50d367406fd6749c4baaf4befee22129`; tree: `2b22ea480c934d2dc41c6813b1296f1a3c41b027`. Evidence: [W600–649 review and application](docs/pr-evidence/pr190-localization-2026-11-02/window-0600-0649/application/README.md).
+- No tests, builds, scans, CI, workflow edits, merges, releases, or tags were performed. Current-head browser review and qualified native-speaker approval remain outstanding; this machine-assisted cross-review is not native-speaker signoff.
+
+### W650–699 reviewed and applied (2026-11-02)
+
+- Independently reviewed all 600 cells for 50 source IDs across 12 locales: 501 accepted unchanged, 98 approved proposals, and one Korean punctuation revision. Applied 99 exact-hash catalog updates; every locale catalog retains 4,165 keys.
+- Corrected two source/caller typos while preserving their stable IDs: the SABnzbd product spelling in W654, and “though” to “through” in the Mailgun message and caller in W695. Updated the English source hashes and recorded the source/caller reconciliation.
+- Primary, cross-review, caller, structural, and live readback evidence is in [the W650–699 review packet](docs/pr-evidence/pr190-localization-2026-11-02/window-0650-0699/).
+- PR head: `02f0d841b54c7806005fc67973973799c6960bcf`. Qualified native-speaker review and headed-browser acceptance remain outstanding. No tests, builds, scans, CI, workflow edits, releases, tags, or merges were performed.
+
+
+## Semantic review window W700–W749 — 2026-11-02
+
+- Applied 205 exact-hash translation corrections/refinements across all 12 direct locale catalogs for 50 source IDs. Independent review accepted 395 current values, accepted 195 primary proposals, revised two Arabic proposals, and found eight additional corrections.
+- All 600 selected cells were read back against the independent cross-review ledger; each catalog retains 4,165 keys. Primary/cross-review packets, apply plan, and readbacks are retained in [the W700–W749 application evidence](docs/pr-evidence/pr190-localization-2026-11-02/window-0700-0749/application/README.md). Commit: `a58de8cd62a80babdca07a86d6b7d463b4a44773`.
+- W749 has no direct frontend caller in the pinned registry; its catalog wording is reviewed, but runtime display remains unverified. Qualified native-speaker approval and current-head headed-browser acceptance remain outstanding.
+- No tests, builds, scans, CI dispatches, workflow edits, releases, tags, or merges were made for this follow-up.
+
+### Localization review W750–W799 (2026-11-02)
+
+- Primary review and independent cross-review covered 600 cells across 50 source IDs and all 12 direct locales at the exact input head. The cross-review accepted 206 primary proposals, revised 9, and found 14 additional corrections or refinements among values initially marked current.
+- Applied 229 exact-hash locale changes and preserved 371 current values. W770 now reuses the actual localized `Bookshelf` and `Author Editor` UI labels; W780 corrects software import-limit wording, with additional fixes for Hindi agreement, Spanish required-field phrasing, and German import-queue terminology.
+- All twelve locale catalogs retain the same ordered 4,165-key set; all 600 final targets were read back against the reviewed hashes.
+- Evidence, including both review packets, the complete apply plan, and readbacks: [W750–W799 review evidence](https://github.com/snapetech-org/chaptarrng/blob/f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9/docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/README.md).
+
+This machine-assisted review does not establish native-speaker approval. Exact-head browser acceptance remains outstanding. No tests, builds, scans, CI, workflow edits, releases, tags, or merges were performed.
+
+### ChaptarrNG semantic review W800–W849 (2026-11-02)
+
+- Primary and independent cross-review covered all 600 targets across 50 source messages and 12 direct locales. Cross-review accepted 228 primary suggestions, revised eight, found 20 additional corrections, accepted 344 current values, and held none.
+- Applied 256 exact-hash corrections. Every reviewed target read back; all 12 catalogs retain the 4,165-key set. Review reattested 63 caller references and 76 generic-pipeline references.
+- The changes correct W830/W837 to use translated Settings and Media Management labels, plus W811 Spanish factory-reset wording, W815 Japanese root-folder terminology, W834 Arabic Author wording, and W849 Indonesian list-data phrasing. Evidence and checksums are in [`window-0800-0849`](docs/pr-evidence/pr190-localization-2026-11-02/window-0800-0849/README.md). Commit: `175cff3a50569b67def345bb82332b30e9bb378c`.
+- Qualified native-speaker and exact-head headed-browser acceptance remain outstanding. No tests, builds, scans, CI dispatches, workflow edits, merges, releases, or tags were made.
+
+### ChaptarrNG semantic review W850–W899 (2026-11-02)
+
+- Primary and independent cross-review covered 600 cells across 50 source messages and 12 direct locales; a separate adjudication accepted all 14 additional corrections.
+- Applied 93 exact-hash locale changes. All 600 targets were read back, the 12 catalogs retain the same 4,165-key sets, and final placeholder, markup, and protected-literal mismatches are zero. Review reattested 74 caller references and 76 generic-pipeline references.
+- Corrected the English qBittorrent category-validation source under its existing stable ID to match all four pinned validators; source hashes and server-message registries were updated. Its 12 locale values remain held for fresh review against the corrected source. Evidence is in [the W850–W899 review packet](docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/README.md). Commit `722c0aaab4eda88bb507ba4a165e2f6bb22901fa`; tree `d162735f61d934389634111229b42beae04aaeea`.
+- The PR remains open and draft. Exact-SHA deployment query returned zero deployments, so current-head headed-browser acceptance remains blocked. Qualified native-speaker approval is outstanding. No tests, builds, scans, CI dispatches, workflow edits, merges, releases, or tags were made.
+
+
+## Corrected-source follow-up: qBittorrent category rule (source ordinal 884)
+
+- The corrected English source under stable ID `server.message.mf00d6bc38ae8` is `Can not contain '\', '//', or start/end with '/'`; the pinned caller is the qBittorrent category validator.
+- Fresh primary review and independent exact-head cross-review accepted 11 locale corrections: `ar`, `de`, `es`, `fr`, `id`, `ja`, `ko`, `pt_BR`, `vi`, `zh_CN`, and `zh_TW`. Hindi remains held. Each accepted value forbids backslash and `//`, and disallows leading or trailing `/`.
+- All 12 target cells were read back. Each locale catalog retains its ordered 4,165-key set, and non-target catalog values are unchanged. The evidence includes source, caller, catalog, prior-hold pins, primary and cross-review ledgers, and readback hashes: [W884 corrected-source review evidence](https://github.com/snapetech-org/chaptarrng/blob/a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e/docs/pr-evidence/pr190-localization-2026-11-02/window-0884-corrected-source/README.md).
+- Commit: `a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e`. The PR remains open and draft. Exact-SHA deployment query returned zero, so browser review of this head is unavailable. Qualified native-speaker review remains outstanding.
+- No CI workflow was dispatched. The configured local push hook printed that the ChaptarrNG and BookshelfNG retirement release-readiness gates and the single standard image-alias contract test passed. No release, tag, or merge was created.
+
+
+### ChaptarrNG semantic review W900–W949 (2026-11-02)
+
+- Primary and independent cross-review covered 600 cells across 50 source messages and all 12 direct locales: 478 accept-current, 121 accept-proposal, and one revised French proposal. Applied 122 exact-hash catalog updates and retained 478 values.
+- The final targets repair seven existing protected-literal failures. All 600 targets read back; the 12 catalogs retain their identical 4,165-key sets. Review reattested 86 caller references, 20 provider-option pipeline references, 76 server-message pipeline references, all 10,800 prior hash/current-target links, and all 12 W899 boundary cells.
+- The French W947 wording now explicitly says the download request fails when MAM cannot apply its required personal Freeleech benefit. Evidence: [W900–W949 review packet](docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/README.md). Commit `961d3102ad3098ee188a6c87a0c88eea5f5ab332`, tree `c46078c93545042313aa1b35bc3b283b1f3b5406`.
+- The PR remains open and draft. Qualified native-speaker and exact-head headed-browser reviews remain outstanding. No tests, builds, scans, CI, workflow edits, merges, releases, or tags were made.
+
+## Localization follow-up: W950–999
+
+Applied 23 independently adjudicated catalog corrections/refinements across eight locales for 50 source labels. The full 600-cell, 12-locale window was reviewed; Indonesian “Farsi” remains unchanged pending a qualified reviewer. Catalog key order and values outside the approved targets are preserved.
+
+Review, adjudication, exact-hash plan, and 600-cell readback: `docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/`. Machine review is not native-speaker approval. No tests, builds, scans, CI, or browser review were run for this window.
+
+
+
+
+### ChaptarrNG semantic review W1050–W1099 (2026-11-02)
+
+- Primary and independent cross-review covered 600 cells across 50 source IDs and 12 direct locales. Cross-review confirmed all 24 corrections and 18 refinements, accepted 546 current values, upheld 12 `Dodge` pun holds, and found no rejected or additional changes.
+- Applied 42 exact-hash changes across the 12 catalogs. All 600 outcomes read back; each catalog retains the same 4,165-key set. Placeholder, ICU, markup, protected-literal, source, caller, historical-continuity, and W1049/W1100 boundary checks passed.
+- Evidence: [W1050–W1099 review and application](docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/). The primary packet README manifest correction is documented in the evidence reconciliation note. A separate metadata reattestation verified all packet checksums and manifest artifacts, and found zero differences across the 600 reviewed cells, 12,600 history rows, and 60 caller pins.
+- This is machine-assisted semantic review, not native-speaker approval. Exact-head browser acceptance and qualified native-speaker review remain outstanding. No tests, builds, scans, CI, workflow edits, releases, tags, or merges were performed.
+
+### ChaptarrNG semantic review W1100–W1149 (2026-11-02)
+
+- Primary and independent review covered 600 cells across 50 sources and 12 locales. Cross-review confirmed 524 current values, accepted all 68 primary proposals, and added 3 corrections plus 5 refinements; no holds.
+- Applied 76 exact-hash changes. Readback verified all 600 final values; all twelve catalogs retain the shared 4,165-key set and their original per-locale key order. Caller pins, placeholders, markup, ICU, protected literals, and W1099/W1150 boundaries passed.
+- Evidence: [`window-1100-1149`](docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/).
+- PR #190 remains open and draft at head `6e7a5341b7ccac31d950c73db68277f9a1f18f8e` / tree `d073e1373021bf715db37461a12654f7e993cdbf`. Qualified native-speaker and current-head browser reviews remain outstanding. No tests, builds, scans, CI, workflow edits, merges, releases, or tags were made.
+
+## W1187 source-context correction (2026-11-03)
+
+The independent cross-audit of `server.message.md764ed5e74b4` confirms the caller's `M4B` null fallback is dynamic `{value0}` data, not protected source text. All 12 prior holds are cleared; the 12 existing locale values are accepted unchanged (0 catalog updates, 12 no-ops, 0 new holds). The exact source, both callers, catalog hashes, and reattestations are recorded in [`w1187-fallback-hold-correction`](docs/pr-evidence/pr190-localization-2026-11-03/w1187-fallback-hold-correction/README.md). This was an evidence-only commit; qualified native-speaker and exact-head browser review remain pending.
+
+
+### W1200–W1209 current-head reattestation — 2026-11-03
+
+The final ten source ordinals (1200–1209) were rechecked against PR head `60b5df05d401994955499a837f534974b4276c22` / tree `4c08bd5633244e1d3d07e8b4f1beddab1503a9b3`. The 120-cell cross-reviewed application still matches the exact target hashes; all 10 source texts and 1,056 pinned caller-context lines are unchanged. Each of the 12 catalogs has 4,165 keys and the English key set. No source ordinals follow 1209.
+
+Evidence and portable verifier: [W1200–W1209 current-head reattestation](docs/pr-evidence/pr190-localization-2026-11-03/window-1200-1209-current-head-reattestation/README.md).
+
+<!-- localization-chaptarr-w1200-current-head-reattestation -->
+
+<!-- chaptarrng-pr190-creative-hold-cross-review -->
+### W1200–W1209 independent creative-hold cross-reviews — 2026-11-03
+
+Two independent machine reviews assess all 20 caller-linked draft recommendations against pinned source, caller context, and catalog preimages:
+
+- [First review README](https://github.com/snapetech-org/chaptarrng/blob/28cdae837118a426ac867fb468a5e5a6937cbb9b/docs/pr-evidence/pr190-localization-2026-11-03/creative-hold-cross-review/first-independent-review/README.md) · [portable verifier](https://github.com/snapetech-org/chaptarrng/blob/28cdae837118a426ac867fb468a5e5a6937cbb9b/docs/pr-evidence/pr190-localization-2026-11-03/creative-hold-cross-review/first-independent-review/verify_cross_review.py)
+- [Second review README](https://github.com/snapetech-org/chaptarrng/blob/28cdae837118a426ac867fb468a5e5a6937cbb9b/docs/pr-evidence/pr190-localization-2026-11-03/creative-hold-cross-review/second-independent-review/README.md) · [portable verifier](https://github.com/snapetech-org/chaptarrng/blob/28cdae837118a426ac867fb468a5e5a6937cbb9b/docs/pr-evidence/pr190-localization-2026-11-03/creative-hold-cross-review/second-independent-review/verify_cross_review.py)
+
+Both endorse 17 draft recommendations, pending qualified native-language review. Both retain three low-confidence holds: Arabic `ui.loading.newEbookSmell`, Arabic `ui.loading.dodgeBooks`, and Hindi `ui.loading.dodgeBooks`. All 20 items still require qualified native-language review; no native-speaker signoff is claimed.
+
+The 24 callerless holds remain hash-only; no callerless target text is included. No catalog values were applied.
+
+No tests, builds, scans, or CI jobs were run or manually dispatched. The push triggered the existing `pull_request_target` metadata workflow, which completed with all jobs skipped because the PR has no `action:ci` or `pool:private` labels. No workflow files changed, and no merge, release, or tag was made.
+
+<!-- chaptarrng-pr190-independent-cross-2026-11-04 -->
+## Independent cross-review: creative localization holds
+
+The exact-head review covered 20 cells across three source IDs. Separate primary and clean-blind reviews were reconciled in the root cross ledger. Nine selected catalog cells were applied (six corrections and three refinements); the 11 `Dodge` creative-wordplay cells remain held without proposed translation text.
+
+The catalog-only update is `cfb92c0d326127765480de313dcea8b2a9a8e483`. The complete review packet, 20-cell application readback, postflight record, and offline verifier are in [`creative-holds-independent-cross`](docs/pr-evidence/pr190-localization-2026-11-04/creative-holds-independent-cross/README.md). The packet, cross ledger, and application verifier pass. The PR remains open and draft. No native-speaker approval or browser acceptance is claimed. No tests, builds, scans, or CI were dispatched; the observed workflow event was skipped.
+
+<!-- chaptarrng-pr190-w0-49-application-20261104 -->
+## ChaptarrNG W0–W49 cross-review applied — 2026-11-04
+
+The exact-head cross-audit reconciled all 600 cells at base `7f5d99e24b054cf1437d135328c3dee565e6b318` / tree `d39f2fe8cf91a39653679980c0832c5ca400a114`: 514 keep-current, 38 selected revisions, and 48 text-free holds where exact caller context is unavailable.
+
+Applied the 38 selected revisions across 11 locale catalogs in [catalog commit `3e9ef37d39301126dfc3631a80ba09fbe46f5211`](https://github.com/snapetech-org/chaptarrng/commit/3e9ef37d39301126dfc3631a80ba09fbe46f5211). The separate [application evidence commit `daa578eaa0d1c252e969d1f5891a364b13d50ec0`](https://github.com/snapetech-org/chaptarrng/commit/daa578eaa0d1c252e969d1f5891a364b13d50ec0) contains the candidate-free, primary, clean-blind, cross-audit, and 600-cell readback packets with a portable verifier: [`window-0-49-application`](docs/pr-evidence/pr190-localization-2026-11-04/window-0-49-application/README.md).
+
+The verifier confirms exactly 38 catalog value changes; all 514 accepted-current values and all 48 held values remain unchanged. All 12 catalogs retain their ordered 4,165-key sets. The two commits change no workflow paths. This machine-assisted review is not native-speaker approval or browser acceptance. No tests, builds, scans, or CI were dispatched; local hooks were bypassed only for the commit/push invocations to avoid their Semgrep scan, image-alias test, and package sync. The PR remains open and draft; no merge, release, or tag was made.
+
+
+<!-- chaptarrng-pr190-w50-99-application-20261104 -->
+## ChaptarrNG W50–W99 cross-review applied — 2026-11-04
+
+The exact-head cross-audit covered 600 target cells (50 source keys × 12 locales) at base `daa578eaa0d1c252e969d1f5891a364b13d50ec0` / tree `e0b306dc20596ad7004bdfb9ac2cc0a3021726c7`: 367 accepted-current cells, 68 corrections, 81 refinements, and 84 text-free holds across seven callerless keys.
+
+- Applied exactly 149 selected catalog values across the 12 direct locale catalogs in [catalog commit `ce6460458a31035c7d3361c9e01148a5a4858ca9`](https://github.com/snapetech-org/chaptarrng/commit/ce6460458a31035c7d3361c9e01148a5a4858ca9). All 84 held cells remain unchanged, with no source or translation text in the hold records.
+- The exact pre/post readback confirms 149 target values changed; 367 accepted-current values and all holds remain unchanged. Each locale retains its original ordered set of 4,165 keys. The catalog commit changes zero workflow paths.
+- [Evidence commit `ec9c808ab2d6ac98b549fa532e8c03164972ba0a`](https://github.com/snapetech-org/chaptarrng/commit/ec9c808ab2d6ac98b549fa532e8c03164972ba0a) includes the candidate-free, primary, clean-blind, and cross-review packets, hash-only holds, complete 600-cell readback, and [portable application verifier](docs/pr-evidence/pr190-localization-2026-11-04/window-50-99-application/README.md). The verifier passes all input manifests and verifiers, exact-source reattestation, protected-token/markup/numeric checks, and catalog hash/key-order checks.
+- The pushed update produced ten `Build ChaptarrNG` check runs, all completed `SKIPPED`: `Release-note contract`, `build`, `Fedora 44 BookshelfNG RPM No/Yes and rollback`, `Legacy distribution and runner contracts`, `postgres-migrations`, `Docker (single standard image)`, `Private runner policy`, `Dispatch trusted owner PR validation`, `owner-pr-validation`, and `Report trusted owner PR validation`. No build, test, scan, or CI dispatch was run for this application.
+
+This is machine-assisted review; no browser review or native-speaker approval is claimed. The PR remains open and draft. No merge, release, or tag was made.
+
+
+<!-- chaptarrng-pr190-w100-149-application-20261104 -->
+### W100–W149 localization application (2026-11-04)
+
+Applied the sealed cross review from base `9fd23606fbb4c8928505772413e5c23e85352adc` / tree `cba466021a9a0c9699ef171ddc6a510a69209083`.
+
+- Product commit: [`a5b6d99061f1193af5d8de9b3d04d9df7296b043`](https://github.com/snapetech-org/chaptarrng/commit/a5b6d99061f1193af5d8de9b3d04d9df7296b043).
+- Evidence commit: [`243f17465cc95fe84f16e17767db04a4a97ad040`](https://github.com/snapetech-org/chaptarrng/commit/243f17465cc95fe84f16e17767db04a4a97ad040); [portable readback and sealed cross packet](https://github.com/snapetech-org/chaptarrng/tree/243f17465cc95fe84f16e17767db04a4a97ad040/docs/pr-evidence/pr190-localization-2026-11-04/window-100-149-application).
+- Applied 42 selected target values across 11 locale catalogs. All 12 catalogs retain 4,165 keys in their original order; 390 accepted-current cells and 168 text-free callerless holds remain unchanged.
+- All 432 caller-backed cells passed placeholder, inline-code, markup, numeric, and protected-literal checks. The two English source wording recommendations were not applied.
+- No tests, builds, scans, or CI jobs were dispatched or run. No workflow, merge, release, or tag changes occurred. This PR remains open and draft.
+
+<!-- localization-w150-199-cross-review-2026-11-04 -->
+## 2026-11-04 localization review pass
+
+- Applied 58 exact-hash translation corrections across the 12 direct locale catalogs in [product commit 7c5af0a](https://github.com/snapetech-org/chaptarrng/commit/7c5af0a3d824f7e680c775f657697aee2430d277).
+- Cross-review disposition: 530 current values accepted, 58 changes selected, and 12 hash-only holds retained for the one key with no source caller. The review resolved 132 marketplace cells against the pinned dynamic selector map.
+- Verified 58 exact target readbacks and exact parity for all 4,165 keys in each of the 12 locale catalogs.
+- The sealed cross-review, selected changes, application readback, and checksums are in [the evidence commit](https://github.com/snapetech-org/chaptarrng/tree/dc91bdcdf60ba422bb176cc7c58b9b1cab27facd/docs/pr-evidence/pr190-localization-2026-11-04/window-0150-0199-cross-adjudication/).
+- This is machine-assisted review; native-speaker approval is not claimed. No workflow edits, merges, releases, or tags were made. The local push hook ran the repository retirement gates and image-alias contract checks; both passed.
+
+### W200–W249 independent cross-review follow-up (2026-11-04)
+
+The earlier W200–W249 application above applied 52 changes from its earlier pinned head. At the current PR head `dc91bdcdf60ba422bb176cc7c58b9b1cab27facd` / tree `ffae435c871360ba958098bc0398a1f251f8b1e8`, a fresh primary/blind cross-review selected 99 follow-up target updates across 600 cells. They were applied with exact current-target and catalog file hash guards; 489 targets remained current, and 12 callerless cells remain unchanged and held as text-free hashes. No target text for those holds is included in this follow-up evidence.
+
+The row-level decisions, selected target hashes, all-cell readback, and base-drift comparison are in [W200–W249 follow-up evidence](docs/pr-evidence/pr190-localization-2026-11-04/window-200-249-followup/README.md). The PR API base (`17bde32`) trails live `main` (`dbbb46a`) by eight operational-policy and documentation commits, with no localization source or catalog changes.
+
+Native-speaker approval remains outstanding. No tests, builds, or CI were run for this follow-up.
+
+## W250–W299 Core localization follow-up
+
+- Reviewed 50 Core keys across 12 locales (600 cells); applied 42 recommended changes and retained 558 current targets.
+- Corrected the Indonesian Docker-update warning to preserve both source sentences.
+- Cross-review and hash-guarded apply evidence: `docs/pr-evidence/pr190-localization-2026-11-04/window-250-299-followup/`.
+- Native-speaker review remains outstanding.
+
+
+## W300–W349 Core localization application — 2026-11-04
+
+Applied in product commit [`7e69f46e21f1ea7455893179116ec85ee2b0f85e`](https://github.com/snapetech-org/chaptarrng/commit/7e69f46e21f1ea7455893179116ec85ee2b0f85e). The product commit changes exactly 11 Core locale catalogs and contains no source or workflow edits.
+
+- Applied 106 exact-hash selected values: 87 primary proposals (86 cross-review accepts and one reviewer-directed revision), plus 19 root suggestions accepted by the independent root-suggestion cross-review.
+- Read back all 600 cells across 50 source keys and 12 catalogs at integration head `4688c998d92c821bbc1464ea4640c90615a69327` (tree `e655295664bbe8466e6f5541eb78e17e32cfca12`): 106 selected values match, the other 494 cells remain unchanged, there are zero mismatches, and each catalog retains 4,165 keys in exact order.
+- The 48 callerless hash-only holds stayed unchanged. No unreviewed cells were applied.
+- A fresh independent review and root adjudication at the exact integration head accept Indonesian `BookMatchingStrictness` as `Mode pencocokan`, bound to caller-context SHA-256 `f920d5f6a8031a4b828e03f93d56f7e0c06653e56202f41fed4b784f670fb74f`. This machine review has moderate confidence; it is not native-speaker or browser sign-off.
+- The latest `main` deltas through `beb4f955` were checked against all 600 targets and 50 caller contexts. They changed no W300 source text, target values, or caller-context hashes; they have no path overlap with the PR diff. The PR is clean and mergeable, and the workflow path list is empty.
+- Review packets, exact-hash plan, product/readback evidence, base-advance comparison, hook disclosure, and checks are retained at [`docs/pr-evidence/pr190-localization-2026-11-04/window-300-349-core-application/`](docs/pr-evidence/pr190-localization-2026-11-04/window-300-349-core-application/).
+
+The PR remains open and draft. No tests, builds, scans, or CI dispatches were run for this window. The automatic push runs `41948520500` and `41952452511` completed with all 10 jobs skipped.

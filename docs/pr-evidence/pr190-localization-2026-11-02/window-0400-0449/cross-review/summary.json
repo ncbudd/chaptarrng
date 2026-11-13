@@ -1,0 +1,126 @@
+{
+  "additionalMissedCorrections": 10,
+  "additionalMissedFindings": 12,
+  "additionalMissedRefinements": 2,
+  "beforeAfterReattestation": {
+    "after": {
+      "checkedAtUtc": "2026-11-02T15:46:17.394846+00:00",
+      "livePullRequest": {
+        "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+        "headRefName": "codex/chaptarrng-localization-complete-20261031",
+        "headRefOid": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+        "isDraft": true,
+        "state": "OPEN",
+        "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+      },
+      "stage": "after-cross-review",
+      "worktree": {
+        "head": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+        "status": "",
+        "tree": "1340ba7d0642217aa81e3789e908931bd6fa74f1"
+      }
+    },
+    "before": {
+      "checkedAtUtc": "2026-11-02T15:46:14.622199+00:00",
+      "livePullRequest": {
+        "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+        "headRefName": "codex/chaptarrng-localization-complete-20261031",
+        "headRefOid": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+        "isDraft": true,
+        "state": "OPEN",
+        "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+      },
+      "stage": "before-cross-review",
+      "worktree": {
+        "head": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+        "status": "",
+        "tree": "1340ba7d0642217aa81e3789e908931bd6fa74f1"
+      }
+    }
+  },
+  "callerEvidence": {
+    "callerReferencesReattested": 90,
+    "mismatches": 0,
+    "sourceIdsWithCallers": 49,
+    "unclaimedCallerGap": {
+      "cells": 12,
+      "nearestCaller": "src/Chaptarr.Api.V1/Author/AuthorController.cs:945",
+      "nearestCallerEvidence": {
+        "file": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+        "fileBlob": "0b55c9ec804a6e955360b91666a886febd01ebe1",
+        "fileSha256": "5867b1968488296ae963f67414acc6fdf0cf9cc1f3a027b9ea517267c1c74f7c",
+        "isLocalizedCatalogCall": false,
+        "line": 945,
+        "lineSha256": "b5842aa51c8c66bbe71779ce6ddafdaad6e48fb834eaf234d644d7baf4481273",
+        "lineText": "                    new ValidationFailure(\"Import\", $\"Failed to import author: {ex.Message}\")"
+      },
+      "nearestCallerIsLocalizedKey": false,
+      "retainedHold": true,
+      "sourceId": "server.message.m00dbcd234174",
+      "sourceOrdinal": 447
+    },
+    "uniqueCallerFilesReattested": 27
+  },
+  "candidateAdjudicationCounts": {
+    "accept-current": 488,
+    "accept-primary-candidate": 85,
+    "add-missed-correction": 10,
+    "add-missed-refinement": 2,
+    "retain-hold": 12,
+    "revise-primary-candidate": 3
+  },
+  "cells": 600,
+  "confidence": "moderate",
+  "finalAcceptCurrent": 488,
+  "finalHolds": 12,
+  "finalProposedCorrections": 53,
+  "finalProposedRefinements": 47,
+  "head": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "isDraft": true,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "nativeSpeakerApproval": "outstanding",
+  "outputPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0400-0449-crossreview-by-root-child-20261102",
+  "primaryCandidateAgreementCount": 85,
+  "primaryCandidateCells": 88,
+  "primaryCandidateRevisionCount": 3,
+  "primaryPacketPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0400-0449-primary-20261102",
+  "priorContext": {
+    "callerRefsReattested": 3,
+    "cells": 12,
+    "crossReviewAccepted": 12,
+    "currentLiveTargetsMatchPriorPrimaryAndCrossFinal": 12,
+    "primaryAccepted": 12,
+    "sourceId": "notification.prefix.grabbed",
+    "sourceOrdinal": 399
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryOrPullRequestModified": false,
+  "schemaVersion": 1,
+  "sourceIds": 50,
+  "sourcePositionRange": [
+    400,
+    449
+  ],
+  "state": "OPEN",
+  "structuralChecks": {
+    "markupMismatchCount": 0,
+    "placeholderMismatchCount": 0,
+    "protectedLiteralMismatchCount": 0
+  },
+  "testsBuildsScansCiBrowserOrWorkflowWork": false,
+  "tree": "1340ba7d0642217aa81e3789e908931bd6fa74f1"
+}

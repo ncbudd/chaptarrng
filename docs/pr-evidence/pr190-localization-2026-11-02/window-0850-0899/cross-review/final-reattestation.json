@@ -1,0 +1,106 @@
+{
+  "allSevenPullRequestCount": 7,
+  "allSevenSnapshots": {
+    "155": {
+      "head": "be131f2d42988bb8f4a271e4df428985da15b53b",
+      "isDraft": false,
+      "repository": "snapetech-org/QuestarrNG",
+      "state": "OPEN",
+      "tree": "afd827714b9ada51ef269e41184ac219e064059b"
+    },
+    "190": {
+      "head": "175cff3a50569b67def345bb82332b30e9bb378c",
+      "isDraft": true,
+      "repository": "snapetech-org/ChaptarrNG",
+      "state": "OPEN",
+      "tree": "e682581e3c577b62215658c374b15a9d3f8f8bd0"
+    },
+    "204": {
+      "head": "72597bcf3c71f586040cd882506dff8dcbf6c804",
+      "isDraft": true,
+      "repository": "snapetech-org/slskR",
+      "state": "OPEN",
+      "tree": "98f7304db2e39ad722121c24047f5f06aa515663"
+    },
+    "243": {
+      "head": "11ff6fa2618e842e92716b7e92867769200e32e5",
+      "isDraft": true,
+      "repository": "snapetech-org/TorrentNG",
+      "state": "OPEN",
+      "tree": "770415a3fcd9353884ac245b53798af9610c0aa3"
+    },
+    "409": {
+      "head": "f3fbd3f8db10f78768b9951a67b4b9de8581a408",
+      "isDraft": true,
+      "repository": "snapetech-org/slskdN",
+      "state": "OPEN",
+      "tree": "9495c35a540ef2d2e845c833acb709365e0e26ac"
+    },
+    "418": {
+      "head": "f20893e57a89827095fa049d8e0475df7ec7170f",
+      "isDraft": true,
+      "repository": "snapetech-org/SeerrNG",
+      "state": "OPEN",
+      "tree": "b5a5952fb4f8a37ea5a39286295f153ce9504f52"
+    },
+    "70": {
+      "head": "8e3820252b0c362e18e421b3a73e7ff1478d32a0",
+      "isDraft": true,
+      "repository": "snapetech-org/ROMarrNG",
+      "state": "OPEN",
+      "tree": "0d29024efd7e5e886926a83d95f57c472f327db9"
+    }
+  },
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "browserReview": false,
+  "capturedAtUtc": "2026-11-02T20:01:18.567113+00:00",
+  "catalogKeysetParityLocales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "cellsReadBack": 600,
+  "confidence": "moderate",
+  "dispositions": {
+    "accept-current": 495,
+    "accept-primary-correction": 69,
+    "accept-primary-refinement": 10,
+    "propose-additional-correction": 14,
+    "retain-hold": 12
+  },
+  "exactHead": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "exactTree": "e682581e3c577b62215658c374b15a9d3f8f8bd0",
+  "isDraft": true,
+  "languageAuditChecksumRowsVerified": 4,
+  "nativeSpeakerApproval": false,
+  "primaryChecksumRowsVerified": 32,
+  "primaryInputChecksumRowsVerified": 99,
+  "primaryPacketSha256Manifest": "c74bc2a0eda46571510b64e7560e925337447ad2da17d6f51946f631ed68c848",
+  "pullRequest": 190,
+  "readbackFailures": 0,
+  "remoteBranchOid": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "repoModified": false,
+  "repository": "snapetech-org/ChaptarrNG",
+  "sourcePositions": [
+    850,
+    899
+  ],
+  "state": "OPEN",
+  "testsBuildCiRun": false,
+  "w884HeldAcross12Locales": true,
+  "w884Reason": "English source omits backslash restriction enforced by pinned qBittorrent caller.",
+  "worktree": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng",
+  "worktreeBranch": "codex/chaptarrng-localization-complete-20261031",
+  "worktreeHead": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "worktreeStatus": "clean",
+  "worktreeTree": "e682581e3c577b62215658c374b15a9d3f8f8bd0"
+}

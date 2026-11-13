@@ -1,0 +1,195 @@
+{
+  "browserReview": false,
+  "confidenceCounts": {
+    "moderate": 600
+  },
+  "counts": {
+    "accept-current": 403,
+    "hold": 0,
+    "propose-correction": 197,
+    "propose-refinement": 0
+  },
+  "currentMarkupMismatches": 0,
+  "currentPlaceholderMismatches": 0,
+  "currentProtectedMismatchCells": 0,
+  "exactHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "exactTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "finalMarkupMismatches": 0,
+  "finalPlaceholderMismatches": 0,
+  "finalProtectedMismatchCells": 0,
+  "genericPipelineFiles": 35,
+  "genericPipelineReferences": 76,
+  "holdCount": 0,
+  "icuSources": 0,
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "markupSources": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocale": {
+    "ar": {
+      "accept-current": 32,
+      "propose-correction": 18
+    },
+    "de": {
+      "accept-current": 33,
+      "propose-correction": 17
+    },
+    "es": {
+      "accept-current": 37,
+      "propose-correction": 13
+    },
+    "fr": {
+      "accept-current": 35,
+      "propose-correction": 15
+    },
+    "hi": {
+      "accept-current": 40,
+      "propose-correction": 10
+    },
+    "id": {
+      "accept-current": 39,
+      "propose-correction": 11
+    },
+    "ja": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "ko": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "pt-BR": {
+      "accept-current": 36,
+      "propose-correction": 14
+    },
+    "vi": {
+      "accept-current": 36,
+      "propose-correction": 14
+    },
+    "zh-Hans": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "zh-Hant": {
+      "accept-current": 28,
+      "propose-correction": 22
+    }
+  },
+  "placeholderSources": 7,
+  "priorDispositionBoundary": {
+    "exactPriorDispositionOverlapCount": 0,
+    "exactPriorDispositionOverlapRows": [],
+    "priorPacketChecksumsVerified": true,
+    "priorSourceIdCount": 700,
+    "priorSourceIdsDisjoint": true,
+    "priorW650Reconciliation": "prior-w650-reconciliation.json",
+    "scopePositions": [
+      700,
+      749
+    ],
+    "selectedSourceIdListSha256": "512659c913acf28b6c14751e9c4821f5a426b7d8d1a7169a194fe39fde73ec14",
+    "sourceIds": 50,
+    "uniqueSourceIds": true,
+    "w650Applied": true,
+    "w699BoundaryRows": 12,
+    "w699BoundarySourceTargetMatchesPriorCrossReview": 12
+  },
+  "priorW650": {
+    "crossReviewHead": "4701933a50d367406fd6749c4baaf4befee22129",
+    "crossReviewTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+    "currentHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "currentTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+    "liveTargetDiffs": [],
+    "liveTargetsMatchCrossReviewFinal": 600,
+    "primaryAndCrossReviewChecksumsVerified": true,
+    "primaryHead": "4701933a50d367406fd6749c4baaf4befee22129",
+    "primaryTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+    "priorCellCount": 600,
+    "priorSourceIdCount": 50,
+    "recommendation": "W650 is applied: all 600 live locale values match independent cross-review final targets; source typos at W654 and W695 are corrected at the current head.",
+    "sourceChangesCount": 2,
+    "sourceTextChangesSinceReview": [
+      {
+        "liveSource": "Disable the 'Check before download' option in SABnzbd.",
+        "priorSource": "Disable 'Check before download' option in Sabnbzd",
+        "sourceId": "server.message.m783307436ce0",
+        "sourceOrdinal": 654,
+        "sourceTextSha256": "948643f3359c1289a9d26e7ec9e286c4f3112a71eac236e17cae3b922ffb0d4d"
+      },
+      {
+        "liveSource": "Unable to send a test message through Mailgun.",
+        "priorSource": "Unable to send test message though Mailgun.",
+        "sourceId": "server.message.m843e64bf5198",
+        "sourceOrdinal": 695,
+        "sourceTextSha256": "e6c6644f46f71ef52d94b0391b1ada634c435b5dbdad50dfc910cbdc16ddadec"
+      }
+    ],
+    "w654SourceTypoCorrected": true,
+    "w695ThroughMailgunSourceCorrected": true
+  },
+  "proposalCount": 197,
+  "protectedLiteralChecks": 600,
+  "pullRequest": 190,
+  "releasesTagsMergesPerformed": false,
+  "remoteBranchHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryModified": false,
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "positions": [
+      700,
+      749
+    ],
+    "sourceIds": 50
+  },
+  "sourceCallerFiles": 50,
+  "sourceCallerGaps": [],
+  "sourceCallerReferences": 77,
+  "sourceCallerRows": 50,
+  "sourceIdListSha256": "512659c913acf28b6c14751e9c4821f5a426b7d8d1a7169a194fe39fde73ec14",
+  "sourceWindowSha256": "6467d48c01d67ebabbc3f4429468cdf7bd3b53411a727f58310b5bcc00752a33",
+  "staleRegistryPinsRefreshed": [
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortex.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 240,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(BookDownloadCategorySettings.GetCategoryFieldName(Settings, category), \"Group does not exist\", \"server.message.m8a7981a2ced3\")",
+      "sourceId": "server.message.m8a7981a2ced3",
+      "sourceOrdinal": 711
+    },
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 318,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to Usenet Download Station\", \"server.message.m9d7030ad5fa8\")",
+      "sourceId": "server.message.m9d7030ad5fa8",
+      "sourceOrdinal": 746
+    }
+  ],
+  "testsBuildsCiRun": false,
+  "w699BoundaryCallerRefs": 48,
+  "w699BoundaryRows": 12,
+  "workflowFilesTouched": false
+}

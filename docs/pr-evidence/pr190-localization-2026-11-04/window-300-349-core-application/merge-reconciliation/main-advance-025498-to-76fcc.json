@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "oldPinnedMain": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "latestRemoteMain": "76fcc3193f3d08fe4827dca1556b84b2ae74b5df",
+  "prHead": "4688c998d92c821bbc1464ea4640c90615a69327",
+  "latestMainCommit": {
+    "sha": "76fcc3193f3d08fe4827dca1556b84b2ae74b5df",
+    "parents": [
+      "d04b7394c828cc878847ec8e67e4297ce56a1c33"
+    ],
+    "subject": "test: clarify legacy import list order assertion"
+  },
+  "latestMainDeltaPaths": [
+    "src/Chaptarr.Api.V1/ImportLists/ImportListResource.cs",
+    "src/Chaptarr.Api.V1/ProviderResource.cs",
+    "src/Chaptarr.Core.Test/Api/ImportListBookshelfCompatibilityFixture.cs",
+    "src/Chaptarr.Core.Test/Api/ProviderResourceCompatibilityProjectionFixture.cs"
+  ],
+  "latestMainDeltaPathCount": 4,
+  "prPathsFromOldBaseCount": 1806,
+  "overlappingPaths": [],
+  "changedW300SourceTextKeys": [],
+  "changedW300TargetCells": [],
+  "changedW300CallerContextKeys": [],
+  "w300SourceKeysChecked": 50,
+  "w300TargetCellsChecked": 600,
+  "manifestInLatestMainDelta": false,
+  "workflowPathsInLatestMainDelta": [],
+  "workflowPathsBetweenLatestMainAndHead": [],
+  "mergeTree": "ba9160737b1ed457420e3cdd1e04bc594f6e261f",
+  "mergeTreeConflict": false,
+  "productCommit": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+  "productCommitPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "productCommitPathCount": 11,
+  "githubPRMergeState": "clean",
+  "githubPRMergeable": true,
+  "githubPRBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "githubHeadSha": "4688c998d92c821bbc1464ea4640c90615a69327"
+}

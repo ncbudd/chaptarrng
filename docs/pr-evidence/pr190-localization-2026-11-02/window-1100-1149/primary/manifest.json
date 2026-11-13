@@ -1,0 +1,243 @@
+{
+  "artifactCountExcludingManifestAndSums": 24,
+  "artifacts": [
+    {
+      "bytes": 2976,
+      "path": "README.md",
+      "sha256": "85ce55a8bf367675c7bcd4a8c7ee94688d66ceebdb33e3f26508ea16f1228f79"
+    },
+    {
+      "bytes": 47283,
+      "path": "build_primary.py",
+      "sha256": "17fd791845f20909fcc6ef50568311f0e52c53a0914f9c217b4d6167b6a61a60"
+    },
+    {
+      "bytes": 171,
+      "path": "caller-context-summary.json",
+      "sha256": "e1b84d903c8a590d3d44a7f429e8c03e5a3687e200153059f86e6bf393380050"
+    },
+    {
+      "bytes": 94063,
+      "path": "caller-context.jsonl",
+      "sha256": "f5aa6b7880024fccd1bc1f24f1bac65d8ce85f91bf199a14e4301c2ba61fcb8c"
+    },
+    {
+      "bytes": 4170,
+      "path": "catalog-pins.json",
+      "sha256": "112eaa61c821448d9a11400e7168e73ac5d9fe2618f01279e9b13a09d2c5da25"
+    },
+    {
+      "bytes": 195851,
+      "path": "correction-candidates.jsonl",
+      "sha256": "c6d2b2db4561e1e9e6c609e14e0f6a566182477f31226e235a19391804969660"
+    },
+    {
+      "bytes": 943,
+      "path": "final-reattestation.json",
+      "sha256": "cfc6dfd3f73de717e9810b6af1b825bbe2b7e927f84844deeb6df620601dc064"
+    },
+    {
+      "bytes": 0,
+      "path": "holds.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 10567,
+      "path": "pinned-files.json",
+      "sha256": "2d74a3bb997f5eb8050c032bf32735a244886f8363488f402ee4b1b4bd67a266"
+    },
+    {
+      "bytes": 3881,
+      "path": "preselection-source-catalog-attestation.json",
+      "sha256": "d4954e514c5f84f5a208e3b362f41f71fe808f3634b9351cb033b24c44563723"
+    },
+    {
+      "bytes": 17262556,
+      "path": "prior-dispositions-through-W1099.jsonl",
+      "sha256": "6fa8d07aa708ffc803c4b1988bf5044522eb416b956b821609f4c47ca21eadcd"
+    },
+    {
+      "bytes": 26499,
+      "path": "prior-evidence-reattestation.json",
+      "sha256": "b407db105c97d5edaa7cf0e24c452528650a3bfde379c42f33c19eafda1df76c"
+    },
+    {
+      "bytes": 520018,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "098d78ac89ad8839a27d640a7c66384037b419e0146295c53156910e3625330b"
+    },
+    {
+      "bytes": 39192,
+      "path": "refinement-candidates.jsonl",
+      "sha256": "5d32eca4652684a995338967c591f6a1e0ae88c57f16cbef404d978213a49231"
+    },
+    {
+      "bytes": 2291074,
+      "path": "review-cells.jsonl",
+      "sha256": "e4d28fad184b8bd0a137d421668089380a4ef1515dfd195a9f40874ceca595d0"
+    },
+    {
+      "bytes": 2767,
+      "path": "selected-queue-window.json",
+      "sha256": "f2b82a0a0e2952f433bfbce72d4637e3ebf691fa9c2080f3f475c5697bc68758"
+    },
+    {
+      "bytes": 8005,
+      "path": "snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "55361665b06b61f17005df97ed3a4b32fdb97105c5d21a50f3ec07e489c21100"
+    },
+    {
+      "bytes": 8007,
+      "path": "snapshots/final-seal-all-pr-heads.json",
+      "sha256": "bfc30064f97fc1f1a9f79d56452b105244c4053eeaee76d22df76ae7181dacd1"
+    },
+    {
+      "bytes": 8012,
+      "path": "snapshots/start-all-pr-heads.json",
+      "sha256": "d1c8499eb24ff82edb6ea26b87b309903d6c1304e03cd3b367fb196796749b48"
+    },
+    {
+      "bytes": 54407,
+      "path": "source-slice.jsonl",
+      "sha256": "f80aa610310f237b71410edbf60c05b8c310f53285d6525910a452ca7dde7f2e"
+    },
+    {
+      "bytes": 2524,
+      "path": "summary.json",
+      "sha256": "b57b3747d2148daddaef0385f602f66b5020930d692937a786f9e55d217e8322"
+    },
+    {
+      "bytes": 712,
+      "path": "terminology-and-locale-notes.json",
+      "sha256": "cd6aa71d65c98723dfb28ed39d0eb7dd6146aac17ef122a003c2e1aaf2415c2a"
+    },
+    {
+      "bytes": 11418,
+      "path": "w1099-backward-boundary.json",
+      "sha256": "a28c5b3d5f3031a15284ca1eb83a75301e889dcdf2c85dabbf0873fc6dd6033b"
+    },
+    {
+      "bytes": 8646,
+      "path": "w1150-forward-boundary.json",
+      "sha256": "7c6be41e4e8d1457835e04ab0d1710f2a0cededa6b0cfad219ae3ab35114a87c"
+    }
+  ],
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "head": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "liveHeadSnapshots": [
+    "snapshots/start-all-pr-heads.json",
+    "snapshots/after-source-selection-all-pr-heads.json",
+    "snapshots/final-seal-all-pr-heads.json"
+  ],
+  "packet": "ChaptarrNG PR #190 primary localization review W1100-W1149",
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "sealedAtUtc": "2026-11-02T23:10:50.729034+00:00",
+  "summary": {
+    "allSevenPrsSnapshottedAtSelection": true,
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "callerFiles": 24,
+    "callerGaps": 0,
+    "catalogKeyCount": 4165,
+    "cellCount": 600,
+    "currentProtectedLiteralFailureCells": 0,
+    "directCallerReferences": 75,
+    "dispositionCounts": {
+      "accept-current": 532,
+      "correction": 57,
+      "refinement": 11
+    },
+    "finalProtectedLiteralFailureCells": 0,
+    "head": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+    "headedBrowserAcceptance": false,
+    "holdCellCount": 0,
+    "icuMismatchCells": 0,
+    "isDraft": true,
+    "limitations": "Static machine-assisted primary review. No native-speaker approval, browser acceptance, or runtime validation is claimed; the prior W1050 Dodge pun remains on hold.",
+    "localeCount": 12,
+    "markupMismatchCells": 0,
+    "nativeSpeakerApproval": false,
+    "newPriorHashDrift": 0,
+    "overallConfidence": "moderate",
+    "perLocaleDispositionCounts": {
+      "ar": {
+        "accept-current": 44,
+        "correction": 6
+      },
+      "de": {
+        "accept-current": 43,
+        "correction": 4,
+        "refinement": 3
+      },
+      "es": {
+        "accept-current": 45,
+        "correction": 4,
+        "refinement": 1
+      },
+      "fr": {
+        "accept-current": 46,
+        "correction": 3,
+        "refinement": 1
+      },
+      "hi": {
+        "accept-current": 40,
+        "correction": 7,
+        "refinement": 3
+      },
+      "id": {
+        "accept-current": 44,
+        "correction": 6
+      },
+      "ja": {
+        "accept-current": 42,
+        "correction": 5,
+        "refinement": 3
+      },
+      "ko": {
+        "accept-current": 46,
+        "correction": 4
+      },
+      "pt-BR": {
+        "accept-current": 46,
+        "correction": 4
+      },
+      "vi": {
+        "accept-current": 45,
+        "correction": 5
+      },
+      "zh-Hans": {
+        "accept-current": 46,
+        "correction": 4
+      },
+      "zh-Hant": {
+        "accept-current": 45,
+        "correction": 5
+      }
+    },
+    "placeholderMismatchCells": 0,
+    "priorDispositionRowsThroughW1099": 13200,
+    "priorLiveFinalHashMismatches": 195,
+    "proposalKindCounts": {
+      "correction": 57,
+      "refinement": 11
+    },
+    "proposedValueChanges": 68,
+    "pullRequest": 190,
+    "repository": "snapetech-org/chaptarrng",
+    "sourceCount": 50,
+    "staleRegistryPins": 0,
+    "state": "OPEN",
+    "tree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+    "w1050DodgeHoldCountPreserved": 12,
+    "w1050DodgeHoldsPreserved": true,
+    "w1099BoundaryAll12Match": true,
+    "w1150BoundaryPinned": true,
+    "window": "W1100-W1149",
+    "zeroBasedQueuePositions": [
+      1100,
+      1149
+    ]
+  },
+  "tree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf"
+}

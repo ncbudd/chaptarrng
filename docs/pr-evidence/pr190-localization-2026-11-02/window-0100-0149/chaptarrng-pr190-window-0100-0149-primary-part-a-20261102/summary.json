@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "review": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102/review-cells.jsonl",
+    "rows": 300,
+    "sha256": "b88816d055892ad5843298215b2e55a14a42d07efd7ab7ad574cfb3a12936d56"
+  },
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "livePullRequestVerification": {
+    "repository": "snapetech-org/chaptarrng",
+    "pullRequest": 190,
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "verifiedAtUtc": "2026-11-02 11:22:48 UTC",
+    "verification": "gh pr view 190 --repo snapetech-org/chaptarrng"
+  },
+  "scope": {
+    "windowOrdinals": [
+      100,
+      149
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr"
+    ],
+    "cells": 300
+  },
+  "counts": {
+    "accept-current": 274,
+    "propose-correction": 24,
+    "propose-refinement": 2
+  },
+  "proposals": 26,
+  "input": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102/input-cells.jsonl",
+    "rows": 300,
+    "sha256": "a2daba65003a6a0b9ee4bbd3763e190deb9c6abcd5bbbb5cbae926a57e138b90"
+  },
+  "callerEvidence": {
+    "sourceIdsWithRecords": 50,
+    "callerLines": 62,
+    "uniqueCallerFiles": 12,
+    "exactSourceLineMatches": 62,
+    "callerLineNumberShifts": 16,
+    "callerLineContentMismatches": 0,
+    "lineNumberShiftDetails": [
+      {
+        "sourceId": "provider.field.f0efa2f6e6d2b",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 75,
+        "currentLine": 82
+      },
+      {
+        "sourceId": "provider.field.f39bbc1d8b91b",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 78,
+        "currentLine": 85
+      },
+      {
+        "sourceId": "provider.field.f0fe46e7d8d2a",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 81,
+        "currentLine": 88
+      },
+      {
+        "sourceId": "provider.field.fffc595f7f1a9",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 84,
+        "currentLine": 91
+      },
+      {
+        "sourceId": "provider.field.f40547e6a6702",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 87,
+        "currentLine": 94
+      },
+      {
+        "sourceId": "provider.field.f1c419054d0a6",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 90,
+        "currentLine": 97
+      },
+      {
+        "sourceId": "provider.field.ffd06a3b2e208",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 93,
+        "currentLine": 100
+      },
+      {
+        "sourceId": "provider.field.f198ab7b8b868",
+        "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+        "registryLine": 93,
+        "currentLine": 100
+      },
+      {
+        "sourceId": "provider.field.ff9db72ced1ee",
+        "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
+        "registryLine": 40,
+        "currentLine": 41
+      },
+      {
+        "sourceId": "provider.field.ff9db72ced1ee",
+        "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
+        "registryLine": 47,
+        "currentLine": 49
+      },
+      {
+        "sourceId": "provider.field.f3efeb5b0889f",
+        "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
+        "registryLine": 50,
+        "currentLine": 52
+      },
+      {
+        "sourceId": "provider.field.fa969d04ec2d0",
+        "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
+        "registryLine": 43,
+        "currentLine": 44
+      },
+      {
+        "sourceId": "provider.field.f7c6679a4c0b7",
+        "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+        "registryLine": 49,
+        "currentLine": 53
+      },
+      {
+        "sourceId": "provider.field.ffb082a613681",
+        "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+        "registryLine": 49,
+        "currentLine": 53
+      },
+      {
+        "sourceId": "provider.field.f43d5fbd565ae",
+        "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+        "registryLine": 52,
+        "currentLine": 56
+      },
+      {
+        "sourceId": "provider.field.f5f2d90a6787f",
+        "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+        "registryLine": 52,
+        "currentLine": 56
+      }
+    ]
+  },
+  "inputAndCallerPinMismatches": 0,
+  "tokenMismatchesInRecommendations": 0,
+  "earlierWindowOverlaps": 0,
+  "holds": 0,
+  "blockers": [],
+  "nativeSpeakerApproval": false,
+  "notes": [
+    "Live PR was rechecked OPEN/DRAFT at the required head immediately before packet creation.",
+    "The assigned IDs were extracted from currentMissingIds positions 100–149 and confirmed disjoint from prior exact row-level windows 0–49 and 50–99.",
+    "All source IDs, current target values, exact-head catalog blobs, and provider caller source lines were re-attested; 16 caller line-number shifts were resolved by unique exact-line matches.",
+    "Current target catalogs are pinned to the exact PR tree; source-followup target catalog hashes are historical and have changed since that snapshot.",
+    "No repository files or PR state were changed; no tests, builds, scans, CI/workflows, releases, tags, merges, or browser/native reviews were run.",
+    "This machine review is not native-speaker approval.",
+    "One ancillary source-followup registry digest for docs/localization/server-copy-review.md differs from current-head bytes; it is outside this provider-field slice and is recorded in attestation as nonblocking."
+  ]
+}

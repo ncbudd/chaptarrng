@@ -1,0 +1,136 @@
+{
+  "allConfidenceModerate": true,
+  "apiBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerlessSourceCount": 4,
+  "candidateFreeChecksumListSha256": "a840674b2e61d495d91dca3a9ea46e08d92ecc2606bef4cd2f2c7e1f0ed7f0e2",
+  "candidateFreeExactRepoVerifier": "PASS (600 selected cells and exact commit/tree/catalog data)",
+  "candidateFreeManifestSha256": "f37ed7234202a36eaea93259618d972a545d3ebbed0fd3a57d8c8addcdbc25ee",
+  "candidateFreePortableVerifier": "PASS (600 cells, 50 caller contexts)",
+  "cellCount": 600,
+  "currentTargetTokenAlertCells": [
+    "ChmodFolderHelpText::ja",
+    "ChmodFolderHelpText::ko"
+  ],
+  "currentTargetTokenAlertCount": 2,
+  "decisionCounts": {
+    "accept-current": 483,
+    "correction": 27,
+    "hold-hash-only": 48,
+    "refinement": 42
+  },
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "holdCount": 48,
+  "inProductVisualReviewPerformed": false,
+  "limitations": "Moderate-confidence AI linguistic review without native-speaker signoff or product UI review. Review is pinned to the sealed PR head. The live main ref advanced after the candidate-free packet was sealed; PR head, branch, pull ref, API base OID, source/caller rows, and selected catalog targets remained pinned to the supplied packet.",
+  "liveMainAdvancedDuringBlindReview": true,
+  "liveMainAdvancedSinceCandidateFreeSeal": true,
+  "liveMainAtEntry": "4772c3177607feb97402bbef0e0879162156fb90",
+  "liveMainAtExit": "1ff8feb6000b99a5f8ccfbb6047e60846422c080",
+  "liveMainTreeAtExit": "e90bcfe50ae8ee51f553b2ce6f7c4b6ebf011bc1",
+  "localeCount": 12,
+  "localeDecisionCounts": {
+    "ar": {
+      "accept-current": 41,
+      "correction": 1,
+      "hold-hash-only": 4,
+      "refinement": 4
+    },
+    "de": {
+      "accept-current": 45,
+      "hold-hash-only": 4,
+      "refinement": 1
+    },
+    "es": {
+      "accept-current": 42,
+      "correction": 3,
+      "hold-hash-only": 4,
+      "refinement": 1
+    },
+    "fr": {
+      "accept-current": 40,
+      "correction": 3,
+      "hold-hash-only": 4,
+      "refinement": 3
+    },
+    "hi": {
+      "accept-current": 25,
+      "correction": 9,
+      "hold-hash-only": 4,
+      "refinement": 12
+    },
+    "id": {
+      "accept-current": 36,
+      "correction": 3,
+      "hold-hash-only": 4,
+      "refinement": 7
+    },
+    "ja": {
+      "accept-current": 42,
+      "correction": 2,
+      "hold-hash-only": 4,
+      "refinement": 2
+    },
+    "ko": {
+      "accept-current": 43,
+      "correction": 1,
+      "hold-hash-only": 4,
+      "refinement": 2
+    },
+    "pt-BR": {
+      "accept-current": 41,
+      "correction": 2,
+      "hold-hash-only": 4,
+      "refinement": 3
+    },
+    "vi": {
+      "accept-current": 41,
+      "correction": 2,
+      "hold-hash-only": 4,
+      "refinement": 3
+    },
+    "zh-Hans": {
+      "accept-current": 44,
+      "correction": 1,
+      "hold-hash-only": 4,
+      "refinement": 1
+    },
+    "zh-Hant": {
+      "accept-current": 43,
+      "hold-hash-only": 4,
+      "refinement": 3
+    }
+  },
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "nativeSpeakerReviewPerformed": false,
+  "packetMainAtCandidateFreeSeal": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "proposalCount": 69,
+  "pullRequest": 190,
+  "recommendedTargetTokenMismatches": 0,
+  "repoOrPrEdited": false,
+  "repository": "snapetech-org/ChaptarrNG",
+  "reviewType": "independent blind semantic localization review",
+  "reviewerDidNotInspectPrimaryOrPriorW450Candidates": true,
+  "schemaVersion": 1,
+  "sourceIdCount": 50,
+  "sourceRange": {
+    "end": 499,
+    "start": 450
+  },
+  "stateAtReview": "open/draft",
+  "testsBuildsScansOrCiRun": false
+}

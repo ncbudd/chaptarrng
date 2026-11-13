@@ -13,10 +13,12 @@ on:
           - publish
         required: true
       runner_pool:
-        description: Required private JIT runner pool
+        description: Select GitHub-hosted runners by default or private JIT overflow
         type: choice
         options:
+          - public
           - private
+        default: public
         required: true
       release_tag:
         description: Exact stable release whose image aliases should be synchronized
@@ -38,14 +40,14 @@ jobs:
         (
           github.ref == 'refs/heads/main' &&
           inputs.action == 'publish' &&
-          inputs.runner_pool == 'private' &&
+          (inputs.runner_pool == 'private' || inputs.runner_pool == 'public') &&
           inputs.release_tag != ''
         )
       ) &&
       (
         github.repository == 'snapetech-org/chaptarrng' && github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main'
       )
-    runs-on: ${{ fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-sync"]}}', github.run_id)) }}
+    runs-on: ${{ inputs.runner_pool == 'public' && 'ubuntu-24.04' || fromJSON(format('{{"group":"ng-shared-main-jit","labels":["self-hosted","linux","x64","ng-shared-main-chaptarrng","ng-main-run-{0}","gha-{0}-sync"]}}', github.run_id)) }}
     timeout-minutes: 10
     permissions:
       contents: read

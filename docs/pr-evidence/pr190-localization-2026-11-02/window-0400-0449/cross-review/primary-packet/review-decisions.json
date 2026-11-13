@@ -1,0 +1,656 @@
+{
+  "findings": {
+    "400|zh-Hans": [
+      "propose-correction",
+      "已导入：{message}",
+      "This notification prefix reports a completed software/book import; 进口 means importation of goods, while 导入 is the standard software-import term.",
+      "high"
+    ],
+    "400|ja": [
+      "propose-correction",
+      "インポート：{message}",
+      "This notification prefix reports a completed software/book import; 輸入 ordinarily means importing goods, while インポート is the standard software term.",
+      "high"
+    ],
+    "400|zh-Hant": [
+      "propose-correction",
+      "已匯入：{message}",
+      "This notification prefix reports a completed software/book import; 進口 refers to importation of goods, while 匯入 is standard for importing data.",
+      "high"
+    ],
+    "400|ko": [
+      "propose-refinement",
+      "가져오기 완료: {message}",
+      "This notification prefix reports a completed software import; 수입 commonly means importing goods, while 가져오기 is the usual software action.",
+      "moderate"
+    ],
+    "401|ja": [
+      "propose-refinement",
+      "著者追加",
+      "This is a compact notification heading for adding a literary author; removing the space makes the Japanese compound natural.",
+      "moderate"
+    ],
+    "401|ko": [
+      "propose-refinement",
+      "저자 추가",
+      "This heading refers to a book author; 저자 is the conventional Korean term for an author of a book, whereas 작성자 is a generic creator/writer.",
+      "moderate"
+    ],
+    "403|ko": [
+      "propose-refinement",
+      "저자 삭제",
+      "This heading refers to a book author; 저자 is the conventional Korean term for an author of a book, whereas 작성자 is a generic creator/writer.",
+      "moderate"
+    ],
+    "405|zh-Hans": [
+      "propose-refinement",
+      "{author} - {book} - 文件已删除",
+      "This notification title reports a file-deletion status; 文件删除 is a noun fragment, while 文件已删除 clearly says the file was deleted.",
+      "moderate"
+    ],
+    "405|zh-Hant": [
+      "propose-correction",
+      "{author} - {book} - 檔案已刪除",
+      "The Traditional Chinese cell uses Simplified 文件 and a noun fragment; 檔案已刪除 is the natural status phrase.",
+      "high"
+    ],
+    "406|es": [
+      "propose-refinement",
+      "Archivo del libro eliminado",
+      "This is a notification heading; the current present-passive 'es eliminado' is less natural than a compact status label.",
+      "moderate"
+    ],
+    "407|pt-BR": [
+      "propose-correction",
+      "Falha na verificação de integridade",
+      "This notification heading names a failed health check; the current 'Verificação de saúde falha' reads as an incomplete statement rather than a failure title.",
+      "high"
+    ],
+    "407|ar": [
+      "propose-refinement",
+      "فشل فحص الصحة",
+      "This notification heading is a health-check failure; فحص الصحة is clearer than مراقبة الصحة, which suggests health monitoring.",
+      "moderate"
+    ],
+    "408|zh-Hant": [
+      "propose-correction",
+      "圖書檔案標籤已更新: {message}",
+      "This Traditional Chinese notification title contains the Simplified character 件 and omits the status marker; 檔案標籤已更新 is appropriate here.",
+      "high"
+    ],
+    "408|vi": [
+      "propose-correction",
+      "Thẻ của tệp sách đã được cập nhật: {message}",
+      "This notification prefix currently has unnatural Vietnamese word order; the candidate clearly says that the book-file tags were updated.",
+      "high"
+    ],
+    "409|de": [
+      "propose-refinement",
+      "Download fehlgeschlagen: {message}",
+      "This is a download-failure notification prefix; 'Download nicht gelungen' is understandable but less idiomatic than 'fehlgeschlagen'.",
+      "moderate"
+    ],
+    "409|vi": [
+      "propose-refinement",
+      "Tải xuống thất bại: {message}",
+      "This notification prefix refers to a failed download; Tải xuống is the standard Vietnamese verb phrase, while Download is left in English.",
+      "moderate"
+    ],
+    "410|zh-Hans": [
+      "propose-correction",
+      "导入失败：{message}",
+      "This software-import failure prefix uses the goods-import term 进口; 导入 is the correct data/file import term.",
+      "high"
+    ],
+    "410|ja": [
+      "propose-correction",
+      "インポート失敗：{message}",
+      "This software-import failure prefix uses 輸入, which ordinarily means importing goods; インポート is the standard software term.",
+      "high"
+    ],
+    "410|pt-BR": [
+      "propose-refinement",
+      "Falha na importação: {message}",
+      "This is a software-import failure prefix; the current 'Importação falha' is less natural than the conventional 'Falha na importação'.",
+      "moderate"
+    ],
+    "410|ko": [
+      "propose-correction",
+      "가져오기 실패: {message}",
+      "This software-import failure prefix currently uses 수입, which commonly means importing goods; 가져오기 is the standard software term. It also removes the stray space before the colon.",
+      "high"
+    ],
+    "410|zh-Hant": [
+      "propose-correction",
+      "匯入失敗：{message}",
+      "This software-import failure prefix uses 進口, which refers to importing goods; 匯入 is standard for importing data.",
+      "high"
+    ],
+    "410|vi": [
+      "propose-correction",
+      "Nhập dữ liệu thất bại: {message}",
+      "This is a software-import failure prefix; nhập khẩu ordinarily means importing goods, whereas Nhập dữ liệu describes data import.",
+      "high"
+    ],
+    "413|ja": [
+      "propose-refinement",
+      "Chaptarrからのテストメッセージが{timestamp}に投稿されました",
+      "This test-notification body says a message was posted at a timestamp; the current Japanese omits the subject particle が.",
+      "moderate"
+    ],
+    "414|de": [
+      "propose-correction",
+      "Erfolg! Sie haben Ihre E-Mail-Benachrichtigungseinstellungen korrekt konfiguriert.",
+      "This email test-success body is about notification settings; E-Mail-Nachricht-Einstellungen incorrectly reads as email-message settings.",
+      "high"
+    ],
+    "414|fr": [
+      "propose-refinement",
+      "Succès ! Vous avez correctement configuré vos paramètres de notification par e-mail.",
+      "This email test-success body is clearer with the standard French success interjection Succès rather than Réussite.",
+      "moderate"
+    ],
+    "414|pt-BR": [
+      "propose-refinement",
+      "Sucesso! Você configurou corretamente suas configurações de notificação por e-mail.",
+      "This email test-success body starts a new sentence after an exclamation but uses lowercase você; this fixes sentence capitalization and keeps the configuration claim.",
+      "high"
+    ],
+    "414|ar": [
+      "propose-refinement",
+      "نجاح! لقد قمت بتكوين إعدادات إشعار البريد الإلكتروني بشكل صحيح.",
+      "This email test-success body currently joins the exclamation to the following sentence without a space.",
+      "moderate"
+    ],
+    "414|ko": [
+      "propose-refinement",
+      "성공했습니다! 이메일 알림 설정이 올바르게 구성되었습니다.",
+      "This email test-success body has no space after the exclamation and uses an awkward second-person subject; the candidate gives a natural Korean status message.",
+      "high"
+    ],
+    "414|vi": [
+      "propose-refinement",
+      "Thành công! Bạn đã cấu hình đúng cài đặt thông báo email.",
+      "This email test-success body starts a new Vietnamese sentence after an exclamation; capitalize Bạn and remove the repetitive settings wording.",
+      "moderate"
+    ],
+    "417|ja": [
+      "propose-refinement",
+      "これはChaptarrからMailgunを通じて送信されるテストメッセージです。",
+      "This test body describes a message sent through Mailgun; the current Japanese clause order is unnatural and lacks a clear sending verb.",
+      "moderate"
+    ],
+    "417|ko": [
+      "propose-correction",
+      "Chaptarr에서 Mailgun을 통해 보내는 테스트 메시지입니다.",
+      "This test body says the message is sent through Mailgun; the current Korean attaches the wrong particle to Mailgun.",
+      "high"
+    ],
+    "420|de": [
+      "propose-correction",
+      "Gewünschte Bücher",
+      "This is a sensor heading for books the user wants; Wünschte is an incorrect adjective form here.",
+      "high"
+    ],
+    "421|de": [
+      "propose-refinement",
+      "Kommende Veröffentlichungen",
+      "This book-release sensor heading is clearer in German with Veröffentlichungen than the English loanword Releases.",
+      "moderate"
+    ],
+    "421|ja": [
+      "propose-refinement",
+      "今後発売予定の書籍",
+      "This sensor reports upcoming book releases; 次のリリース sounds like software releases and is vague for the book domain.",
+      "moderate"
+    ],
+    "421|fr": [
+      "propose-refinement",
+      "Prochaines parutions",
+      "This book-release sensor heading is more idiomatic French as parutions than éditions.",
+      "moderate"
+    ],
+    "421|ko": [
+      "propose-refinement",
+      "출간 예정 도서",
+      "This sensor reports upcoming book publications; 출시 is generic product/software release wording, while 출간 예정 도서 is specific to books.",
+      "moderate"
+    ],
+    "421|zh-Hans": [
+      "propose-refinement",
+      "即将出版",
+      "This sensor reports upcoming book releases; 出版 makes the book context explicit instead of the generic 发布.",
+      "moderate"
+    ],
+    "421|zh-Hant": [
+      "propose-refinement",
+      "即將出版",
+      "This sensor reports upcoming book releases; 出版 makes the book context explicit instead of the generic 發佈.",
+      "moderate"
+    ],
+    "421|vi": [
+      "propose-refinement",
+      "Sách sắp phát hành",
+      "This sensor heading is about upcoming book releases; the current phrase has unnatural word order and leaves the book context implicit.",
+      "moderate"
+    ],
+    "422|zh-Hans": [
+      "propose-correction",
+      "书库大小",
+      "This MQTT sensor reports the data size of Chaptarr's book collection; 图书馆大小 suggests the physical dimensions of a library building.",
+      "high"
+    ],
+    "422|zh-Hant": [
+      "propose-correction",
+      "書庫大小",
+      "This MQTT sensor reports the data size of Chaptarr's book collection; 圖書館大小 suggests the physical dimensions of a library building.",
+      "high"
+    ],
+    "422|hi": [
+      "propose-refinement",
+      "पुस्तक संग्रह का आकार",
+      "This MQTT sensor reports the size of the application's book collection; पुस्तकालय का आकार can suggest the dimensions of a physical library.",
+      "moderate"
+    ],
+    "422|ko": [
+      "propose-correction",
+      "책 컬렉션 크기",
+      "This MQTT sensor reports the data size of the application's book collection; 도서관 크기 suggests the size of a physical library building.",
+      "high"
+    ],
+    "422|id": [
+      "propose-refinement",
+      "Ukuran koleksi buku",
+      "This MQTT sensor reports the data size of the application's book collection; perpustakaan can suggest the physical institution.",
+      "moderate"
+    ],
+    "422|vi": [
+      "propose-refinement",
+      "Dung lượng thư viện",
+      "This MQTT sensor reports a data-size value in bytes, so Dung lượng is clearer than Kích thước, which suggests physical dimensions.",
+      "high"
+    ],
+    "423|ko": [
+      "propose-refinement",
+      "최근 가져오기",
+      "This sensor label means the most recent software import; 수입 commonly means importation of goods, while 가져오기 is the software action.",
+      "moderate"
+    ],
+    "425|pt-BR": [
+      "propose-refinement",
+      "Livro baixado",
+      "This is Brazilian Portuguese; baixado is the conventional term for downloaded media, while descarregado is more common in European Portuguese.",
+      "moderate"
+    ],
+    "426|de": [
+      "propose-correction",
+      "Download fehlgeschlagen",
+      "This notification heading reports a failed download; versagt is not idiomatic German for a download failure.",
+      "high"
+    ],
+    "426|vi": [
+      "propose-refinement",
+      "Tải xuống thất bại",
+      "This notification heading refers to a failed download; the current target leaves the English word Download untranslated.",
+      "moderate"
+    ],
+    "427|zh-Hans": [
+      "propose-correction",
+      "导入失败",
+      "This software-import failure heading uses 进口, which refers to goods; 导入 is the standard data/file import term.",
+      "high"
+    ],
+    "427|zh-Hant": [
+      "propose-correction",
+      "匯入失敗",
+      "This software-import failure heading uses 進口, which refers to goods; 匯入 is standard for importing data.",
+      "high"
+    ],
+    "427|ja": [
+      "propose-correction",
+      "インポート失敗",
+      "This software-import failure heading uses 輸入, which ordinarily means importing goods; インポート is the standard software term.",
+      "high"
+    ],
+    "427|ko": [
+      "propose-correction",
+      "가져오기 실패",
+      "This software-import failure heading uses 수입, which commonly means importing goods; 가져오기 is the standard software term.",
+      "high"
+    ],
+    "427|vi": [
+      "propose-correction",
+      "Nhập dữ liệu thất bại",
+      "This software-import failure heading uses nhập khẩu, which ordinarily means importing goods; Nhập dữ liệu describes data import.",
+      "high"
+    ],
+    "430|hi": [
+      "propose-refinement",
+      "{author} - {book} ({count} फ़ाइलें आयात की गईं)",
+      "This imported-files notification includes a count; फ़ाइलें आयातित is an awkward participle construction in this sentence fragment.",
+      "moderate"
+    ],
+    "431|zh-Hans": [
+      "propose-correction",
+      "Chaptarr 未能导入 {source} 的所有文件",
+      "This error says Chaptarr failed to import files; the current target uses the goods-import term 进口 and attaches the source awkwardly.",
+      "high"
+    ],
+    "431|zh-Hant": [
+      "propose-correction",
+      "Chaptarr 無法匯入 {source} 的所有檔案",
+      "This error says Chaptarr failed to import files; the current target uses the goods-import term 進口 and Simplified 文件.",
+      "high"
+    ],
+    "431|de": [
+      "propose-correction",
+      "Chaptarr konnte nicht alle Dateien für {source} importieren",
+      "The current German is an incomplete infinitive clause without a modal verb; this forms a grammatical failure statement.",
+      "high"
+    ],
+    "431|ja": [
+      "propose-correction",
+      "Chaptarrは{source}からすべてのファイルをインポートできませんでした",
+      "The current Japanese places the source after the files and uses a failure fragment; the candidate expresses the source of the files and failed import naturally.",
+      "high"
+    ],
+    "431|ko": [
+      "propose-correction",
+      "Chaptarr는 {source}의 모든 파일을 가져오지 못했습니다",
+      "This is a software import error; the current 수입 means goods import, while 가져오다 is the appropriate file-import verb.",
+      "high"
+    ],
+    "431|pt-BR": [
+      "propose-refinement",
+      "O Chaptarr não conseguiu importar todos os arquivos de {source}",
+      "This is an incomplete-import error; de {source} more clearly identifies where the files came from than the current para {source}.",
+      "moderate"
+    ],
+    "431|vi": [
+      "propose-refinement",
+      "Chaptarr không thể nhập tất cả tệp từ {source}",
+      "This incomplete-import error is clearer with natural Vietnamese word order and the source relationship expressed as from {source}.",
+      "moderate"
+    ],
+    "434|zh-Hans": [
+      "propose-correction",
+      "Chaptarr 已从 {previous} 更新到 {current}",
+      "This update notification must say the application was updated from one version to another; the current Chinese omits 从 and reads as a fragment.",
+      "high"
+    ],
+    "434|zh-Hant": [
+      "propose-correction",
+      "Chaptarr 已從 {previous} 更新至 {current}",
+      "This update notification must say the application was updated from one version to another; the current Chinese omits 從 and reads as a fragment.",
+      "high"
+    ],
+    "434|hi": [
+      "propose-refinement",
+      "Chaptarr को {previous} से {current} तक अपडेट किया गया",
+      "This update notification currently reads as a fragment; the candidate states that Chaptarr was updated from the previous version to the current one.",
+      "moderate"
+    ],
+    "434|ja": [
+      "propose-correction",
+      "Chaptarrを{previous}から{current}に更新しました",
+      "The current Japanese uses まで, which suggests an endpoint/interval; this notification reports a version transition from one version to another.",
+      "high"
+    ],
+    "434|ko": [
+      "propose-refinement",
+      "Chaptarr이 {previous}에서 {current}로 업데이트되었습니다",
+      "This update notification currently reads as a noun fragment; the candidate clearly reports a completed version update.",
+      "moderate"
+    ],
+    "437|hi": [
+      "propose-correction",
+      "पुस्तक जोड़ी गई: {message}",
+      "पुस्तक is feminine, so the current masculine जोड़ा गया has incorrect grammatical agreement.",
+      "high"
+    ],
+    "437|vi": [
+      "propose-correction",
+      "Đã thêm sách: {message}",
+      "This notification prefix reports a completed event; the current Thêm sách reads as an imperative rather than 'book added'.",
+      "high"
+    ],
+    "438|id": [
+      "propose-refinement",
+      "Dihapus: {message}",
+      "This notification prefix reports an item that was deleted; Penghapusan is a noun meaning 'deletion' rather than the event status.",
+      "moderate"
+    ],
+    "439|es": [
+      "propose-refinement",
+      "Problema de salud: {message}",
+      "The source is singular 'Health issue'; the current Problemas de salud changes it to plural health problems.",
+      "moderate"
+    ],
+    "441|de": [
+      "propose-correction",
+      "Manuell als fehlgeschlagen markiert",
+      "This download status says an item was manually marked as failed; versagt is not idiomatic in this construction.",
+      "high"
+    ],
+    "441|ko": [
+      "propose-correction",
+      "수동으로 실패 처리됨",
+      "This download status says an item was manually marked as failed; 손으로 means by hand and is not the natural Korean adverb here.",
+      "high"
+    ],
+    "441|vi": [
+      "propose-refinement",
+      "Đã được đánh dấu thất bại theo cách thủ công",
+      "The current Vietnamese can read as a 'manual failure'; the candidate clearly says the item was manually marked as failed.",
+      "moderate"
+    ],
+    "443|de": [
+      "propose-refinement",
+      "Verschlüsselter Download erkannt",
+      "This heading announces detection of a single encrypted download; the current plural is inaccurate. Nominative singular plus the detected participle fits a compact German notification heading.",
+      "moderate"
+    ],
+    "444|zh-Hans": [
+      "propose-correction",
+      "此下载中的所有文件格式都不符合质量配置文件的允许范围（{value0}）",
+      "The current Chinese says no file has a format allowed by the profile in an awkward word order; this clearly states that none of the file formats qualify.",
+      "high"
+    ],
+    "444|zh-Hant": [
+      "propose-correction",
+      "此下載中的所有檔案格式都不符合品質設定檔允許的範圍（{value0}）",
+      "The current Traditional Chinese is grammatically awkward and uses Simplified 文件; this clearly states that none of the file formats qualify.",
+      "high"
+    ],
+    "444|ja": [
+      "propose-correction",
+      "このダウンロードには、品質プロファイルで許可された形式のファイルがありません（{value0}）",
+      "The current Japanese says the files themselves are not a format; this candidate states that none of the files has an allowed format.",
+      "high"
+    ],
+    "444|ar": [
+      "propose-refinement",
+      "لا يحتوي هذا التنزيل على أي ملف بتنسيق يسمح به ملف تعريف الجودة ({value0})",
+      "The current Arabic repeats في and has awkward word order; this expresses that the download contains no file of an allowed format.",
+      "moderate"
+    ],
+    "444|vi": [
+      "propose-correction",
+      "Không có tệp nào trong bản tải xuống này có định dạng được hồ sơ chất lượng cho phép ({value0})",
+      "The current Vietnamese repeats trong and has unnatural phrasing; the candidate clearly states that no file has a permitted format.",
+      "high"
+    ],
+    "444|id": [
+      "propose-refinement",
+      "Tidak ada file dalam unduhan ini yang memiliki format yang diizinkan oleh profil kualitas ({value0})",
+      "The current Indonesian repeats dalam; this candidate states clearly that no file in the download has a permitted format.",
+      "moderate"
+    ],
+    "445|de": [
+      "propose-refinement",
+      "Kategorie und Verzeichnis können nicht zusammen verwendet werden",
+      "This validation error refers to a category and directory setting; Verzeichnis is more common German UI terminology than Direktorium.",
+      "moderate"
+    ],
+    "449|zh-Hans": [
+      "propose-correction",
+      "至少需要一个音乐库",
+      "This Plex validation error requires a Music media-library section; 图书馆 means a physical library building, while 音乐库 is the media-library term.",
+      "high"
+    ],
+    "449|zh-Hant": [
+      "propose-correction",
+      "至少需要一個音樂資料庫",
+      "This Plex validation error requires a Music media-library section; 圖書館 means a physical library building, while 音樂資料庫 is the media-library term.",
+      "high"
+    ],
+    "449|hi": [
+      "propose-refinement",
+      "कम से कम एक संगीत संग्रह आवश्यक है",
+      "This Plex validation error requires a music media collection; पुस्तकालय can suggest a physical library building.",
+      "moderate"
+    ],
+    "449|ko": [
+      "propose-correction",
+      "음악 라이브러리가 하나 이상 필요합니다",
+      "This Plex validation error requires a Music media-library section; 도서관 means a physical library building, while 라이브러리 is the software/media-library term.",
+      "high"
+    ],
+    "449|id": [
+      "propose-refinement",
+      "Setidaknya diperlukan satu koleksi musik",
+      "This Plex validation error requires a music media collection; perpustakaan can suggest a physical library institution.",
+      "moderate"
+    ],
+    "449|vi": [
+      "propose-refinement",
+      "Cần có ít nhất một thư viện nhạc",
+      "This Plex validation error requires a Music media-library section; this wording makes the book/media collection sense clearer than the current music-library phrasing.",
+      "moderate"
+    ],
+    "447|es": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|zh-Hans": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|hi": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|de": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|ja": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|fr": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|pt-BR": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|ar": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|ko": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|zh-Hant": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|vi": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ],
+    "447|id": [
+      "hold",
+      null,
+      "No exact source-ID or matching source-text caller is present in the pinned production C# sources. The source meaning is clear, but the caller and value0 role are unverified; retain the current target pending that mapping.",
+      "low"
+    ]
+  },
+  "sourceRationales": {
+    "400": "Twitter, Slack, and Discord use this prefix for a completed imported-book notification and interpolate the imported item message.",
+    "401": "NotificationBase, Slack, and Discord use this as the heading for an author-added event.",
+    "402": "NotificationBase, Slack, and Discord use this as the heading for a book-added event.",
+    "403": "NotificationBase, Slack, and Discord use this as the heading for an author-deleted event.",
+    "404": "NotificationBase, Slack, and Discord use this as the heading for a book-deleted event.",
+    "405": "Slack and Discord use this as an attachment title containing the author and book, then the file-deleted status.",
+    "406": "NotificationBase, Slack, and Discord use this as the heading for a deleted book file.",
+    "407": "NotificationBase, Slack, and Discord use this as the heading when a health check fails.",
+    "408": "Discord uses this prefix for a notification that book-file tags were updated and interpolates the message.",
+    "409": "Twitter, Slack, and Discord use this prefix to report a failed download and interpolate the failure message.",
+    "410": "Twitter, Slack, and Discord use this prefix to report a failed import and interpolate the failure message.",
+    "411": "Discord uses this as the label for a previous-version field in an application update notification.",
+    "412": "Discord uses this as the label for a new-version field in an application update notification.",
+    "413": "Twitter, Slack, and Discord use this as a timestamped test-notification body.",
+    "414": "The Email notification provider uses this as the successful email-configuration test body.",
+    "415": "Multiple notification providers use this as the body of a test message.",
+    "416": "Kavita uses this as the success message after testing its notification configuration.",
+    "417": "Mailgun uses this as the body of a test message sent through Mailgun.",
+    "418": "The MQTT Home Assistant integration uses this as the Books Total sensor name.",
+    "419": "The MQTT Home Assistant integration uses this as the Audiobooks Total sensor name.",
+    "420": "The MQTT Home Assistant integration uses this as the Wanted Books sensor name.",
+    "421": "The MQTT Home Assistant integration uses this as the Upcoming Releases sensor name for tracked books.",
+    "422": "The MQTT Home Assistant integration reports a data-size measurement for the application's book library.",
+    "423": "The MQTT Home Assistant integration uses this as the last-import timestamp sensor name.",
+    "424": "NotificationBase uses this as the heading for a book-grabbed event sent to a download client.",
+    "425": "NotificationBase uses this as the heading for a completed book download.",
+    "426": "NotificationBase uses this as the heading for a failed download.",
+    "427": "NotificationBase uses this as the heading for a failed import.",
+    "428": "NotificationBase uses this as the heading for updated tags on a book file.",
+    "429": "NotificationBase uses this as the heading for an application update.",
+    "430": "NotificationService formats this body with the author, book title, and count of imported files.",
+    "431": "NotificationService formats this error with the source associated with a failed incomplete import.",
+    "432": "NotificationService uses this localized sentinel when the value for a notification field is empty; angle brackets are display punctuation, not markup.",
+    "433": "NotificationService uses this when a download title is unavailable.",
+    "434": "NotificationService formats an application-update message with previous and current version values.",
+    "435": "Subsonic uses this as the success message after testing its notification configuration.",
+    "436": "Twitter, Slack, and Discord use this prefix when announcing that an author was added.",
+    "437": "Twitter, Slack, and Discord use this prefix when announcing that a book was added.",
+    "438": "Twitter, Slack, and Discord use this prefix for deletion-event notifications.",
+    "439": "Twitter, Slack, and Discord use this prefix for health-issue notifications.",
+    "440": "Twitter, Slack, and Discord use this prefix for application-update notifications.",
+    "441": "FailedDownloadService uses this as the reason when a download is manually marked failed.",
+    "442": "FailedDownloadService uses this as the reason for a detected failed download.",
+    "443": "FailedDownloadService uses this as the reason when a downloaded file is detected as encrypted.",
+    "444": "FailedDownloadService uses this when no file in a download matches the quality profile; value0 carries the profile/format detail.",
+    "445": "Transmission and DownloadStation settings validators use this when a category and a directory are both configured.",
+    "446": "Apprise validation uses this when HTTP authentication credentials are rejected; value0 carries the exception detail.",
+    "447": "The English source says an author import failed and includes value0, but no production C# source-key or exact source-text caller was found at the pinned head.",
+    "448": "uTorrent's client parser uses this status message when the torrent reports an error.",
+    "449": "PlexServerService uses this validation message when the Plex account has no Music-type library section."
+  }
+}

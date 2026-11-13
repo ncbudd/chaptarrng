@@ -1,0 +1,38 @@
+{
+  "adjudicationCoverage": "182 recorded rows; remaining W950-W999 cells are explicitly not-in-adjudication-ledger",
+  "adjudicationRows": 182,
+  "applyReadbackRows": 600,
+  "crossReviewCoverage": "182 recorded rows; remaining W950-W999 cells are explicitly not-in-crossreview-ledger",
+  "crossReviewRows": 182,
+  "evidenceFiles": [
+    {
+      "bytes": 2635534,
+      "gitBlob": "85e3faf609490cdea12e9af04c8d0b8604b0dfd0",
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/primary/review-cells.jsonl",
+      "sha256": "21001287bea8f6abd0dfefca6da38fe39b42c87738ffd9419047ceedc07a8fc1"
+    },
+    {
+      "bytes": 285507,
+      "gitBlob": "26b3c560c8f819060e0712420f3d9642f9c5793d",
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/crossreview/cross-review-ledger.jsonl",
+      "sha256": "ed009cfc28cdb36550a49a2a75fc454eecfb78b6a5c23e96a0d5d6d6efdbf648"
+    },
+    {
+      "bytes": 398274,
+      "gitBlob": "d008c172ea29b5b5abaa4fb448ef795c096aec81",
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/adjudication/adjudication-ledger.jsonl",
+      "sha256": "220c123e63c321b44de87deb02d10b1bd9a2fb419373e72b327bc921ef76c073"
+    },
+    {
+      "bytes": 257314,
+      "gitBlob": "5520909492974f75aad8f77aa603e1dd0793db94",
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/application/full-window-readback.jsonl",
+      "sha256": "7ef0a43915af90a5233cc67bd044b303b80313cd6bd23b69728f6bdf478bfba7"
+    }
+  ],
+  "positions": [
+    950,
+    999
+  ],
+  "primaryReviewRows": 600
+}

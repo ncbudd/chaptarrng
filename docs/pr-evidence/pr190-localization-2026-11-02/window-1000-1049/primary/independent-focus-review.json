@@ -1,0 +1,133 @@
+{
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "independentPassFindings": [
+    {
+      "adjudication": "Adopted all except the Korean and German suggestions were already represented in the primary ledger. The Spanish/French/Portuguese gender recommendations were added after checking the caller enum names for priority values.",
+      "result": "candidate corrections in review-cells.jsonl",
+      "suggestions": [
+        "de sehr niedriger -> sehr niedrig",
+        "es muy bajo/Muy alto -> muy baja/Muy alta",
+        "fr très bas -> Très basse",
+        "ko 매우 낮은/매우 높은 -> 매우 낮음/매우 높음",
+        "pt-BR Muito baixo/Muito alto -> Muito baixa/Muito alta"
+      ],
+      "topic": "W1021-W1022 priority values"
+    },
+    {
+      "adjudication": "Adopted all four as correction/refinement candidates.",
+      "result": "candidate corrections/refinements in review-cells.jsonl",
+      "suggestions": [
+        "fr Comme nouveau -> Comme neuf",
+        "id Seperti yang baru -> Seperti baru",
+        "ja 新しいように -> 新品同様",
+        "ko 새로운 것처럼 -> 새것과 같음"
+      ],
+      "topic": "W1025 Like New"
+    },
+    {
+      "adjudication": "Adopted all six as candidates. Hindi/PT-BR suggestions were assessed against the neighboring standalone book-condition grades; native review still outstanding.",
+      "result": "candidate corrections/refinements in review-cells.jsonl",
+      "suggestions": [
+        "ar الجيد -> جيد",
+        "fr Bonne -> Bon",
+        "hi अच्छे -> अच्छा",
+        "id yang baik -> Baik",
+        "ko 좋은 -> 좋음",
+        "pt-BR Boa -> Bom"
+      ],
+      "topic": "W1027 Good"
+    },
+    {
+      "adjudication": "Adopted as a concise standalone grade refinement.",
+      "result": "candidate refinement in review-cells.jsonl",
+      "suggestion": "yang dapat diterima -> Dapat diterima",
+      "topic": "W1028 Indonesian"
+    },
+    {
+      "adjudication": "Adopted Spanish, Indonesian, Japanese, Hindi, and Vietnamese candidates.",
+      "result": "candidate corrections/refinements in review-cells.jsonl",
+      "suggestions": [
+        "es papelera de reciclaje",
+        "id use Indonesian place-name for recycle bin",
+        "ja use ごみ箱",
+        "hi use a familiar computer term for recycle bin",
+        "vi Đường -> Đường dẫn and avoid bin tái chế calque"
+      ],
+      "topic": "W1038 recycle-bin message"
+    },
+    {
+      "adjudication": "Adopted Spanish, French, Hindi, Brazilian Portuguese, Vietnamese, Korean, and both Chinese recommendations. Also normalized Indonesian Path -> Jalur as a refinement.",
+      "result": "candidate corrections/refinements in review-cells.jsonl",
+      "suggestions": [
+        "es pasta -> carpeta",
+        "fr voie -> chemin",
+        "hi मार्ग -> पथ",
+        "pt-BR start-up -> inicialização",
+        "vi Đường -> Đường dẫn",
+        "ko and zh placeholders should stay inside the system-folder phrase"
+      ],
+      "topic": "W1041-W1042 filesystem paths"
+    },
+    {
+      "adjudication": "Adopted both candidates.",
+      "result": "candidate corrections/refinements in review-cells.jsonl",
+      "suggestions": [
+        "hi preserve ongoing bookshelf action",
+        "id include bookshelf/rak buku"
+      ],
+      "topic": "W1043 Hindi/Indonesian bookshelf loading line"
+    },
+    {
+      "adjudication": "Adopted the more idiomatic candidate while preserving protected lowercase chaptarr.",
+      "result": "candidate refinement in review-cells.jsonl",
+      "suggestion": "Make transition phrase natural; keep chaptarr exact.",
+      "topic": "W1044 Hindi product pun"
+    },
+    {
+      "adjudication": "Adopted holds for ar, hi, id, ja, ko, vi, zh-Hans, zh-Hant; no speculative replacement was carried into the primary target for those cells. Other locales retain current text where it preserves the joke adequately.",
+      "result": "holds.jsonl",
+      "suggestion": "Hold awkward/altered humorous variants for native review.",
+      "topic": "W1047 eBook smell joke"
+    },
+    {
+      "adjudication": "Adopted Japanese and Korean candidates. The existing Vietnamese wording remains understandable and no higher-confidence alternative was established; retained current pending native review.",
+      "result": "candidate corrections/refinements in review-cells.jsonl",
+      "suggestions": [
+        "ja identify the place to continue reading",
+        "ko avoid literal 당신의 장소",
+        "vi consider a more book-specific phrase"
+      ],
+      "topic": "W1048 Japanese/Korean/Vietnamese"
+    },
+    {
+      "adjudication": "Adopted the correction. Arabic and Indonesian remain explicit holds for idiomatic slogan review; Chinese refinements were independently assessed in the primary pass.",
+      "result": "candidate correction/holds in review-cells.jsonl",
+      "suggestion": "Use familiar Hindi loan verb रिवाइंड.",
+      "topic": "W1049 Hindi rewind slogan"
+    }
+  ],
+  "nativeSpeakerStatus": "No human native speaker was consulted; native approval is outstanding for all 12 locales.",
+  "reviewNature": "Separate machine-assisted target-language review; no native-speaker approval claimed.",
+  "reviewer": "independent child-agent focus pass",
+  "scope": {
+    "cells": 348,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "positions": [
+      1021,
+      1049
+    ]
+  }
+}

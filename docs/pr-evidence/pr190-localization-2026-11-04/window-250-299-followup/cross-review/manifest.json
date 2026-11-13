@@ -1,0 +1,53 @@
+{
+  "artifacts": {
+    "README.md": "08247ec51d1b37e42a4b23d03aa8a00a53b4c7fc2d1be7e4094c905b0bbad207",
+    "base-drift-comparison.json": "6a3f556f284049e282ef723c439e41110f4019a81a0e672805978d5cd680ef59",
+    "build_cross_review.py": "f019fb691d44ab3c747e67b6553f62844e4316bf0d0e7c15a2134757cc212459",
+    "caller-evidence.json": "a0745cb1a29964a22dcba7459ac9b3cb0e473fabc96a6385ec4fb84349a120b3",
+    "cross-review-cells.jsonl": "177b2ea1334323eb15e1c20ba87daacb7240d2b7d46d20fb0c09a2b2f88b8fbd",
+    "cross-review-summary.json": "f9e8abe69211d0892f9da2055b786d24eb95ee75b3444bc18899632b47e84bd9",
+    "decision-reconciliation.json": "4e9e3b76ff6b4908f45da8ff348764f41a4d9b0c13936185d6f3a240093bd93c",
+    "live-pr-attestation.json": "c547d9057716afe643b159f195bb9113c12c8f96b44532663a2d55df68eea42e",
+    "review-selections.json": "eefa7dc54244b6fdf1a86d4fd4346c6751844590ee8be7cc3871d6340fe03d13",
+    "selected-changes.jsonl": "d248edf2e18642fec1ce497a912df4091f1ca24c942352d401213f079b722f74",
+    "verify_cross_review.py": "6d675877d248e59ddec8a95bd23d752368b68b5d1a02baf7c2efd5a564935b8c"
+  },
+  "batch": "W250-W299-Core",
+  "createdAtUTC": "2026-11-04T22:12:52+00:00",
+  "dispositions": {
+    "accept-current": 558,
+    "propose-change": 42
+  },
+  "head": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "inputHashes": {
+    "blindCellsSha256": "34a9c198c78affc59daeb98a808f381d5083eff9b24e067d912fb247d04a5eb6",
+    "blindFindingsSha256": "ccdeb9f4dc42ecf4e150c5c600582c3932c338b031254625be483efe60538d3b",
+    "candidateFreeCallerContextSha256": "ec4be7a4cee3bfffa60861c15311bbf466a19f449538b0dc4d5cbaf83962d50c",
+    "candidateFreeCellsSha256": "9d6b6377845791a8d42c47007368096fabb19e3dd1696bb7f1425b487aae0dbb",
+    "candidateFreeManifestSha256": "56f8e42152bc00be4be0a26516241237c8a8c7a6be2b2208d824148239de3666",
+    "primaryCellsSha256": "f3d4394670aa9de2a56ff34c2ef2cb9670d6c5ccad562d63cc2ea2f22e61840b",
+    "primaryProposalsSha256": "67acc3f797ef2c6e9a88785294abc337444c92660e1f48940daa90748de91c26"
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "result": "PASS",
+  "scope": {
+    "cells": 600,
+    "locales": 12,
+    "sourceKeys": 50
+  },
+  "scopeControls": {
+    "PRBodyRead": false,
+    "PRWrites": false,
+    "catalogEdits": false,
+    "testsBuildsCIWorkflowRuns": false
+  },
+  "selectedChangeCells": 42,
+  "sourceWorktree": {
+    "clean": true,
+    "head": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+    "path": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-next-window",
+    "tree": "f6ae6530b73bf581c1fbc5a8c13eacd7342e9172"
+  },
+  "tree": "f6ae6530b73bf581c1fbc5a8c13eacd7342e9172"
+}

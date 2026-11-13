@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "artifact": "ChaptarrNG PR #190 W50-W99 independent cross-audit",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "pullRequestUrl": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "exactHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+  "exactTree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+  "baseRefName": "main",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "prState": "OPEN",
+  "draft": true,
+  "mergeStateStatus": "CLEAN",
+  "window": [
+    50,
+    99
+  ],
+  "sourceKeyCount": 50,
+  "localeCount": 12,
+  "cellCount": 600,
+  "primaryProposalCount": 139,
+  "blindProposalCount": 58,
+  "proposalUnionCount": 166,
+  "proposalOverlapCount": 31,
+  "sameTargetOverlapCount": 19,
+  "differentTargetOverlapCount": 12,
+  "primaryOnlyProposalCount": 108,
+  "blindOnlyProposalCount": 27,
+  "crossDispositionCounts": {
+    "correction": 68,
+    "accept-current": 367,
+    "refinement": 81,
+    "hold": 84
+  },
+  "selectedProposalCount": 149,
+  "selectedCellsByLocale": {
+    "ar": 13,
+    "de": 14,
+    "es": 14,
+    "id": 11,
+    "ja": 15,
+    "ko": 10,
+    "pt-BR": 11,
+    "vi": 14,
+    "zh-Hans": 12,
+    "zh-Hant": 14,
+    "fr": 11,
+    "hi": 10
+  },
+  "callerlessKeys": [
+    "AddMissing",
+    "AddNewAuthorRootFolderHelpText",
+    "AddRootFolderInlineIntroAllMediaType",
+    "AddRootFolderInlineIntroPrefix",
+    "AddRootFolderInlineIntroSuffix",
+    "AddRootFolderInlineRootFolderLabel",
+    "AdjustEbookConversionSettings"
+  ],
+  "textFreeHoldCount": 84,
+  "proposalUnionCellsHeldWithoutCallerContext": 18,
+  "proposalUnionCellsAcceptedCurrent": 3,
+  "differentTargetDisagreementsResolved": 11,
+  "differentTargetDisagreementsHeld": 1,
+  "tokenMismatches": 0,
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repoOrPrModified": false,
+  "inputVerifiers": {
+    "candidateFree": "PASS",
+    "primary": "PASS",
+    "blind": "PASS"
+  },
+  "notes": [
+    "All 84 cells on seven callerless keys are text-free holds, including 18 proposal cells.",
+    "Eleven different-target overlaps are resolved; one callerless disagreement remains text-free held.",
+    "AddedAuthorSettings was checked against both pinned callers; these fields configure defaults for authors being added.",
+    "Four independent findings correct Vietnamese More options, Hindi/Japanese placeholder word order, and German tooltip grammar.",
+    "No repository or PR changes. No tests, builds, additional scans, or CI. No browser or native-speaker approval claimed."
+  ]
+}

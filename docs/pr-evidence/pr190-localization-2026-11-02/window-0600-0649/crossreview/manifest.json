@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "task": "ChaptarrNG PR #190 W600–649 independent cross-review",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "attestedHead": "f405a6256c2661e48e412ac4471ce70411baf98c",
+  "attestedTree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0600-0649-primary-20261102",
+  "rows": {
+    "sources": 50,
+    "cells": 600,
+    "callerReferences": 64,
+    "candidateReviews": 201,
+    "w599Boundary": 12,
+    "w650Boundary": 12,
+    "missedIssues": 3,
+    "finalDispositions": 600
+  },
+  "repositoryOrPrModified": false
+}

@@ -1,0 +1,428 @@
+{
+  "allPassed": true,
+  "exactHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "exactTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "fileCount": 42,
+  "files": [
+    {
+      "actualBytes": 9932,
+      "actualGitBlob": "05341fb7426720e53ab12897edfb8bcba7a76d8d",
+      "actualSha256": "cfe66595d3f34ca1d2fe65d7837d1a860d57c8bdb0e039c62d8104f8b048cd26",
+      "expectedBytes": 9932,
+      "expectedGitBlob": "05341fb7426720e53ab12897edfb8bcba7a76d8d",
+      "expectedSha256": "cfe66595d3f34ca1d2fe65d7837d1a860d57c8bdb0e039c62d8104f8b048cd26",
+      "pass": true,
+      "path": "docs/localization/loading-message-sources.json"
+    },
+    {
+      "actualBytes": 21781,
+      "actualGitBlob": "1531851877466bbfeb0b16072fcf07d6dda925e2",
+      "actualSha256": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b",
+      "expectedBytes": 21781,
+      "expectedGitBlob": "1531851877466bbfeb0b16072fcf07d6dda925e2",
+      "expectedSha256": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b",
+      "pass": true,
+      "path": "docs/localization/server-message-callers.json"
+    },
+    {
+      "actualBytes": 766677,
+      "actualGitBlob": "88e18b12684ca7ece5b4680094188d2ff644d663",
+      "actualSha256": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825",
+      "expectedBytes": 766677,
+      "expectedGitBlob": "88e18b12684ca7ece5b4680094188d2ff644d663",
+      "expectedSha256": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825",
+      "pass": true,
+      "path": "docs/localization/server-message-sources.json"
+    },
+    {
+      "actualBytes": 50936,
+      "actualGitBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+      "actualSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+      "expectedBytes": 50936,
+      "expectedGitBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+      "expectedSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+      "pass": true,
+      "path": "docs/localization/source-followup-20261101.json"
+    },
+    {
+      "actualBytes": 7494,
+      "actualGitBlob": "4c9bd6f0f4eb8d0c5e1970f788fb85ab115a9382",
+      "actualSha256": "4f766592488412e50cd2d166d584d996a93497abdeb38c2039e2e2d8bbdf3444",
+      "expectedBytes": 7494,
+      "expectedGitBlob": "4c9bd6f0f4eb8d0c5e1970f788fb85ab115a9382",
+      "expectedSha256": "4f766592488412e50cd2d166d584d996a93497abdeb38c2039e2e2d8bbdf3444",
+      "pass": true,
+      "path": "docs/localization/terminology.json"
+    },
+    {
+      "actualBytes": 21422,
+      "actualGitBlob": "5ab4fa45dd12d045e9a8197623d852e8622556c4",
+      "actualSha256": "acae453df23f3b572883ddcf460af845708c0e391ff79aaf0ae7097033568cbd",
+      "expectedBytes": 21422,
+      "expectedGitBlob": "5ab4fa45dd12d045e9a8197623d852e8622556c4",
+      "expectedSha256": "acae453df23f3b572883ddcf460af845708c0e391ff79aaf0ae7097033568cbd",
+      "pass": true,
+      "path": "frontend/src/Author/Edit/EditAuthorModalContent.js"
+    },
+    {
+      "actualBytes": 1996,
+      "actualGitBlob": "5678c0440384c40a4d7665c86f481e2e30ed8e95",
+      "actualSha256": "cfc29599278a6d62b5d36f2d31d3b2e5da61f0ab71ee9767d992be55fd88c060",
+      "expectedBytes": 1996,
+      "expectedGitBlob": "5678c0440384c40a4d7665c86f481e2e30ed8e95",
+      "expectedSha256": "cfc29599278a6d62b5d36f2d31d3b2e5da61f0ab71ee9767d992be55fd88c060",
+      "pass": true,
+      "path": "frontend/src/Components/Modal/ModalContent.js"
+    },
+    {
+      "actualBytes": 30902,
+      "actualGitBlob": "fe25e5fbdaf4ec668b89d7dc773c9f17f34d94f7",
+      "actualSha256": "6320debe55959afd13effe97e17a8269d8e258a55dc13ebb569e197c2251d079",
+      "expectedBytes": 30902,
+      "expectedGitBlob": "fe25e5fbdaf4ec668b89d7dc773c9f17f34d94f7",
+      "expectedSha256": "6320debe55959afd13effe97e17a8269d8e258a55dc13ebb569e197c2251d079",
+      "pass": true,
+      "path": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js"
+    },
+    {
+      "actualBytes": 8184,
+      "actualGitBlob": "4887f65d4ec57acf03961c375258b93a633d6a18",
+      "actualSha256": "7caab204d321c69b6dff3f1f5f17d06be9ad7bdbab72ed04300ab11fe0bd75f4",
+      "expectedBytes": 8184,
+      "expectedGitBlob": "4887f65d4ec57acf03961c375258b93a633d6a18",
+      "expectedSha256": "7caab204d321c69b6dff3f1f5f17d06be9ad7bdbab72ed04300ab11fe0bd75f4",
+      "pass": true,
+      "path": "frontend/src/Store/Actions/oAuthActions.js"
+    },
+    {
+      "actualBytes": 14742,
+      "actualGitBlob": "a64c0af0b23d1b5f16443a72d3e26a3577eb0450",
+      "actualSha256": "7a50da831dcef92d54ca42652f9d029834225a27b3f4eb68eab171ad1944ff52",
+      "expectedBytes": 14742,
+      "expectedGitBlob": "a64c0af0b23d1b5f16443a72d3e26a3577eb0450",
+      "expectedSha256": "7a50da831dcef92d54ca42652f9d029834225a27b3f4eb68eab171ad1944ff52",
+      "pass": true,
+      "path": "frontend/src/Store/Actions/releaseActions.js"
+    },
+    {
+      "actualBytes": 456,
+      "actualGitBlob": "836c51a0c57c7597f68e74de7b4ecf9823f939d4",
+      "actualSha256": "71c744cad758f52ed49a4db489cb79f1bf31d33aab5ce7ff883a9032f8904377",
+      "expectedBytes": 456,
+      "expectedGitBlob": "836c51a0c57c7597f68e74de7b4ecf9823f939d4",
+      "expectedSha256": "71c744cad758f52ed49a4db489cb79f1bf31d33aab5ce7ff883a9032f8904377",
+      "pass": true,
+      "path": "frontend/src/Utilities/Localization/scheduled-task-labels.cjs"
+    },
+    {
+      "actualBytes": 1725,
+      "actualGitBlob": "421adf7ca650f6be889615d2f538b5ed6a79122c",
+      "actualSha256": "6c92e998d0cee2eac0b4ddb350bf1daab1fba96809e37f2001fec8af12f93515",
+      "expectedBytes": 1725,
+      "expectedGitBlob": "421adf7ca650f6be889615d2f538b5ed6a79122c",
+      "expectedSha256": "6c92e998d0cee2eac0b4ddb350bf1daab1fba96809e37f2001fec8af12f93515",
+      "pass": true,
+      "path": "frontend/src/Utilities/Localization/scheduled-task-labels.json"
+    },
+    {
+      "actualBytes": 39972,
+      "actualGitBlob": "c4bd90729a7c3b6d7084b2ecc0027c5e531da73e",
+      "actualSha256": "22911d0473ba81c8a7b57cd0153c3a5be60bc0349f8dbd89d70aff5b8e3a04c6",
+      "expectedBytes": 39972,
+      "expectedGitBlob": "c4bd90729a7c3b6d7084b2ecc0027c5e531da73e",
+      "expectedSha256": "22911d0473ba81c8a7b57cd0153c3a5be60bc0349f8dbd89d70aff5b8e3a04c6",
+      "pass": true,
+      "path": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs"
+    },
+    {
+      "actualBytes": 10203,
+      "actualGitBlob": "a43e58d6fb4747e6131e1de83284974cc24f7eed",
+      "actualSha256": "e07c6e1115eb48e406dbc95d327b045bb7d2a101a0f41f0b3a81fe4cec2cb80d",
+      "expectedBytes": 10203,
+      "expectedGitBlob": "a43e58d6fb4747e6131e1de83284974cc24f7eed",
+      "expectedSha256": "e07c6e1115eb48e406dbc95d327b045bb7d2a101a0f41f0b3a81fe4cec2cb80d",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Download/DownloadClientProvider.cs"
+    },
+    {
+      "actualBytes": 11158,
+      "actualGitBlob": "33e55bca04c3c2e2746f7183eb960edd2b8ff9fc",
+      "actualSha256": "aee2aa980129a2f16ccd49fba9151f00a68755e1392485dbd19ef5413f55ec95",
+      "expectedBytes": 11158,
+      "expectedGitBlob": "33e55bca04c3c2e2746f7183eb960edd2b8ff9fc",
+      "expectedSha256": "aee2aa980129a2f16ccd49fba9151f00a68755e1392485dbd19ef5413f55ec95",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Download/DownloadService.cs"
+    },
+    {
+      "actualBytes": 714,
+      "actualGitBlob": "43f1e66a2d16b00f2f7945f0a0c376209f71654c",
+      "actualSha256": "3b5e5b8252dcbef44e7c0da2931bc343c6e0e8c8434d0e3a616ccde0fcdd8c58",
+      "expectedBytes": 714,
+      "expectedGitBlob": "43f1e66a2d16b00f2f7945f0a0c376209f71654c",
+      "expectedSha256": "3b5e5b8252dcbef44e7c0da2931bc343c6e0e8c8434d0e3a616ccde0fcdd8c58",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Download/TorrentAdoptionExceptions.cs"
+    },
+    {
+      "actualBytes": 8685,
+      "actualGitBlob": "4a1913f4b93eecf42d1416f2d1f99f18cbd5edfe",
+      "actualSha256": "8e0c2bbefb32b0aeb0906c63869dae7f3db2e9b701b1f4b35d7ffb9eddaf83e5",
+      "expectedBytes": 8685,
+      "expectedGitBlob": "4a1913f4b93eecf42d1416f2d1f99f18cbd5edfe",
+      "expectedSha256": "8e0c2bbefb32b0aeb0906c63869dae7f3db2e9b701b1f4b35d7ffb9eddaf83e5",
+      "pass": true,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs"
+    },
+    {
+      "actualBytes": 431828,
+      "actualGitBlob": "f90466ffbef6401a6c883602e69caacb90d60c5b",
+      "actualSha256": "38799f39ddaea6f121815bcaea2d99268930c62c52d960fb9543e44fd4f055fd",
+      "expectedBytes": 431828,
+      "expectedGitBlob": "f90466ffbef6401a6c883602e69caacb90d60c5b",
+      "expectedSha256": "38799f39ddaea6f121815bcaea2d99268930c62c52d960fb9543e44fd4f055fd",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json"
+    },
+    {
+      "actualBytes": 361931,
+      "actualGitBlob": "0cb4989cac971840b34eb1dc5be3fa9b46f3fa23",
+      "actualSha256": "e56c9be1e08ba1cbe50324fbafa1f1c0257ac8bfc8fb86988ec29b7ddea4068a",
+      "expectedBytes": 361931,
+      "expectedGitBlob": "0cb4989cac971840b34eb1dc5be3fa9b46f3fa23",
+      "expectedSha256": "e56c9be1e08ba1cbe50324fbafa1f1c0257ac8bfc8fb86988ec29b7ddea4068a",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/de.json"
+    },
+    {
+      "actualBytes": 312097,
+      "actualGitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+      "actualSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+      "expectedBytes": 312097,
+      "expectedGitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+      "expectedSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/en.json"
+    },
+    {
+      "actualBytes": 359571,
+      "actualGitBlob": "033d18c1e8d8923351e2b87e7868c1bdaea398ad",
+      "actualSha256": "e45dfcf6e23b67cbc65963768ac380d9ce42f21bb4df85afea5875fd0faa05a8",
+      "expectedBytes": 359571,
+      "expectedGitBlob": "033d18c1e8d8923351e2b87e7868c1bdaea398ad",
+      "expectedSha256": "e45dfcf6e23b67cbc65963768ac380d9ce42f21bb4df85afea5875fd0faa05a8",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/es.json"
+    },
+    {
+      "actualBytes": 375137,
+      "actualGitBlob": "9ef777a826e8788d588880f67ed5e9d01b90fceb",
+      "actualSha256": "ffe59fe7b06261163f2fa980a3cd203f591fca191cedd29e1c666868ea0b1384",
+      "expectedBytes": 375137,
+      "expectedGitBlob": "9ef777a826e8788d588880f67ed5e9d01b90fceb",
+      "expectedSha256": "ffe59fe7b06261163f2fa980a3cd203f591fca191cedd29e1c666868ea0b1384",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json"
+    },
+    {
+      "actualBytes": 605859,
+      "actualGitBlob": "35f960f065f6e9e4f9e99906be671ee6a92f2493",
+      "actualSha256": "e5d5459f8d92408b65b948a6254ade0111582efe8cc120457efd5cad5808bea9",
+      "expectedBytes": 605859,
+      "expectedGitBlob": "35f960f065f6e9e4f9e99906be671ee6a92f2493",
+      "expectedSha256": "e5d5459f8d92408b65b948a6254ade0111582efe8cc120457efd5cad5808bea9",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json"
+    },
+    {
+      "actualBytes": 333066,
+      "actualGitBlob": "6a38488336dfc46383059341d5a384ea2474f0fa",
+      "actualSha256": "0b8e41fc53d4bd142450fdb86fb365d0a4c2b2bd6d9cbda0d9e8468c25385df3",
+      "expectedBytes": 333066,
+      "expectedGitBlob": "6a38488336dfc46383059341d5a384ea2474f0fa",
+      "expectedSha256": "0b8e41fc53d4bd142450fdb86fb365d0a4c2b2bd6d9cbda0d9e8468c25385df3",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/id.json"
+    },
+    {
+      "actualBytes": 409478,
+      "actualGitBlob": "365f950c4ef649d1da40d7b52553e08a66be9df2",
+      "actualSha256": "177476619689744b0081beb5a38ab1ff6c124e65b90bc737ae320ef110991383",
+      "expectedBytes": 409478,
+      "expectedGitBlob": "365f950c4ef649d1da40d7b52553e08a66be9df2",
+      "expectedSha256": "177476619689744b0081beb5a38ab1ff6c124e65b90bc737ae320ef110991383",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json"
+    },
+    {
+      "actualBytes": 368586,
+      "actualGitBlob": "51c314f65453e551125140cf03d62152fa29cefe",
+      "actualSha256": "48967df525eab8a326e8f148fb2dfbce7274bd546fa24ff9cd80f387b0dce84c",
+      "expectedBytes": 368586,
+      "expectedGitBlob": "51c314f65453e551125140cf03d62152fa29cefe",
+      "expectedSha256": "48967df525eab8a326e8f148fb2dfbce7274bd546fa24ff9cd80f387b0dce84c",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json"
+    },
+    {
+      "actualBytes": 353090,
+      "actualGitBlob": "0c1b737f8f95ab918b02c61231c1685b53b2cb15",
+      "actualSha256": "4be5fa95fa80c37d167085827d7b739b786520f2a5125207b59102c7a736f14b",
+      "expectedBytes": 353090,
+      "expectedGitBlob": "0c1b737f8f95ab918b02c61231c1685b53b2cb15",
+      "expectedSha256": "4be5fa95fa80c37d167085827d7b739b786520f2a5125207b59102c7a736f14b",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"
+    },
+    {
+      "actualBytes": 389523,
+      "actualGitBlob": "9523c87004a927e3d5fb44a338da822fb0c2f10f",
+      "actualSha256": "fc30fcf8a90fc913c083eb8a1440e933cb81593504832c5bc546b520ea1d3f6c",
+      "expectedBytes": 389523,
+      "expectedGitBlob": "9523c87004a927e3d5fb44a338da822fb0c2f10f",
+      "expectedSha256": "fc30fcf8a90fc913c083eb8a1440e933cb81593504832c5bc546b520ea1d3f6c",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json"
+    },
+    {
+      "actualBytes": 306745,
+      "actualGitBlob": "c03433f17f0cb7b3c7187451b2b9d6e8702361da",
+      "actualSha256": "1ff51e10f180c94c994316b41e507cffc3206b92f2049e7f5e65bb89ba239e66",
+      "expectedBytes": 306745,
+      "expectedGitBlob": "c03433f17f0cb7b3c7187451b2b9d6e8702361da",
+      "expectedSha256": "1ff51e10f180c94c994316b41e507cffc3206b92f2049e7f5e65bb89ba239e66",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+    },
+    {
+      "actualBytes": 308195,
+      "actualGitBlob": "860801645847b1dfd7041b44427dcdbd9b649d6f",
+      "actualSha256": "bd25b50193bbf88974a32bde7d2a1b07e861e36f0109c3c4564f7f11949fb6d6",
+      "expectedBytes": 308195,
+      "expectedGitBlob": "860801645847b1dfd7041b44427dcdbd9b649d6f",
+      "expectedSha256": "bd25b50193bbf88974a32bde7d2a1b07e861e36f0109c3c4564f7f11949fb6d6",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    },
+    {
+      "actualBytes": 707258,
+      "actualGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+      "actualSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+      "expectedBytes": 707258,
+      "expectedGitBlob": "1527a1a7536fd04826534a0be8abcb85a30f5579",
+      "expectedSha256": "79a983c93d72167ab4c54e819adf5bb38c1d4fca7b4454a864ac383a85755721",
+      "pass": true,
+      "path": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs"
+    },
+    {
+      "actualBytes": 58860,
+      "actualGitBlob": "034dad9ec4a8ccf77f35ffd6ac24816944c654f7",
+      "actualSha256": "e2b3676bd9dee96f365204f6431a59a57fa526bed193ea219269e1514b5528ae",
+      "expectedBytes": 58860,
+      "expectedGitBlob": "034dad9ec4a8ccf77f35ffd6ac24816944c654f7",
+      "expectedSha256": "e2b3676bd9dee96f365204f6431a59a57fa526bed193ea219269e1514b5528ae",
+      "pass": true,
+      "path": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs"
+    },
+    {
+      "actualBytes": 1989,
+      "actualGitBlob": "542582ecdbb70c067fe8eef0c0c6c6f1c5cd2245",
+      "actualSha256": "6015588010ad0a991050c6278fe1452b065cffd4bf7dc8b8c6f2348f3434b1c4",
+      "expectedBytes": 1989,
+      "expectedGitBlob": "542582ecdbb70c067fe8eef0c0c6c6f1c5cd2245",
+      "expectedSha256": "6015588010ad0a991050c6278fe1452b065cffd4bf7dc8b8c6f2348f3434b1c4",
+      "pass": true,
+      "path": "src/NzbDrone.Core/MediaFiles/TorrentInfo/TorrentHashResolver.cs"
+    },
+    {
+      "actualBytes": 60433,
+      "actualGitBlob": "f1bde7285a4ba63e6085a798a0bdd671c59db6e1",
+      "actualSha256": "2cbc25c4ee5702b52e94ef207ea0a22cef4d6be98af74915c2d7c992e35e2283",
+      "expectedBytes": 60433,
+      "expectedGitBlob": "f1bde7285a4ba63e6085a798a0bdd671c59db6e1",
+      "expectedSha256": "2cbc25c4ee5702b52e94ef207ea0a22cef4d6be98af74915c2d7c992e35e2283",
+      "pass": true,
+      "path": "src/NzbDrone.Core/MetadataSource/Hardcover/HardcoverMetadataProxy.cs"
+    },
+    {
+      "actualBytes": 56934,
+      "actualGitBlob": "cfae65cdc60cc94be96d9da3e01e53b1c49038f7",
+      "actualSha256": "961d22624b9d15d2c6167ec749d2d81ab682291ac08fdef6fd022adaa45388a7",
+      "expectedBytes": 56934,
+      "expectedGitBlob": "cfae65cdc60cc94be96d9da3e01e53b1c49038f7",
+      "expectedSha256": "961d22624b9d15d2c6167ec749d2d81ab682291ac08fdef6fd022adaa45388a7",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs"
+    },
+    {
+      "actualBytes": 1356,
+      "actualGitBlob": "c066da569720101b066f97f592f41148ae393e49",
+      "actualSha256": "d3d6a86c5f2ca0491f83a8b5178a07bbe1ac0c7e83364c7dea200129179bd054",
+      "expectedBytes": 1356,
+      "expectedGitBlob": "c066da569720101b066f97f592f41148ae393e49",
+      "expectedSha256": "d3d6a86c5f2ca0491f83a8b5178a07bbe1ac0c7e83364c7dea200129179bd054",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/Discord/DiscordProxy.cs"
+    },
+    {
+      "actualBytes": 7787,
+      "actualGitBlob": "b8fda575c80b69c321b79d5a33df03225a38e135",
+      "actualSha256": "c2f9f72a2160874f025e7610b729bdd4a3dc8ab83abc276fbe7b20a10680ee85",
+      "expectedBytes": 7787,
+      "expectedGitBlob": "b8fda575c80b69c321b79d5a33df03225a38e135",
+      "expectedSha256": "c2f9f72a2160874f025e7610b729bdd4a3dc8ab83abc276fbe7b20a10680ee85",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/Goodreads/GoodreadsNotificationBase.cs"
+    },
+    {
+      "actualBytes": 21539,
+      "actualGitBlob": "04ae2dbc2f470c7c87d03841851cb91d8ae4ae14",
+      "actualSha256": "cd730aea1aa7105c4fd5dd438b85ac265a848b8b5a0752af3c46a06a29a45edb",
+      "expectedBytes": 21539,
+      "expectedGitBlob": "04ae2dbc2f470c7c87d03841851cb91d8ae4ae14",
+      "expectedSha256": "cd730aea1aa7105c4fd5dd438b85ac265a848b8b5a0752af3c46a06a29a45edb",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/Plex/Server/PlexServer.cs"
+    },
+    {
+      "actualBytes": 2773,
+      "actualGitBlob": "1b6a3f81940115f3e4451a089bed06632536c16e",
+      "actualSha256": "7fa22b9f43539d78afed2eddc9ed005c5e68c3925931966695db958c5437273d",
+      "expectedBytes": 2773,
+      "expectedGitBlob": "1b6a3f81940115f3e4451a089bed06632536c16e",
+      "expectedSha256": "7fa22b9f43539d78afed2eddc9ed005c5e68c3925931966695db958c5437273d",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/Prowl/ProwlProxy.cs"
+    },
+    {
+      "actualBytes": 1333,
+      "actualGitBlob": "c8dd12f536e5fc11922df57ab09943bfe7ebad7e",
+      "actualSha256": "6953d33ef8a803fb9197df3d32328e0d8064ba27289edb5db580b1f9a75c1a13",
+      "expectedBytes": 1333,
+      "expectedGitBlob": "c8dd12f536e5fc11922df57ab09943bfe7ebad7e",
+      "expectedSha256": "6953d33ef8a803fb9197df3d32328e0d8064ba27289edb5db580b1f9a75c1a13",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/Slack/SlackProxy.cs"
+    },
+    {
+      "actualBytes": 6353,
+      "actualGitBlob": "299e8bb87d44ff22bf558dd79295b45b1624f876",
+      "actualSha256": "16b48ce7219d090c0caa61bfddb03b345c92f2cc9fe5284eb04eb501817c5e46",
+      "expectedBytes": 6353,
+      "expectedGitBlob": "299e8bb87d44ff22bf558dd79295b45b1624f876",
+      "expectedSha256": "16b48ce7219d090c0caa61bfddb03b345c92f2cc9fe5284eb04eb501817c5e46",
+      "pass": true,
+      "path": "src/NzbDrone.Core/Notifications/Twitter/Twitter.cs"
+    },
+    {
+      "actualBytes": 1860,
+      "actualGitBlob": "9405a4887005c341b2f2bd454a3960e127767b19",
+      "actualSha256": "cc2e62a2b8c53aba5185f84556103216fccb426512962770e9ceb8e726a68d46",
+      "expectedBytes": 1860,
+      "expectedGitBlob": "9405a4887005c341b2f2bd454a3960e127767b19",
+      "expectedSha256": "cc2e62a2b8c53aba5185f84556103216fccb426512962770e9ceb8e726a68d46",
+      "pass": true,
+      "path": "src/NzbDrone.Core/ThingiProvider/PendingProviderSecretService.cs"
+    }
+  ]
+}

@@ -13,13 +13,15 @@ namespace NzbDrone.Core.Notifications.EmbyJellyfin
         {
             RuleFor(c => c.ServerType)
                 .Must(v => Enum.IsDefined(typeof(EmbyJellyfinServerType), v))
-                .WithMessage("Select Emby or Jellyfin");
+                .WithMessage("Select Emby or Jellyfin")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mbd726c6fbe70"));
             RuleFor(c => c.Host).ValidHost();
             RuleFor(c => c.Port).InclusiveBetween(1, 65535);
             RuleFor(c => c.UrlBase)
                 .ValidUrlBase()
                 .When(c => c.UrlBase.IsNotNullOrWhiteSpace());
-            RuleFor(c => c.ApiKey).NotEmpty().WithMessage("API Key is required");
+            RuleFor(c => c.ApiKey).NotEmpty().WithMessage("API Key is required")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m794b67a4d3b9"));
         }
     }
 

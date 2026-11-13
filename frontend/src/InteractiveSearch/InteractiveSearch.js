@@ -1,20 +1,37 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Alert from 'Components/Alert';
+import BidiText from 'Components/BidiText';
 import Icon from 'Components/Icon';
 import Button from 'Components/Link/Button';
 import LoadingIndicator from 'Components/Loading/LoadingIndicator';
 import Table from 'Components/Table/Table';
 import TableBody from 'Components/Table/TableBody';
 import { icons, kinds, sortDirections } from 'Helpers/Props';
-import getErrorMessage from 'Utilities/Object/getErrorMessage';
 import translate from 'Utilities/String/translate';
+import { translateServerMessageById } from 'Utilities/String/translateServerMessage';
 import FilterWarning from './FilterWarning';
 import InteractiveSearchMediaTypeToggle from './InteractiveSearchMediaTypeToggle';
 import InteractiveSearchRow from './InteractiveSearchRow';
 import styles from './InteractiveSearch.css';
 
 const hiddenResultsPageSize = 50;
+
+function renderSearchError(error) {
+  const response = error?.responseJSON;
+  const message = typeof response === 'string' ? response :
+    response && (response.message || response.errorMessage || response.error) ||
+    (typeof error?.responseText === 'string' ? error.responseText : '');
+  const translated = translateServerMessageById(response?.messageId, response?.messageParameters);
+
+  if (translated) {
+    return translated;
+  }
+
+  return typeof message === 'string' && message ?
+    <BidiText lang="und">{message}</BidiText> :
+    translate('InteractiveSearchUnableToLoadResults');
+}
 
 const columns = [
   {
@@ -251,7 +268,7 @@ class InteractiveSearch extends Component {
 
         {!isFetching && error ?
           <Alert kind={kinds.DANGER} role="alert">
-            <div>{getErrorMessage(error, translate('InteractiveSearchUnableToLoadResults'))}</div>
+            <div>{renderSearchError(error)}</div>
             <Button size="small" onPress={onRetryPress}>
               {translate('Retry')}
             </Button>

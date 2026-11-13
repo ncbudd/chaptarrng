@@ -1,0 +1,69 @@
+{
+  "task": "ChaptarrNG PR #190 W600–649 independent cross-review",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePrState": {
+    "repository": "snapetech-org/chaptarrng",
+    "number": 190,
+    "state": "open",
+    "draft": true,
+    "head": "f405a6256c2661e48e412ac4471ce70411baf98c",
+    "headRef": "codex/chaptarrng-localization-complete-20261031",
+    "baseRef": "main",
+    "tree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "passed": true
+  },
+  "head": "f405a6256c2661e48e412ac4471ce70411baf98c",
+  "tree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+  "sourceOrdinalRange": [
+    600,
+    649
+  ],
+  "sourceIdCount": 50,
+  "localeCount": 12,
+  "liveCellsReattested": 600,
+  "callerReferencesReattested": 64,
+  "callerFilesReattested": 42,
+  "candidateRowsAdjudicated": 201,
+  "primaryDispositionCounts": {
+    "accept-current": 399,
+    "propose-correction": 191,
+    "propose-refinement": 10
+  },
+  "candidateVerdicts": {
+    "accept-primary-proposal": 198,
+    "reject-primary-proposal-replace-with-corrected-target": 3
+  },
+  "finalDispositionCounts": {
+    "accept-current": 399,
+    "accept-primary-proposal": 198,
+    "reject-primary-proposal-replace-with-corrected-target": 3
+  },
+  "proposalsAccepted": 198,
+  "proposalsRejectedAndReplaced": 3,
+  "holds": 0,
+  "replacementTargetsProvided": 3,
+  "missedIssueCount": 3,
+  "candidateTargetHashMismatches": 0,
+  "currentTargetHashMismatches": 0,
+  "sourceTextHashMismatches": 0,
+  "callerLineOrBlobMismatches": 0,
+  "placeholderParityFailures": 0,
+  "markupParityFailures": 0,
+  "currentProtectedLiteralMismatchCells": 15,
+  "finalProtectedLiteralMismatchCells": 0,
+  "sourceIdListCount": 1210,
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "w599PriorTargetMatchesLive": 6,
+  "w599PriorRecommendationsMatchLive": 6,
+  "w599CallerRefsReattested": 12,
+  "w650BoundaryRows": 12,
+  "nativeSpeakerApproval": false,
+  "repositoryOrPrModified": false,
+  "testsBuildsScansCiBrowserWorkflowsReleasesRun": false,
+  "limitations": [
+    "Machine-assisted independent review; native-speaker approval remains outstanding.",
+    "Three primary W621 proposals were rejected as unrelated to the pinned source/caller and replaced with context-accurate suggestions."
+  ]
+}

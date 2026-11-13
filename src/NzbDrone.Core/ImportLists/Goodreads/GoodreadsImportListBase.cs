@@ -16,6 +16,7 @@ using NzbDrone.Core.Configuration;
 using NzbDrone.Core.Exceptions;
 using NzbDrone.Core.MetadataSource.Goodreads;
 using NzbDrone.Core.Parser;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists.Goodreads
 {
@@ -61,13 +62,13 @@ namespace NzbDrone.Core.ImportLists.Goodreads
             catch (Common.Http.HttpException ex)
             {
                 _logger.Warn(ex, "Goodreads Authentication Error");
-                return new ValidationFailure(string.Empty, $"Goodreads authentication error: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Goodreads authentication error: {ex.Message}", "server.message.m65fe7c1758c8", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to Goodreads");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to import list, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to import list, check the log for more details", "server.message.ma28fc67879dd");
             }
         }
 
@@ -77,7 +78,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
             {
                 if (query == null || !query.TryGetValue("callbackUrl", out var callbackUrl) || callbackUrl.IsNullOrWhiteSpace())
                 {
-                    throw new BadRequestException("QueryParam callbackUrl invalid.");
+                    throw BadRequestException.WithMessageId("QueryParam callbackUrl invalid.", "server.message.m90ee48cf606f");
                 }
 
                 var oAuthRequest = OAuthRequest.ForRequestToken(null, null, callbackUrl);
@@ -96,12 +97,12 @@ namespace NzbDrone.Core.ImportLists.Goodreads
             {
                 if (query == null || !query.TryGetValue("oauth_token", out var oauthToken) || oauthToken.IsNullOrWhiteSpace())
                 {
-                    throw new BadRequestException("QueryParam oauth_token invalid.");
+                    throw BadRequestException.WithMessageId("QueryParam oauth_token invalid.", "server.message.mc9032616fbb4");
                 }
 
                 if (!query.TryGetValue("requestTokenSecret", out var requestTokenSecret) || requestTokenSecret.IsNullOrWhiteSpace())
                 {
-                    throw new BadRequestException("Missing requestTokenSecret.");
+                    throw BadRequestException.WithMessageId("Missing requestTokenSecret.", "server.message.mc95460cab48b");
                 }
 
                 var oAuthRequest = OAuthRequest.ForAccessToken(null, null, oauthToken, requestTokenSecret, "");
@@ -189,7 +190,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
             }
             else
             {
-                throw new BadRequestException("Goodreads user ID must be numeric or a Goodreads profile URL containing a numeric ID.");
+                throw BadRequestException.WithMessageId("Goodreads user ID must be numeric or a Goodreads profile URL containing a numeric ID.", "server.message.m415b9b0835fe");
             }
 
             var httpResponse = OAuthGet(builder);
@@ -208,7 +209,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
 
             if (userId.IsNullOrWhiteSpace())
             {
-                throw new BadRequestException("Goodreads did not return an account ID for the authenticated user.");
+                throw BadRequestException.WithMessageId("Goodreads did not return an account ID for the authenticated user.", "server.message.m262dfad1709a");
             }
 
             return Tuple.Create(userId, userName);

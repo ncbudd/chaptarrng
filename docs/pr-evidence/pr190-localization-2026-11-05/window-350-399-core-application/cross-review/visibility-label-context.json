@@ -1,0 +1,37 @@
+{
+  "crossOnlySupplementalContext": true,
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "source": {
+    "path": "frontend/src/Author/Details/BookVisibilityToggle.js",
+    "componentRenders": [
+      "translate('Library')",
+      "translate('All')"
+    ],
+    "helpTextSourceKey": "BookVisibilityToggleHelpText",
+    "englishSourceText": "Wanted shows monitored books and books with files. All shows every book for this author."
+  },
+  "currentLocalizedControlLabels": {
+    "ar": {"Library": "مكتبة", "All": "الكل"},
+    "de": {"Library": "Bibliothek", "All": "Alle"},
+    "es": {"Library": "Biblioteca", "All": "Todos"},
+    "fr": {"Library": "Bibliothèque", "All": "Tous"},
+    "hi": {"Library": "लाइब्रेरी", "All": "सभी"},
+    "id": {"Library": "Pustaka", "All": "Semua"},
+    "ja": {"Library": "ライブラリ", "All": "すべて"},
+    "ko": {"Library": "라이브러리", "All": "전체"},
+    "pt-BR": {"Library": "Biblioteca", "All": "Todos"},
+    "vi": {"Library": "Thư viện", "All": "Tất cả"},
+    "zh-Hans": {"Library": "图书馆", "All": "全部"},
+    "zh-Hant": {"Library": "圖書館", "All": "全部"}
+  },
+  "englishFallbackControlLabels": {"Library": "Library", "All": "All"},
+  "provenance": "Supplied by the root review coordinator after the independent ledger was sealed; not read from a repository checkout by this cross-review agent.",
+  "adjudication": {
+    "decision": "hold-all-12-locale-targets",
+    "reason": "The rendered control is labeled Library, but the English help text calls it Wanted. The control-label evidence establishes a source/context mismatch; it does not license silent changes to the translated help text.",
+    "sourceCopyRecommendation": "Library shows monitored books and books with files. All shows every book for this author.",
+    "followUp": "Align the English source copy to Library, then run a separate focused review of that corrected source and its 12 target values.",
+    "targetTextSelected": false
+  }
+}

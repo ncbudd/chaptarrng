@@ -1,0 +1,106 @@
+{
+  "acceptedCurrentPreserved": 558,
+  "allReviewedCellsReadBack": 600,
+  "appliedChanges": 42,
+  "catalogFileHashesAfter": {
+    "src/NzbDrone.Core/Localization/Core/ar.json": {
+      "gitBlob": "acfdc16f8822b82894c52abfda5bad8a245e2e75",
+      "sha256": "5059a1f931b8bcb2c733ae4a56bff5b577967651099f6aec358f9a18a5d96ec5"
+    },
+    "src/NzbDrone.Core/Localization/Core/de.json": {
+      "gitBlob": "d0bc43902e0b617fa62924cd40b376858e7a4110",
+      "sha256": "9bd6ec61e2531b073cee03aa363ec43d61e30e118dedc247cb3070809893ca16"
+    },
+    "src/NzbDrone.Core/Localization/Core/es.json": {
+      "gitBlob": "e718b53e58eb80784048549226a0f7395520e279",
+      "sha256": "e07e0d897523129bc58a71417b9e4a51b543f7915e1c496da4c1eca981034d3c"
+    },
+    "src/NzbDrone.Core/Localization/Core/fr.json": {
+      "gitBlob": "0a29e7668c57580c6b56d85ab5a4ddef85609a5b",
+      "sha256": "f2ecbeee46399c91f6b177703006b5c74ff00859b13acd7be37a30a0ed25a558"
+    },
+    "src/NzbDrone.Core/Localization/Core/hi.json": {
+      "gitBlob": "f7496f6efd9482b000f45d754fdbc710d6539157",
+      "sha256": "2612ad96571dcaab3b5c4cccdd18d0cd02aaa7984705aea66e30fcdec17a89cb"
+    },
+    "src/NzbDrone.Core/Localization/Core/id.json": {
+      "gitBlob": "5a3fff6e841257ed2d3b038d072d427092636ee9",
+      "sha256": "081a871eff3b0b344bf8974c432540192f0732a03ccccaa478ce4edfecd56726"
+    },
+    "src/NzbDrone.Core/Localization/Core/ja.json": {
+      "gitBlob": "472a2af1dce78972af04ba9c6e47bbe5f427c749",
+      "sha256": "3cee92997b0256b2dff2614c49e5a19ce86ca868bf393e9da3b9e5c2a97fe058"
+    },
+    "src/NzbDrone.Core/Localization/Core/ko.json": {
+      "gitBlob": "91e78259d468626d80f7b0ed602de479290a3854",
+      "sha256": "3b82ca7b833c48efa4bf667b1fe78d4e720cae1695d92282dbbbc48ecd2ab5bb"
+    },
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": {
+      "gitBlob": "9fdaf196be982855cf4ae480ec6f844d6d06bbda",
+      "sha256": "1d0fda632f00959f1a5e69c7c3ee8f307277e00588de0d5ca769ac6ecb486857"
+    },
+    "src/NzbDrone.Core/Localization/Core/vi.json": {
+      "gitBlob": "6a354720b9ad20e49a0c8e4283fc8004192672d9",
+      "sha256": "7219caae39fb3ddd004b62285a590118d25223b0d7e0b74c50c3d58f96a08213"
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": {
+      "gitBlob": "8dfd52f8bd0fb2d4dc38c986973b406068f67e6e",
+      "sha256": "98f988c314f423f964a1a8097a8fe38ff03f5e4969941e17e0cccd8d54a5acef"
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": {
+      "gitBlob": "89b1a9ff82578a00e891184551647da15600fd29",
+      "sha256": "7171b03dd8886aaf083c4c9a87e65cfd9ef501a8ec84dbc97e9797f6fd872327"
+    }
+  },
+  "changedCatalogFiles": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+  ],
+  "exactDiffKeysVerified": 42,
+  "pinnedCatalogFiles": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "productCommit": "7bf3760ea87879304ec8deb6e4e8cf2f2b62c5b0",
+  "productCommitParent": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "productCommitPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+  ],
+  "productCommitTree": "8d821e88af5c3451d608e2bdd87549249d5cf745",
+  "result": "PASS",
+  "rootAdjudicationSha256": "1e0edcac5ffc40f9621c215e68198fa8da94d946bfe661e451d6f17039f75f74",
+  "rootCorrectedCell": "AutomaticUpdatesDisabledDocker::id",
+  "rootCorrectedTarget": "Pemutakhiran otomatis tidak didukung secara langsung saat menggunakan mekanisme pemutakhiran Docker. Anda perlu memperbarui gambar kontainer di luar {appName} atau menggunakan skrip.",
+  "rootCorrectedTargetSha256": "fd407430d7d60c282c8412ed3205ac94ec77e794d5d2dce19e6337aa09e9c291",
+  "sourceHead": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "sourceTree": "f6ae6530b73bf581c1fbc5a8c13eacd7342e9172",
+  "testsBuildsCIWorkflowsRun": false,
+  "workingTreeOnly": true
+}

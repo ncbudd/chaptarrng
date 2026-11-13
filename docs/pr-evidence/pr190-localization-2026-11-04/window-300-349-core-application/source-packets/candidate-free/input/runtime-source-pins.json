@@ -1,0 +1,68 @@
+{
+  "dynamicTranslationCallsiteCount": 118,
+  "exactHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "exactTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "note": "All dynamic calls are listed with file and line pins in dynamic-translation-callers.jsonl.",
+  "runtimeFiles": [
+    {
+      "bytes": 3235,
+      "gitBlob": "9e861f8a86296364680d9ebff1b76ca99731b19b",
+      "path": "frontend/src/Utilities/String/translate.ts",
+      "sha256": "890856bba45dec251b48abd6d236dad0dcc7836f4cba744915fe1478dbbec292"
+    },
+    {
+      "bytes": 1043,
+      "gitBlob": "0c03d00ddb2c0d819cf0c67b7ac0fc72f6695a7d",
+      "path": "frontend/src/Utilities/Localization/locale.js",
+      "sha256": "44cbf9d6c93076e0a94ad41c94780d1a340bf3185159ddf70594a6a5c1b8117c"
+    },
+    {
+      "bytes": 2291,
+      "gitBlob": "b8bc3dc1ec5853ffac95c67a4d6d671ecaa71a3c",
+      "path": "frontend/src/Utilities/Localization/locale-utils.cjs",
+      "sha256": "497f18c4d05ddbb89267ffc559b273e87054c84960cdd4b3e070cf7ea7dc9df2"
+    },
+    {
+      "bytes": 1013,
+      "gitBlob": "8682960e98fc61eea4625664c106d35b9c9b3ac8",
+      "path": "frontend/src/Utilities/Localization/message-formatting.cjs",
+      "sha256": "770ebab75d1f5fc8882343efa42cbd032c56d117f19275c2c6c72ba303d62c59"
+    },
+    {
+      "bytes": 9327,
+      "gitBlob": "d3a3682c997cb79099fba3a8134f150964494c64",
+      "path": "frontend/src/Utilities/Localization/formatters.cjs",
+      "sha256": "8295519bb528a14cfba327add8068319540eeafa002ea377894c2385688cf6a8"
+    },
+    {
+      "bytes": 6697,
+      "gitBlob": "321d317444e7d0339bbf222970acee944fe92091",
+      "path": "frontend/src/index.ts",
+      "sha256": "237dbe5bbaa8dbaca762043e5c698935fd870c0f893cf00f97a762c815080411"
+    },
+    {
+      "bytes": 21786,
+      "gitBlob": "d93f376331bfc54af04bcae1bc0c2c2a8b1fad15",
+      "path": "frontend/src/login.html",
+      "sha256": "6f59607fd705e6705e9fb4a907cb5e0e5a014b6bad6fe4170eb31ad5109dd936"
+    },
+    {
+      "bytes": 8958,
+      "gitBlob": "34bd4872dae667969fdcf602cfa84921ae3666a5",
+      "path": "src/NzbDrone.Core/Localization/LocalizationService.cs",
+      "sha256": "2fc4a6d222bf20c68f53cbbfc925c9bfc31e6d11f3605e140c5f4d7699ba96cf"
+    },
+    {
+      "bytes": 1080,
+      "gitBlob": "0048240f758e7613630e701813a8eadb03740eac",
+      "path": "src/Chaptarr.Api.V1/Localization/LocalizationController.cs",
+      "sha256": "eff1529c4e7733e6637b9a64fb4aa4b94f217165df0a5f396107c2e30dd52369"
+    },
+    {
+      "bytes": 7091,
+      "gitBlob": "1c3fe0ae3f7e25fed8b88ac82972bfdcc3b8699d",
+      "path": "src/NzbDrone.Core/Localization/Core/ui-locales.json",
+      "sha256": "95adbad22495dac202d296506e4174e4b01e1e01d43417e1a953b826e9d2f24a"
+    }
+  ]
+}

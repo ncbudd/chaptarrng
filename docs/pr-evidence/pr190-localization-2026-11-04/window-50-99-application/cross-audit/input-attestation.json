@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "artifact": "W50-W99 cross-audit input attestation",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+  "tree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+  "prBefore": {
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "state": "OPEN",
+    "draft": true,
+    "head": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+    "tree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "base": "main",
+    "mergeStateStatus": "CLEAN",
+    "remoteBranchHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+    "capturedAtUTC": "2026-11-04T08:37:18.576828+00:00"
+  },
+  "prAfter": {
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "state": "OPEN",
+    "draft": true,
+    "head": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+    "tree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "base": "main",
+    "mergeStateStatus": "CLEAN",
+    "remoteBranchHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+    "capturedAtUTC": "2026-11-04T08:37:18.576828+00:00"
+  },
+  "sourceCheckout": {
+    "path": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w0-49-apply",
+    "head": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+    "tree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+    "branch": "task/chaptarrng-pr190-w0-49-apply-20261104",
+    "status": "",
+    "clean": true
+  },
+  "inputPackets": {
+    "candidatePrimary": {
+      "path": "input/candidate-primary",
+      "topSha256": "35d757e4ce0ba0896c9028bf6419ff08d843a2593473b45e4761cc04fe36c202",
+      "candidateFreeSha256": "7495b9e745e4fbe211b4c626a5b7f1ca0927e7b78e398d94b5be8e13675e8852",
+      "primaryReviewSha256": "8ef2a8a4b03a37e99808734be3da7f4f5844eae24d0766962d80b31a59b98930"
+    },
+    "blind": {
+      "path": "input/blind",
+      "topSha256": "32596acdc83613bbff9054ac11be588def7136ab71fd0a1635cf95f0a258bdae",
+      "nestedCandidateFreeSha256": "7495b9e745e4fbe211b4c626a5b7f1ca0927e7b78e398d94b5be8e13675e8852"
+    }
+  },
+  "verifiers": {
+    "candidateFree": {
+      "callerReferences": 100,
+      "candidateSuggestionFieldsAbsent": true,
+      "catalogFilesPinned": 13,
+      "cells": 600,
+      "exactHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+      "exactTree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+      "frontendFilesScanned": 1634,
+      "historicalCoreIntersection": 1212,
+      "historicalJsonlRows": 211539,
+      "historicalUniqueIdentifiers": 1223,
+      "historicalWindowJsonlFiles": 392,
+      "placeholderSignaturesRecorded": true,
+      "priorDirectOverlap": 0,
+      "protectedLiteralChecksRecorded": true,
+      "repositoryClean": true,
+      "result": "PASS",
+      "sourceKeys": 50,
+      "targetLocales": 12
+    },
+    "primary": {
+      "acceptCurrent": 401,
+      "candidateFreeLinkage": true,
+      "cells": 600,
+      "exactHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+      "exactTree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+      "holdKeys": 5,
+      "locales": 12,
+      "nativeSpeakerApproval": 0,
+      "nativeSpeakerReviewOutstanding": 600,
+      "placeholderParity": true,
+      "protectedLiterals": true,
+      "repositoryClean": true,
+      "result": "PASS",
+      "reviseCurrent": 139,
+      "sourceKeys": 50,
+      "textFreeHolds": 60
+    },
+    "blind": {
+      "cells": 600,
+      "counts": {
+        "accept-current": 518,
+        "hold": 24,
+        "propose-correction": 58
+      },
+      "exactHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+      "exactTree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+      "outputChecksums": "PASS",
+      "placeholdersAndProtectedLiterals": "PASS",
+      "result": "PASS",
+      "sourceInputChecksums": "PASS",
+      "textFreeHolds": "PASS"
+    }
+  },
+  "createdAtUTC": "2026-11-04T08:37:23.806931+00:00",
+  "repoOrPrModified": false
+}

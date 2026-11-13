@@ -1,0 +1,23 @@
+{
+  "callerContextHashMismatches": 0,
+  "callerContextSha256": "626ade4dbc03ff182e9d7f7813808696b2d4df8b719390792b54db74cef34420",
+  "callerScanFilePinsSha256": "de4888c944b4d677f0b663a7976cb5c9e500d397d87785fa92003fa7eb4bfe32",
+  "callerScanFilesExpected": 4350,
+  "callerScanFilesReattested": 4350,
+  "callerScanPathInventoryMatches": true,
+  "candidateFreeCellsSha256": "1b38676639f05eaa81d64f4d515b8c714e2f50d6550be209f66b526ca0a4a369",
+  "cellsExpected": 600,
+  "cellsReattested": 600,
+  "currentHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "currentTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "locales": 12,
+  "priorHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "priorTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "result": "PASS",
+  "schemaVersion": 1,
+  "sourceHashMismatches": 0,
+  "sourceIds": 50,
+  "sourceSelectionSha256": "7b6c698a6cbbe22c6cec38408c558635b002900c2d2d7b2eb37f0060e907241b",
+  "targetHashMismatchesAfterCommittedApplication": 0,
+  "window": "W400-449-Core"
+}

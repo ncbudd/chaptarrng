@@ -1,0 +1,33 @@
+{
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "worktreeClean": true,
+  "primaryPacketChecksumsPassed": true,
+  "primaryManifestArtifactsExpected": 24,
+  "primaryManifestArtifactFailures": [
+    "README.md"
+  ],
+  "pinnedFilesPassed": 21,
+  "catalogSourceAndCoveragePassed": true,
+  "sourceRegistryRecordsPassed": 50,
+  "uniqueCallerPinsPassed": 60,
+  "callerFailures": 0,
+  "cellCount": 600,
+  "allCellKeysUnique": true,
+  "catalogLocales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "sourceCount": 50,
+  "structuralFailures": 0
+}

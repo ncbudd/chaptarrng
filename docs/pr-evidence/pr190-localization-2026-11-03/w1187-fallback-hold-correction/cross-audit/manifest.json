@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "artifact": "ChaptarrNG PR #190 W1187 independent cross-audit",
+  "application": "ChaptarrNG",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "head": "00d37b25ce5534135c2dacaf6a84d9d15fe0bb0b",
+  "tree": "13e57e7826db4db86556f244fb066e4915022511",
+  "sourceOrdinal": 1187,
+  "sourceId": "server.message.md764ed5e74b4",
+  "candidateFreePacket": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-candidate-free-20261103",
+  "candidateFreeInputSha256": "427edea12f1b6aec7fe9dfd48ff88780fdcdb73732e873aeab74868723a9e61f",
+  "candidateFreeManifestSha256": "e69a4de41d9109af3028d317f2041d7c4e0d781e06eb1df31d0e41db8058cb07",
+  "candidateFreeChecksumListSha256": "5563923feec8a02c1032e61ab0a66599d58368fa6bf5ba9943d27e0d1345dc5e",
+  "blindPacket": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-blind-20261103",
+  "blindManifestSha256": "320cf41ef6f16a345025dae869d2474b213f5281efe527353d095af73dc167f6",
+  "blindChecksumListSha256": "6a653fc37518ab572e75e2635e0b492f52c143d7602933002de3d6e32d6ec1a8",
+  "priorWindow": "W1150-W1199",
+  "priorHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "priorTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "priorPrimaryHoldCount": 12,
+  "priorCrossHoldCount": 12,
+  "priorHoldsReattested": 12,
+  "dispositionCounts": {
+    "accept-current": 12
+  },
+  "updateCount": 0,
+  "noOpCount": 12,
+  "holdCount": 0,
+  "m4bClassification": "dynamic placeholder fallback, not protected source text",
+  "nativeSpeakerApproval": "not obtained",
+  "browserReview": "not performed",
+  "repositoryOrPRFilesEdited": false,
+  "createdAtUtc": "2026-11-03T18:18:45.981509+00:00",
+  "evidencePins": {
+    "candidateFree": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-candidate-free-20261103/input.json",
+        "bytes": 9698,
+        "sha256": "427edea12f1b6aec7fe9dfd48ff88780fdcdb73732e873aeab74868723a9e61f"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-candidate-free-20261103/manifest.json",
+        "bytes": 488,
+        "sha256": "e69a4de41d9109af3028d317f2041d7c4e0d781e06eb1df31d0e41db8058cb07"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-candidate-free-20261103/SHA256SUMS.txt",
+        "bytes": 316,
+        "sha256": "5563923feec8a02c1032e61ab0a66599d58368fa6bf5ba9943d27e0d1345dc5e"
+      }
+    ],
+    "blind": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-blind-20261103/manifest.json",
+        "bytes": 1271,
+        "sha256": "320cf41ef6f16a345025dae869d2474b213f5281efe527353d095af73dc167f6"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-blind-20261103/SHA256SUMS.txt",
+        "bytes": 499,
+        "sha256": "6a653fc37518ab572e75e2635e0b492f52c143d7602933002de3d6e32d6ec1a8"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-blind-20261103/review-decisions.jsonl",
+        "bytes": 25881,
+        "sha256": "62425f8beaf9dc58906ca8c181cd42d5b9e9b7a8adacd452a1a86d214999c4fb"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w1187-m4b-blind-20261103/summary.json",
+        "bytes": 759,
+        "sha256": "0a387b2268886aa2ee888276c9e278873d1d0a828d5a7dad8e9859c813bb5db5"
+      }
+    ],
+    "priorWindow": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/manifest.json",
+        "bytes": 1534,
+        "sha256": "5e00ad03823e5a558bc8bb88020405cc1d6aa23fad36e89a2e002ccb63b84cd7"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/SHA256SUMS",
+        "bytes": 9753,
+        "sha256": "fc518d62fed7402d1c123b4e0c18870074bb80138c93b8db9716842937f5fb65"
+      }
+    ],
+    "priorPrimary": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/manifest.json",
+        "bytes": 10531,
+        "sha256": "153def65165e6ecb84daae3892f4f9d9802846762db9ea1267fdd78b4145fc66"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/SHA256SUMS",
+        "bytes": 3335,
+        "sha256": "22a4089c87cbd96494e7d1dd09d7af8c16fc77d0bfb9a7a9505f8a0c97351556"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/holds.jsonl",
+        "bytes": 58904,
+        "sha256": "f8cf328684259824eab23e3db9bde449ed6e5662f62cd6e918dac9c719d6bcfe"
+      }
+    ],
+    "priorCross": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/independent-cross-review/manifest.json",
+        "bytes": 6670,
+        "sha256": "5767eb92f6e95d121204265fbe408c8855d1a37831e2d201d8bdc978c300271a"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/independent-cross-review/SHA256SUMS",
+        "bytes": 3473,
+        "sha256": "9938afeb7069a254a79ae2328b339074ae038ee59edb02b55a5ff8d2e2456967"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/independent-cross-review/INDEPENDENT-REVIEW-SHA256SUMS",
+        "bytes": 1143,
+        "sha256": "6f9ae46077079f66cdd5d1940f5c202b37fb5684a555ade9e400c4a4b7794ca8"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/independent-cross-review/independent-holds.jsonl",
+        "bytes": 62517,
+        "sha256": "18cf515ea6fe4eb6239af6346e8a090cc59656643f12e70771ed016594b299c7"
+      }
+    ],
+    "laterResolution": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/EVIDENCE-SHA256SUMS.txt",
+        "bytes": 3511,
+        "sha256": "69fdb783ebb428540586c664639df1799a9986e7e2b1f9bd20cb731542899713"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/source-caller-evidence.json",
+        "bytes": 1972,
+        "sha256": "886e2f409145b7c4c18ea566ed1fbac4ffa7fb45fab064872b891173429484ef"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/exact-hash-apply-plan.jsonl",
+        "bytes": 5221,
+        "sha256": "28293f7e5ef7bfe4622667bdf4fd9ac14a4cc5312f68f5d4a7108c8d65932afc"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/root-decisions.jsonl",
+        "bytes": 12746,
+        "sha256": "59e230137cb8ebd3466a28df74187eda92275881c26ac82687d63259dcaf7af8"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/apply-readback.json",
+        "bytes": 555,
+        "sha256": "716d641e24d0b2a7586c8cac0a08992dd8cb8b3ec505fa0cfe171075fb41ab00"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/pr-evidence/pr190-localization-2026-11-03/w1187-dynamic-target-quality/summary.json",
+        "bytes": 602,
+        "sha256": "c0c9ea1d73ad5ff925aca09eb3a0e6e0fb4fc1a647aa9ebb0e79e0a3ca284302"
+      }
+    ],
+    "currentSource": [
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/docs/localization/server-message-sources.json",
+        "bytes": 766656,
+        "sha256": "070ad52cfc57a1f9b135c2ca19b79a2119676f809b626d53af15a9026b5bf6f1"
+      },
+      {
+        "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo/src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "bytes": 38395,
+        "sha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47"
+      }
+    ]
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1757,
+      "sha256": "aaea937040689cc8512bd14d574a922a9418110848054ae85edb4aa795883828"
+    },
+    {
+      "path": "apply-plan.jsonl",
+      "bytes": 5398,
+      "sha256": "5d059458c42fb47fc432aeb55a3f96f6ca60086e74d3516c7a2a089a6db97e3d"
+    },
+    {
+      "path": "build_cross_audit.py",
+      "bytes": 28118,
+      "sha256": "a081243bdec504f940ff06f9833f03ba6c9c7c95b18fd646acc54f8381dee599"
+    },
+    {
+      "path": "cross-audit-ledger.jsonl",
+      "bytes": 28625,
+      "sha256": "15b36f7f5cb2533c1a382164fee25153324a716a958352199b2054e6403a7a03"
+    },
+    {
+      "path": "evidence-pins.json",
+      "bytes": 7086,
+      "sha256": "1643664f468bf9699da15a416f2f697555a3d3df6e2319a39d166d45567186f2"
+    },
+    {
+      "path": "input-verification.json",
+      "bytes": 1233,
+      "sha256": "b20be00807979edb8e3473f4a673fba03b9f1c8e43e9ee784882a27173c0a1e4"
+    },
+    {
+      "path": "prior-hold-reattestation.jsonl",
+      "bytes": 21999,
+      "sha256": "6974a5f2b09bd2a5b86b688c105f3e7bcd1b6922bc40d2a7d16e8d775627d864"
+    },
+    {
+      "path": "source-caller-audit.json",
+      "bytes": 7763,
+      "sha256": "45a9e6381fbc67c7702884a41b24f5864da4f9da550742a5758f17d077fe1d70"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 2687,
+      "sha256": "5e6eebf0627423a5afeb6484d8b01155e2d22398581d3b48cd20f0d88b9d4f9b"
+    },
+    {
+      "path": "verify_cross_audit.py",
+      "bytes": 14709,
+      "sha256": "9cbdd9f7c8de8d6f57b2fb8273a85c81424bb100f9ac65961d48c16de76feb44"
+    }
+  ]
+}

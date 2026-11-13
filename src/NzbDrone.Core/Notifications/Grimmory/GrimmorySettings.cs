@@ -13,14 +13,18 @@ namespace NzbDrone.Core.Notifications.Grimmory
     {
         public GrimmorySettingsValidator()
         {
-            RuleFor(c => c.Url).NotEmpty().WithMessage("URL cannot be empty");
+            RuleFor(c => c.Url).NotEmpty().WithMessage("URL cannot be empty")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.md0cc5efbe5e0"));
             RuleFor(c => c.Url).IsValidUrl().When(c => c.Url.IsNotNullOrWhiteSpace());
-            RuleFor(c => c.Username).NotEmpty().WithMessage("Username is required");
-            RuleFor(c => c.Password).NotEmpty().WithMessage("Password is required");
+            RuleFor(c => c.Username).NotEmpty().WithMessage("Username is required")
+                .WithState(_ => NzbDroneValidationState.ForMessage("UsernameRequired"));
+            RuleFor(c => c.Password).NotEmpty().WithMessage("Password is required")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m7aeae1412484"));
             RuleFor(c => c.EbookLibraryId)
                 .GreaterThan(0)
                 .When(c => c.AudiobookLibraryId <= 0)
-                .WithMessage("At least one library is required");
+                .WithMessage("At least one library is required")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m7d3d73f7deeb"));
         }
     }
 

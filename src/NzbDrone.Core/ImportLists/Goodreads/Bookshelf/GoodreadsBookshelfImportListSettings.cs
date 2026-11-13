@@ -12,23 +12,30 @@ namespace NzbDrone.Core.ImportLists.Goodreads
         {
             RuleFor(c => c.UserId)
                 .Must(userId => userId.IsNullOrWhiteSpace() || GoodreadsUserIdParser.IsValidUserId(userId))
-                .WithMessage("Goodreads user ID must be a numeric ID (or a profile URL containing it)");
+                .WithMessage("Goodreads user ID must be a numeric ID (or a profile URL containing it)")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m0a5e4e3a7626"));
             RuleFor(c => c)
                 .Must(settings => !settings.UserId.IsNullOrWhiteSpace() ||
                                   (!settings.AccessToken.IsNullOrWhiteSpace() && !settings.AccessTokenSecret.IsNullOrWhiteSpace()))
-                .WithMessage("Goodreads user ID or existing OAuth credentials are required");
+                .WithMessage("Goodreads user ID or existing OAuth credentials are required")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m77e713c55a04"));
             RuleFor(c => c.AccessToken)
                 .NotEmpty()
                 .When(c => !c.AccessTokenSecret.IsNullOrWhiteSpace())
-                .WithMessage("Goodreads access token is required when an OAuth secret is configured");
+                .WithMessage("Goodreads access token is required when an OAuth secret is configured")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.meaa282596ccf"));
             RuleFor(c => c.AccessTokenSecret)
                 .NotEmpty()
                 .When(c => !c.AccessToken.IsNullOrWhiteSpace())
-                .WithMessage("Goodreads OAuth secret is required when an access token is configured");
+                .WithMessage("Goodreads OAuth secret is required when an access token is configured")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mb505c36a7cb5"));
             RuleFor(c => c.BookshelfIds).NotEmpty();
             RuleFor(c => c.RefreshIntervalMinutes)
                 .GreaterThanOrEqualTo(GoodreadsBookshelfImportListSettings.MinimumRefreshIntervalMinutes)
-                .WithMessage($"Refresh interval must be at least {GoodreadsBookshelfImportListSettings.MinimumRefreshIntervalMinutes} minutes");
+                .WithMessage($"Refresh interval must be at least {GoodreadsBookshelfImportListSettings.MinimumRefreshIntervalMinutes} minutes")
+                .WithState(_ => NzbDroneValidationState.ForMessage(
+                    "server.message.md91e67950f89",
+                    new { value0 = GoodreadsBookshelfImportListSettings.MinimumRefreshIntervalMinutes }));
             this.AddDualMediaRules();
         }
     }

@@ -1,0 +1,77 @@
+{
+  "artifact": "ChaptarrNG PR #190 W100-W149 independent cross review",
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "batch": "W100-149",
+  "head": "9fd23606fbb4c8928505772413e5c23e85352adc",
+  "tree": "cba466021a9a0c9699ef171ddc6a510a69209083",
+  "sourceCount": 50,
+  "localeCount": 12,
+  "cellCount": 600,
+  "crossDispositions": {
+    "accept-current": 390,
+    "select-primary-proposal": 42,
+    "hold": 168
+  },
+  "candidateFreeManifestSha256": "b97b35f303f446ae27c0d08c7189880e7f91bde2b2666d1feef5fb951a3207b0",
+  "candidateFreeChecksumListSha256": "5d94fd577a9cd03104b8a70e3a6ee269c88fd7e8ef6e943388f2cff8b5554857",
+  "primaryChecksumListSha256": "f3d64b353531125c16f563c6558cfdd1b63e6669a32ea2d054c68b3d359b117b",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2507,
+      "sha256": "54b4c6f515550405d7241b0837d0102ace841b87d17216a701c730242e685fdb"
+    },
+    {
+      "path": "cross-ledger.jsonl",
+      "bytes": 1424542,
+      "sha256": "df7aea01e6b1fd2b4c4dc40cb5596512c4034ba8d589f73af5b27e5b9a053b2e"
+    },
+    {
+      "path": "holds-hash-only.jsonl",
+      "bytes": 160286,
+      "sha256": "4b1e36e00f3d93cdcf070b085eb0c048b76f229584640abf76ec029d9c77ad27"
+    },
+    {
+      "path": "input-provenance.json",
+      "bytes": 1442,
+      "sha256": "26e0c3c4b3592c30bb3a5c7d9cae8326407071c24b50fc6b7aa992e19879ac2b"
+    },
+    {
+      "path": "live-after.json",
+      "bytes": 710,
+      "sha256": "3e4ff38cbd1d880393d495fde325deaabba070d1a69911ae870f3cc861e73e2d"
+    },
+    {
+      "path": "live-before.json",
+      "bytes": 710,
+      "sha256": "0de514c2f708bc76ff42eeded3c785557959d780f20cb067bd650b857ec0e1a0"
+    },
+    {
+      "path": "seal_cross.py",
+      "bytes": 1549,
+      "sha256": "a00b196912a65ebcde374766e1cde89b68da206e99446b9268689538492182a0"
+    },
+    {
+      "path": "selected-changes.jsonl",
+      "bytes": 133485,
+      "sha256": "5cceee50f6ddf69c60e16647d084a95bd71082a431f30967eeb990f622aecb24"
+    },
+    {
+      "path": "source-rewrite-recommendations.json",
+      "bytes": 13910,
+      "sha256": "4a3c58ead693ab04ecd01ae05e716e1312a5e232b1c8ca4ad31421e016113666"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 1792,
+      "sha256": "2bb391de99ad5dadbd33b93a672888f39ae4f7ebba9dd7083d59899d32faf965"
+    },
+    {
+      "path": "verify_cross.py",
+      "bytes": 14423,
+      "sha256": "3641f9c400eec9d717e04fd08190b1a7004914e41eff342cdfe95f5750206613"
+    }
+  ]
+}

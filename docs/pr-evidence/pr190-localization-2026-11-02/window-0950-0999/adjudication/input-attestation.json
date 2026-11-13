@@ -1,0 +1,79 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "exactBase": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+  "exactHead": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+  "exactTree": "c46078c93545042313aa1b35bc3b283b1f3b5406",
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0950-0999-primary-20261102",
+  "primaryPacketSha256SumsFileSha256": "29e46a5d5b9a0a806ea54504f2697635203330eded7d3ac8276b2d7a9ad40a41",
+  "primaryManifestSha256": "95179dd3faa69cecee69e15acef6d0d779db41ba38605dd6897138efa672a835",
+  "crossReviewPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0950-0999-crossreview-20261102",
+  "crossReviewPacketSha256SumsFileSha256": "16f48146d279262f52b90c1ae3f6110a76331395dcc6bd974c9969c2a7432afb",
+  "crossReviewLedgerSha256": "ed009cfc28cdb36550a49a2a75fc454eecfb78b6a5c23e96a0d5d6d6efdbf648",
+  "sourcePositionsReviewedByPrimary": [
+    950,
+    999
+  ],
+  "primaryCoverage": {
+    "sourceIds": 50,
+    "locales": 12,
+    "cells": 600,
+    "primaryCorrections": 12,
+    "primaryAcceptedCurrent": 588
+  },
+  "independentSample": {
+    "sourceOrdinals": [
+      950,
+      951,
+      954,
+      958,
+      963,
+      968,
+      969,
+      971,
+      973,
+      984,
+      986,
+      991,
+      992,
+      995,
+      999
+    ],
+    "locales": 12,
+    "cells": 180,
+    "primaryCurrentRows": 170
+  },
+  "adjudicatedFindings": 182,
+  "adjudicationCounts": {
+    "acceptPrimaryCorrection": 12,
+    "adoptMissedCorrection": 7,
+    "adoptRefinement": 4,
+    "retainCurrentSample": 158,
+    "holdNativeSpeaker": 1
+  },
+  "approvedTargetChanges": 23,
+  "heldCell": {
+    "sourceOrdinal": 963,
+    "sourceId": "provider.option.oe4d40d318e99",
+    "source": "Farsi",
+    "locale": "id",
+    "currentTarget": "Farsi",
+    "finalTarget": "Farsi",
+    "reason": "Fluent Indonesian reviewer must choose among endonym/localized options."
+  },
+  "structuralChecks": {
+    "allTwelveLocaleCatalogsAttested": true,
+    "allLocaleCatalogKeysetsEqual": true,
+    "sourceAndTargetHashesReattested": true,
+    "providerOptionCallsitesPinned": true,
+    "placeholderMarkupIcuProtectedLiteralFailures": 0
+  },
+  "reviewLimitations": [
+    "Machine-assisted lexical/contextual adjudication; no qualified native-speaker signoff.",
+    "No headed browser review; these are static language option labels.",
+    "The 418 primary accept-current cells outside the 170-row cross-review sample are not independently adjudicated in this packet.",
+    "Previous source positions before W950 are outside scope; the W949 boundary was preserved."
+  ],
+  "repositoryOrPrEdited": false,
+  "testsBuildsScansCiBrowserReleasesTagsMergesRun": false
+}

@@ -1,0 +1,289 @@
+{
+  "artifact": "ChaptarrNG PR #190 W450-W499 independent semantic cross-review",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "stateAtEntry": "OPEN/draft",
+  "stateAtExit": "OPEN/draft",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "baseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "baseTree": "3c27ce1d128d1d74d3b46bf507e2f99f9c02f4d8",
+  "sourceOrdinalRange": [
+    450,
+    499
+  ],
+  "sourceCount": 50,
+  "localeCount": 12,
+  "cellCount": 600,
+  "callerBoundCells": 552,
+  "hashOnlyHolds": 48,
+  "heldSourceOrdinals": [
+    469,
+    474,
+    481,
+    482
+  ],
+  "changedCellCount": 111,
+  "retainedCurrentCount": 441,
+  "crossDecisionCounts": {
+    "accept-current": 441,
+    "accept-consensus-proposal": 31,
+    "accept-primary-proposal": 37,
+    "accept-blind-proposal": 26,
+    "cross-adjustment": 17
+  },
+  "holdDecisionCounts": {
+    "hold-hash-only": 48
+  },
+  "proposalInputs": {
+    "primary": 75,
+    "blind": 69,
+    "uniqueCells": 96
+  },
+  "reviewerAgreement": {
+    "sameDecision": 497,
+    "differentDecision": 55
+  },
+  "recommendedTokenCheckFailures": {
+    "numeric": 2
+  },
+  "manualLexicalizedOctalExceptions": [
+    {
+      "sourceOrdinal": 471,
+      "locale": "ja",
+      "target": "8進数",
+      "reason": "standard Japanese lexicalized octal term, not a separate source value"
+    },
+    {
+      "sourceOrdinal": 471,
+      "locale": "ko",
+      "target": "8진수",
+      "reason": "standard Korean lexicalized octal term, not a separate source value"
+    }
+  ],
+  "inputMainAtSeal": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "mainAtEntry": "c83969e8137fa50a4780881e5b76bcb6eb44a6d0",
+  "mainAtExit": "2ade9a5280a64ce7de8f1016961f88e93bd6cb8e",
+  "mainAdvancedSinceCandidateFreeSeal": true,
+  "entryExitHeadTreeBaseStable": true,
+  "nativeSpeakerSignoff": false,
+  "worktreeClean": true,
+  "partSummaries": {
+    "part-450-474": {
+      "PRHeadAndBaseUnchangedAtEntry": true,
+      "PRHeadAndBaseUnchangedAtExit": true,
+      "apiBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+      "artifact": "ChaptarrNG PR #190 W450-W474 cross-review part",
+      "blindDecisionCounts": {
+        "accept-current": 249,
+        "correction": 15,
+        "hold-hash-only": 24,
+        "refinement": 12
+      },
+      "blindExactVerifierResult": "PASS",
+      "blindProposalCellsInRange": 27,
+      "blindRowsReattested": 300,
+      "blindVerifier": "PASS (exact worktree)",
+      "browserOrDesktopUsed": false,
+      "callerBackedCells": 276,
+      "callerlessHoldTextIncluded": false,
+      "candidateFreeInputVerifierResult": "PASS",
+      "candidateFreeRowsReattested": 300,
+      "candidateFreeVerifier": "PASS (portable and exact worktree)",
+      "cellCount": 300,
+      "confidenceCounts": {
+        "high": 14,
+        "moderate": 262
+      },
+      "crossDecisionCounts": {
+        "accept-blind-proposal": 7,
+        "accept-consensus-proposal": 14,
+        "accept-current": 226,
+        "accept-primary-proposal": 12,
+        "cross-adjustment": 17,
+        "hold-hash-only": 24
+      },
+      "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+      "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+      "hashOnlyHoldCells": 24,
+      "hashOnlyHoldSourceOrdinals": [
+        469,
+        474
+      ],
+      "liveMainAdvancedDuringCrossReview": true,
+      "liveMainAtCandidateFreeSeal": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+      "liveMainAtEntry": "73515010a360d64248c54bc51ebd66c6d50344a8",
+      "liveMainAtExit": "2ade9a5280a64ce7de8f1016961f88e93bd6cb8e",
+      "liveMainTreeAtExit": "bf48eb2492ca4ebde48fa39f974ebe5dd7abf6bd",
+      "localeCount": 12,
+      "manualOctalNumericAssessments": [
+        {
+          "locale": "ja",
+          "sourceOrdinal": 471
+        },
+        {
+          "locale": "ko",
+          "sourceOrdinal": 471
+        }
+      ],
+      "nativeSpeakerSignoff": false,
+      "noRepositoryOrPullRequestEdits": true,
+      "portableCrossVerifierResult": "PASS",
+      "primaryBlindDecisionAgreement": 283,
+      "primaryBlindDecisionDisagreement": 17,
+      "primaryCandidateFreeBoundVerifierResult": "PASS",
+      "primaryDecisionCounts": {
+        "accept-current": 245,
+        "correction": 16,
+        "hold-hash-only": 24,
+        "refinement": 15
+      },
+      "primaryProposalCellsInRange": 31,
+      "primaryRowsReattested": 300,
+      "primaryVerifier": "PASS (candidate-free bound)",
+      "proposalOutputsRead": [
+        "candidate-free/input",
+        "primary-review",
+        "blind-review"
+      ],
+      "recommendedTokenCheckFailures": {
+        "numeric": 2
+      },
+      "result": "PASS",
+      "reviewerConfidence": "Moderate overall; high for clear grammar/category corrections, moderate for terminology refinements.",
+      "sourceIdCount": 25,
+      "sourceOrdinalRange": [
+        450,
+        474
+      ],
+      "staleOrOtherCrossOutputsRead": false,
+      "testsBuildsScansOrCI": false
+    },
+    "part-475-499": {
+      "artifact": "ChaptarrNG PR #190 W475-W499 cross-review part",
+      "sourceOrdinalRange": [
+        475,
+        499
+      ],
+      "cellCount": 300,
+      "callerBoundRows": 276,
+      "hashOnlyHolds": 24,
+      "recommendations": 61,
+      "retainedCurrent": 215,
+      "crossDecisionCounts": {
+        "accept-current": 215,
+        "accept-blind-proposal": 19,
+        "accept-consensus-proposal": 17,
+        "accept-primary-proposal": 25
+      },
+      "proposalAgreement": {
+        "blind-only": 17,
+        "different-text": 8,
+        "same-text": 17,
+        "primary-only": 19
+      },
+      "inputProposalRows": {
+        "primary": 44,
+        "blind": 42,
+        "uniqueCells": 61
+      },
+      "tokenMismatches": 0,
+      "confidence": "moderate; no native-speaker signoff",
+      "entryExitHeadBaseStable": true,
+      "mainAtEntry": "73515010a360d64248c54bc51ebd66c6d50344a8",
+      "mainAtExit": "73515010a360d64248c54bc51ebd66c6d50344a8",
+      "inputPacketMain": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+      "mainAdvancedSinceInputSeal": true,
+      "inputVerifierResults": [
+        {
+          "name": "candidate-free-exact",
+          "command": [
+            "python3",
+            "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/candidate-free/input/verify_candidate_free.py",
+            "--repo",
+            "/mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned"
+          ],
+          "exitCode": 0,
+          "output": "{\n  \"exactWorktree\": \"PASS\",\n  \"head\": \"16c809b4787d70616a1a296ab0d90cf17923ba86\",\n  \"tree\": \"dbd8343a42476f4e830428cc59efb7f4830251d5\",\n  \"main\": \"317c5b431649a69a89e1c795f9490fd4df0b682b\",\n  \"catalogs\": 13,\n  \"selectedCellsVerified\": 600,\n  \"historicalRows\": 211539,\n  \"callerSourcePinsVerified\": 13049\n}\n{\n  \"result\": \"PASS\",\n  \"head\": \"16c809b4787d70616a1a296ab0d90cf17923ba86\",\n  \"tree\": \"dbd8343a42476f4e830428cc59efb7f4830251d5\",\n  \"main\": \"317c5b431649a69a89e1c795f9490fd4df0b682b\",\n  \"sourceIds\": 50,\n  \"cells\": 600,\n  \"callerContexts\": 50,\n  \"priorW400CellsReattested\": 600,\n  \"callerFilesReattested\": 4350,\n  \"committedW400ApplicationCellsReattested\": 140,\n  \"w400CallerlessHoldsReattested\": 12,\n  \"carriedPriorHoldsReattested\": 12,\n  \"legacyNov2W450Inputs\": \"stale; zero source-key overlap\",\n  \"sourceTargetDriftVsMain\": 0,\n  \"callerContextDriftVsMain\": 6,\n  \"numericHeuristicFlags\": 2,\n  \"prWorkflowPaths\": 0,\n  \"candidateFreeOnly\": true\n}"
+        },
+        {
+          "name": "primary-input-bound",
+          "command": [
+            "python3",
+            "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/primary-review/verify_primary.py",
+            "--input",
+            "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/candidate-free/input"
+          ],
+          "exitCode": 0,
+          "output": "candidate-free rows and caller-context hashes PASS\nprimary packet PASS: 600 cells, 75 proposals, 48 text-free hash-only holds"
+        },
+        {
+          "name": "blind-exact",
+          "command": [
+            "python3",
+            "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/blind-review/verify_blind_review.py",
+            "--repo",
+            "/mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned"
+          ],
+          "exitCode": 0,
+          "output": "PASS: 600 cells (50 IDs × 12 locales), 69 proposals, 48 text-free hash-only holds, caller/source/catalog pins, recommended token checks, exact refs and checksums; PASS exact commit/tree and 12 target catalog blobs"
+        }
+      ],
+      "partVerifierResults": {
+        "portable": {
+          "command": "python3 verify_part.py",
+          "result": "PASS",
+          "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+          "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+          "cells": 300,
+          "callerBound": 276,
+          "hashOnlyHolds": 24,
+          "recommendations": 61,
+          "exactWorktreeReadback": false
+        },
+        "exactWorktree": {
+          "command": "python3 verify_part.py --repo /mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+          "result": "PASS",
+          "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+          "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+          "cells": 300,
+          "callerBound": 276,
+          "hashOnlyHolds": 24,
+          "recommendations": 61,
+          "exactWorktreeReadback": true
+        }
+      }
+    }
+  },
+  "verifierResults": {
+    "portable": {
+      "result": "PASS",
+      "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+      "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+      "base": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+      "cells": 600,
+      "callerBound": 552,
+      "hashOnlyHolds": 48,
+      "changedCells": 111,
+      "retainedCurrent": 441,
+      "portableVerifier": "verify_cross_review.py",
+      "command": "python3 verify_cross_review.py",
+      "exactWorktreeReadback": false
+    },
+    "exactWorktree": {
+      "result": "PASS",
+      "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+      "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+      "base": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+      "cells": 600,
+      "callerBound": 552,
+      "hashOnlyHolds": 48,
+      "changedCells": 111,
+      "retainedCurrent": 441,
+      "portableVerifier": "verify_cross_review.py",
+      "command": "python3 verify_cross_review.py --repo /mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+      "exactWorktreeReadback": true
+    }
+  }
+}

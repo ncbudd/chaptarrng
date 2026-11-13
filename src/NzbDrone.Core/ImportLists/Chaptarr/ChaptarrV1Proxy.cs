@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using NLog;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists.Chaptarr
 {
@@ -66,22 +67,22 @@ namespace NzbDrone.Core.ImportLists.Chaptarr
                 if (ex.Response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     _logger.Error(ex, "API Key is invalid");
-                    return new ValidationFailure("ApiKey", "API Key is invalid");
+                    return NzbDroneValidationFailure.ForMessage("ApiKey", "API Key is invalid", "server.message.m82fee98391f9");
                 }
 
                 if (ex.Response.HasHttpRedirect)
                 {
                     _logger.Error(ex, "Chaptarr returned redirect and is invalid");
-                    return new ValidationFailure("BaseUrl", "Chaptarr URL is invalid, are you missing a URL base?");
+                    return NzbDroneValidationFailure.ForMessage("BaseUrl", "Chaptarr URL is invalid, are you missing a URL base?", "server.message.m760d3d8feb20");
                 }
 
                 _logger.Error(ex, "Unable to connect to import list.");
-                return new ValidationFailure(string.Empty, $"Unable to connect to import list: {ex.Message}. Check the log surrounding this error for details.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Unable to connect to import list: {ex.Message}. Check the log surrounding this error for details.", "server.message.m44eab1fb9fa7", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to connect to import list.");
-                return new ValidationFailure(string.Empty, $"Unable to connect to import list: {ex.Message}. Check the log surrounding this error for details.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Unable to connect to import list: {ex.Message}. Check the log surrounding this error for details.", "server.message.m44eab1fb9fa7", new { value0 = ex.Message });
             }
 
             return null;

@@ -1,0 +1,18 @@
+{
+  "recordedAt": "2026-11-04T14:52:08Z",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "state": "open",
+  "draft": true,
+  "mergeable": "unknown",
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "headSha": "243f17465cc95fe84f16e17767db04a4a97ad040",
+  "headTree": "25e7bd0f3adf871b9030081ebc7c49a28213c50f",
+  "branchRefSha": "243f17465cc95fe84f16e17767db04a4a97ad040",
+  "pullRefSha": "243f17465cc95fe84f16e17767db04a4a97ad040",
+  "baseRef": "main",
+  "pullApiBaseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "liveMainSha": "b5653f44e703438ba66c209d79e2fb3f32696e84",
+  "liveMainTree": "601017b4fc19fa3d1e8a3ef59d2c2ba51ccd6915",
+  "note": "The PR API base SHA is behind the live main ref; the pinned localization head and pull/branch refs match. No force update or rebase was performed."
+}

@@ -1,0 +1,49 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "batch": "W200-W249",
+  "head": "dc91bdcdf60ba422bb176cc7c58b9b1cab27facd",
+  "tree": "ffae435c871360ba958098bc0398a1f251f8b1e8",
+  "apiBaseAtReview": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "currentMainAtReview": "dbbb46abf8bee2f88e5a8a6ca7d8e141bf4d15a2",
+  "baseDiffersFromLiveMain": true,
+  "baseDriftReconciliation": {
+    "compareBase": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+    "compareHead": "dbbb46abf8bee2f88e5a8a6ca7d8e141bf4d15a2",
+    "aheadBy": 8,
+    "changedFiles": [
+      ".github/workflows/bookshelfng-standalone-macos-acceptance.yml",
+      ".github/workflows/standalone-asset-validation.yml",
+      "AGENTS.md",
+      "docs/BOOKSHELFNG_RETIREMENT.md",
+      "packaging/scripts/test-bookshelf-legacy-channels.mjs",
+      "scripts/test_workflow_runner_policy.py"
+    ],
+    "localizationSourceOrCatalogChanges": false,
+    "verifiedBy": "GitHub compare API at 2026-11-04T16:19:50Z"
+  },
+  "scope": "50 source IDs × 12 direct locales = 600 cells",
+  "primaryProposalCells": 96,
+  "blindProposalCells": 34,
+  "proposalOverlap": 31,
+  "uniqueProposalCellsCrossReviewed": 99,
+  "selectedChangeCells": 99,
+  "dispositions": {
+    "accept-current": 489,
+    "propose-change": 99,
+    "hold-text-free": 12
+  },
+  "callerBackedKeys": 49,
+  "callerlessSourceKeys": [
+    "AuthorsLabel"
+  ],
+  "textFreeHolds": 12,
+  "nativeSpeakerApproval": 0,
+  "nativeSpeakerReviewOutstanding": 600,
+  "recommendationsOnly": true,
+  "appliedToCatalogs": false,
+  "repositoryOrPRChanged": false,
+  "testsBuildsCI": "not run",
+  "candidateFreeManifestSha256": "089ce6eb329a24793ba0410fa9d007487b6dd4d9161ba1b6ef1f0cd7597c9beb",
+  "sourceWorktreeClean": true
+}

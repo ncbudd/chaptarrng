@@ -1,0 +1,37 @@
+{
+  "results": [
+    {
+      "name": "candidate-free-exact",
+      "command": [
+        "python3",
+        "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/candidate-free/input/verify_candidate_free.py",
+        "--repo",
+        "/mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned"
+      ],
+      "exitCode": 0,
+      "output": "{\n  \"exactWorktree\": \"PASS\",\n  \"head\": \"16c809b4787d70616a1a296ab0d90cf17923ba86\",\n  \"tree\": \"dbd8343a42476f4e830428cc59efb7f4830251d5\",\n  \"main\": \"317c5b431649a69a89e1c795f9490fd4df0b682b\",\n  \"catalogs\": 13,\n  \"selectedCellsVerified\": 600,\n  \"historicalRows\": 211539,\n  \"callerSourcePinsVerified\": 13049\n}\n{\n  \"result\": \"PASS\",\n  \"head\": \"16c809b4787d70616a1a296ab0d90cf17923ba86\",\n  \"tree\": \"dbd8343a42476f4e830428cc59efb7f4830251d5\",\n  \"main\": \"317c5b431649a69a89e1c795f9490fd4df0b682b\",\n  \"sourceIds\": 50,\n  \"cells\": 600,\n  \"callerContexts\": 50,\n  \"priorW400CellsReattested\": 600,\n  \"callerFilesReattested\": 4350,\n  \"committedW400ApplicationCellsReattested\": 140,\n  \"w400CallerlessHoldsReattested\": 12,\n  \"carriedPriorHoldsReattested\": 12,\n  \"legacyNov2W450Inputs\": \"stale; zero source-key overlap\",\n  \"sourceTargetDriftVsMain\": 0,\n  \"callerContextDriftVsMain\": 6,\n  \"numericHeuristicFlags\": 2,\n  \"prWorkflowPaths\": 0,\n  \"candidateFreeOnly\": true\n}"
+    },
+    {
+      "name": "primary-input-bound",
+      "command": [
+        "python3",
+        "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/primary-review/verify_primary.py",
+        "--input",
+        "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/candidate-free/input"
+      ],
+      "exitCode": 0,
+      "output": "candidate-free rows and caller-context hashes PASS\nprimary packet PASS: 600 cells, 75 proposals, 48 text-free hash-only holds"
+    },
+    {
+      "name": "blind-exact",
+      "command": [
+        "python3",
+        "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w450-499-20261105/blind-review/verify_blind_review.py",
+        "--repo",
+        "/mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned"
+      ],
+      "exitCode": 0,
+      "output": "PASS: 600 cells (50 IDs × 12 locales), 69 proposals, 48 text-free hash-only holds, caller/source/catalog pins, recommended token checks, exact refs and checksums; PASS exact commit/tree and 12 target catalog blobs"
+    }
+  ]
+}

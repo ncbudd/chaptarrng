@@ -1,0 +1,32 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W561",
+  "exactHead": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "exactTree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "sourceDecision": "Correct English copy to “NzbGet setting KeepHistory must not exceed 25000”; retain value > 25000 predicate.",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "proposedSourceId": "server.message.m3a79390fb21e",
+  "localeCount": 12,
+  "finalDispositionCounts": {
+    "correction": 12,
+    "accept-current": 0,
+    "hold": 0
+  },
+  "crossChoices": {
+    "primary": 4,
+    "blind": 3,
+    "both-agree": 5
+  },
+  "primaryBlindDifferent": 7,
+  "primaryBlindIdentical": 5,
+  "requiredLiteralsPreserved": true,
+  "nativeSpeakerApproval": false,
+  "semanticConfidence": "moderate",
+  "structuralConfidence": "high",
+  "predicateValue25000Accepted": true,
+  "predicateUnchanged": true,
+  "primaryChecksumListSha256": "01301a3db5fbc34141bfc1694ead4395d3697c6e53f745051c9447bee06fe729",
+  "blindChecksumListSha256": "4d01e902228956c16dd41f12a8c32683492d42a7600892bedb85f209fd92a756",
+  "crossChecksumListSha256": "838aa5ce524bc5c9b6577815960574f44ecb2c79de03cfcfae91be6044273119"
+}

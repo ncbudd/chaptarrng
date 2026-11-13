@@ -1,0 +1,19 @@
+{
+  "allSevenHeadsUnchangedFromAfterSourceSelection": true,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "chaptarrPrDraft": true,
+  "chaptarrPrHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "chaptarrPrState": "OPEN",
+  "chaptarrPrTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "passed": true,
+  "queryCompletedUtc": "2026-11-02T22:06:09.017401+00:00",
+  "queryStartedUtc": "2026-11-02T22:06:07.918510+00:00",
+  "reviewWorktreeState": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+    "status": "clean",
+    "tree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b"
+  }
+}

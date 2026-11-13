@@ -1,0 +1,117 @@
+{
+  "artifact": "ChaptarrNG PR #190 W400-W449 exact-hash catalog application",
+  "exactSourceHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactSourceTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "productTreeBefore": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "cellsApplied": 140,
+  "changedByLocale": {
+    "es": 12,
+    "fr": 10,
+    "hi": 17,
+    "id": 7,
+    "ja": 9,
+    "ko": 6,
+    "pt-BR": 8,
+    "zh-Hans": 17,
+    "zh-Hant": 19,
+    "de": 12,
+    "vi": 10,
+    "ar": 13
+  },
+  "readbackMatches": 140,
+  "readbackMismatches": 0,
+  "keyOrderPreserved": true,
+  "unselectedCatalogValuesUnchanged": true,
+  "callerlessCellsChanged": 0,
+  "catalogs": {
+    "src/NzbDrone.Core/Localization/Core/es.json": {
+      "beforeSha256": "78b5e85d78474993cacecfe319c832eb7e96c8fc67fe7f1270b3c4a7b2e4d320",
+      "afterSha256": "35620762fbcb865dc1a3c991b791e125ff65321b4f7943635b244d85ad4f9b11",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 12
+    },
+    "src/NzbDrone.Core/Localization/Core/fr.json": {
+      "beforeSha256": "5a79ac84d6becf1fedfd3856dd1c7c17cb867ecfb58987161734756c37da7748",
+      "afterSha256": "43db32ac8070a781eeff05e8c3ee03187bb0c59b4e0459d13fd3113b6184d32d",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 10
+    },
+    "src/NzbDrone.Core/Localization/Core/hi.json": {
+      "beforeSha256": "be16967cd114dfac749ce10c41f3769170727514a593d7bc8aa1412a497d4da8",
+      "afterSha256": "bc6410067bddb94c9b6bd8dc017b9c640137ce778c5dadfb9cf24afe539372a8",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 17
+    },
+    "src/NzbDrone.Core/Localization/Core/id.json": {
+      "beforeSha256": "b65472a41f7683ee24e64353f236b480d37e0d952f169d981c95846ac75e59ce",
+      "afterSha256": "4e0afa3ec3cbf3168ef14c8194b2e2f0274ffcdf984b0ee6e340f671b0841295",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 7
+    },
+    "src/NzbDrone.Core/Localization/Core/ja.json": {
+      "beforeSha256": "1f7563f4b22a24719c6641e4eb809e7b2c5c32e9d7e86379c5166f43185f4e64",
+      "afterSha256": "164e675dfd3bf421ff1fcdc0042648c46c2d892355705a66801bc58c7d304fc7",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 9
+    },
+    "src/NzbDrone.Core/Localization/Core/ko.json": {
+      "beforeSha256": "18eacf1eb809f87f4716506dea885cc6f547aa1e7fc8997ad7373ae92492832f",
+      "afterSha256": "f0123de5d6d437937397fce4a497acfe844abc33f128e55bc4187885fbea23e3",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 6
+    },
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": {
+      "beforeSha256": "98b736902e67ca2a3b8ba0bc104e81870bbc32514f1b90294041183089826c0b",
+      "afterSha256": "4534142c67676e9863500bedca7f9b90ecf5b6324a7417fdf7ef976a3cd8cbfb",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 8
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": {
+      "beforeSha256": "ae5943db465dfea8da4f17d373715cb033b578f81f59133e598e818d61f6aa3a",
+      "afterSha256": "3ed299fd4aaf15cb988e073deaed78f842d33497caf0e4678daa32412c7652ce",
+      "keyCount": 4165,
+      "keyOrderSha256": "87dffb463daf776059795552d966ad60c5889c5ae22fa0f11ca722209520edae",
+      "changedCells": 17
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": {
+      "beforeSha256": "32d63c3e03ff76649bf81cb5ba65c44d60709740b1798fdd15133a19278c1267",
+      "afterSha256": "9a17d2de9a500a8947be9cee24f9f9b5691dce9123f2fbaa23708cc15426badb",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 19
+    },
+    "src/NzbDrone.Core/Localization/Core/de.json": {
+      "beforeSha256": "3e1f7e0930b86741eb6a0ac37f6546fa9783430dc9bc2c63c2ae74096757f3ed",
+      "afterSha256": "7e3ae03e24b4b021cd13bea5b473b604fd9747d91a436dd93847f788a74db53a",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 12
+    },
+    "src/NzbDrone.Core/Localization/Core/vi.json": {
+      "beforeSha256": "dd74e95b5dcc266c5feb20cb587a49a1fe2a45249c28aa6026db00558f7a09b9",
+      "afterSha256": "ed3eba4537c1d08ee4ef8c04a9f68151d57086ac0e61222b154af29558e33271",
+      "keyCount": 4165,
+      "keyOrderSha256": "87dffb463daf776059795552d966ad60c5889c5ae22fa0f11ca722209520edae",
+      "changedCells": 10
+    },
+    "src/NzbDrone.Core/Localization/Core/ar.json": {
+      "beforeSha256": "9dbbc976bdaef3348b3e48aa2f82c930f9f4e27c9052752a3273d1587700a917",
+      "afterSha256": "1dcfc93eeeabf212df3c86bf28967ad6e2523ed9288071d73902d996cdfce519",
+      "keyCount": 4165,
+      "keyOrderSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "changedCells": 13
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansOrCI": false,
+  "productCommit": "3efb8f4ec37de7a9e9a7664623b1dc5fbe6f2526",
+  "productTree": "60e09f39a1f1f961c137c4f5a17a1e2f3f931443",
+  "applicationPerformed": true
+}

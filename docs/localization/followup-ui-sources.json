@@ -60,9 +60,9 @@
       "callsites": [
         {
           "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
-          "line": 240,
-          "sourceLine": "return xhr.statusText || translate('ui.error.unknown');",
-          "sourceLineSha256": "42a1388f5346e3a1690e49254a0d70fcfa2a1c78c2b9aa3480c6dcba5a580c58"
+          "line": 269,
+          "sourceLine": "translate('ui.error.unknown');",
+          "sourceLineSha256": "70ce7d71c97f32945f41b6970a9a63582e6afa3f1b657e1661f23fea6d3f162e"
         }
       ],
       "status": "new source; target translations pending"
@@ -77,15 +77,15 @@
       "callsites": [
         {
           "file": "frontend/src/Store/Actions/oAuthActions.js",
-          "line": 168,
-          "sourceLine": "deferred.reject(createOAuthError(payload, translate('ui.oauth.authorizationTimedOut')));",
-          "sourceLineSha256": "95f0f887afc5e5a400733ebb8ab83cf9ebe4df65919968480e8f0b810c064c1d"
+          "line": 169,
+          "sourceLine": "deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));",
+          "sourceLineSha256": "6014dde8ab18634664f7dcf30fd2306fa3e8b1b43ae47e128973fbb33293e08a"
         },
         {
           "file": "frontend/src/Store/Actions/oAuthActions.js",
-          "line": 210,
-          "sourceLine": "deferred.reject(createOAuthError(payload, translate('ui.oauth.authorizationTimedOut')));",
-          "sourceLineSha256": "95f0f887afc5e5a400733ebb8ab83cf9ebe4df65919968480e8f0b810c064c1d"
+          "line": 211,
+          "sourceLine": "deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));",
+          "sourceLineSha256": "6014dde8ab18634664f7dcf30fd2306fa3e8b1b43ae47e128973fbb33293e08a"
         }
       ],
       "status": "new source; target translations pending"
@@ -100,15 +100,15 @@
       "callsites": [
         {
           "file": "frontend/src/Store/Actions/oAuthActions.js",
-          "line": 156,
-          "sourceLine": "deferred.reject(createOAuthError(payload, translate('ui.oauth.windowClosed')));",
-          "sourceLineSha256": "6cebd8f5d975dab34c023942a7be7fddc49cc8df657d5566f5802cf8b9e18242"
+          "line": 157,
+          "sourceLine": "deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));",
+          "sourceLineSha256": "98f52642501cc961175c626d942b5a499f3a355ba4904c1cb1d238d3a6bd5d7f"
         },
         {
           "file": "frontend/src/Store/Actions/oAuthActions.js",
-          "line": 237,
-          "sourceLine": "deferred.reject(createOAuthError(payload, translate('ui.oauth.windowClosed')));",
-          "sourceLineSha256": "6cebd8f5d975dab34c023942a7be7fddc49cc8df657d5566f5802cf8b9e18242"
+          "line": 238,
+          "sourceLine": "deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));",
+          "sourceLineSha256": "98f52642501cc961175c626d942b5a499f3a355ba4904c1cb1d238d3a6bd5d7f"
         }
       ],
       "status": "new source; target translations pending"
@@ -121,9 +121,9 @@
       "callsites": [
         {
           "file": "frontend/src/Store/Actions/releaseActions.js",
-          "line": 409,
-          "sourceLine": "const grabError = response.message || translate('ui.release.queueFailed');",
-          "sourceLineSha256": "58ca14df0c98b9f1e47685c86248188feec2d26386e26409f963afdb565f0f2a"
+          "line": 416,
+          "sourceLine": "const grabError = hasMessage ? responseMessage : translate('ui.release.queueFailed');",
+          "sourceLineSha256": "077b03dc089405468a2bc2b9cb15bc0b877428927994fb22be7f7115e277d597"
         }
       ],
       "status": "new source; target translations pending"

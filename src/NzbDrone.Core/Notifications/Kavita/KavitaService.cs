@@ -1,6 +1,7 @@
 using System;
 using FluentValidation.Results;
 using NLog;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Kavita;
 
@@ -43,12 +44,12 @@ public class KavitaService : IKavitaService
         catch (KavitaAuthenticationException ex)
         {
             _logger.Error(ex, "Unable to connect to Kavita Server");
-            return new ValidationFailure("ApiKey", "Incorrect ApiKey");
+            return NzbDroneValidationFailure.ForMessage("ApiKey", "Incorrect ApiKey", "server.message.m57a345f27938");
         }
         catch (Exception ex)
         {
             _logger.Error(ex, "Unable to connect to Kavita Server");
-            return new ValidationFailure("Host", "Unable to connect to Kavita Server");
+            return NzbDroneValidationFailure.ForMessage("Host", "Unable to connect to Kavita Server", "server.message.m7731b01b80f7");
         }
 
         return null;

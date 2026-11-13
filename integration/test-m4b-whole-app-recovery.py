@@ -94,17 +94,6 @@ def main():
     schema_seed_hashes = {}
     schema_seed_versions = {}
     has_conversion_jobs_database = False
-    operator_table_queries = (
-        ("Authors", 'SELECT COUNT(*) FROM "Authors"'),
-        ("Books", 'SELECT COUNT(*) FROM "Books"'),
-        ("BookFiles", 'SELECT COUNT(*) FROM "BookFiles"'),
-        ("Series", 'SELECT COUNT(*) FROM "Series"'),
-        ("Users", 'SELECT COUNT(*) FROM "Users"'),
-        ("RootFolders", 'SELECT COUNT(*) FROM "RootFolders"'),
-        ("DownloadClients", 'SELECT COUNT(*) FROM "DownloadClients"'),
-        ("Indexers", 'SELECT COUNT(*) FROM "Indexers"'),
-        ("Notifications", 'SELECT COUNT(*) FROM "Notifications"'),
-    )
     for schema_seed in schema_seeds:
         require(schema_seed.is_file(), "Every schema seed must be a database file")
         for suffix in ("-wal", "-shm", "-journal"):
@@ -120,7 +109,18 @@ def main():
                 has_conversion_jobs_database = True
                 require(schema_seed.name == "chaptarr.db", "The conversion job database must be named chaptarr.db")
                 require(connection.execute('SELECT COUNT(*) FROM "ConversionJobs"').fetchone() == (0,), "The schema seed must not contain conversion jobs")
-            for table, query in operator_table_queries:
+            operator_data_queries = {
+                "Authors": 'SELECT COUNT(*) FROM "Authors"',
+                "Books": 'SELECT COUNT(*) FROM "Books"',
+                "BookFiles": 'SELECT COUNT(*) FROM "BookFiles"',
+                "Series": 'SELECT COUNT(*) FROM "Series"',
+                "Users": 'SELECT COUNT(*) FROM "Users"',
+                "RootFolders": 'SELECT COUNT(*) FROM "RootFolders"',
+                "DownloadClients": 'SELECT COUNT(*) FROM "DownloadClients"',
+                "Indexers": 'SELECT COUNT(*) FROM "Indexers"',
+                "Notifications": 'SELECT COUNT(*) FROM "Notifications"',
+            }
+            for table, query in operator_data_queries.items():
                 if table in tables:
                     require(connection.execute(query).fetchone() == (0,), f"The schema seed contains operator data in {table}")
         schema_seed_hashes[schema_seed.name] = sha256(schema_seed)

@@ -1,0 +1,12 @@
+{
+  "allSevenHeadSnapshotsStable": true,
+  "crossReviewPacketManifestSha256": "66377d27149661c9afa7771eec3f27f4b8336030e0b9a45cc1ae74cb0dfb2a86",
+  "crossReviewRows": 600,
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "primaryPacketManifestSha256": "7da08c9e0e14ecbf279728a4561ab91580c39ff074a6fdea32f4ef9f92543046",
+  "primaryRows": 600,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "window": "W1000-W1049"
+}

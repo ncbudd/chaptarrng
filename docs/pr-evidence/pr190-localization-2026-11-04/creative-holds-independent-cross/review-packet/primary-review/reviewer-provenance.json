@@ -1,0 +1,16 @@
+{
+  "candidateFreeCellInputSha256": "3502f29234152680fd9631484c3803fddd774bdbbf9d70a5cd6b3f53ad1ff30b",
+  "candidateFreeSourceCallerInputSha256": "b74adcaccafd64627db822988cf8610b3d473a009b7f4bf2c9cf11cf0bbb4dbb",
+  "decisionBasis": "current source, current targets, exact caller context, protected literals, and token checks in the candidate-free input",
+  "head": "28cdae837118a426ac867fb468a5e5a6937cbb9b",
+  "pass": "primary",
+  "previousTaskProposalTextConsulted": false,
+  "priorProposalTextConsulted": false,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "reviewOrder": "second review pass; produced after the clean-blind packet",
+  "reviewer": "single-agent primary pass",
+  "reviewerIdentityDistinctFromOtherPass": false,
+  "sameAgentSequentialPassesForThisTask": true,
+  "tree": "e6e7f1344d08eddbc421d339f91594847a625c10"
+}

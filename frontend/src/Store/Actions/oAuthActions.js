@@ -54,13 +54,14 @@ function parseOAuthQuery(query) {
   return queryParams;
 }
 
-function createOAuthError(payload, errorMessage) {
+function createOAuthError(payload, messageKey) {
   return {
     status: 400,
+    appMessageKey: messageKey,
     responseJSON: [
       {
         propertyName: payload.name,
-        errorMessage
+        errorMessage: translate(messageKey)
       }
     ]
   };
@@ -79,7 +80,7 @@ function openOAuthWindow(url, payload, windowName) {
     typeof newWindow.closed == 'undefined'
   ) {
     return {
-      error: createOAuthError(payload, translate('OAuthPopupsBlocked'))
+      error: createOAuthError(payload, 'OAuthPopupsBlocked')
     };
   }
 
@@ -153,7 +154,7 @@ function showOAuthWindow(url, payload) {
     if (newWindow.closed) {
       clearInterval(poll);
 
-      deferred.reject(createOAuthError(payload, translate('ui.oauth.windowClosed')));
+      deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));
       return;
     }
 
@@ -165,7 +166,7 @@ function showOAuthWindow(url, payload) {
         // Ignore window close errors
       }
 
-      deferred.reject(createOAuthError(payload, translate('ui.oauth.authorizationTimedOut')));
+      deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));
     }
   }, pollIntervalMs);
 
@@ -207,7 +208,7 @@ function showPollingOAuthWindow(response, payload, requestPayload) {
     if (Date.now() - startTime > timeoutMs) {
       stopped = true;
       closeWindow();
-      deferred.reject(createOAuthError(payload, translate('ui.oauth.authorizationTimedOut')));
+      deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));
       return;
     }
 
@@ -234,7 +235,7 @@ function showPollingOAuthWindow(response, payload, requestPayload) {
 
         if (Date.now() - closedTime > closedGraceMs) {
           stopped = true;
-          deferred.reject(createOAuthError(payload, translate('ui.oauth.windowClosed')));
+          deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));
           return;
         }
       } else {

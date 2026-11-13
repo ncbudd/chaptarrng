@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import Alert from 'Components/Alert';
+import BidiText from 'Components/BidiText';
 import CheckInput from 'Components/Form/CheckInput';
 import Button from 'Components/Link/Button';
 import LoadingIndicator from 'Components/Loading/LoadingIndicator';
@@ -12,6 +13,7 @@ import Table from 'Components/Table/Table';
 import TableBody from 'Components/Table/TableBody';
 import { kinds } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
+import { translateServerMessageById } from 'Utilities/String/translateServerMessage';
 import NarratorSearchRow from './NarratorSearchRow';
 import styles from './NarratorSearchModalContent.css';
 
@@ -77,6 +79,11 @@ class NarratorSearchModalContent extends Component {
 
     const hasResults = success && (filteredNarrators.length > 0 || existingCopyNarrators.length > 0);
     const hasError = error || errorMessage;
+    const response = error?.responseJSON;
+    const localizedErrorMessage = translateServerMessageById(response?.messageId, response?.messageParameters);
+    const rawErrorMessage = errorMessage || (typeof response === 'string' ? response : response?.message) ||
+      (typeof error?.responseText === 'string' ? error.responseText : '') ||
+      (typeof error?.message === 'string' ? error.message : '');
 
     return (
       <ModalContent onModalClose={onModalClose}>
@@ -96,7 +103,7 @@ class NarratorSearchModalContent extends Component {
 
           {hasError && !isSearching && (
             <Alert kind={kinds.DANGER} role="alert">
-              {errorMessage || error.message || translate('NarratorSearchFailed')}
+              {localizedErrorMessage || (rawErrorMessage ? <BidiText lang="und">{rawErrorMessage}</BidiText> : translate('NarratorSearchFailed'))}
               <div>
                 <Button
                   size="small"

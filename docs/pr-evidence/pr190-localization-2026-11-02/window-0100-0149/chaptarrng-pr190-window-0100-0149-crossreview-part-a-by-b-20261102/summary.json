@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "rowsCrossReviewed": 300,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr"
+  ],
+  "sourcePositions": [
+    100,
+    149
+  ],
+  "primaryDispositionCounts": {
+    "accept-current": 274,
+    "propose-correction": 24,
+    "propose-refinement": 2
+  },
+  "crossReviewDispositionCounts": {
+    "accepted": 300
+  },
+  "crossReviewCountsByLocale": {
+    "es": {
+      "accepted": 50
+    },
+    "zh-Hans": {
+      "accepted": 50
+    },
+    "hi": {
+      "accepted": 50
+    },
+    "de": {
+      "accepted": 50
+    },
+    "ja": {
+      "accepted": 50
+    },
+    "fr": {
+      "accepted": 50
+    }
+  },
+  "proposalOutcomes": {
+    "primaryProposals": 26,
+    "acceptedAsProposed": 26,
+    "refined": 0,
+    "rejected": 0,
+    "missedCurrentIssues": 0,
+    "held": 0
+  },
+  "findings": "All 26 primary proposals accepted as proposed. The 11 Hindi punctuation corrections use the Hindi danda (U+0964) and replace current ideographic full stops (U+3002). No missed current issue identified among primary keeps.",
+  "inputCurrentCallerMismatches": 0,
+  "placeholderMismatches": 0,
+  "protectedLiteralMismatches": 0,
+  "callerReferencesReattested": 372,
+  "uniqueCallerFilesIncludingCatalogLines": 12,
+  "uniqueCodeCallerFiles": 12,
+  "uniqueCallerLines": 55,
+  "earlierWindowOverlap": {
+    "W0_49": 0,
+    "W50_99": 0
+  },
+  "nativeSpeakerApproval": false,
+  "repositoryMutated": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "blockers": []
+}

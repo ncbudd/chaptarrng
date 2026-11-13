@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "review": "Exact-head primary semantic review of ChaptarrNG PR #190 positions 150–199 for pt-BR, ar, ko, zh-Hant, vi, id",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "0117311b672af8d828fb45bad7e6026763b201da",
+  "tree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "sourceWindow": {
+    "start": 150,
+    "endInclusive": 199,
+    "sourceIds": 50,
+    "previousWindowOverlap": 0
+  },
+  "locales": [
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "cells": 300,
+  "parentPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102",
+  "parentPacketSHA256SumsVerified": true,
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "keyCount": 4165
+  },
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "currentMissingIdsCount": 1210,
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "window": [
+      150,
+      199
+    ],
+    "disjointFrom": [
+      0,
+      149
+    ],
+    "sourceIds": 50,
+    "firstId": "provider.field.fe3017fb82b09",
+    "lastId": "provider.field.f5269857c4a80"
+  },
+  "registry": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "records": 409
+  },
+  "catalogAttestation": "catalog-attestation.json",
+  "callerAttestation": {
+    "path": "caller-attestation.jsonl",
+    "records": 96,
+    "sourceIds": 50,
+    "uniqueFiles": 15,
+    "mismatches": 0
+  },
+  "inputCells": {
+    "path": "input-cells.jsonl",
+    "rows": 300,
+    "sha256": "e75c1217126c27eaa1a277ca54e4656ab0f496e05d36e4b8bc3d14d31bf8cd89"
+  },
+  "pinAttestation": "pin-attestation.json",
+  "reviewState": "complete",
+  "reviewOutputs": {
+    "review": "review-cells.jsonl",
+    "candidates": "correction-candidates.jsonl",
+    "summary": "review-summary.json",
+    "protectedLiteralIntegrity": "protected-literal-integrity.jsonl"
+  },
+  "decisionCounts": {
+    "accept-current": 264,
+    "propose-correction": 17,
+    "propose-refinement": 19,
+    "hold": 0
+  },
+  "placeholderMismatches": 0,
+  "protectedLiteralMismatches": 0
+}

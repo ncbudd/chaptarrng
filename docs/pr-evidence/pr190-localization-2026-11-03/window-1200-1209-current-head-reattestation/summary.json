@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "task": "ChaptarrNG PR #190 W1200-W1209 exact-current-head reattestation",
+  "reviewedAtHead": "60b5df05d401994955499a837f534974b4276c22",
+  "tree": "4c08bd5633244e1d3d07e8b4f1beddab1503a9b3",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "prState": "OPEN/DRAFT",
+  "previousEvidenceHead": "c66ef0bccc0635f047cebeda95b9aaa0ae8130a4",
+  "previousEvidenceTree": "e2142a119ce8d9d765927bb44a47f71364863995",
+  "priorReviewedCells": 120,
+  "sourceOrdinals": [
+    1200,
+    1209
+  ],
+  "currentCatalogKeyCounts": {
+    "es": 4165,
+    "zh-Hans": 4165,
+    "hi": 4165,
+    "de": 4165,
+    "ja": 4165,
+    "fr": 4165,
+    "pt-BR": 4165,
+    "ar": 4165,
+    "ko": 4165,
+    "zh-Hant": 4165,
+    "vi": 4165,
+    "id": 4165
+  },
+  "sourceIds": 10,
+  "allSourcesUnchanged": true,
+  "allCallerContextsUnchanged": true,
+  "allReviewedTargetsReadBack": true,
+  "targetCellValuesDifferentFromOldInput": 8,
+  "mismatchCount": 0,
+  "mismatches": [],
+  "targetValueDifferences": [
+    {
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "ar",
+      "oldInputTarget": "فئة المستخدم: {value0} (عضو قياسي)",
+      "currentTarget": "فئة المستخدم: {value0} (عضو عادي)",
+      "reviewedTarget": "فئة المستخدم: {value0} (عضو عادي)"
+    },
+    {
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "ko",
+      "oldInputTarget": "사용자 클래스: {value0} (표준 회원)",
+      "currentTarget": "사용자 등급: {value0} (일반 회원)",
+      "reviewedTarget": "사용자 등급: {value0} (일반 회원)"
+    },
+    {
+      "sourceId": "server.message.md4a741052e8b",
+      "locale": "vi",
+      "oldInputTarget": "Lớp người dùng: {value0} (thành viên tiêu chuẩn)",
+      "currentTarget": "Hạng người dùng: {value0} (thành viên tiêu chuẩn)",
+      "reviewedTarget": "Hạng người dùng: {value0} (thành viên tiêu chuẩn)"
+    },
+    {
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "es",
+      "oldInputTarget": "rTorrent no pausará los torrents cuando cumplan los criterios de seed. Chaptarr solo podrá eliminarlos cuando termine el seeding si está activado «Eliminar completado» y el torrent no está protegido por «Preservar torrents en el cliente» ni por «Categoría tras la importación». Después de la importación, también establecerá «{value0}» como una vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento.",
+      "currentTarget": "rTorrent no pausará los torrents cuando cumplan los criterios de compartición. Chaptarr solo podrá eliminarlos cuando termine la compartición si está activado «Eliminar completado» y el torrent no está protegido por «Preservar torrents en el cliente» ni por «Categoría tras la importación». Después de la importación, también establecerá «{value0}» como vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento.",
+      "reviewedTarget": "rTorrent no pausará los torrents cuando cumplan los criterios de compartición. Chaptarr solo podrá eliminarlos cuando termine la compartición si está activado «Eliminar completado» y el torrent no está protegido por «Preservar torrents en el cliente» ni por «Categoría tras la importación». Después de la importación, también establecerá «{value0}» como vista de rTorrent, que se puede usar en scripts de rTorrent para personalizar el comportamiento."
+    },
+    {
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "hi",
+      "oldInputTarget": "rTorrent, torrents के सीडिंग मानदंड पूरे होने पर उन्हें रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद torrents को तभी हटा सकता है, जब \"पूर्ण हटाएँ\" सक्षम हो और torrent \"क्लाइंट में टोरेंट को संरक्षित करें\" या \"आयात के बाद की श्रेणी\" से सुरक्षित न हो। आयात के बाद, यह \"{value0}\" को rTorrent दृश्य के रूप में भी सेट करेगा, जिसका उपयोग rTorrent स्क्रिप्ट में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।",
+      "currentTarget": "जब टोरेंट सीडिंग के मानदंड पूरे करते हैं, तो rTorrent उन्हें रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद टोरेंटों को तभी हटा सकता है, जब \"पूर्ण हटाएँ\" सक्षम हो और टोरेंट \"क्लाइंट में टोरेंट को संरक्षित करें\" या \"आयात के बाद की श्रेणी\" से सुरक्षित न हो। आयात के बाद, Chaptarr \"{value0}\" को rTorrent दृश्य के रूप में भी सेट करेगा, जिसका उपयोग rTorrent स्क्रिप्ट में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।",
+      "reviewedTarget": "जब टोरेंट सीडिंग के मानदंड पूरे करते हैं, तो rTorrent उन्हें रोकता नहीं है। Chaptarr सीडिंग पूरी होने के बाद टोरेंटों को तभी हटा सकता है, जब \"पूर्ण हटाएँ\" सक्षम हो और टोरेंट \"क्लाइंट में टोरेंट को संरक्षित करें\" या \"आयात के बाद की श्रेणी\" से सुरक्षित न हो। आयात के बाद, Chaptarr \"{value0}\" को rTorrent दृश्य के रूप में भी सेट करेगा, जिसका उपयोग rTorrent स्क्रिप्ट में व्यवहार को अनुकूलित करने के लिए किया जा सकता है।"
+    },
+    {
+      "sourceId": "server.message.m4cd205e7d07a",
+      "locale": "ar",
+      "oldInputTarget": "لن يوقف rTorrent التورنتات مؤقتًا عند استيفائها معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا عند تفعيل «إزالة المكتمل»، وألا يكون التورنت محميًا بواسطة «الحفاظ على التورنتات في عميل التنزيل» أو «تصنيف ما بعد الاستيراد». بعد الاستيراد، سيعيّن أيضًا «{value0}» كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك.",
+      "currentTarget": "لن يوقف rTorrent التورنتات مؤقتًا عند استيفائها معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا إذا كان خيار «إزالة المكتمل» مفعّلًا ولم يكن التورنت محميًا بواسطة «الحفاظ على التورنتات في عميل التنزيل» أو «تصنيف ما بعد الاستيراد». بعد الاستيراد، سيعيّن أيضًا «{value0}» كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك.",
+      "reviewedTarget": "لن يوقف rTorrent التورنتات مؤقتًا عند استيفائها معايير المشاركة. لا يستطيع Chaptarr إزالة التورنتات بعد انتهاء المشاركة إلا إذا كان خيار «إزالة المكتمل» مفعّلًا ولم يكن التورنت محميًا بواسطة «الحفاظ على التورنتات في عميل التنزيل» أو «تصنيف ما بعد الاستيراد». بعد الاستيراد، سيعيّن أيضًا «{value0}» كطريقة عرض في rTorrent، ويمكن استخدامها في نصوص rTorrent لتخصيص السلوك."
+    },
+    {
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "zh-Hans",
+      "oldInputTarget": "Chaptarr 将根据 设置 → 索引器 中的当前做种条件自动移除种子。",
+      "currentTarget": "Chaptarr 将根据“设置 → 索引器”中的当前做种条件自动移除种子。",
+      "reviewedTarget": "Chaptarr 将根据“设置 → 索引器”中的当前做种条件自动移除种子。"
+    },
+    {
+      "sourceId": "server.message.mc6073db4b613",
+      "locale": "zh-Hant",
+      "oldInputTarget": "Chaptarr 將根據 設定 → 索引器 中的目前做種條件自動移除種子。",
+      "currentTarget": "Chaptarr 將根據「設定 → 索引器」中的目前做種條件自動移除種子。",
+      "reviewedTarget": "Chaptarr 將根據「設定 → 索引器」中的目前做種條件自動移除種子。"
+    }
+  ],
+  "branchAndPullRefBothMatchPRHead": true,
+  "worktreeClean": true,
+  "nextSourceOrdinalExists": false,
+  "repoOrPRChanged": false,
+  "testsBuildsScansCI": false,
+  "nativeSpeakerReview": "not performed",
+  "headedBrowserReview": "not performed"
+}

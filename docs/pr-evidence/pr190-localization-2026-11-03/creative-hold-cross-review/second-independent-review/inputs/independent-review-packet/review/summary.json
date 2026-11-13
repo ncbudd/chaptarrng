@@ -1,0 +1,37 @@
+{
+  "artifact": "Independent review of caller-linked creative holds",
+  "callerBackedSourceCount": 3,
+  "callerFileCount": 3,
+  "callerReferenceCount": 5,
+  "callerlessHashCellsReattested": 24,
+  "callerlessHashesUnchangedAtHead": 24,
+  "callerlessHoldsExcluded": 24,
+  "callerlessHoldsHashOnly": true,
+  "callerlessTargetTextsIncluded": false,
+  "confidenceCounts": {
+    "low": 3,
+    "moderate": 17
+  },
+  "creativeCellCount": 20,
+  "creativeSourceCount": 3,
+  "decisionCounts": {
+    "continued-hold": 0,
+    "recommend-target": 20
+  },
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "nativeSpeakerSignoff": false,
+  "nextRequiredReview": "A qualified native-language reviewer should review these creative recommendations before any catalog application; no target has been applied.",
+  "noRepoOrPrEdits": true,
+  "noTestsBuildsScansCi": true,
+  "pullRequest": 190,
+  "recommendationsBySource": {
+    "provider.option.o7285d46b982d": 1,
+    "ui.loading.dodgeBooks": 11,
+    "ui.loading.newEbookSmell": 8
+  },
+  "repository": "snapetech-org/ChaptarrNG",
+  "selectedTargetTokenFailures": 0,
+  "sourceCallerCatalogPins": 16,
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "window": "W1200-W1209"
+}

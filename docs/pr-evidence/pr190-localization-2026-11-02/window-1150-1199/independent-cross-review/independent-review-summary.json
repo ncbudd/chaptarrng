@@ -1,0 +1,21 @@
+{
+  "rows": 300,
+  "distinctOrdinals": 50,
+  "localeCounts": {
+    "ja": 50,
+    "ko": 50,
+    "pt-BR": 50,
+    "vi": 50,
+    "zh-Hans": 50,
+    "zh-Hant": 50
+  },
+  "dispositionCounts": {
+    "accept-current": 237,
+    "refinement": 29,
+    "correction": 28,
+    "hold": 6
+  },
+  "integrityFailures": [],
+  "sha256": "30ee9831c40378e5e014094465da40577eaf8bcb3d0a2d97dbd3d17dc3f518ae",
+  "bytes": 1190396
+}

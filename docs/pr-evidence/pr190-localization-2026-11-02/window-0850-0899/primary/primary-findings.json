@@ -1,0 +1,11 @@
+[
+  {
+    "affectedCells": 12,
+    "pinnedCaller": "Can not contain '\\', '//', or start/end with '/'",
+    "recommendation": "Align the English source catalog entry with the caller’s backslash restriction, then re-review this row in all locales. This packet holds all twelve target cells.",
+    "severity": "source-caller mismatch",
+    "source": "Can not contain '', '//', or start/end with '/'",
+    "sourceId": "server.message.mf00d6bc38ae8",
+    "sourceOrdinal": 884
+  }
+]

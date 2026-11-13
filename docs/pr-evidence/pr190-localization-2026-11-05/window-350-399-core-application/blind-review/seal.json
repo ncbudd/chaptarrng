@@ -1,0 +1,150 @@
+{
+  "ambiguousContextHeld": "BookVisibilityToggleHelpText, all 12 locales: exact localized Wanted/All control labels are absent from the candidate-free caller excerpts.",
+  "batch": "W350-399-Core",
+  "callerContextReview": "Complete hash-pinned candidate-free caller-context records are retained in caller-context-review.jsonl and linked from each ledger cell.",
+  "callerContextReviewSha256": "7877284ae0cc09db5116c98005f128624fa9cb7fff617c3c0c5fbce73a0faa8d",
+  "candidateFreeInputFileHashes": {
+    "PR-attestation.json": "ade7326a1cc03a8a2c50657d49b2dd79b7d0c59791fdc77e1e0f48d6776e3f54",
+    "README.md": "bfeb21b3e55a9b0318ccdf9a517a1d220f7607fef46ee45a4176215f3c824fe4",
+    "caller-context.jsonl": "9417d3b878073e3fa757491c8494f9816c6e658750b0ec53b15c6992710ef582",
+    "caller-scan-file-pins.json": "f22fa9df931d7e8854d8ef521d3fc1a814bceaa3eb1b6c301c636fb5ec9b728b",
+    "candidate-free-cells.jsonl": "50532f50ca1795d1e0f0762a6f77c7f3ec3998f8ed17eda26208c17f43a5dc9e",
+    "candidate-free-manifest.json": "c6e30a409f41a8a9b840314012b7d14d2d5ac15e183f4205c9bc37f4e30689cb",
+    "candidate-free-summary.json": "4fc7314fbb7e1704ef7264d2895364ad715091aee3aa66277682bcf9120f8d75",
+    "catalog-pins.json": "efaf3ff94aef09c14a7e94b2067892bfd4f0f7112635bfc6fc695f6883f8275d",
+    "dynamic-translation-callers.jsonl": "2f49bc384e35eccc3711bb8cdcbcf06ae02ac81b766142c09f3e41954e1cf624",
+    "integrity-review-flags.jsonl": "e456b449121b5788f938e08b455a9581740ccd9879c9b5385ff027cab1a416d2",
+    "latest-main-drift.json": "9c3c53d2346808920dc8909fffd0257975c16e0a583552a4c6e5849312727b7d",
+    "main-caller-scan-file-pins.json": "9ec3a033861bc192e27247e21be9aa57dc8da17d4437bb57907e381ffb052ef6",
+    "packet-builders/attest_main_delta.py": "d369b70e4914feb73a8d54eaf9acec99f8c70dd0e9c0943cf801c7aca892a78e",
+    "packet-builders/build_candidate_free.py": "4391f6e4ffd4d45aaebd19bdf7f8e1385aa627bba38529c510a8807aae897f85",
+    "prior-historical-evidence-scan.json": "e1ea54c8c7124384cadce3262248dc31a4eff652d6cd061cbd497ddfb42fd2c8",
+    "runtime-source-pins.json": "cad96ad68cc08ab4ed7d8f675df2b83c2d4a4a7baf72e12fbfb439417eba40ff",
+    "selection-boundary.jsonl": "3cfcb3682053d534241d282beff80f658850448b3b9f56d8f47f6fca0135b7e1",
+    "source-selection.json": "85c35d26fdf910e42e73c5b05d5be6ed26276511f0e8c9f8b6da33b39c983b41",
+    "verify_candidate_free.py": "7a1f268ba62c2249a56c789209df83650fe3ce10322ab6591a0ed010d4117c49"
+  },
+  "candidateFreeInputSha256": "76a08b9a42e17fb0d9fac340497e41d1a3ffc5c2d570fc03cf262dd7a9a9b2ef",
+  "candidateFreeOnly": true,
+  "cellCount": 600,
+  "completedAtUtc": "2026-11-05T03:12:31Z",
+  "decisionCounts": {
+    "accept-current": 534,
+    "correction": 22,
+    "hold": 12,
+    "refinement": 32
+  },
+  "externalSourcesUsed": false,
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "integrityReview": {
+    "icu": "no ICU plural/select patterns in this batch; current and proposed placeholder patterns are verified",
+    "inlineCode": "all packet checks pass; no source inline-code tokens in this batch",
+    "markup": "all packet checks pass; no source markup tokens in this batch",
+    "numeric": "all 600 current cells match source numeric-token sequences; proposals are verified",
+    "placeholderChecks": "all 600 current cells match source placeholder multiplicities; every proposed target was independently checked by the portable verifier",
+    "protectedLiteral": "all 16 input heuristic flags reviewed individually; exact brand/provider names were checked, generic ID terms were treated semantically, and LAN scope was retained or explicitly refined"
+  },
+  "ledgerSha256": "9964b54ad5c99bb2a81f2b85718db66ecda4ac36330cd06b5b50849723c65f64",
+  "liveMain": "0d711ce1a9828675e879b2ba97f36fc3b9544188",
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "nativeSpeakerClaims": false,
+  "outputPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w350-399-20261104/blind-review",
+  "perLocaleDecisionCounts": {
+    "ar": {
+      "accept-current": 44,
+      "correction": 4,
+      "hold": 1,
+      "refinement": 1
+    },
+    "de": {
+      "accept-current": 44,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 4
+    },
+    "es": {
+      "accept-current": 45,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 2
+    },
+    "fr": {
+      "accept-current": 46,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 1
+    },
+    "hi": {
+      "accept-current": 47,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 1
+    },
+    "id": {
+      "accept-current": 48,
+      "hold": 1,
+      "refinement": 1
+    },
+    "ja": {
+      "accept-current": 45,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 2
+    },
+    "ko": {
+      "accept-current": 41,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 7
+    },
+    "pt-BR": {
+      "accept-current": 45,
+      "correction": 3,
+      "hold": 1,
+      "refinement": 1
+    },
+    "vi": {
+      "accept-current": 47,
+      "correction": 2,
+      "hold": 1
+    },
+    "zh-Hans": {
+      "accept-current": 42,
+      "correction": 1,
+      "hold": 1,
+      "refinement": 6
+    },
+    "zh-Hant": {
+      "accept-current": 40,
+      "correction": 3,
+      "hold": 1,
+      "refinement": 6
+    }
+  },
+  "primaryFilesOpenedBeforeBlindCompletion": false,
+  "primaryProposalTextOpenedBeforeBlindCompletion": false,
+  "protectedLiteralHeuristicFlagsReviewed": 16,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryCatalogOrPullRequestEdits": false,
+  "reviewType": "independent blind localization review",
+  "reviewerNote": "Blind judgments were completed from the candidate-free packet only. No primary candidate packet or proposal text was opened before ledger completion and checksum generation.",
+  "schemaVersion": 1,
+  "sourceCount": 50,
+  "sourceSelectionSha256": "85c35d26fdf910e42e73c5b05d5be6ed26276511f0e8c9f8b6da33b39c983b41",
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "verifierSha256": "10cb0eb98d668f51c02b590b01f84aa906bc953c252f549774d4ce5eb9e9287c"
+}

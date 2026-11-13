@@ -1,0 +1,15 @@
+{
+  "cataloguedTermCount": 14,
+  "notes": [
+    "Protected literals are enforced from the exact source registry record at this head.",
+    "German provider/OAuth error guidance was checked against formal Sie register; source UI/task labels were judged in their display context.",
+    "The W1050 Dodge verb-form pun remains on hold in all 12 locales; no creative translation decision is inferred here.",
+    "No external dictionary or native-speaker source was used."
+  ],
+  "terminologySource": {
+    "bytes": 7494,
+    "gitBlob": "4c9bd6f0f4eb8d0c5e1970f788fb85ab115a9382",
+    "path": "docs/localization/terminology.json",
+    "sha256": "4f766592488412e50cd2d166d584d996a93497abdeb38c2039e2e2d8bbdf3444"
+  }
+}

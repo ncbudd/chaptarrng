@@ -871,7 +871,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseProxy.cs",
-          "line": 87,
+          "line": 88,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.appriseConfigured\", \"Success! You have properly configured your Apprise notification settings.\");",
           "sourceLineSha256": "1db373c7b48babd0a02c55678f3d05c4b6357b17d7988567ed5c1b55248e5a80"
         }
@@ -887,19 +887,19 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Gotify/Gotify.cs",
-          "line": 85,
+          "line": 86,
           "sourceLine": "var body = Localize(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "0c11a360f5c6d5d2c82f2bc61b971935246c1cbbe0b89441b43382e70638af13"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinProxy.cs",
-          "line": 50,
+          "line": 51,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfyProxy.cs",
-          "line": 77,
+          "line": 78,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         },
@@ -911,37 +911,37 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/PushBullet/PushBulletProxy.cs",
-          "line": 131,
+          "line": 132,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Pushover/PushoverProxy.cs",
-          "line": 62,
+          "line": 63,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/SendGrid/SendGrid.cs",
-          "line": 85,
+          "line": 86,
           "sourceLine": "var body = Localize(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "0c11a360f5c6d5d2c82f2bc61b971935246c1cbbe0b89441b43382e70638af13"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Signal/SignalProxy.cs",
-          "line": 70,
+          "line": 71,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Simplepush/SimplepushProxy.cs",
-          "line": 48,
+          "line": 49,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramService.cs",
-          "line": 56,
+          "line": 57,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.body\", \"This is a test message from Chaptarr.\");",
           "sourceLineSha256": "d701e2f77b13d00a592e166f62b7019d3ffcdbae937c6274dfb7b15655e44efa"
         }
@@ -957,7 +957,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Email/Email.cs",
-          "line": 115,
+          "line": 116,
           "sourceLine": "var body = Localize(\"notification.test.emailConfigured\", \"Success! You have properly configured your email notification settings.\");",
           "sourceLineSha256": "6ccc38fb50cc90f625f6a6581557622160db5b7e7dc3956ad6a14bf0a1892969"
         }
@@ -987,7 +987,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Mailgun/Mailgun.cs",
-          "line": 75,
+          "line": 76,
           "sourceLine": "var body = Localize(\"notification.test.mailgunBody\", \"This is a test message from Chaptarr through Mailgun.\");",
           "sourceLineSha256": "3adb0de0878b83a91f4f19a1ddacf419379424c16ae6d020a9e76d8fdd8eea74"
         }
@@ -1032,7 +1032,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterService.cs",
-          "line": 96,
+          "line": 97,
           "sourceLine": "var body = _notificationText.Get(\"notification.test.timestampedBody\", \"Test message from Chaptarr posted at {timestamp}\",",
           "sourceLineSha256": "e864c059b9d8eea7883f9ffe460d7add1eb2111e240a1dc8b5147784bad8dcd9"
         }
@@ -1048,37 +1048,37 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseProxy.cs",
-          "line": 86,
+          "line": 87,
           "sourceLine": "var title = \"Chaptarr - \" + _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "ad830be95bf7977f696ee4c263b14649840d68718535d5e598c0531a4d8ea3a5"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Email/Email.cs",
-          "line": 119,
+          "line": 120,
           "sourceLine": "SendEmail(settings, \"Chaptarr - \" + Localize(\"notification.test.title\", \"Test Notification\"), body);",
           "sourceLineSha256": "bab87a96519d82bbadee4fc01e64a4bd1d7d96f587d368bc1416b6beb06a5c21"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Gotify/Gotify.cs",
-          "line": 84,
+          "line": 85,
           "sourceLine": "var title = Localize(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "7197f4e5c2b1f6e319ffaa5443e09b78e810ef04fd0f99b7a50e12e6dc6e036d"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinProxy.cs",
-          "line": 49,
+          "line": 50,
           "sourceLine": "var title = _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "3e3ed3741d5834cab58b67ad424afdcbfaec5d4412cb4a303a062da1360bbbfd"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Mailgun/Mailgun.cs",
-          "line": 74,
+          "line": 75,
           "sourceLine": "var title = Localize(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "7197f4e5c2b1f6e319ffaa5443e09b78e810ef04fd0f99b7a50e12e6dc6e036d"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfyProxy.cs",
-          "line": 75,
+          "line": 76,
           "sourceLine": "var title = \"Chaptarr - \" + _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "ad830be95bf7977f696ee4c263b14649840d68718535d5e598c0531a4d8ea3a5"
         },
@@ -1090,37 +1090,37 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/PushBullet/PushBulletProxy.cs",
-          "line": 130,
+          "line": 131,
           "sourceLine": "var title = \"Chaptarr - \" + _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "ad830be95bf7977f696ee4c263b14649840d68718535d5e598c0531a4d8ea3a5"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Pushover/PushoverProxy.cs",
-          "line": 61,
+          "line": 62,
           "sourceLine": "var title = _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "3e3ed3741d5834cab58b67ad424afdcbfaec5d4412cb4a303a062da1360bbbfd"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/SendGrid/SendGrid.cs",
-          "line": 84,
+          "line": 85,
           "sourceLine": "var title = Localize(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "7197f4e5c2b1f6e319ffaa5443e09b78e810ef04fd0f99b7a50e12e6dc6e036d"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Signal/SignalProxy.cs",
-          "line": 69,
+          "line": 70,
           "sourceLine": "var title = _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "3e3ed3741d5834cab58b67ad424afdcbfaec5d4412cb4a303a062da1360bbbfd"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Simplepush/SimplepushProxy.cs",
-          "line": 47,
+          "line": 48,
           "sourceLine": "var title = _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "3e3ed3741d5834cab58b67ad424afdcbfaec5d4412cb4a303a062da1360bbbfd"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramService.cs",
-          "line": 55,
+          "line": 56,
           "sourceLine": "var title = _notificationText.Get(\"notification.test.title\", \"Test Notification\");",
           "sourceLineSha256": "3e3ed3741d5834cab58b67ad424afdcbfaec5d4412cb4a303a062da1360bbbfd"
         }

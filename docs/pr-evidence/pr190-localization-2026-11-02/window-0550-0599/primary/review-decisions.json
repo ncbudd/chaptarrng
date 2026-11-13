@@ -1,0 +1,1690 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "primary semantic reviewer",
+  "scope": [
+    550,
+    599
+  ],
+  "findings": {
+    "551|hi": [
+      "propose-correction",
+      "केवल ऑडियोबुक वाले फ़ोल्डरों में ई-बुक सेटिंग नहीं हो सकतीं।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "551|de": [
+      "propose-correction",
+      "Ordner, die nur Hörbücher enthalten, dürfen keine E-Book-Einstellungen haben.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "551|ja": [
+      "propose-correction",
+      "オーディオブック専用フォルダーには電子書籍の設定を適用できません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "551|ar": [
+      "propose-correction",
+      "لا يمكن أن تحتوي المجلدات المخصصة للكتب الصوتية فقط على إعدادات الكتب الإلكترونية.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "551|ko": [
+      "propose-correction",
+      "오디오북 전용 폴더에는 전자책 설정을 지정할 수 없습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|es": [
+      "propose-refinement",
+      "El proxy está configurado como ProxyEverything. Esto debería funcionar, pero se recomienda IndexerOnly para obtener un mejor rendimiento.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|zh-Hans": [
+      "propose-correction",
+      "代理设置为 ProxyEverything。该设置应该可以正常工作，但为了获得更好的性能，建议使用 IndexerOnly。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|hi": [
+      "propose-refinement",
+      "प्रॉक्सी ProxyEverything पर सेट है। यह काम करना चाहिए, लेकिन बेहतर प्रदर्शन के लिए IndexerOnly की सिफ़ारिश की जाती है।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|ja": [
+      "propose-refinement",
+      "Proxy は ProxyEverything に設定されています。動作するはずですが、パフォーマンス向上のため IndexerOnly を推奨します。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|fr": [
+      "propose-refinement",
+      "Le proxy est configuré sur ProxyEverything. Cela devrait fonctionner, mais IndexerOnly est recommandé pour de meilleures performances.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|pt-BR": [
+      "propose-correction",
+      "O proxy está configurado como ProxyEverything. Isso deve funcionar, mas IndexerOnly é recomendado para melhor desempenho.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|zh-Hant": [
+      "propose-correction",
+      "Proxy 設定為 ProxyEverything。這應該可以正常運作，但為了提升效能，建議使用 IndexerOnly。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|vi": [
+      "propose-correction",
+      "Proxy được đặt thành ProxyEverything. Cấu hình này sẽ hoạt động, nhưng nên dùng IndexerOnly để có hiệu suất tốt hơn.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "552|id": [
+      "propose-correction",
+      "Proxy diatur ke ProxyEverything. Ini seharusnya berfungsi, tetapi IndexerOnly disarankan untuk kinerja yang lebih baik.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "554|es": [
+      "propose-correction",
+      "No se encontró la serie {value0}.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "554|hi": [
+      "propose-correction",
+      "श्रृंखला {value0} नहीं मिली।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "554|ja": [
+      "propose-correction",
+      "シリーズ {value0} が見つかりません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "554|vi": [
+      "propose-correction",
+      "Không tìm thấy bộ truyện {value0}.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "555|pt-BR": [
+      "propose-correction",
+      "Não foi possível aplicar o narrador a todos os livros da série.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "555|vi": [
+      "propose-correction",
+      "Không thể áp dụng người kể chuyện cho tất cả sách trong bộ truyện.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "555|id": [
+      "propose-correction",
+      "Gagal menerapkan narator ke semua buku trong seri.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|es": [
+      "propose-correction",
+      "La URL del servidor de metadatos debe comenzar con http:// o https://.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|de": [
+      "propose-correction",
+      "Die URL des Metadatenservers muss mit http:// oder https:// beginnen.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|fr": [
+      "propose-correction",
+      "L’URL du serveur de métadonnées doit commencer par http:// ou https://.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|pt-BR": [
+      "propose-correction",
+      "A URL do servidor de metadados deve começar com http:// ou https://.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|ar": [
+      "propose-correction",
+      "يجب أن يبدأ عنوان URL لخادم البيانات الوصفية بـ http:// أو https://.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|ko": [
+      "propose-correction",
+      "메타데이터 서버 URL은 http:// 또는 https://로 시작해야 합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|vi": [
+      "propose-correction",
+      "URL của máy chủ siêu dữ liệu phải bắt đầu bằng http:// hoặc https://.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "556|id": [
+      "propose-correction",
+      "URL server metadata harus diawali dengan http:// atau https://.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "557|hi": [
+      "propose-correction",
+      "मेटाडेटा रिफ्रेश की पूर्व-जाँच विफल होने के कारण लेखक को फिर से नहीं जोड़ा जा सकता। मौजूदा लेखक को हटाया नहीं गया।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "557|ja": [
+      "propose-correction",
+      "メタデータ更新の事前チェックに失敗したため、著者を再追加できません。既存の著者は削除されていません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "557|vi": [
+      "propose-correction",
+      "Không thể thêm lại tác giả vì bước kiểm tra trước khi làm mới siêu dữ liệu thất bại. Tác giả hiện có chưa bị xóa.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "557|id": [
+      "propose-correction",
+      "Penulis tidak dapat ditambahkan kembali karena pemeriksaan awal penyegaran metadata gagal. Penulis yang sudah ada tidak dihapus.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|es": [
+      "propose-correction",
+      "No se pudo conectar a la lista de importación: {value0}. Consulta las entradas del registro alrededor de este error para obtener más detalles.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|zh-Hans": [
+      "propose-correction",
+      "无法连接到导入列表：{value0}。请查看此错误附近的日志以了解详情。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|hi": [
+      "propose-correction",
+      "आयात सूची से कनेक्ट नहीं हो सका: {value0}। अधिक जानकारी के लिए इस त्रुटि के आसपास की लॉग प्रविष्टियाँ देखें।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|de": [
+      "propose-correction",
+      "Verbindung zur Importliste nicht möglich: {value0}. Weitere Informationen finden Sie in den Protokolleinträgen zu diesem Fehler.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|ja": [
+      "propose-correction",
+      "インポートリストに接続できません: {value0}。詳細は、このエラー前後のログを確認してください。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|fr": [
+      "propose-correction",
+      "Impossible de se connecter à la liste d’importation : {value0}. Consultez les entrées du journal autour de cette erreur pour plus de détails.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar à lista de importação: {value0}. Consulte os registros próximos a este erro para obter mais detalhes.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بقائمة الاستيراد: {value0}. راجع السجلات المحيطة بهذا الخطأ لمعرفة التفاصيل.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|ko": [
+      "propose-correction",
+      "가져오기 목록에 연결할 수 없습니다: {value0}. 자세한 내용은 이 오류 전후의 로그를 확인하세요.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|zh-Hant": [
+      "propose-correction",
+      "無法連線至匯入清單：{value0}。請查看此錯誤附近的日誌以瞭解詳情。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "559|id": [
+      "propose-correction",
+      "Tidak dapat terhubung ke daftar impor: {value0}. Periksa entri log di sekitar kesalahan ini untuk mengetahui detailnya.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|es": [
+      "propose-correction",
+      "No se pudo obtener la lista de torrents: {value0}",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|zh-Hans": [
+      "propose-correction",
+      "未能获取种子列表：{value0}",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|de": [
+      "propose-correction",
+      "Die Torrent-Liste konnte nicht abgerufen werden: {value0}",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|pt-BR": [
+      "propose-correction",
+      "Não foi possível obter a lista de torrents: {value0}",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|ko": [
+      "propose-correction",
+      "토렌트 목록을 가져오지 못했습니다: {value0}",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|zh-Hant": [
+      "propose-correction",
+      "未能取得種子清單：{value0}",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "560|vi": [
+      "propose-correction",
+      "Không thể lấy danh sách torrent: {value0}",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|es": [
+      "propose-correction",
+      "El valor de KeepHistory en NzbGet debe ser inferior a 25000.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|zh-Hans": [
+      "propose-correction",
+      "NzbGet 的 KeepHistory 设置必须小于 25000。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|hi": [
+      "propose-correction",
+      "NzbGet में KeepHistory सेटिंग 25000 से कम होनी चाहिए।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|de": [
+      "propose-correction",
+      "Die NzbGet-Einstellung KeepHistory muss kleiner als 25000 sein.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|ja": [
+      "propose-correction",
+      "NzbGet の KeepHistory 設定は 25000 未満である必要があります。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|fr": [
+      "propose-correction",
+      "La valeur du paramètre KeepHistory dans NzbGet doit être inférieure à 25000.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|pt-BR": [
+      "propose-correction",
+      "O valor da configuração KeepHistory no NzbGet deve ser menor que 25000.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|ar": [
+      "propose-correction",
+      "يجب أن تكون قيمة إعداد KeepHistory في NzbGet أقل من 25000.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|ko": [
+      "propose-correction",
+      "NzbGet의 KeepHistory 설정값은 25000보다 작아야 합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|zh-Hant": [
+      "propose-correction",
+      "NzbGet 的 KeepHistory 設定必須小於 25000。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|vi": [
+      "propose-correction",
+      "Giá trị cài đặt KeepHistory trong NzbGet phải nhỏ hơn 25000.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "561|id": [
+      "propose-correction",
+      "Nilai pengaturan KeepHistory di NzbGet harus kurang dari 25000.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|zh-Hans": [
+      "propose-correction",
+      "所选根文件夹仅用于电子书；请选择用于有声书或混合媒体的根文件夹。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|ja": [
+      "propose-correction",
+      "選択したルートフォルダーは電子書籍専用です。有声書または混合メディア用のルートフォルダーを選択してください。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|fr": [
+      "propose-correction",
+      "Le dossier racine sélectionné est réservé aux livres numériques ; choisissez un dossier racine pour livres audio ou pour les deux formats.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|ar": [
+      "propose-correction",
+      "مجلد الجذر المحدد مخصص للكتب الإلكترونية فقط؛ اختر مجلدًا جذريًا للكتب الصوتية أو للمحتوى المختلط.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|ko": [
+      "propose-correction",
+      "선택한 루트 폴더는 전자책 전용입니다. 오디오북 또는 혼합 미디어용 루트 폴더를 선택하세요.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|zh-Hant": [
+      "propose-correction",
+      "所選根資料夾僅供電子書使用；請選擇供有聲書或混合媒體使用的根資料夾。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "562|id": [
+      "propose-correction",
+      "Folder root yang dipilih khusus untuk e-book; pilih folder root untuk buku audio atau media campuran.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "563|zh-Hans": [
+      "propose-correction",
+      "无法获取 Goodreads 书架。请检查用户 ID，并确认书架已设为公开。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "563|ja": [
+      "propose-refinement",
+      "Goodreads の本棚を取得できません。ユーザー ID と、本棚が公開設定になっていることを確認してください。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "563|ar": [
+      "propose-correction",
+      "تعذّر استرداد رفوف Goodreads. تحقّق من معرّف المستخدم (ID) ومن أن الرفوف عامة.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "563|zh-Hant": [
+      "propose-correction",
+      "無法取得 Goodreads 書架。請檢查使用者 ID，並確認書架已設為公開。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "564|zh-Hans": [
+      "propose-refinement",
+      "必须是有效的主机，且不能包含 http://",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "564|fr": [
+      "propose-correction",
+      "L’hôte doit être valide et ne pas inclure http://.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "564|pt-BR": [
+      "propose-correction",
+      "O host deve ser válido e não pode incluir http://.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "564|vi": [
+      "propose-correction",
+      "Host phải hợp lệ và không được chứa http://.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "565|zh-Hans": [
+      "propose-correction",
+      "似乎需要 SSL",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "565|ja": [
+      "propose-refinement",
+      "SSL が必要なようです。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "565|ko": [
+      "propose-refinement",
+      "SSL이 필요한 것 같습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "565|zh-Hant": [
+      "propose-correction",
+      "似乎需要 SSL",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|es": [
+      "propose-correction",
+      "No se pudo conectar al servidor Subsonic.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|zh-Hans": [
+      "propose-correction",
+      "无法连接到 Subsonic 服务器。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|de": [
+      "propose-correction",
+      "Es konnte keine Verbindung zum Subsonic-Server hergestellt werden.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|ja": [
+      "propose-correction",
+      "Subsonic サーバーに接続できません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao servidor Subsonic.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بخادم Subsonic.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|ko": [
+      "propose-correction",
+      "Subsonic 서버에 연결할 수 없습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|zh-Hant": [
+      "propose-correction",
+      "無法連線至 Subsonic 伺服器。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|vi": [
+      "propose-correction",
+      "Không thể kết nối với máy chủ Subsonic.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "566|id": [
+      "propose-correction",
+      "Tidak dapat terhubung ke server Subsonic.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|es": [
+      "propose-correction",
+      "Debe ser 0 para desactivar o un valor entre 10 y 120 minutos.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|zh-Hans": [
+      "propose-correction",
+      "设为 0 可禁用，否则必须为 10 到 120 分钟。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|de": [
+      "propose-correction",
+      "Zum Deaktivieren muss der Wert 0 sein, andernfalls zwischen 10 und 120 Minuten liegen.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|fr": [
+      "propose-correction",
+      "La valeur doit être 0 pour désactiver, ou comprise entre 10 et 120 minutes.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|pt-BR": [
+      "propose-correction",
+      "O valor deve ser 0 para desativar ou estar entre 10 e 120 minutos.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|ar": [
+      "propose-correction",
+      "يجب أن تكون القيمة 0 للتعطيل، أو بين 10 و120 دقيقة.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|ko": [
+      "propose-correction",
+      "사용하지 않으려면 0으로 설정하고, 그 외에는 10~120분으로 설정해야 합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|zh-Hant": [
+      "propose-correction",
+      "設為 0 可停用，否則必須介於 10 至 120 分鐘之間。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "567|vi": [
+      "propose-correction",
+      "Giá trị phải là 0 để tắt, hoặc nằm trong khoảng từ 10 đến 120 phút.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "568|zh-Hans": [
+      "propose-refinement",
+      "请传入 1 到 500 个正数 sourceIds。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "568|zh-Hant": [
+      "propose-refinement",
+      "請傳入 1 到 500 個正值 sourceIds。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "569|de": [
+      "propose-correction",
+      "Ein API-Token ist erforderlich.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "569|fr": [
+      "propose-correction",
+      "Un jeton API est requis.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "569|pt-BR": [
+      "propose-correction",
+      "É necessário informar um token de API.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "569|vi": [
+      "propose-correction",
+      "Cần có token API.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "569|id": [
+      "propose-correction",
+      "Token API wajib diisi.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|es": [
+      "propose-correction",
+      "El cliente de uTorrent es antiguo y no admite esta API; se requiere la versión 3.0 o posterior.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|zh-Hans": [
+      "propose-correction",
+      "此 uTorrent 客户端版本过旧，所用 API 不受支持；需要 3.0 或更高版本。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|de": [
+      "propose-correction",
+      "Der uTorrent-Client ist veraltet und unterstützt diese API nicht. Erforderlich ist Version 3.0 oder höher.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|ja": [
+      "propose-correction",
+      "この uTorrent クライアントは古く、API がサポートされていません。バージョン 3.0 以降が必要です。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|fr": [
+      "propose-correction",
+      "Le client uTorrent est trop ancien et son API n’est pas prise en charge ; la version 3.0 ou ultérieure est requise.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|pt-BR": [
+      "propose-correction",
+      "O cliente uTorrent é antigo e a API não é compatível; é necessária a versão 3.0 ou superior.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|ar": [
+      "propose-correction",
+      "عميل uTorrent قديم ولا يدعم واجهة API هذه؛ يلزم الإصدار 3.0 أو أحدث.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|ko": [
+      "propose-correction",
+      "uTorrent 클라이언트가 오래되어 이 API를 지원하지 않습니다. 버전 3.0 이상이 필요합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|zh-Hant": [
+      "propose-correction",
+      "此 uTorrent 用戶端版本過舊，API 不受支援；需要 3.0 或更新版本。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|vi": [
+      "propose-correction",
+      "Ứng dụng khách uTorrent đã cũ và không hỗ trợ API này; cần phiên bản 3.0 trở lên.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "570|id": [
+      "propose-correction",
+      "Klien uTorrent sudah lama dan tidak mendukung API ini; diperlukan versi 3.0 atau lebih baru.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "571|zh-Hant": [
+      "propose-refinement",
+      "模式為必填項。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "571|id": [
+      "propose-correction",
+      "Pola wajib diisi.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|es": [
+      "propose-correction",
+      "El ID de la ruta no coincide con el ID del recurso.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|zh-Hans": [
+      "propose-correction",
+      "路由 ID 与资源 ID 不匹配。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|hi": [
+      "propose-correction",
+      "रूट का ID संसाधन के ID से मेल नहीं खाता।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|de": [
+      "propose-correction",
+      "Die ID in der Route stimmt nicht mit der Ressourcen-ID überein.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|ja": [
+      "propose-correction",
+      "ルートの ID がリソースの ID と一致しません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|pt-BR": [
+      "propose-correction",
+      "O ID da rota não corresponde ao ID do recurso.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|ar": [
+      "propose-correction",
+      "لا يتطابق معرّف المسار مع معرّف المورد.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|zh-Hant": [
+      "propose-correction",
+      "路由 ID 與資源 ID 不符。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|vi": [
+      "propose-correction",
+      "ID trong tuyến đường không khớp với ID của tài nguyên.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "572|id": [
+      "propose-correction",
+      "ID rute tidak cocok dengan ID sumber daya.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "573|es": [
+      "propose-correction",
+      "No se pudo conectar a Transmission.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "573|de": [
+      "propose-correction",
+      "Es konnte keine Verbindung zu Transmission hergestellt werden.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "573|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao Transmission.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "573|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بـ Transmission.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "573|ko": [
+      "propose-correction",
+      "Transmission에 연결할 수 없습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "574|zh-Hans": [
+      "propose-refinement",
+      "文件夹“{value0}”不存在。请先创建该目录或检查路径。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "574|hi": [
+      "propose-correction",
+      "फ़ोल्डर '{value0}' मौजूद नहीं है। कृपया पहले निर्देशिका बनाएँ या पथ जाँचें।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "574|zh-Hant": [
+      "propose-refinement",
+      "資料夾「{value0}」不存在。請先建立該目錄或檢查路徑。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "574|id": [
+      "propose-correction",
+      "Folder '{value0}' tidak ada. Silakan buat direktori terlebih dahulu atau periksa jalurnya.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "575|zh-Hans": [
+      "propose-refinement",
+      "必须是有效的绝对 URL。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "575|pt-BR": [
+      "propose-correction",
+      "Deve ser uma URL absoluta válida.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "575|ar": [
+      "propose-correction",
+      "يجب أن يكون عنوان URL مطلقًا وصالحًا.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "575|ko": [
+      "propose-correction",
+      "유효한 절대 URL이어야 합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "575|id": [
+      "propose-correction",
+      "Harus berupa URL absolut yang valid.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "576|ja": [
+      "propose-correction",
+      "フォルダーが存在しません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "576|ar": [
+      "propose-correction",
+      "المجلد غير موجود.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "576|ko": [
+      "propose-correction",
+      "폴더가 존재하지 않습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "576|zh-Hant": [
+      "propose-refinement",
+      "資料夾不存在。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|es": [
+      "propose-correction",
+      "No se pudo importar el autor del proveedor.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|zh-Hans": [
+      "propose-correction",
+      "未能从提供方导入作者。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|de": [
+      "propose-correction",
+      "Der Autor konnte nicht vom Anbieter importiert werden.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|fr": [
+      "propose-correction",
+      "L’auteur n’a pas pu être importé depuis le fournisseur.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|pt-BR": [
+      "propose-correction",
+      "Não foi possível importar o autor do provedor.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|zh-Hant": [
+      "propose-correction",
+      "未能從提供者匯入作者。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "577|vi": [
+      "propose-correction",
+      "Không thể nhập tác giả từ nhà cung cấp.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "578|es": [
+      "propose-correction",
+      "No se pudieron obtener los datos de la serie.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "578|de": [
+      "propose-correction",
+      "Die Seriendaten konnten nicht abgerufen werden.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "578|fr": [
+      "propose-correction",
+      "Impossible d’obtenir les données de la série.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "578|pt-BR": [
+      "propose-correction",
+      "Não foi possível obter os dados da série.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "578|ar": [
+      "propose-correction",
+      "تعذّر الحصول على بيانات السلسلة.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "578|id": [
+      "propose-correction",
+      "Tidak dapat memperoleh data seri.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "579|zh-Hans": [
+      "propose-correction",
+      "请求正文不能为空。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "579|hi": [
+      "propose-correction",
+      "अनुरोध का मुख्य भाग खाली नहीं हो सकता।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "579|fr": [
+      "propose-correction",
+      "Le corps de la requête ne peut pas être vide.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "579|pt-BR": [
+      "propose-refinement",
+      "O corpo da solicitação não pode ficar vazio.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "579|zh-Hant": [
+      "propose-correction",
+      "請求本文不能為空。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "580|es": [
+      "propose-correction",
+      "Previsualiza el traslado antes de iniciarlo.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "580|zh-Hans": [
+      "propose-refinement",
+      "开始移动前先预览移动操作。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "580|hi": [
+      "propose-correction",
+      "स्थानांतरण शुरू करने से पहले उसका पूर्वावलोकन करें।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "580|zh-Hant": [
+      "propose-refinement",
+      "開始移動前先預覽移動操作。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "580|vi": [
+      "propose-correction",
+      "Xem trước thao tác di chuyển trước khi bắt đầu.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "580|id": [
+      "propose-correction",
+      "Pratinjau proses pemindahan sebelum memulainya.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|es": [
+      "propose-correction",
+      "La clave de API es incorrecta.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|hi": [
+      "propose-correction",
+      "API कुंजी गलत है।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|de": [
+      "propose-correction",
+      "Der API-Schlüssel ist falsch.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|ja": [
+      "propose-correction",
+      "API キーが正しくありません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|fr": [
+      "propose-correction",
+      "La clé API est incorrecte.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|pt-BR": [
+      "propose-correction",
+      "A chave de API está incorreta.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|ar": [
+      "propose-correction",
+      "مفتاح API غير صحيح.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|ko": [
+      "propose-correction",
+      "API 키가 잘못되었습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|vi": [
+      "propose-correction",
+      "Khóa API không chính xác.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "581|id": [
+      "propose-correction",
+      "Kunci API salah.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "582|ko": [
+      "propose-refinement",
+      "entityType 값은 Author, AuthorMetadata, Book, Edition 또는 BookFile이어야 합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|es": [
+      "propose-correction",
+      "La prueba del proxy a través de {value0} falló con el código de estado {value1}.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|zh-Hans": [
+      "propose-correction",
+      "通过 {value0} 的代理测试失败，状态码为 {value1}。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|de": [
+      "propose-correction",
+      "Der Proxytest über {value0} ist mit Statuscode {value1} fehlgeschlagen.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|ja": [
+      "propose-correction",
+      "{value0} 経由のプロキシテストに失敗しました（ステータスコード: {value1}）。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|fr": [
+      "propose-correction",
+      "Le test du proxy via {value0} a échoué avec le code d’état {value1}.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|pt-BR": [
+      "propose-correction",
+      "O teste do proxy por {value0} falhou com o código de status {value1}.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|ar": [
+      "propose-correction",
+      "فشل اختبار الوكيل عبر {value0} برمز الحالة {value1}.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|ko": [
+      "propose-correction",
+      "프록시 테스트가 실패했습니다. 경유 주소: {value0}, 상태 코드: {value1}.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|zh-Hant": [
+      "propose-correction",
+      "透過 {value0} 的代理測試失敗，狀態碼為 {value1}。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|vi": [
+      "propose-correction",
+      "Thử nghiệm proxy qua {value0} thất bại với mã trạng thái {value1}.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "583|id": [
+      "propose-correction",
+      "Tes proxy melalui {value0} gagal dengan kode status {value1}.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "584|hi": [
+      "propose-correction",
+      "प्रमाणीकरण विफल हुआ। API कुंजी और सर्वर का प्रकार जाँचें।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "584|zh-Hans": [
+      "propose-refinement",
+      "身份验证失败。请检查 API 密钥和服务器类型。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "584|ko": [
+      "propose-correction",
+      "인증에 실패했습니다. API 키와 서버 유형을 확인하세요.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "584|zh-Hant": [
+      "propose-refinement",
+      "驗證失敗。請檢查 API 金鑰和伺服器類型。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|es": [
+      "propose-correction",
+      "La respuesta al ping del servidor de metadatos no era un JSON válido: {value0}",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|hi": [
+      "propose-correction",
+      "मेटाडेटा सर्वर के पिंग का जवाब मान्य JSON नहीं था: {value0}",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|de": [
+      "propose-correction",
+      "Die Ping-Antwort des Metadatenservers war kein gültiges JSON: {value0}",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|ja": [
+      "propose-correction",
+      "メタデータサーバーの ping 応答は有効な JSON ではありませんでした: {value0}",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|fr": [
+      "propose-correction",
+      "La réponse au ping du serveur de métadonnées n’était pas un JSON valide : {value0}",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|pt-BR": [
+      "propose-correction",
+      "A resposta ao ping do servidor de metadados não era um JSON válido: {value0}",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|ar": [
+      "propose-correction",
+      "كانت استجابة ping من خادم البيانات الوصفية بصيغة JSON غير صالحة: {value0}",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|ko": [
+      "propose-correction",
+      "메타데이터 서버의 ping 응답이 유효한 JSON이 아닙니다: {value0}",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|zh-Hant": [
+      "propose-correction",
+      "中繼資料伺服器的 ping 回應不是有效的 JSON：{value0}",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|vi": [
+      "propose-correction",
+      "Phản hồi ping của máy chủ siêu dữ liệu không phải là JSON hợp lệ: {value0}",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "585|id": [
+      "propose-correction",
+      "Respons ping dari server metadata bukan JSON yang valid: {value0}",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "586|zh-Hans": [
+      "propose-refinement",
+      "目前仅支持 Hardcover 系列 ID（预期格式：hc:{id}）。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "586|ja": [
+      "propose-correction",
+      "現在は Hardcover シリーズ ID のみ対応しています（想定形式: hc:{id}）。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "586|ar": [
+      "propose-correction",
+      "تُدعم حاليًا معرّفات سلاسل Hardcover فقط (الصيغة المتوقعة: hc:{id}).",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "586|zh-Hant": [
+      "propose-refinement",
+      "目前僅支援 Hardcover 系列 ID（預期格式：hc:{id}）。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "586|vi": [
+      "propose-correction",
+      "Hiện chỉ hỗ trợ ID sê-ri Hardcover (định dạng dự kiến: hc:{id}).",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "586|id": [
+      "propose-correction",
+      "Saat ini hanya ID seri Hardcover yang didukung (format yang diharapkan: hc:{id}).",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|es": [
+      "propose-correction",
+      "Se requiere la URL del servidor de metadatos.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|hi": [
+      "propose-correction",
+      "मेटाडेटा सर्वर का URL आवश्यक है।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|de": [
+      "propose-correction",
+      "Die URL des Metadatenservers ist erforderlich.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|fr": [
+      "propose-correction",
+      "L’URL du serveur de métadonnées est obligatoire.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|pt-BR": [
+      "propose-correction",
+      "A URL do servidor de metadados é obrigatória.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|ko": [
+      "propose-correction",
+      "메타데이터 서버 URL이 필요합니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|vi": [
+      "propose-correction",
+      "Cần có URL của máy chủ siêu dữ liệu.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "587|id": [
+      "propose-correction",
+      "URL untuk server metadata wajib diisi.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "588|es": [
+      "propose-correction",
+      "No se pudo conectar a Emby/Jellyfin: {value0}",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "588|de": [
+      "propose-correction",
+      "Es konnte keine Verbindung zu Emby/Jellyfin hergestellt werden: {value0}",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "588|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar a Emby/Jellyfin: {value0}",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "588|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بـ Emby/Jellyfin: {value0}",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "589|zh-Hans": [
+      "propose-refinement",
+      "请先通过 Plex.tv 进行身份验证。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "589|zh-Hant": [
+      "propose-refinement",
+      "請先透過 Plex.tv 進行驗證。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|zh-Hans": [
+      "propose-refinement",
+      "图片已成功下载。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|hi": [
+      "propose-correction",
+      "छवि सफलतापूर्वक डाउनलोड हुई।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|de": [
+      "propose-correction",
+      "Das Bild wurde erfolgreich heruntergeladen.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|ja": [
+      "propose-correction",
+      "画像を正常にダウンロードしました。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|pt-BR": [
+      "propose-correction",
+      "Imagem baixada com sucesso.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|ar": [
+      "propose-correction",
+      "تم تنزيل الصورة بنجاح.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|ko": [
+      "propose-correction",
+      "이미지가 성공적으로 다운로드되었습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "591|zh-Hant": [
+      "propose-refinement",
+      "圖片已成功下載。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "592|es": [
+      "propose-correction",
+      "Debe contener chaptarr.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "593|de": [
+      "propose-correction",
+      "Das Bild wurde nicht in den Metadaten des Autors gefunden.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "593|ko": [
+      "propose-refinement",
+      "저자 메타데이터에서 이미지를 찾을 수 없습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "593|vi": [
+      "propose-correction",
+      "Không tìm thấy hình ảnh trong siêu dữ liệu của tác giả.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "593|id": [
+      "propose-correction",
+      "Gambar tidak ditemukan dalam metadata penulis.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|es": [
+      "propose-correction",
+      "La descarga de la imagen está en curso.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|zh-Hans": [
+      "propose-refinement",
+      "正在下载图像。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|hi": [
+      "propose-correction",
+      "छवि डाउनलोड हो रही है।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|de": [
+      "propose-correction",
+      "Das Bild wird heruntergeladen.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|ja": [
+      "propose-correction",
+      "画像をダウンロード中です。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|ar": [
+      "propose-correction",
+      "جارٍ تنزيل الصورة.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|ko": [
+      "propose-correction",
+      "이미지를 다운로드하는 중입니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "595|zh-Hant": [
+      "propose-refinement",
+      "正在下載圖像。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "597|es": [
+      "propose-refinement",
+      "La edición seleccionada no coincide con el tipo de medio solicitado.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "597|ar": [
+      "propose-correction",
+      "الإصدار المحدد لا يتطابق مع نوع الوسائط المطلوب.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|es": [
+      "propose-correction",
+      "La clave de API es incorrecta.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|zh-Hans": [
+      "propose-correction",
+      "API 密钥不正确。",
+      "Revises the current zh-Hans wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|hi": [
+      "propose-correction",
+      "API कुंजी गलत है।",
+      "Revises the current hi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|de": [
+      "propose-correction",
+      "Der API-Schlüssel ist falsch.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|ja": [
+      "propose-correction",
+      "API キーが正しくありません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|fr": [
+      "propose-correction",
+      "La clé API est incorrecte.",
+      "Revises the current fr wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|pt-BR": [
+      "propose-correction",
+      "A chave de API está incorreta.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|ar": [
+      "propose-correction",
+      "مفتاح API غير صحيح.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|ko": [
+      "propose-correction",
+      "API 키가 잘못되었습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|zh-Hant": [
+      "propose-correction",
+      "API 金鑰不正確。",
+      "Revises the current zh-Hant wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|vi": [
+      "propose-correction",
+      "Khóa API không chính xác.",
+      "Revises the current vi wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "598|id": [
+      "propose-correction",
+      "Kunci API salah.",
+      "Revises the current id wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "599|es": [
+      "propose-correction",
+      "No se pudo conectar a SABnzbd.",
+      "Revises the current es wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "599|de": [
+      "propose-correction",
+      "Es konnte keine Verbindung zu SABnzbd hergestellt werden.",
+      "Revises the current de wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "599|ja": [
+      "propose-correction",
+      "SABnzbd に接続できません。",
+      "Revises the current ja wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "599|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao SABnzbd.",
+      "Revises the current pt-BR wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "599|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بـ SABnzbd.",
+      "Revises the current ar wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ],
+    "599|ko": [
+      "propose-correction",
+      "SABnzbd에 연결할 수 없습니다.",
+      "Revises the current ko wording for grammar, terminology, or source-specific meaning while preserving placeholders and protected literals.",
+      "moderate"
+    ]
+  },
+  "sourceRationales": {
+    "550": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "551": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "552": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "553": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "554": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "555": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "556": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "557": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "558": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "559": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "560": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "561": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "562": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "563": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "564": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "565": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "566": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "567": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "568": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "569": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "570": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "571": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "572": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "573": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "574": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "575": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "576": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "577": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "578": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "579": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "580": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "581": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "582": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "583": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "584": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "585": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "586": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "587": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "588": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "589": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "590": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "591": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "592": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "593": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "594": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "595": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "596": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "597": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "598": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "599": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers."
+  },
+  "acceptedCellRationale": "Current target preserves source meaning in the exact pinned production caller context; no material issue found.",
+  "nativeSpeakerApproval": false
+}

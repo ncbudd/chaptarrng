@@ -1,0 +1,149 @@
+{
+  "callerFiles": [
+    {
+      "bytes": 39972,
+      "gitBlob": "c4bd90729a7c3b6d7084b2ecc0027c5e531da73e",
+      "path": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+      "sha256": "22911d0473ba81c8a7b57cd0153c3a5be60bc0349f8dbd89d70aff5b8e3a04c6"
+    },
+    {
+      "bytes": 10203,
+      "gitBlob": "a43e58d6fb4747e6131e1de83284974cc24f7eed",
+      "path": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+      "sha256": "e07c6e1115eb48e406dbc95d327b045bb7d2a101a0f41f0b3a81fe4cec2cb80d"
+    },
+    {
+      "bytes": 7942,
+      "gitBlob": "7640e7d316ab38df28c05ae661d7e7c30e912fcc",
+      "path": "src/NzbDrone.Core/Indexers/DirectDownload/DirectDownloadIndexer.cs",
+      "sha256": "f60785fb29ae5df765617b5921b981e1fcfee2c3774ebff93bffa6e61bf4e5b0"
+    },
+    {
+      "bytes": 38395,
+      "gitBlob": "b6f56b1660fa1d70f54bc131fb4b1d26f0896aff",
+      "path": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+      "sha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47"
+    },
+    {
+      "bytes": 58860,
+      "gitBlob": "034dad9ec4a8ccf77f35ffd6ac24816944c654f7",
+      "path": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+      "sha256": "e2b3676bd9dee96f365204f6431a59a57fa526bed193ea219269e1514b5528ae"
+    },
+    {
+      "bytes": 1989,
+      "gitBlob": "542582ecdbb70c067fe8eef0c0c6c6f1c5cd2245",
+      "path": "src/NzbDrone.Core/MediaFiles/TorrentInfo/TorrentHashResolver.cs",
+      "sha256": "6015588010ad0a991050c6278fe1452b065cffd4bf7dc8b8c6f2348f3434b1c4"
+    },
+    {
+      "bytes": 2195,
+      "gitBlob": "acf07b40ff37bca1582e900656ea5f2e683c04d5",
+      "path": "src/NzbDrone.Core/Profiles/Releases/PerlRegexFactory.cs",
+      "sha256": "58182268e45e654238c887bb010295c9eb558bad8533900f0aaa5249a3d5a4dd"
+    }
+  ],
+  "callerIndex": {
+    "bytes": 21781,
+    "gitBlob": "1531851877466bbfeb0b16072fcf07d6dda925e2",
+    "path": "docs/localization/server-message-callers.json",
+    "sha256": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b"
+  },
+  "englishCatalog": {
+    "bytes": 312097,
+    "gitBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+  },
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "keyCount": 4165,
+  "keysetParityWithEnglish": true,
+  "localeCatalogs": {
+    "ar": {
+      "bytes": 431854,
+      "gitBlob": "a4c55087c9bae291b56b037f7bbc540ac5ae9281",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "dd65e0d9dba32b59f700931c706aba83c3301183fa46b19c6c83a3b1e625425d"
+    },
+    "de": {
+      "bytes": 361946,
+      "gitBlob": "cb218831d0d5531e2bbbf6eeb0cdad588db8343d",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "b65a7048d609a74a03b0c3406f948cc81c4c39b1e89d46f7073e4623b600bd8a"
+    },
+    "es": {
+      "bytes": 359575,
+      "gitBlob": "b8b31cce40103e1e4cb2cb2d795d1a38795df8c4",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "9022aa151a54a3239fe224cb212c14b819f5d8c85c5d0bcfc55bcc2cb3622d0d"
+    },
+    "fr": {
+      "bytes": 375130,
+      "gitBlob": "491c3be31574e0aa4e10364bdf7cef6f326ada78",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "ae36c49c0366e08d874c17a9a24db957fe7c87c006fb2cb4ab053345f0851064"
+    },
+    "hi": {
+      "bytes": 605874,
+      "gitBlob": "cd6bd44bcd294ea5d091a4063c8c74fa70013d13",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "f9c2febcc792a7205691163129a80431ffe2277ab9109863251e231e84b0c1c6"
+    },
+    "id": {
+      "bytes": 333071,
+      "gitBlob": "92665c2fb9df2da1e3111d15c6a0df1e10590d3c",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "bf9e169ab67c4a4151d4a2b9fc53eb48b66d105067e0a3c8a6b05ceeef345990"
+    },
+    "ja": {
+      "bytes": 409505,
+      "gitBlob": "97aea04294cdbc9493bb69401f34adc386b9e224",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "7e79da08069b26b37c74d976089f0b4b170c20a7f90ebdfa0b63f9996573f5f4"
+    },
+    "ko": {
+      "bytes": 368596,
+      "gitBlob": "ecdef7e9698f578220782c0204a904bdad4550cc",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "039e7a79f12e7fc10d933f8ce0e26d6b591a828a52d54b243201bd33e6f2a611"
+    },
+    "pt-BR": {
+      "bytes": 353109,
+      "gitBlob": "1de04411783412e1f10778cdc2c6c89ebbd4bc24",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "644477133edb004060b345fc6310fbe314da35065a293c53fa6def930020c1e8"
+    },
+    "vi": {
+      "bytes": 389500,
+      "gitBlob": "7a5f7a501d3adbdcdda884f0314dc4854b331c02",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "d44130ab74a5bd6085c979cc5097f06563ac87933e7a191922c532cf38247e25"
+    },
+    "zh-Hans": {
+      "bytes": 306777,
+      "gitBlob": "56128921a3005768cdfdcf32e32d697585d2d418",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "32a3d0ec3ca305b23ef3108b95c89d69720ff79cd3e443c296839466d317564c"
+    },
+    "zh-Hant": {
+      "bytes": 308230,
+      "gitBlob": "2c673eb685ebd67a64d15c3af8f2c3da9c30afc9",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "edb7c4c35557f32aa861fda842f426af3529a2d0a79e3794777ddf6a6cf93c67"
+    }
+  },
+  "localeCount": 12,
+  "sourceQueue": {
+    "bytes": 50936,
+    "gitBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "path": "docs/localization/source-followup-20261101.json",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128"
+  },
+  "sourceRegistry": {
+    "bytes": 766677,
+    "gitBlob": "88e18b12684ca7ece5b4680094188d2ff644d663",
+    "path": "docs/localization/server-message-sources.json",
+    "sha256": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825"
+  }
+}

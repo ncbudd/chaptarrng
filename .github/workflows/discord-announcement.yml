@@ -12,11 +12,12 @@ on:
           - inspect
         required: true
       runner_pool:
-        description: Runner pool
+        description: Select GitHub-hosted runners by default or private JIT overflow
         type: choice
         options:
-          - private
           - public
+          - private
+        default: public
         required: true
       title:
         description: Discord embed title

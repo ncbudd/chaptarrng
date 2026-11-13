@@ -1,0 +1,35 @@
+{
+  "task": "ChaptarrNG PR #190 W450-499 exact-hash reviewed application",
+  "reviewInputHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "reviewInputTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "applyInputHead": "70f5ad2c2dc8222d8f35e09ba81ffa12acfff856",
+  "applyInputTree": "9bd50b4f149f69f7cd5b78937b45fe1745e6c695",
+  "reviewedCells": 600,
+  "appliedCellChanges": 156,
+  "finalDispositions": {
+    "accept-current": 432,
+    "propose-correction": 102,
+    "propose-refinement": 54,
+    "hold": 12
+  },
+  "crossReviewedProposalsRetained": 151,
+  "crossReviewedProposalsRevised": 5,
+  "retainedHolds": 12,
+  "callerReferencesReattested": 69,
+  "catalogKeysPerLocale": 4165,
+  "sourceCurrentTargetHashesReattestedAtApplyHead": 600,
+  "reviewedTargetsVerifiedAfterApply": 600,
+  "placeholderMarkupProtectedLiteralMismatches": 0,
+  "nativeSpeakerApproval": false,
+  "postApplyBrowserReview": false,
+  "testsBuildsCiRun": false,
+  "releasesTagsMerges": false,
+  "preCommitSemgrep": {
+    "scanner": "Semgrep Community Edition",
+    "ruleset": "p/default",
+    "stagedEvidenceBuilderFiles": 2,
+    "rulesRun": 290,
+    "findings": 0,
+    "productSourceScanned": false
+  }
+}

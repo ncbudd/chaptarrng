@@ -1,0 +1,91 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerFiles": 7,
+  "callerGaps": 0,
+  "cellCount": 600,
+  "currentProtectedLiteralFailureCells": 11,
+  "directCallerReferences": 59,
+  "exactCallerPinMismatchesAgainstPrimary": 0,
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "finalProtectedLiteralFailureCells": 11,
+  "finalReattestation": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+    "isDraft": true,
+    "localWorktree": {
+      "branch": "codex/chaptarrng-localization-complete-20261031",
+      "head": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+      "status": "",
+      "tree": "d073e1373021bf715db37461a12654f7e993cdbf"
+    },
+    "officialRemoteBranchHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+    "officialRemoteTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+    "passed": true,
+    "pullRequest": 190,
+    "reattestedAtUtc": "2026-11-03T00:24:52.931340+00:00",
+    "repository": "snapetech-org/chaptarrng",
+    "startAndFinalExactPinsMatch": true,
+    "startReattestationSha256": "e8d67910ad9ba0445da52a99704c6df6801bb6943baa19265dc0b4c75aab0d44",
+    "state": "OPEN"
+  },
+  "headedBrowserAcceptance": false,
+  "icuMismatchCells": 0,
+  "independentConfidenceCounts": {
+    "high": 41,
+    "low": 6,
+    "moderate": 553
+  },
+  "independentDispositionCounts": {
+    "accept-current": 455,
+    "correction": 82,
+    "hold": 12,
+    "refinement": 51
+  },
+  "independentLedgerSha256": "bee7a858fd79333271bd053e1d5ba1cdcc99e78e4c63c4ae2d22484d5d5b90d1",
+  "isDraft": true,
+  "limitations": "Static machine-assisted independent semantic review. No native-speaker approval, browser acceptance, runtime validation, tests, builds, scans, or CI are claimed. The cross-review did not alter the repository or PR.",
+  "localeCount": 12,
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "overallConfidence": "moderate",
+  "placeholderMismatchCells": 0,
+  "primaryComparison": {
+    "comparisonCounts": {
+      "different-candidate-targets": 48,
+      "exact-agreement": 462,
+      "independent-proposal-omitted-by-primary": 16,
+      "primary-proposal-not-independently-confirmed": 62,
+      "same-candidate-different-kind": 12
+    },
+    "differenceRows": 138,
+    "normalizedCallerPinMismatches": 0,
+    "primaryChecksumsSha256": "22a4089c87cbd96494e7d1dd09d7af8c16fc77d0bfb9a7a9505f8a0c97351556",
+    "primaryLedgerSha256": "794cbb9dc208ffedee27c90bb568cfc75ef6bdeb6bc252e9d72477eddf527245",
+    "primaryManifestSha256": "153def65165e6ecb84daae3892f4f9d9802846762db9ea1267fdd78b4145fc66"
+  },
+  "pullRequest": 190,
+  "queuePositions": [
+    1150,
+    1199
+  ],
+  "repository": "snapetech-org/chaptarrng",
+  "sourceAndCurrentHashMismatches": 0,
+  "sourceCount": 50,
+  "state": "OPEN",
+  "w1170NestedMessage": {
+    "evidence": "Exact formatter, enum, message matcher, and translation-dispatch pins are in caller-context-findings.jsonl. No extra source/caller gap is reported.",
+    "nestedSourceId": "server.message.mae71772271ad",
+    "nestedSourceTextSha256": "ae71772271adf0e958bb03d82596fc058e22aa81ca00339580d7d92868d75bbc",
+    "sourceId": "server.message.m7842e5a82f2c",
+    "sourceTextSha256": "7842e5a82f2cae8c6a4feb2cfb9619c6c7fbe15c8929a3accb15ab8d28b0077e",
+    "status": "handled-by-existing-frontend-localization-path"
+  },
+  "w1187": {
+    "holdCells": 12,
+    "rationale": "Both exact callers provide TargetQualityName ?? \"M4B\" as {value0}; configured quality names can differ, while the source registry requires literal M4B. Hold all 12 locale cells; one current target includes M4B but can still contradict the dynamic value.",
+    "sourceId": "server.message.md764ed5e74b4"
+  },
+  "window": "W1150-W1199"
+}

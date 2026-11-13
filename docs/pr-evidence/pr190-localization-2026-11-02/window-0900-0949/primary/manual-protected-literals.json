@@ -1,0 +1,26 @@
+{
+  "basis": "Exact identifiers, flag names, and UI tokens retained from pinned caller context.",
+  "bySourceId": {
+    "provider.option.o477e5af2fd7e": [
+      "Scene"
+    ],
+    "server.message.mf726e9f7b242": [
+      "MetadataProfileId"
+    ],
+    "server.message.mf81018a04cff": [
+      "main"
+    ],
+    "server.message.mfa82f5859e19": [
+      "ValidationFailure"
+    ],
+    "server.message.mfcc0e5918290": [
+      "Book Title",
+      "PartNumber",
+      "Original Title"
+    ],
+    "server.message.mfde3b9fa63a8": [
+      "IPv6"
+    ]
+  },
+  "sourceRegistryLiteralsAlsoApplied": true
+}

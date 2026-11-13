@@ -1,0 +1,104 @@
+{
+  "browserReview": false,
+  "candidateFreeCellsSha256": "c76fec30fce69d605d42f588809737c1e4f25156687221736ebf1fb2ebb673b9",
+  "cellCount": 600,
+  "dispositionCounts": {
+    "accept-current": 518,
+    "hold": 24,
+    "propose-correction": 58
+  },
+  "exactHead": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+  "exactTree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+  "holdCount": 24,
+  "localeCounts": {
+    "ar": {
+      "accept-current": 41,
+      "hold": 2,
+      "propose-correction": 7
+    },
+    "de": {
+      "accept-current": 43,
+      "hold": 2,
+      "propose-correction": 5
+    },
+    "es": {
+      "accept-current": 45,
+      "hold": 2,
+      "propose-correction": 3
+    },
+    "fr": {
+      "accept-current": 43,
+      "hold": 2,
+      "propose-correction": 5
+    },
+    "hi": {
+      "accept-current": 43,
+      "hold": 4,
+      "propose-correction": 3
+    },
+    "id": {
+      "accept-current": 47,
+      "hold": 2,
+      "propose-correction": 1
+    },
+    "ja": {
+      "accept-current": 43,
+      "hold": 2,
+      "propose-correction": 5
+    },
+    "ko": {
+      "accept-current": 43,
+      "hold": 2,
+      "propose-correction": 5
+    },
+    "pt-BR": {
+      "accept-current": 45,
+      "hold": 2,
+      "propose-correction": 3
+    },
+    "vi": {
+      "accept-current": 41,
+      "hold": 2,
+      "propose-correction": 7
+    },
+    "zh-Hans": {
+      "accept-current": 41,
+      "hold": 1,
+      "propose-correction": 8
+    },
+    "zh-Hant": {
+      "accept-current": 43,
+      "hold": 1,
+      "propose-correction": 6
+    }
+  },
+  "nativeSpeakerReview": false,
+  "notes": [
+    "Review performed from checksum-covered candidate-free packet only.",
+    "No repository, primary-review directory, sibling window, CI, build, test, or scan was inspected or run.",
+    "Text-free holds omit source, current, and selected translation strings."
+  ],
+  "packet": "ChaptarrNG PR #190 W50–W99 clean-blind semantic review",
+  "prIsDraft": true,
+  "prNumber": 190,
+  "prState": "OPEN",
+  "prUrl": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "proposalCount": 58,
+  "repository": "snapetech-org/chaptarrng",
+  "sourceKeys": 50,
+  "sourceSelectionSha256": "9e67d6b5cf6e3a0f6895fc63b19720ea4ebac9f5f9b3c56a5e064c158cdeed3c",
+  "targetLocales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ]
+}

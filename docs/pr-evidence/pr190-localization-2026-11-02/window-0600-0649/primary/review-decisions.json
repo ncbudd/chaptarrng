@@ -1,0 +1,1270 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "primary semantic reviewer",
+  "scope": [
+    600,
+    649
+  ],
+  "findings": {
+    "600|zh-Hans": [
+      "propose-correction",
+      "质量配置文件不存在。",
+      "Uses the established localized term for a quality profile and natural nonexistence wording.",
+      "moderate"
+    ],
+    "600|de": [
+      "propose-correction",
+      "Das Qualitätsprofil ist nicht vorhanden.",
+      "Uses the established localized term for a quality profile and natural nonexistence wording.",
+      "moderate"
+    ],
+    "600|ja": [
+      "propose-correction",
+      "品質プロファイルが存在しません。",
+      "Uses the established localized term for a quality profile and natural nonexistence wording.",
+      "moderate"
+    ],
+    "600|ko": [
+      "propose-correction",
+      "품질 프로필이 존재하지 않습니다.",
+      "Uses the established localized term for a quality profile and natural nonexistence wording.",
+      "moderate"
+    ],
+    "600|zh-Hant": [
+      "propose-correction",
+      "品質設定檔不存在。",
+      "Uses the established localized term for a quality profile and natural nonexistence wording.",
+      "moderate"
+    ],
+    "601|de": [
+      "propose-correction",
+      "Verbindung zu AudioBookShelf nicht möglich: {value0}",
+      "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail.",
+      "moderate"
+    ],
+    "601|ja": [
+      "propose-correction",
+      "AudioBookShelf に接続できません: {value0}",
+      "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail.",
+      "moderate"
+    ],
+    "601|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao AudioBookShelf: {value0}",
+      "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail.",
+      "moderate"
+    ],
+    "601|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بـ AudioBookShelf: {value0}",
+      "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail.",
+      "moderate"
+    ],
+    "601|ko": [
+      "propose-correction",
+      "AudioBookShelf에 연결할 수 없습니다: {value0}",
+      "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail.",
+      "moderate"
+    ],
+    "602|de": [
+      "propose-correction",
+      "Verbindung fehlgeschlagen.",
+      "Uses natural past-tense/status wording for a failed connection.",
+      "moderate"
+    ],
+    "602|ja": [
+      "propose-correction",
+      "接続に失敗しました。",
+      "Uses natural past-tense/status wording for a failed connection.",
+      "moderate"
+    ],
+    "602|fr": [
+      "propose-correction",
+      "Échec de la connexion.",
+      "Uses natural past-tense/status wording for a failed connection.",
+      "moderate"
+    ],
+    "602|ar": [
+      "propose-correction",
+      "فشل الاتصال.",
+      "Uses natural past-tense/status wording for a failed connection.",
+      "moderate"
+    ],
+    "604|de": [
+      "propose-refinement",
+      "Das Bild konnte nicht heruntergeladen werden.",
+      "States that the image download failed without an awkward fragment or missing subject.",
+      "moderate"
+    ],
+    "604|fr": [
+      "propose-correction",
+      "Échec du téléchargement de l’image.",
+      "States that the image download failed without an awkward fragment or missing subject.",
+      "moderate"
+    ],
+    "604|pt-BR": [
+      "propose-refinement",
+      "Falha ao baixar a imagem.",
+      "States that the image download failed without an awkward fragment or missing subject.",
+      "moderate"
+    ],
+    "604|ja": [
+      "propose-refinement",
+      "画像をダウンロードできませんでした。",
+      "States that the image download failed without an awkward fragment or missing subject.",
+      "moderate"
+    ],
+    "604|id": [
+      "propose-correction",
+      "Gagal mengunduh gambar.",
+      "States that the image download failed without an awkward fragment or missing subject.",
+      "moderate"
+    ],
+    "606|vi": [
+      "propose-correction",
+      "Định dạng ID nhà cung cấp không hợp lệ. Định dạng phải là 'provider:id'.",
+      "Preserves the exact required provider:id format and fully localizes the surrounding validation text.",
+      "moderate"
+    ],
+    "606|id": [
+      "propose-correction",
+      "Format ID penyedia tidak valid. Format yang diharapkan adalah 'provider:id'.",
+      "Preserves the exact required provider:id format and fully localizes the surrounding validation text.",
+      "moderate"
+    ],
+    "607|zh-Hans": [
+      "propose-correction",
+      "内容服务器不接受匿名更改；向服务器发送书籍需要用户名和密码。",
+      "Makes the content-server authentication requirement clear and natural in the pinned Calibre caller context.",
+      "moderate"
+    ],
+    "607|zh-Hant": [
+      "propose-correction",
+      "內容伺服器不接受匿名變更；若要將書籍傳送至伺服器，必須提供使用者名稱和密碼。",
+      "Makes the content-server authentication requirement clear and natural in the pinned Calibre caller context.",
+      "moderate"
+    ],
+    "607|vi": [
+      "propose-correction",
+      "Máy chủ nội dung không chấp nhận thay đổi ẩn danh. Cần có tên người dùng và mật khẩu để gửi sách lên máy chủ.",
+      "Makes the content-server authentication requirement clear and natural in the pinned Calibre caller context.",
+      "moderate"
+    ],
+    "608|ar": [
+      "propose-correction",
+      "لا يمكن الجمع بين حذف الملفات وإعادة إضافتها.",
+      "Clarifies that deleting files and adding them again cannot be combined.",
+      "moderate"
+    ],
+    "608|ko": [
+      "propose-refinement",
+      "파일 삭제와 재추가는 함께 사용할 수 없습니다.",
+      "Clarifies that deleting files and adding them again cannot be combined.",
+      "moderate"
+    ],
+    "610|es": [
+      "propose-correction",
+      "No se puede volver a añadir al autor: no está disponible en el servidor de metadatos.",
+      "Preserves the specific re-add operation and corrects metadata-server wording.",
+      "moderate"
+    ],
+    "610|de": [
+      "propose-correction",
+      "Der Autor kann nicht erneut hinzugefügt werden: Er ist auf dem Metadatenserver nicht verfügbar.",
+      "Preserves the specific re-add operation and corrects metadata-server wording.",
+      "moderate"
+    ],
+    "610|pt-BR": [
+      "propose-correction",
+      "Não é possível adicionar o autor novamente: ele não está disponível no servidor de metadados.",
+      "Preserves the specific re-add operation and corrects metadata-server wording.",
+      "moderate"
+    ],
+    "610|zh-Hant": [
+      "propose-correction",
+      "無法重新新增作者：作者目前無法從中繼資料伺服器取得。",
+      "Preserves the specific re-add operation and corrects metadata-server wording.",
+      "moderate"
+    ],
+    "610|id": [
+      "propose-correction",
+      "Penulis tidak dapat ditambahkan kembali karena tidak tersedia di server metadata.",
+      "Preserves the specific re-add operation and corrects metadata-server wording.",
+      "moderate"
+    ],
+    "611|de": [
+      "propose-correction",
+      "Der Pfad '{value0}' ist bereits für einen anderen Autor konfiguriert.",
+      "Uses the normal filesystem term for path and preserves the path placeholder.",
+      "moderate"
+    ],
+    "611|hi": [
+      "propose-correction",
+      "पथ '{value0}' पहले से किसी अन्य लेखक के लिए कॉन्फ़िगर किया गया है।",
+      "Uses the normal filesystem term for path and preserves the path placeholder.",
+      "moderate"
+    ],
+    "611|fr": [
+      "propose-correction",
+      "Le chemin '{value0}' est déjà configuré pour un autre auteur.",
+      "Uses the normal filesystem term for path and preserves the path placeholder.",
+      "moderate"
+    ],
+    "611|id": [
+      "propose-correction",
+      "Jalur '{value0}' sudah dikonfigurasi untuk penulis lain.",
+      "Uses the normal filesystem term for path and preserves the path placeholder.",
+      "moderate"
+    ],
+    "612|es": [
+      "propose-correction",
+      "El token de CloudFlare CAPTCHA ha caducado. Actualiza la página.",
+      "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA.",
+      "moderate"
+    ],
+    "612|ja": [
+      "propose-correction",
+      "CloudFlare CAPTCHA トークンの有効期限が切れました。ページを更新してください。",
+      "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA.",
+      "moderate"
+    ],
+    "612|pt-BR": [
+      "propose-correction",
+      "O token do CloudFlare CAPTCHA expirou. Atualize a página.",
+      "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA.",
+      "moderate"
+    ],
+    "612|ar": [
+      "propose-correction",
+      "انتهت صلاحية رمز CloudFlare CAPTCHA. يُرجى تحديث الصفحة.",
+      "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA.",
+      "moderate"
+    ],
+    "613|zh-Hans": [
+      "propose-correction",
+      "用户名不能为空。",
+      "States the required nonempty username condition directly.",
+      "moderate"
+    ],
+    "613|zh-Hant": [
+      "propose-correction",
+      "使用者名稱不得為空。",
+      "States the required nonempty username condition directly.",
+      "moderate"
+    ],
+    "613|ar": [
+      "propose-correction",
+      "يجب ألا يكون اسم المستخدم فارغًا.",
+      "States the required nonempty username condition directly.",
+      "moderate"
+    ],
+    "613|ko": [
+      "propose-correction",
+      "사용자 이름은 비워 둘 수 없습니다.",
+      "States the required nonempty username condition directly.",
+      "moderate"
+    ],
+    "613|vi": [
+      "propose-correction",
+      "Tên người dùng không được để trống.",
+      "States the required nonempty username condition directly.",
+      "moderate"
+    ],
+    "614|es": [
+      "propose-correction",
+      "No se puede conectar al indexador porque su servidor no está disponible. Inténtalo de nuevo más tarde. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|zh-Hans": [
+      "propose-correction",
+      "无法连接到索引器，索引器服务器不可用。请稍后重试。{value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|hi": [
+      "propose-correction",
+      "इंडेक्सर से कनेक्ट नहीं हो पा रहा है क्योंकि उसका सर्वर उपलब्ध नहीं है। बाद में फिर कोशिश करें। {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|de": [
+      "propose-correction",
+      "Verbindung zum Indexer nicht möglich, da der Indexer-Server nicht verfügbar ist. Versuchen Sie es später erneut. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|ja": [
+      "propose-correction",
+      "インデクサーのサーバーが利用できないため接続できません。後でもう一度お試しください。{value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|fr": [
+      "propose-correction",
+      "Impossible de se connecter à l’indexeur, car son serveur est indisponible. Réessayez plus tard. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao indexador porque o servidor está indisponível. Tente novamente mais tarde. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|ar": [
+      "propose-correction",
+      "تعذّر الاتصال بالمفهرس لأن خادمه غير متاح. حاول مرة أخرى لاحقًا. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|ko": [
+      "propose-correction",
+      "인덱서 서버를 사용할 수 없어 연결할 수 없습니다. 나중에 다시 시도하세요. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|zh-Hant": [
+      "propose-correction",
+      "無法連線到索引器，因為索引器伺服器無法使用。請稍後再試。{value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|vi": [
+      "propose-correction",
+      "Không thể kết nối với trình lập chỉ mục vì máy chủ của trình lập chỉ mục không khả dụng. Hãy thử lại sau. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "614|id": [
+      "propose-correction",
+      "Tidak dapat terhubung ke pengindeks karena server pengindeks tidak tersedia. Coba lagi nanti. {value0}",
+      "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error.",
+      "moderate"
+    ],
+    "615|es": [
+      "propose-correction",
+      "El feed del indexador no es compatible: {value0}",
+      "Uses the standard indexer-feed term and natural support-status wording.",
+      "moderate"
+    ],
+    "615|de": [
+      "propose-refinement",
+      "Der Feed des Indexers wird nicht unterstützt: {value0}",
+      "Uses the standard indexer-feed term and natural support-status wording.",
+      "moderate"
+    ],
+    "615|fr": [
+      "propose-correction",
+      "Le flux de l’indexeur n’est pas pris en charge : {value0}",
+      "Uses the standard indexer-feed term and natural support-status wording.",
+      "moderate"
+    ],
+    "615|pt-BR": [
+      "propose-correction",
+      "O feed do indexador não é suportado: {value0}",
+      "Uses the standard indexer-feed term and natural support-status wording.",
+      "moderate"
+    ],
+    "615|vi": [
+      "propose-correction",
+      "Nguồn cấp dữ liệu của trình lập chỉ mục không được hỗ trợ: {value0}",
+      "Uses the standard indexer-feed term and natural support-status wording.",
+      "moderate"
+    ],
+    "615|id": [
+      "propose-correction",
+      "Feed pengindeks tidak didukung: {value0}",
+      "Uses the standard indexer-feed term and natural support-status wording.",
+      "moderate"
+    ],
+    "616|ja": [
+      "propose-correction",
+      "Torrent Download Station に接続できません。",
+      "Retains Torrent Download Station as the exact download-client product name.",
+      "moderate"
+    ],
+    "617|de": [
+      "propose-correction",
+      "Kein Standardziel vorhanden.",
+      "Uses idiomatic terms for a missing default download destination.",
+      "moderate"
+    ],
+    "617|ja": [
+      "propose-correction",
+      "既定の保存先がありません。",
+      "Uses idiomatic terms for a missing default download destination.",
+      "moderate"
+    ],
+    "617|ar": [
+      "propose-correction",
+      "لا توجد وجهة افتراضية.",
+      "Uses idiomatic terms for a missing default download destination.",
+      "moderate"
+    ],
+    "617|id": [
+      "propose-correction",
+      "Tidak ada tujuan bawaan.",
+      "Uses idiomatic terms for a missing default download destination.",
+      "moderate"
+    ],
+    "618|ja": [
+      "propose-correction",
+      "Plex Media Server に接続できません。",
+      "Retains Plex Media Server as the exact product name.",
+      "moderate"
+    ],
+    "618|hi": [
+      "propose-correction",
+      "Plex Media Server से कनेक्ट करने में असमर्थ",
+      "Retains Plex Media Server as the exact product name and preserves the connection-failure meaning.",
+      "moderate"
+    ],
+    "618|ko": [
+      "propose-correction",
+      "Plex Media Server에 연결할 수 없음",
+      "Retains Plex Media Server as the exact product name and preserves the connection-failure meaning.",
+      "moderate"
+    ],
+    "621|es": [
+      "propose-correction",
+      "Qué libros deben supervisarse al añadir por primera vez a los autores detectados en esta carpeta",
+      "Improves the question about the initial monitoring choice for authors found in the folder.",
+      "moderate"
+    ],
+    "621|ja": [
+      "propose-correction",
+      "このフォルダーで検出された作者を初めて追加するとき、どの書籍を監視しますか？",
+      "Improves the question about the initial monitoring choice for authors found in the folder.",
+      "moderate"
+    ],
+    "621|vi": [
+      "propose-correction",
+      "Nên theo dõi những cuốn sách nào khi thêm lần đầu các tác giả được phát hiện trong thư mục này?",
+      "Improves the question about the initial monitoring choice for authors found in the folder.",
+      "moderate"
+    ],
+    "622|es": [
+      "propose-refinement",
+      "Use la clave de configuración de Apprise o las URL sin estado de Apprise.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|zh-Hans": [
+      "propose-correction",
+      "请使用 Apprise 配置密钥或 Apprise 无状态 URL 中的一种。",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|hi": [
+      "propose-correction",
+      "Apprise कॉन्फ़िगरेशन कुंजी या Apprise स्टेटलेस URL में से किसी एक का उपयोग करें。",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|de": [
+      "propose-correction",
+      "Verwenden Sie entweder den Apprise-Konfigurationsschlüssel oder die zustandslosen Apprise-URLs.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|ja": [
+      "propose-correction",
+      "Apprise 設定キーまたは Apprise のステートレス URL のどちらかを使用してください。",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|fr": [
+      "propose-refinement",
+      "Utilisez soit la clé de configuration Apprise, soit les URL Apprise sans état.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|pt-BR": [
+      "propose-correction",
+      "Use a chave de configuração do Apprise ou as URLs sem estado do Apprise.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|ar": [
+      "propose-refinement",
+      "استخدم إما مفتاح إعداد Apprise أو عناوين URL عديمة الحالة من Apprise.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|ko": [
+      "propose-correction",
+      "Apprise 설정 키 또는 Apprise 무상태 URL 중 하나를 사용하세요.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|zh-Hant": [
+      "propose-correction",
+      "請使用 Apprise 配置密鑰或 Apprise 無狀態 URL。",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|vi": [
+      "propose-correction",
+      "Hãy dùng khóa cấu hình Apprise hoặc URL không trạng thái của Apprise.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "622|id": [
+      "propose-correction",
+      "Gunakan kunci konfigurasi Apprise atau URL stateless Apprise.",
+      "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels.",
+      "moderate"
+    ],
+    "623|es": [
+      "propose-correction",
+      "Error de autenticación de Goodreads: {value0}.",
+      "Corrects word order and uses authentication terminology for Goodreads.",
+      "moderate"
+    ],
+    "623|fr": [
+      "propose-correction",
+      "Erreur d’authentification Goodreads : {value0}.",
+      "Corrects word order and uses authentication terminology for Goodreads.",
+      "moderate"
+    ],
+    "623|ar": [
+      "propose-correction",
+      "خطأ في مصادقة Goodreads: {value0}.",
+      "Corrects word order and uses authentication terminology for Goodreads.",
+      "moderate"
+    ],
+    "623|vi": [
+      "propose-correction",
+      "Lỗi xác thực Goodreads: {value0}.",
+      "Corrects word order and uses authentication terminology for Goodreads.",
+      "moderate"
+    ],
+    "623|id": [
+      "propose-correction",
+      "Kesalahan autentikasi Goodreads: {value0}.",
+      "Corrects word order and uses authentication terminology for Goodreads.",
+      "moderate"
+    ],
+    "624|hi": [
+      "propose-correction",
+      "श्रेणी मौजूद नहीं है।",
+      "Localizes Category consistently and uses natural existence phrasing.",
+      "moderate"
+    ],
+    "624|ar": [
+      "propose-correction",
+      "الفئة غير موجودة.",
+      "Localizes Category consistently and uses natural existence phrasing.",
+      "moderate"
+    ],
+    "624|ko": [
+      "propose-correction",
+      "카테고리가 존재하지 않습니다.",
+      "Localizes Category consistently and uses natural existence phrasing.",
+      "moderate"
+    ],
+    "624|vi": [
+      "propose-correction",
+      "Danh mục không tồn tại.",
+      "Localizes Category consistently and uses natural existence phrasing.",
+      "moderate"
+    ],
+    "625|zh-Hans": [
+      "propose-correction",
+      "需要授权。",
+      "Uses authorization rather than a generic permission/license term.",
+      "moderate"
+    ],
+    "625|zh-Hant": [
+      "propose-correction",
+      "需要授權。",
+      "Uses authorization rather than a generic permission/license term.",
+      "moderate"
+    ],
+    "626|es": [
+      "propose-correction",
+      "Debe proporcionar el parámetro 'ids'.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|zh-Hans": [
+      "propose-correction",
+      "必须提供 ids。",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|hi": [
+      "propose-correction",
+      "'ids' प्रदान करना आवश्यक है।",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|de": [
+      "propose-correction",
+      "ids müssen angegeben werden.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|ja": [
+      "propose-correction",
+      "ids を指定する必要があります。",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|fr": [
+      "propose-correction",
+      "Le paramètre 'ids' doit être fourni.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|pt-BR": [
+      "propose-correction",
+      "É necessário fornecer o parâmetro 'ids'.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|ar": [
+      "propose-correction",
+      "يجب توفير المعامل 'ids'.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|ko": [
+      "propose-correction",
+      "'ids'를 제공해야 합니다.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|zh-Hant": [
+      "propose-correction",
+      "必須提供 ids。",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|vi": [
+      "propose-correction",
+      "Phải cung cấp tham số 'ids'.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "626|id": [
+      "propose-correction",
+      "Parameter 'ids' wajib disediakan.",
+      "Preserves the exact API parameter name ids and states that it must be supplied.",
+      "moderate"
+    ],
+    "627|es": [
+      "propose-correction",
+      "No se pudo generar la solicitud de prueba. Comprueba tu configuración.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|zh-Hans": [
+      "propose-correction",
+      "未能生成测试请求。请检查设置。",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|hi": [
+      "propose-correction",
+      "परीक्षण अनुरोध बनाने में विफल। अपनी सेटिंग जाँचें。",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|de": [
+      "propose-correction",
+      "Die Testanfrage konnte nicht erstellt werden. Überprüfen Sie Ihre Einstellungen.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|ja": [
+      "propose-correction",
+      "テストリクエストを生成できませんでした。設定を確認してください。",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|fr": [
+      "propose-correction",
+      "Impossible de générer la requête de test. Vérifiez vos paramètres.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|pt-BR": [
+      "propose-correction",
+      "Não foi possível gerar a solicitação de teste. Verifique suas configurações.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|ar": [
+      "propose-correction",
+      "تعذّر إنشاء طلب الاختبار. تحقق من الإعدادات.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|ko": [
+      "propose-correction",
+      "테스트 요청을 생성하지 못했습니다. 설정을 확인하세요.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|zh-Hant": [
+      "propose-correction",
+      "未能產生測試請求。請檢查設定。",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|vi": [
+      "propose-correction",
+      "Không thể tạo yêu cầu thử nghiệm. Hãy kiểm tra cài đặt.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "627|id": [
+      "propose-correction",
+      "Permintaan uji coba gagal dibuat. Periksa pengaturan Anda.",
+      "Makes the failed test-request result and settings instruction direct and grammatical.",
+      "moderate"
+    ],
+    "629|es": [
+      "propose-correction",
+      "El ajuste KeepHistory de NzbGet debe ser mayor que 0.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|zh-Hans": [
+      "propose-correction",
+      "NzbGet 的 KeepHistory 设置必须大于 0。",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|hi": [
+      "propose-correction",
+      "NzbGet की KeepHistory सेटिंग 0 से अधिक होनी चाहिए।",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|de": [
+      "propose-correction",
+      "Die NzbGet-Einstellung KeepHistory muss größer als 0 sein.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|ja": [
+      "propose-correction",
+      "NzbGet の KeepHistory 設定は 0 より大きくなければなりません。",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|fr": [
+      "propose-correction",
+      "La valeur de KeepHistory dans NzbGet doit être supérieure à 0.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|pt-BR": [
+      "propose-correction",
+      "A configuração KeepHistory do NzbGet deve ser maior que 0.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|ar": [
+      "propose-correction",
+      "يجب أن تكون قيمة إعداد KeepHistory في NzbGet أكبر من 0.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|ko": [
+      "propose-correction",
+      "NzbGet의 KeepHistory 설정 값은 0보다 커야 합니다.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|zh-Hant": [
+      "propose-correction",
+      "NzbGet 的 KeepHistory 設定值必須大於 0。",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|vi": [
+      "propose-correction",
+      "Giá trị cài đặt KeepHistory trong NzbGet phải lớn hơn 0.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "629|id": [
+      "propose-correction",
+      "Pengaturan KeepHistory di NzbGet harus lebih dari 0.",
+      "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold.",
+      "moderate"
+    ],
+    "631|vi": [
+      "propose-correction",
+      "Phiên bản máy khách không được hỗ trợ.",
+      "Uses the software term for client, rather than customer.",
+      "moderate"
+    ],
+    "632|ar": [
+      "propose-correction",
+      "المؤلف غير متاح بعد على خادم البيانات الوصفية.",
+      "Corrects author and metadata-server terminology while preserving availability meaning.",
+      "moderate"
+    ],
+    "632|zh-Hant": [
+      "propose-correction",
+      "作者目前尚未在中繼資料伺服器上提供。",
+      "Corrects author and metadata-server terminology while preserving availability meaning.",
+      "moderate"
+    ],
+    "632|vi": [
+      "propose-correction",
+      "Tác giả hiện chưa có trên máy chủ siêu dữ liệu.",
+      "Corrects author and metadata-server terminology while preserving availability meaning.",
+      "moderate"
+    ],
+    "633|es": [
+      "propose-refinement",
+      "No se puede establecer en '/'.",
+      "Uses a natural prohibition for setting the path value to slash.",
+      "moderate"
+    ],
+    "633|ja": [
+      "propose-correction",
+      "「/」には設定できません。",
+      "Uses a natural prohibition for setting the path value to slash.",
+      "moderate"
+    ],
+    "633|fr": [
+      "propose-correction",
+      "Impossible de définir « / ».",
+      "Uses a natural prohibition for setting the path value to slash.",
+      "moderate"
+    ],
+    "633|vi": [
+      "propose-correction",
+      "Không thể đặt thành '/'.",
+      "Uses a natural prohibition for setting the path value to slash.",
+      "moderate"
+    ],
+    "633|id": [
+      "propose-correction",
+      "Tidak dapat diatur ke '/'.",
+      "Uses a natural prohibition for setting the path value to slash.",
+      "moderate"
+    ],
+    "634|zh-Hans": [
+      "propose-correction",
+      "监控有声书时，必须设置有声书根文件夹。",
+      "Corrects the root-folder requirement for audiobook monitoring.",
+      "moderate"
+    ],
+    "634|fr": [
+      "propose-correction",
+      "Un dossier racine de livres audio est requis pour les surveiller.",
+      "Corrects the root-folder requirement for audiobook monitoring.",
+      "moderate"
+    ],
+    "634|pt-BR": [
+      "propose-correction",
+      "É necessária uma pasta raiz de audiolivros para monitorá-los.",
+      "Corrects the root-folder requirement for audiobook monitoring.",
+      "moderate"
+    ],
+    "634|ko": [
+      "propose-correction",
+      "오디오북을 모니터링하려면 오디오북 루트 폴더가 필요합니다.",
+      "Corrects the root-folder requirement for audiobook monitoring.",
+      "moderate"
+    ],
+    "634|zh-Hant": [
+      "propose-correction",
+      "監控有聲書時，必須設定有聲書根資料夾。",
+      "Corrects the root-folder requirement for audiobook monitoring.",
+      "moderate"
+    ],
+    "634|id": [
+      "propose-correction",
+      "Folder utama untuk buku audio harus ditetapkan saat memantau buku audio.",
+      "Corrects the root-folder requirement for audiobook monitoring.",
+      "moderate"
+    ],
+    "635|hi": [
+      "propose-correction",
+      "रूट फ़ोल्डर '{value0}' Chaptarr में कॉन्फ़िगर नहीं है।",
+      "Uses standard root-folder configuration wording while preserving Chaptarr and {value0}.",
+      "moderate"
+    ],
+    "635|ar": [
+      "propose-correction",
+      "مجلد الجذر '{value0}' غير مُهيأ في Chaptarr.",
+      "Uses standard root-folder configuration wording while preserving Chaptarr and {value0}.",
+      "moderate"
+    ],
+    "635|vi": [
+      "propose-correction",
+      "Thư mục gốc '{value0}' chưa được cấu hình trong Chaptarr.",
+      "Uses standard root-folder configuration wording while preserving Chaptarr and {value0}.",
+      "moderate"
+    ],
+    "636|es": [
+      "propose-correction",
+      "No se puede conectar al indexador. {value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "636|zh-Hans": [
+      "propose-correction",
+      "无法连接到索引器。{value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "636|hi": [
+      "propose-correction",
+      "इंडेक्सर से कनेक्ट नहीं हो पा रहा है। {value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "636|pt-BR": [
+      "propose-correction",
+      "Não foi possível conectar ao indexador. {value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "636|zh-Hant": [
+      "propose-correction",
+      "無法連線到索引器。{value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "636|vi": [
+      "propose-correction",
+      "Không thể kết nối với trình lập chỉ mục. {value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "636|id": [
+      "propose-correction",
+      "Tidak dapat terhubung ke pengindeks. {value0}",
+      "Uses idiomatic indexer connection wording and retains the appended {value0} detail.",
+      "moderate"
+    ],
+    "637|zh-Hans": [
+      "propose-correction",
+      "bookFileIds 必须属于同一个导入单元。",
+      "Clarifies that the selected book-file IDs must come from one import unit.",
+      "moderate"
+    ],
+    "637|ja": [
+      "propose-correction",
+      "bookFileIds は同じインポート単位に属している必要があります。",
+      "Clarifies that the selected book-file IDs must come from one import unit.",
+      "moderate"
+    ],
+    "637|ko": [
+      "propose-correction",
+      "bookFileIds는 하나의 가져오기 단위에 속해야 합니다.",
+      "Clarifies that the selected book-file IDs must come from one import unit.",
+      "moderate"
+    ],
+    "637|vi": [
+      "propose-correction",
+      "bookFileIds phải thuộc cùng một đơn vị nhập.",
+      "Clarifies that the selected book-file IDs must come from one import unit.",
+      "moderate"
+    ],
+    "638|es": [
+      "propose-correction",
+      "El patrón Regex no puede estar vacío.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|zh-Hans": [
+      "propose-correction",
+      "Regex 模式不能为空。",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|de": [
+      "propose-correction",
+      "Das Regex-Muster darf nicht leer sein.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|pt-BR": [
+      "propose-correction",
+      "O padrão Regex não pode estar vazio.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|ar": [
+      "propose-correction",
+      "يجب ألا يكون نمط Regex فارغًا.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|ko": [
+      "propose-correction",
+      "Regex 패턴은 비워 둘 수 없습니다.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|zh-Hant": [
+      "propose-correction",
+      "Regex 模式不得為空。",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|vi": [
+      "propose-correction",
+      "Mẫu Regex không được để trống.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "638|id": [
+      "propose-correction",
+      "Pola Regex tidak boleh kosong.",
+      "Uses standard Regex-pattern terminology and the required nonempty condition.",
+      "moderate"
+    ],
+    "641|es": [
+      "propose-correction",
+      "No se pudo configurar la etiqueta.",
+      "States that label configuration failed using natural error-message wording.",
+      "moderate"
+    ],
+    "641|hi": [
+      "propose-correction",
+      "लेबल कॉन्फ़िगर नहीं किया जा सका。",
+      "States that label configuration failed using natural error-message wording.",
+      "moderate"
+    ],
+    "641|de": [
+      "propose-correction",
+      "Die Label-Konfiguration ist fehlgeschlagen.",
+      "States that label configuration failed using natural error-message wording.",
+      "moderate"
+    ],
+    "641|ja": [
+      "propose-correction",
+      "ラベルの設定に失敗しました。",
+      "States that label configuration failed using natural error-message wording.",
+      "moderate"
+    ],
+    "641|fr": [
+      "propose-correction",
+      "Échec de la configuration du libellé.",
+      "States that label configuration failed using natural error-message wording.",
+      "moderate"
+    ],
+    "641|ar": [
+      "propose-correction",
+      "فشل إعداد التسمية.",
+      "States that label configuration failed using natural error-message wording.",
+      "moderate"
+    ],
+    "643|hi": [
+      "propose-correction",
+      "जॉब फ़ोल्डर सक्षम करें",
+      "Uses the download client's Job-folder terminology.",
+      "moderate"
+    ],
+    "643|de": [
+      "propose-refinement",
+      "Job-Ordner aktivieren.",
+      "Uses the download client's Job-folder terminology.",
+      "moderate"
+    ],
+    "643|ja": [
+      "propose-correction",
+      "ジョブフォルダーを有効にする。",
+      "Uses the download client's Job-folder terminology.",
+      "moderate"
+    ],
+    "643|id": [
+      "propose-correction",
+      "Aktifkan folder Job.",
+      "Uses the download client's Job-folder terminology.",
+      "moderate"
+    ],
+    "644|hi": [
+      "propose-correction",
+      "इसमें लेखक का नाम होना अनिवार्य है。",
+      "Makes the required author-name condition direct.",
+      "moderate"
+    ],
+    "644|vi": [
+      "propose-correction",
+      "Phải chứa tên tác giả.",
+      "Makes the required author-name condition direct.",
+      "moderate"
+    ],
+    "646|hi": [
+      "propose-correction",
+      "लेखक IDs धनात्मक संख्याएँ होनी चाहिए।",
+      "Corrects number agreement and the meaning of positive IDs.",
+      "moderate"
+    ],
+    "646|ar": [
+      "propose-correction",
+      "يجب أن تكون معرّفات المؤلف أعدادًا موجبة.",
+      "Corrects number agreement and the meaning of positive IDs.",
+      "moderate"
+    ],
+    "646|zh-Hant": [
+      "propose-correction",
+      "作者 ID 必須是正數。",
+      "Corrects number agreement and the meaning of positive IDs.",
+      "moderate"
+    ],
+    "647|es": [
+      "propose-correction",
+      "Debe coincidir con la contraseña.",
+      "States a direct password-match requirement.",
+      "moderate"
+    ],
+    "647|de": [
+      "propose-correction",
+      "Muss mit dem Passwort übereinstimmen.",
+      "States a direct password-match requirement.",
+      "moderate"
+    ],
+    "647|ja": [
+      "propose-correction",
+      "パスワードと一致する必要があります。",
+      "States a direct password-match requirement.",
+      "moderate"
+    ],
+    "647|pt-BR": [
+      "propose-correction",
+      "Deve corresponder à senha.",
+      "States a direct password-match requirement.",
+      "moderate"
+    ],
+    "647|vi": [
+      "propose-correction",
+      "Phải khớp với mật khẩu.",
+      "States a direct password-match requirement.",
+      "moderate"
+    ],
+    "648|fr": [
+      "propose-correction",
+      "Le fichier doit être fourni.",
+      "Corrects pluralization so the message refers to one required file.",
+      "moderate"
+    ],
+    "648|pt-BR": [
+      "propose-correction",
+      "O arquivo deve ser fornecido.",
+      "Corrects pluralization so the message refers to one required file.",
+      "moderate"
+    ],
+    "648|vi": [
+      "propose-correction",
+      "Tệp phải được cung cấp.",
+      "Corrects pluralization so the message refers to one required file.",
+      "moderate"
+    ],
+    "649|es": [
+      "propose-correction",
+      "La URL de Chaptarr no es válida. ¿Falta la URL base?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|hi": [
+      "propose-correction",
+      "Chaptarr URL अमान्य है। क्या आधार URL छूट गया है?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|de": [
+      "propose-correction",
+      "Die Chaptarr-URL ist ungültig. Fehlt die Basis-URL?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|fr": [
+      "propose-correction",
+      "L’URL de Chaptarr est invalide. L’URL de base est-elle manquante ?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|pt-BR": [
+      "propose-correction",
+      "A URL do Chaptarr é inválida. Está faltando uma URL base?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|ar": [
+      "propose-correction",
+      "عنوان URL الخاص بـ Chaptarr غير صالح. هل عنوان URL الأساسي مفقود؟",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|vi": [
+      "propose-correction",
+      "URL của Chaptarr không hợp lệ. Bạn có thiếu URL cơ sở không?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ],
+    "649|id": [
+      "propose-correction",
+      "URL Chaptarr tidak valid. Apakah URL dasar belum disetel?",
+      "Corrects URL grammar and retains Chaptarr and URL terminology.",
+      "moderate"
+    ]
+  },
+  "sourceRationales": {
+    "600": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "601": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "602": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "603": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "604": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "605": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "606": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "607": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "608": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "609": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "610": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "611": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "612": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "613": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "614": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "615": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "616": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "617": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "618": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "619": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "620": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "621": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "622": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "623": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "624": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "625": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "626": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "627": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "628": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "629": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "630": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "631": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "632": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "633": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "634": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "635": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "636": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "637": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "638": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "639": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "640": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "641": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "642": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "643": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "644": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "645": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "646": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "647": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "648": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers.",
+    "649": "The pinned production caller establishes the API, validation, status-toast, or media-operation context for this message; proposals preserve that meaning and its technical identifiers."
+  },
+  "acceptedCellRationale": "Current target preserves source meaning in the exact pinned production caller context; no material issue found.",
+  "nativeSpeakerApproval": false
+}

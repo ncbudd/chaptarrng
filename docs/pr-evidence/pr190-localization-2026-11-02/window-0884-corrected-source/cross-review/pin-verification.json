@@ -1,0 +1,156 @@
+{
+  "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+  "callerFileGitBlobOid": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+  "callerFileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+  "callerLines": [
+    {
+      "correctedSourcePresent": true,
+      "line": 27,
+      "lineSha256": "7b13ae9e98b4abbd921b5c3b460ed9961e6fb520bf1ecc6505063fce84debc0f",
+      "stableIdOnFollowingLine": true
+    },
+    {
+      "correctedSourcePresent": true,
+      "line": 29,
+      "lineSha256": "4f622faab4b08b5ae7d9d7eea32c0bbac7a79dbeae87efba06825c506ae5a965",
+      "stableIdOnFollowingLine": true
+    },
+    {
+      "correctedSourcePresent": true,
+      "line": 31,
+      "lineSha256": "441e5b709b1ca4c2f113f3694f987c6d82368b2acfb389dff26ecee40cc60309",
+      "stableIdOnFollowingLine": true
+    },
+    {
+      "correctedSourcePresent": true,
+      "line": 33,
+      "lineSha256": "0c18316e8e08626e844230e64cfd2e664e387d00de888c967098436477fffb02",
+      "stableIdOnFollowingLine": true
+    }
+  ],
+  "correctedEnglishSource": "Can not contain '\\', '//', or start/end with '/'",
+  "crossreviewedAtUtc": "2026-11-02T20:29:16.607394+00:00",
+  "exactHeadSourceAndCatalogPinsVerified": true,
+  "head": "722c0aaab4eda88bb507ba4a165e2f6bb22901fa",
+  "historicalHoldArtifact": {
+    "fileSha256": "293a8dc1b37e2a246c5bdb84b8018161100aaf18c5278cc0b8e017377783d99a",
+    "gitBlobOid": "b84f2789d04cc2ce84c13caf43f5365a1c3ace58",
+    "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/application/apply-readback.jsonl",
+    "pinVerified": true
+  },
+  "localeCatalogs": [
+    {
+      "currentTargetSha256": "e678c3c310b7c122881141a3d6b7e3227e0984d1cf485f9c53a3f52ec0cb4442",
+      "currentValueMatches": true,
+      "fileSha256": "cb752269392ece6bad8005f3374668a0763586d9dc8ee5d50ad32abf568e1ebe",
+      "gitBlobOid": "a045ecbc6b2bbd51cf29ffe63e01238eea9bd8b4",
+      "locale": "ar",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json"
+    },
+    {
+      "currentTargetSha256": "5f27504a334d6a5591cf91243045d6303fb253338d41894816c2db028623266c",
+      "currentValueMatches": true,
+      "fileSha256": "bee77bfb090258c07d2e7508af587733d06feda7e137e20a3ec6f9a5e7f6aa7e",
+      "gitBlobOid": "b852c68a72d6d09ef3bfa7248a6479e5a039de6c",
+      "locale": "de",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json"
+    },
+    {
+      "currentTargetSha256": "1b03903b159fb17ec95e97ff0963031a2799c32393ee94bddf565de348c69a10",
+      "currentValueMatches": true,
+      "fileSha256": "d53df445efb9223cc8057ce852c6246b94fdcf376accbdf542c88284313e32cf",
+      "gitBlobOid": "d59caa7f4494cf3d845ca4954007d328a672b70b",
+      "locale": "es",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json"
+    },
+    {
+      "currentTargetSha256": "73df083048fbae4fe25b27fb840a4b7669a1a991b34ecbc164fcb4004b47ba10",
+      "currentValueMatches": true,
+      "fileSha256": "36e30964472be37f69cabfc31c7b0cd3b149c20ab5e50db67afbb0aa30b505d8",
+      "gitBlobOid": "e63e3ca7ada319144826d8b312cd28c8a8a8cc9e",
+      "locale": "fr",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json"
+    },
+    {
+      "currentTargetSha256": "ba7889a21c7670f6b39a3184dddecfffa525c287f16f58a354a1d7f5439f9734",
+      "currentValueMatches": true,
+      "fileSha256": "d85093c78d341c3f4ba342f385d1ea29f0c6312b392b0825d0b6013a73b1018d",
+      "gitBlobOid": "b7114759864ed04242fb45692958a6306e201715",
+      "locale": "hi",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json"
+    },
+    {
+      "currentTargetSha256": "3ec1a02c9fa408c1aaee0fec7e4605c7e146da283735b88cb9b65be568a7e4ea",
+      "currentValueMatches": true,
+      "fileSha256": "5a5be2ba7a2bb2044e8dc3f48abb5d26f17938a0ee357da96baed60e31ad7ce1",
+      "gitBlobOid": "6090282f3c1e17d6012be6ea50ec20fa334f41f0",
+      "locale": "id",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json"
+    },
+    {
+      "currentTargetSha256": "ecd57bad046c963124c50525cdf1f9ef8e5da9beea758025ef34108eeacf7a63",
+      "currentValueMatches": true,
+      "fileSha256": "6a619d3ac3cba5d04394c03d40b5253e8161f7a4a21ea614d688123548594874",
+      "gitBlobOid": "549c032d47a2fb32d1cf8af4d15a35adb9cd4528",
+      "locale": "ja",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json"
+    },
+    {
+      "currentTargetSha256": "b045db1d4023dc2cf241655bce16a2ab279def5da923ad83690541bb3e2c89e7",
+      "currentValueMatches": true,
+      "fileSha256": "600d6efdd8b2e85ef3cfc5af2432819eebc96f6848d8e6a9ad25ba02e0de130e",
+      "gitBlobOid": "c77398fed47ab972362f7051b21fa80b4f15df6f",
+      "locale": "ko",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json"
+    },
+    {
+      "currentTargetSha256": "17c407c1106dbc97486a012bbe0bf9d7d0da85d09d7f119a667fea3fa0d5e730",
+      "currentValueMatches": true,
+      "fileSha256": "9ba498e2021d431904cd55eb6cb83c087d5b1c52fd272ea0ea324d22fdb05cf2",
+      "gitBlobOid": "96e68eadd09dc909ebc8135bac409d827a73a8e2",
+      "locale": "pt_BR",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"
+    },
+    {
+      "currentTargetSha256": "00d354f36da445b157402cb453d8290e62eb4fead2d489ef8b5d6823957abdf6",
+      "currentValueMatches": true,
+      "fileSha256": "7e9ce4b033a68ab75b3c3c961b379d55d6f405227f4ef839c9dfe6cf0dc1b110",
+      "gitBlobOid": "3a1b161bb55460f5ee31d8652c68721e3c8c5c23",
+      "locale": "vi",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json"
+    },
+    {
+      "currentTargetSha256": "d77b68d4a94baa9260497bf69f8fd7b4444a685d5715508af8fd389d0d4efaf1",
+      "currentValueMatches": true,
+      "fileSha256": "fd295b54fd515a8056ac1e9c6c60cbb04b713905e9603c5114513a14b869d971",
+      "gitBlobOid": "ad4b7972188d5fbb9923d737d1d0a109a6cb9a97",
+      "locale": "zh_CN",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+    },
+    {
+      "currentTargetSha256": "3e8a9a1919f1d3c55170ca7aba404e723a596239182956526ba8039190a0519a",
+      "currentValueMatches": true,
+      "fileSha256": "406f29bf3897d6269538802a25fa6a514e6605cfb223d043aac339e22df6a948",
+      "gitBlobOid": "77cb9bc8eac8158a477a0cbb20148fb60b63be44",
+      "locale": "zh_TW",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    }
+  ],
+  "pullRequest": 190,
+  "registryEntryMatchesPacket": true,
+  "repository": "snapetech-org/chaptarrNG",
+  "scopeNote": "This is a single-source window review; no broader ordinal coverage claim is made.",
+  "sourceFollowupMatchesCorrectedSource": true,
+  "sourceHashRegistryMatchesFingerprint": true,
+  "sourceId": "server.message.mf00d6bc38ae8",
+  "sourceOrdinal": 884,
+  "sourceOrdinalEvidence": {
+    "fileSha256": "ebe6f3a6da6246886536188cbfa8023201ac31bf2f0d5aecb898288b16ae2e74",
+    "gitBlobOid": "fce68abc732a579b0ceb02ca6c149feb74d4c186",
+    "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/primary/source-slice.jsonl",
+    "pinVerified": true
+  },
+  "sourceRegistryFingerprint": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+  "sourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+  "tree": "d162735f61d934389634111229b42beae04aaeea"
+}

@@ -163,19 +163,19 @@ namespace NzbDrone.Core.Download.Clients.Hadouken
 
                 if (version < new Version("5.1"))
                 {
-                    return new ValidationFailure(string.Empty,
-                        "Old Hadouken client with unsupported API, need 5.1 or higher");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty,
+                        "Old Hadouken client with unsupported API, need 5.1 or higher", "server.message.meead9b01a49a");
                 }
             }
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
 
-                return new NzbDroneValidationFailure("Password", "Authentication failed");
+                return NzbDroneValidationFailure.ForMessage("Password", "Authentication failed", "server.message.m93821eb7ce8c");
             }
             catch (Exception ex)
             {
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Hadouken")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to Hadouken", "server.message.mdd0fed37bc8b", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -193,7 +193,7 @@ namespace NzbDrone.Core.Download.Clients.Hadouken
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to validate");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of torrents: " + ex.Message, "server.message.m451006253bc3", new { value0 = ex.Message });
             }
 
             return null;

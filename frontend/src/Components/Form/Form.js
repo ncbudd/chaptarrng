@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Alert from 'Components/Alert';
+import LocalizedServerMessage from 'Components/LocalizedServerMessage';
 import { kinds } from 'Helpers/Props';
 import translateServerMessage from 'Utilities/String/translateServerMessage';
 import styles from './Form.css';
@@ -11,6 +12,7 @@ function Form(props) {
     validationErrors,
     validationWarnings,
     successMessages,
+    serverMessageMode,
     // eslint-disable-next-line no-unused-vars
     ...otherProps
   } = props;
@@ -27,7 +29,7 @@ function Form(props) {
                     key={`success-${index}`}
                     kind={kinds.SUCCESS}
                   >
-                    {translateServerMessage(msg)}
+                    {renderServerMessage(msg, serverMessageMode)}
                   </Alert>
                 );
               })
@@ -40,7 +42,7 @@ function Form(props) {
                     key={`error-${index}`}
                     kind={kinds.DANGER}
                   >
-                    {translateServerMessage(error.errorMessage)}
+                    {renderServerMessage(error, serverMessageMode)}
                   </Alert>
                 );
               })
@@ -53,7 +55,7 @@ function Form(props) {
                     key={`warning-${index}`}
                     kind={kinds.WARNING}
                   >
-                    {translateServerMessage(warning.errorMessage)}
+                    {renderServerMessage(warning, serverMessageMode)}
                   </Alert>
                 );
               })
@@ -67,17 +69,42 @@ function Form(props) {
   );
 }
 
+function renderServerMessage(message, mode) {
+  if (message && typeof message === 'object') {
+    const text = message.message ?? message.errorMessage;
+    const localized = <LocalizedServerMessage
+      message={text}
+      messageId={message.messageId ?? message.errorMessageId}
+      messageParameters={message.messageParameters}
+    />;
+
+    if (mode === 'opaque' || message.messageId || message.errorMessageId) {
+      return localized;
+    }
+
+    return translateServerMessage(text);
+  }
+
+  if (mode === 'opaque') {
+    return <LocalizedServerMessage message={message} />;
+  }
+
+  return translateServerMessage(message);
+}
+
 Form.propTypes = {
   children: PropTypes.node.isRequired,
   validationErrors: PropTypes.arrayOf(PropTypes.object).isRequired,
   validationWarnings: PropTypes.arrayOf(PropTypes.object).isRequired,
-  successMessages: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object]))
+  successMessages: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.string, PropTypes.object])),
+  serverMessageMode: PropTypes.oneOf(['source', 'opaque'])
 };
 
 Form.defaultProps = {
   validationErrors: [],
   validationWarnings: [],
-  successMessages: []
+  successMessages: [],
+  serverMessageMode: 'source'
 };
 
 export default Form;

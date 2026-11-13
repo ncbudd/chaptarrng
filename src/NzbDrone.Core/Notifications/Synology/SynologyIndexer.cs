@@ -4,6 +4,7 @@ using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Core.Books;
 using NzbDrone.Core.MediaFiles;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Synology
 {
@@ -95,12 +96,12 @@ namespace NzbDrone.Core.Notifications.Synology
         {
             if (!OsInfo.IsLinux)
             {
-                return new ValidationFailure(null, "Must be a Synology");
+                return NzbDroneValidationFailure.ForMessage(null, "Must be a Synology", "server.message.md0b3139c8f8d");
             }
 
             if (!_indexerProxy.Test())
             {
-                return new ValidationFailure(null, "Not a Synology or synoindex not available");
+                return NzbDroneValidationFailure.ForMessage(null, "Not a Synology or synoindex not available", "server.message.m7ec433f562a8");
             }
 
             return null;

@@ -1,0 +1,19 @@
+{
+  "result": "PASS",
+  "head": "9fd23606fbb4c8928505772413e5c23e85352adc",
+  "tree": "cba466021a9a0c9699ef171ddc6a510a69209083",
+  "sourceCount": 50,
+  "localeCount": 12,
+  "cellCount": 600,
+  "acceptCurrent": 390,
+  "selectedPrimaryProposals": 42,
+  "textFreeCallerlessHolds": 168,
+  "callerlessKeys": 14,
+  "proposalDisagreementsUnresolved": 0,
+  "sourceRewriteRecommendations": 2,
+  "placeholderInlineMarkupNumericProtectedParity": "PASS",
+  "candidateFreeVerifier": "PASS",
+  "primaryVerifier": "PASS",
+  "crossChecksumFiles": 12,
+  "productApplicationEditsMadeAfterReview": true
+}

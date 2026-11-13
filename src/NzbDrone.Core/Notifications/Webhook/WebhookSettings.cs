@@ -16,6 +16,7 @@ namespace NzbDrone.Core.Notifications.Webhook
                 .Must(url => !ResolvesToPrivateOrLocalNetwork(url))
                 .WithMessage("Webhook URL resolves to a local or private network address. This is allowed, but only use it for internal services you trust.")
                 .AsWarning()
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mf7700d5c96ce", isWarning: true))
                 .When(c => !string.IsNullOrWhiteSpace(c.Url));
         }
 

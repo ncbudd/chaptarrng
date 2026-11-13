@@ -1,0 +1,230 @@
+{
+  "batch": "W250-299-Core",
+  "customTargets": {
+    "AutomaticUpdatesDisabledDocker::id": {
+      "basisFindingIds": [
+        "F001"
+      ],
+      "rationale": "The current Indonesian coordinates “harus memperbarui” with the imperative “gunakan.” “Atau menggunakan” keeps the source alternatives parallel and leaves the {appName} placeholder intact.",
+      "reviewConfidence": "high",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Anda perlu memperbarui gambar kontainer di luar {appName} atau menggunakan skrip."
+    },
+    "BackupsContainUnencryptedCredentials::ar": {
+      "basisFindingIds": [
+        "F005"
+      ],
+      "rationale": "The current final clause renders the named Settings Backup as “quick settings support.” This wording names the Quickstart settings backup as a separate export. It also states explicitly that the backups, rather than the credentials, are stored as ZIP files. The environment identifier is preserved.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "تشمل النسخ الاحتياطية الكاملة بيانات الاعتماد. بدون ملف سري مُثبّت ومُهيأ عبر CHAPTARR_BACKUP_ENCRYPTION_KEY_FILE، تُخزَّن النسخ الاحتياطية كملفات ZIP عادية. تظل النسخة الاحتياطية لإعدادات البدء السريع تصديرًا منفصلًا مشفرًا بعبارة مرور."
+    },
+    "BackupsContainUnencryptedCredentials::fr": {
+      "basisFindingIds": [
+        "F006"
+      ],
+      "rationale": "The current masculine pronoun “ils” has the nearby masculine plural “identifiants” as an antecedent and can say credentials are stored as ZIP files. Repeating “les sauvegardes” makes the stored object explicit and preserves the environment identifier.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Les sauvegardes complètes incluent les identifiants. Sans fichier secret monté et configuré via CHAPTARR_BACKUP_ENCRYPTION_KEY_FILE, les sauvegardes sont stockées sous forme de fichiers ZIP non chiffrés. La sauvegarde des paramètres du démarrage rapide reste un export distinct chiffré à l’aide d’une phrase de passe."
+    },
+    "BindAddress::de": {
+      "basisFindingIds": [
+        "F008"
+      ],
+      "rationale": "The caller is a server host setting whose help text accepts an IP address, localhost, or all interfaces. “Bind-Adresse” is a noun field label; the current “Adresse binden” is an action phrase.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Bind-Adresse"
+    },
+    "BindAddress::es": {
+      "basisFindingIds": [
+        "F008"
+      ],
+      "rationale": "The caller is a server host setting whose help text accepts an IP address, localhost, or all interfaces. “Dirección de escucha” identifies the server listening address; “dirección de enlace” can be read as a link address.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Dirección de escucha"
+    },
+    "BindAddress::pt-BR": {
+      "basisFindingIds": [
+        "F008"
+      ],
+      "rationale": "The caller is a server host setting whose help text accepts an IP address, localhost, or all interfaces. “Endereço de escuta” names the server listening address; the current wording is an imperative.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Endereço de escuta"
+    },
+    "BlocklistAndSearchMultipleHint::de": {
+      "basisFindingIds": [
+        "F009"
+      ],
+      "rationale": "This hint is selected when multiple queue items are selected. The current sentence refers to one alternative and one item; this wording describes starting a search for alternatives after adding items to the blocklist.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Nach dem Hinzufügen zur Sperrliste mit der Suche nach Alternativen beginnen."
+    },
+    "BlocklistAndSearchMultipleHint::vi": {
+      "basisFindingIds": [
+        "F009"
+      ],
+      "rationale": "The primary correction fixes the unnatural blocklisting phrase. I refined it to name replacement releases, which matches the queue caller and avoids the broader “replacement items.”",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-refinement-of-primary",
+      "selectedTarget": "Sau khi đưa các mục vào danh sách chặn, hãy bắt đầu tìm kiếm các bản phát hành thay thế."
+    },
+    "BlocklistAndSearchMultipleHint::zh-Hans": {
+      "basisFindingIds": [
+        "F009"
+      ],
+      "rationale": "The caller selects this hint for multiple queue items. The current “搜索替换” reads as the search-and-replace operation; this wording says to search for replacement resources after blocklisting the items.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "将这些项目列入黑名单后，开始搜索替代资源。"
+    },
+    "BlocklistReleaseHelpText::de": {
+      "basisFindingIds": [
+        "F003"
+      ],
+      "rationale": "The exact caller is the queue-removal blocklist setting. Here “erneut erfasst” can mean recorded; “erneut herunterlädt” states that automatic downloads are prevented.",
+      "reviewConfidence": "moderate",
+      "selectedFrom": "cross-review-new-from-blind-finding",
+      "selectedTarget": "Verhindert, dass Chaptarr diese Dateien automatisch erneut herunterlädt."
+    },
+    "EncryptedBackupPassphraseHelpText::vi": {
+      "basisFindingIds": [],
+      "rationale": "The primary proposal distinguishes a passphrase from a password, but the pinned Vietnamese catalog already uses “Cụm từ mật khẩu” for SettingsBackupPassphrase and SettingsBackupConfirmPassphrase. This matches that established term and retains the 16-character requirement and Chaptarr brand.",
+      "reviewConfidence": "high",
+      "selectedFrom": "cross-review-locale-convention-refinement",
+      "selectedTarget": "Sử dụng ít nhất 16 ký tự và giữ cụm từ mật khẩu riêng biệt với bản sao lưu. Chaptarr không thể khôi phục cụm từ mật khẩu đã mất."
+    },
+    "EncryptedBackupPassphraseMismatch::vi": {
+      "basisFindingIds": [],
+      "rationale": "The primary proposal distinguishes passphrases from passwords. I used the exact established Vietnamese catalog term “cụm từ mật khẩu” from SettingsBackupPassphrase and SettingsBackupPassphrasesDoNotMatch.",
+      "reviewConfidence": "high",
+      "selectedFrom": "cross-review-locale-convention-refinement",
+      "selectedTarget": "Các cụm từ mật khẩu không khớp nhau."
+    },
+    "EncryptedBackupRestoreHelpText::vi": {
+      "basisFindingIds": [],
+      "rationale": "The primary proposal distinguishes a passphrase from a password. I used the established Vietnamese catalog term “cụm từ mật khẩu” from SettingsBackupPassphrase and retained the restore and restart behavior.",
+      "reviewConfidence": "high",
+      "selectedFrom": "cross-review-locale-convention-refinement",
+      "selectedTarget": "Nhập cụm từ mật khẩu đã dùng khi tạo bản sao lưu này. Bản sao lưu sẽ được khôi phục và Chaptarr sẽ khởi động lại."
+    }
+  },
+  "findingAdjudications": [
+    {
+      "cells": [
+        "AutomaticUpdatesDisabledDocker::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F001",
+      "rationale": "Indonesian verb coordination is uneven; the cross candidate coordinates both alternatives."
+    },
+    {
+      "cells": [
+        "BackfillAuthorRootFoldersHelpText::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F002",
+      "rationale": "The current Indonesian means newly/recently assigned, while the helper selects authors with a root for only one format. Use the primary correction."
+    },
+    {
+      "cells": [
+        "BlocklistReleaseHelpText::de",
+        "BlocklistReleaseHelpText::es",
+        "BlocklistReleaseHelpText::fr",
+        "BlocklistReleaseHelpText::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F003",
+      "rationale": "In the pinned queue caller, grabbing means downloading/fetching files again. Use primary targets for es/fr/id and a cross target for de."
+    },
+    {
+      "cells": [
+        "BackupRetentionHelpText::id"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F004",
+      "rationale": "“Periode penahanan” means detention; use the primary retention-period correction."
+    },
+    {
+      "cells": [
+        "BackupsContainUnencryptedCredentials::ar"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F005",
+      "rationale": "The final clause changes the named Settings Backup export into “support”; the cross candidate names the backup and states its separate passphrase encryption."
+    },
+    {
+      "cells": [
+        "BackupsContainUnencryptedCredentials::fr"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F006",
+      "rationale": "The masculine plural pronoun can refer to credentials; the cross candidate explicitly names the backups as the stored object."
+    },
+    {
+      "cells": [
+        "DownloadEncryptedBackup::vi"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F007",
+      "rationale": "The primary correction gives the Vietnamese button a natural verb-object order."
+    },
+    {
+      "cells": [
+        "BindAddress::de",
+        "BindAddress::es",
+        "BindAddress::hi",
+        "BindAddress::pt-BR"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F008",
+      "rationale": "The setting is the server listening/bind address. Use a technical noun label in de, es, pt-BR, and the primary Hindi correction."
+    },
+    {
+      "cells": [
+        "BlocklistAndSearchMultipleHint::de",
+        "BlocklistAndSearchMultipleHint::vi",
+        "BlocklistAndSearchMultipleHint::zh-Hans"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F009",
+      "rationale": "The multiple-selection caller requires plural alternatives and an unambiguous post-blocklist search. Use cross targets in de/zh-Hans and refine the primary Vietnamese target."
+    },
+    {
+      "cells": [
+        "BlocklistOnlyHint::vi"
+      ],
+      "disposition": "accept-and-correct",
+      "findingId": "F010",
+      "rationale": "The current Vietnamese calls the replacement a person; use the primary release/item wording."
+    },
+    {
+      "cells": [
+        "Book::ar",
+        "Book::de",
+        "Book::es",
+        "Book::fr",
+        "Book::hi",
+        "Book::id",
+        "Book::ja",
+        "Book::ko",
+        "Book::pt-BR",
+        "Book::vi",
+        "Book::zh-Hans",
+        "Book::zh-Hant"
+      ],
+      "disposition": "reject-false-positive",
+      "findingId": "F011",
+      "rationale": "The pinned literal caller uses Book as the history table column for each book, and AuthorHistoryRow renders its book title. All 12 current targets are lexical book labels, not count labels (Chinese and Japanese forms are number-neutral); the separate BookCount source key names the numeric count. Keep the current targets."
+    }
+  ],
+  "head": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "policy": "Select a primary target when independently corroborated or semantically sound; use cross-review refinements where existing locale conventions or exact caller context support a clearer target. Reconcile every blind hold; do not carry a hold without an evidence gap.",
+  "primaryProposalCellsSelected": 33,
+  "primaryProposals": 33,
+  "tree": "f6ae6530b73bf581c1fbc5a8c13eacd7342e9172"
+}

@@ -1,0 +1,21 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "c7e95620c2a89646eb6a37c7e35441804b4911bb",
+  "tree": "78c7aa519cbe3ed7874b2f93b6976237b7d336e9",
+  "window": "W1187 dynamic TargetQualityName cancellation message",
+  "cellsReviewed": 12,
+  "rootDispositions": {
+    "accept-current": 9,
+    "correction": 1,
+    "refinement": 2,
+    "hold": 0
+  },
+  "catalogCellsChanged": 3,
+  "registryMetadataCorrection": true,
+  "nativeSpeakerApproval": false,
+  "reviewLimitations": {
+    "review1SawAggregatePrBodySummary": true,
+    "review2DidNotReadBodyOrPriorPackets": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "artifact": "ChaptarrNG PR #190 creative-hold independent cross-review",
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "sourcePacket": "source-packet",
+  "sourcePacketSha256SumsSha256": "c1dd7c1afce529ff1fda46f3c50a0b2c035487f22a5233e57c121d02139d3fae",
+  "freshProposalSha256": "5d7966cf3efa91306318cd7ad4dac4f2ff9653f3ebdf54b98bc6329d923f85ea",
+  "crossLedger": "cross-ledger.jsonl",
+  "crossLedgerRows": 20,
+  "callerlessHoldRows": 24,
+  "callerlessHoldRepresentation": "hash-only; no target strings",
+  "catalogApplication": "none",
+  "nativeSpeakerSignoff": false
+}

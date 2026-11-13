@@ -1,0 +1,37 @@
+{
+  "task": "ChaptarrNG PR #190 W500-549 exact-hash reviewed application",
+  "reviewInputHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "reviewInputTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "applyInputHead": "2625ad8bda30c7070bcc84ec8e4b31906a3d2288",
+  "applyInputTree": "128cbbef8788d11f0978529cf31eeab3f039b680",
+  "reviewedCells": 600,
+  "crossReviewedCandidateCells": 174,
+  "appliedCellChanges": 172,
+  "noOpCandidatesAcceptedAsCurrent": 2,
+  "finalDispositions": {
+    "accept-current": 428,
+    "propose-correction": 131,
+    "propose-refinement": 41,
+    "hold": 0
+  },
+  "crossReviewedProposalsRetained": 163,
+  "crossReviewedProposalsRevised": 9,
+  "retainedHolds": 0,
+  "callerReferencesReattested": 71,
+  "catalogKeysPerLocale": 4165,
+  "sourceCurrentTargetHashesReattestedAtApplyHead": 600,
+  "reviewedTargetsVerifiedAfterApply": 600,
+  "placeholderMarkupProtectedLiteralMismatches": 0,
+  "nativeSpeakerApproval": false,
+  "postApplyBrowserReview": false,
+  "testsBuildsCiRun": false,
+  "releasesTagsMerges": false,
+  "preCommitSemgrep": {
+    "scanner": "Semgrep Community Edition",
+    "ruleset": "p/default",
+    "stagedEvidenceBuilderFiles": 2,
+    "rulesRun": 290,
+    "findings": 0,
+    "productSourceScanned": false
+  }
+}

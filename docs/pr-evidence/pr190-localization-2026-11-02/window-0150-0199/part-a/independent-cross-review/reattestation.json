@@ -1,0 +1,178 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "liveState": "OPEN",
+  "isDraft": true,
+  "head": "0117311b672af8d828fb45bad7e6026763b201da",
+  "tree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "sourceWindow": [
+    150,
+    199
+  ],
+  "sourceIds": 50,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr"
+  ],
+  "cells": 300,
+  "parentPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102",
+  "parentPacketSumsVerified": true,
+  "parentSha256SumsSha256": "629034e38ec3f441e42c0695d6eb41ecce9115c1d35fc5ea6d759e2e2670c839",
+  "parentInputSumsSha256": "2c1b365025bf597c7d2c99de9dea1fdd24e36278a23b821147a5d344c0ae32e7",
+  "inputCellsSha256": "8b5b2cd5cdc6ac223481e14b84df61e1303f2cc0e79cb9d746252e0582939691",
+  "primaryReviewSha256": "0c1a7cee5bc31217a1bd9873270f704f0003f9065027b16fb062c43decd27d90",
+  "sourceSliceSha256": "90d72395fb465f7d7634e79fa4d6cc7066e29fbee2828742b69ca55b786b0010",
+  "callerContextSha256": "c58982989fa6d7591e97a96c7b9bb626175c225a5c0facf9b86057c38654c549",
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f"
+  },
+  "targetCatalogs": {
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "blob": "d363b793af5be6a052c6ec4031730db24c487481",
+      "sha256": "738a137916dc85d71678142a6e15881caaa4ae14a353f18d6e5bb3c9faca198c"
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "blob": "da8672945bb2469113cd61f02bdd75f5797d3bc8",
+      "sha256": "b4ddfec57f76b2341b86489c24af25b249d7ff9e0a53f5c76decdbd2615273ce"
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "blob": "8fd90a69c802faabce1de12575cee7e73319acd3",
+      "sha256": "7a134ce89f16d0974de82f6aeca85beb13dce53f915530bf344a4df42d25e0a0"
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "blob": "7dde0075dae22054760fb70018ebefd5c20ee704",
+      "sha256": "07765df48cf24e0cee43d422d70b1f7255df8904923c9fdaeba53aba95ed1bd6"
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "blob": "1c88162641be930fa22f964ea1d3126fa54cbccf",
+      "sha256": "183fb16402ad7650e64bce68fe48a821c13088996de075fe59730f68dfb78a32"
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "blob": "ce4ef4f979cc7f7579df861ee65b0cbd7db33c7c",
+      "sha256": "52f9814c18480b71ea1466d7db9a4cf62f5f851739385a1e619d2910cea2b47c"
+    }
+  },
+  "callerFiles": [
+    {
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+      "blob": "2f5e790223a485f52e43386935cd6b8553e2d87e",
+      "sha256": "987f4712fefaeb1a8b936c68e29919a3eb28a98b89847befce5fd7df71d3ec47"
+    },
+    {
+      "path": "src/NzbDrone.Core/ImportLists/LazyLibrarian/LazyLibrarianImportSettings.cs",
+      "blob": "8a224668e97e77efbcc1c887f935526e20ba324f",
+      "sha256": "b6739f095cbe47fc69653fe1f0086976ae5161d69cbd0214f20d4825bb3e8f60"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/DirectDownload/DirectDownloadSettings.cs",
+      "blob": "32372eca70ab722accf86cd807f39bcd8f8c9093",
+      "sha256": "da21d00ea4cf276d2bd47d83d58abccb708788e3de277ab3e3f16fabd9bde690"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/FileList/FileListSettings.cs",
+      "blob": "f18587ff2fa42b99d47115b080a05f2df9413a5c",
+      "sha256": "bc30abd0876c74d3545306f4e1c4f445a1d5a8bc772e1c37c6b0782138bf6b30"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/Gazelle/GazelleSettings.cs",
+      "blob": "6aff442656671601b2235418a3c3af156d7f5c0a",
+      "sha256": "6dff0c84a5576e0580665f05a99271611915f39e30b5bc6e167a20118a336aa6"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
+      "blob": "60a196ce8f7e0897b9d916067462233f767b9621",
+      "sha256": "d1d264f5687bcfa10de385c995b57f8afc5492749eb00383ea6b4e0b6c366b2f"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs",
+      "blob": "ee8840d33d12fdc98a83a8f5b4a84c2b5bb80638",
+      "sha256": "4b5ec60660c36dfcf88a5e4ec1ffcbad7159475429b57c15e5769b661da30ae2"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
+      "blob": "10b272d21df86e2f5335fdde406e18f96accba62",
+      "sha256": "596fdc1ef990e5aabb384bff65655bb160729dce02db294fc65f084ebf24c2a4"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/Nyaa/NyaaSettings.cs",
+      "blob": "05522aafbff06a81b098de33b1f3ae10c2b86c94",
+      "sha256": "05c3a9351d569b27e55b486b929976bc5e044246bcb1a4683d6f51d37cb24f6e"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/TorrentRss/TorrentRssIndexerSettings.cs",
+      "blob": "b7d99391e402de569cd4fcc8b96f51f75972b155",
+      "sha256": "919caa36182bac3b847dd509fb85beb91954d922c5b21b9c67e46cdbfdae4ecd"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/Torrentleech/TorrentleechSettings.cs",
+      "blob": "703ee67ce4b3f8d25f0d678282a22ad37305ee61",
+      "sha256": "929d00a371fd4c135041ee6104edbc9421211aadb86a0e67217bb64fa7b77611"
+    },
+    {
+      "path": "src/NzbDrone.Core/Indexers/Torznab/TorznabSettings.cs",
+      "blob": "50f5753df5ea9095a9a0ee8659b92de81942ec73",
+      "sha256": "a04a3c194f16c710f9fb7bdd619978bf70522333109c33af6126ffe1520a7ffb"
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
+      "blob": "f14d721ac31cc010bd376b2ccda09ccf9a3a2565",
+      "sha256": "d35228e4f54e6067d64d5e088152349c3f0a430e4b48028bedc1f0a3b66f3486"
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
+      "blob": "85b03b71eb5a8920efd4abcc913eed56ba41fdf9",
+      "sha256": "c0050d01494b3dfb3f58d0bd70c809007a1ac2235b114bb1785a32c92dd5f1ef"
+    },
+    {
+      "path": "src/NzbDrone.Core/Notifications/Webhook/WebhookSettings.cs",
+      "blob": "eebc1636c29d58df4726535dd118fa2449c72ed2",
+      "sha256": "c0afdf3043b6d95ccc472f3a8c2fbc3d55d9db508ee466686c25fb03b1f46627"
+    }
+  ],
+  "callerRefPinsVerified": true,
+  "mismatches": 0,
+  "placeholderMismatches": 0,
+  "protectedLiteralMismatches": 0,
+  "finalPlaceholderMismatches": 0,
+  "finalProtectedLiteralMismatches": 0,
+  "priorDispositionCounts": {
+    "accept-current": 265,
+    "propose-refinement": 15,
+    "propose-correction": 20
+  },
+  "cellCallerRefs": 576,
+  "uniqueCallerRefs": 96,
+  "uniqueCallerSourceIds": 50,
+  "uniqueCallerFiles": 15,
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "window": [
+      150,
+      199
+    ],
+    "overlapWithEarlierWindows": 0
+  },
+  "registry": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "records": 409
+  }
+}

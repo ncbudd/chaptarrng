@@ -1,0 +1,78 @@
+{
+  "packet": "Independent ChaptarrNG PR #190 W1050-W1099 localization cross-review",
+  "reviewerMode": "Independent machine-assisted cross-review; all 600 rows read source-by-source and locale-by-locale.",
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1050-1099-primary-20261102",
+  "crossReviewPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1050-1099-crossreview-20261102",
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "worktreeClean": true,
+  "cellCount": 600,
+  "sourceCount": 50,
+  "localeCount": 12,
+  "crossReviewCounts": {
+    "confirm-refinement": 18,
+    "confirm-accept-current": 546,
+    "confirm-correction": 24,
+    "confirm-hold": 12
+  },
+  "primaryPacketSeal": {
+    "sha256SumsValid": true,
+    "manifestArtifactFailures": [
+      "README.md"
+    ]
+  },
+  "existingTranslationsAccepted": 546,
+  "primaryCorrectionsConfirmed": 24,
+  "primaryRefinementsConfirmed": 18,
+  "protectedPunHoldsUpheld": 12,
+  "proposedChangesRejected": 0,
+  "independentAdditionalChanges": 0,
+  "dodgePun": {
+    "sourceId": "ui.loading.dodgeBooks",
+    "sourceOrdinal": 1054,
+    "heldCells": 12,
+    "protectedLiteral": "Dodge",
+    "allCurrentAndHeldTargetsPreserveLiteral": true,
+    "nativeCreativeReviewRequired": true
+  },
+  "sourceRegistration": {
+    "registeredSourceIds": 50,
+    "allLocaleCatalogValuesPresentAndExact": true,
+    "failures": 0
+  },
+  "directCallerPins": {
+    "uniqueSourceCallsites": 60,
+    "allExactAgainstPinnedCommitAndRegistry": true,
+    "failures": 0
+  },
+  "structure": {
+    "placeholderFailures": 0,
+    "icuFailures": 0,
+    "markupFailures": 0,
+    "protectedLiteralFailures": 0
+  },
+  "historicalContinuity": {
+    "rowsThroughW1049": 12600,
+    "currentLiveHashesMatchPriorPacket": true,
+    "rowsWithPreviousPacketLiveHash": 12000,
+    "previousPacketHashMismatches": 0,
+    "newDriftSincePreviousPacket": 0,
+    "historicalFinalVersusLiveMismatchesRetained": 195,
+    "mismatchesReopened": 0
+  },
+  "boundaries": {
+    "w1049All12MatchPriorFinal": true,
+    "w1100NoDispositionAssigned": true
+  },
+  "nativeSpeakerReview": {
+    "approved": false,
+    "outstanding": true
+  },
+  "blockers": [
+    "Primary packet manifest does not match the current README.md; SHA256SUMS does match the current README."
+  ],
+  "limitations": [
+    "No qualified native-speaker approval is claimed.",
+    "No browser/runtime acceptance, builds, tests, scans, CI, or PR actions were performed."
+  ]
+}

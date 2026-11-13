@@ -1,0 +1,37 @@
+{
+  "catalogCount": 12,
+  "cells": 600,
+  "currentMissingIdsCount": 1210,
+  "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "githubBranchRefHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "githubRemoteBranchHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "passed": true,
+  "priorDispositionsRecorded": 9600,
+  "priorOverlapCount": 0,
+  "priorPositionCoverageComplete": true,
+  "priorPrimaryPacketCount": 9,
+  "priorPrimaryPacketFiles": 19,
+  "sourceCallerGaps": [],
+  "sourceCallerReferences": 63,
+  "sourceIds": 50,
+  "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "w799BoundaryMatches": 12,
+  "w799BoundaryRows": 12,
+  "worktree": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "status": "",
+    "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6"
+  }
+}

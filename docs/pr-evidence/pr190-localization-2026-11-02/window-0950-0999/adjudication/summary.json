@@ -1,0 +1,475 @@
+{
+  "packet": "chaptarrng-pr190-window-0950-0999-adjudication-20261102",
+  "createdAtUtc": "2026-11-02",
+  "inputs": {
+    "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0950-0999-primary-20261102",
+    "primaryPacketSha256SumsFileSha256": "29e46a5d5b9a0a806ea54504f2697635203330eded7d3ac8276b2d7a9ad40a41",
+    "primaryManifestSha256": "95179dd3faa69cecee69e15acef6d0d779db41ba38605dd6897138efa672a835",
+    "crossReviewPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0950-0999-crossreview-20261102",
+    "crossReviewPacketSha256SumsFileSha256": "16f48146d279262f52b90c1ae3f6110a76331395dcc6bd974c9969c2a7432afb",
+    "crossReviewLedgerSha256": "ed009cfc28cdb36550a49a2a75fc454eecfb78b6a5c23e96a0d5d6d6efdbf648"
+  },
+  "exactReviewTarget": {
+    "repository": "snapetech-org/ChaptarrNG",
+    "pullRequest": 190,
+    "base": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+    "head": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+    "tree": "c46078c93545042313aa1b35bc3b283b1f3b5406"
+  },
+  "scope": {
+    "primaryCells": 600,
+    "primaryCorrections": 12,
+    "independentSampleCells": 180,
+    "crossReviewedPrimaryCurrentRows": 170,
+    "adjudicatedFindings": 182
+  },
+  "dispositions": {
+    "acceptedPrimaryCorrections": 12,
+    "adoptedMissedCorrections": 7,
+    "adoptedRefinements": 4,
+    "sampledAcceptCurrent": 158,
+    "nativeSpeakerHold": 1
+  },
+  "result": {
+    "approvedTargetChanges": 23,
+    "unchangedInAdjudicatedRows": 159,
+    "heldUnchanged": 1,
+    "nativeSpeakerApproval": false
+  },
+  "remainingHold": {
+    "sourceOrdinal": 963,
+    "source": "Farsi",
+    "locale": "id",
+    "currentAndHoldingTarget": "Farsi",
+    "status": "hold-for-fluent-Indonesian-review"
+  },
+  "structuralChecks": {
+    "placeholders": 0,
+    "markup": 0,
+    "icu": 0,
+    "protectedLiterals": 0
+  },
+  "confidence": "moderate machine-assisted contextual review",
+  "noRepoEdits": true,
+  "noTestsBuildsScansCiBrowserReleasesTagsMerges": true,
+  "sampleCoverageByLocale": [
+    {
+      "locale": "ar",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 1,
+      "crossReviewedAcceptCurrentCells": 14,
+      "retainedCurrent": 14,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 0,
+      "held": 0
+    },
+    {
+      "locale": "de",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 1,
+      "crossReviewedAcceptCurrentCells": 14,
+      "retainedCurrent": 12,
+      "adoptedCorrections": 2,
+      "adoptedRefinements": 0,
+      "held": 0
+    },
+    {
+      "locale": "es",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 4,
+      "crossReviewedAcceptCurrentCells": 11,
+      "retainedCurrent": 10,
+      "adoptedCorrections": 1,
+      "adoptedRefinements": 0,
+      "held": 0
+    },
+    {
+      "locale": "fr",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 2,
+      "crossReviewedAcceptCurrentCells": 13,
+      "retainedCurrent": 12,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 1,
+      "held": 0
+    },
+    {
+      "locale": "hi",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 0,
+      "crossReviewedAcceptCurrentCells": 15,
+      "retainedCurrent": 15,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 0,
+      "held": 0
+    },
+    {
+      "locale": "id",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 0,
+      "crossReviewedAcceptCurrentCells": 15,
+      "retainedCurrent": 14,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 0,
+      "held": 1
+    },
+    {
+      "locale": "ja",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 0,
+      "crossReviewedAcceptCurrentCells": 15,
+      "retainedCurrent": 13,
+      "adoptedCorrections": 1,
+      "adoptedRefinements": 1,
+      "held": 0
+    },
+    {
+      "locale": "ko",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 1,
+      "crossReviewedAcceptCurrentCells": 14,
+      "retainedCurrent": 14,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 0,
+      "held": 0
+    },
+    {
+      "locale": "pt-BR",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 0,
+      "crossReviewedAcceptCurrentCells": 15,
+      "retainedCurrent": 14,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 1,
+      "held": 0
+    },
+    {
+      "locale": "vi",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 1,
+      "crossReviewedAcceptCurrentCells": 14,
+      "retainedCurrent": 10,
+      "adoptedCorrections": 3,
+      "adoptedRefinements": 1,
+      "held": 0
+    },
+    {
+      "locale": "zh-Hans",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 0,
+      "crossReviewedAcceptCurrentCells": 15,
+      "retainedCurrent": 15,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 0,
+      "held": 0
+    },
+    {
+      "locale": "zh-Hant",
+      "selectedSourceCells": 15,
+      "primaryProposalCellsInSelectedPositions": 0,
+      "crossReviewedAcceptCurrentCells": 15,
+      "retainedCurrent": 15,
+      "adoptedCorrections": 0,
+      "adoptedRefinements": 0,
+      "held": 0
+    }
+  ],
+  "sealedLiveRequery": {
+    "file": "all-seven-pr-heads-at-seal.json",
+    "queriedAtUtc": "2026-11-02T21:41:20Z",
+    "allSevenPRsUnchanged": true,
+    "chaptarrPr190Head": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+    "chaptarrPr190Tree": "c46078c93545042313aa1b35bc3b283b1f3b5406"
+  },
+  "approvedTargetChanges": [
+    {
+      "sourceOrdinal": 950,
+      "locale": "vi",
+      "sourceId": "provider.option.obafb66f32cd7",
+      "source": "Arabic",
+      "currentTarget": "Ả Rập",
+      "finalTarget": "Tiếng Ả Rập",
+      "disposition": "adopt-refinement",
+      "evidenceIds": [
+        "cldr49-vietnamese-arabic"
+      ]
+    },
+    {
+      "sourceOrdinal": 951,
+      "locale": "vi",
+      "sourceId": "provider.option.oe7f4fe2631bb",
+      "source": "Bengali",
+      "currentTarget": "Bengali",
+      "finalTarget": "Tiếng Bangla",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "cldr49-vietnamese-bengali"
+      ]
+    },
+    {
+      "sourceOrdinal": 957,
+      "locale": "de",
+      "sourceId": "provider.option.o8a9779f42128",
+      "source": "Chinese",
+      "currentTarget": "chinesisch",
+      "finalTarget": "Chinesisch",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "duden-chinesisch"
+      ]
+    },
+    {
+      "sourceOrdinal": 958,
+      "locale": "de",
+      "sourceId": "provider.option.o754787c2f88c",
+      "source": "Croatian",
+      "currentTarget": "Kroatische",
+      "finalTarget": "Kroatisch",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "duden-kroatisch",
+        "duden-kroatische"
+      ]
+    },
+    {
+      "sourceOrdinal": 963,
+      "locale": "vi",
+      "sourceId": "provider.option.oe4d40d318e99",
+      "source": "Farsi",
+      "currentTarget": "Farsi",
+      "finalTarget": "Tiếng Ba Tư",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "cldr49-vietnamese-persian",
+        "dmv-vietnamese-language-names"
+      ]
+    },
+    {
+      "sourceOrdinal": 968,
+      "locale": "es",
+      "sourceId": "provider.option.o60a7067462bf",
+      "source": "Greek, Ancient",
+      "currentTarget": "Griego, Antiguo",
+      "finalTarget": "Griego antiguo",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "cldr49-es-ancient-greek",
+        "cldr49-spanish-ancient-greek"
+      ]
+    },
+    {
+      "sourceOrdinal": 968,
+      "locale": "fr",
+      "sourceId": "provider.option.o60a7067462bf",
+      "source": "Greek, Ancient",
+      "currentTarget": "Grec, ancien",
+      "finalTarget": "Grec ancien",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "larousse-ancient-greek"
+      ]
+    },
+    {
+      "sourceOrdinal": 969,
+      "locale": "es",
+      "sourceId": "provider.option.oaa1324f5df47",
+      "source": "Gujarati",
+      "currentTarget": "Gujarati",
+      "finalTarget": "Guyaratí",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "rae-guyarati"
+      ]
+    },
+    {
+      "sourceOrdinal": 971,
+      "locale": "ja",
+      "sourceId": "provider.option.o63c2dc51d089",
+      "source": "Hindi",
+      "currentTarget": "ヒンディー",
+      "finalTarget": "ヒンディー語",
+      "disposition": "adopt-refinement",
+      "evidenceIds": [
+        "cldr49-japanese-hindi"
+      ]
+    },
+    {
+      "sourceOrdinal": 973,
+      "locale": "ar",
+      "sourceId": "provider.option.o2bca68c58bb4",
+      "source": "Icelandic",
+      "currentTarget": "الاسلندية",
+      "finalTarget": "الأيسلندية",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "arabic-academy-icelandic"
+      ]
+    },
+    {
+      "sourceOrdinal": 980,
+      "locale": "de",
+      "sourceId": "provider.option.o04656c6fe003",
+      "source": "Korean",
+      "currentTarget": "koreanisch",
+      "finalTarget": "Koreanisch",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "duden-koreanisch"
+      ]
+    },
+    {
+      "sourceOrdinal": 984,
+      "locale": "de",
+      "sourceId": "provider.option.ocd43b2d3b020",
+      "source": "Malay",
+      "currentTarget": "Malaysisch",
+      "finalTarget": "Malaiisch",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "duden-malaiisch",
+        "duden-malaysisch"
+      ]
+    },
+    {
+      "sourceOrdinal": 984,
+      "locale": "ko",
+      "sourceId": "provider.option.ocd43b2d3b020",
+      "source": "Malay",
+      "currentTarget": "말레이시아어",
+      "finalTarget": "말레이어",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "cldr49-korean-malay"
+      ]
+    },
+    {
+      "sourceOrdinal": 986,
+      "locale": "es",
+      "sourceId": "provider.option.o54b0bff947fb",
+      "source": "Manx",
+      "currentTarget": "El Manx",
+      "finalTarget": "Manés",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "rae-manes"
+      ]
+    },
+    {
+      "sourceOrdinal": 986,
+      "locale": "vi",
+      "sourceId": "provider.option.o54b0bff947fb",
+      "source": "Manx",
+      "currentTarget": "Manx",
+      "finalTarget": "Tiếng Manx",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "cldr49-vietnamese-manx"
+      ]
+    },
+    {
+      "sourceOrdinal": 991,
+      "locale": "fr",
+      "sourceId": "provider.option.o911140b89c71",
+      "source": "Brazilian Portuguese (BP)",
+      "currentTarget": "Le portugais brésilien (BP)",
+      "finalTarget": "Portugais brésilien (BP)",
+      "disposition": "adopt-refinement",
+      "evidenceIds": [
+        "cldr49-fr-brazilian-portuguese",
+        "catalog-style"
+      ]
+    },
+    {
+      "sourceOrdinal": 992,
+      "locale": "de",
+      "sourceId": "provider.option.o9e61f8c4fbca",
+      "source": "Punjabi",
+      "currentTarget": "Die Punjabi",
+      "finalTarget": "Pandschabi",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "duden-pandschabi"
+      ]
+    },
+    {
+      "sourceOrdinal": 992,
+      "locale": "es",
+      "sourceId": "provider.option.o9e61f8c4fbca",
+      "source": "Punjabi",
+      "currentTarget": "El Punjabi",
+      "finalTarget": "Punyabí",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "fundeu-punyabi"
+      ]
+    },
+    {
+      "sourceOrdinal": 992,
+      "locale": "fr",
+      "sourceId": "provider.option.o9e61f8c4fbca",
+      "source": "Punjabi",
+      "currentTarget": "Le Punjabi",
+      "finalTarget": "Pendjabi",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "larousse-pendjabi"
+      ]
+    },
+    {
+      "sourceOrdinal": 992,
+      "locale": "pt-BR",
+      "sourceId": "provider.option.o9e61f8c4fbca",
+      "source": "Punjabi",
+      "currentTarget": "O Punjabi",
+      "finalTarget": "Panjabi",
+      "disposition": "adopt-refinement",
+      "evidenceIds": [
+        "priberam-panjabi",
+        "infopedia-panjabi",
+        "catalog-style"
+      ]
+    },
+    {
+      "sourceOrdinal": 995,
+      "locale": "es",
+      "sourceId": "provider.option.o1435d07cdf1c",
+      "source": "Scottish Gaelic",
+      "currentTarget": "Escocés gaélico",
+      "finalTarget": "Gaélico escocés",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "cldr49-es-scottish-gaelic",
+        "spanish-gaelico-escoces"
+      ]
+    },
+    {
+      "sourceOrdinal": 995,
+      "locale": "ja",
+      "sourceId": "provider.option.o1435d07cdf1c",
+      "source": "Scottish Gaelic",
+      "currentTarget": "スコットランド・ガエリック",
+      "finalTarget": "スコットランド・ゲーリック語",
+      "disposition": "adopt-missed-correction",
+      "evidenceIds": [
+        "kotobank-scottish-gaelic"
+      ]
+    },
+    {
+      "sourceOrdinal": 999,
+      "locale": "vi",
+      "sourceId": "provider.option.o3411059cb8e0",
+      "source": "Spanish",
+      "currentTarget": "Tây Ban Nha",
+      "finalTarget": "Tiếng Tây Ban Nha",
+      "disposition": "accept-primary-correction",
+      "evidenceIds": [
+        "cldr49-vietnamese-spanish"
+      ]
+    }
+  ],
+  "approvedTargetChangesByDisposition": {
+    "accept-primary-correction": 12,
+    "adopt-missed-correction": 7,
+    "adopt-refinement": 4
+  }
+}

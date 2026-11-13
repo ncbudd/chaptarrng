@@ -116,7 +116,8 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("github.event.pull_request.head.repo.id == github.repository_id", release_notes)
         self.assertIn("github.event.pull_request.base.ref == 'main'", release_notes)
         self.assertIn("contains(github.event.pull_request.labels.*.name, 'action:ci')", release_notes)
-        self.assertIn("contains(github.event.pull_request.labels.*.name, 'pool:private')", release_notes)
+        self.assertIn("contains(github.event.pull_request.labels.*.name, 'pool:public')", release_notes)
+        self.assertIn("runs-on: ubuntu-24.04", release_notes)
 
         build = job_block(source, "build")
         release_tag_step = step_block(build, "Verify exact release tag source")
@@ -561,7 +562,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("--build-arg NO_PROXY=localhost,127.0.0.1", script)
         self.assertIn("--build-arg no_proxy=localhost,127.0.0.1", script)
 
-    def test_owner_pr_trigger_dispatches_only_metadata_to_private_validation(self) -> None:
+    def test_owner_pr_trigger_dispatches_only_metadata_to_public_validation(self) -> None:
         source = WORKFLOW.read_text(encoding="utf-8")
 
         self.assertIn("workflow_dispatch:", source)
@@ -577,14 +578,14 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
             "github.event.pull_request.head.repo.id == github.repository_id",
             "github.event.pull_request.base.ref == 'main'",
             "contains(github.event.pull_request.labels.*.name, 'action:ci')",
-            "contains(github.event.pull_request.labels.*.name, 'pool:private')",
+            "contains(github.event.pull_request.labels.*.name, 'pool:public')",
             "actions: write",
             "contents: none",
             '"ref": "main"',
         ):
             self.assertIn(token, dispatcher)
         self.assertIn('"action": "ci"', dispatcher)
-        self.assertIn('"runner_pool": "private"', dispatcher)
+        self.assertIn('"runner_pool": "public"', dispatcher)
         self.assertIn("owner-pr:{0}:{1}:{2}:action:{3}:pool:{4}", source)
         self.assertNotIn("actions/checkout", dispatcher)
         self.assertNotIn("secrets.", dispatcher)
@@ -596,7 +597,8 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         validation = job_block(source, "owner-pr-validation")
         self.assertIn("github.actor == 'github-actions[bot]'", validation)
         self.assertIn("inputs.action == 'ci'", validation)
-        self.assertIn("inputs.runner_pool == 'private'", validation)
+        self.assertIn("inputs.runner_pool == 'public'", validation)
+        self.assertIn("runs-on: ubuntu-24.04", validation)
         self.assertIn("ref: ${{ inputs.pr_sha }}", validation)
         self.assertIn("persist-credentials: false", validation)
         self.assertIn("test \"$(git rev-parse HEAD)\" = \"$EXPECTED_PR_SHA\"", validation)
@@ -607,6 +609,10 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("checks: write", reporter)
         self.assertIn("name: Report trusted owner PR validation", reporter)
         self.assertIn('"name": "ChaptarrNG owner PR validation"', reporter)
+
+        sync = (WORKFLOW.parent / "sync-unraid-legacy-ghcr.yml").read_text(encoding="utf-8")
+        self.assertIn("default: public", sync)
+        self.assertIn("inputs.runner_pool == 'public' && 'ubuntu-24.04' || fromJSON", sync)
 
         release = (WORKFLOW.parent / "release.yml").read_text(encoding="utf-8")
         release_validation = job_block(release, "validate")

@@ -1,0 +1,97 @@
+{
+  "baseBranchMoved": true,
+  "callerDriftAffectsPinnedW300Context": false,
+  "changedCoreLocalizationFiles": [],
+  "changedFrontendFiles": [],
+  "changedPathCount": 61,
+  "changedPathsIntersectingSelectedKeyReferences": [
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 2122,
+      "lineSha256": "11b3e1b1c8bbd59897c39b55671eaaa5b5393268434e323e1041e3528da534b6",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 2139,
+      "lineSha256": "c4de5c8b39985145f8efb7cd19280ef25113d51d7bc03998c58a9e63c6ed1b65",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 2140,
+      "lineSha256": "0b4b331882e2e222a5ffbaffc1b7b4c16c512e8053444c4a56c52af6db1b215a",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 2142,
+      "lineSha256": "0a2e5db5b94a74dd4be1997fc957f081319e01a95e54e4b365494378767f770a",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 2170,
+      "lineSha256": "175793f092820c1e8be18fedb0ae300a17c5d309749868054f33b066caa847b7",
+      "path": "src/NzbDrone.Core/Datastore/BookshelfDatabaseImporter.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "BookMatchingStrictness"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 636,
+      "lineSha256": "e349cbb5cf0c2a8aec5de1f5faed3362858e168b004004b3ff97b4ca5b11454e",
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 645,
+      "lineSha256": "13b02cb59cd0b03039f598dcd635fb9975503197bdf820fbf8bcc95d9690d1e9",
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 1655,
+      "lineSha256": "aee1ea45e404dff16a8958b3f4c675948f3f75efdc9338b8822666259979c6ac",
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 999,
+      "lineSha256": "1ec27fc6e3696487a373f4514eb81672fae9364abf35fdf4bbd794573e90a4ba",
+      "path": "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    },
+    {
+      "classification": "incidental lexical/type reference; not a translation callsite",
+      "line": 1006,
+      "lineSha256": "70cb3580b283350dfe44d47c96dfbef44aa6d30e6c97add3ebc32fb9551411f8",
+      "path": "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "referenceKind": "indirect-key-literal-reference",
+      "sourceKey": "Selected"
+    }
+  ],
+  "conclusion": "Main has moved beyond the PR API base, but no Core localization catalog or frontend caller changed. Three changed backend/API files overlap only with incidental key/enum wording in indirect-reference scans; no direct W300 translation caller changed. The pinned PR head/tree remains the review basis.",
+  "liveMainSha": "6614d55ca4bfba9aeb3a88d8428c83c633f82e95",
+  "localeCatalogsChanged": false,
+  "mainCommitsAhead": 27,
+  "prApiBaseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "result": "PASS",
+  "selectedLiteralTranslatorCallsitesChanged": false,
+  "sourceCatalogChanged": false
+}

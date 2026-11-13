@@ -1,0 +1,15 @@
+{
+  "base": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "draft": true,
+  "exactHeadExpected": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "exactTreeExpected": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "head": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "passed": true,
+  "pullRequest": 190,
+  "recordedAtUtc": "2026-11-02T23:19:54+00:00",
+  "repository": "snapetech-org/ChaptarrNG",
+  "state": "open",
+  "tree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "updatedAt": "2026-11-02T23:03:43Z"
+}

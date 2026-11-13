@@ -1,0 +1,33 @@
+{
+  "crossReviewHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "crossReviewTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "currentHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "currentTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "liveTargetDiffs": [],
+  "liveTargetsMatchCrossReviewFinal": 600,
+  "primaryAndCrossReviewChecksumsVerified": true,
+  "primaryHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "primaryTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "priorCellCount": 600,
+  "priorSourceIdCount": 50,
+  "recommendation": "W650 is applied: all 600 live locale values match independent cross-review final targets; source typos at W654 and W695 are corrected at the current head.",
+  "sourceChangesCount": 2,
+  "sourceTextChangesSinceReview": [
+    {
+      "liveSource": "Disable the 'Check before download' option in SABnzbd.",
+      "priorSource": "Disable 'Check before download' option in Sabnbzd",
+      "sourceId": "server.message.m783307436ce0",
+      "sourceOrdinal": 654,
+      "sourceTextSha256": "948643f3359c1289a9d26e7ec9e286c4f3112a71eac236e17cae3b922ffb0d4d"
+    },
+    {
+      "liveSource": "Unable to send a test message through Mailgun.",
+      "priorSource": "Unable to send test message though Mailgun.",
+      "sourceId": "server.message.m843e64bf5198",
+      "sourceOrdinal": 695,
+      "sourceTextSha256": "e6c6644f46f71ef52d94b0391b1ada634c435b5dbdad50dfc910cbdc16ddadec"
+    }
+  ],
+  "w654SourceTypoCorrected": true,
+  "w695ThroughMailgunSourceCorrected": true
+}

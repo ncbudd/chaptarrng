@@ -4,28 +4,52 @@ import FormInputHelpText from 'Components/Form/FormInputHelpText';
 import SpinnerErrorButton from 'Components/Link/SpinnerErrorButton';
 import { kinds } from 'Helpers/Props';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 
-function getOAuthErrorText(error) {
+function getOAuthErrorMessages(error) {
   if (!error) {
-    return null;
+    return [];
   }
 
   const responseJSON = error.responseJSON;
 
   if (Array.isArray(responseJSON)) {
     const messages = responseJSON
-      .map((e) => translateServerMessage(e?.errorMessage))
-      .filter(Boolean);
+      .map((failure, index) => typeof failure === 'string' ?
+        { message: failure } :
+        {
+          message: failure?.errorMessage || failure?.message,
+          messageKey: index === 0 ? error.appMessageKey : undefined,
+          messageId: failure?.messageId || failure?.errorMessageId,
+          messageParameters: failure?.messageParameters
+        })
+      .filter(({ message }) => typeof message === 'string' && message.trim());
 
-    return messages.length ? messages.join(' ') : (translateServerMessage(error.responseText) || null);
+    if (messages.length) {
+      return messages;
+    }
+
+    return typeof error.responseText === 'string' && error.responseText.trim() ?
+      [{ message: error.responseText }] :
+      [];
+  }
+
+  if (typeof responseJSON === 'string' && responseJSON.trim()) {
+    return [{ message: responseJSON }];
   }
 
   if (responseJSON && typeof responseJSON === 'object') {
-    return translateServerMessage(responseJSON.message || error.responseText) || null;
+    const message = responseJSON.message || responseJSON.errorMessage || error.responseText;
+    return typeof message === 'string' && message.trim() ? [{
+      message,
+      messageKey: error.appMessageKey,
+      messageId: responseJSON.messageId || responseJSON.errorMessageId,
+      messageParameters: responseJSON.messageParameters
+    }] : [];
   }
 
-  return translateServerMessage(error.responseText) || null;
+  return typeof error.responseText === 'string' && error.responseText.trim() ?
+    [{ message: error.responseText }] :
+    [];
 }
 
 function OAuthInput(props) {
@@ -37,7 +61,7 @@ function OAuthInput(props) {
     onPress
   } = props;
 
-  const errorText = getOAuthErrorText(error);
+  const errorMessages = getOAuthErrorMessages(error);
   const buttonLabel = label || translate('StartOAuth');
 
   const implementationName = providerData && typeof providerData.implementationName === 'string' ?
@@ -59,12 +83,17 @@ function OAuthInput(props) {
       </SpinnerErrorButton>
 
       {
-        errorText ?
+        errorMessages.map((errorMessage, index) => (
           <FormInputHelpText
-            text={errorText}
+            key={`oauth-error-${index}`}
+            text={errorMessage.message}
+            messageKey={errorMessage.messageKey}
+            messageId={errorMessage.messageId}
+            messageParameters={errorMessage.messageParameters}
+            messageMode={errorMessage.messageKey || errorMessage.messageId ? 'source' : 'opaque'}
             isError={true}
-          /> :
-          null
+          />
+        ))
       }
     </div>
   );

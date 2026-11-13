@@ -1,0 +1,187 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateCount": 122,
+  "cellCount": 600,
+  "decisionCounts": {
+    "accept-current": 478,
+    "correction": 71,
+    "refinement": 51
+  },
+  "directCallerReferences": 86,
+  "files": [
+    {
+      "bytes": 3387,
+      "path": "README.md",
+      "sha256": "7f9b112bc002c40b2f6e3ff6a9f54d67554faa4b1b0958e255daf3534b843333"
+    },
+    {
+      "bytes": 4641,
+      "path": "all-seven-pr-heads-after-freeze.json",
+      "sha256": "6686edb0ba50d09a892100af6c85cc8a5d6dd7793ffcf228afe1ff28d2e1dbb1"
+    },
+    {
+      "bytes": 4650,
+      "path": "all-seven-pr-heads-after-review.json",
+      "sha256": "f86d20a1086c8d8d8ccd470899ba8cdf12e02eace7f29c31867c6b5c9c21335e"
+    },
+    {
+      "bytes": 4650,
+      "path": "all-seven-pr-heads-final.json",
+      "sha256": "22714e58ae97da09ea916500276f720d4527d4e479cc7eaeeed1840443213132"
+    },
+    {
+      "bytes": 4641,
+      "path": "all-seven-pr-heads-start.json",
+      "sha256": "9bdb3f445700e2e27b222eb57dfc9113d39474574a6bcb01fda01c891d08fd56"
+    },
+    {
+      "bytes": 289,
+      "path": "caller-context-summary.json",
+      "sha256": "4ce6e468a69a47815954ea13cff0dcc48cdf512649128f42b8b1e8f9af6ed996"
+    },
+    {
+      "bytes": 111414,
+      "path": "caller-context.jsonl",
+      "sha256": "c5444d144fc9c1aded4c1844db5a1e44e9f3ee4028f3073a3c20353e357bda7f"
+    },
+    {
+      "bytes": 319482,
+      "path": "correction-candidates.jsonl",
+      "sha256": "91d181d929ed1a6e5c3b893e8365a18eb412c061e10c21c660495a3428934f5f"
+    },
+    {
+      "bytes": 41440,
+      "path": "current-missing-ids.json",
+      "sha256": "bb141161e9f34ff50d1260554ac7d35be9175e009ac9459001108c5403fb445e"
+    },
+    {
+      "bytes": 6760,
+      "path": "final-reattestation.json",
+      "sha256": "e86cf4e5542b0489f71fb442833d6ecf569fe691fdb1580029202db0afd329eb"
+    },
+    {
+      "bytes": 17450,
+      "path": "finalize_packet.py",
+      "sha256": "a6940dc8a7cc046f4d65f02796f1e66dd00a88f01ca07c0e31d508ada301b77b"
+    },
+    {
+      "bytes": 815313,
+      "path": "input-cells.jsonl",
+      "sha256": "7ff358810fbf962e2d76580a20607d71c5926341233f6c5dc47fc882124b4c82"
+    },
+    {
+      "bytes": 26315,
+      "path": "input-manifest.json",
+      "sha256": "a288357019fe495731309e97664e8bed736f38b0b8e186bfbf67089a7dfa4e36"
+    },
+    {
+      "bytes": 531930,
+      "path": "language-audit.jsonl",
+      "sha256": "67dc90255b379218aa12b7bfe108bfb1450e664832a8edf8e4d67b4bf65edcdd"
+    },
+    {
+      "bytes": 34039,
+      "path": "make_primary_review.py",
+      "sha256": "dc7f1e2fc5d8f6c0f3bf5dfee481ed82ea5699eed46eb3f93bb13315730c4e8f"
+    },
+    {
+      "bytes": 592,
+      "path": "manual-protected-literals.json",
+      "sha256": "3464cc6d9a696e569253ea634138bce29e8e7a8a011b0422db9011bc7addf18c"
+    },
+    {
+      "bytes": 21928,
+      "path": "pinned-files.json",
+      "sha256": "4eab5a7c2e1946feee0368cc6294c9cf67073d317e5e711e8a21cb1640796ced"
+    },
+    {
+      "bytes": 1250,
+      "path": "prepare-reattestation.json",
+      "sha256": "9a58b557152375caa6de0ac9efc71fe7b2e75ad2395158bde4bf23e290aa5122"
+    },
+    {
+      "bytes": 25389,
+      "path": "prepare_input.py",
+      "sha256": "ae3526604d1972e4e1080137f9cae2d3e03656dfd939813880fe091b3bdfe732"
+    },
+    {
+      "bytes": 4567,
+      "path": "prior-disposition-boundary.json",
+      "sha256": "4bdd6995f50016cfc2508b28c122dee6ba741ec19854e0a26cc4b75fcd7e7c33"
+    },
+    {
+      "bytes": 8003087,
+      "path": "prior-disposition-hashes.jsonl",
+      "sha256": "5137781e9bca54723afeddf3ba9d65c8df61f79526c1fd049b6b1cfadfa19b66"
+    },
+    {
+      "bytes": 648450,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "c77eb53558989f33cac8281d51fb8507e179f7d1e302eef233f71f0f934319a1"
+    },
+    {
+      "bytes": 14265,
+      "path": "provider-option-pipeline-context.jsonl",
+      "sha256": "13feb6fa35ec5633d83c8fea8a8096f7904922951259efffcb808c18e7a1e19e"
+    },
+    {
+      "bytes": 265564,
+      "path": "refinement-candidates.jsonl",
+      "sha256": "3fea8747070d81819f2bdd5c170fc4701f2f96511077be31a75b5f623a9c353a"
+    },
+    {
+      "bytes": 2539300,
+      "path": "review-cells.jsonl",
+      "sha256": "3cb3fd625e5584f187e8b990e1005205e45e2a8dd74d0af1d7d0ded25afc2016"
+    },
+    {
+      "bytes": 53222,
+      "path": "server-message-pipeline-context.jsonl",
+      "sha256": "29ad8fe26ad2dc3ac0d92d791a385ba828c7473da81e7ba70c4bc728360b7e70"
+    },
+    {
+      "bytes": 3345,
+      "path": "source-884-followup-context.json",
+      "sha256": "a289a61800b587cb0e645e4d34bb754917589c7e665db1df6a83216610165834"
+    },
+    {
+      "bytes": 55927,
+      "path": "source-slice.jsonl",
+      "sha256": "1bf0bfeb5abf69ad285332f1dfff4bb9f81711a1a3ae15c39afe86d98005c3d2"
+    },
+    {
+      "bytes": 2360,
+      "path": "summary.json",
+      "sha256": "31313bd435d4662e2fb51590b80523d47fe478d624e37f23789463bc51c948b4"
+    },
+    {
+      "bytes": 10187,
+      "path": "w899-boundary-reattestation.jsonl",
+      "sha256": "b2d425f9066e6f44fe78ea05229fc75f2037c0811ca2888be1c61fa0dc0699b1"
+    }
+  ],
+  "finalReattestationSha256": "e86cf4e5542b0489f71fb442833d6ecf569fe691fdb1580029202db0afd329eb",
+  "head": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "isDraft": true,
+  "localeCount": 12,
+  "machineAssistedConfidence": "moderate",
+  "nativeSpeakerApproval": false,
+  "priorDispositionRows": 10800,
+  "priorOverlapCount": 0,
+  "providerOptionPipelineReferences": 20,
+  "pullRequest": 190,
+  "queuePositions": [
+    900,
+    949
+  ],
+  "queueSemantics": "zero-based currentMissingIds positions, not catalog key ordinals",
+  "repository": "snapetech-org/ChaptarrNG",
+  "schemaVersion": 1,
+  "serverMessagePipelineReferences": 76,
+  "sourceCount": 50,
+  "sourceQueueCanonicalSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "state": "OPEN",
+  "tree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+  "w899BoundaryMatches": 12,
+  "window": "W900-W949"
+}

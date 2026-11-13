@@ -1,4 +1,5 @@
 using Microsoft.Data.Sqlite;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using NLog;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Datastore;
 using NzbDrone.Core.Exceptions;
+using NzbDrone.Core.Validation;
 using NzbDrone.Common.Instrumentation;
 
 namespace Chaptarr.Http.ErrorManagement
@@ -38,6 +40,13 @@ namespace Chaptarr.Http.ErrorManagement
                 Description = null
             };
 
+            if (exception is DownstreamException downstreamException)
+            {
+                statusCode = downstreamException.StatusCode;
+                errorModel.MessageId = downstreamException.MessageId;
+                errorModel.MessageParameters = downstreamException.MessageParameters;
+            }
+
             if (exception is ApiException apiException)
             {
                 _logger.Warn(apiException, "API Error:\n{0}", apiException.Message);
@@ -52,10 +61,29 @@ namespace Chaptarr.Http.ErrorManagement
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
                 response.ContentType = "application/json";
                 var errors = validationException.Errors
-                    .Select(e => new
+                    .Select(e =>
                     {
-                        propertyName = e.PropertyName,
-                        errorMessage = e.ErrorMessage
+                        var failure = e as NzbDroneValidationFailure;
+                        var state = e.CustomState as NzbDroneValidationState;
+                        var messageId = failure?.MessageId ?? state?.MessageId;
+                        var messageParameters = failure?.MessageParameters ?? state?.MessageParameters;
+                        var error = new Dictionary<string, object>
+                        {
+                            ["propertyName"] = e.PropertyName,
+                            ["errorMessage"] = e.ErrorMessage
+                        };
+
+                        if (messageId != null)
+                        {
+                            error["messageId"] = messageId;
+                        }
+
+                        if (messageParameters != null)
+                        {
+                            error["messageParameters"] = messageParameters;
+                        }
+
+                        return error;
                     })
                     .ToList();
 
@@ -66,6 +94,8 @@ namespace Chaptarr.Http.ErrorManagement
             {
                 _logger.DebugSafe(clientException, "Client error during request {0} {1}: {2}", context.Request.Method, context.Request.Path, clientException.Message);
                 statusCode = clientException.StatusCode;
+                errorModel.MessageId = clientException.MessageId;
+                errorModel.MessageParameters = clientException.MessageParameters;
             }
             else if (exception is ModelNotFoundException)
             {

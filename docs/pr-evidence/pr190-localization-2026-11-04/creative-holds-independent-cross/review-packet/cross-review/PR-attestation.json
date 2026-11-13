@@ -1,0 +1,17 @@
+{
+  "observedAt": "2026-11-04 04:24:07 UTC",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "state": "OPEN",
+  "isDraft": true,
+  "baseRefName": "main",
+  "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "headRefName": "codex/chaptarrng-localization-complete-20261031",
+  "headRefOid": "28cdae837118a426ac867fb468a5e5a6937cbb9b",
+  "pullHeadRefOid": "28cdae837118a426ac867fb468a5e5a6937cbb9b",
+  "pullMergeRefOid": "6e23286db5c9231c7dd3f62191572384a18a0133",
+  "tree": "e6e7f1344d08eddbc421d339f91594847a625c10",
+  "deploymentsForHead": [],
+  "browserAcceptance": "not performed at this head",
+  "source": "live gh pr view, git ls-remote, and GitHub deployments API on kspls0"
+}

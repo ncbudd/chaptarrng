@@ -1,0 +1,22 @@
+{
+  "cells": 600,
+  "errors": [],
+  "independentChangedCells": 229,
+  "independentDispositionCounts": {
+    "accept-current": 371,
+    "accept-proposal": 206,
+    "propose-correction": 12,
+    "propose-refinement": 2,
+    "revise-proposal": 9
+  },
+  "markupMismatchCells": 0,
+  "missedPrimaryCurrentCells": 14,
+  "placeholderMismatchCells": 0,
+  "protectedMismatchCells": 0,
+  "readOnly": true,
+  "revisedPrimaryProposals": 9,
+  "schemaVersion": 1,
+  "uniqueCells": 600,
+  "verified": true,
+  "w770LocalizedLabelCells": 12
+}

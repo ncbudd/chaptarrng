@@ -1,0 +1,160 @@
+{
+  "capturedAtUtc": "2026-11-02T21:43:47+00:00",
+  "baseHead": "961d3102ad3098ee188a6c87a0c88eea5f5ab332",
+  "baseTree": "c46078c93545042313aa1b35bc3b283b1f3b5406",
+  "inputCells": 600,
+  "applyPlanRows": 23,
+  "nativeSpeakerHolds": 1,
+  "approvedChanges": 23,
+  "perFile": {
+    "src/NzbDrone.Core/Localization/Core/ar.json": {
+      "baseSha256": "07be9968c8398354d2c511427ca170553be3b7704ca1e406b0cff70756db1471",
+      "currentSha256": "04fd1bc472faafb8b6eaeb334a62541fe5baead7eb969823668f293d986754c7",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.o2bca68c58bb4"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/de.json": {
+      "baseSha256": "dc66b38e8a54e8f772a5d3beb73cda9b98f59a45bab6546ae21c105acebdc51d",
+      "currentSha256": "822c7a7f9411dcff0d5a3927023981e95c7ffe9a259d918f5866fa612593125f",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.o04656c6fe003",
+        "provider.option.o754787c2f88c",
+        "provider.option.o8a9779f42128",
+        "provider.option.o9e61f8c4fbca",
+        "provider.option.ocd43b2d3b020"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/es.json": {
+      "baseSha256": "e6d549b25e6e597155a3dbc3d49b603e391410ea51c6882b2a59c157bb24bc15",
+      "currentSha256": "30b9c53f68527b3801ebd9d94627d09d44d7633fce3ad7910e5f3bccd2928770",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.o1435d07cdf1c",
+        "provider.option.o54b0bff947fb",
+        "provider.option.o60a7067462bf",
+        "provider.option.o9e61f8c4fbca",
+        "provider.option.oaa1324f5df47"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/fr.json": {
+      "baseSha256": "f0ceca5e961594141f66b987234f8b92324b762e56e641293f414e685dc4a568",
+      "currentSha256": "39ad286c2df33a0609898bc66ee1a27aa006d904ec67779f65bfa9e207f879aa",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.o60a7067462bf",
+        "provider.option.o911140b89c71",
+        "provider.option.o9e61f8c4fbca"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/hi.json": {
+      "baseSha256": "ae3a086889f4a249fe00bdce5fa39227abcecfc503469a916c7c37fa25a4b505",
+      "currentSha256": "ae3a086889f4a249fe00bdce5fa39227abcecfc503469a916c7c37fa25a4b505",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/id.json": {
+      "baseSha256": "2f314c616632e3b0efd050786ef5eb94ba192e6855eecf6fa1428ee79560cede",
+      "currentSha256": "2f314c616632e3b0efd050786ef5eb94ba192e6855eecf6fa1428ee79560cede",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/ja.json": {
+      "baseSha256": "a376c466855e72199a1e97ec5c8feb0aecda12b10fbe30cb5ed32677ace66469",
+      "currentSha256": "e1ed77e34bff0c53b433430414fd1209b5ee264a376ae83c2897f977a2ea1a33",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.o1435d07cdf1c",
+        "provider.option.o63c2dc51d089"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/ko.json": {
+      "baseSha256": "a1a0d9b6c26ea01a01c7dd6a5c75e1e21016f01bb0d36caa1c60186ccd3cb2e4",
+      "currentSha256": "b155885346a182edb10f3c7a7ec7cbf6f2c013ea31760ebb1322b668c20538e6",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.ocd43b2d3b020"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": {
+      "baseSha256": "05b13fe20b62a4d86bf338897e5b45df784de2a5ed078c720356cca0b4bad475",
+      "currentSha256": "3eca2a7973a8a74bbba65b74d4fa26e8e32644e2952609f024c925d46ce8693d",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [
+        "provider.option.o9e61f8c4fbca"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/vi.json": {
+      "baseSha256": "76676e171307e84451d4f0e3455a1e9eb582a7ee182cbb575ca2ab861b46c183",
+      "currentSha256": "9e7fb769d0ac9980116be1b0ef3112b0e3d40f6bebef561cfeb06400a9b8d9e6",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "1bf45ea6ebf5ecec6cd59ef12e9a3b5796dc847c9cef16ce5485dfe075e3b880",
+      "currentKeyOrderSha256": "1bf45ea6ebf5ecec6cd59ef12e9a3b5796dc847c9cef16ce5485dfe075e3b880",
+      "changedSourceIds": [
+        "provider.option.o3411059cb8e0",
+        "provider.option.o54b0bff947fb",
+        "provider.option.obafb66f32cd7",
+        "provider.option.oe4d40d318e99",
+        "provider.option.oe7f4fe2631bb"
+      ],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": {
+      "baseSha256": "31fb4e0de12db21a1a0cb7c27d69b4dae9f808e44fb78eea49305a59c11c4675",
+      "currentSha256": "31fb4e0de12db21a1a0cb7c27d69b4dae9f808e44fb78eea49305a59c11c4675",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "1bf45ea6ebf5ecec6cd59ef12e9a3b5796dc847c9cef16ce5485dfe075e3b880",
+      "currentKeyOrderSha256": "1bf45ea6ebf5ecec6cd59ef12e9a3b5796dc847c9cef16ce5485dfe075e3b880",
+      "changedSourceIds": [],
+      "unchangedValuesOutsidePlan": true
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": {
+      "baseSha256": "7468962bbc51b23bd57e574365eb6f2fdc27d5a74a97896e830576fc248b28b7",
+      "currentSha256": "7468962bbc51b23bd57e574365eb6f2fdc27d5a74a97896e830576fc248b28b7",
+      "keyCount": 4165,
+      "baseKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "currentKeyOrderSha256": "6b5263a5a40ee5205eeb02566ea47ca49aad72bd32e02191b2a7a118e12972dc",
+      "changedSourceIds": [],
+      "unchangedValuesOutsidePlan": true
+    }
+  },
+  "checks": {
+    "all600CellsMatchExpectedFinalValues": true,
+    "allCatalogJsonParsed": true,
+    "keySetsAndOrderPreserved": true,
+    "only23AdjudicatedTargetsChanged": true,
+    "allOutsideTargetsUnchanged": true,
+    "holdFarsiIndonesianUnchanged": true
+  },
+  "nativeSpeakerApproval": false,
+  "testsBuildScansCiBrowserRun": false
+}

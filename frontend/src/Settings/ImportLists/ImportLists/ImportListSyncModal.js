@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import LocalizedServerMessage from 'Components/LocalizedServerMessage';
 import Button from 'Components/Link/Button';
 import LoadingIndicator from 'Components/Loading/LoadingIndicator';
 import Modal from 'Components/Modal/Modal';
@@ -10,32 +11,59 @@ import ModalHeader from 'Components/Modal/ModalHeader';
 import { kinds, sizes } from 'Helpers/Props';
 import createAjaxRequest from 'Utilities/createAjaxRequest';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import styles from './ImportListSyncModal.css';
 
 function getErrorMessage(xhr) {
   const responseJson = xhr?.responseJSON;
   if (Array.isArray(responseJson)) {
     const messages = responseJson
-      .map((error) => error?.errorMessage || error?.message || (typeof error === 'string' ? error : null))
-      .filter((message) => typeof message === 'string' && message.trim().length)
-      .map((message) => translateServerMessage(message.trim()));
+      .map((error) => typeof error === 'string' ?
+        { message: error } :
+        {
+          message: error?.errorMessage || error?.message,
+          messageId: error?.messageId || error?.errorMessageId,
+          messageParameters: error?.messageParameters
+        })
+      .filter(({ message }) => typeof message === 'string' && message.trim().length);
 
     if (messages.length) {
-      return messages.join(' ');
+      return renderMessages(messages);
     }
   }
 
   if (typeof responseJson === 'string') {
-    return translateServerMessage(responseJson);
+    return <LocalizedServerMessage message={responseJson} />;
   }
 
-  return translateServerMessage(responseJson?.message ||
-    responseJson?.detail ||
-    responseJson?.error) ||
-    (xhr?.status && xhr?.statusText ? `${xhr.status} ${xhr.statusText}` : null) ||
-    xhr?.statusText ||
+  const message = responseJson?.message || responseJson?.detail || responseJson?.error;
+  if (typeof message === 'string' && message) {
+    return <LocalizedServerMessage
+      message={message}
+      messageId={responseJson?.messageId}
+      messageParameters={responseJson?.messageParameters}
+    />;
+  }
+
+  if (xhr?.status && xhr?.statusText) {
+    return <LocalizedServerMessage message={`${xhr.status} ${xhr.statusText}`} />;
+  }
+
+  return xhr?.statusText ?
+    <LocalizedServerMessage message={xhr.statusText} /> :
     translate('RequestFailed');
+}
+
+function renderMessages(messages) {
+  return messages.map((message, index) => (
+    <React.Fragment key={`sync-error-${index}`}>
+      <LocalizedServerMessage
+        message={message.message.trim()}
+        messageId={message.messageId}
+        messageParameters={message.messageParameters}
+      />
+      {index < messages.length - 1 ? ' ' : null}
+    </React.Fragment>
+  ));
 }
 
 function formatDuration(durationMilliseconds) {

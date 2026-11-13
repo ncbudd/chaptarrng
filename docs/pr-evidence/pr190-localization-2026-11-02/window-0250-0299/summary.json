@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "W250–299",
+  "sourceIds": 50,
+  "cellsReviewed": 600,
+  "independentDispositionCounts": {
+    "accepted-current": 532,
+    "accepted-candidate": 66,
+    "refined-candidate": 1,
+    "additional-finding": 1
+  },
+  "catalogCellsChanged": 68,
+  "catalogKeyCountPerLocale": 4165,
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "workflowsTouched": false
+}

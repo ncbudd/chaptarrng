@@ -1,0 +1,26 @@
+{
+  "artifact": "ChaptarrNG W300-W349 root-suggestion review process exposure",
+  "sourceHead": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "rootSuggestionCount": 19,
+  "initialCrossAttempt": {
+    "result": "discarded",
+    "incident": "The reviewer ran an unrestricted search over the pinned worktree and saw matches from stored historical localization review artifacts, outside the assigned inputs.",
+    "action": "Interrupted before relying on or using its review output; no result from that attempt will be applied or included as cross-review evidence."
+  },
+  "freshCrossAttempt": {
+    "task": "chaptarr_root_hold_cross_fresh",
+    "allowedInputs": [
+      "candidate-free-manifest.json",
+      "SHA256SUMS.txt",
+      "candidate-free-cells.jsonl",
+      "caller-context.jsonl",
+      "root-hold-proposals.jsonl"
+    ],
+    "repositoryOrWorktreeAccess": false,
+    "forkedConversationContext": false,
+    "status": "complete: 19 accepted, 0 revised, 0 held; independent packet verifier passed.",
+    "outputPacket": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-root-suggestion-cross-fresh-20261104/"
+  },
+  "primaryProposalTargetTextUsedToAuthorRootSuggestions": false,
+  "catalogOrPullRequestEdited": false
+}

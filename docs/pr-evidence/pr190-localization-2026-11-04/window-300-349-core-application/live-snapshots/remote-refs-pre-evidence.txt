@@ -1,0 +1,3 @@
+4688c998d92c821bbc1464ea4640c90615a69327	refs/heads/codex/chaptarrng-localization-complete-20261031
+76fcc3193f3d08fe4827dca1556b84b2ae74b5df	refs/heads/main
+4688c998d92c821bbc1464ea4640c90615a69327	refs/pull/190/head

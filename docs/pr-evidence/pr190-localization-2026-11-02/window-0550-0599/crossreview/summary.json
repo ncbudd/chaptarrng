@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "task": "Independent read-only cross-review of ChaptarrNG PR #190 W550-599 primary packet",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "015ff68d96340292b5e6a45d34496a5936ebf09c",
+  "exactTree": "bbb59a14a50a4b63bc209663c1e4b873ead4fc10",
+  "livePrState": {
+    "state": "open",
+    "draft": true,
+    "head": "015ff68d96340292b5e6a45d34496a5936ebf09c",
+    "tree": "bbb59a14a50a4b63bc209663c1e4b873ead4fc10",
+    "passed": true
+  },
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0550-0599-primary-20261102",
+  "primaryChecksums": {
+    "primaryPacketFilesChecked": 16,
+    "pinnedRepositoryInputsChecked": 15
+  },
+  "scope": {
+    "positions": [
+      550,
+      599
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600,
+    "candidateRows": 271,
+    "callerSourceRows": 50,
+    "callerReferences": 69,
+    "callerFiles": 42
+  },
+  "primaryDispositionCounts": {
+    "accept-current": 329,
+    "propose-correction": 240,
+    "propose-refinement": 31
+  },
+  "finalDispositions": {
+    "accept-current": 322,
+    "propose-correction": 233,
+    "propose-refinement": 33,
+    "hold": 12
+  },
+  "allCellCrossReviewVerdicts": {
+    "retain-primary-accept-current": 322,
+    "accept-primary-candidate": 256,
+    "revise-primary-candidate": 3,
+    "hold-primary-candidate": 12,
+    "new-review-finding": 7
+  },
+  "candidateCrossReviewVerdicts": {
+    "accept-primary-candidate": 256,
+    "revise-primary-candidate": 3,
+    "hold-primary-candidate": 12
+  },
+  "primaryCandidates": {
+    "acceptedAsProposed": 256,
+    "revised": 3,
+    "held": 12
+  },
+  "additionalFindingsOnAcceptedCurrent": 7,
+  "W549Boundary": {
+    "rows": 12,
+    "priorCurrentTargetsStillLive": 8,
+    "priorRecommendationsNowLive": 4,
+    "allSourceHashesMatch": true,
+    "allCallerRefsReattested": true
+  },
+  "mechanicalIntegrity": {
+    "all600SourceAndCurrentTargetsReattested": true,
+    "allCallerContextHashesMatch": true,
+    "all69CallerRefsReattested": true,
+    "tokenParityMismatches": {},
+    "protectedLiteralMismatchCells": {},
+    "finalProposalProtectedLiteralMismatches": 0,
+    "candidateCurrentHashMismatches": 0
+  },
+  "heldIssue": {
+    "sourceOrdinal": 561,
+    "affectedLocales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "runtimeBehavior": "Nzbget.cs rejects value > 25000; value 25000 passes.",
+    "englishSource": "NzbGet setting KeepHistory should be less than 25000",
+    "resolution": "Hold all 12 targets until English source wording is decided; record behavior-based “must not exceed 25000” options separately."
+  },
+  "semanticReview": {
+    "confidence": "moderate",
+    "nativeSpeakerApproval": false,
+    "browserReview": false,
+    "findings": {
+      "candidateTextRevisions": [
+        {
+          "sourceOrdinal": 555,
+          "sourceId": "server.message.m43ae665db439",
+          "locale": "id",
+          "primaryTarget": "Gagal menerapkan narator ke semua buku trong seri.",
+          "recommendedTarget": "Gagal menerapkan narator ke semua buku dalam seri.",
+          "rationale": "The primary candidate contains the Vietnamese word “trong” inside Indonesian text; “dalam” supplies the intended Indonesian “in”."
+        },
+        {
+          "sourceOrdinal": 583,
+          "sourceId": "server.message.m4e7b049867d0",
+          "locale": "ar",
+          "primaryTarget": "فشل اختبار الوكيل عبر {value0} برمز الحالة {value1}.",
+          "recommendedTarget": "فشل اختبار البروكسي عبر {value0} برمز الحالة {value1}.",
+          "rationale": "This caller tests a network proxy. “الوكيل” can mean an agent or representative; “البروكسي” is the clear networking term already used by the current Arabic target."
+        },
+        {
+          "sourceOrdinal": 583,
+          "sourceId": "server.message.m4e7b049867d0",
+          "locale": "ko",
+          "primaryTarget": "프록시 테스트가 실패했습니다. 경유 주소: {value0}, 상태 코드: {value1}.",
+          "recommendedTarget": "프록시 테스트가 실패했습니다. 테스트 URL: {value0}, 상태 코드: {value1}.",
+          "rationale": "The caller passes testUrl as {value0}; “테스트 URL” identifies the value precisely, while the primary candidate’s “relay address” is ambiguous."
+        }
+      ],
+      "newFindingsOnPrimaryAcceptCurrent": [
+        {
+          "sourceOrdinal": 574,
+          "sourceId": "server.message.m4b31cd0afb3b",
+          "locale": "ar",
+          "currentTarget": "لا يوجد مجلد \"{value0}\" يرجى إنشاء الدليل أولاً أو التحقق من المسار.",
+          "recommendedTarget": "المجلد \"{value0}\" غير موجود. يُرجى إنشاء الدليل أولًا أو التحقق من المسار.",
+          "finalDisposition": "propose-refinement",
+          "rationale": "The current target joins the missing-folder statement and instruction without a sentence break. This wording separates them and preserves the folder placeholder."
+        },
+        {
+          "sourceOrdinal": 580,
+          "sourceId": "server.message.m4d53a6152d2c",
+          "locale": "de",
+          "currentTarget": "Zeigen Sie eine Vorschau des Vorgangs an, bevor Sie ihn starten.",
+          "recommendedTarget": "Zeigen Sie vor dem Start eine Vorschau der Verschiebung an.",
+          "finalDisposition": "propose-correction",
+          "rationale": "The current target says to preview a generic operation. The pinned caller moves media, so the target should name the move."
+        },
+        {
+          "sourceOrdinal": 580,
+          "sourceId": "server.message.m4d53a6152d2c",
+          "locale": "ja",
+          "currentTarget": "開始する前に操作をプレビューしてください。",
+          "recommendedTarget": "移動を開始する前に、移動内容をプレビューしてください。",
+          "finalDisposition": "propose-correction",
+          "rationale": "The current target says to preview a generic operation. The pinned caller moves media, so the target should name the move."
+        },
+        {
+          "sourceOrdinal": 580,
+          "sourceId": "server.message.m4d53a6152d2c",
+          "locale": "fr",
+          "currentTarget": "Prévisualisez l’opération avant de la lancer.",
+          "recommendedTarget": "Prévisualisez le déplacement avant de le lancer.",
+          "finalDisposition": "propose-correction",
+          "rationale": "The current target says to preview a generic operation. The pinned caller moves media, so the target should name the move."
+        },
+        {
+          "sourceOrdinal": 580,
+          "sourceId": "server.message.m4d53a6152d2c",
+          "locale": "pt-BR",
+          "currentTarget": "Visualize uma prévia da operação antes de iniciá-la.",
+          "recommendedTarget": "Confira a prévia da movimentação antes de iniciá-la.",
+          "finalDisposition": "propose-correction",
+          "rationale": "The current target says to preview a generic operation. The pinned caller moves media, so the target should name the move."
+        },
+        {
+          "sourceOrdinal": 580,
+          "sourceId": "server.message.m4d53a6152d2c",
+          "locale": "ar",
+          "currentTarget": "اعرض معاينة للعملية قبل بدء تنفيذها.",
+          "recommendedTarget": "اعرض معاينة لعملية النقل قبل بدء تنفيذها.",
+          "finalDisposition": "propose-correction",
+          "rationale": "The current target says to preview a generic operation. The pinned caller moves media, so the target should name the move."
+        },
+        {
+          "sourceOrdinal": 597,
+          "sourceId": "server.message.m5659b793dc5f",
+          "locale": "vi",
+          "currentTarget": "Phiên bản được chọn không phù hợp với loại phương tiện truyền thông được yêu cầu.",
+          "recommendedTarget": "Phiên bản được chọn không khớp với loại sách được yêu cầu.",
+          "finalDisposition": "propose-refinement",
+          "rationale": "The current phrase for “media type” is literal and awkward. The caller compares audiobook and ebook editions, so “loại sách” states the relevant book type more naturally."
+        }
+      ],
+      "holds": [
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "es",
+          "primaryTarget": "El valor de KeepHistory en NzbGet debe ser inferior a 25000.",
+          "behaviorBasedOption": "El valor de KeepHistory en NzbGet no debe superar 25000.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "zh-Hans",
+          "primaryTarget": "NzbGet 的 KeepHistory 设置必须小于 25000。",
+          "behaviorBasedOption": "NzbGet 的 KeepHistory 设置不得超过 25000。",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "hi",
+          "primaryTarget": "NzbGet में KeepHistory सेटिंग 25000 से कम होनी चाहिए।",
+          "behaviorBasedOption": "NzbGet में KeepHistory सेटिंग 25000 से अधिक नहीं होनी चाहिए。",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "de",
+          "primaryTarget": "Die NzbGet-Einstellung KeepHistory muss kleiner als 25000 sein.",
+          "behaviorBasedOption": "Der Wert der NzbGet-Einstellung KeepHistory darf 25000 nicht überschreiten.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "ja",
+          "primaryTarget": "NzbGet の KeepHistory 設定は 25000 未満である必要があります。",
+          "behaviorBasedOption": "NzbGet の KeepHistory 設定値は 25000 を超えてはいけません。",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "fr",
+          "primaryTarget": "La valeur du paramètre KeepHistory dans NzbGet doit être inférieure à 25000.",
+          "behaviorBasedOption": "La valeur du paramètre KeepHistory dans NzbGet ne doit pas dépasser 25000.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "pt-BR",
+          "primaryTarget": "O valor da configuração KeepHistory no NzbGet deve ser menor que 25000.",
+          "behaviorBasedOption": "O valor da configuração KeepHistory no NzbGet não pode exceder 25000.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "ar",
+          "primaryTarget": "يجب أن تكون قيمة إعداد KeepHistory في NzbGet أقل من 25000.",
+          "behaviorBasedOption": "يجب ألا تتجاوز قيمة إعداد KeepHistory في NzbGet 25000.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "ko",
+          "primaryTarget": "NzbGet의 KeepHistory 설정값은 25000보다 작아야 합니다.",
+          "behaviorBasedOption": "NzbGet의 KeepHistory 설정값은 25000을 초과하면 안 됩니다.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "zh-Hant",
+          "primaryTarget": "NzbGet 的 KeepHistory 設定必須小於 25000。",
+          "behaviorBasedOption": "NzbGet 的 KeepHistory 設定不得超過 25000。",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "vi",
+          "primaryTarget": "Giá trị cài đặt KeepHistory trong NzbGet phải nhỏ hơn 25000.",
+          "behaviorBasedOption": "Giá trị cài đặt KeepHistory trong NzbGet không được vượt quá 25000.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        },
+        {
+          "sourceOrdinal": 561,
+          "sourceId": "server.message.m453c42aa8de5",
+          "locale": "id",
+          "primaryTarget": "Nilai pengaturan KeepHistory di NzbGet harus kurang dari 25000.",
+          "behaviorBasedOption": "Nilai pengaturan KeepHistory di NzbGet tidak boleh melebihi 25000.",
+          "rationale": "Hold: the English source says “should be less than 25000,” while the pinned Nzbget.cs branch rejects only values greater than 25000 and accepts exactly 25000. The primary below-25000 wording would make the same stricter claim as the English source and does not match the caller behavior. Keep this locale on hold until the English wording is resolved; the optional behavior-based target states that the value must not exceed 25000."
+        }
+      ]
+    }
+  },
+  "constraints": {
+    "repositoryCatalogEdits": false,
+    "pullRequestWrites": false,
+    "testsBuildsScansCi": false,
+    "browserActions": false,
+    "workflowEdits": false,
+    "releases": false
+  },
+  "repositoryStatus": "## main...origin/main [behind 2]"
+}

@@ -1,0 +1,24 @@
+{
+  "portable": {
+    "command": "python3 verify_part.py",
+    "result": "PASS",
+    "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    "cells": 300,
+    "callerBound": 276,
+    "hashOnlyHolds": 24,
+    "recommendations": 61,
+    "exactWorktreeReadback": false
+  },
+  "exactWorktree": {
+    "command": "python3 verify_part.py --repo /mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+    "result": "PASS",
+    "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    "cells": 300,
+    "callerBound": 276,
+    "hashOnlyHolds": 24,
+    "recommendations": 61,
+    "exactWorktreeReadback": true
+  }
+}

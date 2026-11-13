@@ -1,0 +1,11 @@
+{
+  "PRAPIQueried": false,
+  "baseHead": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "head": "580538d38f92e0ec005366ff6bea3f2634400c2e",
+  "meaning": "Local exact-head checkout and existing remote branch agree; no PR query or mutation was made.",
+  "remoteBranchHead": "580538d38f92e0ec005366ff6bea3f2634400c2e",
+  "repoStatus": "",
+  "tree": "b61f7ca1f5b496c01a32ba7b8f3520076ec5cfc1",
+  "worktreeClean": true
+}

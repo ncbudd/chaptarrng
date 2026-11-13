@@ -1,0 +1,76 @@
+{
+  "artifact": "ChaptarrNG PR #190 W300-W349 Core root manual review attestation",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "W300-W349-Core",
+  "head": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "tree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "inputFiles": {
+    "candidateFreeManifest": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/candidate-free/input/candidate-free-manifest.json",
+      "sha256": "7959f70b857f36f82f52af40ccb152f3ccc8444ec050813fe79d06dbb3508e64"
+    },
+    "primaryProposals": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-core-20261104/primary-review/primary-review-proposals.jsonl",
+      "sha256": "bcfbd92eda1e9780b7fb61b9fb7ef21330950a68de1c9e03408e955c36349c46"
+    },
+    "blindDecisions": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-independent-blind-20261104/decisions.jsonl",
+      "sha256": "a81d4e24448e81979fc16b6dbc53feab6c585e601adb444e1f75441a0eb8607e"
+    },
+    "primaryCrossDecisions": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-cross-20261104/cross-review-decisions.jsonl",
+      "sha256": "afd8ecf965f74f84e8673590e9f08b5b3940c5490f06f3527543e86fc5b724e6"
+    },
+    "rootSuggestions": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-root-hold-suggestions-20261104/root-hold-proposals.jsonl",
+      "sha256": "f74648a2e9309a469857378d89fd7e6457ca4fb98c3442258e9c6b42a4963cb1"
+    },
+    "rootSuggestionCross": {
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w300-349-root-suggestion-cross-fresh-20261104/review-results.jsonl",
+      "sha256": "524d25250ed3a86124dbf90dc01b866809497f49239bc68494bfe0a5c2483ace"
+    }
+  },
+  "coverage": {
+    "cells": 600,
+    "primaryProposalCount": 87,
+    "primaryCrossDecisions": {
+      "accept": 86,
+      "revise": 1
+    },
+    "rootOnlyDirectCallerSuggestions": 19,
+    "rootSuggestionCrossDecisions": {
+      "accept": 19,
+      "revise": 0,
+      "hold": 0
+    },
+    "blindDecisions": {
+      "acceptCurrent": 497,
+      "hold": 103,
+      "mandatoryCallerlessHoldCells": 48,
+      "semanticHoldCells": 55
+    },
+    "expectedSelectedChangeCount": 106,
+    "newHolds": 0,
+    "callerlessHoldCellsApplied": 0
+  },
+  "reviewDecision": "I manually reviewed all 87 primary targets and the cross reviewer decisions, including the revised Indonesian balanced-mode help text. I separately authored 19 direct-caller suggestions for blind-only semantic holds, checked each source/current/caller context, and accepted all 19 after fresh independent cross-review. All final selected targets are accepted for application; preserve the 48 callerless hash-only holds.",
+  "semanticChecks": [
+    "passive Indonesian download wording",
+    "matching-mode labels and long mode help text",
+    "provider-state and sync-state terms",
+    "search-eligible count labels",
+    "input validation and token wording",
+    "preview progress and processed count states",
+    "noisy versus unrelated placeholder examples",
+    "unsatisfied MyAnonaMouse slot requirements and blocked-grab warning"
+  ],
+  "processExposure": {
+    "primaryCross": "The primary cross-reviewer reports that the first proposal rationale was displayed once during schema inspection; it was not used as evidence and that cell confidence was lowered to moderate.",
+    "rootSuggestionCross": "An initial root-suggestion cross attempt was discarded after an unrestricted search saw historical review artifacts. No output from that attempt was used. The fresh cross reviewer had no repository/worktree access and reviewed only candidate-free inputs and the root suggestions; all 19 were accepted."
+  },
+  "nativeSpeakerApproval": false,
+  "browserReviewPerformed": false,
+  "testsBuildsScansCiRun": false,
+  "catalogOrPrEdited": false
+}

@@ -171,8 +171,8 @@
   },
   "registries": {
     "docs/localization/server-message-sources.json": "a0ce0639fc6731fa56bb16aa77fab7648e34d3a1c0a5d4ca3b311a44ef3f5053",
-    "docs/localization/server-message-callers.json": "50cec0c5fbb0b0a466e82f1234d54bf0e85d7288997a465cf70aa6d6478deba9",
-    "docs/localization/followup-ui-sources.json": "696b4698ce70c4728364f7dd88e1cee7ed1e458bf388f0d89d8c1b677b8b4162",
+    "docs/localization/server-message-callers.json": "bf1064eb9f5f5f5ddc93cc312e40f8ff35e62ca70a9bb4ba91803fffb69fd32e",
+    "docs/localization/followup-ui-sources.json": "f63ead28be60bd9d549ef6372a2e6eafa80acfb2b99c2ff742f95eb900f74a5c",
     "frontend/src/Utilities/Localization/scheduled-task-labels.json": "6c92e998d0cee2eac0b4ddb350bf1daab1fba96809e37f2001fec8af12f93515",
     "frontend/src/Utilities/Localization/server-messages.json": "2c311bc031ddc1baadffa9cb337c0ad7602345bc180d53b839425d0b7fcf58da",
     "src/NzbDrone.Core/Localization/Core/en.json": "fd51fe537f3bbf0d1573b4b59b4aa3d85fd81998e116c52ff3092665cf7d6aa2",
@@ -190,17 +190,17 @@
     "Remaining diagnostic/exception-wrapper/log source classification is explicitly open. This is bounded coverage, not whole-app closure or qualified native approval."
   ],
   "targetCatalogSha256": {
-    "src/NzbDrone.Core/Localization/Core/es.json": "0f6c8a14ff301d86ff2c82c95b57740262202438bf65bba300fd73ddcd469b69",
-    "src/NzbDrone.Core/Localization/Core/zh_CN.json": "fbcbf0b468764d2545237a6a431ce4264447b23a2fae5edf3b8c52793a54effa",
-    "src/NzbDrone.Core/Localization/Core/hi.json": "6a0e0f24b5d122fee319167a3ac33d5a61035f167313990fe8aa1fefc138c36b",
-    "src/NzbDrone.Core/Localization/Core/de.json": "cd71c159e52fdb575b746ce4e641b798854b01be028e5d0b0a5d1ca7221a09cc",
-    "src/NzbDrone.Core/Localization/Core/ja.json": "556d72d406fba43d792d0f5d8e5777816fe37815143c3a0a9cb6fae275694a0f",
-    "src/NzbDrone.Core/Localization/Core/fr.json": "140be9638e05599ec3310909712f708f99526a0ec58888f5ccced0aa544b28ea",
-    "src/NzbDrone.Core/Localization/Core/pt_BR.json": "7656efeeeaed56627a08fffeea26fe07c0362e06b0a28f184f9e537ddf92f0ca",
-    "src/NzbDrone.Core/Localization/Core/ar.json": "9c20f68eb48490f1857812d4196f59747cd405746e6115cad88d0efbf7305ff0",
-    "src/NzbDrone.Core/Localization/Core/ko.json": "5de7388d912c5c1d1b30f0f712733199f96c7804757d400b0dc7b981914affc4",
-    "src/NzbDrone.Core/Localization/Core/zh_TW.json": "916857deaedf6b87b09fe647103bb0729b662a4e2812fb636b70c84542d579fd",
-    "src/NzbDrone.Core/Localization/Core/vi.json": "b88822d31c3f88ae4b083a423f3ec0ef09a6e4f4c5a5f817d22d6205e3241d0e",
-    "src/NzbDrone.Core/Localization/Core/id.json": "cd219259d729621a95055a66c0c9fce75afc637c9e427dbb5c99d0b2a3bf1603"
+    "src/NzbDrone.Core/Localization/Core/es.json": "1408db2b28077d36b9ad2f5888a9ca24204323bccbef8bde2ec02c4b84f11306",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": "90e9764ea5e500f17e11be43af38e06feb55cdcc1ebc4a37b76a8e82ca771482",
+    "src/NzbDrone.Core/Localization/Core/hi.json": "94e07a8191c97a961ce9be6909a90efe668ea4b112f7009e8d1cf4291775bd69",
+    "src/NzbDrone.Core/Localization/Core/de.json": "7fc812b60b45678bdd3c38efcc50b15d6d36d59b2392bcbb371e4627cdae7fce",
+    "src/NzbDrone.Core/Localization/Core/ja.json": "e4ba8a7da43a0e0ba04642f8f01c3873a233fee6da16f2428854f1d5ec849b06",
+    "src/NzbDrone.Core/Localization/Core/fr.json": "cd19a48ad653a5c6134ded431f902633c768cb87b0ebd90a0c21011deadba3d3",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": "b562805d52bac712197b7699e98845e80040d9174b02bff1432416827aa96127",
+    "src/NzbDrone.Core/Localization/Core/ar.json": "a42816729421bc27f8b43ddbddfd7ed434eecc1e9f05d656845fe9c8bef54dc5",
+    "src/NzbDrone.Core/Localization/Core/ko.json": "dc53e8718c3506b4913073f9ed1fe43ed4c32ce7dac0287ab46ac49474f1e3d4",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": "a7510c308d745012effc81db008ca375dceceb06bc19da35ac4977111d729090",
+    "src/NzbDrone.Core/Localization/Core/vi.json": "a3785d191dd12655474aba8e251f854da9abd30d4a45f9a441fb0fe9c24443e6",
+    "src/NzbDrone.Core/Localization/Core/id.json": "b6e880d41f8b46a2089e3a70a2bd353c049c709b078548aca61d2c29224bf2fe"
   }
 }

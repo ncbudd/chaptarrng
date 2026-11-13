@@ -1,0 +1,37 @@
+{
+  "capturedAtUtc": "2026-11-05T10:25:40+00:00",
+  "pr": {
+    "baseRefName": "main",
+    "baseRefOid": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "isDraft": true,
+    "number": 190,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "headTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "baseTree": "3c27ce1d128d1d74d3b46bf507e2f99f9c02f4d8",
+  "mainRef": "c83969e8137fa50a4780881e5b76bcb6eb44a6d0",
+  "mainTree": "a2fa04e7b6e27619b7993f91f44b01e167014daf",
+  "branchRef": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "pullRef": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "localHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "localTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "localClean": true,
+  "pinTuple": [
+    "OPEN",
+    true,
+    "codex/chaptarrng-localization-complete-20261031",
+    "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    "main",
+    "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "3c27ce1d128d1d74d3b46bf507e2f99f9c02f4d8",
+    "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "dbd8343a42476f4e830428cc59efb7f4830251d5",
+    true
+  ]
+}

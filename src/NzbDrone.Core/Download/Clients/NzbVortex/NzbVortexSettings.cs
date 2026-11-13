@@ -16,14 +16,16 @@ namespace NzbDrone.Core.Download.Clients.NzbVortex
             RuleFor(c => c.UrlBase).ValidUrlBase().When(c => c.UrlBase.IsNotNullOrWhiteSpace());
 
             RuleFor(c => c.ApiKey).NotEmpty()
-                                  .WithMessage("API Key is required");
+                                  .WithMessage("API Key is required")
+                                  .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m794b67a4d3b9"));
 
             RuleFor(c => c).Must(c =>
                     c.AudiobookCategory.IsNotNullOrWhiteSpace() ||
                     c.EbookCategory.IsNotNullOrWhiteSpace() ||
                     c.MusicCategory.IsNotNullOrWhiteSpace())
                 .WithMessage("A category is recommended")
-                .AsWarning();
+                .AsWarning()
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mda954bbc0eee", isWarning: true));
         }
     }
 

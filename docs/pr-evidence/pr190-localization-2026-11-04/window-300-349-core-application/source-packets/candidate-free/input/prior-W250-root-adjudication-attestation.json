@@ -1,0 +1,17 @@
+{
+  "applicationReadbackMatched": true,
+  "applicationResultSha256": "364a430bcaf5e520cfa2c18c76a0378d6a8f2e1ea8f5f2ed6ae9a3bcc200c099",
+  "cellId": "AutomaticUpdatesDisabledDocker::id",
+  "correctedTargetSha256": "fd407430d7d60c282c8412ed3205ac94ec77e794d5d2dce19e6337aa09e9c291",
+  "correctedTargetTextIncluded": false,
+  "currentTargetSha256": "8d069a83961c0badb75a0de0a3832f17088cd0483d0c126e495a25f602d1ce0c",
+  "evidencePath": "docs/pr-evidence/pr190-localization-2026-11-04/window-250-299-followup/root-adjudication.json",
+  "evidenceSha256": "1e0edcac5ffc40f9621c215e68198fa8da94d946bfe661e451d6f17039f75f74",
+  "observedTargetSha256": "fd407430d7d60c282c8412ed3205ac94ec77e794d5d2dce19e6337aa09e9c291",
+  "replacedSelectedTargetSha256": "2c6e15a225620cae740ef4228360e1949f559500f0a769aa5f8b7eb134ea9935",
+  "result": "PASS",
+  "rootDisposition": "replace-cross-selected-target-before-apply",
+  "rootReason": "The cross-selected Indonesian wording retained only the second source sentence and dropped the first clause: automatic updates are not directly supported through the Docker update mechanism.",
+  "sourceTextSha256": "f89ee47752fcf2b2236ceaa55269e4f2533dc7893d98733f761556e0877e7ed5",
+  "supplementalRecordUnmodified": true
+}

@@ -1,0 +1,59 @@
+{
+  "result": "PASS_WITH_ONE_REVISION_AND_LIMITED_RATIONALE_EXPOSURE",
+  "scope": {
+    "positions": [
+      300,
+      349
+    ],
+    "sourceKeys": 50,
+    "locales": 12,
+    "candidateFreeCells": 600,
+    "primaryChangesReviewed": 87
+  },
+  "decisions": {
+    "accept": 86,
+    "revise": 1
+  },
+  "byLocale": {
+    "ar": 4,
+    "de": 6,
+    "es": 11,
+    "fr": 7,
+    "hi": 8,
+    "id": 18,
+    "ja": 4,
+    "pt-BR": 13,
+    "vi": 5,
+    "zh-Hans": 6,
+    "zh-Hant": 5
+  },
+  "structuralChecks": {
+    "all87Pass": true,
+    "placeholders": "exact source parity",
+    "numericTokens": "exact source parity",
+    "markup": "exact source parity",
+    "inlineCode": "exact source parity",
+    "protectedLiterals": "preserved"
+  },
+  "revision": {
+    "cellId": "BookMatchingStrictnessBalancedHelpText::id",
+    "issue": "“tersedia” can mean available rather than present; reviewer wording uses “harus ada”."
+  },
+  "nativeSpeakerApproval": "outstanding; candidate-free packet records no native-speaker approval",
+  "scopeNotes": [
+    "Only the candidate-free input packet and primary-review-proposals.jsonl were consulted.",
+    "No blind-review packet, primary ledger/holds/process notes/summary, PR body, or outside proposals were accessed.",
+    "No catalog, remote PR, tests, builds, scans, or CI workflows were changed or run.",
+    "Limited exposure: the first proposal row’s embedded rationale field was shown once during schema inspection; see contamination note. No separate review-note artifact was accessed."
+  ],
+  "source": {
+    "repository": "snapetech-org/ChaptarrNG",
+    "head": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+    "tree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+    "worktreeClean": true
+  },
+  "contamination": {
+    "status": "limited exposure within the authorized proposal file",
+    "details": "The primary-review-proposals.jsonl schema sample displayed the first row’s embedded decisionRationale field once. No other rationale row or separate primary ledger, holds, process notes, or summary was inspected. This field was not used as review evidence; the first-row decision is based on candidate-free source text and caller context, with confidence reduced to moderate."
+  }
+}

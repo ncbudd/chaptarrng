@@ -161,12 +161,16 @@ test('preview failures offer retry and repeated preview clicks start only one re
 
   requests[1].reject({ responseJSON: { error: 'preview unavailable' } });
   assert.equal(modal.state.isPreviewing, false);
-  assert.equal(modal.state.previewError, 'preview unavailable');
+  assert.equal(modal.state.previewError.type, 'Components/LocalizedServerMessage');
+  assert.equal(modal.state.previewError.props.message, 'preview unavailable');
   assert.equal(requests.length, 3);
   assert.equal(requests[0].url, '/importlist/12/history');
   assert.equal(requests[2].url, '/importlist/12/history');
 
   const output = modal.render();
+  const previewError = findElements(output, (element) => element.type === 'Components/LocalizedServerMessage')
+    .find((element) => element.props.message === 'preview unavailable');
+  assert.ok(previewError);
   const retryButton = findElements(output, (element) => element.type === 'Components/Link/Button')
     .find((element) => element.props.children === 'Retry');
   assert.ok(retryButton);
@@ -181,8 +185,12 @@ test('history failures expose an explicit retry action', () => {
   modal.componentDidMount();
   requests[0].reject({ statusText: 'history unavailable' });
 
-  assert.equal(modal.state.historyError, 'history unavailable');
+  assert.equal(modal.state.historyError.type, 'Components/LocalizedServerMessage');
+  assert.equal(modal.state.historyError.props.message, 'history unavailable');
   const output = modal.render();
+  const historyError = findElements(output, (element) => element.type === 'Components/LocalizedServerMessage')
+    .find((element) => element.props.message === 'history unavailable');
+  assert.ok(historyError);
   const retryButton = findElements(output, (element) => element.type === 'Components/Link/Button')
     .find((element) => element.props.children === 'Retry');
   assert.ok(retryButton);

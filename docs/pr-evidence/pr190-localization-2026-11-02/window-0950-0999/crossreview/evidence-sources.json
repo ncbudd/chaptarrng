@@ -1,0 +1,185 @@
+{
+  "retrievedAtUtc": "2026-11-02",
+  "sources": [
+    {
+      "id": "arabic-academy-icelandic",
+      "title": "Arabic Academy of Cairo research PDF using الأيسلندية",
+      "url": "https://www.arabicacademy.gov.eg/storage/options/pdfs/154_research.pdf",
+      "supports": "Arabic spelling for Icelandic."
+    },
+    {
+      "id": "duden-chinesisch",
+      "title": "Duden: Chinesisch",
+      "url": "https://www.duden.de/rechtschreibung/Chinesisch",
+      "supports": "Chinesisch is the neuter language noun for Chinese."
+    },
+    {
+      "id": "duden-koreanisch",
+      "title": "Duden: Koreanisch",
+      "url": "https://www.duden.de/rechtschreibung/Koreanisch",
+      "supports": "Koreanisch is the neuter language noun for Korean."
+    },
+    {
+      "id": "duden-pandschabi",
+      "title": "Duden: Pandschabi",
+      "url": "https://www.duden.de/rechtschreibung/Pandschabi",
+      "supports": "Pandschabi is the neuter language noun for Punjabi."
+    },
+    {
+      "id": "duden-kroatisch",
+      "title": "Duden: Kroatisch",
+      "url": "https://www.duden.de/rechtschreibung/Kroatisch",
+      "supports": "Kroatisch means the Croatian language."
+    },
+    {
+      "id": "duden-kroatische",
+      "title": "Duden: Kroatische",
+      "url": "https://www.duden.de/rechtschreibung/Kroatische",
+      "supports": "Kroatische is a substantivized adjective used only with a definite article."
+    },
+    {
+      "id": "duden-malaiisch",
+      "title": "Duden: Malaiisch",
+      "url": "https://www.duden.de/rechtschreibung/Malaiisch",
+      "supports": "Malaiisch is a language noun for the language spoken on the Malay Peninsula and western Indonesia."
+    },
+    {
+      "id": "duden-malaysisch",
+      "title": "Duden: malaysisch",
+      "url": "https://www.duden.de/rechtschreibung/malaysisch",
+      "supports": "malaysisch means relating to Malaysia or Malaysians."
+    },
+    {
+      "id": "rae-guyarati",
+      "title": "RAE-ASALE DLE: guyaratí",
+      "url": "https://dle.rae.es/guyarat%C3%AD",
+      "supports": "guyaratí is the language spoken mainly in Guyarat."
+    },
+    {
+      "id": "rae-manes",
+      "title": "RAE-ASALE DLE: manés, manesa",
+      "url": "https://dle.rae.es/man%C3%A9s",
+      "supports": "manés is the Celtic language spoken on the Isle of Man."
+    },
+    {
+      "id": "fundeu-punyabi",
+      "title": "FundéuRAE: panyabí / punyabí",
+      "url": "https://www.fundeu.es/consulta/panyabi-1586/",
+      "supports": "FundéuRAE recommends punyabí."
+    },
+    {
+      "id": "larousse-ancient-greek",
+      "title": "Larousse English–French: Greek",
+      "url": "https://www.larousse.fr/dictionnaires/anglais-francais/Greek/584473",
+      "supports": "Larousse translates ancient Greek as grec ancien."
+    },
+    {
+      "id": "larousse-pendjabi",
+      "title": "Larousse French–English: pendjabi",
+      "url": "https://www.larousse.fr/dictionnaires/francais-anglais/pendjabi/1011640",
+      "supports": "French pendjabi is translated as Punjabi."
+    },
+    {
+      "id": "larousse-fr-manx",
+      "title": "Larousse French dictionary: manx",
+      "url": "https://www.larousse.fr/dictionnaires/francais/manx/49289",
+      "supports": "Manx is also a valid French noun for the Celtic dialect of the Isle of Man; this supports retaining the sampled French value."
+    },
+    {
+      "id": "cldr49-korean-malay",
+      "title": "Unicode CLDR 49 locale display names, Malay",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__k-n_.html",
+      "supports": "Korean display name for Malay is 말레이어."
+    },
+    {
+      "id": "cldr49-vietnamese-bengali",
+      "title": "Unicode CLDR 49 locale display names, Bengali",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__a-d_.html",
+      "supports": "Vietnamese display name is Tiếng Bangla."
+    },
+    {
+      "id": "cldr49-vietnamese-arabic",
+      "title": "Unicode CLDR 49 locale display names, Arabic",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__a-d_.html",
+      "supports": "Vietnamese display name is Tiếng Ả Rập."
+    },
+    {
+      "id": "cldr49-vietnamese-persian",
+      "title": "Unicode CLDR 49 locale display names, Persian",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__o-s_.html",
+      "supports": "Vietnamese display name is Tiếng Ba Tư."
+    },
+    {
+      "id": "cldr49-vietnamese-manx",
+      "title": "Unicode CLDR 49 locale display names, Manx",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__k-n_.html",
+      "supports": "Vietnamese display name is Tiếng Manx."
+    },
+    {
+      "id": "cldr49-vietnamese-spanish",
+      "title": "Unicode CLDR 49 locale display names, Spanish",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__o-s_.html",
+      "supports": "Vietnamese display name for Spanish is Tiếng Tây Ban Nha."
+    },
+    {
+      "id": "cldr49-japanese-hindi",
+      "title": "Unicode CLDR 49 locale display names, Hindi",
+      "url": "https://unicode.org/cldr/charts/49/by_type/locale_display_names.languages__e-j_.html",
+      "supports": "Japanese display name uses ヒンディー語."
+    },
+    {
+      "id": "cldr-indonesian-persian",
+      "title": "Unicode CLDR locale display names code list, Persian",
+      "url": "https://www.unicode.org/cldr/cldr-aux/charts/22/by_type/code_lists.languages.html",
+      "supports": "Indonesian CLDR uses Persia for Persian; this item is retained as a hold pending a fluent-speaker choice, not an automatic correction."
+    },
+    {
+      "id": "dmv-vietnamese-language-names",
+      "title": "California DMV Vietnamese language-access complaint form",
+      "url": "https://www.dmv.ca.gov/portal/file/language-access-complaint-form-vietnamese-adm-140-pdf/",
+      "supports": "Uses Tiếng Ba Tư (Farsi) for Persian."
+    },
+    {
+      "id": "kotobank-scottish-gaelic",
+      "title": "Kotobank / Britannica: スコットランド・ゲーリック語",
+      "url": "https://kotobank.jp/word/%E3%81%99%E3%81%93%E3%81%A4%E3%81%A8%E3%82%89%E3%82%93%E3%81%A9%E3%81%92%E3%83%BC%E3%82%8A%E3%81%A4%E8%AA%9E-3182125",
+      "supports": "Japanese term for Scottish Gaelic."
+    },
+    {
+      "id": "priberam-panjabi",
+      "title": "Dicionário Priberam: panjabi",
+      "url": "https://dicionario.priberam.org/panjabi",
+      "supports": "Panjabi is a Portuguese noun for the Indo-Aryan language."
+    },
+    {
+      "id": "infopedia-panjabi",
+      "title": "Infopédia: panjábi",
+      "url": "https://www.infopedia.pt/dicionarios/lingua-portuguesa/panj%C3%A1bi",
+      "supports": "Panjábi is the Portuguese name for a language spoken in Punjab/Pendjab."
+    },
+    {
+      "id": "cldr28-vietnamese-bengali",
+      "title": "Unicode CLDR 28 Vietnamese locale summary, Bengali",
+      "url": "https://unicode.org/cldr/charts/28/summary/vi.html",
+      "supports": "Earlier CLDR data used Tiếng Bengali; current CLDR 49 uses Tiếng Bangla."
+    },
+    {
+      "id": "cldr-old-indonesian-persian",
+      "title": "Unicode CLDR 22 language code list",
+      "url": "https://www.unicode.org/cldr/cldr-aux/charts/22/by_type/code_lists.languages.html",
+      "supports": "Indonesian display name for Persian is Persia."
+    },
+    {
+      "id": "catalog-style",
+      "title": "Pinned MyAnonAMouse enum and locale catalogs",
+      "url": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/",
+      "supports": "The source values are standalone provider language options; neighboring labels are bare language names and preserve BP as a literal."
+    },
+    {
+      "id": "sampled-enum-context",
+      "title": "Pinned MyAnonAMouse provider option context",
+      "url": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseSettings.cs",
+      "supports": "Each sampled source is a direct Label in MyAnonaMouseSearchLanguages and is displayed as a provider select option."
+    }
+  ]
+}

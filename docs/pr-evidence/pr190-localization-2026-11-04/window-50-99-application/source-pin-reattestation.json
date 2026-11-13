@@ -1,0 +1,17 @@
+{
+  "result": "PASS",
+  "sourceWorktree": "PASS",
+  "command": "python3 cross-audit/verify_cross_audit.py --source-worktree /mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w0-49-apply",
+  "sourceWorktreePath": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w0-49-apply",
+  "head": "daa578eaa0d1c252e969d1f5891a364b13d50ec0",
+  "tree": "e0b306dc20596ad7004bdfb9ac2cc0a3021726c7",
+  "cells": 600,
+  "selectedChanges": 149,
+  "textFreeHolds": 84,
+  "checksummedFiles": 54,
+  "inputVerifiers": {
+    "candidateFree": "PASS",
+    "primary": "PASS",
+    "blind": "PASS"
+  }
+}

@@ -169,9 +169,8 @@
       "id": "ui.loading.dodgeBooks",
       "source": "Dodge-ing these piles of books",
       "sourceFingerprint": "ea64ecfc2828977692826f897d21d30bd89d17137b8a2f2c9b5163df3bb422b4",
-      "protectedLiterals": [
-        "Dodge"
-      ],
+      "translationGuidance": "This is an English wordplay on dodge; translate the meaning naturally when the target language has no matching pun. The English source and fallback remain unchanged.",
+      "protectedLiterals": [],
       "callsites": [
         {
           "file": "frontend/src/Components/Loading/loading-messages.json",

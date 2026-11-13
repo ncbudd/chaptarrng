@@ -1,0 +1,733 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerFiles": [
+    {
+      "blob": "de2b315c5b9139157836643aaaa4f610adc37bea",
+      "bytes": 14529,
+      "path": "frontend/src/Activity/History/Details/HistoryDetails.js",
+      "sha256": "7315c2aa359d206444b191c31ace784c51a41127df855148fcb219e7ccebfd44"
+    },
+    {
+      "blob": "7723722fb3b75598c66a13e2a17a9900c39c8e9d",
+      "bytes": 2340,
+      "path": "frontend/src/Activity/Queue/QueueDetails.js",
+      "sha256": "b7a921cb0f4f31c9eaf441f66a6f8427bbf593e90528ba34b05ed9983b070887"
+    },
+    {
+      "blob": "df52f6a33510a29647475cd782bd8d830d8ab2cd",
+      "bytes": 18490,
+      "path": "frontend/src/Activity/Queue/QueueRow.js",
+      "sha256": "5f4bf001c06fb650aeaee3e4735ced204fd08d2fec5a81768fb0eabef7a683d5"
+    },
+    {
+      "blob": "c55bd368fb7b2064b658d2b0bd4c6113a4aecb91",
+      "bytes": 7533,
+      "path": "frontend/src/Activity/Queue/QueueStatusCell.js",
+      "sha256": "33826b602dfa21a5ee412f01a757d4f671d13d9addc8e57bfc6856ebff35f7a4"
+    },
+    {
+      "blob": "f6a224303f214f5e88f921ecd2d11e0d8a464156",
+      "bytes": 9923,
+      "path": "frontend/src/Author/Edit/AuthorMediaMoveControl.js",
+      "sha256": "09b4bbc2b6deb335dcdc57dd50ecb116b72209f273137fe621e3d79ac137b891"
+    },
+    {
+      "blob": "4079c9812f2cac1fdbeeadffae0a49cf77f11b87",
+      "bytes": 11315,
+      "path": "frontend/src/Author/Editor/BulkAuthorMediaMoveModal.js",
+      "sha256": "aa8e567f9c0e7e340f7ce2ed6396bc624914f8bddd499e9b60a46cb3401ecc7f"
+    },
+    {
+      "blob": "5744464b9d2761b84a14e26169ea1dca400eeab4",
+      "bytes": 23454,
+      "path": "frontend/src/Book/Details/Matching/BookMatchProvenanceTable.js",
+      "sha256": "0f0cc307c8a45e458032afa1be04bc9a78a23da84d8cc35f72afb6d260a13f62"
+    },
+    {
+      "blob": "9752155891fa76484beb62480eaa23284f2b1c4f",
+      "bytes": 6653,
+      "path": "frontend/src/Book/Narrator/NarratorSearchModalContent.js",
+      "sha256": "01bd90f225a4ae78c34ef9bfe9d8a16768883a9a68af269c549512658c8200d6"
+    },
+    {
+      "blob": "9591e12d18c6b18254e9a09e0e4885d4e0fa925e",
+      "bytes": 20685,
+      "path": "frontend/src/Components/Form/EnhancedSelectInput.js",
+      "sha256": "4f8ddc73fcebe0e252e4c86e69b337e34c9d33e1df978583a1d30c201c09f160"
+    },
+    {
+      "blob": "d14a343edb723008726e2b25b5b72fa65e83c74b",
+      "bytes": 3036,
+      "path": "frontend/src/Components/Form/Form.js",
+      "sha256": "36d10805360b4b62dccc20724b81e23281bfdb8c3bfffb72372a5199055413b1"
+    },
+    {
+      "blob": "d3057aec604f7c687acd5d5f03cc6e87796e7525",
+      "bytes": 9949,
+      "path": "frontend/src/Components/Form/FormInputGroup.js",
+      "sha256": "d41ab0a8624f18fd04e5a0ec950eaf1a04d39eda9b3f51bce0a7613960ad2e5d"
+    },
+    {
+      "blob": "c36805a327b12b21f47f2fa29dd9f7a1eb2db694",
+      "bytes": 2481,
+      "path": "frontend/src/Components/Form/FormInputHelpText.js",
+      "sha256": "fb4247bc7c83425db947178a55e5835b20137dce60afff98d13554e0e2fbc210"
+    },
+    {
+      "blob": "938d2b6ad2ace2bc6981fdb4bc0b588c9acde8f4",
+      "bytes": 3248,
+      "path": "frontend/src/Components/Form/OAuthInput.js",
+      "sha256": "8bfdf6cba89d5afdb89378a23020f3fa388eab6db9795933869b241bd77bca9d"
+    },
+    {
+      "blob": "b6e1a68ef69568b5b355a3cbabd43e8b4bf747fd",
+      "bytes": 6429,
+      "path": "frontend/src/Components/Page/Header/ImportProgressDrawerModal.js",
+      "sha256": "fcd796c3ee9576ef721f00f46250018d63840d4df72d24aae4412cb47c7c66af"
+    },
+    {
+      "blob": "70cba895df266c3326e276d9b82cb774d739f213",
+      "bytes": 6596,
+      "path": "frontend/src/Components/Page/Sidebar/Messages/Message.js",
+      "sha256": "3770b9d9d0e578a2a3f18087ef6e05078bddf26a9eb31578b5879c108fa93d97"
+    },
+    {
+      "blob": "cdd1a15bb7471b75fb816d8ced857f37e587ff4d",
+      "bytes": 1657,
+      "path": "frontend/src/Components/PendingImportStatus/PendingImportStatus.js",
+      "sha256": "3dae78954b66f3f622612062384ffbba6ce47f4e0e31423fd848ab07a22a160c"
+    },
+    {
+      "blob": "422cde32369e08f41a7f4a9d85804e8c5b2499e5",
+      "bytes": 14814,
+      "path": "frontend/src/FirstRun/AuthenticationRequiredModalContent.js",
+      "sha256": "a4a12aca1652faa8f27506c4a75b893bbbbf87364ac8114e9a2434b266a7f084"
+    },
+    {
+      "blob": "c00f4d67c8a9ccc2446953d747dea2b6614fd1b9",
+      "bytes": 16096,
+      "path": "frontend/src/InteractiveSearch/InteractiveSearchRow.js",
+      "sha256": "b959cb721c4e5d970336e71cd921aa04978f8ce46e4d4e55333301adbfbb50e6"
+    },
+    {
+      "blob": "85c5d4c6ef27bf4e7720fe50502e759604dd2c30",
+      "bytes": 20913,
+      "path": "frontend/src/Search/Series/AddNewSeriesModalContent.js",
+      "sha256": "15d8a35aea3ac711f86bcfcc9ef695287583c2777ea3405d56cd7ce624f77d51"
+    },
+    {
+      "blob": "eb0093a4c2de072dc75d158d939c7344d6c607a3",
+      "bytes": 30969,
+      "path": "frontend/src/Settings/DownloadClients/DownloadClients/EditDownloadClientModalContent.js",
+      "sha256": "246fe82d74d678fcf0cf1defc604543f099c5ac6ce2bdf79bc37a81a207f45ce"
+    },
+    {
+      "blob": "fe25e5fbdaf4ec668b89d7dc773c9f17f34d94f7",
+      "bytes": 30902,
+      "path": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
+      "sha256": "6320debe55959afd13effe97e17a8269d8e258a55dc13ebb569e197c2251d079"
+    },
+    {
+      "blob": "3affb429b2396ffe6c3f3b5f7a2f21482715dd0d",
+      "bytes": 11239,
+      "path": "frontend/src/Settings/ImportLists/ImportLists/ImportListSyncModal.js",
+      "sha256": "a155e327b89f237e514a325e84c99db8dcf64055a34e997993f00c065e7d49d9"
+    },
+    {
+      "blob": "24ff87583fcd03f19d01033df98fb5feffeb0e8b",
+      "bytes": 12138,
+      "path": "frontend/src/Settings/Indexers/Indexers/EditIndexerModalContent.js",
+      "sha256": "f5eda2d4a9a9e13bf606a58ada3cf9dedad307af65418d45a172cf0b35a0ea34"
+    },
+    {
+      "blob": "879a3028d70e586776413d2b023179d4b8005c88",
+      "bytes": 3387,
+      "path": "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/ValidationPanel.js",
+      "sha256": "fd25eb2f57680ac052f03db1dc802f2876b9c5a3481e4b8f086206910fb2be58"
+    },
+    {
+      "blob": "08726796d583292125b3d2dd3cd6fbfdc3b90944",
+      "bytes": 39603,
+      "path": "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js",
+      "sha256": "07fba9125d06c3c5ff9a53cd7ca2128610d5eb8e2b67a1b13394a4723538c2c0"
+    },
+    {
+      "blob": "9451d7becea12c3eb9de2f8c6708d3d68e37565e",
+      "bytes": 7706,
+      "path": "frontend/src/Settings/Notifications/Notifications/EditNotificationModalContent.js",
+      "sha256": "dffe70bba108bebee6bffd9f1a9f84fa982dea557cf0dfdbf8643c3e67b9d2d5"
+    },
+    {
+      "blob": "13f0e924fe1e325bcbf5a0cf82c9d262d04fdeca",
+      "bytes": 14332,
+      "path": "frontend/src/Store/Actions/systemActions.js",
+      "sha256": "6043068eebc4fe1696440f78ad974c608d8cde5fcb9334afdf0f9471f2e2bda9"
+    },
+    {
+      "blob": "69ef61d24bf8290c4ac80afeedbbb55880e9ca8f",
+      "bytes": 7107,
+      "path": "frontend/src/System/Backup/RestoreBackupModalContent.js",
+      "sha256": "ccd627c5de3bd071dad86a5c7f21f69aeab062ff554c0fa638ddeac36c557e18"
+    },
+    {
+      "blob": "fda209df8a453cbd5e0f4860e49c03fa85c34665",
+      "bytes": 6126,
+      "path": "frontend/src/System/Quickstart/HardcoverApiKeyModal.js",
+      "sha256": "3564943a51da54112e7776fef43db19e2003a34a99e607c9b89507199265eb1e"
+    },
+    {
+      "blob": "65de8702e01f3077be4c520e82d20316d834201c",
+      "bytes": 19542,
+      "path": "frontend/src/System/Quickstart/Quickstart.js",
+      "sha256": "6a62537e42b7efc7a157fa475b45a00aec14093d0757c7a5b528c7547a0f42ca"
+    },
+    {
+      "blob": "3a1722f64dc68f82b075c77f7fbb78882970f177",
+      "bytes": 10671,
+      "path": "frontend/src/System/SettingsBackup/SettingsBackupModal.js",
+      "sha256": "48847eace058b6aae3933aa6251c8c4ea668b883e1a8124fb445f65de7ac3ff0"
+    },
+    {
+      "blob": "ac35abe922131a72f2aa2f087d0f80017c6d7ee2",
+      "bytes": 12103,
+      "path": "frontend/src/System/SettingsBackup/SettingsRestoreModal.js",
+      "sha256": "739929a4e0744664967c1e5b13563f0afb96720592b02f6c2e234f27b4c20b88"
+    },
+    {
+      "blob": "1f2fd30beb5691b372004cb9ca612bcea973b8e3",
+      "bytes": 6850,
+      "path": "frontend/src/System/Status/Health/Health.js",
+      "sha256": "6d21a70617e8494872b7fa179d41a5efda3db29869d3f7184289eb96b8c4ddf5"
+    },
+    {
+      "blob": "794f6a167ef124412a4c075ec7964a594a7d1730",
+      "bytes": 32916,
+      "path": "frontend/src/UnmappedFiles/UnmappedFilesTable.js",
+      "sha256": "8802f92c107c6ddd4c0dff6b4daaf87c28aa1452c935088621425dd9178a31cb"
+    },
+    {
+      "blob": "d0830a0b8d85ec12daf4eb20645c1079c6604179",
+      "bytes": 483,
+      "path": "frontend/src/Utilities/Object/getErrorMessage.js",
+      "sha256": "0c4b2fbf854cef26dbff2fc090511b627ea5789e3d971a7c922c3587837fb86a"
+    },
+    {
+      "blob": "0b55c9ec804a6e955360b91666a886febd01ebe1",
+      "bytes": 93161,
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "sha256": "5867b1968488296ae963f67414acc6fdf0cf9cc1f3a027b9ea517267c1c74f7c"
+    },
+    {
+      "blob": "cdb81f1e30bc9d8034b58f3e817b8b5f27f34a7a",
+      "bytes": 11771,
+      "path": "src/Chaptarr.Api.V1/Author/AuthorMediaMoveController.cs",
+      "sha256": "a2419911cbed58c7940fd2c326924a61c4ca4b5fb3ae8e070752bbe175a0c6ed"
+    },
+    {
+      "blob": "d0526e719cb71462db5abe7e78ca6f8127a7e806",
+      "bytes": 26236,
+      "path": "src/Chaptarr.Api.V1/BookFiles/BookFileController.cs",
+      "sha256": "1e8d8add92e0bdb18068a09c5f44826d9bc12b9a7cdf37029defc92533e01838"
+    },
+    {
+      "blob": "47e1117bee380b6959c948db3817e95a4ab6816a",
+      "bytes": 126362,
+      "path": "src/Chaptarr.Api.V1/Books/BookController.cs",
+      "sha256": "27a2af1a16c38f8fad81fde5d18839aadb6206db83f58f582be3c444ada0c9d1"
+    },
+    {
+      "blob": "131695dabac7c9b71b65d467db1ca1f4e4bd6bf2",
+      "bytes": 13517,
+      "path": "src/Chaptarr.Api.V1/Config/HardcoverConfigController.cs",
+      "sha256": "325ffd9b3b58e0403e893a39ce4768c9b368cd4d82e0b184629c41177d98f05b"
+    },
+    {
+      "blob": "51071271016f949c970781ff3c0a0c150197b894",
+      "bytes": 7328,
+      "path": "src/Chaptarr.Api.V1/Config/MetadataProviderConfigController.cs",
+      "sha256": "4834d20d4feba5a670f0ffcbcd58c01be41bb26e2507507cc098242364914541"
+    },
+    {
+      "blob": "2bb3f34b0472de773437e5fec7349693a1ced135",
+      "bytes": 6139,
+      "path": "src/Chaptarr.Api.V1/CustomFormats/CustomFormatController.cs",
+      "sha256": "fd81e99408b07c3e28fa4d304a8cdaacbed937959df50ec27ac773a54f3a545b"
+    },
+    {
+      "blob": "fb170eaa363d4e94534b046bf400169a51e68cf9",
+      "bytes": 19674,
+      "path": "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs",
+      "sha256": "a18d66c921856787011872e2cc91bb5b1dafca7aa92808cb0446abd111e9b30b"
+    },
+    {
+      "blob": "5f57dc86af2c2933bf475f2a6228bfe33e05262f",
+      "bytes": 11992,
+      "path": "src/Chaptarr.Api.V1/Profiles/Metadata/MetadataProfileController.cs",
+      "sha256": "d35f0ef3db55e62aafe42bb5c7182f1ae07d8bf39914bad5b92c5dbb7c08d69e"
+    },
+    {
+      "blob": "65fd70ebbad8959a0e3dfae23372b15ca47faab2",
+      "bytes": 5542,
+      "path": "src/Chaptarr.Api.V1/Profiles/Quality/QualityItemsValidator.cs",
+      "sha256": "a824c13448d5ffb069a39916cdc8c3ad1411d2df645d85dd31d5328d705d4037"
+    },
+    {
+      "blob": "1a086779b1753eb4a755b3e538fb82029d642f52",
+      "bytes": 13806,
+      "path": "src/Chaptarr.Api.V1/RootFolders/RootFolderController.cs",
+      "sha256": "662e3df8be85ddd7e8624ae3d1998df045912a8bbc70d4e8b50e0bc6e6d54f62"
+    },
+    {
+      "blob": "a2007e501d3c5812a296fdd81e5540c2a72005b8",
+      "bytes": 41475,
+      "path": "src/Chaptarr.Api.V1/RootFolders/RootFolderResource.cs",
+      "sha256": "fcb07f956e4831e58a1824cc3304a93e468833b0187272ccdb992a638d51af46"
+    },
+    {
+      "blob": "028139556d14f10b6a4abe7d0e68f9e5981c675a",
+      "bytes": 1907,
+      "path": "src/Chaptarr.Http/Middleware/StartingUpMiddleware.cs",
+      "sha256": "abc504da5598ec8c2d28a121c274390aab80e5a2f2f09dac5a2ae2e90d87dee4"
+    },
+    {
+      "blob": "fa861d12a5e486db973a36e4643cbc8b039eb113",
+      "bytes": 681,
+      "path": "src/Chaptarr.Http/Validation/MissingBookSearchIntervalValidator.cs",
+      "sha256": "04a9ff958933585be821ba65c4786190c93b08e8c29cfc9c50c7f61726ef3ca3"
+    },
+    {
+      "blob": "7c2ecc2cf40c783477e46c570dbc09d9c7b78065",
+      "bytes": 45280,
+      "path": "src/NzbDrone.Core/Books/Calibre/CalibreProxy.cs",
+      "sha256": "62ea60bffa43dc5ba2c95210a481108972797ba483eb35b28ed3e7abfd7d1816"
+    },
+    {
+      "blob": "3f9906d7b81ec984471f94ff36e8d8f8cf26e8ab",
+      "bytes": 54126,
+      "path": "src/NzbDrone.Core/Books/Services/AddBookService.cs",
+      "sha256": "86b6f9b4af32d8c839d850ecd6988354c05ecd0a0e9253ceeb2f8ddf24e18902"
+    },
+    {
+      "blob": "7bf7a4a5b975f51e5671a7d77e53ab9fd6e13612",
+      "bytes": 18337,
+      "path": "src/NzbDrone.Core/Books/Services/BookNarratorService.cs",
+      "sha256": "3f75e0449411a5eb22e8b1500529525bcf5d6576033a893c1c1aff3029452b68"
+    },
+    {
+      "blob": "c6d6e892b8303484f7785ea4fe40b1ad112946a2",
+      "bytes": 2560,
+      "path": "src/NzbDrone.Core/CustomFormats/Specifications/NarratorNamesSpecification.cs",
+      "sha256": "10323edd71d894dde139e555df0061b57b4a0dd74fb3d687076a781e59f3b7ce"
+    },
+    {
+      "blob": "97b74c60dde92971dbede2d53f3896c6f2233a4b",
+      "bytes": 15753,
+      "path": "src/NzbDrone.Core/Download/Clients/Direct/DirectDownloadClientTransfer.cs",
+      "sha256": "300ac647ba8bbdb2530301609dc65aab908eb515be059d2466fcca275bb400f4"
+    },
+    {
+      "blob": "166d6efe93e5b6901477d721ac6df55eb693d398",
+      "bytes": 25564,
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/TorrentDownloadStation.cs",
+      "sha256": "ad78fb0f798b5be0f174bd60717a9b21827eb5885ea1b23d311b9cc9575d6446"
+    },
+    {
+      "blob": "a02821cf9062b61e928202a9cb392d8021c70f38",
+      "bytes": 18996,
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+      "sha256": "1b1742cd77410a2b260777c3d691b1ebefc1d057e7f2742ca87a4c60d645ecc7"
+    },
+    {
+      "blob": "f59450c659dc85d626d195266b57fcc41d4c31fd",
+      "bytes": 3806,
+      "path": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
+      "sha256": "9445c67f3107f66a8722aec5decaf4f8f58f07329f1d1d19a63af3afac55dcf1"
+    },
+    {
+      "blob": "e28a93210597fac0d38ec415c52dc2ff07ccf5cf",
+      "bytes": 4294,
+      "path": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
+      "sha256": "2c2ca0d38c5e9a75ddc0277e97e2794b2be65e41200c1005cfcf423eeca9cd30"
+    },
+    {
+      "blob": "83280fcdd97e29dff366fdf5db8c76d5472ffae6",
+      "bytes": 39982,
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "sha256": "b9c8f5088ed7ffbcf40dfb765624ed3bd3ac6b8431bdf0bea85739064305e270"
+    },
+    {
+      "blob": "40ef810c0fcb0f85d0a34d1bc18f7bbcc57b52f5",
+      "bytes": 24285,
+      "path": "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs",
+      "sha256": "efee6bb68ba896dac3bd57ed6488fe76a220f382e6301e96b905b8330bd21e50"
+    },
+    {
+      "blob": "1d9b540a59137478335aaaae7274f1b6ed985455",
+      "bytes": 12571,
+      "path": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionBase.cs",
+      "sha256": "f38d2ce53410d0a015c8e0d524526c79d29800505348d04a688a3b5141693489"
+    },
+    {
+      "blob": "eefc4a7e7588d295d391d2cf381c16aeba033367",
+      "bytes": 5184,
+      "path": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
+      "sha256": "0ca140275edd47f18afebfa707092096eb54982d30d459cfbb21405aa7aa1d11"
+    },
+    {
+      "blob": "90de1e28c36ec3a340b9d58ed2dd0a9e7d214f6e",
+      "bytes": 14603,
+      "path": "src/NzbDrone.Core/Download/Clients/uTorrent/UTorrent.cs",
+      "sha256": "a9d760a9b08a146f470c77312149d6c538615444c8ea96b5517465e9ec24c0fb"
+    },
+    {
+      "blob": "064b6537f29ae63b1ab2a3222bea6a1058f3fb21",
+      "bytes": 43048,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs",
+      "sha256": "ca79e8aa41aa5091bec4221e8880b06ba34865ee07202d29d55bb1e9e2f70190"
+    },
+    {
+      "blob": "30236601ca7080d27ea88aefc05bde74dffe7b42",
+      "bytes": 6342,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
+      "sha256": "cd57948fc631eca8bb5400d10c96642818c3741bfddf5775f15597409e8343c6"
+    },
+    {
+      "blob": "7d2f89e3dbe84408ee391282dc8c078fbbe48e03",
+      "bytes": 11480,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs",
+      "sha256": "b09e865e5c023f004ecf8f28a3847d318feea0c67e9a49f0aceaa94c6ff419f6"
+    },
+    {
+      "blob": "32aeee97f665d7f603aba225425f52b71f25bafa",
+      "bytes": 9530,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/Lists/GoodreadsListImportList.cs",
+      "sha256": "d2929b882f521e3eae871b4b29233c3599b7e8b469e03923e94c63c08b580a22"
+    },
+    {
+      "blob": "dd7b7f65944fe16b37d5fd662bca12bf83eda48a",
+      "bytes": 63221,
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs",
+      "sha256": "7d9564eb92ac68a02cf40be01b4f5593716987c9a1582da469120885908a19d2"
+    },
+    {
+      "blob": "2f5e790223a485f52e43386935cd6b8553e2d87e",
+      "bytes": 5582,
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
+      "sha256": "987f4712fefaeb1a8b936c68e29919a3eb28a98b89847befce5fd7df71d3ec47"
+    },
+    {
+      "blob": "711c814601749a61baa924f3755415d0110e2347",
+      "bytes": 9236,
+      "path": "src/NzbDrone.Core/ImportLists/HttpImportListBase.cs",
+      "sha256": "a20ff766a1f32ab02d6f7191d2c45a1c0a2d8f14927d0e02d174e893946f6cca"
+    },
+    {
+      "blob": "b97a5bf12c5bbaf77bf1d292c092cef7dfe6379d",
+      "bytes": 21173,
+      "path": "src/NzbDrone.Core/Indexers/HttpIndexerBase.cs",
+      "sha256": "4b8a7aa0b414c0bb428f1c748829aed6faa05759d3debbab9958477c2a262da6"
+    },
+    {
+      "blob": "3dd7e875b902bbb6b8bbc638829b215b02eab284",
+      "bytes": 5118,
+      "path": "src/NzbDrone.Core/Notifications/Apprise/AppriseProxy.cs",
+      "sha256": "c4b4352d02af7fd2f68f62a5cfa8efe08b23bd8da12ca5ef91cced53f54660b4"
+    },
+    {
+      "blob": "4a28fc8ad8fb06eca946db0dfbd335d11397b361",
+      "bytes": 29296,
+      "path": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServer.cs",
+      "sha256": "2c39ade9545099143c5df9c35cf2654fd24307e59c9094095b8cce14264eaf17"
+    },
+    {
+      "blob": "f14d721ac31cc010bd376b2ccda09ccf9a3a2565",
+      "bytes": 2364,
+      "path": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
+      "sha256": "d35228e4f54e6067d64d5e088152349c3f0a430e4b48028bedc1f0a3b66f3486"
+    },
+    {
+      "blob": "24df1e4ad634e46e75fec180aae939f0848163a2",
+      "bytes": 1925,
+      "path": "src/NzbDrone.Core/Notifications/CustomScript/CustomScriptSettings.cs",
+      "sha256": "d919ab902d761b0e038640c92c7c96643d5087a8cb64d81212f95c92400e063f"
+    },
+    {
+      "blob": "ec7f4a9b66b2237e4784b0dcf5c2c3fb4998c5e6",
+      "bytes": 7860,
+      "path": "src/NzbDrone.Core/Notifications/Email/Email.cs",
+      "sha256": "9ce6df4d3df918ffa1585a07f60d1937a89eb6cc7a5b1092b3ee6e8c3c98a42a"
+    },
+    {
+      "blob": "c6784aa8357cc3234c49a73e307e73365e6c8ba2",
+      "bytes": 16637,
+      "path": "src/NzbDrone.Core/Notifications/Grimmory/GrimmoryProxy.cs",
+      "sha256": "fe58c202cfc8db1d35f602f258dd6496cbb977c3caa8a0bda175f6b53864c30e"
+    },
+    {
+      "blob": "85b03b71eb5a8920efd4abcc913eed56ba41fdf9",
+      "bytes": 3814,
+      "path": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
+      "sha256": "c0050d01494b3dfb3f58d0bd70c809007a1ac2235b114bb1785a32c92dd5f1ef"
+    },
+    {
+      "blob": "940b989c913bc8ff2e39a079814f2569a884804c",
+      "bytes": 3287,
+      "path": "src/NzbDrone.Core/Notifications/Synology/SynologyIndexer.cs",
+      "sha256": "9cec4ed626494d89ef6f8500675c255654ce38f7fdf7389866e53435cecb3d52"
+    },
+    {
+      "blob": "f797ebd3c0ab5d57e8f149ceaf632aff1f23aff8",
+      "bytes": 718,
+      "path": "src/NzbDrone.Core/Validation/FolderValidator.cs",
+      "sha256": "3f3e3d1d0ec5b8a02f77767a63e4fb3e64936a6902e79cc1226b1c7201fdc6be"
+    },
+    {
+      "blob": "24d3c67bf1d9e637d9236142f9a2c7bcc983f13d",
+      "bytes": 1958,
+      "path": "src/NzbDrone.Core/Validation/Paths/AuthorExistsValidator.cs",
+      "sha256": "2969e2d8d78a47adf16bc9951f87b22a38f012dfc8d66fd719ed919564c18d6b"
+    },
+    {
+      "blob": "c3a9304a1e390386bc15946b4ebaee2cbd689987",
+      "bytes": 1027,
+      "path": "src/NzbDrone.Core/Validation/Paths/PathValidator.cs",
+      "sha256": "0bebb8d2b4e0ac5aec61a63af8901745749281178bec6b68d0ebdf75750591b8"
+    },
+    {
+      "blob": "a32391771930b7c1c46569529a688f0fbfd49d1e",
+      "bytes": 1398,
+      "path": "src/NzbDrone.Core/Validation/Paths/StartupFolderValidator.cs",
+      "sha256": "989cea94edf6894237cf7c7cf57a3f7c1d4074afe2eaeb2329ad807bcab2c667"
+    },
+    {
+      "blob": "ab69a7196541123e76fe346210c7c80d6ce042ef",
+      "bytes": 1260,
+      "path": "src/NzbDrone.Core/Validation/Paths/SystemFolderValidator.cs",
+      "sha256": "444b1d995141b4415aeb1261532a377735e41a514d822d1a396b6c4b0a47927f"
+    },
+    {
+      "blob": "6a0aa649ad1fa21769543e61f5c8529d55e9157e",
+      "bytes": 3729,
+      "path": "src/NzbDrone.Core/Validation/RuleBuilderExtensions.cs",
+      "sha256": "e1d7d1a9482195ac8d81c49051d789ae1ce114c083393d27660873fa5de1c608"
+    }
+  ],
+  "callerReferences": 63,
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "genericPipelineRegistry": {
+    "blob": "1531851877466bbfeb0b16072fcf07d6dda925e2",
+    "bytes": 21781,
+    "path": "docs/localization/server-message-callers.json",
+    "sha256": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b"
+  },
+  "githubBranchRefHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "githubRemoteBranchHead": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "localeCatalogs": {
+    "ar": {
+      "blob": "0c747f9a3dd9eb7a6936b0d90543274c80d6b9f4",
+      "bytes": 431621,
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "f75d46c7f07e858f84fe0d31e059fb91d03a0d5006672a635b3539587cf11ca2"
+    },
+    "de": {
+      "blob": "b0a8b09439c1382cdb103e02927dfbf053e78c68",
+      "bytes": 361679,
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "f469a4ae5f866fae5eb60fea8422e983488f906197f171be5265a05b013b77a0"
+    },
+    "es": {
+      "blob": "c674b4cd8f75a80f1725355cc4680ad5c11a3e98",
+      "bytes": 359336,
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "13e8fa6c25dc86a5b8409e6b48ff02ee80c794dd7ef24d4d89a4844657464b48"
+    },
+    "fr": {
+      "blob": "3d7e2f7377026b96b65d692a3a6d62f9f0ca2c31",
+      "bytes": 374925,
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "2f7dfb214ae0af8306d1169fcb7fd197ce27997d163675380327947bb10adb6b"
+    },
+    "hi": {
+      "blob": "7959fbb1245f8726732806251c6920b420c373bb",
+      "bytes": 605676,
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "a5d2bfe8a1e32326e100fcce3731cc87f1099abfb2103411bcccec441db3f85a"
+    },
+    "id": {
+      "blob": "b810a3f28a510b9265894a19a065d9807194c4b1",
+      "bytes": 332972,
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "a824042f49533b18a9d189506c3d656fcb01e97005a9192cac000d2dea8bfb5e"
+    },
+    "ja": {
+      "blob": "a16d937de3181b27ce24f103d7c9ce69ceaa36e1",
+      "bytes": 409293,
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "c0ff8f1f8244fa556c8e6dbf6e921dd2eaa89906f71104a34a587903a8255f55"
+    },
+    "ko": {
+      "blob": "4f08fdb67cf69a941dca691b47e922530c36789d",
+      "bytes": 368489,
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "6ae1a436861b4db4e8309ad86e5c61255904602badaf3faacafe5aac8cb475f0"
+    },
+    "pt-BR": {
+      "blob": "20cd1f972c056eda33b4c4260d92e72c919c9ef6",
+      "bytes": 352834,
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "0c1719c853aadce78fe3e9683c6b1f8edf4eb3b2f3d18366e0eb55ce2f3bfcef"
+    },
+    "vi": {
+      "blob": "9f62392ac513b56ad0e6e94af61fae6d5f7bb1c8",
+      "bytes": 389337,
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "fa16f2dfa749325b93c23a599d185978d5d65998c9dada0d22b4293966990063"
+    },
+    "zh-Hans": {
+      "blob": "4deecb2c4397485680ed64025f9d5c6497c663d1",
+      "bytes": 306428,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "16dc6ea8d2f5162bd34dc623925a11c24c850e85a26584c3ca5d4fafc9343c32"
+    },
+    "zh-Hant": {
+      "blob": "1853c3946e979a0930e6e167e4fae459a966fe0b",
+      "bytes": 307879,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "d93f34e7876d94046095cbc42757374ca4ffaf5bd10533929b6becabef9ae522"
+    }
+  },
+  "noPriorDispositionOverlap": true,
+  "priorDispositionPacketCount": 19,
+  "priorDispositionsRecorded": 9600,
+  "priorPositionCoverage": {
+    "cellCount": 9600,
+    "end": 799,
+    "fullyCovered": true,
+    "overlapWithSelectedWindow": 0,
+    "positionCount": 800,
+    "start": 0
+  },
+  "priorWindowBoundaryOrdinal": 799,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "positions": [
+      800,
+      849
+    ],
+    "sourceIds": 50,
+    "window": "W800-W849"
+  },
+  "sourceCallerGaps": [],
+  "sourceCatalog": {
+    "blob": "be4cfe01ea4b4994f434ad9ba85c8f5ec52d45ec",
+    "bytes": 312095,
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "467b8c902bfad2f187338689d7bf75d7a922539f909aa09b5cfe01c91ac5d574"
+  },
+  "sourceFollowupCorrectionEvidence": {
+    "blob": "b3d48da35e6e28273f67d839260b919f2f1e25ee",
+    "bytes": 3488,
+    "path": "docs/localization/source-followup-20261102.json",
+    "sha256": "496613fc2d3abd5ee03fea24849a1067899bd28e34d206f341f0f84875af7498"
+  },
+  "sourceQueue": {
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "currentMissingIdsCount": 1210,
+    "currentMissingIdsFile": "current-missing-ids.json",
+    "currentMissingIdsFileSha256": "bb141161e9f34ff50d1260554ac7d35be9175e009ac9459001108c5403fb445e",
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "path": "docs/localization/source-followup-20261101.json",
+    "queueBaseHead": "c0aebe1e11ea75eb936d69a563a0d6405fe66ce8",
+    "selectedSourceIdListSha256": "6328f7e2287bbecfb477f4571547f93ae136f251bb5808a6fbbe2804d1076b01",
+    "selectedSourceIds": [
+      "server.message.mbdf9bc8e9c84",
+      "server.message.mbe3741e42b3c",
+      "server.message.mbe8cfdb18d3d",
+      "server.message.mbf2bef5ba1da",
+      "server.message.mc17ea4dfb45f",
+      "server.message.mc1b539256890",
+      "server.message.mc21c7d5d2843",
+      "server.message.mc30b981283d0",
+      "server.message.mc34d917eb83b",
+      "server.message.mc390f9b5f909",
+      "server.message.mc3b239e3eb56",
+      "server.message.mc3e41cdbd274",
+      "server.message.mc462c3fca43d",
+      "server.message.mc5cf1e747783",
+      "server.message.mc5e69abdf17a",
+      "server.message.mc700e6bf21f6",
+      "server.message.mc76459e52a3e",
+      "server.message.mc78af077e86e",
+      "server.message.mc87b96cb40ec",
+      "server.message.mc9036b7c4f55",
+      "server.message.mc90b09463d1b",
+      "server.message.mc96c588cf1f8",
+      "server.message.mc9e941eacbbd",
+      "server.message.mca68744b8296",
+      "server.message.mca83d096fea2",
+      "server.message.mcb9b05f6a4a0",
+      "server.message.mccd996f9f042",
+      "server.message.mcd62354c7d7b",
+      "server.message.mced5ab929209",
+      "server.message.mcf68e3f6b8e3",
+      "server.message.mcfc8b38e45bf",
+      "server.message.mcfeae8b07694",
+      "server.message.md0b3139c8f8d",
+      "server.message.md0cc5efbe5e0",
+      "server.message.md0f03bb6aace",
+      "server.message.md1438d52738d",
+      "server.message.md3369b86b4dd",
+      "server.message.md339df0d44f9",
+      "server.message.md4d56753c34d",
+      "server.message.md4fffc46dcc4",
+      "server.message.md512ba71433e",
+      "server.message.md5295352b8ae",
+      "server.message.md7cf291e278c",
+      "server.message.md83ae8fb37f8",
+      "server.message.md9111cdedddb",
+      "server.message.md91e67950f89",
+      "server.message.mda7cc46933e8",
+      "server.message.mda7d07b4febc",
+      "server.message.mda954bbc0eee",
+      "server.message.mdca0d476f941"
+    ],
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128"
+  },
+  "sourceRegistry": {
+    "blob": "74471172c71e59bb850a47da87b586de82eacb66",
+    "bytes": 766671,
+    "path": "docs/localization/server-message-sources.json",
+    "sha256": "e00a584477c1a268408f49151716c2fe44a31f5a56154d94379129391acdec49"
+  },
+  "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "w799BoundaryMatchesPriorCrossReview": 12,
+  "worktree": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng",
+  "worktreeClean": true
+}

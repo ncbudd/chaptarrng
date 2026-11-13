@@ -1,0 +1,36 @@
+{
+  "browserReview": false,
+  "evidence": [
+    "English source catalog",
+    "12 locale catalogs",
+    "exact-head server-message source registry with refreshed current caller refs",
+    "exact-head frontend server-message display callsites",
+    "W699 prior cross-review final target and caller-boundary reattestation",
+    "W650 primary and independent cross-review packet reattestation"
+  ],
+  "exactHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "exactTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "localeCells": 600,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "nativeSpeakerApproval": false,
+  "protectedLiteralPolicy": "Preserve placeholders, API field names, provider/product names, protocol values, enum tokens, file extensions, URLs, and endpoint paths; translate ordinary user-facing labels and prose.",
+  "repositoryModified": false,
+  "reviewType": "source/caller-context-aware semantic and terminology review of every frozen locale cell",
+  "reviewerRole": "primary semantic reviewer",
+  "sourceIds": 50,
+  "testsBuildsCiRun": false,
+  "workflowFilesTouched": false
+}

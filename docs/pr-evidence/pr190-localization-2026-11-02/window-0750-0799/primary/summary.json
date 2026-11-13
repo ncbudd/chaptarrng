@@ -1,0 +1,193 @@
+{
+  "browserReview": false,
+  "confidenceCounts": {
+    "moderate": 600
+  },
+  "counts": {
+    "accept-current": 385,
+    "hold": 0,
+    "propose-correction": 215,
+    "propose-refinement": 0
+  },
+  "currentMarkupMismatches": 0,
+  "currentPlaceholderMismatches": 0,
+  "currentProtectedMismatchCells": 1,
+  "exactHead": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+  "exactTree": "3baf8c11efe42c617a286cd37665e946303c6d2a",
+  "finalMarkupMismatches": 0,
+  "finalPlaceholderMismatches": 0,
+  "finalProtectedMismatchCells": 0,
+  "genericPipelineFiles": 35,
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "holdCount": 0,
+  "icuSources": 0,
+  "inputChecksumCommandOutputLines": 103,
+  "inputChecksumValidation": "passed",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "markupSources": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocale": {
+    "ar": {
+      "accept-current": 35,
+      "propose-correction": 15
+    },
+    "de": {
+      "accept-current": 28,
+      "propose-correction": 22
+    },
+    "es": {
+      "accept-current": 29,
+      "propose-correction": 21
+    },
+    "fr": {
+      "accept-current": 33,
+      "propose-correction": 17
+    },
+    "hi": {
+      "accept-current": 31,
+      "propose-correction": 19
+    },
+    "id": {
+      "accept-current": 41,
+      "propose-correction": 9
+    },
+    "ja": {
+      "accept-current": 30,
+      "propose-correction": 20
+    },
+    "ko": {
+      "accept-current": 27,
+      "propose-correction": 23
+    },
+    "pt-BR": {
+      "accept-current": 34,
+      "propose-correction": 16
+    },
+    "vi": {
+      "accept-current": 32,
+      "propose-correction": 18
+    },
+    "zh-Hans": {
+      "accept-current": 32,
+      "propose-correction": 18
+    },
+    "zh-Hant": {
+      "accept-current": 33,
+      "propose-correction": 17
+    }
+  },
+  "placeholderSources": 9,
+  "priorDispositionBoundary": {
+    "exactPriorDispositionOverlapCount": 0,
+    "exactPriorDispositionOverlapRows": [],
+    "priorPacketChecksumsVerified": true,
+    "priorSourceIdCount": 750,
+    "priorSourceIdsDisjoint": true,
+    "priorW700Reconciliation": "prior-w700-reconciliation.json",
+    "scopePositions": [
+      750,
+      799
+    ],
+    "selectedSourceIdListSha256": "bac56bbd5bbb5c7532db4d19669943bea5298ef347dfe026cda3866f339ab531",
+    "sourceIds": 50,
+    "uniqueSourceIds": true,
+    "w700Applied": true,
+    "w749BoundaryRows": 12,
+    "w749BoundarySourceTargetMatchesPriorCrossReview": 12
+  },
+  "priorW700": {
+    "crossReviewHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "crossReviewTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+    "currentHead": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+    "currentTree": "3baf8c11efe42c617a286cd37665e946303c6d2a",
+    "liveTargetDiffs": [],
+    "liveTargetsMatchCrossReviewFinal": 600,
+    "primaryAndCrossReviewChecksumsVerified": true,
+    "primaryHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "primaryTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+    "priorCellCount": 600,
+    "priorSourceIdCount": 50,
+    "recommendation": "W700 is applied: all 600 live locale values match independent cross-review final targets; source typos at W654 and W695 are corrected at the current head.",
+    "sourceChangesCount": 0,
+    "sourceTextChangesSinceReview": [],
+    "w654SourceTypoCorrected": true,
+    "w695ThroughMailgunSourceCorrected": true
+  },
+  "priorW700CrossReviewSha256SUMS": "1ec3f7e3bcdee4d1ecceffec4bd9815fdeced986c168ada55bdc36bb0d8e7574",
+  "priorW700PrimarySha256SUMS": "41b0308d2bbdd289e0c4835a1129f847befc22701c3e0dc38f9ef9c3eebfb363",
+  "proposalCount": 215,
+  "protectedLiteralChecks": 600,
+  "pullRequest": 190,
+  "releasesTagsMergesPerformed": false,
+  "remoteBranchHead": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryModified": false,
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "positions": [
+      750,
+      799
+    ],
+    "sourceIds": 50
+  },
+  "sourceCallerFiles": 52,
+  "sourceCallerGaps": [],
+  "sourceCallerReferences": 65,
+  "sourceCallerRows": 50,
+  "sourceIdListSha256": "bac56bbd5bbb5c7532db4d19669943bea5298ef347dfe026cda3866f339ab531",
+  "sourceWindowSha256": "4ca2d26e5bb17fc472d28a1039038fc1faf1626c32909c1e5123ff5ea71308d3",
+  "staleRegistryPinsRefreshed": [
+    {
+      "file": "src/NzbDrone.Core/Indexers/Torznab/Torznab.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 139,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"ApiPath\", \"Jackett's all endpoint is not supported, please add indexers individually\", \"server.message.ma4a7539d1468\")",
+      "sourceId": "server.message.ma4a7539d1468",
+      "sourceOrdinal": 759
+    },
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 702,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to qBittorrent\", \"server.message.ma5add25e2d2b\")",
+      "sourceId": "server.message.ma5add25e2d2b",
+      "sourceOrdinal": 761
+    },
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/Aria2/Aria2.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 332,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to Aria2\", \"server.message.ma78299fc1030\")",
+      "sourceId": "server.message.ma78299fc1030",
+      "sourceOrdinal": 763
+    }
+  ],
+  "testsBuildsCiRun": false,
+  "w749BoundaryCallerRefs": 12,
+  "w749BoundaryRows": 12,
+  "workflowFilesTouched": false
+}

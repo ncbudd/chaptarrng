@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "review": "Independent semantic cross-review of ChaptarrNG PR #190 W100–149 primary part A",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+    "isDraft": true,
+    "mergeStateStatus": "CLEAN",
+    "state": "OPEN"
+  },
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "scope": {
+    "sourcePositions": [
+      100,
+      149
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr"
+    ],
+    "cells": 300
+  },
+  "sourceIdList": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "fileSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "compactListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "totalIds": 1210,
+    "sliceIds": [
+      "provider.field.f0efa2f6e6d2b",
+      "provider.field.f39bbc1d8b91b",
+      "provider.field.f0fe46e7d8d2a",
+      "provider.field.fffc595f7f1a9",
+      "provider.field.f40547e6a6702",
+      "provider.field.f1c419054d0a6",
+      "provider.field.ffd06a3b2e208",
+      "provider.field.f198ab7b8b868",
+      "provider.field.ff9db72ced1ee",
+      "provider.field.f3efeb5b0889f",
+      "provider.field.f275b6410b255",
+      "provider.field.f0e1e2d8486b6",
+      "provider.field.f8ae75fc385e8",
+      "provider.field.fa969d04ec2d0",
+      "provider.field.fef4618f47dc6",
+      "provider.field.f8cb711d03db7",
+      "provider.field.fa09f62eec6d8",
+      "provider.field.fdfc03b2059db",
+      "provider.field.faac2240a8e42",
+      "provider.field.f1a8f7d97f354",
+      "provider.field.f5cfc4f47114e",
+      "provider.field.fa837f9239f7c",
+      "provider.field.fe30f57f7c18f",
+      "provider.field.f0c83ef4d603a",
+      "provider.field.f6126605f5ec8",
+      "provider.field.f6407f6d3c82e",
+      "provider.field.f59c7aadcca5d",
+      "provider.field.f4e9aecfd3b92",
+      "provider.field.fbe17b52bf053",
+      "provider.field.f50daa23e691a",
+      "provider.field.fa207a3b75949",
+      "provider.field.f91bc6fc1d38a",
+      "provider.field.ffbbc0487f001",
+      "provider.field.f285fb519aa1a",
+      "provider.field.ffd272adc2f58",
+      "provider.field.f29b6b9e083cc",
+      "provider.field.f4891b0209fad",
+      "provider.field.f1ee0e50bc744",
+      "provider.field.fa4f2502db2e0",
+      "provider.field.fd296d5ee89d3",
+      "provider.field.f1ee868fd9557",
+      "provider.field.f70589413a3c9",
+      "provider.field.f21d73e148c35",
+      "provider.field.f8d223bd1b121",
+      "provider.field.fc2ff59e65c06",
+      "provider.field.f258d6cc199ae",
+      "provider.field.f7c6679a4c0b7",
+      "provider.field.ffb082a613681",
+      "provider.field.f43d5fbd565ae",
+      "provider.field.f5f2d90a6787f"
+    ]
+  },
+  "sourceCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "bytes": 312087,
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "keyCount": 4165
+  },
+  "targetCatalogs": [
+    {
+      "locale": "es",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "bytes": 358629,
+      "sha256": "738a137916dc85d71678142a6e15881caaa4ae14a353f18d6e5bb3c9faca198c",
+      "blob": "d363b793af5be6a052c6ec4031730db24c487481",
+      "keyCount": 4165,
+      "sourceFollowupSnapshotSha256": "0f6c8a14ff301d86ff2c82c95b57740262202438bf65bba300fd73ddcd469b69",
+      "differsFromHistoricalSnapshot": true
+    },
+    {
+      "locale": "zh-Hans",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "bytes": 305712,
+      "sha256": "36d469adc33d4d47e766a7ee96a28282831f7b81b9341418e3fda6390b5b23b3",
+      "blob": "0ff28182b9eabc92c6a37166bb8e11ea08cba9c1",
+      "keyCount": 4165,
+      "sourceFollowupSnapshotSha256": "fbcbf0b468764d2545237a6a431ce4264447b23a2fae5edf3b8c52793a54effa",
+      "differsFromHistoricalSnapshot": true
+    },
+    {
+      "locale": "hi",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "bytes": 604911,
+      "sha256": "d050f86b4b2f8e14a1e8d0b85b912b3b47054f87b9ab877d2ece494f7a09960d",
+      "blob": "dc0ffd1f8553eccd2fbf616cfc3e5607110b31d8",
+      "keyCount": 4165,
+      "sourceFollowupSnapshotSha256": "6a0e0f24b5d122fee319167a3ac33d5a61035f167313990fe8aa1fefc138c36b",
+      "differsFromHistoricalSnapshot": true
+    },
+    {
+      "locale": "de",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "bytes": 360525,
+      "sha256": "01dfd60ff2f9089c540078ecf508515880734f195f401cb13f3f9a907d8a3bca",
+      "blob": "1eeb292b474c3a85012b066f9baff6d888c8263d",
+      "keyCount": 4165,
+      "sourceFollowupSnapshotSha256": "cd71c159e52fdb575b746ce4e641b798854b01be028e5d0b0a5d1ca7221a09cc",
+      "differsFromHistoricalSnapshot": true
+    },
+    {
+      "locale": "ja",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "bytes": 408268,
+      "sha256": "183fb16402ad7650e64bce68fe48a821c13088996de075fe59730f68dfb78a32",
+      "blob": "1c88162641be930fa22f964ea1d3126fa54cbccf",
+      "keyCount": 4165,
+      "sourceFollowupSnapshotSha256": "556d72d406fba43d792d0f5d8e5777816fe37815143c3a0a9cb6fae275694a0f",
+      "differsFromHistoricalSnapshot": true
+    },
+    {
+      "locale": "fr",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "bytes": 374091,
+      "sha256": "a3a71e6f5472e338cff4e5a3c9c267c18067506dce4132b90bcb6081993473be",
+      "blob": "14eb0a2b774a39e482f3cf5dcd20554e6290dd40",
+      "keyCount": 4165,
+      "sourceFollowupSnapshotSha256": "140be9638e05599ec3310909712f708f99526a0ec58888f5ccced0aa544b28ea",
+      "differsFromHistoricalSnapshot": true
+    }
+  ],
+  "primaryPacket": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102",
+    "filesSha256": {
+      "README.md": "cbdf4adaa4531abad579a7245c36059e6ce685b3fee10ae36b959baa4d5df312",
+      "SHA256SUMS": "bcee6bb9baa3b9e705469eb3eac6a9c8a16c9873fdef89ea842ba8895d57a576",
+      "attestation.json": "4515ae74ce7b5cd29bafe7abe00b899c9c35a859bb28c9ec0b3c6744a31d4e8f",
+      "caller-context.jsonl": "c28a7469f4ca74f652e699f6b70424fec56ac2dec775c2a8891b1c763b1e6d1a",
+      "input-cells.jsonl": "a2daba65003a6a0b9ee4bbd3763e190deb9c6abcd5bbbb5cbae926a57e138b90",
+      "manifest.json": "64efc80cda6eb1d7788c816bf5a53f78d13374cb35c75dfc2c205b09ef54db09",
+      "review-cells.jsonl": "b88816d055892ad5843298215b2e55a14a42d07efd7ab7ad574cfb3a12936d56",
+      "source-slice.jsonl": "265c36c350468693963c6cf0280cfbd1401bfae0b13a6f95c42c6faf0ca80199",
+      "summary.json": "c4cdc4e11cbe78a1ad9eea1fb29c2ef086ad2ec12db903f1eda28e82d36ead83"
+    },
+    "primarySummaryCounts": {
+      "accept-current": 274,
+      "propose-correction": 24,
+      "propose-refinement": 2
+    }
+  },
+  "callerEvidence": {
+    "referencesReattested": 372,
+    "uniqueCallerFilesIncludingCatalogLines": 12,
+    "uniqueCodeCallerFiles": 12,
+    "uniqueCallerLines": 55,
+    "mismatches": 0
+  },
+  "placeholders": {
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "mismatches": 0
+  },
+  "nativeSpeakerApproval": false,
+  "actions": "No repository/catalog edits, PR actions, tests/builds/scans/CI, workflow changes, releases, tags, or merges.",
+  "blockers": []
+}

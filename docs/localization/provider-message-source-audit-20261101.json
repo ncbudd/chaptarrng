@@ -1,0 +1,324 @@
+{
+  "version": 1,
+  "baseHead": "c0aebe1e11ea75eb936d69a563a0d6405fe66ce8",
+  "scope": "Fixed app-authored ProviderMessage notices rendered by provider test forms. Raw provider/API messages stay opaque; source entries are explicit-ID-only and have no source matcher patterns.",
+  "newSourceIds": [
+    "server.message.m566bae95cfdb",
+    "server.message.m73172a5045d6",
+    "server.message.mddaec7220c51",
+    "server.message.md6a7ade8523b",
+    "server.message.m9f7f2489aa05",
+    "server.message.md4a741052e8b",
+    "server.message.m621dd0308bef",
+    "server.message.m4cd205e7d07a",
+    "server.message.mc6073db4b613",
+    "server.message.m12f8b73a2b72",
+    "server.message.m47f0922640fa"
+  ],
+  "newMessages": 11,
+  "newTargetCells": 132,
+  "included": [
+    {
+      "id": "server.message.m566bae95cfdb",
+      "source": "This indexer supports ebook searches only. Configured URLs remain in the order you enter them.",
+      "sourceFingerprint": "f5103841570fa674e751c4197b1c90e869157855df131a961a740325058a0b4f",
+      "parameters": [],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "This indexer supports ebook searches only. Configured URLs remain in the order you enter them."
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Indexers/DirectDownload/DirectDownloadIndexer.cs",
+          "line": 46,
+          "sourceLine": "\"This indexer supports ebook searches only. Configured URLs remain in the order you enter them.\",",
+          "sourceLineSha256": "654af87de3be09d7f558a381389aff2ea7cd3ea54f55221cb955577193213183",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.m73172a5045d6",
+      "source": "Books from your Hardcover lists and reading statuses will be matched by title and author name against your configured metadata source.",
+      "sourceFingerprint": "6ae7d9f92e8b8a2e7246b95985e53499da81d1de76072ffcbf1ad2ccfd4ced58",
+      "parameters": [],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "Books from your Hardcover lists and reading statuses will be matched by title and author name against your configured metadata source."
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/ImportLists/Hardcover/HardcoverImport.cs",
+          "line": 26,
+          "sourceLine": "\"Books from your Hardcover lists and reading statuses will be matched by title and author name against your configured metadata source.\",",
+          "sourceLineSha256": "122192dafeea9d79edd32813dd833ae75c6c8d82f4ceaa107aa470b5e6704d1b",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.mddaec7220c51",
+      "source": "Connection succeeded, but MAM account status is unavailable or stale. Cached counts are not shown.",
+      "sourceFingerprint": "2d052a7710dcc133b4130a83ce3dfb35686364eddcf32ea1d7cbe5c23bda1c95",
+      "parameters": [],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "Connection succeeded, but MAM account status is unavailable or stale. Cached counts are not shown."
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+          "line": 224,
+          "sourceLine": "\"Connection succeeded, but MAM account status is unavailable or stale. Cached counts are not shown.\",",
+          "sourceLineSha256": "793216c7d5ec6bca49ca3a587483363aea38769e744b16b4aa76b67828c69908",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.md6a7ade8523b",
+      "source": "✓ VIP Member - Class: {value0}",
+      "sourceFingerprint": "092bc162035fee946b265ecb2e88284d5550155fcaa753d3fc48d6fc78884537",
+      "parameters": [
+        {
+          "name": "value0"
+        }
+      ],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "✓ VIP Member - Class: {value0}"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+          "line": 238,
+          "sourceLine": ": $\"\\u2713 VIP Member - Class: {cls}\"",
+          "sourceLineSha256": "cbee8bd090a6d5f6fbde30d5ef4c140eb05961980cd712377697a0f8ddabe1fc",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.m9f7f2489aa05",
+      "source": "✓ VIP Member - Class: {value0}; unsatisfied torrents: {value1}/{value2}",
+      "sourceFingerprint": "c00ebccb84ddacc000bc735c0308b581038c5230e3674d10585a16490c7c9dad",
+      "parameters": [
+        {
+          "name": "value0"
+        },
+        {
+          "name": "value1"
+        },
+        {
+          "name": "value2"
+        }
+      ],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "✓ VIP Member - Class: {value0}; unsatisfied torrents: {value1}/{value2}"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+          "line": 237,
+          "sourceLine": "? $\"\\u2713 VIP Member - Class: {cls}; unsatisfied torrents: {Settings.UnsatisfiedCount}/{Settings.UnsatisfiedLimit}\"",
+          "sourceLineSha256": "0cd76f57db3711c0bb5ec4e2ff31bda3b3121ec2e4ba2d69188a22b7f87753a0",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.md4a741052e8b",
+      "source": "User Class: {value0} (Standard member)",
+      "sourceFingerprint": "f4a46aed1bfba95c2f4a334b04cdb29f35e4b06316eaa5b908174d2a9ab23a63",
+      "parameters": [
+        {
+          "name": "value0"
+        }
+      ],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "User Class: {value0} (Standard member)"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+          "line": 241,
+          "sourceLine": ": $\"User Class: {cls} (Standard member)\";",
+          "sourceLineSha256": "9b1d9c226970ea69d89292b548213838d808e24db4154d8f9f983b09a00dd863",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.m621dd0308bef",
+      "source": "User Class: {value0} (Standard member); unsatisfied torrents: {value1}/{value2}",
+      "sourceFingerprint": "9605178ad7e7ffc0c8e748ee3c6173d563344587cb2c3e47c95099855ac12d00",
+      "parameters": [
+        {
+          "name": "value0"
+        },
+        {
+          "name": "value1"
+        },
+        {
+          "name": "value2"
+        }
+      ],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "User Class: {value0} (Standard member); unsatisfied torrents: {value1}/{value2}"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouse.cs",
+          "line": 240,
+          "sourceLine": "? $\"User Class: {cls} (Standard member); unsatisfied torrents: {Settings.UnsatisfiedCount}/{Settings.UnsatisfiedLimit}\"",
+          "sourceLineSha256": "f31f0656c33265957055e2aaa83bb428822371936fe5380c60ac71e507668aa3",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.m4cd205e7d07a",
+      "source": "rTorrent will not pause torrents when they meet the seed criteria. Chaptarr can remove torrents after seeding is done only when Remove Completed is enabled and the torrent is not protected by Preserve torrents in client or Post-Import Category. After importing it will also set \"{value0}\" as an rTorrent view, which can be used in rTorrent scripts to customize behavior.",
+      "sourceFingerprint": "32aa6d37621b47656f5444761638d0cc6a177224a1114bf7195213dcc2c814d5",
+      "parameters": [
+        {
+          "name": "value0"
+        }
+      ],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "rTorrent will not pause torrents when they meet the seed criteria. Chaptarr can remove torrents after seeding is done only when Remove Completed is enabled and the torrent is not protected by Preserve torrents in client or Post-Import Category. After importing it will also set \"{value0}\" as an rTorrent view, which can be used in rTorrent scripts to customize behavior."
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrent.cs",
+          "line": 146,
+          "sourceLine": "public override ProviderMessage Message => new ProviderMessage($\"rTorrent will not pause torrents when they meet the seed criteria. Chaptarr can remove torrents after seeding is done only when Remove Completed is enabled and the torrent is not protected by Preserve torrents in client or Post-Import Category. After importing it will also set \\\"{_imported_view}\\\" as an rTorrent view, which can be used in rTorrent scripts to customize behavior.\", ProviderMessageType.Info, \"server.message.m4cd205e7d07a\", new { value0 = _imported_view });",
+          "sourceLineSha256": "ec9e98f5b0873648cafba5df6dd78a0c1dfa35505ef2a34c59916f1f95c103e2",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.mc6073db4b613",
+      "source": "Chaptarr will handle automatic removal of torrents based on the current seed criteria in Settings -> Indexers",
+      "sourceFingerprint": "60d9dca503ffe7f9e0a1fc7dfb82ff5ce389ab73262e4b141bc64db4628a9074",
+      "parameters": [],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "Chaptarr will handle automatic removal of torrents based on the current seed criteria in Settings -> Indexers"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/Clients/Flood/Flood.cs",
+          "line": 89,
+          "sourceLine": "public override ProviderMessage Message => new ProviderMessage(\"Chaptarr will handle automatic removal of torrents based on the current seed criteria in Settings -> Indexers\", ProviderMessageType.Info, \"server.message.mc6073db4b613\");",
+          "sourceLineSha256": "88d48a62918394932694d9bd8051e67932de38ec1241df0e6ccf6eb725238bb2",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.m12f8b73a2b72",
+      "source": "Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account",
+      "sourceFingerprint": "089de74ddee6ee02e23d783bd65cb8eff5ba0a3caee95a5e365adf48cac0a2a8",
+      "parameters": [],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/TorrentDownloadStation.cs",
+          "line": 56,
+          "sourceLine": "public override ProviderMessage Message => new ProviderMessage(\"Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account\", ProviderMessageType.Warning, \"server.message.m12f8b73a2b72\");",
+          "sourceLineSha256": "ceb8df55655860e497a87799a195b20b12317cb47f67174f44be2973ce6d7159",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        },
+        {
+          "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+          "line": 52,
+          "sourceLine": "public override ProviderMessage Message => new ProviderMessage(\"Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account\", ProviderMessageType.Warning, \"server.message.m12f8b73a2b72\");",
+          "sourceLineSha256": "ceb8df55655860e497a87799a195b20b12317cb47f67174f44be2973ce6d7159",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    },
+    {
+      "id": "server.message.m47f0922640fa",
+      "source": "Testing will execute the script with the EventType set to Test, ensure your script handles this correctly",
+      "sourceFingerprint": "71d05001a97fa1ed2e40c25cdfe0d3482d95734b77a98e0865e941c8025898f1",
+      "parameters": [],
+      "patterns": [],
+      "explicitOnly": true,
+      "sourceTemplates": [
+        "Testing will execute the script with the EventType set to Test, ensure your script handles this correctly"
+      ],
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs",
+          "line": 38,
+          "sourceLine": "public override ProviderMessage Message => new ProviderMessage(\"Testing will execute the script with the EventType set to Test, ensure your script handles this correctly\", ProviderMessageType.Warning, \"server.message.m47f0922640fa\");",
+          "sourceLineSha256": "5af0787724292e8df71cceade1ece7f2405dad56d5e197b396726bc78711dd6d",
+          "category": "provider-test-message",
+          "surface": "Provider test notice localized only from its trusted app message ID; dynamic parameters remain data"
+        }
+      ],
+      "protectedLiterals": []
+    }
+  ],
+  "excluded": [
+    {
+      "source": "Direct Download API-key probe/status message",
+      "reason": "Composed from remote resolver output, masked key and current configuration; rendered opaque with no trusted message ID."
+    },
+    {
+      "source": "MAM authentication and account API failures",
+      "reason": "Validation failures can include upstream response/exception data; rendered opaque unless a trusted message ID is explicitly supplied."
+    },
+    {
+      "source": "Import-list save and synchronization API error/status payloads",
+      "reason": "May contain plugin/provider exception details or persisted provider data; explicit trusted IDs are honored, otherwise rendered opaque."
+    }
+  ],
+  "boundaries": [
+    "Static ProviderMessage text carries a stable trusted ID to the UI.",
+    "MAM user class, counts, limits, and the rTorrent configured view remain dynamic parameters; localized rendering isolates string parameters.",
+    "The localized test-form boundary never matches the message string. New source entries are marked explicitOnly and are not eligible for raw matcher lookup.",
+    "No target locale values are added; all 11 IDs remain missing in all 12 target locales (132 cells)."
+  ]
+}

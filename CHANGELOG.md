@@ -6,16 +6,30 @@ history grouped from conventional commits.
 
 ## [Unreleased]
 
+## [0.9.1001](https://github.com/snapetech-org/chaptarrng/compare/v0.9.1000..v0.9.1001) - 2026-11-13
+
 ### Security and packaging
 
-- Move .NET-based product, build, and test images to runtime 10.0.15 and SDK 10.0.404, apply current operating-system package upgrades, and remove the unused Pebble test CA from product images.
-- Build bubblewrap 0.13.1, LAME 4.0, and FFmpeg 9.0.2 from checksum-verified sources; keep MP3 support through a replaceable LGPL library, verify the pinned m4b-tool, and disable FFmpeg network protocols.
-- Replace the runtime's outdated Expat library with a checksum-verified Expat 2.10.0 package that preserves the libexpat1 ABI.
+- Refresh the product, build, and test image inputs to the current .NET 10.0.15 runtime and SDK 10.0.404 servicing baseline, apply available OS package upgrades, and remove the unused Pebble test CA from product images.
+- Build container bubblewrap 0.13.1, LAME 4.0, and FFmpeg 9.0.2 from checksum-verified upstream sources, retain MP3 encoding through a replaceable LGPL shared library, and fetch the pinned m4b-tool with SHA-256 verification; disable FFmpeg network protocols and use bubblewrap's user-namespace sandbox model.
+- Replace the distro's outdated libexpat1 runtime with a checksum-verified Expat 2.10.0 package across product and real-tool test images to include the upstream 32-bit integer-overflow fix while preserving the libexpat1 ABI.
 - Remove runtime wget; health checks use bounded direct curl requests and reject redirects and non-2xx responses.
 - Keep the Cloudron migration candidate's health check working without runtime wget by requiring an explicit 2xx response from its local proxy.
-- Build the FreeBSD .NET 10.0.15 packs from the pinned VMR revision and update the Linux x86 handoff fixture to the rebuilt Debian Forky image.
-- Rebuild the updater-signature verifier from GitHub CLI 2.104.0 with current Go `x/net` and `x/crypto` dependencies.
-- Add exact-head Trivy image scans for the product's amd64, arm64, and arm/v7 images, plus all buildable build and integration fixture images; fail on active HIGH and CRITICAL vulnerabilities.
+- Pin the Linux x86 handoff fixture to the rebuilt Debian Forky image and source-build the missing FreeBSD .NET 10.0.15 runtime packs from the pinned .NET VMR revision.
+- Rebuild the updater-signature verifier with GitHub CLI 2.104.0 and current Go `x/net` and `x/crypto` dependencies.
+- Use the base-controlled exact-head Trivy gate to rebuild the product, builder, and integration fixture images and fail on active HIGH or CRITICAL findings.
+
+### User-facing changes
+
+#### Fixed
+
+- Correct the NzbGet KeepHistory message to describe the inclusive 25000 limit and update its translations across all 12 direct locales.
+- Apply 38 context-matched translation corrections across 11 locales, including AudioBookShelf library labels, torrent adoption prompts, and author-folder help.
+- Correct the SABnzbd and Mailgun English validation messages and apply the reviewed W650–W699 catalog corrections across all 12 direct locales.
+- Improve 205 cross-reviewed translations across all 12 direct locales with wording matched to application context (W700–W749).
+- Correct 229 cross-reviewed localization cells across all 12 direct locales in W750–W799, including localized Bookshelf and Author Editor labels and software import-limit wording.
+- Apply 149 cross-reviewed translation corrections and refinements across all 12 locale catalogs (W50–W99).
+- Apply 42 cross-reviewed translation corrections and refinements across all 12 locale catalogs (W100–W149).
 
 ## [0.9.1000](https://github.com/snapetech-org/chaptarrng/compare/v0.9.999..v0.9.1000) - 2026-11-10
 

@@ -1,0 +1,12 @@
+{
+  "callerGaps": [],
+  "directCallerReferences": 58,
+  "loadingCallerRows": 7,
+  "loadingMessagePipelineReferences": 10,
+  "providerOptionPipelineReferences": 20,
+  "serverMessagePipelineGaps": [],
+  "serverMessagePipelineReferences": 76,
+  "sourceRows": 50,
+  "staleRegistryPins": [],
+  "uniqueDirectCallerFiles": 16
+}

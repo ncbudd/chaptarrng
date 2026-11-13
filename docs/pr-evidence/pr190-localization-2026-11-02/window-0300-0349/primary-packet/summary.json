@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+  "exactTree": "d76d887609ae90c9238ffda9b192a4c0c72be227",
+  "scope": {
+    "positions": [
+      300,
+      349
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "counts": {
+    "accept-current": 559,
+    "propose-correction": 9,
+    "propose-refinement": 32,
+    "hold": 0
+  },
+  "proposalCount": 41,
+  "perLocale": {
+    "es": {
+      "accept-current": 48,
+      "propose-refinement": 1,
+      "propose-correction": 1,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 46,
+      "propose-refinement": 2,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 45,
+      "propose-refinement": 4,
+      "propose-correction": 1,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 47,
+      "propose-refinement": 2,
+      "propose-correction": 1,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 47,
+      "propose-refinement": 3,
+      "propose-correction": 0,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 47,
+      "propose-refinement": 2,
+      "propose-correction": 1,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 48,
+      "propose-refinement": 2,
+      "propose-correction": 0,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 47,
+      "propose-refinement": 3,
+      "propose-correction": 0,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 47,
+      "propose-refinement": 3,
+      "propose-correction": 0,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 45,
+      "propose-refinement": 3,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 45,
+      "propose-refinement": 5,
+      "propose-correction": 0,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 47,
+      "propose-refinement": 2,
+      "propose-correction": 1,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "currentCallerRefs": 51,
+    "uniqueCallerFiles": 9,
+    "lineNumberShifts": 30,
+    "callerMismatches": 0,
+    "allCallersAttestedAtHead": true
+  },
+  "placeholders": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 3,
+    "currentMismatchCells": [
+      {
+        "sourceOrdinal": 312,
+        "sourceId": "provider.field.f9da80bea42a7",
+        "locale": "zh-Hans",
+        "missingLiterals": [
+          "write on update"
+        ]
+      },
+      {
+        "sourceOrdinal": 312,
+        "sourceId": "provider.field.f9da80bea42a7",
+        "locale": "ar",
+        "missingLiterals": [
+          "write on update"
+        ]
+      },
+      {
+        "sourceOrdinal": 312,
+        "sourceId": "provider.field.f9da80bea42a7",
+        "locale": "zh-Hant",
+        "missingLiterals": [
+          "write on update"
+        ]
+      }
+    ],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdWindowOverlap": 0,
+    "matchesInPrimaryOrCrossReviewSourceIdsPositions0To299": 0,
+    "scannedPriorLedgerFiles": 39,
+    "priorSourceIdCount": 300,
+    "reviewedPriorWindows": [
+      {
+        "window": [
+          0,
+          49
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102"
+      },
+      {
+        "window": [
+          50,
+          99
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          100,
+          149
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          150,
+          199
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          200,
+          249
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0200-0249-primary-20261102"
+      },
+      {
+        "window": [
+          250,
+          299
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0250-0299-primary-20261102"
+      }
+    ],
+    "contextOnlyPriorSourceId": "provider.field.f947c6197dfcb",
+    "contextOnlyPriorDispositionRows": 12,
+    "adjacentPriorContext": {
+      "sourceOrdinal": 299,
+      "sourceId": "provider.field.f947c6197dfcb",
+      "cells": 12,
+      "primaryDispositions": {
+        "accept-current": 11,
+        "propose-refinement": 1
+      },
+      "crossReviewDispositions": {
+        "accepted-current": 11,
+        "accepted-candidate": 1
+      },
+      "priorCrossReviewCurrentTargetsMatchingLive": 11,
+      "priorCrossFinalTargetsMatchingLive": 12,
+      "callerRefsReattested": 1
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

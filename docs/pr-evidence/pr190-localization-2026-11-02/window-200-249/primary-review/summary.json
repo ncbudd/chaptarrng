@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "32686f13760d04de2bba00af47fc561e632741de",
+  "exactTree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+  "scope": {
+    "positions": [
+      200,
+      249
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "counts": {
+    "propose-correction": 40,
+    "propose-refinement": 12,
+    "accept-current": 548,
+    "hold": 0
+  },
+  "proposalCount": 52,
+  "perLocale": {
+    "es": {
+      "accept-current": 45,
+      "propose-refinement": 0,
+      "propose-correction": 5,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 46,
+      "propose-refinement": 2,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 45,
+      "propose-refinement": 2,
+      "propose-correction": 3,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 47,
+      "propose-refinement": 1,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 47,
+      "propose-refinement": 1,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 47,
+      "propose-refinement": 0,
+      "propose-correction": 3,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 44,
+      "propose-refinement": 2,
+      "propose-correction": 4,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 45,
+      "propose-refinement": 0,
+      "propose-correction": 5,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 48,
+      "propose-refinement": 0,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 45,
+      "propose-refinement": 3,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 44,
+      "propose-refinement": 1,
+      "propose-correction": 5,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 45,
+      "propose-refinement": 0,
+      "propose-correction": 5,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "currentCallerRefs": 52,
+    "uniqueCallerFiles": 7,
+    "lineNumberShifts": 26,
+    "callerMismatches": 0,
+    "allCallersAttestedAtHead": true
+  },
+  "placeholders": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 0,
+    "recommendedMismatches": 0
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdWindowOverlap": 0,
+    "matchesInPrimaryOrCrossReviewSourceIdsPositions0To199": 0,
+    "scannedPriorLedgerFiles": 32,
+    "priorSourceIdCount": 200,
+    "reviewedPriorWindows": [
+      {
+        "window": [
+          0,
+          49
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102"
+      },
+      {
+        "window": [
+          50,
+          99
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          100,
+          149
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          150,
+          199
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102"
+      }
+    ],
+    "contextOnlyPriorSourceId": "provider.field.f5269857c4a80",
+    "contextOnlyPriorDispositionRows": 12
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

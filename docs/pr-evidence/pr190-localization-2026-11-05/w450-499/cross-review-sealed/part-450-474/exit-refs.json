@@ -1,0 +1,24 @@
+{
+  "baseRef": "main",
+  "baseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "baseTree": "3c27ce1d128d1d74d3b46bf507e2f99f9c02f4d8",
+  "branchApiSha": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "capturedAtUtc": "2026-11-05T10:34:19+00:00",
+  "draft": true,
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "headSha": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "headTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "mainApiSha": "2ade9a5280a64ce7de8f1016961f88e93bd6cb8e",
+  "mainTree": "bf48eb2492ca4ebde48fa39f974ebe5dd7abf6bd",
+  "merged": false,
+  "prBodyContentIncluded": false,
+  "pullRefSha": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "pullRequest": 190,
+  "remoteRefs": {
+    "refs/heads/codex/chaptarrng-localization-complete-20261031": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "refs/heads/main": "2ade9a5280a64ce7de8f1016961f88e93bd6cb8e",
+    "refs/pull/190/head": "16c809b4787d70616a1a296ab0d90cf17923ba86"
+  },
+  "repository": "snapetech-org/ChaptarrNG",
+  "state": "open"
+}

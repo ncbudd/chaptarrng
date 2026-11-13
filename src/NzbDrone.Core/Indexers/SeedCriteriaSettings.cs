@@ -10,22 +10,26 @@ namespace NzbDrone.Core.Indexers
         {
             RuleFor(c => c.SeedRatio).GreaterThan(0.0)
                 .When(c => c.SeedRatio.HasValue)
-                .AsWarning().WithMessage("Should be greater than zero");
+                .AsWarning().WithMessage("Should be greater than zero")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.me3d343200bdd", isWarning: true));
 
             RuleFor(c => c.SeedTime).GreaterThan(0)
                 .When(c => c.SeedTime.HasValue)
-                .AsWarning().WithMessage("Should be greater than zero");
+                .AsWarning().WithMessage("Should be greater than zero")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.me3d343200bdd", isWarning: true));
 
             RuleFor(c => c.DiscographySeedTime).GreaterThan(0)
                 .When(c => c.DiscographySeedTime.HasValue)
-                .AsWarning().WithMessage("Should be greater than zero");
+                .AsWarning().WithMessage("Should be greater than zero")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.me3d343200bdd", isWarning: true));
 
             if (seedRatioMinimum != 0.0)
             {
                 RuleFor(c => c.SeedRatio).GreaterThanOrEqualTo(seedRatioMinimum)
                     .When(c => c.SeedRatio > 0.0)
                     .AsWarning()
-                    .WithMessage($"Under {seedRatioMinimum} leads to H&R");
+                    .WithMessage($"Under {seedRatioMinimum} leads to H&R")
+                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m36ff1c2553cc", new { value0 = seedRatioMinimum }, isWarning: true));
             }
 
             if (seedTimeMinimum != 0)
@@ -33,7 +37,8 @@ namespace NzbDrone.Core.Indexers
                 RuleFor(c => c.SeedTime).GreaterThanOrEqualTo(seedTimeMinimum)
                     .When(c => c.SeedTime > 0)
                     .AsWarning()
-                    .WithMessage($"Under {seedTimeMinimum} leads to H&R");
+                    .WithMessage($"Under {seedTimeMinimum} leads to H&R")
+                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m36ff1c2553cc", new { value0 = seedTimeMinimum }, isWarning: true));
             }
 
             if (discographySeedTimeMinimum != 0)
@@ -41,7 +46,8 @@ namespace NzbDrone.Core.Indexers
                 RuleFor(c => c.DiscographySeedTime).GreaterThanOrEqualTo(discographySeedTimeMinimum)
                     .When(c => c.DiscographySeedTime > 0)
                     .AsWarning()
-                    .WithMessage($"Under {discographySeedTimeMinimum} leads to H&R");
+                    .WithMessage($"Under {discographySeedTimeMinimum} leads to H&R")
+                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m36ff1c2553cc", new { value0 = discographySeedTimeMinimum }, isWarning: true));
             }
         }
     }

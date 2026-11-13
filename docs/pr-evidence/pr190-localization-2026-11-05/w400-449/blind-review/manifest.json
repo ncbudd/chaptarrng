@@ -1,0 +1,24 @@
+{
+  "batch": "W400-449-Core",
+  "candidateFreeInputChecksumListSha256": "dc057678d73514d8ad08426a648571472b02ee9969cb0cf67b6c4f998e4a3d4f",
+  "candidateFreeInputPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w400-449-20261105/candidate-free/input",
+  "candidateFreeManifestSha256": "5a428a8dc7d9161e54d5891f4140fd4bcc89bd650acfe4f681b0a3a88ca13dc7",
+  "cells": 600,
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "files": {
+    "README.md": "3ebff52bb0211e5b666c5751208488297544855f0e893ca67aa0f9cb29ea2c97",
+    "blind-ledger.jsonl": "b12da4f9d4005438b08a5a130d78fc2c80419f6302094ec2ed65b22089675c47",
+    "build_blind_review.py": "ab3b25366d4f657a0df802d0bb295b743b5d71bea17555d101d88bd59f1909fc",
+    "holds-hash-only.jsonl": "9fea58223412bf5109e4c7ef14acb8792057c69e042a3b194e1a03176a278907",
+    "proposals.jsonl": "0cda53b1e8ed722708383644c512582a5fab1957b2a4bd8110989b595b48b152",
+    "summary.json": "29e7211c2ead4e3d1def1324597b2fd4be1618b9b644fd1302dfb0f1b62d7c31",
+    "verify_blind_review.py": "0f3e0b1d5342f5ee218db1971917c978703d795a7e79cac699651c5fa0ec5e14"
+  },
+  "hashOnlyHolds": 12,
+  "proposals": 76,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "result": "PASS",
+  "schemaVersion": 1
+}

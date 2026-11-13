@@ -1,0 +1,596 @@
+{
+  "650|ja": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This is a path-validation error for a duplicate root folder; Japanese/Korean current wording uses a literal plant-root term rather than the filesystem root-folder term.",
+    "recommendedTarget": "パス '{value0}' は、すでにルートフォルダーとして設定されています。"
+  },
+  "650|ko": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This is a path-validation error for a duplicate root folder; Japanese/Korean current wording uses a literal plant-root term rather than the filesystem root-folder term.",
+    "recommendedTarget": "경로 '{value0}'은(는) 이미 루트 폴더로 설정되어 있습니다。"
+  },
+  "651|ar": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+    "recommendedTarget": "تعذّر الاتصال بخادم Kavita."
+  },
+  "651|de": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+    "recommendedTarget": "Verbindung zum Kavita-Server nicht möglich."
+  },
+  "651|ja": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+    "recommendedTarget": "Kavita サーバーに接続できません。"
+  },
+  "651|pt-BR": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This connection failure identifies the Kavita server; German is ungrammatical and Japanese/Portuguese/Arabic use awkward literal structures.",
+    "recommendedTarget": "Não foi possível conectar ao servidor Kavita."
+  },
+  "652|ar": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+    "recommendedTarget": "يلزم إدخال معرّف مستخدم Goodreads أو بيانات اعتماد OAuth موجودة."
+  },
+  "652|es": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+    "recommendedTarget": "Se requiere un ID de usuario de Goodreads o unas credenciales OAuth existentes."
+  },
+  "652|pt-BR": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+    "recommendedTarget": "É necessário informar o ID de usuário do Goodreads ou credenciais OAuth existentes."
+  },
+  "652|zh-Hans": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+    "recommendedTarget": "需要 Goodreads 用户 ID 或现有 OAuth 凭据。"
+  },
+  "652|zh-Hant": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The validation accepts either a Goodreads user ID or already existing OAuth credentials; candidates repair word order and missing required semantics.",
+    "recommendedTarget": "需要 Goodreads 使用者 ID 或現有 OAuth 認證資料。"
+  },
+  "654|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "عطّل خيار 'Check before download' في SABnzbd."
+  },
+  "654|de": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "Deaktivieren Sie die Option \"Check before download\" in SABnzbd."
+  },
+  "654|es": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "Desactiva la opción 'Check before download' en SABnzbd."
+  },
+  "654|fr": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "Désactivez l’option « Check before download » dans SABnzbd."
+  },
+  "654|hi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "SABnzbd में 'Check before download' विकल्प को अक्षम करें।"
+  },
+  "654|id": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "Nonaktifkan opsi 'Check before download' di SABnzbd."
+  },
+  "654|ja": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "SABnzbd で 'Check before download' オプションを無効にしてください。"
+  },
+  "654|ko": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "SABnzbd에서 'Check before download' 옵션을 비활성화하세요."
+  },
+  "654|pt-BR": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "Desative a opção 'Check before download' no SABnzbd."
+  },
+  "654|vi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "Tắt tùy chọn 'Check before download' trong SABnzbd."
+  },
+  "654|zh-Hans": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "在 SABnzbd 中禁用“Check before download”选项。"
+  },
+  "654|zh-Hant": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The production caller is Sabnzbd.cs and the setting is SABnzbd's exact “Check before download” option. The English source misspells the product as Sabnbzd; candidates use the product's verified spelling while preserving the option label.",
+    "recommendedTarget": "在 SABnzbd 中停用「Check before download」選項。"
+  },
+  "659|ja": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This configuration validation requires an ebook root folder for ebook monitoring; Japanese and Korean currently leave the core UI term in English.",
+    "recommendedTarget": "電子書籍を監視する場合は、電子書籍のルートフォルダーが必要です。"
+  },
+  "659|ko": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This configuration validation requires an ebook root folder for ebook monitoring; Japanese and Korean currently leave the core UI term in English.",
+    "recommendedTarget": "전자책을 모니터링하려면 전자책 루트 폴더가 필요합니다."
+  },
+  "663|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source contains a two-part Apprise API/server connection error; these revisions repair missing articles, sentence casing, and awkward failure wording while preserving both diagnostic placeholders.",
+    "recommendedTarget": "تعذّر الاتصال بواجهة Apprise API. فشل الاتصال بالخادم: ({value0}) {value1}"
+  },
+  "663|id": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source contains a two-part Apprise API/server connection error; these revisions repair missing articles, sentence casing, and awkward failure wording while preserving both diagnostic placeholders.",
+    "recommendedTarget": "Tidak dapat terhubung ke Apprise API. Koneksi server gagal: ({value0}) {value1}"
+  },
+  "663|vi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source contains a two-part Apprise API/server connection error; these revisions repair missing articles, sentence casing, and awkward failure wording while preserving both diagnostic placeholders.",
+    "recommendedTarget": "Không thể kết nối với Apprise API. Kết nối máy chủ thất bại: ({value0}) {value1}"
+  },
+  "664|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source reports a script exit code; these revisions restore idiomatic status wording and keep the exit-code placeholder intact.",
+    "recommendedTarget": "انتهى البرنامج النصي برمز الخروج: {value0}."
+  },
+  "664|hi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source reports a script exit code; these revisions restore idiomatic status wording and keep the exit-code placeholder intact.",
+    "recommendedTarget": "स्क्रिप्ट कोड {value0} के साथ समाप्त हुई।"
+  },
+  "667|fr": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source is a Join API connection failure with a retry instruction; these revisions correct incomplete or unidiomatic target phrasing.",
+    "recommendedTarget": "Impossible de se connecter à l’API Join. Veuillez réessayer plus tard."
+  },
+  "667|id": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source is a Join API connection failure with a retry instruction; these revisions correct incomplete or unidiomatic target phrasing.",
+    "recommendedTarget": "Tidak dapat terhubung ke Join API. Silakan coba lagi nanti."
+  },
+  "667|vi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The source is a Join API connection failure with a retry instruction; these revisions correct incomplete or unidiomatic target phrasing.",
+    "recommendedTarget": "Không thể kết nối với Join API. Vui lòng thử lại sau."
+  },
+  "668|es": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The message is specifically about an ebook library in Grimmory; the Spanish target omitted the ebook qualifier.",
+    "recommendedTarget": "No se encontró en Grimmory la biblioteca de libros electrónicos seleccionada."
+  },
+  "670|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This validation prohibits audiobook settings on folders reserved for ebooks; the Arabic target had awkward agreement and word order.",
+    "recommendedTarget": "لا يمكن أن تحتوي المجلدات المخصصة للكتب الإلكترونية فقط على إعدادات الكتب الصوتية."
+  },
+  "671|fr": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This is a Hardcover connection/user lookup failure; French current text lacks a grammatical subject.",
+    "recommendedTarget": "Impossible de récupérer l’utilisateur Hardcover actuel."
+  },
+  "672|ar": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr قيد بدء التشغيل، يُرجى المحاولة مرة أخرى لاحقًا."
+  },
+  "672|de": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr wird gestartet. Bitte versuchen Sie es später erneut."
+  },
+  "672|fr": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr démarre. Veuillez réessayer plus tard."
+  },
+  "672|ja": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr は起動中です。後でもう一度お試しください。"
+  },
+  "672|ko": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr가 시작 중입니다. 나중에 다시 시도하세요."
+  },
+  "672|vi": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr đang khởi động, vui lòng thử lại sau."
+  },
+  "672|zh-Hans": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr 正在启动，请稍后再试。"
+  },
+  "672|zh-Hant": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This middleware status says Chaptarr is currently starting and asks the user to retry later; several current translations say it is only about to start or are fragments.",
+    "recommendedTarget": "Chaptarr 正在啟動，請稍後再試。"
+  },
+  "673|zh-Hans": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The caller requires a Chaptarr media library; Chinese targets used a word that can mean a physical library, so these name the software media library directly.",
+    "recommendedTarget": "至少需要一个媒体库。"
+  },
+  "673|zh-Hant": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The caller requires a Chaptarr media library; Chinese targets used a word that can mean a physical library, so these name the software media library directly.",
+    "recommendedTarget": "至少需要一個媒體庫。"
+  },
+  "675|ja": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This is a file-existence error; the Japanese and Korean targets used unnatural or blunt negative forms.",
+    "recommendedTarget": "ファイルが存在しません。"
+  },
+  "675|ko": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This is a file-existence error; the Japanese and Korean targets used unnatural or blunt negative forms.",
+    "recommendedTarget": "파일이 존재하지 않습니다."
+  },
+  "676|id": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Indonesian target had a lowercase second sentence and an unnatural version phrase; the revision preserves aria2, minimum version, and reported-version placeholder.",
+    "recommendedTarget": "Versi Aria2 harus minimal 1.34.0. Versi yang dilaporkan adalah {value0}."
+  },
+  "677|es": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+    "recommendedTarget": "Formatos de salida no válidos."
+  },
+  "677|ja": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+    "recommendedTarget": "出力形式が無効です。"
+  },
+  "677|zh-Hans": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+    "recommendedTarget": "输出格式无效。"
+  },
+  "677|zh-Hant": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation rejects output-format values; the Chinese targets use “unqualified” rather than “invalid”, and Spanish/Japanese current phrasing is awkward.",
+    "recommendedTarget": "輸出格式無效。"
+  },
+  "678|es": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+    "recommendedTarget": "No se pudo conectar a BookOrbit. Comprueba la URL, las credenciales y los registros."
+  },
+  "678|fr": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+    "recommendedTarget": "Impossible de se connecter à BookOrbit. Vérifiez l’URL, les identifiants et les journaux."
+  },
+  "678|ja": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+    "recommendedTarget": "BookOrbitに接続できません。URL、認証情報、ログを確認してください。"
+  },
+  "678|pt-BR": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+    "recommendedTarget": "Não foi possível conectar ao BookOrbit. Verifique a URL, as credenciais e os logs."
+  },
+  "678|zh-Hans": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+    "recommendedTarget": "无法连接到 BookOrbit。请检查 URL、凭据和日志。"
+  },
+  "678|zh-Hant": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This BookOrbit connection message instructs the user to check the URL, credentials, and logs; Japanese current text is missing a sentence break and imperative.",
+    "recommendedTarget": "無法連接到 BookOrbit。請檢查 URL、認證資料和日誌。"
+  },
+  "680|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "هذا ليس جهاز Synology أو أن synoindex غير متاح."
+  },
+  "680|de": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Dies ist kein Synology-Gerät oder synoindex ist nicht verfügbar."
+  },
+  "680|es": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "No es un dispositivo Synology o synoindex no está disponible."
+  },
+  "680|fr": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Ce n’est pas un appareil Synology, ou synoindex n’est pas disponible."
+  },
+  "680|hi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "यह Synology डिवाइस नहीं है या synoindex उपलब्ध नहीं है।"
+  },
+  "680|id": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Bukan perangkat Synology atau synoindex tidak tersedia."
+  },
+  "680|ja": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Synology製デバイスではないか、synoindexを利用できません。"
+  },
+  "680|ko": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Synology 장치가 아니거나 synoindex를 사용할 수 없습니다."
+  },
+  "680|pt-BR": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Não é um dispositivo Synology ou o synoindex não está disponível."
+  },
+  "680|vi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "Không phải thiết bị Synology hoặc synoindex không khả dụng."
+  },
+  "680|zh-Hans": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "这不是 Synology 设备，或者 synoindex 不可用。"
+  },
+  "680|zh-Hant": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The Synology indexer requires a Synology system or an available synoindex utility; current translations preserve an English double-negative construction that is hard to understand.",
+    "recommendedTarget": "這不是 Synology 裝置，或 synoindex 無法使用。"
+  },
+  "682|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The API validation requires either authorId or bookId; these revisions correct agreement/coordination while preserving field names.",
+    "recommendedTarget": "يجب تحديد authorId أو bookId."
+  },
+  "682|de": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The API validation requires either authorId or bookId; these revisions correct agreement/coordination while preserving field names.",
+    "recommendedTarget": "Es muss entweder authorId oder bookId angegeben werden."
+  },
+  "682|fr": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The API validation requires either authorId or bookId; these revisions correct agreement/coordination while preserving field names.",
+    "recommendedTarget": "L’un des champs authorId ou bookId doit être renseigné."
+  },
+  "683|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "تعذّر العثور على الإصدار المحدد {value0}: {value1}"
+  },
+  "683|es": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "No se encontró la edición seleccionada {value0}: {value1}"
+  },
+  "683|fr": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "L’édition sélectionnée {value0} est introuvable : {value1}"
+  },
+  "683|hi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "चयनित संस्करण {value0} नहीं मिला: {value1}"
+  },
+  "683|ko": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "선택한 에디션 {value0}을(를) 찾을 수 없습니다: {value1}"
+  },
+  "683|pt-BR": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "A edição selecionada {value0} não foi encontrada: {value1}"
+  },
+  "683|zh-Hant": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This manual-import error reports that a selected edition could not be found and appends the underlying reason; candidates correct missing articles and broken phrasing while preserving both values.",
+    "recommendedTarget": "找不到所選版本 {value0}：{value1}"
+  },
+  "687|ar": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation requires a nonempty password; current Arabic/Korean/Vietnamese wording is grammatically weak or overly literal.",
+    "recommendedTarget": "يجب ألا تكون كلمة المرور فارغة."
+  },
+  "687|ko": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation requires a nonempty password; current Arabic/Korean/Vietnamese wording is grammatically weak or overly literal.",
+    "recommendedTarget": "비밀번호는 비어 있으면 안 됩니다."
+  },
+  "687|vi": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This validation requires a nonempty password; current Arabic/Korean/Vietnamese wording is grammatically weak or overly literal.",
+    "recommendedTarget": "Mật khẩu không được để trống."
+  },
+  "688|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+    "recommendedTarget": "يفتقر خادم البيانات الوصفية إلى الإمكانية المطلوبة '{value0}'."
+  },
+  "688|es": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+    "recommendedTarget": "Al servidor de metadatos le falta la capacidad requerida '{value0}'."
+  },
+  "688|fr": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+    "recommendedTarget": "Le serveur de métadonnées ne dispose pas de la fonctionnalité requise '{value0}'."
+  },
+  "688|hi": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The metadata server lacks a required capability; candidates restore the missing-feature sense and preserve the capability value.",
+    "recommendedTarget": "मेटाडेटा सर्वर में आवश्यक क्षमता '{value0}' उपलब्ध नहीं है।"
+  },
+  "688|ko": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The metadata server lacks a required capability; candidates restore the missing-feature sense and preserve the capability value.",
+    "recommendedTarget": "메타데이터 서버에 필요한 기능 '{value0}'가 없습니다."
+  },
+  "688|pt-BR": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The server lacks a required capability; these revisions fix awkward “missing capability” syntax while preserving the capability placeholder.",
+    "recommendedTarget": "O servidor de metadados não tem o recurso obrigatório '{value0}'."
+  },
+  "688|vi": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "The metadata server lacks a required capability; candidates restore the missing-feature sense and preserve the capability value.",
+    "recommendedTarget": "Máy chủ siêu dữ liệu thiếu tính năng bắt buộc '{value0}'."
+  },
+  "690|pt-BR": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This is a success notification for adding a named item to the library; these revisions use natural subject/verb order.",
+    "recommendedTarget": "'{value0}' foi adicionado à biblioteca com sucesso."
+  },
+  "690|vi": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "This is a success notification for adding a named item to the library; these revisions use natural subject/verb order.",
+    "recommendedTarget": "Đã thêm thành công '{value0}' vào thư viện."
+  },
+  "691|vi": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This reports an unexpected metadata-service name and the expected name; the current Vietnamese translation mistranslates “expected”.",
+    "recommendedTarget": "Dịch vụ máy chủ siêu dữ liệu '{value0}' không như mong đợi (giá trị mong đợi là '{value1}')."
+  },
+  "692|fr": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This API-key validation says the key is invalid; current French/Indonesian word order is unnatural.",
+    "recommendedTarget": "La clé API n’est pas valide."
+  },
+  "692|id": {
+    "confidence": "high",
+    "disposition": "propose-correction",
+    "rationale": "This API-key validation says the key is invalid; current French/Indonesian word order is unnatural.",
+    "recommendedTarget": "Kunci API tidak valid."
+  },
+  "696|ar": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The validation requires the password field to remain empty when API-key auth is used; these revisions improve sentence structure and agreement.",
+    "recommendedTarget": "عند استخدام مفتاح API، يجب أن تكون كلمة المرور فارغة."
+  },
+  "696|ja": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The validation requires the password field to remain empty when API-key auth is used; these revisions improve sentence structure and agreement.",
+    "recommendedTarget": "APIキーを使用する場合、パスワードは空欄にしてください。"
+  },
+  "696|ko": {
+    "confidence": "moderate",
+    "disposition": "propose-correction",
+    "rationale": "The validation requires the password field to remain empty when API-key auth is used; these revisions improve sentence structure and agreement.",
+    "recommendedTarget": "API 키를 사용할 때 암호는 비워 두어야 합니다."
+  }
+}

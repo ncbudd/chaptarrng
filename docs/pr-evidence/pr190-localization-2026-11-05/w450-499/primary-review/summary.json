@@ -1,0 +1,105 @@
+{
+  "artifact": "ChaptarrNG PR #190 W450-W499 primary semantic review",
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "pullRequest": 190,
+  "cellCount": 600,
+  "sourceKeyCount": 50,
+  "localeCount": 12,
+  "callerBackedCells": 552,
+  "callerlessHashOnlyHolds": 48,
+  "callerlessKeyCount": 4,
+  "decisions": {
+    "accept-current": 477,
+    "refinement": 49,
+    "correction": 26,
+    "hold-hash-only": 48
+  },
+  "proposalCount": 75,
+  "proposalDecisions": {
+    "refinement": 49,
+    "correction": 26
+  },
+  "proposalConfidence": {
+    "moderate": 67,
+    "high": 8
+  },
+  "proposalLocaleCounts": {
+    "hi": 17,
+    "ko": 4,
+    "es": 7,
+    "fr": 8,
+    "id": 8,
+    "ja": 4,
+    "pt-BR": 7,
+    "zh-Hant": 5,
+    "de": 4,
+    "vi": 5,
+    "zh-Hans": 3,
+    "ar": 3
+  },
+  "reviewConfidence": "Moderate overall; high for clear semantic errors and direct token corrections, moderate for UI terminology refinements.",
+  "unresolvedCallerBackedCells": 0,
+  "tokenAudit": {
+    "candidateFreeIntegrityFailures": {
+      "numeric": 2
+    },
+    "manualNumericFlagCells": [
+      {
+        "sourceKey": "ChmodFolderHelpText",
+        "locale": "ja",
+        "review": "8進数 is correct Japanese for Octal; equivalent base-8 presentation."
+      },
+      {
+        "sourceKey": "ChmodFolderHelpText",
+        "locale": "ko",
+        "review": "8진수 is correct Korean for Octal; proposed spacing/grammar refinement retains the same base-8 meaning."
+      }
+    ],
+    "numericExamplesVerified": {
+      "sourceKey": "ChmodFolderHelpTextWarning",
+      "sourceTokens": [
+        "775",
+        "664"
+      ],
+      "integrityFailures": 0,
+      "review": "All locales retain both numeric chmod values exactly."
+    },
+    "protectedLiteralAudit": {
+      "sourceKey": "ChownGroupHelpTextWarning",
+      "literal": "Chaptarr",
+      "integrityFailures": 0,
+      "review": "Product name preserved exactly in all locales."
+    },
+    "proposedProtectedLiteralAudit": {
+      "sourceKey": "ConfigureHardcoverApi",
+      "literal": "API",
+      "review": "The acronym remains exact in all proposed targets."
+    },
+    "reviewerDisposition": "The two numeric heuristic flags mark “Octal” rendered as the locale-appropriate base-8 term 8進数/8진수. They were assessed semantically; the Korean wording was refined for spacing and grammar. The 775/664 examples and protected Chaptarr/API literals remain intact."
+  },
+  "candidateFreeInput": {
+    "path": "../candidate-free/input",
+    "cellsSha256": "39b9037342ae28f0ad09d1cfad3d27dae9aa24d243bec36b01fa5bd6c032fc57",
+    "callerContextSha256": "2a6de527472a324f3746d9c7bae651df73459a0d01ed0c35f4f4b2f1fd0ea330",
+    "manifestSha256": "f37ed7234202a36eaea93259618d972a545d3ebbed0fd3a57d8c8addcdbc25ee",
+    "checksumsSha256": "a840674b2e61d495d91dca3a9ea46e08d92ecc2606bef4cd2f2c7e1f0ed7f0e2",
+    "portableVerifier": "PASS",
+    "exactWorktreeVerifier": "PASS"
+  },
+  "mainBoundary": {
+    "candidateFreeBaselineMain": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+    "candidateFreeBaselineMainTree": "2cc37a8008f8aefba42bca3ec1bc325acbbebc55",
+    "liveMainAtEntry": "4772c3177607feb97402bbef0e0879162156fb90",
+    "prBaseAtEntry": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "policy": "Per task direction, live main-only advances are recorded but do not alter the exact PR head/base snapshot reviewed.",
+    "liveMainAtExit": "f5b81e68aeb1d7fa82b19833913d911534760c13",
+    "prBaseAtExit": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "prBaseUnchanged": true,
+    "liveMainAdvancedSinceCandidateFreeBaseline": true
+  },
+  "limitations": "No native-speaker signoff was available in this primary pass. The 48 cells with zero caller/literal references are hash-only holds. No older W450 primary/cross/root output or blind-review packet was inspected.",
+  "scope": "Primary semantic review of candidate-free values and pinned caller contexts only; no catalog, repository, pull request, or workflow edits.",
+  "proposalCountNote": "Includes Hindi Close imperative correction identified during final cell-by-cell pass."
+}

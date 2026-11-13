@@ -1,0 +1,330 @@
+{
+  "baseHead": "0117311b672af8d828fb45bad7e6026763b201da",
+  "changes": 36,
+  "entries": [
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sourceId": "provider.field.f5c8c10dd48e0",
+      "locale": "hi",
+      "sourceSha256": "bf7df93f6680bf5a4352253801f1fa5828925f10bde25d68422e26903dadd704",
+      "currentTargetSha256": "83a43e8375b706b14b9778566aefa6deddf69a58f04fb33aad12016d67252f53",
+      "targetSha256": "56998084c55a946f10b0679cb076cd21bcffea5790a93977a44afd4ff5de8776",
+      "target": "हर पंक्ति में एक http:// या https:// URL दर्ज करें। Chaptarr कॉन्फ़िगर किया गया क्रम बनाए रखता है और नियतात्मक फ़ॉलबैक के लिए उसी क्रम का उपयोग करता है।"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sourceId": "provider.field.fa4001360c131",
+      "locale": "hi",
+      "sourceSha256": "ffd7a8a73cf48b2440d9b79ded8cd7e3591f3780a185949432d0385587a532c7",
+      "currentTargetSha256": "e09d6ee20e98bc7ec853755838bace92cdafc7319907542b5966f99d3d34f63e",
+      "targetSha256": "99262fe77f98ee15bd6f67b76c3a758f141f15dadf299d74e98d626098bbedcf",
+      "target": "अग्रिम डाउनलोड की समय-सीमा"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sourceId": "provider.field.ff76d14398efa",
+      "locale": "hi",
+      "sourceSha256": "310c8fca4ae56d53cb0605d5b1af064aec360fb27c75aa066e785fd6c243abcb",
+      "currentTargetSha256": "dbecfecf31eeb8aa2dafb7d7a607505912194a5c929ae598f6b0b5a019a59e3c",
+      "targetSha256": "1be1e5cf1e28bbc5bcabff62ebc5c54e70ebcaa5616f73f1cb611e2b069b0d8f",
+      "target": "जब तक आप यह न जानते हों कि आप क्या कर रहे हैं, तब तक इसे न बदलें, क्योंकि आपकी कुकी उस होस्ट को भेजी जाएगी।"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "locale": "hi",
+      "sourceSha256": "21bfd18273aa45ec2d2f31e7b703b2976f8f5a7f161f28384a20bb7f97c43e00",
+      "currentTargetSha256": "3031876d205dd88d72ffc68123fcf7ed2104bde42864d44b16e461dc121028cb",
+      "targetSha256": "662f3b91af7fd45fcc73967c7881b0a3136d5edf2b15d556a58f75b0190f6d07",
+      "target": "IPTorrents द्वारा आपकी चुनी हुई श्रेणियों (HD, SD, x264 आदि) का उपयोग करके बनाया गया पूरा RSS फ़ीड URL।"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sourceId": "provider.field.f4c3929f32227",
+      "locale": "hi",
+      "sourceSha256": "c9e761b05964375fec06895f63f59498756f7bc0837b3e9e40db6e8734750a8c",
+      "currentTargetSha256": "b9fcdefef7d310f4a9670f80403156c3ab5fda598981a543ae1c398a58933323",
+      "targetSha256": "dd391df4d5e63d9f9104060e7f9e3d89e43954a44f089200f674119aa80ac68d",
+      "target": "अपनी MAM साइट की प्राथमिकता का पालन करें, या योग्य टोरेंट प्राप्त करते समय MAM से व्यक्तिगत Freeleech Wedge लागू करने का अनुरोध करें। यदि MAM इसे लागू नहीं कर पाता, तो “Prefer Wedge” सामान्य डाउनलोड पर लौट जाता है।"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "locale": "hi",
+      "sourceSha256": "1d1b92dedd54bbd403715afddc0c6bc2e0f06e3e4833d4dccb838848fe7d5671",
+      "currentTargetSha256": "1715bcef1ab9fadb1e5705de1087f45d11e7515e085240b10834cb7f6c5d08d5",
+      "targetSha256": "39d1d8761f37475b712ec8384919cbae1612863400cc566fe30622add3b19f75",
+      "target": "गहरी खोज सक्षम करें"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.f80cf5c07c14e",
+      "locale": "es",
+      "sourceSha256": "d516ea66a500b34ed8db822fd2331c840c937994abb0ca5dbdd770d509f1b733",
+      "currentTargetSha256": "f86edeebef3c510de7c0674ad3fc75d8275f9866e48dd934c6e2cf3debfac422",
+      "targetSha256": "b4171d2af9f596401fce189e7ca0fbda7f7eadd25362f0af42964d4f86e1b17a",
+      "target": "Opcional. Déjalo en blanco cuando la fuente seleccionada no requiera una clave."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.fa4001360c131",
+      "locale": "es",
+      "sourceSha256": "ffd7a8a73cf48b2440d9b79ded8cd7e3591f3780a185949432d0385587a532c7",
+      "currentTargetSha256": "b77152b5e6f958974a2c00b1191048106da6ecd8dbe6e4e43ea3a8f993e8db2b",
+      "targetSha256": "b754f4a9d254cdaa396d389e31db52e236cbdaccca3a1ce610cb35e74b9712c1",
+      "target": "Límite de descarga anticipada"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.ff76d14398efa",
+      "locale": "es",
+      "sourceSha256": "310c8fca4ae56d53cb0605d5b1af064aec360fb27c75aa066e785fd6c243abcb",
+      "currentTargetSha256": "db1dcd5c95b15efda73fdf6ca9f2c14160f8cdbf13e66a6d139ccc36d7bfe5b2",
+      "targetSha256": "73491de5f29358c7f30f69989d125fd4f9abea77e6c93f16d53a1e47c44b48eb",
+      "target": "No cambie esto a menos que sepa lo que está haciendo, ya que su cookie se enviará a ese host."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "locale": "es",
+      "sourceSha256": "21bfd18273aa45ec2d2f31e7b703b2976f8f5a7f161f28384a20bb7f97c43e00",
+      "currentTargetSha256": "89f2d4cd5973865916734bb5513bf8c42b410b2b2fe513b432d62d7e42dd1384",
+      "targetSha256": "05ea6b127ece053c2dc430764c1ee04da9856372e838ccf44cbebca59380da3b",
+      "target": "URL completa del feed RSS que IPTorrents genera usando solo las categorías que seleccionaste (HD, SD, x264, etc.)."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.feb650fa1243e",
+      "locale": "es",
+      "sourceSha256": "4154fdfdd34b3dc7742979a9479fff377fc5b758deffb653da648327e4bd7a84",
+      "currentTargetSha256": "4b77f98457ec3faf85fd7851e5b1b62d036ca8102cf5d9ad1ce258eff102ae3c",
+      "targetSha256": "3f642578d0855b5c0bcc16575be53e6cb88aa44d60b7180f7ea20fc1795ae9d8",
+      "target": "URL del sitio web"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "locale": "es",
+      "sourceSha256": "1d1b92dedd54bbd403715afddc0c6bc2e0f06e3e4833d4dccb838848fe7d5671",
+      "currentTargetSha256": "0659ac0d394e45971074e761b2a4c4c3c20422b26c4f03d1f980b6a9ea1f5c77",
+      "targetSha256": "dd7a064244b4c8c4995f5c98fba8e603063ab54d9f10ab309ccee95247d8b12c",
+      "target": "Habilitar la búsqueda profunda"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sourceId": "provider.field.fda201a931c3d",
+      "locale": "es",
+      "sourceSha256": "ec3f811fe974e78a4fb2dbf693414900890390eae724f7e581e5bc8440f66c36",
+      "currentTargetSha256": "168a2a913ecf380d1369ad37910e9b40ec6ac33586b09ecae018b4c55d587240",
+      "targetSha256": "f562498a4a68d2a205b5a0a8f1d8794b5919b9662a386be16f4eaeb12afa46cf",
+      "target": "Usa JSON API con metadatos ampliados que incluyan el título, la descripción, el narrador y la duración, cuando estén disponibles."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sourceId": "provider.field.fa4001360c131",
+      "locale": "zh-Hans",
+      "sourceSha256": "ffd7a8a73cf48b2440d9b79ded8cd7e3591f3780a185949432d0385587a532c7",
+      "currentTargetSha256": "4b8bac4669d24c5d81472d28954051768fbb67b7040d8085c711acd4cc15cafe",
+      "targetSha256": "e790d2bfbee99afa366c993fc7e309dd8342364a7840a2dad9d0ec1eb98dbb6c",
+      "target": "提前下载时间限制"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sourceId": "provider.field.ff76d14398efa",
+      "locale": "zh-Hans",
+      "sourceSha256": "310c8fca4ae56d53cb0605d5b1af064aec360fb27c75aa066e785fd6c243abcb",
+      "currentTargetSha256": "16b4dbf7d8dd43e726ea12aef816b74bd42fd8ac2ab5e305a33aabb23cd88c94",
+      "targetSha256": "6d7f495c0ce852ea979416ab05d7a52fdff0b3f8bffb8423c8dd2cdbce967829",
+      "target": "除非您清楚自己在做什么，否则不要更改此项，因为您的 Cookie 会发送到该主机。"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "locale": "zh-Hans",
+      "sourceSha256": "21bfd18273aa45ec2d2f31e7b703b2976f8f5a7f161f28384a20bb7f97c43e00",
+      "currentTargetSha256": "994a7662eeb90be9b508c8e1e153f559459c9b0571144d40348d1003bfebb9e9",
+      "targetSha256": "1d30838a322c6cf1f502c99eb5408eec968ebe270aac0a62fe5b390f2a364eb2",
+      "target": "由 IPTorrents 根据你选择的类别（HD、SD、x264 等）生成的完整 RSS 订阅源 URL。"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sourceId": "provider.field.feb650fa1243e",
+      "locale": "zh-Hans",
+      "sourceSha256": "4154fdfdd34b3dc7742979a9479fff377fc5b758deffb653da648327e4bd7a84",
+      "currentTargetSha256": "b74ffc01cf20587158c64cae2f1e5aada470b5531a45ac9e7106bde3bd97dd52",
+      "targetSha256": "f3191fd2adab499afa97ca9d6aba139a1176cf3a525f0a36354a8a5479e9a8b1",
+      "target": "网站 URL"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "locale": "zh-Hans",
+      "sourceSha256": "1d1b92dedd54bbd403715afddc0c6bc2e0f06e3e4833d4dccb838848fe7d5671",
+      "currentTargetSha256": "14b4ffeaef3e5af1924196c4dcaa8a709dec8453814653c5c3899e302f73cf63",
+      "targetSha256": "343e12dd38358d20149ccab2d898ba17ea0c84956d04c01597d329c4e4170b7a",
+      "target": "启用深度搜索"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sourceId": "provider.field.f5269857c4a80",
+      "locale": "zh-Hans",
+      "sourceSha256": "f443884e1b387a8da58c20af68d64164d062c8d474a7b630f61589a031a63529",
+      "currentTargetSha256": "741192cbfabc0ed053e3a2a5b72a687a69d22456101a01c77816339ab5dd60c2",
+      "targetSha256": "e36d6708f6c09027417461238f194dc19183785a791eb7be8f4ad16428afe27a",
+      "target": "与 Audiobookshelf 集成"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.fa4001360c131",
+      "locale": "de",
+      "sourceSha256": "ffd7a8a73cf48b2440d9b79ded8cd7e3591f3780a185949432d0385587a532c7",
+      "currentTargetSha256": "8dd5e17be42c8141a7279e8134077a59141adc96e40f270c2d44e1c2714618a5",
+      "targetSha256": "58fa6952642e872601ec4da8091484765d1bdb7e48c370377c10635d223a242b",
+      "target": "Downloadvorlaufzeit"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.ff76d14398efa",
+      "locale": "de",
+      "sourceSha256": "310c8fca4ae56d53cb0605d5b1af064aec360fb27c75aa066e785fd6c243abcb",
+      "currentTargetSha256": "859fe437361cc8b103a6ae114ff4c8e4a32849921c46bcde2f0e8f62b43a90b2",
+      "targetSha256": "878920fe7a5d617b65e51d56507c3cfecc8f2ff7f2e44d566a75c27e81500822",
+      "target": "Ändern Sie diese URL nicht, wenn Sie nicht genau wissen, was Sie tun. Ihr Cookie wird an diesen Host gesendet."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "locale": "de",
+      "sourceSha256": "21bfd18273aa45ec2d2f31e7b703b2976f8f5a7f161f28384a20bb7f97c43e00",
+      "currentTargetSha256": "193d9eaa19b47efe49f4b428f01236f05a039bde2788c230f933cbfcd668507a",
+      "targetSha256": "efc3b039375a76e3a5ce8d9b84212a22a70b820b3e1ee1678cf639588e9bf3fa",
+      "target": "IPTorrents erstellt die vollständige RSS-Feed-URL anhand der von Ihnen ausgewählten Kategorien (HD, SD, x264 usw.)."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.feb650fa1243e",
+      "locale": "de",
+      "sourceSha256": "4154fdfdd34b3dc7742979a9479fff377fc5b758deffb653da648327e4bd7a84",
+      "currentTargetSha256": "eb650fa1243ee6cab8fef01ec47950d21268c4a98106dcbdfe8c378078fc25a4",
+      "targetSha256": "cfeafffe11751ef1f51e3f7a492ea7a8700bb7de3efa7e17524f1a9301255a7a",
+      "target": "Website-URL"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "locale": "de",
+      "sourceSha256": "1d1b92dedd54bbd403715afddc0c6bc2e0f06e3e4833d4dccb838848fe7d5671",
+      "currentTargetSha256": "5cf11b73e858fc875bbce3dde00dca7015a0fe940b524464ef1e7464bf46a014",
+      "targetSha256": "022de20be98c6f4236ab9116965326fbe6ebc18fd3ba661ff6d56ed2f902f0b1",
+      "target": "Tiefensuche aktivieren"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.fda201a931c3d",
+      "locale": "de",
+      "sourceSha256": "ec3f811fe974e78a4fb2dbf693414900890390eae724f7e581e5bc8440f66c36",
+      "currentTargetSha256": "e0555c80f273a48e50b61823beebc212d424464b3ad45c733f42fd0f777910ef",
+      "targetSha256": "e0835e2b22a9e9a666abc86bcbaf23d88761412b532e865254740739f9569264",
+      "target": "Verwenden Sie die JSON-API mit erweiterten Metadaten zu Titel, Beschreibung, Erzähler und Dauer, sofern verfügbar."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sourceId": "provider.field.f5269857c4a80",
+      "locale": "de",
+      "sourceSha256": "f443884e1b387a8da58c20af68d64164d062c8d474a7b630f61589a031a63529",
+      "currentTargetSha256": "25a9c46b4c0d3c6ecb6dd2bb2a402445e43848f7d3f74d53c0174db3a6c949d4",
+      "targetSha256": "a2d80855b5dfada0e5c134656d59447c604ebd9c271893e086898500abc4c466",
+      "target": "Audiobookshelf-Integration aktivieren"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sourceId": "provider.field.fa4001360c131",
+      "locale": "fr",
+      "sourceSha256": "ffd7a8a73cf48b2440d9b79ded8cd7e3591f3780a185949432d0385587a532c7",
+      "currentTargetSha256": "98b637f8fd0c31dbbead4bca5494abffd8a6086456fcf3ed34302ef108e515f7",
+      "targetSha256": "b0190a0b6d5ff907926bcf06162e4fbfac4f4700eda04dfaad916047a1be51b0",
+      "target": "Limite de téléchargement anticipé"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "locale": "fr",
+      "sourceSha256": "21bfd18273aa45ec2d2f31e7b703b2976f8f5a7f161f28384a20bb7f97c43e00",
+      "currentTargetSha256": "6e61250c938ba3f54a2a0bab3b20a6351c25643e72464591b9157148e0ff4386",
+      "targetSha256": "8436589f38bafea13603541cd8cd4a611b7dfb16099843ded3dcdb215d3fc030",
+      "target": "IPTorrents génère l’URL complète du flux RSS en utilisant uniquement les catégories sélectionnées (HD, SD, x264, etc.)."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sourceId": "provider.field.feb650fa1243e",
+      "locale": "fr",
+      "sourceSha256": "4154fdfdd34b3dc7742979a9479fff377fc5b758deffb653da648327e4bd7a84",
+      "currentTargetSha256": "6c447f10a2eb5a8eb62a3ac1260665f478b069fd65319d19ea13628f66a776ad",
+      "targetSha256": "fea4f92cef768d3fd6cc839f75f60d8fdcb0aa7ce18b1849f42057e0bbd7c70f",
+      "target": "URL du site Web"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "locale": "fr",
+      "sourceSha256": "1d1b92dedd54bbd403715afddc0c6bc2e0f06e3e4833d4dccb838848fe7d5671",
+      "currentTargetSha256": "066b6944b498912fd8afe2927eec9bd8774431c7831d8dae12bb8b0ddadeca43",
+      "targetSha256": "053c2357f637fda7d9e57e3fae1b3381c1bfc32ec1e3c978cdc125b635c43c92",
+      "target": "Activer la recherche approfondie"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sourceId": "provider.field.fda201a931c3d",
+      "locale": "fr",
+      "sourceSha256": "ec3f811fe974e78a4fb2dbf693414900890390eae724f7e581e5bc8440f66c36",
+      "currentTargetSha256": "ceef4cf6251bb08734bc13f7a46519a3b1d01e54c7452668b2fd9ec7d5660607",
+      "targetSha256": "141bcc265dc0bfc9f55a3296c7ecfc281cdc9c270cb794ebe56451885e2f5953",
+      "target": "Utilisez l’API JSON pour obtenir des métadonnées enrichies, notamment le titre, la description, le narrateur et la durée, si ces informations sont disponibles."
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sourceId": "provider.field.f5269857c4a80",
+      "locale": "fr",
+      "sourceSha256": "f443884e1b387a8da58c20af68d64164d062c8d474a7b630f61589a031a63529",
+      "currentTargetSha256": "a37307f25f57a6cc41b582bd9753336e3c1b7c2d47ffdf06e50fbaa54ae831d7",
+      "targetSha256": "d299faac83fcc3bfdc00d5f42df7e47e2093a2bbcafc60fbc56ded7f58d049f6",
+      "target": "Activer l’intégration avec Audiobookshelf"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sourceId": "provider.field.ff76d14398efa",
+      "locale": "ja",
+      "sourceSha256": "310c8fca4ae56d53cb0605d5b1af064aec360fb27c75aa066e785fd6c243abcb",
+      "currentTargetSha256": "e4502fae957805829cc61345d4ddea0d0837eb0faa0b59d1e22c158d0dabbfcf",
+      "targetSha256": "7474dbed7827c88f0dc649864017a2f86d9bf5546013bc41205f27cb17543fcb",
+      "target": "クッキーがそのホストに送信されるため、何をしているか分からない場合は変更しないでください。"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sourceId": "provider.field.f12af4c995bd9",
+      "locale": "ja",
+      "sourceSha256": "21bfd18273aa45ec2d2f31e7b703b2976f8f5a7f161f28384a20bb7f97c43e00",
+      "currentTargetSha256": "939c002660a61d37255b14b39c0b79c88d459d41f135134008dc8376b9d1ab34",
+      "targetSha256": "0b5d010224de4900ad976af4fb062936d7edccc8e7263300fbd42212d5377f35",
+      "target": "これは、選択したカテゴリ（HD、SD、x264など）のみを使ってIPTorrentsが生成した完全なRSSフィードURLです。"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sourceId": "provider.field.feb650fa1243e",
+      "locale": "ja",
+      "sourceSha256": "4154fdfdd34b3dc7742979a9479fff377fc5b758deffb653da648327e4bd7a84",
+      "currentTargetSha256": "ab2c6dd317740d12e3688291217d82043d80ff6cc6727dd07279643d4b5c113e",
+      "targetSha256": "1703d95388266ef4be7e0f9ccf569ed274d2d5cbef42460a1088aa05d7185a57",
+      "target": "ウェブサイトのURL"
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sourceId": "provider.field.fd1d33dec9414",
+      "locale": "ja",
+      "sourceSha256": "1d1b92dedd54bbd403715afddc0c6bc2e0f06e3e4833d4dccb838848fe7d5671",
+      "currentTargetSha256": "0fb3968ea0ced5484780f3516110ae6c4e762d19f09a89b1c77d524714e9b9cb",
+      "targetSha256": "3fdaf340ea1bbdf3af40905710af2416d13a7d1c885e0b1641ffd3c4d9092157",
+      "target": "詳細検索を有効にする"
+    }
+  ]
+}

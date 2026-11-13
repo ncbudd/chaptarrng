@@ -1,0 +1,7 @@
+# ChaptarrNG PR #190 W450–499 exact-hash review and application
+
+Primary review and independent cross-review covered 50 source IDs × 12 locales (600 cells). The primary packet was pinned at `2eb0ae6eb15ebc366eea44dd969265c0f6366445` / tree `1340ba7d0642217aa81e3789e908931bd6fa74f1`; cross-review reattested all 600 source/current-target cells and 69 caller references across 51 files at live apply head `70f5ad2c2dc8222d8f35e09ba81ffa12acfff856` / tree `9bd50b4f149f69f7cd5b78937b45fe1745e6c695`. The W449 boundary and its two caller references were reattested.
+
+Final dispositions: 432 accept-current, 102 corrections, 54 refinements, and 12 holds. Independent review retained 151 primary proposals and revised 5. Applied 156 exact-hash target changes across all 12 locale catalogs; each catalog retains 4,165 keys. All 600 reviewed outcomes match the exact readback. Placeholder, markup, and protected-literal mismatch counts are zero.
+
+The 12 held cells are ordinal 498 (`server.message.m23e7ac60ea9c`); no exact direct caller was found. The complete primary and independent cross-review packets, apply plan, readback, and checksums are retained here. Post-apply headed-browser review and qualified native-speaker approval remain outstanding. The commit-time Semgrep Community Edition hook scanned two staged evidence-builder Python files with `p/default` (290 rules; zero findings); it did not scan product source. No tests, builds, CI, workflow changes, releases, tags, or merges were performed.

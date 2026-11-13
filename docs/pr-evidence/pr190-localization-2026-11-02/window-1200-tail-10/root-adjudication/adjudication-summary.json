@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "title": "Root adjudication: ChaptarrNG PR #190 positions 1200-1209",
+  "baseline": {
+    "head": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+    "tree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+    "prState": "OPEN",
+    "branch": "codex/chaptarrng-localization-complete-20261031"
+  },
+  "scope": {
+    "sourcePositions": [
+      1200,
+      1209
+    ],
+    "sourceCount": 10,
+    "localeCount": 12,
+    "cellCount": 120,
+    "callerPinCount": 11,
+    "queueEndsAt": 1209,
+    "unavailablePositions": [
+      1210,
+      1211,
+      1212,
+      1213,
+      1214,
+      1215,
+      1216,
+      1217,
+      1218,
+      1219,
+      1220,
+      1221,
+      1222,
+      1223,
+      1224,
+      1225,
+      1226,
+      1227,
+      1228,
+      1229,
+      1230,
+      1231,
+      1232,
+      1233,
+      1234,
+      1235,
+      1236,
+      1237,
+      1238,
+      1239,
+      1240,
+      1241,
+      1242,
+      1243,
+      1244,
+      1245,
+      1246,
+      1247,
+      1248,
+      1249
+    ]
+  },
+  "decisionCounts": {
+    "accept-current": 39,
+    "refinement": 6,
+    "correction": 75
+  },
+  "resolutionBasisCounts": {
+    "shared": 55,
+    "primary": 59,
+    "independent": 6
+  },
+  "cellsChanged": 81,
+  "differencesResolved": 65,
+  "exactUiLabelWins": {
+    "1206": 36,
+    "1207": 24
+  },
+  "targetCatalogPlan": [
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "locale": "ar",
+      "expectedFileSha256": "571eb653789e335d208c47dd38b84884456941d0dc6340d95790ffe2f61a64c6",
+      "plannedFileSha256": "8cafe0591020c8b95850ab83b1fb830c3cd31913c9c46fe73761478aad068ebd",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "locale": "de",
+      "expectedFileSha256": "6cf59f27bbf8c9c4059362e625c0ebad94e125e03db6c97103c038c4873809f4",
+      "plannedFileSha256": "865c6b5ff350f7cee5996604b17e5133a13cfb97e11ae3ab6d729054aa24bbc8",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "locale": "es",
+      "expectedFileSha256": "acf6521d45eda22a3f2e72dd80d3521f0f906185d4dfef70d8c32346122254b9",
+      "plannedFileSha256": "f7e83d93ea48c857739e8ba197927dd9a086605d5bba973c71bc650dbc672473",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "locale": "fr",
+      "expectedFileSha256": "ac7aa438ea0ea83b7ee0e0f2fdfa1456e0d031b10576977172957c6cc297618e",
+      "plannedFileSha256": "2d04a94637af8ed8dea18ce7be48b3171a2d1abdc57040ac0a6488f47d74a802",
+      "operationCount": 7
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "locale": "hi",
+      "expectedFileSha256": "7be758e4f68aa1728b0df1e00d003d74aae743e02d8fdf629e3defe516dc2b3b",
+      "plannedFileSha256": "d213459d56aac3adc06254bca122e22f395c5a5e0924787311007499113bcb52",
+      "operationCount": 6
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "locale": "id",
+      "expectedFileSha256": "3b6872e17f7d40c4c1263957aba2457917cd94d44ffdba234bdead02a91c3e4f",
+      "plannedFileSha256": "80237bd1fd558f897abe7fcc21dce677ac6b104d3647a1e68b9214a3c4e4f609",
+      "operationCount": 7
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "locale": "ja",
+      "expectedFileSha256": "5a90842b7a2dbeee88c7588becc95ac441d55d3ef1872896baab4f98d1075977",
+      "plannedFileSha256": "83c91059cb694df4e86cc4f364e044e4683cffbd4c2de1a1675e77471cb67084",
+      "operationCount": 5
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "locale": "ko",
+      "expectedFileSha256": "025ace067663d66d6b9e88e511726fd27029c22976cd2009bc820fc2e3583fda",
+      "plannedFileSha256": "68c31bede0d1b4414fc6f53c0550486b30960369a86e86da13a9145a189f28e9",
+      "operationCount": 5
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "locale": "pt-BR",
+      "expectedFileSha256": "f97d1c90777339e413822ca519903baf904f7fa9079f79fb48a375193a9325c3",
+      "plannedFileSha256": "53d1488a12ae0f3fbf22acfd05835e2d733b48c7db4e219a1bca05f4d666b613",
+      "operationCount": 7
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "locale": "vi",
+      "expectedFileSha256": "f183c8a412d9004ffbb3a135b0bff5eda5ff19dc899dd6a2c8eff1b3e6d8b09a",
+      "plannedFileSha256": "57f0274eed51d5771aec40d2487bc55a5b5f62a457eabbd3ccdc4f727c58fac7",
+      "operationCount": 9
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "locale": "zh-Hans",
+      "expectedFileSha256": "d6f2cb1bc3f267e274ad2a70076d021111ae925bb0e7e7c6eba1a7702c0912e9",
+      "plannedFileSha256": "ecd45d0324782da4193f1d634b1fb4ccefd19aba738b27bdeec6c417a51d220d",
+      "operationCount": 9
+    },
+    {
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "locale": "zh-Hant",
+      "expectedFileSha256": "509f3bbc445ca1a6d37ff2703037bb08cf07285e58d122983b3089840bbd3b02",
+      "plannedFileSha256": "d87d14471bfbd5b8a59a3b6a0e2706ab902118ba0142ea157b2ba7d6d1e2a18d",
+      "operationCount": 8
+    }
+  ],
+  "applyOperationCount": 81,
+  "allPlaceholderAndProtectedLiteralGuardsPassed": true,
+  "blindLedgerSealedBeforePrimaryCandidateRead": true,
+  "nativeSpeakerApproval": false,
+  "repositoryEdits": false,
+  "testsBuildsScansBrowserCIWorkflowChanges": false,
+  "commitsPRUpdatesReleases": false,
+  "retainedOutputDirectory": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1200-tail-10-root-adjudication-20261103",
+  "limitations": "Machine review only; no native-speaker approval. Exact-hash apply plan was computed in memory only; no repository or PR edits were made.",
+  "blindProtocolNote": "The blind ledger was sealed before primary candidate text was opened. Packet manifest inspection had exposed aggregate disposition counts only; no candidate strings were consulted before the seal.",
+  "blindSealSha256": "57d8e3a934d461f889ca38b2418d9352e6aba2fbdba5159720e46abd1e537941",
+  "blindLedgerSha256": "24679706ca5cacdded315fa3bdbb4385dff3b7bc77eaa29579a413695fddc12a",
+  "primaryCandidateFileSha256": "bc4aed90d56ede6f296303480484c1600963aa4cd061c42093f8763652ba33b8"
+}

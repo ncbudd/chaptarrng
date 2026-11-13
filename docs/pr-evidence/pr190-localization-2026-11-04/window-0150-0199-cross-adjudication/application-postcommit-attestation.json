@@ -1,0 +1,27 @@
+{
+  "recordedAt": "2026-11-04T14:57:18Z",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "state": "open",
+  "draft": true,
+  "mergeable": true,
+  "mergeableState": "clean",
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "productCommit": "7c5af0a3d824f7e680c775f657697aee2430d277",
+  "headTree": "4907b83e138f09ee6dd713d1e9e894376e3ef973",
+  "branchRefSha": "7c5af0a3d824f7e680c775f657697aee2430d277",
+  "pullRefSha": "7c5af0a3d824f7e680c775f657697aee2430d277",
+  "baseRef": "main",
+  "pullApiBaseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "liveMainSha": "4643daf2ee280b1fe380da0061bf1ceff7553a50",
+  "liveMainTree": "d0691559ff10656f72344bf0c780eae7ded7c7f5",
+  "prBehindLiveMain": 4,
+  "prAheadOfMergeBase": 72,
+  "mergeBase": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "note": "The PR API base remains behind live main. The base is an ancestor of current main and GitHub reports the PR mergeable with clean state; no rebase or base change was needed.",
+  "pushHook": [
+    "Chaptarr and BookshelfNG retirement release-readiness gates passed.",
+    "Single standard image alias contract tests passed."
+  ],
+  "noReleaseOrWorkflowChange": true
+}

@@ -1,0 +1,17 @@
+{
+  "baseRef": "main",
+  "baseSha": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "catalogAndCallerPathsUnchangedSinceAuditBase": "580538d38f92e0ec005366ff6bea3f2634400c2e",
+  "cleanWorktree": true,
+  "draft": true,
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "pullRequest": 190,
+  "remoteBranchHead": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "remotePullRefHead": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "repository": "snapetech-org/chaptarrng",
+  "state": "OPEN",
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0",
+  "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261103/chaptarrng-pr190-ar-rtl-fix-20261103"
+}

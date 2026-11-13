@@ -1,0 +1,255 @@
+{
+  "artifactCountExcludingManifestAndSums": 24,
+  "artifacts": [
+    {
+      "bytes": 3061,
+      "path": "README.md",
+      "sha256": "897127e176748c01d02b61bb77e9faac82a83571ed33c83bf4a31752ab9efbd4"
+    },
+    {
+      "bytes": 487,
+      "path": "caller-context-summary.json",
+      "sha256": "53bc52c324d4c816bfbf48f4b604ed7f2b8c80b6eef5ccad14e02c36dd79d8eb"
+    },
+    {
+      "bytes": 87485,
+      "path": "caller-context.jsonl",
+      "sha256": "05e3deb5d5d5390eca6c7ac8c5381373b1b5ad5efde2e28ca509ebf9d64f0508"
+    },
+    {
+      "bytes": 114304,
+      "path": "correction-candidates.jsonl",
+      "sha256": "5ee5e22f3c028c96fd99dd7822aae91d86073f86f3ee68fe8ce1db7fe96e013d"
+    },
+    {
+      "bytes": 945,
+      "path": "final-reattestation.json",
+      "sha256": "b16e7a1dbaf683dca24ad64504a7eae4c0306f8b48de11ccf66df248c45d52ae"
+    },
+    {
+      "bytes": 44478,
+      "path": "holds.jsonl",
+      "sha256": "7b19df6c64998653a0db0d75fcc94d2fb4dff8c24ec42057440ddfd6e689b972"
+    },
+    {
+      "bytes": 874974,
+      "path": "input-cells.jsonl",
+      "sha256": "ff3d39a16bbc932d2eaafc90fd388dfae670da52ec99a103745f94fa1f69e794"
+    },
+    {
+      "bytes": 8030,
+      "path": "input-manifest.json",
+      "sha256": "932a6cfd778863ee82b34bd6af81ec8b63de3809f0e94202ab6cc0f5d03ba30f"
+    },
+    {
+      "bytes": 1357,
+      "path": "internal-terminology-context.json",
+      "sha256": "713e8557f4eb5cbe946ad18a4128dff6a1799ad1a21f2b53d152d8e88d1631f4"
+    },
+    {
+      "bytes": 7836,
+      "path": "loading-message-pipeline-context.jsonl",
+      "sha256": "5a09374f80782ef736f767eac063c222b747783d884f83c509b43b3ffe6a63f6"
+    },
+    {
+      "bytes": 42581,
+      "path": "make_window.py",
+      "sha256": "ddcf74887428a142677b5a58765ecc50360569fe815998eb165b9827ac6ee91b"
+    },
+    {
+      "bytes": 5254,
+      "path": "pinned-files.json",
+      "sha256": "f288d068226de5d766ed0eccce3cd246550f6de22f9ce35e6c54f8600d7a46f7"
+    },
+    {
+      "bytes": 15615359,
+      "path": "prior-dispositions-through-W1049.jsonl",
+      "sha256": "1a4da9c48cb68577933bc490a870b4a684a593a6a877539474623b6fc6404376"
+    },
+    {
+      "bytes": 539342,
+      "path": "protected-literal-integrity.jsonl",
+      "sha256": "e5ec48c576274f2e815e22cc399d4c16a469c50c97ed72c3ccbedcc62921ddc6"
+    },
+    {
+      "bytes": 72017,
+      "path": "refinement-candidates.jsonl",
+      "sha256": "2e1b73aa5c0666655349fa7af6ac46fd9f2df5ad52d259de3b7bc02cb1a15622"
+    },
+    {
+      "bytes": 2521083,
+      "path": "review-cells.jsonl",
+      "sha256": "14ff122bcc14ddeab9a3e144a249ed12c5703fe1c19ae48f32262aabdcf63173"
+    },
+    {
+      "bytes": 2750,
+      "path": "selected-queue-window.json",
+      "sha256": "119590f4648350b4fb8423e46cec6ab3bd866068ce8e554cabfca8be1b297ea8"
+    },
+    {
+      "bytes": 8039,
+      "path": "snapshots/after-source-selection-all-pr-heads.json",
+      "sha256": "45ddcb5ae526b60c957bcb018daf8bafb4e622e70e6be729d5a281139a2a2679"
+    },
+    {
+      "bytes": 8041,
+      "path": "snapshots/final-seal-all-pr-heads.json",
+      "sha256": "57dc543c58dfac0a09b1e993f8bc45a5f570d00ff8981420c47dc4e08c888d6d"
+    },
+    {
+      "bytes": 8046,
+      "path": "snapshots/start-all-pr-heads.json",
+      "sha256": "e154fe9b6e5c1f200381eaf9f55259a9aa9770297e9a5e114c4a4bba63fe4efa"
+    },
+    {
+      "bytes": 59201,
+      "path": "source-slice.jsonl",
+      "sha256": "d994eb03aa5f7fac5a73c0c8f692649498ec4fce6fff7fcf951dfa7e0555b2e7"
+    },
+    {
+      "bytes": 2628,
+      "path": "summary.json",
+      "sha256": "81ca07e679eebcf9969a9028085131245adc7914d43d84d6e6298ed381b7f4df"
+    },
+    {
+      "bytes": 8381,
+      "path": "w1049-backward-boundary.json",
+      "sha256": "5fac16711e226d0347368a3ba75e4e4f8af209f409986b73ec90acbe3a4f1b43"
+    },
+    {
+      "bytes": 10577,
+      "path": "w1100-forward-boundary.json",
+      "sha256": "494daa8eb85d662c5538554d91080aa1664418d5945c6d7dc7e98aafff1473d6"
+    }
+  ],
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "liveHeadSnapshots": [
+    "snapshots/start-all-pr-heads.json",
+    "snapshots/after-source-selection-all-pr-heads.json",
+    "snapshots/final-seal-all-pr-heads.json"
+  ],
+  "packet": "ChaptarrNG PR #190 primary localization review W1050-W1099",
+  "schemaVersion": 1,
+  "sealedAtUtc": "2026-11-02T22:40:52.182364+00:00",
+  "summary": {
+    "branch": "codex/chaptarrng-localization-complete-20261031",
+    "currentProtectedLiteralFailureCells": 0,
+    "directCallerGaps": 0,
+    "directCallerReferences": 60,
+    "dispositionCounts": {
+      "accept-current": 546,
+      "correction": 24,
+      "hold": 12,
+      "refinement": 18
+    },
+    "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+    "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+    "finalProtectedLiteralFailureCells": 0,
+    "historicalPriorFinalMismatches": 195,
+    "icuMismatchCells": 0,
+    "limitations": "Static machine-assisted primary review; no qualified native-speaker approval, browser acceptance, or runtime validation is claimed.",
+    "localeCellCount": 600,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "markupMismatchCells": 0,
+    "nativeSpeakerApproval": false,
+    "nativeSpeakerReviewOutstanding": true,
+    "newPriorHashDriftSincePreviousPacket": 0,
+    "overallConfidence": "moderate",
+    "perLocaleDispositionCounts": {
+      "ar": {
+        "accept-current": 46,
+        "correction": 2,
+        "hold": 1,
+        "refinement": 1
+      },
+      "de": {
+        "accept-current": 45,
+        "correction": 1,
+        "hold": 1,
+        "refinement": 3
+      },
+      "es": {
+        "accept-current": 46,
+        "correction": 2,
+        "hold": 1,
+        "refinement": 1
+      },
+      "fr": {
+        "accept-current": 45,
+        "correction": 3,
+        "hold": 1,
+        "refinement": 1
+      },
+      "hi": {
+        "accept-current": 45,
+        "correction": 3,
+        "hold": 1,
+        "refinement": 1
+      },
+      "id": {
+        "accept-current": 47,
+        "correction": 1,
+        "hold": 1,
+        "refinement": 1
+      },
+      "ja": {
+        "accept-current": 48,
+        "correction": 1,
+        "hold": 1
+      },
+      "ko": {
+        "accept-current": 44,
+        "correction": 4,
+        "hold": 1,
+        "refinement": 1
+      },
+      "pt-BR": {
+        "accept-current": 45,
+        "correction": 2,
+        "hold": 1,
+        "refinement": 2
+      },
+      "vi": {
+        "accept-current": 45,
+        "correction": 2,
+        "hold": 1,
+        "refinement": 2
+      },
+      "zh-Hans": {
+        "accept-current": 45,
+        "correction": 2,
+        "hold": 1,
+        "refinement": 2
+      },
+      "zh-Hant": {
+        "accept-current": 45,
+        "correction": 1,
+        "hold": 1,
+        "refinement": 3
+      }
+    },
+    "placeholderMismatchCells": 0,
+    "priorDispositionRowsThroughW1049": 12600,
+    "priorLiveTargetMismatches": 195,
+    "sourceCount": 50,
+    "staleRegistryPins": 0,
+    "w1049BoundaryAll12Match": true,
+    "w1100BoundaryDispositionsAssigned": false,
+    "window": "W1050-W1099"
+  }
+}

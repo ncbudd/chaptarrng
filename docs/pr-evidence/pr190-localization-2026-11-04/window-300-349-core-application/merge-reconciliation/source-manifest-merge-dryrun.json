@@ -1,0 +1,132 @@
+{
+  "result": "PASS",
+  "path": "docs/localization/server-message-sources.json",
+  "base": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "prHead": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+  "latestMain": "c711ca5dcde083f9a28acd85dc366435b6ed3fbc",
+  "baseRecords": 554,
+  "prRecords": 618,
+  "mainRecords": 554,
+  "mergedRecords": 618,
+  "prOnlyAddedRecordCount": 64,
+  "mainOnlyAddedRecordCount": 0,
+  "prOnlyChangedExistingRecordCount": 233,
+  "mainOnlyChangedExistingRecordCount": 33,
+  "sameFieldConflicts": [
+    {
+      "id": "server.message.m96cac189cd5c",
+      "field": "callsites",
+      "resolution": "use latest-main callsite locations; file, source line, source-line hash, category, and surface match the PR side",
+      "prCallsiteLines": [
+        636,
+        999
+      ],
+      "mainCallsiteLines": [
+        655,
+        1004
+      ]
+    },
+    {
+      "id": "server.message.mdefc6fdd23a6",
+      "field": "callsites",
+      "resolution": "use latest-main callsite locations; file, source line, source-line hash, category, and surface match the PR side",
+      "prCallsiteLines": [
+        28,
+        129
+      ],
+      "mainCallsiteLines": [
+        29,
+        129
+      ]
+    },
+    {
+      "id": "server.message.me58ba0bc573d",
+      "field": "callsites",
+      "resolution": "use latest-main callsite locations; file, source line, source-line hash, category, and surface match the PR side",
+      "prCallsiteLines": [
+        645,
+        1006
+      ],
+      "mainCallsiteLines": [
+        664,
+        1011
+      ]
+    },
+    {
+      "id": "server.message.mf74d744451ed",
+      "field": "callsites",
+      "resolution": "use latest-main callsite locations; file, source line, source-line hash, category, and surface match the PR side",
+      "prCallsiteLines": [
+        1677,
+        1751
+      ],
+      "mainCallsiteLines": [
+        1710,
+        1784
+      ]
+    }
+  ],
+  "resolvedByKeepingMainCallsites": 4,
+  "sourceExtensions": 4,
+  "sourceLineChecks": [
+    {
+      "id": "server.message.m96cac189cd5c",
+      "file": "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "line": 1004,
+      "sourceLineSha256": "48ba1c5dc74062acef0edd5424675b70bc9b02f3b4071ff67ea33fa40f7fb995",
+      "matches": true
+    },
+    {
+      "id": "server.message.m96cac189cd5c",
+      "file": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "line": 655,
+      "sourceLineSha256": "9d148bd5d4bb6abe68b990acd543e3a46fcf59b2e81b33848e8a89b6d19682a4",
+      "matches": true
+    },
+    {
+      "id": "server.message.mdefc6fdd23a6",
+      "file": "src/Chaptarr.Api.V1/Profiles/Quality/QualityProfileResource.cs",
+      "line": 129,
+      "sourceLineSha256": "4c9dcc111f37dfbda057ce0f11ce38bdc80838fbcba5b86bb1a2632930a59d2f",
+      "matches": true
+    },
+    {
+      "id": "server.message.mdefc6fdd23a6",
+      "file": "src/Chaptarr.Api.V1/Profiles/Quality/QualityProfileController.cs",
+      "line": 29,
+      "sourceLineSha256": "90f632dd9ba4dba5f8bd6b84a93f3fe8dcba303eedc61a327721d3b467953c22",
+      "matches": true
+    },
+    {
+      "id": "server.message.me58ba0bc573d",
+      "file": "src/NzbDrone.Core/Books/Services/AuthorService.cs",
+      "line": 1011,
+      "sourceLineSha256": "69dad0df103fa962450f78754663f82778793be358fe306672805fc1a4219e42",
+      "matches": true
+    },
+    {
+      "id": "server.message.me58ba0bc573d",
+      "file": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "line": 664,
+      "sourceLineSha256": "df7a63fa1ad8c5e0d37cc685045eebf501df8e66ebe90bc59bade88c6735b5c3",
+      "matches": true
+    },
+    {
+      "id": "server.message.mf74d744451ed",
+      "file": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "line": 1784,
+      "sourceLineSha256": "5d741de959df79116c013133d9306170f7a9d82d95f8de837095fa10694bf815",
+      "matches": true
+    },
+    {
+      "id": "server.message.mf74d744451ed",
+      "file": "src/Chaptarr.Api.V1/Author/AuthorController.cs",
+      "line": 1710,
+      "sourceLineSha256": "9d51f0b0bbebda442c680a04c178d58f77b5670debc2239fa152badc680bec5f",
+      "matches": true
+    }
+  ],
+  "mergedBytes": 766657,
+  "mergedSha256": "14c5f189094a33544ff2fabed0ab147d97f6f2655a37df2b92edcfa54308c6cc",
+  "policy": "Preserve PR-only server source records and extensions; adopt main-only updates to existing records; for four overlapping callsite-only updates, preserve the latest-main file/line while checking its exact source line and hash. Any other same-field conflict fails closed."
+}

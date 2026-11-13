@@ -1,0 +1,13 @@
+# W450–W499 Core candidate-free review packet
+
+This packet covers ChaptarrNG PR #190 Core source positions 450–499: 50 source IDs × 12 locales = 600 current cells. It is pinned to open draft PR head `16c809b4787d70616a1a296ab0d90cf17923ba86` (tree `dbd8343a42476f4e830428cc59efb7f4830251d5`), API base `025498c1a9deb999a4acd1eafc4c807a252e0c29`, and live main `317c5b431649a69a89e1c795f9490fd4df0b682b` (tree `2cc37a8008f8aefba42bca3ec1bc325acbbebc55`). `PR-attestation-before.json` and `PR-attestation-after.json` record the live API state, branch/pull refs, exact Git objects, and clean exact worktree before and after packet generation.
+
+`candidate-free-cells.jsonl` contains the current English source, locale value, source and catalog pins, token/markup summaries, and caller-context hash for each cell. `caller-context.jsonl` carries source lines and neighboring code. `source-selection.json`, `prior-historical-evidence-scan.json`, and the four-position boundary file establish continuity from W0–W449 and select the first 50 remaining Core keys. `catalog-pins.json` pins all 12 locale catalogs and their ordered key sets.
+
+The W400 window is reattested at the current head: all 600 source, post-application target, and caller hashes match; all 4,350 caller-scan source files match. The committed W400 application commit `3efb8f4ec37de7a9e9a7664623b1dc5fbe6f2526` is an ancestor of the current PR head, and its 140 readback rows match current catalogs. W400’s 12 callerless hash-only holds and the 12 carried prior-window hash-only holds were reattested without including text.
+
+The Nov 2 W450 primary, cross-review, and root-apply scratch inputs are preserved separately and are marked stale: their 50 source IDs have zero overlap with this current W450 selection. Hash-only reattestation records document the mismatch. No old proposal, recommendation, or candidate ledger was opened, and those outputs are not current evidence.
+
+The source/target comparison against current main has no differences; six caller-context fingerprints differ. The PR diff contains no workflow paths. Main’s workflow tree differs from the PR workflow tree. The heuristic numeric-token check flags two current Japanese and Korean cells for `ChmodFolderHelpText`; the flags are preserved for review and make no translation judgment.
+
+This packet contains candidate-free inputs only. It does not include translation proposals, approval, catalog edits, or CI results. Run `python3 verify_candidate_free.py` for the portable checks and add `--repo /path/to/clean/exact-head-worktree` for Git object and catalog readback verification.

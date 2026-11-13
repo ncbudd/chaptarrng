@@ -9,21 +9,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 55,
+          "line": 57,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"ApiKey\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey)]",
           "sourceLineSha256": "ee855f61650a21594249cf6243ea2b0bb257d10e43f41f7fed27522ab71a4a63"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 60,
+          "line": 66,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"ApiKey\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fdc7b7a265acf\")]",
           "sourceLineSha256": "4f0db59357fb9b2a83add323bb0ebe471d66c03a735e85aec9accacc316fe9d1"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 60,
+          "line": 63,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"ApiKey\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey)]",
           "sourceLineSha256": "4eed99f1bde8582e93b66c8e3add788a2b9438be69b0830c955c1b7f2b327837"
@@ -58,7 +58,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 82,
+          "line": 83,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"ApiKey\", Privacy = PrivacyLevel.ApiKey)]",
           "sourceLineSha256": "fa9a5b064674a3e882c2bf4f6bd96b0edc2ceb66a5e10c9813a4aa05c0db6ea0"
@@ -72,14 +72,14 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 66,
+          "line": 68,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"ApiKey\", Type = FieldType.Password, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f1a590a9b00ad\")]",
           "sourceLineSha256": "6a04deafd6c5310f9c8ade398fb01b8de92994e1525e140cada063c19d09f7e3"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 26,
+          "line": 27,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"ApiKey\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fb1d0448a0cf2\", HelpLink = \"https://joinjoaomgcd.appspot.com/\")]",
           "sourceLineSha256": "10e90185c41476945058940b57149f6dbfdefa3b5b0e8db1f1365f2f41c78e15"
@@ -138,7 +138,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 75,
+          "line": 82,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"AudiobookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookMetadataProfiles\", HelpText = \"provider.field.f0efa2f6e6d2b\")]",
           "sourceLineSha256": "9af13130c8ee2fab3cdb52be29645758514526d93df54a1ef3e587b584cd40a9"
@@ -159,7 +159,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 73,
+          "line": 77,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"AudiobookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookMetadataProfiles\", HelpText = \"provider.field.f814e6132049b\")]",
           "sourceLineSha256": "b07f616feab484e53a9f64bee622505da149e241d5a9c35fd8241542b53a83b4"
@@ -174,7 +174,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 69,
+          "line": 76,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"AudiobookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookQualityProfiles\", HelpText = \"provider.field.fe51ae2eae9c6\")]",
           "sourceLineSha256": "3ba7858964e83ee133b02df985d539708f12a2881d789efac18c40c1cfa9c647"
@@ -195,7 +195,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 67,
+          "line": 71,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"AudiobookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookQualityProfiles\", HelpText = \"provider.field.f121925ef23c3\")]",
           "sourceLineSha256": "a669f56f55df649849149dcb6b78ffcaaa2ac8873bd9f1bfb1bcfb0567d2805b"
@@ -210,7 +210,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 81,
+          "line": 88,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"AudiobookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.f0fe46e7d8d2a\")]",
           "sourceLineSha256": "7a0df2cba6e3ea57ad98cc990f7e8f6ff66ec49ede1943cfb848070af64e2829"
@@ -231,7 +231,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 79,
+          "line": 83,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"AudiobookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.fd1ea8d092e42\")]",
           "sourceLineSha256": "c25a966c4b8e1218ac75a8e7dbf0cdb9bfef2f3e8ac90086945fc8ce91b4bc56"
@@ -253,7 +253,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 87,
+          "line": 94,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Label = \"AudiobookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f40547e6a6702\")]",
           "sourceLineSha256": "8da77c523c7fa69980c7c518ae9e3caef45e267b873ea411f554d07b23052b3b"
@@ -274,7 +274,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 85,
+          "line": 89,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(12, Label = \"AudiobookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f67fe7d50b851\")]",
           "sourceLineSha256": "1146671bb4f3d116e1353e16e68df74f730ec2928372db419f43636cc3b0eabf"
@@ -289,7 +289,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 78,
+          "line": 85,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"EbookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookMetadataProfiles\", HelpText = \"provider.field.f39bbc1d8b91b\")]",
           "sourceLineSha256": "c055be78613aa13c3598d3b58092ccd037ecaa3d3188c9f5e072abd4e1cba484"
@@ -310,7 +310,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 76,
+          "line": 80,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"EbookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookMetadataProfiles\", HelpText = \"provider.field.f02b909aa44ae\")]",
           "sourceLineSha256": "192ad78f4d7bde1a4596cf32cdd39f3beda0a547d3c6011171650a326c4f918d"
@@ -325,7 +325,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 72,
+          "line": 79,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"EbookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookQualityProfiles\", HelpText = \"provider.field.f5c36c4fb0440\")]",
           "sourceLineSha256": "0700c264d9a07f3c0b5b5b8c5b53655f3c60776245284309f0166e1a89517e1c"
@@ -346,7 +346,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 70,
+          "line": 74,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"EbookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookQualityProfiles\", HelpText = \"provider.field.f9ad962a99985\")]",
           "sourceLineSha256": "96f660a61f92733d3d9cd5996ba1a1df152331b8a160a4e4b9f31c5127aa3e2a"
@@ -361,7 +361,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 84,
+          "line": 91,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"EbookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.fffc595f7f1a9\")]",
           "sourceLineSha256": "efecf6bf1733157ae853d93e2d7af4315c8ec482a466a23c4fd5c4410c605baf"
@@ -382,7 +382,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 82,
+          "line": 86,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Label = \"EbookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.fc3e974e43af9\")]",
           "sourceLineSha256": "99e26310c75b69cb516ce6164361a4bca300ac505ce4a7a95bbc4094cfb7f894"
@@ -404,7 +404,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 90,
+          "line": 97,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(12, Label = \"EbookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f1c419054d0a6\")]",
           "sourceLineSha256": "9002efd57e6984370b47619faaf62e67e6d9f0a864f8e26e3cea4c8330f7ccfc"
@@ -425,7 +425,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 88,
+          "line": 92,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(13, Label = \"EbookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f377cf0048e94\")]",
           "sourceLineSha256": "08b6fb5402e3861a2299f585ab5426e2e9b5ad6195f7c2e887be367a7e29f037"
@@ -470,7 +470,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 55,
+          "line": 62,
           "kind": "Label",
           "sourceLine": "Label = \"MonitorAudiobooks\",",
           "sourceLineSha256": "348bb8cf4e14c3bb2dfbe0310a13c92e36992a6ed0e23866f0eeb42fcfabc590"
@@ -491,7 +491,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 61,
+          "line": 65,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"MonitorAudiobooks\", Type = FieldType.Checkbox, HelpText = \"provider.field.fd9c3aa57a6fc\")]",
           "sourceLineSha256": "e3753f2d91f8e422bc240ed90ea4910091ad90462b248bc7bea958d58b54c00e"
@@ -542,7 +542,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 46,
+          "line": 50,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"PushMetadata\", Type = FieldType.Checkbox, HelpText = \"provider.field.f8ef01f9fc65e\")]",
           "sourceLineSha256": "f0cfca51578e6523f6a6546d4c3196466a64009e82db555d5fe82ab3628da321"
@@ -579,14 +579,14 @@
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 45,
+          "line": 49,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.f66d7a2535164\")]",
           "sourceLineSha256": "1febccb69eb0ad5cc15ceb4edd022cf39f525e2a4679cdef4bc96d89de5b2e1e"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 76,
+          "line": 82,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.ff03109a92f8c\")]",
           "sourceLineSha256": "677594e76ae9a1812d5d779db809a4891543c5acd68770f150868d56ef39b23c"
@@ -600,42 +600,42 @@
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs",
-          "line": 42,
+          "line": 44,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fd8a3f9b429d7\")]",
           "sourceLineSha256": "d4ffacbf75b37c01d1c89e28fc52229c268b1b5da1820db6a578bca9f02c80ec"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 53,
+          "line": 54,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fa6dda8c6f419\")]",
           "sourceLineSha256": "aedb0b6f5cd24bc9458a3feb325452125b10f7ba764318f335db10558ecfc445"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 54,
+          "line": 60,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.f43ff64c5a04b\")]",
           "sourceLineSha256": "2b0236907bec49f21a085324938e1c316124f9817ff6a9cad9873b66e6f3715f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 54,
+          "line": 57,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.f71d1d49e8c27\")]",
           "sourceLineSha256": "82f842588ac3f0b976d542d4e9dee6c6b76657414929efd7a9570514e650d0ed"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 57,
+          "line": 62,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fc03eb4d77a85\")]",
           "sourceLineSha256": "2a2bc4c04cfbfd7420f81c8ddd11f7a84d4d22bf1049ce3757ce79f739b291be"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 50,
+          "line": 51,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fceec68456eb2\")]",
           "sourceLineSha256": "b772ab62d3149d03df287b098a375e1dc8219f94015cad1b6c0814de8e3bf00d"
@@ -649,7 +649,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 60,
+          "line": 62,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fcdb8bc7fbe78\")]",
           "sourceLineSha256": "846657894b73123332a183ade316e532a17757f2b7b5f7b99fd09ffd7a0cd526"
@@ -687,49 +687,49 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 61,
+          "line": 65,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "571c701ca98f4234fbab13ae28bf457c2e24695a745aec548e28f67fa3219514"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 92,
+          "line": 98,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.f242bd077cedf\")]",
           "sourceLineSha256": "2ed9ad3f104e061075fac6628314a44f9cee25782470c7cd5c68b0f0114f322f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 72,
+          "line": 73,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "0373c1669acc166e3c85d4024d1b7b73ab69f2881a3a9782f5d9a51fafb0e87c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 76,
+          "line": 82,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "c02061c3156a87bb6e372314e088b563cd3fae8d38130051c621b8e3e4c93277"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 76,
+          "line": 79,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "76170d8141c115c0b70b0e8f8e603f2d6cad50572430e2b85efead971f15fb24"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 76,
+          "line": 81,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.f535765ad7944\")]",
           "sourceLineSha256": "6ac06bb7b9987cfd3cfbba2299ccd4df2f1bad8ab93c747ae09016b0f514d665"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 69,
+          "line": 70,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "0373c1669acc166e3c85d4024d1b7b73ab69f2881a3a9782f5d9a51fafb0e87c"
@@ -751,7 +751,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 29,
+          "line": 30,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f00c0e6769b60\", HelpText = \"provider.field.faf9cbff5e244\")]",
           "sourceLineSha256": "3be854e16bf9ce969adde3fca3fae35abe2b42589093e6a40f266a480bea3b98"
@@ -765,7 +765,7 @@
         }
       ],
       "protectedLiterals": [
-        "IDs"
+        "ID"
       ]
     },
     {
@@ -807,7 +807,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 51,
+          "line": 56,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fe1c79d2205ed\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f023f9ed3122e\", HelpLink = \"https://github.com/caronc/apprise-api#persistent-storage-solution\")]",
           "sourceLineSha256": "ff0b166e771ed57b166654e7a3c33657e831ee90d994d14cb91045b93c7d6e0f"
@@ -822,7 +822,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 76,
+          "line": 80,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"EbookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookMetadataProfiles\", HelpText = \"provider.field.f02b909aa44ae\")]",
           "sourceLineSha256": "192ad78f4d7bde1a4596cf32cdd39f3beda0a547d3c6011171650a326c4f918d"
@@ -839,7 +839,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 91,
+          "line": 92,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.f8d4ecad7c7e2\", HelpText = \"provider.field.f02bb1c85f42f\", Advanced = true)]",
           "sourceLineSha256": "3e3be1d348298ae70818cccb1cba7eeaacf69ced19b8bb60f53215c3bce1d6fa"
@@ -884,21 +884,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 78,
+          "line": 82,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f068da7e9da75\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Advanced = true, HelpText = \"provider.field.f77b1eeefbe89\")]",
           "sourceLineSha256": "1817e5d59ec7e443552abcb8148aef925b7f2f2de7d71fc78e0e52a9c1cff908"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 93,
+          "line": 99,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.f068da7e9da75\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f77b1eeefbe89\")]",
           "sourceLineSha256": "0760cc25c15ec820db64e1852c3c1b055c3e3a7fdcdf38b0d6c14062bc4b75f3"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 86,
+          "line": 87,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f068da7e9da75\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f77b1eeefbe89\")]",
           "sourceLineSha256": "30cf5b45ab33b66880a4d7773a5be60377f423b705ace674492f2be45cacad7f"
@@ -967,7 +967,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 94,
+          "line": 95,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Type = FieldType.Checkbox, Label = \"provider.field.f3364770903f3\", HelpText = \"provider.field.f0a18711a3171\")]",
           "sourceLineSha256": "c7c18751462815674fdf4b2e7a22085a2358e7979d43f993688d174d77891e57"
@@ -1002,42 +1002,42 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 78,
+          "line": 80,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(NzbVortexPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "6565fdf302329f8ae9f028a3e60068ff8ac47a33d6ca9b5383b6854b9bd0483e"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 85,
+          "line": 86,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(NzbgetPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "f4b912bf88ba340a5c19b548f7d4706cdebf5e240dee7740bc291f667b398f2e"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 106,
+          "line": 112,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(12, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(QBittorrentPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "2b957333e0b7250b2fecdb481c71bc0a4ce50ff9ffa9f24720c7bbf90468e07b"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 89,
+          "line": 92,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(SabnzbdPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "43baf557b67885b6a07f01e66a3e24cacd47c185abac76e7dcf8f278292ee765"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 92,
+          "line": 97,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(TransmissionPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "62df88b78ede09c584c5923683921ebac0beae857427b1dc6ee13a15de379a2c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 102,
+          "line": 103,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(12, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(RTorrentPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "e23645f5cefeb9fad1627fb0ad939e34a2d5d5ac1ef1892aad0abdfb5f733906"
@@ -1075,7 +1075,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 46,
+          "line": 47,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Type = FieldType.Checkbox, Label = \"provider.field.feaf93d215894\", HelpText = \"provider.field.f0af80d5651c2\", Advanced = true)]",
           "sourceLineSha256": "cc24e9790b27c4fe2f62c98ffabd52764d85cc4efd937e4d064773e89bc25bd7"
@@ -1103,7 +1103,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Torznab/TorznabSettings.cs",
-          "line": 73,
+          "line": 74,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(11, Type = FieldType.Checkbox, Label = \"provider.field.feaf93d215894\", HelpText = \"provider.field.f0af80d5651c2\", Advanced = true)]",
           "sourceLineSha256": "119c56f813b687b9df0b213583f066d05b4577639992251f0887ff5dbbc07b42"
@@ -1142,7 +1142,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 49,
+          "line": 53,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.ff2286e3d1df8\", Type = FieldType.Checkbox, HelpText = \"provider.field.f0d128645275f\")]",
           "sourceLineSha256": "7fa6e05b91b93b97b157cadb04de6edd9c6e4073759ef9c28baf9e1c40af1f62"
@@ -1190,7 +1190,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 53,
+          "line": 54,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f0dfe7337cc47\", Type = FieldType.Textbox, HelpText = \"provider.field.fada1608882a3\")]",
           "sourceLineSha256": "7a2cf168beca747796e03ad09d7d782a47bb30b57af185ae610921e6280b833d"
@@ -1238,7 +1238,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 86,
+          "line": 91,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.fc8f84c3c5378\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f0ef20a489d17\")]",
           "sourceLineSha256": "d5707f47fd4d632958cd6cf84f2dc7600291938685a5234e0b4fa67406fb7f67"
@@ -1253,7 +1253,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 75,
+          "line": 82,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"AudiobookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookMetadataProfiles\", HelpText = \"provider.field.f0efa2f6e6d2b\")]",
           "sourceLineSha256": "9af13130c8ee2fab3cdb52be29645758514526d93df54a1ef3e587b584cd40a9"
@@ -1268,7 +1268,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 66,
+          "line": 73,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f0f701a8deb7c\", Type = FieldType.Number, HelpText = \"provider.field.fd45ae9f7e9a5\", Advanced = true)]",
           "sourceLineSha256": "fb8035e4f31014cef0151151c27d24166f6ead871bcd41276c3b81dd82e0ef7e"
@@ -1312,7 +1312,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 81,
+          "line": 88,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"AudiobookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.f0fe46e7d8d2a\")]",
           "sourceLineSha256": "7a0df2cba6e3ea57ad98cc990f7e8f6ff66ec49ede1943cfb848070af64e2829"
@@ -1327,7 +1327,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 56,
+          "line": 57,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f100fa980fa39\")]",
           "sourceLineSha256": "f5640740f57131b1f0792f2f892f87325199c8a6b17be7b73a272600f248ce2f"
@@ -1361,7 +1361,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 67,
+          "line": 71,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"AudiobookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookQualityProfiles\", HelpText = \"provider.field.f121925ef23c3\")]",
           "sourceLineSha256": "a669f56f55df649849149dcb6b78ffcaaa2ac8873bd9f1bfb1bcfb0567d2805b"
@@ -1393,7 +1393,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 34,
+          "line": 35,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fb623f8b84569\", HelpText = \"provider.field.f12af4c995bd9\")]",
           "sourceLineSha256": "8cad6ae6fd42bce23a65811d38a4e73184e59f990def9c0307a8f0e30031d4dc"
@@ -1410,7 +1410,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 60,
+          "line": 65,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f130b15afdee4\")]",
           "sourceLineSha256": "828140e7796f42e1f72e96b2572efb02e1f8aa4f9bd689f3d060dc17aee28fff"
@@ -1427,7 +1427,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 53,
+          "line": 55,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.fd820d8de70e4\", HelpText = \"provider.field.f14f23b87f76a\")]",
           "sourceLineSha256": "f3c1617bf32fa6bdf9fd98a4ac63d2bf2224352743eac17bdc655ac57cda19d2"
@@ -1474,7 +1474,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 56,
+          "line": 58,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fa22fdec85d18\", Type = FieldType.Checkbox, HelpText = \"provider.field.f17181a60f2c1\")]",
           "sourceLineSha256": "76ee10d3b149c14687930b8e1c8ecdf89afb68a8f0f6c77b9e588af2d1f0a075"
@@ -1504,7 +1504,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 44,
+          "line": 46,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f190fd47bff2e\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fedec108b0608\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
           "sourceLineSha256": "0ba371cf6a5f4e30b79b2fc4c27c79255e6553e5d6ad50e684c01b4a7edb3bdb"
@@ -1519,7 +1519,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 93,
+          "line": 100,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(13, Label = \"provider.field.ffd06a3b2e208\", Type = FieldType.Number, HelpText = \"provider.field.f198ab7b8b868\", Advanced = true)]",
           "sourceLineSha256": "4826d27bac4b6633bbdbe71dc79a42fc2a4eefb1a668387a5c4de6161099f50a"
@@ -1556,7 +1556,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 66,
+          "line": 68,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"ApiKey\", Type = FieldType.Password, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f1a590a9b00ad\")]",
           "sourceLineSha256": "6a04deafd6c5310f9c8ade398fb01b8de92994e1525e140cada063c19d09f7e3"
@@ -1608,14 +1608,14 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/EmbyJellyfin/EmbyJellyfinSettings.cs",
-          "line": 45,
+          "line": 47,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f1bb2b1610fc9\", Type = FieldType.Checkbox, HelpText = \"NotificationsSettingsUseSslHelpText\")]",
           "sourceLineSha256": "5d71a46bf389a2f946333108675305ed76808b64cfbce473335dcaa7c8d757f7"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Plex/Server/PlexServerSettings.cs",
-          "line": 48,
+          "line": 50,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f1bb2b1610fc9\", Type = FieldType.Checkbox, HelpText = \"NotificationsSettingsUseSslHelpText\")]",
           "sourceLineSha256": "09174c5f5837e7a285c7e391c42ff7f7f072c5a705a6e105af82466318c09282"
@@ -1645,7 +1645,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 33,
+          "line": 34,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f1be8def5571a\", Type = FieldType.Checkbox, HelpText = \"provider.field.fbcbcfeb99134\")]",
           "sourceLineSha256": "8b93cccf9b0cf155945e9ed5298c233a52f859329ac01aef26b398c4da8a5f8b"
@@ -1675,7 +1675,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 90,
+          "line": 97,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(12, Label = \"EbookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f1c419054d0a6\")]",
           "sourceLineSha256": "9002efd57e6984370b47619faaf62e67e6d9f0a864f8e26e3cea4c8330f7ccfc"
@@ -1690,7 +1690,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 40,
+          "line": 44,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f1c9fa4c0dbf4\", Type = FieldType.Select, SelectOptionsProviderAction = \"getLibraries\", HelpText = \"provider.field.f624a087218b7\")]",
           "sourceLineSha256": "1c1d35f555fcf8673073ef24c6c780378dca39f0bb57825abc095d855bf32e2a"
@@ -1720,49 +1720,49 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 88,
+          "line": 92,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(DelugePriority), Advanced = true, HelpText = \"provider.field.fd73d1889cb3d\")]",
           "sourceLineSha256": "cb615c2ff0f1ed49ef5dbe6cfadb64eaf27c7a133c5da7fe8656eaaf231c7895"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 75,
+          "line": 77,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(NzbVortexPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "0fd99097c28561cd4139a753a805ffe6f825518c7d0a7808d81c5c52efea660f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 82,
+          "line": 83,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(NzbgetPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "6f8b81c6a8e646f2b031c33e52a5b5ac13eaffda51d07241c5457dee598c0db9"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 103,
+          "line": 109,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(QBittorrentPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "a7b45d1fa1fb119c14d181b0bd9e1daa8521970cdf7c74283c8b31fcf12045c8"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 86,
+          "line": 89,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(SabnzbdPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "b179651d08f60687edf5c2971e41ffe7f66c69d484a8e241495fc4383ccb01f2"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 89,
+          "line": 94,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(TransmissionPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "e6d3dd948376340779ba8353a7bd17c47fabb0f4f6fb3c5d9d5b303451dfb03f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 99,
+          "line": 100,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(RTorrentPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "d6895e2de55fa1e7d13b3673e540a6fcaf095f4d79843e93c2d28df0a922bbc0"
@@ -1814,7 +1814,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 46,
+          "line": 47,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"Password\", Type = FieldType.Password, HelpText = \"provider.field.f1f6f106670e5\", Privacy = PrivacyLevel.Password)]",
           "sourceLineSha256": "2ced87449ebce4d867d3dcfcf3975318d06cb32dfe013f9890976b3ee258a1e7"
@@ -1846,7 +1846,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/SeedCriteriaSettings.cs",
-          "line": 57,
+          "line": 63,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Type = FieldType.Textbox, Label = \"provider.field.f1fb3893d0b21\", Unit = \"minutes\", HelpText = \"provider.field.fff254e3d4b53\", Advanced = true)]",
           "sourceLineSha256": "1f0290195516d255de1b0e85ca95de1df0b3c069b385322b2ba7d1278992a4a6"
@@ -1895,14 +1895,14 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 85,
+          "line": 91,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.f242bd077cedf\")]",
           "sourceLineSha256": "1316a7d2db6896eb20203ab55f77304bcac646902ebeb6a1f96d8e763325736c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 92,
+          "line": 98,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.f242bd077cedf\")]",
           "sourceLineSha256": "2ed9ad3f104e061075fac6628314a44f9cee25782470c7cd5c68b0f0114f322f"
@@ -1973,7 +1973,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 102,
+          "line": 108,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fc8f84c3c5378\", Type = FieldType.Textbox, HelpText = \"provider.field.f278b35c4c5f4\")]",
           "sourceLineSha256": "6c7e31e2e9f208467894f84cba1b4d939f81bc3c2044e08d46b0fc027970c795"
@@ -2003,7 +2003,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 41,
+          "line": 43,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f282690e03cd8\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f3e9c99374508\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
           "sourceLineSha256": "7041286c13c76bf7f4a3a8c5234c06002436bda3dc974f323839460e92f58d81"
@@ -2048,56 +2048,56 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 68,
+          "line": 72,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "71abe97169ac4d9f826a3f89388438f6ff23cc131293c97d74e1d6cf67648e52"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 99,
+          "line": 105,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "db2d30c79dfdfa3db4f46d2ef06305087f51fa0cfa12a43c50249e7e71e296e6"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs",
-          "line": 54,
+          "line": 56,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Textbox)]",
           "sourceLineSha256": "457235718f1654b1008a7fd4f893718eb948121453c0651d11809447fed519ee"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 79,
+          "line": 80,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "db2d30c79dfdfa3db4f46d2ef06305087f51fa0cfa12a43c50249e7e71e296e6"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 83,
+          "line": 89,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "db2d30c79dfdfa3db4f46d2ef06305087f51fa0cfa12a43c50249e7e71e296e6"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 83,
+          "line": 86,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "71abe97169ac4d9f826a3f89388438f6ff23cc131293c97d74e1d6cf67648e52"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 83,
+          "line": 88,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "db2d30c79dfdfa3db4f46d2ef06305087f51fa0cfa12a43c50249e7e71e296e6"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 76,
+          "line": 77,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(100, Label = \"provider.field.f292c06f0045a\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "db2d30c79dfdfa3db4f46d2ef06305087f51fa0cfa12a43c50249e7e71e296e6"
@@ -2134,7 +2134,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 52,
+          "line": 53,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fe22820fcf5cd\", HelpText = \"provider.field.f297611157926\", Type = FieldType.Tag)]",
           "sourceLineSha256": "8254aee3364d1ec2fe76a018d1b3989342ffe8472b0d26acfedb29f24e424795"
@@ -2196,14 +2196,14 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 79,
+          "line": 81,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f2a41808a7b7a\", Type = FieldType.Checkbox, HelpText = \"provider.field.f304db1c9fce7\")]",
           "sourceLineSha256": "8f4b6f1784ddd29e7f560240aa0cac8217dff05faa6e154629f20e24cb3dd520"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 39,
+          "line": 40,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.f2a41808a7b7a\", Type = FieldType.Checkbox, HelpText = \"provider.field.ffcf2138b1018\")]",
           "sourceLineSha256": "98eace99d38cfbf636e335eea3502183c89e4e52688694911040b1fd8691ea25"
@@ -2233,7 +2233,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 40,
+          "line": 41,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.ff9db72ced1ee\", Type = FieldType.Password, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f2b866dadafe2\", HelpLink = \"https://docs.ntfy.sh/config/#access-tokens\")]",
           "sourceLineSha256": "768329a2086949fce623d20c4d2cab83e035439fc0012120d45860c5e15bdd0a"
@@ -2263,7 +2263,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 24,
+          "line": 25,
           "kind": "HelpTextWarning",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\", HelpText = \"provider.field.fcc88585f2a35\", HelpTextWarning = \"provider.field.f2f1d8ba51d2a\")]",
           "sourceLineSha256": "e767007ea56f3d9f75659fb74b8ce38f5a67bc277925a7471ed43a3039f778cd"
@@ -2280,7 +2280,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 79,
+          "line": 81,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f2a41808a7b7a\", Type = FieldType.Checkbox, HelpText = \"provider.field.f304db1c9fce7\")]",
           "sourceLineSha256": "8f4b6f1784ddd29e7f560240aa0cac8217dff05faa6e154629f20e24cb3dd520"
@@ -2298,7 +2298,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 100,
+          "line": 101,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f826b98aab5a6\", HelpText = \"provider.field.f32c4953d91ca\", Privacy = PrivacyLevel.ApiKey)]",
           "sourceLineSha256": "dee740d494f6cc828f45861a85f66074e1c2ed53c1820aa83f075cf9c4f1e89d"
@@ -2316,7 +2316,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 94,
+          "line": 95,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Type = FieldType.Checkbox, Label = \"provider.field.f3364770903f3\", HelpText = \"provider.field.f0a18711a3171\")]",
           "sourceLineSha256": "c7c18751462815674fdf4b2e7a22085a2358e7979d43f993688d174d77891e57"
@@ -2331,7 +2331,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 57,
+          "line": 62,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f3446a71f644e\", Type = FieldType.Select, SelectOptions = typeof(AppriseNotificationType))]",
           "sourceLineSha256": "f331058a4d69aa70aa8aa7b7ab7a6596ac6abe486daebd09b5fcc18af901e19a"
@@ -2348,7 +2348,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 36,
+          "line": 37,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.fe2fa8b9f4041\", Type = FieldType.Checkbox, HelpText = \"provider.field.f34ef6818e4c8\")]",
           "sourceLineSha256": "0140cda0c888f1c81a48364de02829ad18c940558aedbc299997eb3866ff9022"
@@ -2363,7 +2363,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 32,
+          "line": 33,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fc27b9378955f\", Type = FieldType.Checkbox, HelpText = \"provider.field.f353fd0415272\")]",
           "sourceLineSha256": "53359704e1d1419546ce366e128efe4e0f44616086499cd61064658511ef5c5f"
@@ -2410,7 +2410,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 88,
+          "line": 92,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(13, Label = \"EbookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f377cf0048e94\")]",
           "sourceLineSha256": "08b6fb5402e3861a2299f585ab5426e2e9b5ad6195f7c2e887be367a7e29f037"
@@ -2457,7 +2457,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 78,
+          "line": 85,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"EbookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookMetadataProfiles\", HelpText = \"provider.field.f39bbc1d8b91b\")]",
           "sourceLineSha256": "c055be78613aa13c3598d3b58092ccd037ecaa3d3188c9f5e072abd4e1cba484"
@@ -2472,14 +2472,14 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/EmbyJellyfin/EmbyJellyfinSettings.cs",
-          "line": 49,
+          "line": 51,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f39e9193cf08e\", Type = FieldType.Textbox, Advanced = true, HelpText = \"EmbyJellyfinUrlBaseHelpText\")]",
           "sourceLineSha256": "d38b1894bac019bacd5cad3c75302969e6c734cde9f06f59e69fea32c964d6f3"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Plex/Server/PlexServerSettings.cs",
-          "line": 60,
+          "line": 62,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f39e9193cf08e\", Type = FieldType.Textbox, Advanced = true, HelpText = \"ConnectionSettingsUrlBaseHelpText\")]",
           "sourceLineSha256": "e13a71418072a050d80e61dbc15c624b2144c4b3537a5a45c4b347b9592d186d"
@@ -2494,7 +2494,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 58,
+          "line": 62,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f3a01afc88e4c\", Type = FieldType.Checkbox, HelpText = \"provider.field.fde35332a868d\")]",
           "sourceLineSha256": "9cf595cfee66753a41bb8c2724d0c59e6696841b1f511fa64df208be3e85b215"
@@ -2531,7 +2531,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Webhook/WebhookSettings.cs",
-          "line": 102,
+          "line": 103,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f52a0f9b65b27\", Type = FieldType.Select, SelectOptions = typeof(WebhookMethod), HelpText = \"provider.field.f3d863105b354\")]",
           "sourceLineSha256": "0dfe0c5d0ee1acd5bf09fbb4fa3641a4aaf5deab009cd4c05400d53a12c770ea"
@@ -2563,7 +2563,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 41,
+          "line": 43,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f282690e03cd8\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f3e9c99374508\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
           "sourceLineSha256": "7041286c13c76bf7f4a3a8c5234c06002436bda3dc974f323839460e92f58d81"
@@ -2592,7 +2592,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 50,
+          "line": 52,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f3efeb5b0889f\", Privacy = PrivacyLevel.ApiKey, Advanced = true)]",
           "sourceLineSha256": "af54f50f7baa0089ac82dbe5f2215ff653b9d1888835aec90423c7219841d9d0"
@@ -2622,7 +2622,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 87,
+          "line": 94,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(11, Label = \"AudiobookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f40547e6a6702\")]",
           "sourceLineSha256": "8da77c523c7fa69980c7c518ae9e3caef45e267b873ea411f554d07b23052b3b"
@@ -2637,7 +2637,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 79,
+          "line": 80,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.fa2802a05b95a\", HelpText = \"provider.field.f41feb484ad69\", Advanced = true)]",
           "sourceLineSha256": "b422b6bfe46fb40dc341693a6b7aecd2ae4dfc82d7725a1c4c63f66a6c4fcadd"
@@ -2667,7 +2667,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 52,
+          "line": 56,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f43d5fbd565ae\", Type = FieldType.Checkbox, HelpText = \"provider.field.f5f2d90a6787f\")]",
           "sourceLineSha256": "0cdd0f29f488ff6b86100f1cfc8c25c17bd5cca4c8045df60b9b20879b2be50c"
@@ -2682,7 +2682,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 54,
+          "line": 60,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.f43ff64c5a04b\")]",
           "sourceLineSha256": "2b0236907bec49f21a085324938e1c316124f9817ff6a9cad9873b66e6f3715f"
@@ -2715,7 +2715,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 29,
+          "line": 30,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fd1fe4f606f97\", HelpLink = \"https://stackoverflow.com/a/75178418\", HelpText = \"provider.field.f45a630586d69\")]",
           "sourceLineSha256": "778ad0bee0ce487de423870449c3efe3f94d1b948b8b6b739e2d80a5f361e06b"
@@ -2780,21 +2780,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 71,
+          "line": 75,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fd10fdb1ebee6\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Advanced = true, HelpText = \"provider.field.f48d8951e889b\")]",
           "sourceLineSha256": "509bd21f6ae07042e74c55213c947530787cc7f6195ca84d2623db6b1126da16"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 86,
+          "line": 92,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.fd10fdb1ebee6\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f48d8951e889b\")]",
           "sourceLineSha256": "621f8bc70ea4cc47b954f574ec8d66af11ee412991d29fc8028c0a8ef6ceff93"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 79,
+          "line": 80,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.fd10fdb1ebee6\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f48d8951e889b\")]",
           "sourceLineSha256": "d99ddc07b484387554b4d629f47b20dbdf4553d7d48baf759dd279aeea167660"
@@ -2850,7 +2850,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 91,
+          "line": 95,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(14, Label = \"provider.field.f4b9a395c8d79\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f646519b156ca\")]",
           "sourceLineSha256": "6e499c90f7408cd594f19d1ef8355b1ae0e793d46f45e2e7d06c951c41d476e8"
@@ -2943,7 +2943,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 37,
+          "line": 38,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f506f4a07818c\", Type = FieldType.Url, HelpLink = \"https://ntfy.sh/docs/install/\", HelpText = \"provider.field.f665ae949e760\")]",
           "sourceLineSha256": "43018ef05e5e0df804561e1551402a537918afbf71e15539418cc458bb0163af"
@@ -3036,7 +3036,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Webhook/WebhookSettings.cs",
-          "line": 102,
+          "line": 103,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f52a0f9b65b27\", Type = FieldType.Select, SelectOptions = typeof(WebhookMethod), HelpText = \"provider.field.f3d863105b354\")]",
           "sourceLineSha256": "0dfe0c5d0ee1acd5bf09fbb4fa3641a4aaf5deab009cd4c05400d53a12c770ea"
@@ -3051,14 +3051,14 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 69,
+          "line": 74,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.f535765ad7944\")]",
           "sourceLineSha256": "431c4a45eacd9981d33d51360429bfe01675d84b25276bdbbe8ac4fec1cff747"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 76,
+          "line": 81,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.f535765ad7944\")]",
           "sourceLineSha256": "6ac06bb7b9987cfd3cfbba2299ccd4df2f1bad8ab93c747ae09016b0f514d665"
@@ -3090,7 +3090,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 48,
+          "line": 52,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f5948d0bfdf6a\")]",
           "sourceLineSha256": "f31c28594ebb21a2bc9bc1730b662b97193ad26354795317d475e8d95f1e3193"
@@ -3184,7 +3184,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 72,
+          "line": 79,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"EbookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookQualityProfiles\", HelpText = \"provider.field.f5c36c4fb0440\")]",
           "sourceLineSha256": "0700c264d9a07f3c0b5b5b8c5b53655f3c60776245284309f0166e1a89517e1c"
@@ -3247,7 +3247,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 32,
+          "line": 33,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.f5d08d1531c08\", HelpText = \"provider.field.fc7083c245d2b\", HelpLink = \"https://joaoapps.com/join/api/\")]",
           "sourceLineSha256": "694fc53f81d26fff9c66f39bce8e75d4b3056bce66f85d4829b3de5054645f0f"
@@ -3296,7 +3296,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 57,
+          "line": 64,
           "kind": "HelpText",
           "sourceLine": "HelpText = \"provider.field.f5ecacbc7f1fa\")]",
           "sourceLineSha256": "8761070589a78472f42c5ac6cd6200149147cbe4957ef013631bbb5e01e659f1"
@@ -3311,7 +3311,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 52,
+          "line": 56,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f43d5fbd565ae\", Type = FieldType.Checkbox, HelpText = \"provider.field.f5f2d90a6787f\")]",
           "sourceLineSha256": "0cdd0f29f488ff6b86100f1cfc8c25c17bd5cca4c8045df60b9b20879b2be50c"
@@ -3387,7 +3387,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 40,
+          "line": 44,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f1c9fa4c0dbf4\", Type = FieldType.Select, SelectOptionsProviderAction = \"getLibraries\", HelpText = \"provider.field.f624a087218b7\")]",
           "sourceLineSha256": "1c1d35f555fcf8673073ef24c6c780378dca39f0bb57825abc095d855bf32e2a"
@@ -3464,7 +3464,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 91,
+          "line": 95,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(14, Label = \"provider.field.f4b9a395c8d79\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f646519b156ca\")]",
           "sourceLineSha256": "6e499c90f7408cd594f19d1ef8355b1ae0e793d46f45e2e7d06c951c41d476e8"
@@ -3482,7 +3482,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 54,
+          "line": 59,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f658dfc5315ec\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fce417b5d7e08\", HelpLink = \"https://github.com/caronc/apprise#productivity-based-notifications\")]",
           "sourceLineSha256": "ab6f2174806741fe48e034c45f161ee686e3648704c37f49d5b6ac904f49cc49"
@@ -3499,7 +3499,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 96,
+          "line": 97,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.fc8f84c3c5378\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f65f28a0cee2d\")]",
           "sourceLineSha256": "c7630b7dcdd89df7fdf74ae5a4fde7991c5ac0c532ae2cb857600a61d2729d86"
@@ -3514,7 +3514,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 37,
+          "line": 38,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f506f4a07818c\", Type = FieldType.Url, HelpLink = \"https://ntfy.sh/docs/install/\", HelpText = \"provider.field.f665ae949e760\")]",
           "sourceLineSha256": "43018ef05e5e0df804561e1551402a537918afbf71e15539418cc458bb0163af"
@@ -3531,7 +3531,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 45,
+          "line": 49,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.f66d7a2535164\")]",
           "sourceLineSha256": "1febccb69eb0ad5cc15ceb4edd022cf39f525e2a4679cdef4bc96d89de5b2e1e"
@@ -3546,7 +3546,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 85,
+          "line": 89,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(12, Label = \"AudiobookTags\", Type = FieldType.TagSelect, SelectOptionsProviderAction = \"getTags\", HelpText = \"provider.field.f67fe7d50b851\")]",
           "sourceLineSha256": "1146671bb4f3d116e1353e16e68df74f730ec2928372db419f43636cc3b0eabf"
@@ -3563,7 +3563,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 63,
+          "line": 68,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"Username\", Type = FieldType.Textbox, HelpText = \"provider.field.f6832b304d4fe\", Privacy = PrivacyLevel.UserName)]",
           "sourceLineSha256": "a99b8b89b8f098ac9d32c9d93656c158d5895cb4ba7a3ce60d535e026cf24e75"
@@ -3580,7 +3580,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 61,
+          "line": 68,
           "kind": "Label",
           "sourceLine": "Label = \"provider.field.f686d3f04e7e0\",",
           "sourceLineSha256": "e201897e0d95bac36cec58c0fa3bfc222bdaa791ed3bbcb30a3790372c32b08f"
@@ -3601,7 +3601,7 @@
         },
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 64,
+          "line": 68,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.f686d3f04e7e0\", Type = FieldType.Checkbox, HelpText = \"provider.field.ff31b483b37fe\")]",
           "sourceLineSha256": "72741e18b845ce3c12236e420b23142d72040ca1466669dd02a5c8f26324d606"
@@ -3616,7 +3616,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 26,
+          "line": 27,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f8fd1a38b785b\", HelpLink = \"http://stackoverflow.com/a/37396871/882971\", HelpText = \"provider.field.f695264c341a2\")]",
           "sourceLineSha256": "f8ee4d832230291700b878404059b6531d859fde9925f7c8b43dcf4fcba771f0"
@@ -3679,7 +3679,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 55,
+          "line": 59,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.feb693dfac8a0\", Type = FieldType.Tag, HelpText = \"provider.field.f709b8e79d1cd\")]",
           "sourceLineSha256": "281d628f849293f67266da4ba8588b7bffb6aa9617e58cf608d1d639b860d792"
@@ -3697,7 +3697,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 54,
+          "line": 57,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.f71d1d49e8c27\")]",
           "sourceLineSha256": "82f842588ac3f0b976d542d4e9dee6c6b76657414929efd7a9570514e650d0ed"
@@ -3806,21 +3806,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 78,
+          "line": 82,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f068da7e9da75\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Advanced = true, HelpText = \"provider.field.f77b1eeefbe89\")]",
           "sourceLineSha256": "1817e5d59ec7e443552abcb8148aef925b7f2f2de7d71fc78e0e52a9c1cff908"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 93,
+          "line": 99,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.f068da7e9da75\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f77b1eeefbe89\")]",
           "sourceLineSha256": "0760cc25c15ec820db64e1852c3c1b055c3e3a7fdcdf38b0d6c14062bc4b75f3"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 86,
+          "line": 87,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f068da7e9da75\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f77b1eeefbe89\")]",
           "sourceLineSha256": "30cf5b45ab33b66880a4d7773a5be60377f423b705ace674492f2be45cacad7f"
@@ -3889,7 +3889,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 58,
+          "line": 60,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f7ab097af902c\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "3bdd1a0be4f944426680d9c4404a1cd4f4439f14f6b9c9de7fa082fec64b8816"
@@ -3919,7 +3919,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 49,
+          "line": 53,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f7c6679a4c0b7\", Type = FieldType.Checkbox, HelpText = \"provider.field.ffb082a613681\")]",
           "sourceLineSha256": "69e9cb438fc2c127e06789a07cebf275d688760b0a1d96c42687c7d9b5e7bfd5"
@@ -3982,7 +3982,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CustomScript/CustomScriptSettings.cs",
-          "line": 26,
+          "line": 39,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f7f816072c1c6\", HelpText = \"provider.field.fd35c546d4b1a\", Hidden = HiddenType.HiddenIfNotSet)]",
           "sourceLineSha256": "53abb6d1971e981066f622cd25b490f78b1293118626f5d67bacb3496cbe5e62"
@@ -4012,7 +4012,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 73,
+          "line": 77,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"AudiobookMetadataProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookMetadataProfiles\", HelpText = \"provider.field.f814e6132049b\")]",
           "sourceLineSha256": "b07f616feab484e53a9f64bee622505da149e241d5a9c35fd8241542b53a83b4"
@@ -4029,7 +4029,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 100,
+          "line": 101,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f826b98aab5a6\", HelpText = \"provider.field.f32c4953d91ca\", Privacy = PrivacyLevel.ApiKey)]",
           "sourceLineSha256": "dee740d494f6cc828f45861a85f66074e1c2ed53c1820aa83f075cf9c4f1e89d"
@@ -4186,7 +4186,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 109,
+          "line": 115,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(13, Label = \"provider.field.fb80d9a4950db\", Type = FieldType.Select, SelectOptions = typeof(QBittorrentState), HelpText = \"provider.field.f866e447248db\")]",
           "sourceLineSha256": "93cf6dab93adfc765d52660ba65f374a102e19384eebede7187fbeb739141daf"
@@ -4201,14 +4201,14 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 27,
+          "line": 28,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"Username\", Privacy = PrivacyLevel.UserName, HelpText = \"provider.field.f8709fb3ef39f\")]",
           "sourceLineSha256": "7fc27a8591c7685d73c7ad8b873ab3d196e29b0f7aabccf603d8b4a0163dcf46"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 30,
+          "line": 31,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"Password\", Type = FieldType.Password, Privacy = PrivacyLevel.Password, HelpText = \"provider.field.f8709fb3ef39f\")]",
           "sourceLineSha256": "53142212dff492d8c0ec8ae9d78622993b529bd965818a3961550a5f4dd106ed"
@@ -4303,7 +4303,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 115,
+          "line": 121,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(15, Label = \"provider.field.fb0c56c384aa4\", Type = FieldType.Checkbox, HelpText = \"provider.field.f8952604a5ad2\")]",
           "sourceLineSha256": "ee73d3577af370f68e36d71c1df01c1aa95608ec31b78111450b4ad24c3aa32d"
@@ -4320,7 +4320,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 97,
+          "line": 98,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f8a0beb68a93f\", HelpText = \"provider.field.fd39d57d52f36\")]",
           "sourceLineSha256": "b7b41ce455115ecf48a306d0ea713f4ce32d1cda609d032827d94528128af556"
@@ -4337,7 +4337,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 48,
+          "line": 53,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.fb29859a635ea\", Type = FieldType.Url, Placeholder = \"http://localhost:8000\", HelpText = \"provider.field.f8acece0624d6\", HelpLink = \"https://github.com/caronc/apprise-api\")]",
           "sourceLineSha256": "4fcc7b0be7f04b29ceacb3711aab5a7ffdbf97633c2f95df64a2a8a2dc2f72c0"
@@ -4375,7 +4375,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 43,
+          "line": 47,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f8b02155aecf5\", Type = FieldType.Select, SelectOptionsProviderAction = \"getLibraries\", HelpText = \"provider.field.f96c19c28b26b\")]",
           "sourceLineSha256": "f16030ae5ed71241cd6c6989a7b1f458c59f20f8fef1ef0cc81b72f276b4aeb2"
@@ -4440,7 +4440,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 82,
+          "line": 84,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f8d36ffb94feb\", Type = FieldType.Tag, HelpText = \"provider.field.f919541514a06\")]",
           "sourceLineSha256": "8de83b55aeff0e8ac568586e9ddeea68002c22e278b9b57ae4c8d82bdc5d2404"
@@ -4457,7 +4457,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 91,
+          "line": 92,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.f8d4ecad7c7e2\", HelpText = \"provider.field.f02bb1c85f42f\", Advanced = true)]",
           "sourceLineSha256": "3e3be1d348298ae70818cccb1cba7eeaacf69ced19b8bb60f53215c3bce1d6fa"
@@ -4509,7 +4509,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 46,
+          "line": 50,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"PushMetadata\", Type = FieldType.Checkbox, HelpText = \"provider.field.f8ef01f9fc65e\")]",
           "sourceLineSha256": "f0cfca51578e6523f6a6546d4c3196466a64009e82db555d5fe82ab3628da321"
@@ -4541,7 +4541,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 37,
+          "line": 38,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Type = FieldType.Number, Label = \"provider.field.fa4001360c131\", Unit = \"days\", HelpText = \"provider.field.f8ef2df0a1d96\", Advanced = true)]",
           "sourceLineSha256": "d7dad4e67dfb0e6adf1144f01c24ea22fb1ff2e7f9b04c2a1e8da4b3aa015b67"
@@ -4555,7 +4555,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 88,
+          "line": 89,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Type = FieldType.Number, Label = \"provider.field.fa4001360c131\", HelpText = \"provider.field.f8ef2df0a1d96\", Unit = \"days\", Advanced = true)]",
           "sourceLineSha256": "0217ae1368de1b391442ddfe30834ad5e8c5162f8181b0c2e49178e73d0b8b2e"
@@ -4593,7 +4593,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 26,
+          "line": 27,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f8fd1a38b785b\", HelpLink = \"http://stackoverflow.com/a/37396871/882971\", HelpText = \"provider.field.f695264c341a2\")]",
           "sourceLineSha256": "f8ee4d832230291700b878404059b6531d859fde9925f7c8b43dcf4fcba771f0"
@@ -4655,7 +4655,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 82,
+          "line": 84,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f8d36ffb94feb\", Type = FieldType.Tag, HelpText = \"provider.field.f919541514a06\")]",
           "sourceLineSha256": "8de83b55aeff0e8ac568586e9ddeea68002c22e278b9b57ae4c8d82bdc5d2404"
@@ -4688,7 +4688,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 51,
+          "line": 58,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f94541466889e\", Type = FieldType.Bookshelf)]",
           "sourceLineSha256": "659c8dd1b5209c094b896c7c3bd18813f89a9b73b3757ddc63a172a45f099ca1"
@@ -4718,7 +4718,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 76,
+          "line": 78,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fc3cc7aa655e3\", Type = FieldType.Checkbox, HelpText = \"provider.field.f9655ad429894\")]",
           "sourceLineSha256": "f9e2eb8334633ac42e153a7071e56288cfe8084da1108b1089ccf909a7069870"
@@ -4768,7 +4768,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 43,
+          "line": 47,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f8b02155aecf5\", Type = FieldType.Select, SelectOptionsProviderAction = \"getLibraries\", HelpText = \"provider.field.f96c19c28b26b\")]",
           "sourceLineSha256": "f16030ae5ed71241cd6c6989a7b1f458c59f20f8fef1ef0cc81b72f276b4aeb2"
@@ -4801,7 +4801,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 57,
+          "line": 60,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f980cab606403\")]",
           "sourceLineSha256": "1f91f37df4662f7b693b23947599baae1cdfeca8815312fddf9eef9e18076c60"
@@ -4940,7 +4940,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 70,
+          "line": 74,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"EbookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getEbookQualityProfiles\", HelpText = \"provider.field.f9ad962a99985\")]",
           "sourceLineSha256": "96f660a61f92733d3d9cd5996ba1a1df152331b8a160a4e4b9f31c5127aa3e2a"
@@ -4957,7 +4957,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 31,
+          "line": 35,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\", HelpText = \"provider.field.f9d0dec541ca6\")]",
           "sourceLineSha256": "04a68788b63304c5ec33d02506253b6693c77e0d5f82d9e28dd008eab1da3198"
@@ -4968,7 +4968,7 @@
         "Chaptarr",
         "Grimmory",
         "URL",
-        "http://grimmory:6060."
+        "http://grimmory:6060"
       ]
     },
     {
@@ -4995,7 +4995,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 52,
+          "line": 56,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.feccfce2a7fdf\", Type = FieldType.Checkbox, HelpText = \"provider.field.f9da80bea42a7\")]",
           "sourceLineSha256": "4d9bda692602ded4b89b44f5e56ecfe7fb6efbe39e8dfd9a3a80b172c421195c"
@@ -5063,7 +5063,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 56,
+          "line": 58,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fa22fdec85d18\", Type = FieldType.Checkbox, HelpText = \"provider.field.f17181a60f2c1\")]",
           "sourceLineSha256": "76ee10d3b149c14687930b8e1c8ecdf89afb68a8f0f6c77b9e588af2d1f0a075"
@@ -5078,7 +5078,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 58,
+          "line": 59,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fd2d899a2ab80\", Type = FieldType.Url, HelpText = \"provider.field.fa26497a29734\")]",
           "sourceLineSha256": "b29e1141c433edcbdb12ffb9975fb534b2c3ebba73e648e6160d841e65fd01df"
@@ -5093,7 +5093,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 79,
+          "line": 80,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.fa2802a05b95a\", HelpText = \"provider.field.f41feb484ad69\", Advanced = true)]",
           "sourceLineSha256": "b422b6bfe46fb40dc341693a6b7aecd2ae4dfc82d7725a1c4c63f66a6c4fcadd"
@@ -5184,7 +5184,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 37,
+          "line": 38,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Type = FieldType.Number, Label = \"provider.field.fa4001360c131\", Unit = \"days\", HelpText = \"provider.field.f8ef2df0a1d96\", Advanced = true)]",
           "sourceLineSha256": "d7dad4e67dfb0e6adf1144f01c24ea22fb1ff2e7f9b04c2a1e8da4b3aa015b67"
@@ -5198,7 +5198,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 88,
+          "line": 89,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Type = FieldType.Number, Label = \"provider.field.fa4001360c131\", HelpText = \"provider.field.f8ef2df0a1d96\", Unit = \"days\", Advanced = true)]",
           "sourceLineSha256": "0217ae1368de1b391442ddfe30834ad5e8c5162f8181b0c2e49178e73d0b8b2e"
@@ -5297,7 +5297,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 105,
+          "line": 106,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(13, Label = \"provider.field.fa6227f38ef55\", Type = FieldType.Checkbox, HelpText = \"provider.field.fc93c16190aa5\")]",
           "sourceLineSha256": "4cf7f278dbadc2b74e50da38531f12e77ff7628f55a22548c73b7359ff4737cf"
@@ -5327,7 +5327,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 53,
+          "line": 54,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fa6dda8c6f419\")]",
           "sourceLineSha256": "aedb0b6f5cd24bc9458a3feb325452125b10f7ba764318f335db10558ecfc445"
@@ -5371,7 +5371,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 43,
+          "line": 44,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fa969d04ec2d0\", HelpText = \"provider.field.fd72246ae30a8\", Privacy = PrivacyLevel.UserName)]",
           "sourceLineSha256": "84a7749afdc6cfa2629f112ea4c3a9d90923bf27cba1114121c97a510e38018a"
@@ -5401,49 +5401,49 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 91,
+          "line": 95,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(DelugePriority), Advanced = true, HelpText = \"provider.field.fcaeb44897776\")]",
           "sourceLineSha256": "d64f152c16e3f415d4290a6cce0f07ee0fb8084dff87b591b85656cb53150dfd"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 78,
+          "line": 80,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(NzbVortexPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "6565fdf302329f8ae9f028a3e60068ff8ac47a33d6ca9b5383b6854b9bd0483e"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 85,
+          "line": 86,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(NzbgetPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "f4b912bf88ba340a5c19b548f7d4706cdebf5e240dee7740bc291f667b398f2e"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 106,
+          "line": 112,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(12, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(QBittorrentPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "2b957333e0b7250b2fecdb481c71bc0a4ce50ff9ffa9f24720c7bbf90468e07b"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 89,
+          "line": 92,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(SabnzbdPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "43baf557b67885b6a07f01e66a3e24cacd47c185abac76e7dcf8f278292ee765"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 92,
+          "line": 97,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(TransmissionPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "62df88b78ede09c584c5923683921ebac0beae857427b1dc6ee13a15de379a2c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 102,
+          "line": 103,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(12, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(RTorrentPriority), Advanced = true, HelpText = \"provider.field.f0a783e1949cd\")]",
           "sourceLineSha256": "e23645f5cefeb9fad1627fb0ad939e34a2d5d5ac1ef1892aad0abdfb5f733906"
@@ -5525,7 +5525,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 52,
+          "line": 54,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fad474080a315\")]",
           "sourceLineSha256": "8e21659eded040d9e4d9c977f8db9dc5b4dd58b6411f0f89a4d411b839412670"
@@ -5542,7 +5542,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 53,
+          "line": 54,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f0dfe7337cc47\", Type = FieldType.Textbox, HelpText = \"provider.field.fada1608882a3\")]",
           "sourceLineSha256": "7a2cf168beca747796e03ad09d7d782a47bb30b57af185ae610921e6280b833d"
@@ -5587,7 +5587,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 29,
+          "line": 30,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f00c0e6769b60\", HelpText = \"provider.field.faf9cbff5e244\")]",
           "sourceLineSha256": "3be854e16bf9ce969adde3fca3fae35abe2b42589093e6a40f266a480bea3b98"
@@ -5604,7 +5604,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 48,
+          "line": 52,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f5948d0bfdf6a\")]",
           "sourceLineSha256": "f31c28594ebb21a2bc9bc1730b662b97193ad26354795317d475e8d95f1e3193"
@@ -5618,42 +5618,42 @@
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs",
-          "line": 45,
+          "line": 47,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fc977e5885c27\")]",
           "sourceLineSha256": "c2b3f355274310c7e456b768677daac71fde4db81412791f7ae14a1b0b90b41c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 52,
+          "line": 54,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fad474080a315\")]",
           "sourceLineSha256": "8e21659eded040d9e4d9c977f8db9dc5b4dd58b6411f0f89a4d411b839412670"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 56,
+          "line": 57,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f100fa980fa39\")]",
           "sourceLineSha256": "f5640740f57131b1f0792f2f892f87325199c8a6b17be7b73a272600f248ce2f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 57,
+          "line": 63,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fed7a4fd6fcef\")]",
           "sourceLineSha256": "2e77e9bbb8f9bac244702afe0121e2916fc3641387988763ef1c9d71126326df"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 57,
+          "line": 60,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f980cab606403\")]",
           "sourceLineSha256": "1f91f37df4662f7b693b23947599baae1cdfeca8815312fddf9eef9e18076c60"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 60,
+          "line": 65,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f130b15afdee4\")]",
           "sourceLineSha256": "828140e7796f42e1f72e96b2572efb02e1f8aa4f9bd689f3d060dc17aee28fff"
@@ -5667,7 +5667,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 63,
+          "line": 65,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fe914fa2a68af\")]",
           "sourceLineSha256": "c1892fb84c4c285dbe415b12e2324aabb480e1c175d40899f25c6dbfbeba2976"
@@ -5704,7 +5704,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 65,
+          "line": 67,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fb0bc267591a6\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "4386c2387a5c9c1f81e3b6ecd59163afba7a5f93d89c7b7152e7a43c17ad0e02"
@@ -5719,7 +5719,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 115,
+          "line": 121,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(15, Label = \"provider.field.fb0c56c384aa4\", Type = FieldType.Checkbox, HelpText = \"provider.field.f8952604a5ad2\")]",
           "sourceLineSha256": "ee73d3577af370f68e36d71c1df01c1aa95608ec31b78111450b4ad24c3aa32d"
@@ -5734,7 +5734,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 26,
+          "line": 27,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"ApiKey\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fb1d0448a0cf2\", HelpLink = \"https://joinjoaomgcd.appspot.com/\")]",
           "sourceLineSha256": "10e90185c41476945058940b57149f6dbfdefa3b5b0e8db1f1365f2f41c78e15"
@@ -5751,7 +5751,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 48,
+          "line": 53,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.fb29859a635ea\", Type = FieldType.Url, Placeholder = \"http://localhost:8000\", HelpText = \"provider.field.f8acece0624d6\", HelpLink = \"https://github.com/caronc/apprise-api\")]",
           "sourceLineSha256": "4fcc7b0be7f04b29ceacb3711aab5a7ffdbf97633c2f95df64a2a8a2dc2f72c0"
@@ -5820,7 +5820,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 34,
+          "line": 35,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fb623f8b84569\", HelpText = \"provider.field.f12af4c995bd9\")]",
           "sourceLineSha256": "8cad6ae6fd42bce23a65811d38a4e73184e59f990def9c0307a8f0e30031d4dc"
@@ -5837,49 +5837,49 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 54,
+          "line": 58,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "aa53864baf396b383381ee91ab7f6ddae65058b1c1359a397f2353142d57dbbe"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 85,
+          "line": 91,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.f242bd077cedf\")]",
           "sourceLineSha256": "1316a7d2db6896eb20203ab55f77304bcac646902ebeb6a1f96d8e763325736c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 65,
+          "line": 66,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "825f1b5a2e64ad3315c25301dea0d43fc663da926a0cd079f6bb1bced989dae5"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 69,
+          "line": 75,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "3f5ae2248d1d93b01ff799efa5c724dbba7c7be0f7de6b240247ee8cc52ee8ba"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 69,
+          "line": 72,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "f346a468e567a6d7d80040951ba0483b1a67a07d5657ca4f0a458da894eac51c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 69,
+          "line": 74,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.f535765ad7944\")]",
           "sourceLineSha256": "431c4a45eacd9981d33d51360429bfe01675d84b25276bdbbe8ac4fec1cff747"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 62,
+          "line": 63,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "825f1b5a2e64ad3315c25301dea0d43fc663da926a0cd079f6bb1bced989dae5"
@@ -5901,7 +5901,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 109,
+          "line": 115,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(13, Label = \"provider.field.fb80d9a4950db\", Type = FieldType.Select, SelectOptions = typeof(QBittorrentState), HelpText = \"provider.field.f866e447248db\")]",
           "sourceLineSha256": "93cf6dab93adfc765d52660ba65f374a102e19384eebede7187fbeb739141daf"
@@ -5937,7 +5937,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 40,
+          "line": 41,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Type = FieldType.Textbox, Label = \"provider.field.fd783e4d6293b\", HelpText = \"provider.field.fb8265760181c\", Advanced = true)]",
           "sourceLineSha256": "8b8c1ace7e91c7fc7a06e64cd6b1cd02e057144493768e8811883a425aa972e5"
@@ -5972,7 +5972,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Torznab/TorznabSettings.cs",
-          "line": 67,
+          "line": 68,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Type = FieldType.Textbox, Label = \"provider.field.fd783e4d6293b\", HelpText = \"provider.field.fb8265760181c\", Advanced = true)]",
           "sourceLineSha256": "309a250a630ff3891d8772c4b7f861fe268489f853a03fd6a8a8e96569de8ad9"
@@ -5987,7 +5987,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 35,
+          "line": 36,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fb93be45094c3\", Type = FieldType.Select, SelectOptions = typeof(JoinPriority))]",
           "sourceLineSha256": "ffad55ab5aaa9d4fda8ce2830d641c09ea8cf3410770740e8bd0ab270bd7f622"
@@ -6020,7 +6020,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 33,
+          "line": 34,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f1be8def5571a\", Type = FieldType.Checkbox, HelpText = \"provider.field.fbcbcfeb99134\")]",
           "sourceLineSha256": "8b93cccf9b0cf155945e9ed5298c233a52f859329ac01aef26b398c4da8a5f8b"
@@ -6054,7 +6054,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 57,
+          "line": 62,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fc03eb4d77a85\")]",
           "sourceLineSha256": "2a2bc4c04cfbfd7420f81c8ddd11f7a84d4d22bf1049ce3757ce79f739b291be"
@@ -6069,7 +6069,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 32,
+          "line": 33,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fc27b9378955f\", Type = FieldType.Checkbox, HelpText = \"provider.field.f353fd0415272\")]",
           "sourceLineSha256": "53359704e1d1419546ce366e128efe4e0f44616086499cd61064658511ef5c5f"
@@ -6099,7 +6099,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 76,
+          "line": 78,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fc3cc7aa655e3\", Type = FieldType.Checkbox, HelpText = \"provider.field.f9655ad429894\")]",
           "sourceLineSha256": "f9e2eb8334633ac42e153a7071e56288cfe8084da1108b1089ccf909a7069870"
@@ -6114,7 +6114,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 82,
+          "line": 86,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(11, Label = \"EbookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.fc3e974e43af9\")]",
           "sourceLineSha256": "99e26310c75b69cb516ce6164361a4bca300ac505ce4a7a95bbc4094cfb7f894"
@@ -6131,7 +6131,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 95,
+          "line": 97,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.fcfc86a7ed0ca\", Type = FieldType.OAuth, Hidden = HiddenType.Hidden, HelpText = \"provider.field.fc4e474afa1aa\")]",
           "sourceLineSha256": "df8090fffe29aaf7052368717f66e10a74f776a606c6c1ec6affabf171127e00"
@@ -6151,7 +6151,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 55,
+          "line": 56,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fcef89c458255\", Type = FieldType.Tag, HelpText = \"provider.field.fc6f4dcbf5fd7\", HelpLink = \"https://ntfy.sh/docs/emojis/\")]",
           "sourceLineSha256": "4b1c1851d57240d957b63b49e9d3164d825b5a0b9da88cdfd62251657a61453f"
@@ -6166,7 +6166,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Join/JoinSettings.cs",
-          "line": 32,
+          "line": 33,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.f5d08d1531c08\", HelpText = \"provider.field.fc7083c245d2b\", HelpLink = \"https://joaoapps.com/join/api/\")]",
           "sourceLineSha256": "694fc53f81d26fff9c66f39bce8e75d4b3056bce66f85d4829b3de5054645f0f"
@@ -6181,21 +6181,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 102,
+          "line": 108,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fc8f84c3c5378\", Type = FieldType.Textbox, HelpText = \"provider.field.f278b35c4c5f4\")]",
           "sourceLineSha256": "6c7e31e2e9f208467894f84cba1b4d939f81bc3c2044e08d46b0fc027970c795"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 86,
+          "line": 91,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.fc8f84c3c5378\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f0ef20a489d17\")]",
           "sourceLineSha256": "d5707f47fd4d632958cd6cf84f2dc7600291938685a5234e0b4fa67406fb7f67"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 96,
+          "line": 97,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.fc8f84c3c5378\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f65f28a0cee2d\")]",
           "sourceLineSha256": "c7630b7dcdd89df7fdf74ae5a4fde7991c5ac0c532ae2cb857600a61d2729d86"
@@ -6210,7 +6210,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 66,
+          "line": 71,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"Password\", Type = FieldType.Password, HelpText = \"provider.field.fc909ee67c6a0\", Privacy = PrivacyLevel.Password)]",
           "sourceLineSha256": "ad269ddb9270799ae44c01b0727477c77886758c93da145e1e09526a1d5a9a1a"
@@ -6227,7 +6227,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 59,
+          "line": 61,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fc91a944bf6b7\", Type = FieldType.OAuth)]",
           "sourceLineSha256": "2879276dcfbec82e9e83beeccf2f375e3ebb8a65dd8d2c06a77f2f6e1533cb2d"
@@ -6242,7 +6242,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 105,
+          "line": 106,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(13, Label = \"provider.field.fa6227f38ef55\", Type = FieldType.Checkbox, HelpText = \"provider.field.fc93c16190aa5\")]",
           "sourceLineSha256": "4cf7f278dbadc2b74e50da38531f12e77ff7628f55a22548c73b7359ff4737cf"
@@ -6257,7 +6257,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs",
-          "line": 45,
+          "line": 47,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fc977e5885c27\")]",
           "sourceLineSha256": "c2b3f355274310c7e456b768677daac71fde4db81412791f7ae14a1b0b90b41c"
@@ -6304,7 +6304,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 91,
+          "line": 95,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.faabfc5c5d52d\", Type = FieldType.Select, SelectOptions = typeof(DelugePriority), Advanced = true, HelpText = \"provider.field.fcaeb44897776\")]",
           "sourceLineSha256": "d64f152c16e3f415d4290a6cce0f07ee0fb8084dff87b591b85656cb53150dfd"
@@ -6355,7 +6355,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 88,
+          "line": 89,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.fee2bb4b2e037\", Type = FieldType.Checkbox, HelpText = \"provider.field.fcbf8b70ead77\")]",
           "sourceLineSha256": "eeb3e15e03beb9cc190bbb1f74f44c4d206205e088d11eca433787eb0ea26a82"
@@ -6389,7 +6389,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 24,
+          "line": 25,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\", HelpText = \"provider.field.fcc88585f2a35\", HelpTextWarning = \"provider.field.f2f1d8ba51d2a\")]",
           "sourceLineSha256": "e767007ea56f3d9f75659fb74b8ce38f5a67bc277925a7471ed43a3039f778cd"
@@ -6410,7 +6410,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 60,
+          "line": 62,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fcdb8bc7fbe78\")]",
           "sourceLineSha256": "846657894b73123332a183ade316e532a17757f2b7b5f7b99fd09ffd7a0cd526"
@@ -6429,7 +6429,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 54,
+          "line": 59,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f658dfc5315ec\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fce417b5d7e08\", HelpLink = \"https://github.com/caronc/apprise#productivity-based-notifications\")]",
           "sourceLineSha256": "ab6f2174806741fe48e034c45f161ee686e3648704c37f49d5b6ac904f49cc49"
@@ -6459,7 +6459,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 50,
+          "line": 51,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fceec68456eb2\")]",
           "sourceLineSha256": "b772ab62d3149d03df287b098a375e1dc8219f94015cad1b6c0814de8e3bf00d"
@@ -6474,7 +6474,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 55,
+          "line": 56,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fcef89c458255\", Type = FieldType.Tag, HelpText = \"provider.field.fc6f4dcbf5fd7\", HelpLink = \"https://ntfy.sh/docs/emojis/\")]",
           "sourceLineSha256": "4b1c1851d57240d957b63b49e9d3164d825b5a0b9da88cdfd62251657a61453f"
@@ -6489,21 +6489,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 85,
+          "line": 89,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(101, Label = \"provider.field.fcf18cb638b27\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "5e7b21e4b2045f877680acc432ab37881a838be9b296bcef74d735a53a4e9626"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 100,
+          "line": 106,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(101, Label = \"provider.field.fcf18cb638b27\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "20097f8e46a35aa2890a6785257b8f97b4c56562f4873f51d0d369ab0e33c8a6"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 93,
+          "line": 94,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(101, Label = \"provider.field.fcf18cb638b27\", Type = FieldType.Textbox, Hidden = HiddenType.Hidden)]",
           "sourceLineSha256": "20097f8e46a35aa2890a6785257b8f97b4c56562f4873f51d0d369ab0e33c8a6"
@@ -6542,7 +6542,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 23,
+          "line": 24,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fcf8c0ac670d1\", Privacy = PrivacyLevel.ApiKey, HelpLink = \"https://core.telegram.org/bots\")]",
           "sourceLineSha256": "86e087c9c5c6c70c3ddd6f92bf3142e1ffba9208bba7c76e81aa710315e39914"
@@ -6557,7 +6557,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 112,
+          "line": 118,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(14, Label = \"provider.field.fff72ae38d781\", Type = FieldType.Checkbox, HelpText = \"provider.field.fcf9692863aa6\")]",
           "sourceLineSha256": "4b42ef218e8c111f4715cf331d8c30de79717390a61688ff1ad2bae8c340494a"
@@ -6574,7 +6574,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 95,
+          "line": 97,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.fcfc86a7ed0ca\", Type = FieldType.OAuth, Hidden = HiddenType.Hidden, HelpText = \"provider.field.fc4e474afa1aa\")]",
           "sourceLineSha256": "df8090fffe29aaf7052368717f66e10a74f776a606c6c1ec6affabf171127e00"
@@ -6606,21 +6606,21 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 71,
+          "line": 75,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fd10fdb1ebee6\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", Advanced = true, HelpText = \"provider.field.f48d8951e889b\")]",
           "sourceLineSha256": "509bd21f6ae07042e74c55213c947530787cc7f6195ca84d2623db6b1126da16"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 86,
+          "line": 92,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.fd10fdb1ebee6\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f48d8951e889b\")]",
           "sourceLineSha256": "621f8bc70ea4cc47b954f574ec8d66af11ee412991d29fc8028c0a8ef6ceff93"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 79,
+          "line": 80,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.fd10fdb1ebee6\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.f48d8951e889b\")]",
           "sourceLineSha256": "d99ddc07b484387554b4d629f47b20dbdf4553d7d48baf759dd279aeea167660"
@@ -6689,7 +6689,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 79,
+          "line": 83,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"AudiobookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.fd1ea8d092e42\")]",
           "sourceLineSha256": "c25a966c4b8e1218ac75a8e7dbf0cdb9bfef2f3e8ac90086945fc8ce91b4bc56"
@@ -6706,7 +6706,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Telegram/TelegramSettings.cs",
-          "line": 29,
+          "line": 30,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fd1fe4f606f97\", HelpLink = \"https://stackoverflow.com/a/75178418\", HelpText = \"provider.field.f45a630586d69\")]",
           "sourceLineSha256": "778ad0bee0ce487de423870449c3efe3f94d1b948b8b6b739e2d80a5f361e06b"
@@ -6723,7 +6723,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 34,
+          "line": 38,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"Username\", Privacy = PrivacyLevel.UserName, HelpText = \"provider.field.fd237f4cb52a2\")]",
           "sourceLineSha256": "33b182c476f7ae71b2210a25a100e5c08b820e461ef12d635d2071cd5dac642c"
@@ -6772,7 +6772,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 58,
+          "line": 59,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fd2d899a2ab80\", Type = FieldType.Url, HelpText = \"provider.field.fa26497a29734\")]",
           "sourceLineSha256": "b29e1141c433edcbdb12ffb9975fb534b2c3ebba73e648e6160d841e65fd01df"
@@ -6789,7 +6789,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CustomScript/CustomScriptSettings.cs",
-          "line": 26,
+          "line": 39,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f7f816072c1c6\", HelpText = \"provider.field.fd35c546d4b1a\", Hidden = HiddenType.HiddenIfNotSet)]",
           "sourceLineSha256": "53abb6d1971e981066f622cd25b490f78b1293118626f5d67bacb3496cbe5e62"
@@ -6804,7 +6804,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 97,
+          "line": 98,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f8a0beb68a93f\", HelpText = \"provider.field.fd39d57d52f36\")]",
           "sourceLineSha256": "b7b41ce455115ecf48a306d0ea713f4ce32d1cda609d032827d94528128af556"
@@ -6822,7 +6822,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 66,
+          "line": 73,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f0f701a8deb7c\", Type = FieldType.Number, HelpText = \"provider.field.fd45ae9f7e9a5\", Advanced = true)]",
           "sourceLineSha256": "fb8035e4f31014cef0151151c27d24166f6ead871bcd41276c3b81dd82e0ef7e"
@@ -6854,7 +6854,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 55,
+          "line": 59,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fe3017fb82b09\", Type = FieldType.Checkbox, HelpText = \"provider.field.fd51e797a3412\")]",
           "sourceLineSha256": "c239df7c0599fc1ae170f36d9a4fa3682b02a924c153ea5118d102ae04e0631d"
@@ -6871,7 +6871,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 43,
+          "line": 44,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fa969d04ec2d0\", HelpText = \"provider.field.fd72246ae30a8\", Privacy = PrivacyLevel.UserName)]",
           "sourceLineSha256": "84a7749afdc6cfa2629f112ea4c3a9d90923bf27cba1114121c97a510e38018a"
@@ -6886,7 +6886,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 88,
+          "line": 92,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(DelugePriority), Advanced = true, HelpText = \"provider.field.fd73d1889cb3d\")]",
           "sourceLineSha256": "cb615c2ff0f1ed49ef5dbe6cfadb64eaf27c7a133c5da7fe8656eaaf231c7895"
@@ -6917,7 +6917,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 40,
+          "line": 41,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Type = FieldType.Textbox, Label = \"provider.field.fd783e4d6293b\", HelpText = \"provider.field.fb8265760181c\", Advanced = true)]",
           "sourceLineSha256": "8b8c1ace7e91c7fc7a06e64cd6b1cd02e057144493768e8811883a425aa972e5"
@@ -6952,7 +6952,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Torznab/TorznabSettings.cs",
-          "line": 67,
+          "line": 68,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(9, Type = FieldType.Textbox, Label = \"provider.field.fd783e4d6293b\", HelpText = \"provider.field.fb8265760181c\", Advanced = true)]",
           "sourceLineSha256": "309a250a630ff3891d8772c4b7f861fe268489f853a03fd6a8a8e96569de8ad9"
@@ -6984,7 +6984,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 53,
+          "line": 55,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.fd820d8de70e4\", HelpText = \"provider.field.f14f23b87f76a\")]",
           "sourceLineSha256": "f3c1617bf32fa6bdf9fd98a4ac63d2bf2224352743eac17bdc655ac57cda19d2"
@@ -6999,7 +6999,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs",
-          "line": 42,
+          "line": 44,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.fd8a3f9b429d7\")]",
           "sourceLineSha256": "d4ffacbf75b37c01d1c89e28fc52229c268b1b5da1820db6a578bca9f02c80ec"
@@ -7014,7 +7014,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 61,
+          "line": 65,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"MonitorAudiobooks\", Type = FieldType.Checkbox, HelpText = \"provider.field.fd9c3aa57a6fc\")]",
           "sourceLineSha256": "e3753f2d91f8e422bc240ed90ea4910091ad90462b248bc7bea958d58b54c00e"
@@ -7050,7 +7050,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 60,
+          "line": 66,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"ApiKey\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fdc7b7a265acf\")]",
           "sourceLineSha256": "4f0db59357fb9b2a83add323bb0ebe471d66c03a735e85aec9accacc316fe9d1"
@@ -7067,7 +7067,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 60,
+          "line": 65,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.feb30cf8f492e\", Type = FieldType.Tag, HelpText = \"provider.field.fdd6851e46211\")]",
           "sourceLineSha256": "44c45acbd014f584ff1b7c6392147b96c8576dd60aab13fcab47fa297d42848b"
@@ -7097,7 +7097,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 58,
+          "line": 62,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.f3a01afc88e4c\", Type = FieldType.Checkbox, HelpText = \"provider.field.fde35332a868d\")]",
           "sourceLineSha256": "9cf595cfee66753a41bb8c2724d0c59e6696841b1f511fa64df208be3e85b215"
@@ -7166,42 +7166,42 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 75,
+          "line": 77,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(NzbVortexPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "0fd99097c28561cd4139a753a805ffe6f825518c7d0a7808d81c5c52efea660f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 82,
+          "line": 83,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(NzbgetPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "6f8b81c6a8e646f2b031c33e52a5b5ac13eaffda51d07241c5457dee598c0db9"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 103,
+          "line": 109,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(11, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(QBittorrentPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "a7b45d1fa1fb119c14d181b0bd9e1daa8521970cdf7c74283c8b31fcf12045c8"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 86,
+          "line": 89,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(SabnzbdPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "b179651d08f60687edf5c2971e41ffe7f66c69d484a8e241495fc4383ccb01f2"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 89,
+          "line": 94,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(9, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(TransmissionPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "e6d3dd948376340779ba8353a7bd17c47fabb0f4f6fb3c5d9d5b303451dfb03f"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 99,
+          "line": 100,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(11, Label = \"provider.field.f1e36708f9861\", Type = FieldType.Select, SelectOptions = typeof(RTorrentPriority), Advanced = true, HelpText = \"provider.field.fe0303eb76da9\")]",
           "sourceLineSha256": "d6895e2de55fa1e7d13b3673e540a6fcaf095f4d79843e93c2d28df0a922bbc0"
@@ -7225,7 +7225,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 51,
+          "line": 56,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fe1c79d2205ed\", Type = FieldType.Textbox, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f023f9ed3122e\", HelpLink = \"https://github.com/caronc/apprise-api#persistent-storage-solution\")]",
           "sourceLineSha256": "ff0b166e771ed57b166654e7a3c33657e831ee90d994d14cb91045b93c7d6e0f"
@@ -7257,7 +7257,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 52,
+          "line": 53,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fe22820fcf5cd\", HelpText = \"provider.field.f297611157926\", Type = FieldType.Tag)]",
           "sourceLineSha256": "8254aee3364d1ec2fe76a018d1b3989342ffe8472b0d26acfedb29f24e424795"
@@ -7272,7 +7272,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 36,
+          "line": 37,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.fe2fa8b9f4041\", Type = FieldType.Checkbox, HelpText = \"provider.field.f34ef6818e4c8\")]",
           "sourceLineSha256": "0140cda0c888f1c81a48364de02829ad18c940558aedbc299997eb3866ff9022"
@@ -7287,7 +7287,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 55,
+          "line": 59,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.fe3017fb82b09\", Type = FieldType.Checkbox, HelpText = \"provider.field.fd51e797a3412\")]",
           "sourceLineSha256": "c239df7c0599fc1ae170f36d9a4fa3682b02a924c153ea5118d102ae04e0631d"
@@ -7317,7 +7317,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 69,
+          "line": 76,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"AudiobookQualityProfile\", Type = FieldType.Select, SelectOptionsProviderAction = \"getAudiobookQualityProfiles\", HelpText = \"provider.field.fe51ae2eae9c6\")]",
           "sourceLineSha256": "3ba7858964e83ee133b02df985d539708f12a2881d789efac18c40c1cfa9c647"
@@ -7339,28 +7339,28 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 76,
+          "line": 77,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\")]",
           "sourceLineSha256": "bc8164a6442a7e98bf1554d24cb322ad71a518f825f83c34242dfd76d1313538"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 24,
+          "line": 25,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\", HelpText = \"provider.field.fcc88585f2a35\", HelpTextWarning = \"provider.field.f2f1d8ba51d2a\")]",
           "sourceLineSha256": "e767007ea56f3d9f75659fb74b8ce38f5a67bc277925a7471ed43a3039f778cd"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 31,
+          "line": 35,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\", HelpText = \"provider.field.f9d0dec541ca6\")]",
           "sourceLineSha256": "04a68788b63304c5ec33d02506253b6693c77e0d5f82d9e28dd008eab1da3198"
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Webhook/WebhookSettings.cs",
-          "line": 99,
+          "line": 100,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.fe7a241debad5\", Type = FieldType.Url, Privacy = PrivacyLevel.ApiKey)]",
           "sourceLineSha256": "3f1f0cb1f26e90d5459f465aaee0e4cc74979a33f50f7d0f0da94c7b5655deb1"
@@ -7377,7 +7377,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 63,
+          "line": 65,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fe914fa2a68af\")]",
           "sourceLineSha256": "c1892fb84c4c285dbe415b12e2324aabb480e1c175d40899f25c6dbfbeba2976"
@@ -7410,7 +7410,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 63,
+          "line": 70,
           "kind": "HelpText",
           "sourceLine": "HelpText = \"provider.field.fea17ca84d52d\")]",
           "sourceLineSha256": "3f589cca814019d0ac838c54069c1441248ae7516252ccddddcda80cd4ffc33b"
@@ -7439,7 +7439,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/IPTorrents/IPTorrentsSettings.cs",
-          "line": 46,
+          "line": 47,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(4, Type = FieldType.Checkbox, Label = \"provider.field.feaf93d215894\", HelpText = \"provider.field.f0af80d5651c2\", Advanced = true)]",
           "sourceLineSha256": "cc24e9790b27c4fe2f62c98ffabd52764d85cc4efd937e4d064773e89bc25bd7"
@@ -7467,7 +7467,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Indexers/Torznab/TorznabSettings.cs",
-          "line": 73,
+          "line": 74,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Type = FieldType.Checkbox, Label = \"provider.field.feaf93d215894\", HelpText = \"provider.field.f0af80d5651c2\", Advanced = true)]",
           "sourceLineSha256": "119c56f813b687b9df0b213583f066d05b4577639992251f0887ff5dbbc07b42"
@@ -7489,7 +7489,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Apprise/AppriseSettings.cs",
-          "line": 60,
+          "line": 65,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.feb30cf8f492e\", Type = FieldType.Tag, HelpText = \"provider.field.fdd6851e46211\")]",
           "sourceLineSha256": "44c45acbd014f584ff1b7c6392147b96c8576dd60aab13fcab47fa297d42848b"
@@ -7537,7 +7537,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 55,
+          "line": 59,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.feb693dfac8a0\", Type = FieldType.Tag, HelpText = \"provider.field.f709b8e79d1cd\")]",
           "sourceLineSha256": "281d628f849293f67266da4ba8588b7bffb6aa9617e58cf608d1d639b860d792"
@@ -7554,7 +7554,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 52,
+          "line": 56,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.feccfce2a7fdf\", Type = FieldType.Checkbox, HelpText = \"provider.field.f9da80bea42a7\")]",
           "sourceLineSha256": "4d9bda692602ded4b89b44f5e56ecfe7fb6efbe39e8dfd9a3a80b172c421195c"
@@ -7604,7 +7604,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 57,
+          "line": 63,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"provider.field.fafbbcc619aac\", Type = FieldType.Textbox, Advanced = true, HelpText = \"provider.field.fed7a4fd6fcef\")]",
           "sourceLineSha256": "2e77e9bbb8f9bac244702afe0121e2916fc3641387988763ef1c9d71126326df"
@@ -7636,7 +7636,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 44,
+          "line": 46,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.f190fd47bff2e\", Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.fedec108b0608\", HelpLink = \"https://discord.gg/5PyXBfvS6T\")]",
           "sourceLineSha256": "0ba371cf6a5f4e30b79b2fc4c27c79255e6553e5d6ad50e684c01b4a7edb3bdb"
@@ -7651,7 +7651,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 94,
+          "line": 98,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Label = \"provider.field.fee2bb4b2e037\", Type = FieldType.Checkbox)]",
           "sourceLineSha256": "94235dd34ab613b2d5d46529195accd12a4303104877ab49552cd23023b06f39"
@@ -7665,14 +7665,14 @@
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 88,
+          "line": 89,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(10, Label = \"provider.field.fee2bb4b2e037\", Type = FieldType.Checkbox, HelpText = \"provider.field.fcbf8b70ead77\")]",
           "sourceLineSha256": "eeb3e15e03beb9cc190bbb1f74f44c4d206205e088d11eca433787eb0ea26a82"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionSettings.cs",
-          "line": 95,
+          "line": 100,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(11, Label = \"provider.field.fee2bb4b2e037\", Type = FieldType.Checkbox)]",
           "sourceLineSha256": "94235dd34ab613b2d5d46529195accd12a4303104877ab49552cd23023b06f39"
@@ -7726,7 +7726,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs",
-          "line": 76,
+          "line": 82,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Label = \"UseSSL\", Type = FieldType.Checkbox, HelpText = \"provider.field.ff03109a92f8c\")]",
           "sourceLineSha256": "677594e76ae9a1812d5d779db809a4891543c5acd68770f150868d56ef39b23c"
@@ -7741,7 +7741,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs",
-          "line": 49,
+          "line": 53,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.ff2286e3d1df8\", Type = FieldType.Checkbox, HelpText = \"provider.field.f0d128645275f\")]",
           "sourceLineSha256": "7fa6e05b91b93b97b157cadb04de6edd9c6e4073759ef9c28baf9e1c40af1f62"
@@ -7756,7 +7756,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs",
-          "line": 54,
+          "line": 56,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"Host\", Placeholder = \"audiobookshelf\", HelpText = \"provider.field.ff24039287584\")]",
           "sourceLineSha256": "15049ddcc721eb9d9181e91c51914e8641939601af50009fbb9d69203c58e485"
@@ -7774,7 +7774,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 64,
+          "line": 68,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.f686d3f04e7e0\", Type = FieldType.Checkbox, HelpText = \"provider.field.ff31b483b37fe\")]",
           "sourceLineSha256": "72741e18b845ce3c12236e420b23142d72040ca1466669dd02a5c8f26324d606"
@@ -7822,7 +7822,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
-          "line": 85,
+          "line": 86,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(3, Label = \"Categories\", Type = FieldType.Select, SelectOptionsProviderAction = \"newznabCategories\", HelpText = \"provider.field.ff8e41f202b43\")]",
           "sourceLineSha256": "3fb31638e999d81fbadcc5ea0704cbd5e9a66938992f1a9882c4e26d3e2cd5d4"
@@ -7872,7 +7872,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Ntfy/NtfySettings.cs",
-          "line": 40,
+          "line": 41,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(1, Label = \"provider.field.ff9db72ced1ee\", Type = FieldType.Password, Privacy = PrivacyLevel.ApiKey, HelpText = \"provider.field.f2b866dadafe2\", HelpLink = \"https://docs.ntfy.sh/config/#access-tokens\")]",
           "sourceLineSha256": "768329a2086949fce623d20c4d2cab83e035439fc0012120d45860c5e15bdd0a"
@@ -7886,7 +7886,7 @@
         },
         {
           "file": "src/NzbDrone.Core/Notifications/Twitter/TwitterSettings.cs",
-          "line": 47,
+          "line": 49,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(2, Label = \"provider.field.ff9db72ced1ee\", Privacy = PrivacyLevel.ApiKey, Advanced = true)]",
           "sourceLineSha256": "5819a964c11d3ad03df1624ec2803c516339a593020b2bef6636eec7d83a14bf"
@@ -7901,7 +7901,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs",
-          "line": 49,
+          "line": 53,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(0, Label = \"provider.field.f7c6679a4c0b7\", Type = FieldType.Checkbox, HelpText = \"provider.field.ffb082a613681\")]",
           "sourceLineSha256": "69e9cb438fc2c127e06789a07cebf275d688760b0a1d96c42687c7d9b5e7bfd5"
@@ -7952,7 +7952,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
-          "line": 39,
+          "line": 40,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.f2a41808a7b7a\", Type = FieldType.Checkbox, HelpText = \"provider.field.ffcf2138b1018\")]",
           "sourceLineSha256": "98eace99d38cfbf636e335eea3502183c89e4e52688694911040b1fd8691ea25"
@@ -7969,7 +7969,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 93,
+          "line": 100,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(13, Label = \"provider.field.ffd06a3b2e208\", Type = FieldType.Number, HelpText = \"provider.field.f198ab7b8b868\", Advanced = true)]",
           "sourceLineSha256": "4826d27bac4b6633bbdbe71dc79a42fc2a4eefb1a668387a5c4de6161099f50a"
@@ -7999,84 +7999,84 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 54,
+          "line": 58,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "aa53864baf396b383381ee91ab7f6ddae65058b1c1359a397f2353142d57dbbe"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Deluge/DelugeSettings.cs",
-          "line": 61,
+          "line": 65,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "571c701ca98f4234fbab13ae28bf457c2e24695a745aec548e28f67fa3219514"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 58,
+          "line": 60,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(4, Label = \"provider.field.f7ab097af902c\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "3bdd1a0be4f944426680d9c4404a1cd4f4439f14f6b9c9de7fa082fec64b8816"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs",
-          "line": 65,
+          "line": 67,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(5, Label = \"provider.field.fb0bc267591a6\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "4386c2387a5c9c1f81e3b6ecd59163afba7a5f93d89c7b7152e7a43c17ad0e02"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 65,
+          "line": 66,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "825f1b5a2e64ad3315c25301dea0d43fc663da926a0cd079f6bb1bced989dae5"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Nzbget/NzbgetSettings.cs",
-          "line": 72,
+          "line": 73,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "0373c1669acc166e3c85d4024d1b7b73ab69f2881a3a9782f5d9a51fafb0e87c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 69,
+          "line": 75,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "3f5ae2248d1d93b01ff799efa5c724dbba7c7be0f7de6b240247ee8cc52ee8ba"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 76,
+          "line": 82,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "c02061c3156a87bb6e372314e088b563cd3fae8d38130051c621b8e3e4c93277"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 69,
+          "line": 72,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "f346a468e567a6d7d80040951ba0483b1a67a07d5657ca4f0a458da894eac51c"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdSettings.cs",
-          "line": 76,
+          "line": 79,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(8, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Select, SelectOptionsProviderAction = \"getCategories\", HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "76170d8141c115c0b70b0e8f8e603f2d6cad50572430e2b85efead971f15fb24"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 62,
+          "line": 63,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(6, Label = \"provider.field.fb7445013fe90\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "825f1b5a2e64ad3315c25301dea0d43fc663da926a0cd079f6bb1bced989dae5"
         },
         {
           "file": "src/NzbDrone.Core/Download/Clients/rTorrent/RTorrentSettings.cs",
-          "line": 69,
+          "line": 70,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(7, Label = \"provider.field.f007be7ed5f4e\", Type = FieldType.Textbox, HelpText = \"provider.field.ffe3afd1a7d4a\")]",
           "sourceLineSha256": "0373c1669acc166e3c85d4024d1b7b73ab69f2881a3a9782f5d9a51fafb0e87c"
@@ -8124,7 +8124,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Indexers/SeedCriteriaSettings.cs",
-          "line": 57,
+          "line": 63,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(2, Type = FieldType.Textbox, Label = \"provider.field.f1fb3893d0b21\", Unit = \"minutes\", HelpText = \"provider.field.fff254e3d4b53\", Advanced = true)]",
           "sourceLineSha256": "1f0290195516d255de1b0e85ca95de1df0b3c069b385322b2ba7d1278992a4a6"
@@ -8139,7 +8139,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
-          "line": 112,
+          "line": 118,
           "kind": "Label",
           "sourceLine": "[FieldDefinition(14, Label = \"provider.field.fff72ae38d781\", Type = FieldType.Checkbox, HelpText = \"provider.field.fcf9692863aa6\")]",
           "sourceLineSha256": "4b42ef218e8c111f4715cf331d8c30de79717390a61688ff1ad2bae8c340494a"
@@ -8154,7 +8154,7 @@
       "callsites": [
         {
           "file": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs",
-          "line": 84,
+          "line": 91,
           "kind": "HelpText",
           "sourceLine": "[FieldDefinition(10, Label = \"EbookRootFolder\", Type = FieldType.Path, HelpText = \"provider.field.fffc595f7f1a9\")]",
           "sourceLineSha256": "efecf6bf1733157ae853d93e2d7af4315c8ec482a466a23c4fd5c4410c605baf"

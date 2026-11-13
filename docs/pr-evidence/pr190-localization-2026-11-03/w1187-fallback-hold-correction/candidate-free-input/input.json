@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "application": "ChaptarrNG",
+  "pullRequest": 190,
+  "exactHead": "00d37b25ce5534135c2dacaf6a84d9d15fe0bb0b",
+  "exactTree": "13e57e7826db4db86556f244fb066e4915022511",
+  "sourceOrdinal": 1187,
+  "sourceId": "server.message.md764ed5e74b4",
+  "source": {
+    "id": "server.message.md764ed5e74b4",
+    "source": "{value0} conversion was cancelled.",
+    "sourceFingerprint": "6e19b762533b543ae21ef80b06f5285d0fa859a2ee81f4e9060d30c0aa0fdb17",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{TargetQualityName}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "{value0} conversion was cancelled."
+    ],
+    "sourceTemplates": [
+      "{TargetQualityName} conversion was cancelled."
+    ],
+    "callsites": [
+      {
+        "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "line": 195,
+        "sourceLine": "MarkCancelled(job, $\"{job.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+        "sourceLineSha256": "8c6b4ea5b8dc186855cb06ec101976b7ee8c90364cce42f5d2b4f594034d6806",
+        "category": "operational-message",
+        "surface": "Persisted queue conversion message translated by QueueStatusCell/QueueRow at existing server-message presentation boundaries; dynamic data tokens remain intact."
+      },
+      {
+        "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "line": 603,
+        "sourceLine": "MarkCancelled(job, $\"{request.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+        "sourceLineSha256": "e60a2173817aeea3829f7590963e82994d2bc0e6ecce3ca48429c02a442bef37",
+        "category": "operational-message",
+        "surface": "Persisted queue conversion message translated by QueueStatusCell/QueueRow at existing server-message presentation boundaries; dynamic data tokens remain intact."
+      }
+    ],
+    "protectedLiterals": []
+  },
+  "sourceRegistryPin": {
+    "path": "docs/localization/server-message-sources.json",
+    "fileSha256": "070ad52cfc57a1f9b135c2ca19b79a2119676f809b626d53af15a9026b5bf6f1",
+    "gitBlob": "faab5bce522ba29e131b2cee1611f5746bf78ef6"
+  },
+  "callerReferences": [
+    {
+      "path": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+      "line": 195,
+      "lineText": "MarkCancelled(job, $\"{job.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+      "lineRawSha256": "47d6ab90097aff336297640c4c75764b251cd5c914d38a4e8412aedb091e637a",
+      "lineSha256": "8c6b4ea5b8dc186855cb06ec101976b7ee8c90364cce42f5d2b4f594034d6806",
+      "contextBefore": [
+        "{",
+        "if (job.Status == ConversionJobStatus.Cancelling)",
+        "{"
+      ],
+      "contextAfter": [
+        "}",
+        "else",
+        "{"
+      ],
+      "fileSha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47",
+      "gitBlob": "b6f56b1660fa1d70f54bc131fb4b1d26f0896aff"
+    },
+    {
+      "path": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+      "line": 603,
+      "lineText": "MarkCancelled(job, $\"{request.TargetQualityName ?? \"M4B\"} conversion was cancelled.\");",
+      "lineRawSha256": "fd87bf3d444a2027ab01a638aa9f7622151cbdc4ad22ccfa68786d34714b4d29",
+      "lineSha256": "e60a2173817aeea3829f7590963e82994d2bc0e6ecce3ca48429c02a442bef37",
+      "contextBefore": [
+        "return;",
+        "}",
+        ""
+      ],
+      "contextAfter": [
+        "CleanupWorkRoot(request.WorkRoot);",
+        "}",
+        ""
+      ],
+      "fileSha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47",
+      "gitBlob": "b6f56b1660fa1d70f54bc131fb4b1d26f0896aff"
+    }
+  ],
+  "catalogPins": [
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "fileSha256": "186f8b9aef094189136473a3c2c2e3cd09d84a59b054545793c84dc60cd0cd39",
+      "gitBlob": "936368a6415f3a630aa1dd7b5a20584bf0f2f502"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "fileSha256": "21eaab7f5bb56c943487d7006354b965a4d0749d196030fa7f6ab0dd7e3d12fd",
+      "gitBlob": "db6c07bc115ad81da2d1e9f6cd5b093db769d108"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "fileSha256": "ac3dfd4e576b5579bb091b191f2f59a98c9707f357dac0a94e40a929be4574e2",
+      "gitBlob": "917d7a5d6d627c62d0c767343118ae5c57e7b815"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "fileSha256": "61289bb8e01eec4c60a2f9e09f38aa9dc1d0f03730c74f66497553aa359702ea",
+      "gitBlob": "60c14db660921411b5d9f7a0e073be1c0617a887"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "fileSha256": "924b198626202a4fffac0c0f7b367aa375161e7b5fa0410e3d649da3a76d942c",
+      "gitBlob": "1467df6dbb6b67af40b0949b262e386f976d4dd1"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "fileSha256": "f18e6f64b3ebd5c7c137e1c56af78fd47b43050bc2396300e09a16a52fe8cebe",
+      "gitBlob": "0dac7379933313fc74641d296cc32a93f7a5e2bb"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "fileSha256": "5f771bfd479f5e3af42df001972e55aed0c3778b2b40548ac843e21fb22acff2",
+      "gitBlob": "49950f3ab639408d5b503e954975f553934e4942"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "fileSha256": "844f2fc0973da81c6121638dd3ca86f43306a60febb81b76712ea5bc542d5dd9",
+      "gitBlob": "ef48c763ee9f46510e009737474280113a630913"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "fileSha256": "e7c540d2baf70243f22fe57c4cbfc742c7f53cbe26c458144fc634ca46e6f582",
+      "gitBlob": "5696559e4e6e2b44ad542c2c936f76f7b08ade2f"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "fileSha256": "35abc39b5d16790292b02bf5045c78601ce147c3d7a0effbc1c07c3813a19286",
+      "gitBlob": "704a78029608d67d361b9bb2af8a52f87db7d775"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "fileSha256": "41acb5e21ae30d379e3db5d74e48895ff910e69467c6debe8660af27d8e60a88",
+      "gitBlob": "0f670ada88db353e6704d6b2d2578b2a50424412"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "fileSha256": "349b39ec160f39a3292ef2a48f9c1f5f440a78180981b45698a824ac0742cb2e",
+      "gitBlob": "9fc6668e836e23b3d5f5e677b21f0ad4c1aa2ee5"
+    }
+  ],
+  "targetCells": [
+    {
+      "locale": "ar",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "target": "تم إلغاء تحويل {value0}.",
+      "targetSha256": "04a80a98b60ecde8ee1b1c64d7c6843f16d236de8268d135ce2796d60ddd1931"
+    },
+    {
+      "locale": "de",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/de.json",
+      "target": "Die Konvertierung zu {value0} wurde abgebrochen.",
+      "targetSha256": "2fd7cb5ff9e4a7bc19b8bba32485ffa8a24a74635a849f82e79b3c7c1462083a"
+    },
+    {
+      "locale": "es",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/es.json",
+      "target": "La conversión {value0} fue cancelada.",
+      "targetSha256": "0838c73941fa1e8ecd01bc7e61dc6069a50436e47419c24b8bb7ec64ce03476d"
+    },
+    {
+      "locale": "fr",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "target": "La conversion vers {value0} a été annulée.",
+      "targetSha256": "e6d14b91ccc9eddfc0769d4634e4e907f8a448efafff8c5f00978894a9e468f9"
+    },
+    {
+      "locale": "hi",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "target": "{value0} रूपांतरण रद्द कर दिया गया है।",
+      "targetSha256": "3961f0fc1b50a6849fe8935a84bd77891f70145cba3a0add4dd3cced23c33e03"
+    },
+    {
+      "locale": "id",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/id.json",
+      "target": "Konversi {value0} dibatalkan.",
+      "targetSha256": "2be6a163eed58c7a310da047fe3cf063841392e777a6bbecec2c7898939e2b0d"
+    },
+    {
+      "locale": "ja",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "target": "{value0}の変換がキャンセルされました。",
+      "targetSha256": "7f0bfaba4a95fdf1fcc80fb776fa6ab8edcfd0e30318a2ce1c21c93cd76ad6b4"
+    },
+    {
+      "locale": "ko",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "target": "{value0} 변환이 취소되었습니다.",
+      "targetSha256": "917c293100a0bb5f135086faf16c9526a008799d4b04a633b5e9499d0c7d22f2"
+    },
+    {
+      "locale": "pt-BR",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "target": "A conversão {value0} foi cancelada.",
+      "targetSha256": "32d9b0a23784b91cece2b5f47cfd925f9439173abc345b831a5b3ff5f5fa0dcb"
+    },
+    {
+      "locale": "vi",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "target": "Quá trình chuyển đổi sang {value0} đã bị hủy.",
+      "targetSha256": "7982e77996746f7091385da5939d5debe6a9883f18413cf821f579c66fe5f518"
+    },
+    {
+      "locale": "zh-Hans",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "target": "{value0} 转换已被取消。",
+      "targetSha256": "428a97403101ff42db7137e97c4a6e914db6de798d325a0dab840f3b5d31d912"
+    },
+    {
+      "locale": "zh-Hant",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "target": "{value0} 轉換已被取消。",
+      "targetSha256": "ec26cd8399e1cfde4f08dfee6a38691b2c911dc50f0381c91b859d5d5c21c024"
+    }
+  ],
+  "reviewConstraints": {
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "noTranslationProposalIncluded": true
+  }
+}

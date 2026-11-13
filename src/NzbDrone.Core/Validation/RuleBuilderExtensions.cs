@@ -32,7 +32,8 @@ namespace NzbDrone.Core.Validation
             // to avoid Regex.IsMatch throwing ArgumentNullException ("Value cannot be null. (Parameter 'input')").
             return ruleBuilder
                 .Must(x => string.IsNullOrEmpty(x) || HostRegex.IsMatch(x) || x.IsValidIpAddress())
-                .WithMessage("must be valid Host without http://");
+                .WithMessage("must be valid Host without http://")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m45d06dda48d1"));
         }
 
         public static IRuleBuilderOptions<T, string> ValidRootUrl<T>(this IRuleBuilder<T, string> ruleBuilder)
@@ -41,12 +42,14 @@ namespace NzbDrone.Core.Validation
 
             return ruleBuilder
                 .Must(x => x.IsValidHttpUrl())
-                .WithMessage("must be a valid URL that starts with http:// or https://");
+                .WithMessage("must be a valid URL that starts with http:// or https://")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.maef426d77944"));
         }
 
         public static IRuleBuilderOptions<T, string> ValidUrlBase<T>(this IRuleBuilder<T, string> ruleBuilder, string example = "/chaptarr")
         {
-            return ruleBuilder.Matches(@"^(?!\/?https?://[-_a-z0-9.]+)", RegexOptions.IgnoreCase).WithMessage($"Must be a valid URL path (ie: '{example}')");
+            return ruleBuilder.Matches(@"^(?!\/?https?://[-_a-z0-9.]+)", RegexOptions.IgnoreCase).WithMessage($"Must be a valid URL path (ie: '{example}')")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mc3b239e3eb56", new { value0 = example }));
         }
 
         public static IRuleBuilderOptions<T, int> ValidPort<T>(this IRuleBuilder<T, int> ruleBuilder)

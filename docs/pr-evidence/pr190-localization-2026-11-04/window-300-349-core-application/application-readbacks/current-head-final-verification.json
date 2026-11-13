@@ -1,0 +1,121 @@
+{
+  "result": "PASS",
+  "head": "4688c998d92c821bbc1464ea4640c90615a69327",
+  "tree": "e655295664bbe8466e6f5541eb78e17e32cfca12",
+  "latestMain": "beb4f9550ec3340b3f6d9b34c721055610e68847",
+  "candidateCells": 600,
+  "selectedChanges": 106,
+  "unchangedCells": 494,
+  "targetReadbackMismatches": 0,
+  "sourceKeys": 50,
+  "sourceTextChanges": 0,
+  "contextChangedKeysFromCandidateFree": [
+    "BookMatchingStrictness",
+    "Selected"
+  ],
+  "selectedCellsWithChangedSourceOrContext": [
+    "BookMatchingStrictness::id"
+  ],
+  "catalogCount": 12,
+  "keyCountPerCatalog": 4165,
+  "catalogs": [
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "locale": "ar",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "locale": "de",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "locale": "es",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "locale": "fr",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "locale": "hi",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "locale": "id",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "locale": "ja",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "locale": "ko",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "locale": "pt-BR",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "locale": "vi",
+      "keyCount": 4165,
+      "keyOrderSha256": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "locale": "zh-Hans",
+      "keyCount": 4165,
+      "keyOrderSha256": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070"
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "locale": "zh-Hant",
+      "keyCount": 4165,
+      "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec"
+    }
+  ],
+  "keyOrderChecked": true,
+  "productCommit": "7e69f46e21f1ea7455893179116ec85ee2b0f85e",
+  "productCommitPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "workflowPathsAgainstLatestMain": [],
+  "freshCellReview": {
+    "cellId": "BookMatchingStrictness::id",
+    "target": "Mode pencocokan",
+    "contextSha256": "f920d5f6a8031a4b828e03f93d56f7e0c06653e56202f41fed4b784f670fb74f",
+    "reviewerDecision": "accept",
+    "reviewerConfidence": "moderate",
+    "rootDecision": "accept-current",
+    "rootConfidence": "moderate",
+    "nativeSpeakerSignoff": false
+  }
+}

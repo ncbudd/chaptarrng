@@ -1,0 +1,28 @@
+{
+  "gitBlob": "4c9bd6f0f4eb8d0c5e1970f788fb85ab115a9382",
+  "reviewNotes": [
+    "The internal eBook term asks translators to preserve eBook capitalization where the target language permits.",
+    "The protected-literal registries independently require exact POST, PUT, Freeleech, VIP, Chaptarr and chaptarr tokens in the relevant selected strings.",
+    "No external dictionary/CLDR browsing was performed in this task, which prohibits browser work."
+  ],
+  "sha256": "4f766592488412e50cd2d166d584d996a93497abdeb38c2039e2e2d8bbdf3444",
+  "sourcePath": "docs/localization/terminology.json",
+  "terminologyRecords": {
+    "domain.audiobook": {
+      "guidance": "Use the product's established term consistently.",
+      "id": "domain.audiobook",
+      "meaning": "An audio edition of a book.",
+      "preferredTranslations": {},
+      "source": "Audiobook",
+      "sourceId": "AudiobookLabel"
+    },
+    "domain.ebook": {
+      "guidance": "Preserve the product's established capitalization where the target language permits.",
+      "id": "domain.ebook",
+      "meaning": "A digital text edition of a book.",
+      "preferredTranslations": {},
+      "source": "eBook",
+      "sourceId": "EbookLabel"
+    }
+  }
+}

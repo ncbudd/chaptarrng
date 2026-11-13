@@ -5,6 +5,7 @@ import ProtocolLabel from 'Activity/Queue/ProtocolLabel';
 import BookFormats from 'Book/BookFormats';
 import BookQuality from 'Book/BookQuality';
 import IndexerFlags from 'Book/IndexerFlags';
+import BidiText from 'Components/BidiText';
 import Icon from 'Components/Icon';
 import Label from 'Components/Label';
 import Link from 'Components/Link/Link';
@@ -20,8 +21,9 @@ import formatDateTime from 'Utilities/Date/formatDateTime';
 import formatAge from 'Utilities/Number/formatAge';
 import formatBytes from 'Utilities/Number/formatBytes';
 import formatCustomFormatScore from 'Utilities/Number/formatCustomFormatScore';
+import { sanitizeBidiText } from 'Utilities/String/isolateBidiText';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
+import { translateServerMessageById } from 'Utilities/String/translateServerMessage';
 import Peers from './Peers';
 import styles from './InteractiveSearchRow.css';
 
@@ -53,7 +55,7 @@ function getDownloadKind(isGrabbed, grabError, downloadAllowed, existingTorrentA
   return kinds.DEFAULT;
 }
 
-function getDownloadTooltip(isGrabbing, isGrabbed, grabError, existingTorrentAvailable) {
+function getDownloadTooltip(isGrabbing, isGrabbed, grabError, existingTorrentAvailable, preserveBalancedIsolates) {
   if (isGrabbing) {
     return '';
   } else if (isGrabbed) {
@@ -61,7 +63,7 @@ function getDownloadTooltip(isGrabbing, isGrabbed, grabError, existingTorrentAva
   } else if (existingTorrentAvailable) {
     return translate('AdoptExistingTorrent');
   } else if (grabError) {
-    return translateServerMessage(grabError);
+    return sanitizeBidiText(grabError, preserveBalancedIsolates);
   }
 
   return translate('AddToDownloadedQueue');
@@ -98,7 +100,7 @@ function renderTitleWithMatch(title, matchedTitleCharStart, matchedTitleCharEnd)
 }
 
 function getNarratorDisplay(narrator) {
-  const rawNarrator = typeof narrator === 'string' ? narrator.trim() : '';
+  const rawNarrator = typeof narrator === 'string' ? sanitizeBidiText(narrator.trim()) : '';
 
   if (!rawNarrator) {
     return {
@@ -290,11 +292,25 @@ class InteractiveSearchRow extends Component {
       isGrabbing,
       isGrabbed,
       existingTorrentAvailable,
+      existingTorrentMessageId,
+      existingTorrentMessageParameters,
       isPreferredChoice,
       longDateFormat,
       timeFormat,
-      grabError
+      grabError,
+      grabErrorMessageId,
+      grabErrorMessageParameters,
+      grabErrorIsLocalized
     } = this.props;
+
+    const localizedGrabError = translateServerMessageById(grabErrorMessageId, grabErrorMessageParameters);
+    const renderedGrabError = localizedGrabError || grabError;
+    const grabErrorIsOpaque = Boolean(grabError) && !localizedGrabError && !grabErrorIsLocalized;
+    const localizedExistingTorrentMessage = translateServerMessageById(
+      existingTorrentMessageId,
+      existingTorrentMessageParameters
+    );
+    const existingTorrentMessage = localizedExistingTorrentMessage || this.props.existingTorrentMessage || '';
 
     const titleText = renderTitleWithMatch(displayTitle || title, matchedTitleCharStart, matchedTitleCharEnd);
     const narratorDisplay = renderNarratorDisplay(this.props.narrator);
@@ -336,14 +352,19 @@ class InteractiveSearchRow extends Component {
             <div className={styles.titleTextBlock}>
               <Link
                 to={infoUrl}
-                title={title}
+                title={sanitizeBidiText(title)}
                 className={styles.titleLink}
               >
-                {titleText}
+                <BidiText>{titleText}</BidiText>
               </Link>
               {grabError ? (
                 <div className={styles.grabError}>
-                  {translateServerMessage(grabError)}
+                  <BidiText
+                    lang={grabErrorIsOpaque ? 'und' : undefined}
+                    preserveBalancedIsolates={Boolean(localizedGrabError)}
+                  >
+                    {renderedGrabError}
+                  </BidiText>
                 </div>
               ) : null}
             </div>
@@ -355,7 +376,7 @@ class InteractiveSearchRow extends Component {
 
         <TableRowCell
           className={styles.indexer}
-          title={indexer}
+          title={sanitizeBidiText(indexer)}
         >
           {indexer}
         </TableRowCell>
@@ -451,7 +472,15 @@ class InteractiveSearchRow extends Component {
             <SpinnerIconButton
               name={getDownloadIcon(isGrabbing, isGrabbed, grabError)}
               kind={getDownloadKind(isGrabbed, grabError, downloadAllowed, existingTorrentAvailable)}
-              title={getDownloadTooltip(isGrabbing, isGrabbed, grabError, existingTorrentAvailable)}
+              title={getDownloadTooltip(
+                isGrabbing,
+                isGrabbed,
+                renderedGrabError,
+                existingTorrentAvailable,
+                Boolean(localizedGrabError)
+              )}
+              lang={grabErrorIsOpaque ? 'und' : undefined}
+              dir={grabErrorIsOpaque ? 'auto' : undefined}
               isSpinning={isGrabbing}
               onPress={onDownloadPress}
             />
@@ -472,7 +501,7 @@ class InteractiveSearchRow extends Component {
           isOpen={this.state.isAdoptExistingTorrentModalOpen}
           kind={kinds.WARNING}
           title={translate('AdoptExistingTorrent')}
-          message={translate('AdoptExistingTorrentMessageText', [this.props.existingTorrentMessage])}
+          message={translate('AdoptExistingTorrentMessageText', [`\u2068${existingTorrentMessage}\u2069`])}
           confirmLabel={translate('Adopt')}
           onConfirm={this.onAdoptExistingTorrentConfirm}
           onCancel={this.onAdoptExistingTorrentCancel}
@@ -516,8 +545,13 @@ InteractiveSearchRow.propTypes = {
   isGrabbed: PropTypes.bool.isRequired,
   isPreferredChoice: PropTypes.bool,
   grabError: PropTypes.string,
+  grabErrorMessageId: PropTypes.string,
+  grabErrorMessageParameters: PropTypes.object,
+  grabErrorIsLocalized: PropTypes.bool,
   existingTorrentAvailable: PropTypes.bool,
   existingTorrentMessage: PropTypes.string,
+  existingTorrentMessageId: PropTypes.string,
+  existingTorrentMessageParameters: PropTypes.object,
   longDateFormat: PropTypes.string.isRequired,
   timeFormat: PropTypes.string.isRequired,
   searchPayload: PropTypes.object.isRequired,

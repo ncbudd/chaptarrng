@@ -1,0 +1,29 @@
+{
+  "adjacentW299CallerFilesReattested": 1,
+  "adjacentW299CallerRefsReattested": 1,
+  "adjacentW299CallersExact": true,
+  "adjacentW299CellsReattested": 12,
+  "adjacentW299SourceId": "provider.field.f947c6197dfcb",
+  "callerFilesReattested": 9,
+  "callerReferencesReattested": 51,
+  "currentLocaleCellsReattested": 600,
+  "exactHead": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+  "exactTree": "d76d887609ae90c9238ffda9b192a4c0c72be227",
+  "headMatchesFrozenPacket": true,
+  "inputPacketChecksumsVerified": true,
+  "livePullRequest": {
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "result": "pass",
+  "sourceFollowupIdsCount": 1210,
+  "sourceIdListSliceVerified": true,
+  "sourceRowsReattested": 50,
+  "sourceWindowIdsReattested": 50,
+  "worktreeClean": true
+}

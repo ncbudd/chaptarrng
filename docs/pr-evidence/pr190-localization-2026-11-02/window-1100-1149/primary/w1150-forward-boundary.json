@@ -1,0 +1,152 @@
+{
+  "dispositionsAssigned": false,
+  "rows": [
+    {
+      "currentTarget": "مُعدِّل تعبير Perl النمطي غير معروف أو غير مدعوم: {value0}",
+      "currentTargetSha256": "657a300e32c962e228f10e942be62b3a41d7b8b9f68ec1dbfbd9834275aac5a7",
+      "locale": "ar",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "targetFileGitBlob": "f90466ffbef6401a6c883602e69caacb90d60c5b"
+    },
+    {
+      "currentTarget": "Unbekannter oder nicht unterstützter Perl-Regex-Modifikator: {value0}",
+      "currentTargetSha256": "718ea7f6fff91360002123af84c89410dd9ff1627bf686f584d3316e8ccd22d9",
+      "locale": "de",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "targetFileGitBlob": "0cb4989cac971840b34eb1dc5be3fa9b46f3fa23"
+    },
+    {
+      "currentTarget": "Modificador de expresión regular Perl desconocido o no compatible: {value0}",
+      "currentTargetSha256": "5adf888f672527fdb4eb33e49ab2db6be808ba79114b9a673d79fa6d0f90c40a",
+      "locale": "es",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "targetFileGitBlob": "033d18c1e8d8923351e2b87e7868c1bdaea398ad"
+    },
+    {
+      "currentTarget": "Modificateur d’expression régulière Perl inconnu ou non pris en charge : {value0}",
+      "currentTargetSha256": "4213de799c80f3ad814829f707c3a700192e5e4757b73a132b57c6642024bb24",
+      "locale": "fr",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "targetFileGitBlob": "9ef777a826e8788d588880f67ed5e9d01b90fceb"
+    },
+    {
+      "currentTarget": "अज्ञात या असमर्थित Perl रेगुलर एक्सप्रेशन संशोधक: {value0}",
+      "currentTargetSha256": "6fb5a884548b28b6054757330059ce3ffe849b05be22b732d2d95f068cf0498d",
+      "locale": "hi",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "targetFileGitBlob": "35f960f065f6e9e4f9e99906be671ee6a92f2493"
+    },
+    {
+      "currentTarget": "Pengubah regex Perl tidak dikenal atau tidak didukung: {value0}",
+      "currentTargetSha256": "48b627aac89136dd58d08380920905e934e4d3c6f21c1a2d426508924cb5a4c0",
+      "locale": "id",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "targetFileGitBlob": "6a38488336dfc46383059341d5a384ea2474f0fa"
+    },
+    {
+      "currentTarget": "不明またはサポートされていない Perl 正規表現修飾子：{value0}",
+      "currentTargetSha256": "3cb10d878bc24749d4e323f188b553ca5853b4f64033c0a853d479ba65eb87dd",
+      "locale": "ja",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "targetFileGitBlob": "365f950c4ef649d1da40d7b52553e08a66be9df2"
+    },
+    {
+      "currentTarget": "알 수 없거나 지원되지 않는 Perl 정규식 수정자: {value0}",
+      "currentTargetSha256": "de3e978fe7b89e1ffac06c6d4467019533904e44f3aae0398eb20850205c7fe7",
+      "locale": "ko",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "targetFileGitBlob": "51c314f65453e551125140cf03d62152fa29cefe"
+    },
+    {
+      "currentTarget": "Modificador de expressão regular Perl desconhecido ou não compatível: {value0}",
+      "currentTargetSha256": "5da0a2423079da7300bf2606e931a6b4b868ae609edd59b5d263f2460ffd748e",
+      "locale": "pt-BR",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "targetFileGitBlob": "0c1b737f8f95ab918b02c61231c1685b53b2cb15"
+    },
+    {
+      "currentTarget": "Bộ sửa đổi biểu thức chính quy Perl không xác định hoặc không được hỗ trợ: {value0}",
+      "currentTargetSha256": "857d39c277e89f4be53f263791d91c58adf54233929121f4fc5da1346cd4ccf7",
+      "locale": "vi",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "targetFileGitBlob": "9523c87004a927e3d5fb44a338da822fb0c2f10f"
+    },
+    {
+      "currentTarget": "未知或不支持的 Perl 正则表达式修饰符：{value0}",
+      "currentTargetSha256": "a84febe1e0cecbe0d16ee534a50ee50dca30d21c77d86d6835f38c13801dcb35",
+      "locale": "zh-Hans",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "targetFileGitBlob": "c03433f17f0cb7b3c7187451b2b9d6e8702361da"
+    },
+    {
+      "currentTarget": "未知或不支援的 Perl 正規表示式修飾符：{value0}",
+      "currentTargetSha256": "4a7e12ba44e1715b806c7c6b779d6da20252cf506cd183699eb5cbb28cd861bb",
+      "locale": "zh-Hant",
+      "scope": "forward boundary context only; no W1150 disposition assigned",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "sourceId": "server.message.m14f003cf32a3",
+      "sourceOrdinal": 1150,
+      "sourceTextSha256": "14f003cf32a356700ec29762309b8cd8479cefa4462f0fe132e0abb7fa1dd578",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "targetFileGitBlob": "860801645847b1dfd7041b44427dcdbd9b649d6f"
+    }
+  ],
+  "source": "Unknown or unsupported perl regex modifier: {value0}",
+  "sourceId": "server.message.m14f003cf32a3",
+  "sourceOrdinal": 1150
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "inputHead": "015ff68d96340292b5e6a45d34496a5936ebf09c",
+  "inputTree": "bbb59a14a50a4b63bc209663c1e4b873ead4fc10",
+  "appliedCells": 266,
+  "appliedCorrections": 233,
+  "appliedRefinements": 33,
+  "heldCells": 12,
+  "heldSourceOrdinal": 561,
+  "catalogsChanged": 12,
+  "catalogKeyCounts": {
+    "src/NzbDrone.Core/Localization/Core/ar.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/de.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/es.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/fr.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/hi.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/id.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ja.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/ko.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/vi.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": 4165,
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": 4165
+  },
+  "allTargetsReadBackExactly": true,
+  "placeholdersRechecked": true,
+  "sourceBoundary": "English wording and 12 targets for ordinal 561 remain held; caller rejects >25000 and accepts 25000.",
+  "testsBuildsScansCIorBrowserRun": false,
+  "workflowFilesTouched": false,
+  "nativeSpeakerApproval": false
+}

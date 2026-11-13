@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "title": "ChaptarrNG PR #190 source ordinal 884 corrected-source primary locale review",
+  "repository": "snapetech-org/chaptarrNG",
+  "pullRequest": 190,
+  "state": "OPEN",
+  "draft": true,
+  "exactHead": "722c0aaab4eda88bb507ba4a165e2f6bb22901fa",
+  "exactTree": "d162735f61d934389634111229b42beae04aaeea",
+  "sourceOrdinal": 884,
+  "sourceId": "server.message.mf00d6bc38ae8",
+  "sourceText": "Can not contain '\\', '//', or start/end with '/'",
+  "sourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+  "scope": {
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt_BR",
+      "vi",
+      "zh_CN",
+      "zh_TW"
+    ],
+    "cells": 12
+  },
+  "decisionCounts": {
+    "propose-correction": 11,
+    "hold": 1
+  },
+  "currentCellsMissingForbiddenBackslash": 12,
+  "finalTargetsWithBackslashDoubleSlashAndEdgeConstraints": 11,
+  "localeHolds": [
+    "hi"
+  ],
+  "callerRefsReattested": 4,
+  "priorHoldRowsReattested": 12,
+  "sourceAndCatalogPinsReattested": true,
+  "allCandidateStructuralChecksPass": true,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReview": "outstanding",
+  "repositoryModified": false,
+  "pullRequestModified": false,
+  "testsBuildCiBrowserRun": false,
+  "confidence": "moderate overall; Hindi held for uncertainty",
+  "holdReason": "The current Hindi value omits the newly corrected forbidden backslash. No Hindi final target is proposed because wording quality cannot be approved confidently in this pass."
+}

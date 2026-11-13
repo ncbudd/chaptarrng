@@ -1,0 +1,214 @@
+{
+  "catalogKeySetsPreserved": true,
+  "catalogReadback": [
+    {
+      "afterFileSha256": "725b59c02d6dbb9aef9171d7e274b96833620afc5cfbf28cf51c151b9a785e6a",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "c435bed9e45001e1543298c825437e1f3c5508bd586c2a48e27900bba5e50944",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 3,
+      "changedSourceIds": [
+        "provider.field.f2b866dadafe2",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.f9da80bea42a7"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json"
+    },
+    {
+      "afterFileSha256": "709664ebcc366f884c00dc7d392029cd79b4fac9856a393ee8137e3740dbbc9f",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "88948f094c0c51d06c0d3a8b8469fc18983f7b28a961c12db9042ab789792c41",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 5,
+      "changedSourceIds": [
+        "provider.field.f2b866dadafe2",
+        "provider.field.f506f4a07818c",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.fc6f4dcbf5fd7",
+        "provider.field.fd72246ae30a8"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/de.json"
+    },
+    {
+      "afterFileSha256": "51f2e5a0eb74638723377a0edb43d81096417c77c626a325e8f783de9b24042f",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "8684822f2ff1ab8cb0e4bfeed0c84762c8873e92a78ac79a99f09d9770bed735",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 2,
+      "changedSourceIds": [
+        "provider.field.f2b866dadafe2",
+        "provider.field.f709b8e79d1cd"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/es.json"
+    },
+    {
+      "afterFileSha256": "de470f11c30b0d8a202809cbd632e485e103bda504b783831e8797f6709d0f30",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "9df06663690cf402bc3da425e5007c0d37c0f52d8e9e9fd7f61de61041b28810",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 3,
+      "changedSourceIds": [
+        "provider.field.f2b866dadafe2",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.f9d400e81872d"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json"
+    },
+    {
+      "afterFileSha256": "ac416271f1b37dd197304dd628fb102943d4556e9eb7c0768f66efbe05a3aef9",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "15f66d4efb50599aa19339fbb1e779443d49d74bbab257cbd213620a347e3061",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 5,
+      "changedSourceIds": [
+        "provider.field.f2b866dadafe2",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.fb1d0448a0cf2",
+        "provider.field.fc6f4dcbf5fd7",
+        "provider.field.fe22820fcf5cd"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json"
+    },
+    {
+      "afterFileSha256": "4dc67639470032a57f417a2990d879b92ff8e57edca131a01dcb4b6e08944e81",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "ca57e3fa6b22832872d71f1614bb62bfcd6be2b468d5f9c136cf03bbc2a9e47d",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 3,
+      "changedSourceIds": [
+        "provider.field.f709b8e79d1cd",
+        "provider.field.fc6f4dcbf5fd7",
+        "provider.field.fd237f4cb52a2"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/id.json"
+    },
+    {
+      "afterFileSha256": "f5e2fd50695e4e01cd8aad488c78f63ea958a22be33e9e6b87ed9c2b4bc8eb7e",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "209a73418cb764d5afcebb553e89f184acd34964b158b67fd75abc25cf586059",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 4,
+      "changedSourceIds": [
+        "provider.field.f1f6f106670e5",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.f9d0dec541ca6",
+        "provider.field.fc6f4dcbf5fd7"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json"
+    },
+    {
+      "afterFileSha256": "cc9fc6f6f009817288749c71d2a7a9b2d8fc3ddf4a8a5eda9bba0a175d803c50",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "ea6a45df5792411a122b795bf313cf553cbbf8e9824986546b6a225fcc7bf309",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 3,
+      "changedSourceIds": [
+        "provider.field.f1f6f106670e5",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.fc6f4dcbf5fd7"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json"
+    },
+    {
+      "afterFileSha256": "4890c9606d2b23d1dff61c8a30bf81f0930b7ef8e9f7f699faf2d31be5745bf0",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "c67dd41b9d5c6221ad5a21cc0b0dc0ce29d975912075455d36580815faf146aa",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 2,
+      "changedSourceIds": [
+        "provider.field.f2b866dadafe2",
+        "provider.field.f709b8e79d1cd"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"
+    },
+    {
+      "afterFileSha256": "46d0db1a73f3684be6531ab070a8cf89e9d0003e80c1616dbb69a66574f0f5e1",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "c894d7287bbd22b0d14336a87c11f48943fdeee7e3d5a7c0e624e0e58b17499c",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 5,
+      "changedSourceIds": [
+        "provider.field.f00c0e6769b60",
+        "provider.field.f2a05babe5664",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.f9d400e81872d",
+        "provider.field.fc6f4dcbf5fd7"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json"
+    },
+    {
+      "afterFileSha256": "4ae15ccf2bab720cd2c7e5c6903ee37c1b46e7efada0e7863d9965c100d1e3bb",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "7732c47440ef63f81fadd6c0049a46ab432baa2f6bb2d26c3fea56ed5ea6b592",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 6,
+      "changedSourceIds": [
+        "provider.field.f00c0e6769b60",
+        "provider.field.f1c9fa4c0dbf4",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.f99486a496ef9",
+        "provider.field.f9d0dec541ca6",
+        "provider.field.f9da80bea42a7"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+    },
+    {
+      "afterFileSha256": "861849d35fc9aa5fa6d076581a558cc0b36f7919a9a937992bd318343166e33d",
+      "afterKeyCount": 4165,
+      "beforeFileSha256": "98e1e56539d5fdaafe4be42fdab2bb97788b07aa946aa7a9f1433aaf9c710f3d",
+      "beforeKeyCount": 4165,
+      "changedCellCount": 7,
+      "changedSourceIds": [
+        "provider.field.f00c0e6769b60",
+        "provider.field.f19bfd1110017",
+        "provider.field.f1c9fa4c0dbf4",
+        "provider.field.f709b8e79d1cd",
+        "provider.field.f99486a496ef9",
+        "provider.field.f9d0dec541ca6",
+        "provider.field.f9da80bea42a7"
+      ],
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    }
+  ],
+  "changedCells": 48,
+  "changedFiles": 12,
+  "crossReviewVerdicts": {
+    "accept-current": 552,
+    "accept-primary-candidate": 36,
+    "propose-cross-review-correction": 2,
+    "propose-cross-review-refinement": 5,
+    "revise-primary-candidate": 5
+  },
+  "diffCheck": "passed",
+  "nativeSpeakerApproval": false,
+  "primaryCandidatesIndependentlyReviewed": 41,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "locales": 12,
+    "sourceIds": 50,
+    "sourceOrdinals": [
+      300,
+      349
+    ]
+  },
+  "sourceHead": "4b862646fbd038cfa4c16a94f7b6ac16f181751c",
+  "sourceTree": "d76d887609ae90c9238ffda9b192a4c0c72be227",
+  "testsBuildsScansCiBrowserWorkflowsReleasesRun": false,
+  "worktreeChangedPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ]
+}

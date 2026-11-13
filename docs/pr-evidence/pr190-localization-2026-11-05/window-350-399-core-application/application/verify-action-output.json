@@ -1,0 +1,33 @@
+{
+  "result": "PASS",
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "candidateCells": 600,
+  "selectedChanges": 99,
+  "observedChangedCells": 99,
+  "changedCatalogCount": 12,
+  "changedPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "workflowChanges": 0,
+  "allNonTargetCatalogValuesPreserved": true,
+  "EnglishSourceUnchanged": true,
+  "rootDecisionCounts": {
+    "accept-current": 488,
+    "recommend-revision-selected": 99,
+    "recommend-revision-noop": 1,
+    "hold-source-copy": 12
+  },
+  "readbackSha256": "c09efcf4af8b765fdf9881f70540acece5a316f81fb859aeb79ea1272c832b11"
+}

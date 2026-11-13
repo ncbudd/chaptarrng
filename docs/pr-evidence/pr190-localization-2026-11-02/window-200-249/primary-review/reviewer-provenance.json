@@ -1,0 +1,40 @@
+{
+  "reviewerRole": "primary semantic reviewer",
+  "reviewType": "source-context-aware language and terminology review of all frozen current cells",
+  "exactHead": "32686f13760d04de2bba00af47fc561e632741de",
+  "exactTree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+  "scope": {
+    "positions": [
+      200,
+      249
+    ],
+    "cells": 600,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ]
+  },
+  "inputSources": [
+    "English source catalog",
+    "12 target catalogs",
+    "provider-field source/caller registry",
+    "exact current C# callsites"
+  ],
+  "protectedLiteralPolicy": "Keep source product names, acronyms, literal URL schemes/paths, and numeric constraints exact; allow ordinary technical vocabulary to follow established locale terminology.",
+  "uiTermPolicy": "Compare Interactive Search against each locale's existing InteractiveSearch catalog value.",
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryOrPrEdits": false,
+  "testsBuildsScansCiRun": false,
+  "workflowsTouched": false
+}

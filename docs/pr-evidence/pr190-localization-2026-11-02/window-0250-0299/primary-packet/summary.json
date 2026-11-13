@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+  "exactTree": "90a59b1c329feeb3fb34bdc5050128c8792b573e",
+  "scope": {
+    "positions": [
+      250,
+      299
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "counts": {
+    "accept-current": 533,
+    "propose-correction": 35,
+    "propose-refinement": 32,
+    "hold": 0
+  },
+  "proposalCount": 67,
+  "perLocale": {
+    "es": {
+      "accept-current": 45,
+      "propose-refinement": 4,
+      "propose-correction": 1,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 46,
+      "propose-refinement": 0,
+      "propose-correction": 4,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 44,
+      "propose-refinement": 2,
+      "propose-correction": 4,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 45,
+      "propose-refinement": 3,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 46,
+      "propose-refinement": 0,
+      "propose-correction": 4,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 45,
+      "propose-refinement": 3,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 45,
+      "propose-refinement": 4,
+      "propose-correction": 1,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 41,
+      "propose-refinement": 3,
+      "propose-correction": 6,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 42,
+      "propose-refinement": 4,
+      "propose-correction": 4,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 43,
+      "propose-refinement": 3,
+      "propose-correction": 4,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 45,
+      "propose-refinement": 3,
+      "propose-correction": 2,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 46,
+      "propose-refinement": 3,
+      "propose-correction": 1,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "currentCallerRefs": 59,
+    "uniqueCallerFiles": 14,
+    "lineNumberShifts": 26,
+    "callerMismatches": 0,
+    "allCallersAttestedAtHead": true
+  },
+  "placeholders": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 0,
+    "recommendedMismatches": 0
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdWindowOverlap": 0,
+    "matchesInPrimaryOrCrossReviewSourceIdsPositions0To249": 0,
+    "scannedPriorLedgerFiles": 35,
+    "priorSourceIdCount": 250,
+    "reviewedPriorWindows": [
+      {
+        "window": [
+          0,
+          49
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102"
+      },
+      {
+        "window": [
+          50,
+          99
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          100,
+          149
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          150,
+          199
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          200,
+          249
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0200-0249-primary-20261102"
+      }
+    ],
+    "contextOnlyPriorSourceId": "provider.field.fcdb8bc7fbe78",
+    "contextOnlyPriorDispositionRows": 12
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

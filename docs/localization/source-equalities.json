@@ -437,13 +437,13 @@
       }
     },
     "de": {
-      "ASIN": {
-        "sourceFingerprint": "6bca9fee7183aebd403f4febe7887d2816ff93bc8de1dac2e89aefcf960c2230",
-        "category": "invariant"
-      },
       "AbsMappingsAudioSlotLabel": {
         "sourceFingerprint": "63bdd8b6c1ff5da7c0b6afbda13797ebb02b6aff00544a1e21494f30ead4ec75",
         "category": "native-equivalent"
+      },
+      "ASIN": {
+        "sourceFingerprint": "6bca9fee7183aebd403f4febe7887d2816ff93bc8de1dac2e89aefcf960c2230",
+        "category": "invariant"
       },
       "AudibleMarketplaceJp": {
         "sourceFingerprint": "394e584f5a964661049bb313687cebbbcf93c1c64d2de41743e4fa46c9ae6c1d",
@@ -473,6 +473,10 @@
         "sourceFingerprint": "338698a0516c04d8d32e041b94e003e1bba0b2b12b967efddaf13d585b70df6f",
         "category": "native-equivalent"
       },
+      "Debug": {
+        "sourceFingerprint": "bd25f0be4951da0c0936812c2430fc84ed3090e22c2d22a0d283e291e7cb0be1",
+        "category": "invariant"
+      },
       "Discord": {
         "sourceFingerprint": "36e87ee26dd58a2803f5e1416125f45ffa16db582f4c7639f9843bf3add74b11",
         "category": "invariant"
@@ -489,13 +493,41 @@
         "sourceFingerprint": "e128323ebdacdad41117b2ad49b7ce3592ac736ca31a712ae36cf8c483f0c39b",
         "category": "native-equivalent"
       },
+      "Europeana": {
+        "sourceFingerprint": "6beb16cfd7f1c730ece835990595c804226e2ce6beff46d9e82665d86541c138",
+        "category": "invariant"
+      },
+      "EvidenceNeutral": {
+        "sourceFingerprint": "daf2f8a705f8677c86d311541c2622b9b630194bdc3ee6982332fb61f367346c",
+        "category": "native-equivalent"
+      },
+      "Fatal": {
+        "sourceFingerprint": "d478d4f998f727c5a946c28b32624a06eff66b30aa89c23e79b49cf5e3f0be4b",
+        "category": "invariant"
+      },
       "FileBrowserFaqLinkText": {
         "sourceFingerprint": "7237ac5a0033c5299a7c319b091c5ad36ea491af3fc9caf479ddd852bff1e9e7",
         "category": "invariant"
       },
+      "Filter": {
+        "sourceFingerprint": "336b172d2fa668253f3b81e8c76ac391180f9aa93a16fde329c6105f48386bb6",
+        "category": "native-equivalent"
+      },
+      "Format": {
+        "sourceFingerprint": "49b425320f3c460af9900820fc3299c917e7c62ab9d8e5a6a8df5f20a2cdbc84",
+        "category": "native-equivalent"
+      },
       "Genres": {
         "sourceFingerprint": "b41a5aa8fb30f4787d26c6992a54d7d309c1870f83787d30bf3fab008f9d46db",
         "category": "native-equivalent"
+      },
+      "GoogleBooks": {
+        "sourceFingerprint": "3d052f61e7765c38cac255a5d79ebef33e985eda06a015b679eb13dff21f7cce",
+        "category": "invariant"
+      },
+      "Gutendex": {
+        "sourceFingerprint": "553c6b669547028c574257bee63d8e30b0de881e02032bc000d1c5cf474ce44a",
+        "category": "invariant"
       },
       "Hardcover": {
         "sourceFingerprint": "f70b78a60559a80480f169643613bf479367bf406d6a450986439c488c61b684",
@@ -509,8 +541,16 @@
         "sourceFingerprint": "f902a18bf46bfbd3d81de230eeadc0c277b7352886af2db493b4a1f0016da714",
         "category": "native-equivalent"
       },
+      "InternetArchive": {
+        "sourceFingerprint": "e7d592f40efc8d754dcd39b8e94310bba71299cec0845ca441ffcfa5bc22ac61",
+        "category": "invariant"
+      },
       "ISBN": {
         "sourceFingerprint": "e06d03e7b2115f2c890d4a40a9a5367bd9a01d9e05089bb07cfb2fc57b9a7570",
+        "category": "invariant"
+      },
+      "LibraryOfCongress": {
+        "sourceFingerprint": "e05da88164345de76065f353111e45af66de4a948e572487a554cb4dfb134245",
         "category": "invariant"
       },
       "Links": {
@@ -521,24 +561,20 @@
         "sourceFingerprint": "574034cdee260541a6343869c19632d8c355acdaa1d31b49b1d8486c0b6ad6f2",
         "category": "native-equivalent"
       },
-      "EvidenceNeutral": {
-        "sourceFingerprint": "daf2f8a705f8677c86d311541c2622b9b630194bdc3ee6982332fb61f367346c",
-        "category": "native-equivalent"
-      },
-      "Format": {
-        "sourceFingerprint": "49b425320f3c460af9900820fc3299c917e7c62ab9d8e5a6a8df5f20a2cdbc84",
-        "category": "native-equivalent"
-      },
       "Medium": {
         "sourceFingerprint": "bea4b4207d5ede997a71a5c68407e6c075e78cc107184eba5cc5e5c776e97815",
         "category": "native-equivalent"
       },
+      "MetadataCoverSourcePreference": {
+        "sourceFingerprint": "d9d3b84adace4fceb1f9ab45a64b729e89df15c5c70825888b6a4e56de26ee5a",
+        "category": "native-equivalent"
+      },
+      "MetadataGenresSourcePreference": {
+        "sourceFingerprint": "4a3ae189dc63fa449f41192a93111936b98b0abe029ee3763a80d36b10486ea7",
+        "category": "native-equivalent"
+      },
       "MyAnonaMouseStatus": {
         "sourceFingerprint": "7215089d9a57f5a967332759b57af878acd7775fd5dc721bc2655d363e26f57f",
-        "category": "invariant"
-      },
-      "NETCore": {
-        "sourceFingerprint": "78358a63c65ac6843dafa909ada103637abc58112f49d43b1b51b9b9c9a77b92",
         "category": "invariant"
       },
       "Name": {
@@ -555,6 +591,18 @@
       },
       "NarratorRatingFraction": {
         "sourceFingerprint": "99eb156177c7a6088fdc5705992eb9ff952218b32ba3a822bc13869b789f8ae2",
+        "category": "invariant"
+      },
+      "NdlSearch": {
+        "sourceFingerprint": "966c0965320647596a667c6bc6193d148e6f1299351d3e79fcf62314b4cd9717",
+        "category": "invariant"
+      },
+      "NETCore": {
+        "sourceFingerprint": "78358a63c65ac6843dafa909ada103637abc58112f49d43b1b51b9b9c9a77b92",
+        "category": "invariant"
+      },
+      "OpenLibrary": {
+        "sourceFingerprint": "724e1ac6986e432a1fb53ee3e39002b92862b4cd31483defb010faf5c5c54fe9",
         "category": "invariant"
       },
       "Original": {
@@ -577,10 +625,6 @@
         "sourceFingerprint": "2d47db5934c67af5b972ba6f33fa3c6323ba9680eee8ab7376901e91e17f76be",
         "category": "native-equivalent"
       },
-      "RSS": {
-        "sourceFingerprint": "c40854603c6204f3d35aa38097cd80480f0ffc54982f6514fb667af6e6d47618",
-        "category": "invariant"
-      },
       "Real": {
         "sourceFingerprint": "dce19eda8ee09e1d964be25f294da5c0658662fe32947d6c6824f25b3a2ab27d",
         "category": "invariant"
@@ -592,6 +636,10 @@
       "Route": {
         "sourceFingerprint": "16c5182cc9fece84e1c73d94326dda1ae4f2bcb121fa849e5a6e1a1e42206c92",
         "category": "native-equivalent"
+      },
+      "RSS": {
+        "sourceFingerprint": "c40854603c6204f3d35aa38097cd80480f0ffc54982f6514fb667af6e6d47618",
+        "category": "invariant"
       },
       "SettingsBackupPassphrase": {
         "sourceFingerprint": "26029841540c9bb3ec9eff42453d9fc57511f759fed6f439df2ab3d9bc43364f",
@@ -613,6 +661,14 @@
         "sourceFingerprint": "f4855291959cbe7d58a5930ad91eb247cdf8e4efc1f037bb3e219d471bc3de10",
         "category": "native-equivalent"
       },
+      "Trace": {
+        "sourceFingerprint": "44e031825cbe4afbadc59b90ae579583b003050e1780da7a03873679330c59b0",
+        "category": "invariant"
+      },
+      "ui.dialog.label": {
+        "sourceFingerprint": "49929b299674a35de0535badf44cfd2a8adc761fcbb690782c89d16f406e7edb",
+        "category": "native-equivalent"
+      },
       "Usenet": {
         "sourceFingerprint": "8eaf5db051164651d5c9b541886ba7b7bb7a076ae45f2e66c69fe6ea00a0072f",
         "category": "invariant"
@@ -620,58 +676,6 @@
       "Wiki": {
         "sourceFingerprint": "4c4e5fe24da227f01188c170e1fc8c9c03b36e5f338dc5eb4f10368cef2cbb8d",
         "category": "invariant"
-      },
-      "Filter": {
-        "sourceFingerprint": "336b172d2fa668253f3b81e8c76ac391180f9aa93a16fde329c6105f48386bb6",
-        "category": "native-equivalent"
-      },
-      "Trace": {
-        "sourceFingerprint": "44e031825cbe4afbadc59b90ae579583b003050e1780da7a03873679330c59b0",
-        "category": "invariant"
-      },
-      "Debug": {
-        "sourceFingerprint": "bd25f0be4951da0c0936812c2430fc84ed3090e22c2d22a0d283e291e7cb0be1",
-        "category": "invariant"
-      },
-      "Fatal": {
-        "sourceFingerprint": "d478d4f998f727c5a946c28b32624a06eff66b30aa89c23e79b49cf5e3f0be4b",
-        "category": "invariant"
-      },
-      "OpenLibrary": {
-        "sourceFingerprint": "724e1ac6986e432a1fb53ee3e39002b92862b4cd31483defb010faf5c5c54fe9",
-        "category": "invariant"
-      },
-      "GoogleBooks": {
-        "sourceFingerprint": "3d052f61e7765c38cac255a5d79ebef33e985eda06a015b679eb13dff21f7cce",
-        "category": "invariant"
-      },
-      "LibraryOfCongress": {
-        "sourceFingerprint": "e05da88164345de76065f353111e45af66de4a948e572487a554cb4dfb134245",
-        "category": "invariant"
-      },
-      "Gutendex": {
-        "sourceFingerprint": "553c6b669547028c574257bee63d8e30b0de881e02032bc000d1c5cf474ce44a",
-        "category": "invariant"
-      },
-      "InternetArchive": {
-        "sourceFingerprint": "e7d592f40efc8d754dcd39b8e94310bba71299cec0845ca441ffcfa5bc22ac61",
-        "category": "invariant"
-      },
-      "NdlSearch": {
-        "sourceFingerprint": "966c0965320647596a667c6bc6193d148e6f1299351d3e79fcf62314b4cd9717",
-        "category": "invariant"
-      },
-      "Europeana": {
-        "sourceFingerprint": "6beb16cfd7f1c730ece835990595c804226e2ce6beff46d9e82665d86541c138",
-        "category": "invariant"
-      },
-      "MetadataCoverSourcePreference": {
-        "sourceFingerprint": "d9d3b84adace4fceb1f9ab45a64b729e89df15c5c70825888b6a4e56de26ee5a",
-        "category": "native-equivalent"
-      },
-      "MetadataGenresSourcePreference": {
-        "sourceFingerprint": "4a3ae189dc63fa449f41192a93111936b98b0abe029ee3763a80d36b10486ea7",
-        "category": "native-equivalent"
       }
     },
     "ja": {

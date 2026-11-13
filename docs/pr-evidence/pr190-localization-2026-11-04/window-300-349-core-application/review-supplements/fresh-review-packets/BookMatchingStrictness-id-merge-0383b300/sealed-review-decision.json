@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "reviewType": "blind caller-context semantic review",
+  "cell": {
+    "cellId": "BookMatchingStrictness::id",
+    "sourceOrdinal": 305,
+    "sourceKey": "BookMatchingStrictness",
+    "locale": "id"
+  },
+  "decision": "accept",
+  "confidence": {
+    "level": "high",
+    "basis": "The source and target are short, and the supplied production context consistently identifies a selectable book-matching behavior setting."
+  },
+  "rationale": "“Mode pencocokan” accurately and naturally conveys “Match mode” as a user-facing label. Its production callers place it in Media Management settings and Quickstart matching controls; the supplied references show the setting controls BookMatchingStrictness, with Aggressive, Balanced, and Strict behaviors. The translation preserves the selectable matching-mode meaning without adding unsupported detail.",
+  "source": {
+    "text": "Match mode",
+    "sha256": "0fd71ca8dca4ed849986b90247aae2704a4e60fadb9632310b0b30377aae8e69"
+  },
+  "target": {
+    "text": "Mode pencocokan",
+    "sha256": "090a911382592d233ea1afe53f75e3e48093473175be32458c88baeb01adfdd8"
+  },
+  "callerContext": {
+    "currentSha256": "e18114064287515452154adffcfc51773f70684d3e16ed571151d0ce36d6428b",
+    "priorSha256": "2b54519da024d78b105906b1390d7b1ffab0f938e43ccfc345cd93af11889348",
+    "currentHead": "0383b300385b8ec44be0fd38ea5df992230a349d",
+    "tree": "606c2771fda9848a701a87b1e76577e3469fc239",
+    "callerReferenceCount": 60,
+    "literalCallCount": 2,
+    "indirectKeyReferenceCount": 58,
+    "relatedDynamicTranslationCallsiteCount": 4
+  },
+  "correctionSuggestion": null,
+  "nativeSpeakerSignoff": false,
+  "seal": {
+    "algorithm": "SHA-256",
+    "scope": "The full top-level review object excluding the seal field.",
+    "canonicalization": "UTF-8 JSON; recursively sorted object keys; compact separators (comma and colon); Unicode left unescaped; no trailing newline.",
+    "checksumSha256": "f59d88a78cdfdae1307a6b55c084da07959170e7a488308398932a81acf18cd5",
+    "verifier": "Parse this JSON, remove the top-level seal field, serialize the remaining object using the stated canonicalization, then SHA-256 the resulting UTF-8 bytes and compare with checksumSha256."
+  }
+}

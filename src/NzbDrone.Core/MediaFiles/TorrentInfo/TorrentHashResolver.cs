@@ -30,7 +30,14 @@ namespace NzbDrone.Core.MediaFiles.TorrentInfo
 
             if (infoHashes?.V2 != null)
             {
-                throw new UnsupportedTorrentHashException($"{sourceDescription} is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.");
+                var message = sourceDescription switch
+                {
+                    "This magnet link" => "This magnet link is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.",
+                    "This torrent file" => "This torrent file is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.",
+                    _ => $"{sourceDescription} is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads."
+                };
+
+                throw new UnsupportedTorrentHashException(message);
             }
 
             return null;

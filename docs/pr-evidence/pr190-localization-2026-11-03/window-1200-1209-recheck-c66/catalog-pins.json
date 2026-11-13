@@ -1,0 +1,100 @@
+{
+  "allCatalogsExactSourceKeyParity": true,
+  "callerRegistry": {
+    "blob": "1531851877466bbfeb0b16072fcf07d6dda925e2",
+    "path": "docs/localization/server-message-callers.json",
+    "sha256": "78903b454a094e41fcf209ea6ec57a865965d697c00301897dd08e15c0083f3b"
+  },
+  "head": "c66ef0bccc0635f047cebeda95b9aaa0ae8130a4",
+  "sourceCatalog": {
+    "blob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "keys": 4165,
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+  },
+  "sourceFollowup": {
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "path": "docs/localization/source-followup-20261101.json",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128"
+  },
+  "sourceRegistry": {
+    "blob": "faab5bce522ba29e131b2cee1611f5746bf78ef6",
+    "path": "docs/localization/server-message-sources.json",
+    "sha256": "070ad52cfc57a1f9b135c2ca19b79a2119676f809b626d53af15a9026b5bf6f1"
+  },
+  "targetCatalogs": {
+    "ar": {
+      "blob": "c09eea006478f741e22d2f8a9cfec05cb8dcbc00",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "sha256": "8cafe0591020c8b95850ab83b1fb830c3cd31913c9c46fe73761478aad068ebd"
+    },
+    "de": {
+      "blob": "3fc58d800b2eb3ae9dc198a846313ce6a96883b3",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "sha256": "84b19f5eea2199d036511ce1b9ed1ce4fa071d5433c48fa67c49d0a9fb182ec4"
+    },
+    "es": {
+      "blob": "c853387d9971286a4e2f94d70c7a97879a16e231",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "sha256": "f7e83d93ea48c857739e8ba197927dd9a086605d5bba973c71bc650dbc672473"
+    },
+    "fr": {
+      "blob": "660f34aac3e82cda4f85a918ce55253a0ca907e0",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "sha256": "ff2e73849779ba1d7c510af2294986a6316f247be315cf97aaa2066fe765eeae"
+    },
+    "hi": {
+      "blob": "0db9fe07f80fb1f97be06308203d829814ad19ae",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "sha256": "d213459d56aac3adc06254bca122e22f395c5a5e0924787311007499113bcb52"
+    },
+    "id": {
+      "blob": "0a49fca5971e8272f18a3414ec50545371be2396",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "sha256": "80237bd1fd558f897abe7fcc21dce677ac6b104d3647a1e68b9214a3c4e4f609"
+    },
+    "ja": {
+      "blob": "8969f2763a8307ea5c74e768d0df2ac25edd36d2",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "sha256": "83c91059cb694df4e86cc4f364e044e4683cffbd4c2de1a1675e77471cb67084"
+    },
+    "ko": {
+      "blob": "e5526a23814c36203be930d1c362c494797ccf4b",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "sha256": "68c31bede0d1b4414fc6f53c0550486b30960369a86e86da13a9145a189f28e9"
+    },
+    "pt-BR": {
+      "blob": "8345c6ee97586e68ab895d2faa2909ba8438431a",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "sha256": "53d1488a12ae0f3fbf22acfd05835e2d733b48c7db4e219a1bca05f4d666b613"
+    },
+    "vi": {
+      "blob": "6fba5d6f0a6d0804622a3b61fbccc9b222054ce4",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "sha256": "07f14864edbcd8c129ba081bb67024f990cadb8fadfd832454b8177f6d44c7ba"
+    },
+    "zh-Hans": {
+      "blob": "edaaf79d20783e199891379319214d7f3af17226",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "sha256": "ecd45d0324782da4193f1d634b1fb4ccefd19aba738b27bdeec6c417a51d220d"
+    },
+    "zh-Hant": {
+      "blob": "d494df5cece5b56422c1b0cbc8ab3c3da9715e15",
+      "keys": 4165,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "sha256": "d87d14471bfbd5b8a59a3b6a0e2706ab902118ba0142ea157b2ba7d6d1e2a18d"
+    }
+  },
+  "tree": "e2142a119ce8d9d765927bb44a47f71364863995"
+}

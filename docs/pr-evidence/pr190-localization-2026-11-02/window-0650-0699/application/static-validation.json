@@ -1,0 +1,108 @@
+{
+  "reviewHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "reviewTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "livePrReattested": true,
+  "remoteBranchReattested": true,
+  "primaryManifestSha256": "6144907a1aeb941a0d5b0723bb7425969307e168cfcc9baf9ff03de134d250bf",
+  "inputManifestSha256": "619b3a0b4978e6fe3758b089dd189b4e73d543635b72a51555f02b81ba2ecfe8",
+  "crossReviewManifestSha256": "ed375125d171b3507c2ac3454b75b1b870d04bb2fe0f2cd6c5d9dd0621908b23",
+  "cellsReviewed": 600,
+  "acceptCurrent": 501,
+  "acceptedPrimaryProposals": 98,
+  "revisedProposals": 1,
+  "catalogChangesApplied": 99,
+  "catalogReadbacksMatch": true,
+  "catalogs": {
+    "src/NzbDrone.Core/Localization/Core/ar.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "8e339f455b30ebd5cd7122a881b077c7311d80457abe2b395db73b1d09919bb6",
+      "changedCells": 13
+    },
+    "src/NzbDrone.Core/Localization/Core/de.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "8d72cfef77c449cbce0aae3be1d51384d092f8118db41c028e0864a71b46134f",
+      "changedCells": 5
+    },
+    "src/NzbDrone.Core/Localization/Core/es.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "896c8ecea8a787be60ba69af45d83f3e6e76da6fdeea5d11b4f92f4532c050c3",
+      "changedCells": 8
+    },
+    "src/NzbDrone.Core/Localization/Core/fr.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "359dc661a28f74318532da5ff642ff8864f3e60716e12f951ccb521ada0ea955",
+      "changedCells": 10
+    },
+    "src/NzbDrone.Core/Localization/Core/hi.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "4a9e00c9cabc524de45b406a3759f83e386d444d7e722393a8cb8c2c443b319d",
+      "changedCells": 5
+    },
+    "src/NzbDrone.Core/Localization/Core/id.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "93f95dcfb7a47df23a09c92bc253c67ef055427577aa1b0789b28ac6be230cd7",
+      "changedCells": 6
+    },
+    "src/NzbDrone.Core/Localization/Core/ja.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "3c9ac241993a686234099b38be823a1d810a1ff25bb7e2e889b445983314e0ec",
+      "changedCells": 10
+    },
+    "src/NzbDrone.Core/Localization/Core/ko.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "5b94d4c7800d39f88e3bc4e42e933106478af7622015141fe1864e1a9683cfb9",
+      "changedCells": 10
+    },
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "60d6de289d33e4c78daac2cc17ef5d32474c80aa0d8ca3cd01884ce7925dac00",
+      "changedCells": 8
+    },
+    "src/NzbDrone.Core/Localization/Core/vi.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070",
+      "fileSha256": "d64e3e76e7d6ef5e3764f0faf753c82128e43b24d4c6ac5abea46ed77c72a1ae",
+      "changedCells": 9
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070",
+      "fileSha256": "9a8bdc8d12313fbd79ad3d9b5ad3c4f328f1e91900eaa8b62cc6fda6fa5ddbad",
+      "changedCells": 7
+    },
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "keyCount": 4165,
+      "orderedKeySha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+      "fileSha256": "2685762d04bd7e7314d29ed17f204f5be463a2fa32d1d3c6fc1d92b2255aaafa",
+      "changedCells": 8
+    }
+  },
+  "sourceFixes": 2,
+  "sourceIdsPreserved": true,
+  "placeholderMismatchCells": 0,
+  "markupMismatchCells": 0,
+  "protectedLiteralTargetsFixAll12SABnzbdRows": true,
+  "unreleasedChangelogEntryAdded": true,
+  "testsBuildsCiBrowserRun": false
+}

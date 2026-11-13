@@ -47,17 +47,15 @@ committed candidate before publication. The v0.9.995 release row below still
 describes the separately published historical archive and its outstanding
 FreeBSD installed check.
 
-The current local product image scans found no HIGH or CRITICAL vulnerability
-findings, but they cover only amd64 and are not exact-head hosted acceptance.
-The security gate now rebuilds and scans the product's amd64, arm64, and arm/v7
-images plus every build and integration fixture image from the exact source
-revision. Do not report all-platform image acceptance until that hosted matrix
-passes on the committed candidate. The unpublished Cloudron migration
-candidate remains a separately gated image: its Dockerfile intentionally
-requires the exact product image digest from a released candidate, so it is
-not built in the current image matrix. Its Dockerfile is still included in the
-repository source scan. Its health check now uses bounded `curl` and requires
-a 2xx response because the standard product image removes runtime `wget`.
+### Exact-head image security gate
+
+The base-controlled Security Gate rebuilds and scans the product amd64, arm64,
+and arm/v7 images, both Docker build inputs, the cross-builder, and all M4B,
+Node, Linux x86, Python, qBittorrent, and musl integration fixtures. It fails on
+active HIGH or CRITICAL findings. Require the final exact-head aggregate before
+release. The unpublished Cloudron migration candidate is excluded from the
+image matrix because its Dockerfile requires a released product-image digest;
+it remains covered by the source scan and its separate release exception.
 
 The v0.9.995 release workflow [42715733054](https://github.com/snapetech-org/chaptarrng/actions/runs/42715733054)
 built the ten standalone archives and their SHA-256 and Sigstore sidecars,

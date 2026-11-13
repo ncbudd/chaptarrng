@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FluentValidation.Results;
 using NLog;
 using NzbDrone.Core.Books;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Gotify
 {
@@ -89,7 +90,7 @@ namespace NzbDrone.Core.Notifications.Gotify
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message");
-                failures.Add(new ValidationFailure("", "Unable to send test message"));
+                failures.Add(NzbDroneValidationFailure.ForMessage("", "Unable to send test message", "server.message.m1041bbcba071"));
             }
 
             return new ValidationResult(failures);

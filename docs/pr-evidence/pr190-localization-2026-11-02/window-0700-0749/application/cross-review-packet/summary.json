@@ -1,0 +1,88 @@
+{
+  "acceptedPrimaryProposals": 195,
+  "candidateProposals": 197,
+  "changedTargetCellsFromLiveCurrent": 205,
+  "crossReviewTargetChangesBeyondPrimary": 10,
+  "exactHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "exactTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "genericPipelineReferences": 76,
+  "heldPrimaryProposals": 0,
+  "independentDispositionCounts": {
+    "accept-current": 395,
+    "accept-proposal": 195,
+    "propose-correction": 8,
+    "revise-proposal": 2
+  },
+  "livePullRequest": {
+    "baseRefName": "main",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "missedCurrentCorrections": 8,
+  "nativeSpeakerApprovalOutstanding": true,
+  "noRepositoryOrPRWrites": true,
+  "notes": [
+    "All 600 source/current/final hashes were recomputed from exact-head catalogs and packet values.",
+    "All 77 source callers, 76 generic frontend translation lines, and 48 W699 boundary caller references match pinned exact-head files, lines, and context.",
+    "All placeholders, markup, and protected literals match in current and recommended targets.",
+    "The primary supplied 197 correction proposals: 195 are accepted and 2 Arabic proposals are revised. Eight additional corrections were found in cells the primary accepted as current; thus 205 cells differ from live current targets, with 10 recommendation changes beyond the primary ledger.",
+    "W749 has no direct frontend caller in the pinned caller registry; the catalog translation is semantically reviewed, but this packet does not claim a verified runtime display path."
+  ],
+  "packetChecksumsVerified": true,
+  "primaryDispositionCounts": {
+    "accept-current": 403,
+    "propose-correction": 197
+  },
+  "pullRequest": 190,
+  "rejectedPrimaryProposals": 0,
+  "releasesTagsMerges": false,
+  "remoteBranchHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "repository": "snapetech-org/chaptarrng",
+  "revisedPrimaryProposals": 2,
+  "runtimeCoverageObservation": {
+    "catalogMeaningReviewed": true,
+    "holdOnCatalogTarget": false,
+    "runtimeDisplayVerified": false,
+    "sourceId": "server.message.m9f3baf4b7d39",
+    "sourceOrdinal": 749,
+    "surface": "Recommendation text in system/proxy/debug API response; no frontend caller found"
+  },
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "sourceIds": 50,
+    "sourceOrdinals": [
+      700,
+      749
+    ]
+  },
+  "sourceCallerReferences": 77,
+  "sourceRegistryPinsRefreshedAndReattested": [
+    711,
+    746
+  ],
+  "structuralChecks": "structural-reattestation.json",
+  "testsBuildsScansCIOrBrowserActions": false,
+  "w650PriorAppliedTargetsMatchCrossReview": 600,
+  "w699BoundaryCallerReferences": 48,
+  "w699BoundaryRows": 12,
+  "workflowFilesTouched": false,
+  "worktreeClean": true
+}

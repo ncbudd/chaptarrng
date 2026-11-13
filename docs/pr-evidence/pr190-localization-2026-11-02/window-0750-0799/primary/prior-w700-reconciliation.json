@@ -1,0 +1,18 @@
+{
+  "crossReviewHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "crossReviewTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "currentHead": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+  "currentTree": "3baf8c11efe42c617a286cd37665e946303c6d2a",
+  "liveTargetDiffs": [],
+  "liveTargetsMatchCrossReviewFinal": 600,
+  "primaryAndCrossReviewChecksumsVerified": true,
+  "primaryHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "primaryTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "priorCellCount": 600,
+  "priorSourceIdCount": 50,
+  "recommendation": "W700 is applied: all 600 live locale values match independent cross-review final targets; source typos at W654 and W695 are corrected at the current head.",
+  "sourceChangesCount": 0,
+  "sourceTextChangesSinceReview": [],
+  "w654SourceTypoCorrected": true,
+  "w695ThroughMailgunSourceCorrected": true
+}

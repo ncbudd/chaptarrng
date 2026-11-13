@@ -1,0 +1,48 @@
+{
+  "exactHead": "0117311b672af8d828fb45bad7e6026763b201da",
+  "exactTree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "locales": {
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "3fb63f42d3f9046b25456517a69377b34031be16",
+      "sha256": "ac91523c7ad28c7feba864a1588218f250848b7ce9848cdf89274c66c994516b",
+      "keyCount": 4165,
+      "bytes": 352151
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "51bb1e8f8383eb8abde464d9f8ea77e1b123a816",
+      "sha256": "bbc42e4d36fd8c5e12febf9896269a3ff0309db9d89f16ca85cbf64ad029d874",
+      "keyCount": 4165,
+      "bytes": 431125
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "36b313f076e9fc9922d0e23d35c2ac2d42f8eb40",
+      "sha256": "15a94430e132afd0359331351755f46e0bd596ef411ad36e03229bf37f8dbc3f",
+      "keyCount": 4165,
+      "bytes": 367486
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "94ef53590cffcbb9b48ea0f86c23e497823200d4",
+      "sha256": "6694eade2c2ecc0b0c1d1e953a12c4e6e3e91eafbeae60791b0ebefb33bcbf0f",
+      "keyCount": 4165,
+      "bytes": 307007
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "254e3451bc6012b8b2fc13ef547ac70758781e4f",
+      "sha256": "dfdf16e4275944154ac1df5de30abbef7f2d025cb1e89e2c170a52270be1183a",
+      "keyCount": 4165,
+      "bytes": 388777
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "b4225f0a2b5ffec30750f4cf09f8a47c6ab45e53",
+      "sha256": "6b86687d4ff1c61e4f8560178a8bafd94fef8b20fc98ad6f3e77c6f3d282d9ad",
+      "keyCount": 4165,
+      "bytes": 332641
+    }
+  }
+}

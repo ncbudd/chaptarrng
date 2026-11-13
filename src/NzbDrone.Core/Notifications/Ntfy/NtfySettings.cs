@@ -18,7 +18,8 @@ namespace NzbDrone.Core.Notifications.Ntfy
             RuleFor(c => c.ClickUrl).IsValidUrl().When(c => !c.ClickUrl.IsNullOrWhiteSpace());
             RuleFor(c => c.UserName).NotEmpty().When(c => !c.Password.IsNullOrWhiteSpace() && c.AccessToken.IsNullOrWhiteSpace());
             RuleFor(c => c.Password).NotEmpty().When(c => !c.UserName.IsNullOrWhiteSpace() && c.AccessToken.IsNullOrWhiteSpace());
-            RuleForEach(c => c.Topics).NotEmpty().Matches("[a-zA-Z0-9_-]+").Must(c => !InvalidTopics.Contains(c)).WithMessage("Invalid topic");
+            RuleForEach(c => c.Topics).NotEmpty().Matches("[a-zA-Z0-9_-]+").Must(c => !InvalidTopics.Contains(c)).WithMessage("Invalid topic")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mf600936551d1"));
         }
 
         private static List<string> InvalidTopics => new List<string> { "announcements", "app", "docs", "settings", "stats", "mytopic-rw", "mytopic-ro", "mytopic-wo" };

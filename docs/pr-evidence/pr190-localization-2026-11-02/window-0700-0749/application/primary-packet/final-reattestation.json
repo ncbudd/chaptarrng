@@ -1,0 +1,30 @@
+{
+  "candidates": 197,
+  "genericPipelineFiles": 35,
+  "genericPipelineRefs": 76,
+  "head": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "holds": 0,
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "localeCells": 600,
+  "passed": true,
+  "remoteBranchHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "repositoryState": {
+    "head": "02f0d841b54c7806005fc67973973799c6960bcf",
+    "status": "",
+    "tree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f"
+  },
+  "sourceCallerFiles": 50,
+  "sourceCallerRefs": 77,
+  "sourceIds": 50,
+  "tree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "w650TargetsMatchCrossReview": 600,
+  "w699BoundaryCallerRefs": 48,
+  "w699BoundaryRows": 12
+}

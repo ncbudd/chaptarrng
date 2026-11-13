@@ -1,0 +1,133 @@
+{
+  "additionalCorrections": 20,
+  "callerRefs": 63,
+  "callerSourceRows": 50,
+  "cellCount": 600,
+  "confidence": "moderate",
+  "crossReviewDispositionCounts": {
+    "accept-current": 344,
+    "accept-primary-proposal": 228,
+    "propose-additional-correction": 20,
+    "revise-primary-proposal": 8
+  },
+  "crossReviewFindings": 28,
+  "finalTargetsDifferentFromCurrent": 256,
+  "genericPipelineRefs": 76,
+  "head": "f0eb9d38b1989bd6e3addeb698ec8c5f9c29d9e9",
+  "holds": 0,
+  "importantSpecifics": [
+    "PT-BR W809 final recommendation preserves exact enum token null.",
+    "W830 and W837 use the exact localized Settings and MediaManagement labels from the current UI catalogs.",
+    "Additional corrections: W811 Spanish factory-reset wording; W815 Japanese root-folder term; W834 Arabic Author term; W849 Indonesian list-data phrasing."
+  ],
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 26,
+      "accept-primary-proposal": 21,
+      "propose-additional-correction": 3
+    },
+    "de": {
+      "accept-current": 28,
+      "accept-primary-proposal": 20,
+      "propose-additional-correction": 1,
+      "revise-primary-proposal": 1
+    },
+    "es": {
+      "accept-current": 27,
+      "accept-primary-proposal": 20,
+      "propose-additional-correction": 2,
+      "revise-primary-proposal": 1
+    },
+    "fr": {
+      "accept-current": 31,
+      "accept-primary-proposal": 17,
+      "propose-additional-correction": 2
+    },
+    "hi": {
+      "accept-current": 35,
+      "accept-primary-proposal": 13,
+      "propose-additional-correction": 2
+    },
+    "id": {
+      "accept-current": 24,
+      "accept-primary-proposal": 23,
+      "propose-additional-correction": 1,
+      "revise-primary-proposal": 2
+    },
+    "ja": {
+      "accept-current": 25,
+      "accept-primary-proposal": 22,
+      "propose-additional-correction": 2,
+      "revise-primary-proposal": 1
+    },
+    "ko": {
+      "accept-current": 30,
+      "accept-primary-proposal": 18,
+      "propose-additional-correction": 1,
+      "revise-primary-proposal": 1
+    },
+    "pt-BR": {
+      "accept-current": 28,
+      "accept-primary-proposal": 20,
+      "propose-additional-correction": 1,
+      "revise-primary-proposal": 1
+    },
+    "vi": {
+      "accept-current": 34,
+      "accept-primary-proposal": 14,
+      "propose-additional-correction": 1,
+      "revise-primary-proposal": 1
+    },
+    "zh-Hans": {
+      "accept-current": 28,
+      "accept-primary-proposal": 20,
+      "propose-additional-correction": 2
+    },
+    "zh-Hant": {
+      "accept-current": 28,
+      "accept-primary-proposal": 20,
+      "propose-additional-correction": 2
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "primaryAcceptCurrentRetained": 344,
+  "primaryCandidateCount": 236,
+  "primaryProposalsAcceptedAsWritten": 228,
+  "primaryProposalsRevised": 8,
+  "protectedLiteralFailures": 0,
+  "protectedLiteralReclassification": {
+    "W830": [
+      "Settings",
+      "Media Management"
+    ],
+    "W837": [
+      "Settings"
+    ],
+    "basis": "These are localizable navigation labels resolved by translate() at the exact current UI source and are present in each locale catalog."
+  },
+  "pullRequest": 190,
+  "repoModified": false,
+  "repository": "snapetech-org/ChaptarrNG",
+  "sourceCount": 50,
+  "staticOnly": true,
+  "testsBuildsCiBrowserRun": false,
+  "tree": "7f0f9a9d71d672bb47c08e1abe4125be03d815d6",
+  "window": "W800-W849"
+}

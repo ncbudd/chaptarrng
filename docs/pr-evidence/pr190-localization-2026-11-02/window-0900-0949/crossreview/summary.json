@@ -1,0 +1,149 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W900-W949",
+  "head": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "tree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+  "cellCount": 600,
+  "sourceCount": 50,
+  "localeCount": 12,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "crossReviewDispositionCounts": {
+    "accept-current": 478,
+    "accept-proposal": 121,
+    "revise-proposal": 1
+  },
+  "candidateCount": 122,
+  "acceptedPrimaryProposals": 121,
+  "revisedProposalCount": 1,
+  "rejectedProposals": 0,
+  "holds": 0,
+  "sourceTargetsReattested": 600,
+  "sourceRegistryEntriesReattested": 50,
+  "callerReferencesReattested": 86,
+  "callerSourceRows": 50,
+  "callerPinFailures": 0,
+  "providerOptionPipelineReferencesReattested": 20,
+  "providerOptionPipelineFailures": 0,
+  "serverMessagePipelineReferencesReattested": 76,
+  "serverMessagePipelineFailures": 0,
+  "pinnedFilesReattested": 88,
+  "catalogsReattested": 12,
+  "catalogKeyCount": 4165,
+  "allLocaleCatalogKeySetsIdentical": true,
+  "currentProtectedLiteralFailures": 7,
+  "currentProtectedLiteralFailureCells": [
+    {
+      "sourceOrdinal": 909,
+      "locale": "es",
+      "missing": [
+        "ValidationFailure"
+      ]
+    },
+    {
+      "sourceOrdinal": 931,
+      "locale": "ar",
+      "missing": [
+        "Scene"
+      ]
+    },
+    {
+      "sourceOrdinal": 931,
+      "locale": "es",
+      "missing": [
+        "Scene"
+      ]
+    },
+    {
+      "sourceOrdinal": 931,
+      "locale": "fr",
+      "missing": [
+        "Scene"
+      ]
+    },
+    {
+      "sourceOrdinal": 931,
+      "locale": "hi",
+      "missing": [
+        "Scene"
+      ]
+    },
+    {
+      "sourceOrdinal": 931,
+      "locale": "ko",
+      "missing": [
+        "Scene"
+      ]
+    },
+    {
+      "sourceOrdinal": 931,
+      "locale": "pt-BR",
+      "missing": [
+        "Scene"
+      ]
+    }
+  ],
+  "finalProtectedLiteralFailures": 0,
+  "placeholderMismatches": 0,
+  "markupMismatches": 0,
+  "priorDispositionRowsReattested": 10800,
+  "priorRecordLinkFailures": 0,
+  "priorLiveTargetLinkFailures": 0,
+  "priorCurrentTargetsMatchingPriorFinalHash": 10605,
+  "priorCurrentTargetsDifferentFromPriorFinalHash": 195,
+  "w899BoundaryCellsReattested": 12,
+  "w899BoundaryMatchesAllLocales": true,
+  "french947Revision": {
+    "sourceOrdinal": 947,
+    "locale": "fr",
+    "fromPrimary": "La récupération échoue si MAM ne peut pas appliquer l’avantage Freeleech personnel requis.",
+    "to": "La demande de téléchargement échoue si MAM ne peut pas appliquer l’avantage Freeleech personnel requis.",
+    "sha256": "fe3fbe8da99c99c4abecf0c223246b4008bd20e88b939a40d149c4d3ea1eb4cf",
+    "reason": "Use a clear download-request term for the application grab action."
+  },
+  "primaryManifestSha256": "795f1b6bddd08117c158027586a56fcde0c8142043691ba6251e7c1d25cda658",
+  "primarySha256SumsSha256": "f4990d65eefc3e2b0de8dfbbf7dc6afced7f20ecbdd20c287f00cf20f70d5c9d",
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "machineReviewConfidence": "moderate",
+  "repositoryOrPRModified": false,
+  "repoStatusBeforeAfter": "clean",
+  "testsBuildsScansCIOrBrowserRun": false,
+  "priorSelectedCellScope": "W900-W949 is outside previous position coverage 0-899; all 10,800 preceding hash/current-target links and the W899 boundary were reattested.",
+  "reviewLimit": "Machine-assisted independent static cross-review; not native-speaker approval or headed-browser review.",
+  "sevenPRHeadRequeryBeforeAfter": {
+    "allSevenQueried": true,
+    "headChanges": [
+      {
+        "pullRequest": 204,
+        "repository": "snapetech-org/slskR",
+        "before": "72597bcf3c71f586040cd882506dff8dcbf6c804",
+        "after": "5f295feea832b3078c52d92d9268cd6446f804a5"
+      },
+      {
+        "pullRequest": 418,
+        "repository": "snapetech-org/SeerrNG",
+        "before": "0905d4be32d8b7ec3b1af701473a3fdf6e0f30a2",
+        "after": "9242898e23f7f25d515d10b5b0b51df322e395fb"
+      }
+    ],
+    "#190State": "OPEN",
+    "#190Draft": true,
+    "#190ExactHead": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+    "#190ExactTree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe",
+    "#190HeadUnchanged": true
+  }
+}

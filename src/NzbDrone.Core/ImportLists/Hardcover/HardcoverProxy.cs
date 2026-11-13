@@ -7,6 +7,7 @@ using Newtonsoft.Json;
 using NLog;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists.Hardcover
 {
@@ -92,15 +93,15 @@ namespace NzbDrone.Core.ImportLists.Hardcover
                 _logger.Warn(ex, "Hardcover authentication failed (HTTP {0}) for {1}", ex.Response.StatusCode, settings.BaseUrl);
                 if (ex.Response.StatusCode == HttpStatusCode.Unauthorized || ex.Response.StatusCode == HttpStatusCode.Forbidden)
                 {
-                    return new ValidationFailure(nameof(settings.ApiKey), "Invalid Hardcover API key");
+                    return NzbDroneValidationFailure.ForMessage(nameof(settings.ApiKey), "Invalid Hardcover API key", "server.message.m299a901c9c37");
                 }
 
-                return new ValidationFailure(string.Empty, "Unable to connect to Hardcover. Check URL/API key and logs for details.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to Hardcover. Check URL/API key and logs for details.", "server.message.me517fdaedf57");
             }
             catch (System.Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to Hardcover for {0}", settings.BaseUrl);
-                return new ValidationFailure(string.Empty, "Unable to connect to Hardcover. Check logs for details.");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to Hardcover. Check logs for details.", "server.message.ma3917978a8e1");
             }
         }
 

@@ -1,0 +1,28 @@
+{
+  "candidateFreeManifestSha256": "67b758004fcfca76b0e0d9292d4161b274f888c52ff20416b34443faa336ebc6",
+  "catalogLocales": 12,
+  "cellsReviewed": 37,
+  "changedTargetRecommendations": 18,
+  "dispositionCounts": {
+    "accept-current": 19,
+    "correction": 9,
+    "refinement": 9
+  },
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "markupChecksPassed": 37,
+  "nativeSpeakerApproval": false,
+  "noCallerCellsExcluded": 24,
+  "numericLiteralChecksPassed": 12,
+  "numericLiteralRowsChecked": 12,
+  "placeholderChecksPassed": 37,
+  "primaryLedgerSha256": "f72fa723b120e9b197b72ea3b82a49a1bce4a689ac0879a20b933ceb512b4d2b",
+  "protectedLiteralChecksPassed": 39,
+  "protectedLiteralRowsChecked": 25,
+  "protectedLiteralTokenChecks": 39,
+  "pullRequest": 190,
+  "recordType": "primary-semantic-review-summary",
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "sourceIdsReviewed": 7,
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0"
+}

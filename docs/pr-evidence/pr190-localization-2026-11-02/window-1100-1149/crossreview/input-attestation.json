@@ -1,0 +1,18 @@
+{
+  "allPrimaryChecksumsPassed": true,
+  "exactHeadAndTreeReattestedAtStart": true,
+  "localWorktreeClean": true,
+  "localWorktreeHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "localWorktreeTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "localeCatalogReadbackCells": 600,
+  "localeCatalogReadbackFailures": 0,
+  "primaryManifestSha256": "624652c21d01212fb212a5b73c34f0442fbc85f3626b1538191645587bb3dc98",
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1100-1149-primary-20261102",
+  "primarySha256SumsSha256": "a9839bb9b3bbea0cf3444bef72e27f963a1f0976caeefd800cf11e723d3709f9",
+  "requestedHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "requestedTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "selectedQueueWindow": "W1100-W1149",
+  "sourceCatalogReadbackCells": 600,
+  "sourceCatalogReadbackFailures": 0,
+  "sourceQueuePath": "docs/localization/source-followup-20261101.json"
+}

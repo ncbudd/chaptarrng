@@ -1,0 +1,59 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pr": 190,
+  "window": "W50-99",
+  "inputHead": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+  "inputTree": "605a751ae9c3b454f4189dd89d021a5976e95237",
+  "reviewedCells": 600,
+  "sourceIds": 50,
+  "locales": [
+    "es",
+    "zh-Hans",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-Hant",
+    "vi",
+    "id"
+  ],
+  "partACrossReview": {
+    "acceptedCurrent": 274,
+    "acceptedPrimaryProposals": 23,
+    "rejectedProposalKeptCurrent": 1,
+    "missedCurrentIssues": 2
+  },
+  "partBCrossReview": {
+    "accepted": 289,
+    "missedCurrentIssues": 10,
+    "refinedPrimaryProposal": 1,
+    "acceptedPrimaryProposals": 7
+  },
+  "rootAdditionalRefinement": 1,
+  "catalogChanges": 43,
+  "changesByLocale": {
+    "de": 8,
+    "ja": 2,
+    "hi": 8,
+    "zh-Hans": 2,
+    "fr": 2,
+    "es": 3,
+    "pt-BR": 3,
+    "ko": 2,
+    "id": 5,
+    "ar": 1,
+    "zh-Hant": 3,
+    "vi": 4
+  },
+  "catalogKeyCountPerLocale": 4165,
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false,
+  "finalTargetsExactHashPlanned": true,
+  "appliedAndReadBackRows": 43,
+  "catalogKeysAfterApply": 4165,
+  "catalogKeySetParityAfterApply": true,
+  "catalogOrderChanged": false
+}

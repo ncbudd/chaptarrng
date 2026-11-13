@@ -1,0 +1,25 @@
+{
+  "batch": "W400-449-Core",
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "candidateFreePacketSha256": "dc057678d73514d8ad08426a648571472b02ee9969cb0cf67b6c4f998e4a3d4f",
+  "candidateFreeInputUsed": true,
+  "candidateFreeCellsUsed": true,
+  "callerContextUsed": true,
+  "exactSourceTargetCallerHashesBound": true,
+  "currentWindowBlindOrCrossOutputsAccessed": false,
+  "applicationPerformed": false,
+  "otherWindowMaterialExposure": [
+    "Read W350 candidate-free source selection, application readback, its hold dispositions/hashes, and parts of its primary summary/ledger while checking the sequential pipeline. W350 suggestions were not used for any W400 target judgment; no W400 blind/cross packet was accessed."
+  ],
+  "currentWindowPrimaryReviewUses": {
+    "candidateFreeCells": true,
+    "callerContext": true,
+    "sourceAndTargetHashes": true,
+    "latestMainDrift": true,
+    "hashOnlyCallerlessHold": true
+  },
+  "nativeSpeakerReviewPerformed": false,
+  "reviewerRole": "primary",
+  "result": "RECORDED"
+}

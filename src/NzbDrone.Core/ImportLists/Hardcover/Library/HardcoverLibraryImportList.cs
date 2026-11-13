@@ -19,6 +19,7 @@ using NzbDrone.Core.Tags;
 using NzbDrone.Core.ThingiProvider;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists.Hardcover.Library
 {
@@ -856,12 +857,12 @@ namespace NzbDrone.Core.ImportLists.Hardcover.Library
 
             if (authHeader.IsNullOrWhiteSpace())
             {
-                return new ValidationFailure(string.Empty, "No Hardcover API token is configured (set one on this import list or in Settings)");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "No Hardcover API token is configured (set one on this import list or in Settings)", "server.message.m2b0ea0852cd0");
             }
 
             if (!hasPerListToken && !_configService.HardcoverEnabled)
             {
-                return new ValidationFailure(string.Empty, "Hardcover is not enabled (enable it in Settings or set an API token on this import list)");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Hardcover is not enabled (enable it in Settings or set an API token on this import list)", "server.message.md339df0d44f9");
             }
 
             try
@@ -869,7 +870,7 @@ namespace NzbDrone.Core.ImportLists.Hardcover.Library
                 var user = GetCurrentUser(authHeader);
                 if (user == null)
                 {
-                    return new ValidationFailure(string.Empty, "Could not retrieve current Hardcover user");
+                    return NzbDroneValidationFailure.ForMessage(string.Empty, "Could not retrieve current Hardcover user", "server.message.m7d07b7873b14");
                 }
 
                 if (hasPerListToken)
@@ -893,15 +894,15 @@ namespace NzbDrone.Core.ImportLists.Hardcover.Library
                 _logger.Warn(e, "Hardcover API Error");
                 if (e.Response.StatusCode == HttpStatusCode.Unauthorized)
                 {
-                    return new ValidationFailure(string.Empty, "Hardcover API token is invalid or expired");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Hardcover API token is invalid or expired", "server.message.mc17ea4dfb45f");
                 }
 
-                return new ValidationFailure(string.Empty, "Could not retrieve Hardcover library data");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Could not retrieve Hardcover library data", "server.message.m30241a539efa");
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to Hardcover");
-                return new ValidationFailure(string.Empty, "Unable to connect to import list, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to import list, check the log for more details", "server.message.ma28fc67879dd");
             }
         }
 
@@ -945,39 +946,39 @@ namespace NzbDrone.Core.ImportLists.Hardcover.Library
         {
             if (rootFolderPath.IsNullOrWhiteSpace())
             {
-                return new ValidationFailure(fieldName, "Root folder is required");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Root folder is required", "server.message.m305661a25dbf");
             }
 
             var rootFolder = _rootFolderService.GetBestRootFolder(rootFolderPath);
             if (rootFolder == null)
             {
-                return new ValidationFailure(fieldName, $"Root folder '{rootFolderPath}' is not configured in Chaptarr");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Root folder '{rootFolderPath}' is not configured in Chaptarr", "server.message.m6db923fcd485", new { value0 = rootFolderPath });
             }
 
             if (mediaType == BookMediaType.Audiobook && rootFolder.FolderType == FolderType.Ebook)
             {
-                return new ValidationFailure(fieldName, "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder", "server.message.m45461e168bdc");
             }
 
             if (mediaType == BookMediaType.Ebook && rootFolder.FolderType == FolderType.Audiobook)
             {
-                return new ValidationFailure(fieldName, "Selected root folder is Audiobook-only; choose an Ebook or Mixed root folder");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Selected root folder is Audiobook-only; choose an Ebook or Mixed root folder", "server.message.mb5750cd165f2");
             }
 
             var resolved = _rootFolderSettingsResolver.ResolveSettings(rootFolder, mediaType);
             if (resolved == null || !resolved.IsConfigured)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' does not have {mediaType} defaults configured");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' does not have {mediaType} defaults configured", "server.message.mf2463602ee31", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             if (overrideQualityProfileId <= 0 && (resolved.QualityProfileId ?? 0) <= 0)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} quality profile default");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} quality profile default", "server.message.m0df8751db78b", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             if (overrideMetadataProfileId <= 0 && (resolved.MetadataProfileId ?? 0) <= 0)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} metadata profile default");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} metadata profile default", "server.message.md5295352b8ae", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             return null;

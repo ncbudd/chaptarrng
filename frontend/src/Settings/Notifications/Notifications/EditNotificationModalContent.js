@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import Alert from 'Components/Alert';
+import LocalizedServerMessage from 'Components/LocalizedServerMessage';
 import Form from 'Components/Form/Form';
 import FormGroup from 'Components/Form/FormGroup';
 import FormInputGroup from 'Components/Form/FormInputGroup';
@@ -16,7 +17,6 @@ import ModalHeader from 'Components/Modal/ModalHeader';
 import { inputTypes, kinds } from 'Helpers/Props';
 import AdvancedSettingsButton from 'Settings/AdvancedSettingsButton';
 import translate from 'Utilities/String/translate';
-import translateServerMessage from 'Utilities/String/translateServerMessage';
 import AudioBookShelfLibraryMappings from './AudioBookShelfLibraryMappings';
 import NotificationEventItems from './NotificationEventItems';
 import styles from './EditNotificationModalContent.css';
@@ -85,14 +85,18 @@ function EditNotificationModalContent(props) {
 
         {
           !isFetching && !error && fields &&
-            <Form {...otherProps}>
+            <Form {...otherProps} serverMessageMode="opaque">
               {
                 !!message &&
                   <Alert
                     className={styles.message}
                     kind={message.value.type}
                   >
-                    {translateServerMessage(message.value.message)}
+                    <LocalizedServerMessage
+                      message={message.value.message}
+                      messageId={message.value.messageId}
+                      messageParameters={message.value.messageParameters}
+                    />
                   </Alert>
               }
 

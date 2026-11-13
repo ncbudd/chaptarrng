@@ -1,0 +1,215 @@
+{
+  "repository": "snapetech-org/chaptarrNG",
+  "pullRequest": 190,
+  "exactHead": "722c0aaab4eda88bb507ba4a165e2f6bb22901fa",
+  "exactTree": "d162735f61d934389634111229b42beae04aaeea",
+  "sourceOrdinal": 884,
+  "sourceId": "server.message.mf00d6bc38ae8",
+  "correctedEnglishSource": "Can not contain '\\', '//', or start/end with '/'",
+  "sourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+  "enCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "gitBlobOid": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "fileSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2"
+  },
+  "sourceRegistryEntry": {
+    "id": "server.message.mf00d6bc38ae8",
+    "source": "Can not contain '\\', '//', or start/end with '/'",
+    "parameters": [],
+    "patterns": [
+      "Can not contain '\\', '//', or start/end with '/'"
+    ]
+  },
+  "sourceRegistryFile": {
+    "path": "frontend/src/Utilities/Localization/server-messages.json",
+    "gitBlobOid": "87d3a764ebf09b157d542c9416cf79d4ca30c626",
+    "fileSha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e"
+  },
+  "sourceFingerprint": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+  "sourceMessageHashFile": {
+    "path": "docs/localization/source-message-hashes.json",
+    "gitBlobOid": "2e1c742b2af64dd803c51709edfc7e7b43a3cc34",
+    "fileSha256": "f13e8b8db5ec55fb2228bd8462f3f842373c86f6349ea3a400b98ec6d8d6468d"
+  },
+  "sourceFollowupEntry": {
+    "sourceId": "server.message.mf00d6bc38ae8",
+    "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+    "oldSourceText": "Can not contain '', '//', or start/end with '/'",
+    "oldSourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d",
+    "newSourceText": "Can not contain '\\', '//', or start/end with '/'",
+    "newSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+    "sourceFingerprintBefore": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+    "sourceFingerprintAfter": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+    "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+    "callerFileSha256Before": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+    "callerFileSha256After": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+    "callerOccurrencesChanged": 0,
+    "postEditCallerOccurrences": [
+      {
+        "line": 27,
+        "lineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb"
+      },
+      {
+        "line": 29,
+        "lineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b"
+      },
+      {
+        "line": 31,
+        "lineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5"
+      },
+      {
+        "line": 33,
+        "lineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661"
+      }
+    ],
+    "translationHandling": "W850 primary and independent cross-review held all twelve locale cells because the English catalog omitted the forbidden backslash. Corrected the English source to match the exact four existing validators under the stable ID; keep the twelve targets held until fresh exact-head review explicitly preserves backslash, //, and leading/trailing slash constraints."
+  },
+  "sourceFollowupFile": {
+    "path": "docs/localization/source-followup-20261102.json",
+    "gitBlobOid": "f17804c2ce1cd368316fdacd094dff6c6a800c99",
+    "fileSha256": "19695345530e360a9bdf2a3b30ebc89f1fba96b666f5380a20576f8b471cda18"
+  },
+  "callerPins": [
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "line": 27,
+      "lineText": "            RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "lineSha256": "7b13ae9e98b4abbd921b5c3b460ed9961e6fb520bf1ecc6505063fce84debc0f",
+      "contextBefore": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.m847a995ca781\"))",
+        "                .When(c => c.ApiKey.IsNotNullOrWhiteSpace());",
+        ""
+      ],
+      "contextAfter": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+        "            RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));"
+      ],
+      "fileGitBlobOid": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+      "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "lineContainsCorrectedEnglishLiteral": true,
+      "stableIdReferenceOnFollowingLine": true,
+      "lineSha256HashMethod": "SHA256 of UTF-8 raw source line without line terminator, preserving indentation",
+      "normalizedLineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "normalizedLineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb",
+      "sourceFollowupLineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb",
+      "sourceFollowupLineSha256Matches": true,
+      "stableIdLineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+      "stableIdLineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5"
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "line": 29,
+      "lineText": "            RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "lineSha256": "4f622faab4b08b5ae7d9d7eea32c0bbac7a79dbeae87efba06825c506ae5a965",
+      "contextBefore": [
+        "",
+        "            RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));"
+      ],
+      "contextAfter": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+        "            RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));"
+      ],
+      "fileGitBlobOid": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+      "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "lineContainsCorrectedEnglishLiteral": true,
+      "stableIdReferenceOnFollowingLine": true,
+      "lineSha256HashMethod": "SHA256 of UTF-8 raw source line without line terminator, preserving indentation",
+      "normalizedLineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "normalizedLineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b",
+      "sourceFollowupLineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b",
+      "sourceFollowupLineSha256Matches": true,
+      "stableIdLineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+      "stableIdLineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5"
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "line": 31,
+      "lineText": "            RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "lineSha256": "441e5b709b1ca4c2f113f3694f987c6d82368b2acfb389dff26ecee40cc60309",
+      "contextBefore": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+        "            RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));"
+      ],
+      "contextAfter": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+        "            RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));"
+      ],
+      "fileGitBlobOid": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+      "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "lineContainsCorrectedEnglishLiteral": true,
+      "stableIdReferenceOnFollowingLine": true,
+      "lineSha256HashMethod": "SHA256 of UTF-8 raw source line without line terminator, preserving indentation",
+      "normalizedLineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "normalizedLineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5",
+      "sourceFollowupLineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5",
+      "sourceFollowupLineSha256Matches": true,
+      "stableIdLineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+      "stableIdLineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5"
+    },
+    {
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "line": 33,
+      "lineText": "            RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "lineSha256": "0c18316e8e08626e844230e64cfd2e664e387d00de888c967098436477fffb02",
+      "contextBefore": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+        "            RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));"
+      ],
+      "contextAfter": [
+        "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+        "        }",
+        "    }"
+      ],
+      "fileGitBlobOid": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+      "fileSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "lineContainsCorrectedEnglishLiteral": true,
+      "stableIdReferenceOnFollowingLine": true,
+      "lineSha256HashMethod": "SHA256 of UTF-8 raw source line without line terminator, preserving indentation",
+      "normalizedLineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+      "normalizedLineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661",
+      "sourceFollowupLineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661",
+      "sourceFollowupLineSha256Matches": true,
+      "stableIdLineText": "                .WithState(_ => NzbDroneValidationState.ForMessage(\"server.message.mf00d6bc38ae8\"));",
+      "stableIdLineSha256": "9973a74b2b801ea2223dac31bb8e4e8146c4ba403595574411a25bb5ed4c3bf5"
+    }
+  ],
+  "callerCount": 4,
+  "historicalHoldArtifact": {
+    "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/application/apply-readback.jsonl",
+    "gitBlobOid": "b84f2789d04cc2ce84c13caf43f5365a1c3ace58",
+    "fileSha256": "293a8dc1b37e2a246c5bdb84b8018161100aaf18c5278cc0b8e017377783d99a",
+    "rows": 12,
+    "allTwelvePriorRowsHeld": true,
+    "note": "Historical apply-readback records the earlier omitted-backslash source and unchanged locale targets; catalog values were independently reread at the corrected live head."
+  },
+  "contextSummary": "Four QBittorrent settings validators apply the same regular expression and display the same English validation message. The rule excludes backslash, repeated //, and slash at the beginning or end; the validation uses the stable message ID.",
+  "sourceOrdinalEvidence": {
+    "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/primary/source-slice.jsonl",
+    "gitBlobOid": "fce68abc732a579b0ceb02ca6c149feb74d4c186",
+    "fileSha256": "ebe6f3a6da6246886536188cbfa8023201ac31bf2f0d5aecb898288b16ae2e74",
+    "row": {
+      "source": "Can not contain '', '//', or start/end with '/'",
+      "sourceCatalogBlob": "be4cfe01ea4b4994f434ad9ba85c8f5ec52d45ec",
+      "sourceCatalogSha256": "467b8c902bfad2f187338689d7bf75d7a922539f909aa09b5cfe01c91ac5d574",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceKeySha256": "a6de101b1c9f9f4e51f4f3df988b3337e8b7c315229e10c5e1b3ff055f77645c",
+      "sourceOrdinal": 884,
+      "sourceRegistryFingerprint": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+      "sourceRegistryProtectedLiterals": [],
+      "sourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d"
+    },
+    "stableIdOrdinalVerified": true,
+    "note": "Historical source slice establishes ordinal 884 and stable ID; its English text hash is pre-correction, so the current corrected English source is separately pinned from en.json and server-messages.json."
+  },
+  "callerHashMethodsNote": "Each lineSha256 hashes the raw UTF-8 line without its line terminator and preserves indentation. normalizedLineSha256 hashes the same line after left indentation is removed; it matches the source-followup entry hash. The caller file Git blob and whole-file SHA256 also match the exact-head worktree."
+}

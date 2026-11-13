@@ -1,0 +1,13 @@
+{
+  "notes": [
+    "All proposed values retain exact registered protected literals; the W1187 protected M4B literal conflicts with a dynamic TargetQualityName at both callers and is held in every locale.",
+    "Caller-aware wording was checked against exact line pins and display surfaces; 59 references across seven files, no extraction gaps.",
+    "No external dictionary, browser, runtime, or qualified native-speaker source was used. Confidence is moderate overall; explicit W1187 holds are low confidence pending source/registry resolution."
+  ],
+  "terminologySource": {
+    "bytes": 7494,
+    "gitBlob": "4c9bd6f0f4eb8d0c5e1970f788fb85ab115a9382",
+    "path": "docs/localization/terminology.json",
+    "sha256": "4f766592488412e50cd2d166d584d996a93497abdeb38c2039e2e2d8bbdf3444"
+  }
+}

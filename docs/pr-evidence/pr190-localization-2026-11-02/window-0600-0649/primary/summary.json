@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "f405a6256c2661e48e412ac4471ce70411baf98c",
+  "exactTree": "fe3272572b68460f1d8c8083a5dcc44cd3307b74",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "f405a6256c2661e48e412ac4471ce70411baf98c",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "scope": {
+    "positions": [
+      600,
+      649
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceSliceIdsSha256": "140e3afe0fe5477127fb652c5800a71f38a59de3ad56c1f55e5f7aa705842bfb",
+  "counts": {
+    "accept-current": 399,
+    "propose-correction": 191,
+    "propose-refinement": 10,
+    "hold": 0
+  },
+  "proposalCount": 201,
+  "perLocale": {
+    "es": {
+      "accept-current": 34,
+      "propose-refinement": 2,
+      "propose-correction": 14,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 37,
+      "propose-refinement": 0,
+      "propose-correction": 13,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 35,
+      "propose-refinement": 0,
+      "propose-correction": 15,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 32,
+      "propose-refinement": 3,
+      "propose-correction": 15,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 31,
+      "propose-refinement": 1,
+      "propose-correction": 18,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 35,
+      "propose-refinement": 1,
+      "propose-correction": 14,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 34,
+      "propose-refinement": 1,
+      "propose-correction": 15,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 31,
+      "propose-refinement": 1,
+      "propose-correction": 18,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 36,
+      "propose-refinement": 1,
+      "propose-correction": 13,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 35,
+      "propose-refinement": 0,
+      "propose-correction": 15,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 27,
+      "propose-refinement": 0,
+      "propose-correction": 23,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 32,
+      "propose-refinement": 0,
+      "propose-correction": 18,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "callerRefs": 64,
+    "uniqueCallerFiles": 42,
+    "mismatches": 0,
+    "gaps": [],
+    "allCallersAttestedAtExactHead": true
+  },
+  "placeholders": {
+    "sourcesWithPlaceholders": 9,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourcesWithMarkup": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 15,
+    "currentMismatchCells": [
+      {
+        "sourceOrdinal": 616,
+        "sourceId": "server.message.m623b1093a9c9",
+        "locale": "ja",
+        "missing": [
+          "Torrent Download Station"
+        ]
+      },
+      {
+        "sourceOrdinal": 618,
+        "sourceId": "server.message.m62fb6085c79e",
+        "locale": "hi",
+        "missing": [
+          "Plex Media Server"
+        ]
+      },
+      {
+        "sourceOrdinal": 618,
+        "sourceId": "server.message.m62fb6085c79e",
+        "locale": "ja",
+        "missing": [
+          "Plex Media Server"
+        ]
+      },
+      {
+        "sourceOrdinal": 618,
+        "sourceId": "server.message.m62fb6085c79e",
+        "locale": "ko",
+        "missing": [
+          "Plex Media Server"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "es",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "zh-Hans",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "hi",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "de",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "ja",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "pt-BR",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "ar",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "ko",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "zh-Hant",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "vi",
+        "missing": [
+          "ids"
+        ]
+      },
+      {
+        "sourceOrdinal": 626,
+        "sourceId": "server.message.m685f5e4db612",
+        "locale": "id",
+        "missing": [
+          "ids"
+        ]
+      }
+    ],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdOverlap": 0,
+    "scannedPriorLedgerFiles": 74,
+    "priorSourceIdCount": 600,
+    "contextOnlyW599Rows": 12,
+    "w599SourceRowsMatchingLive": 12,
+    "w599TargetsMatchingOlderPrimary": 6,
+    "w599AppliedRecommendationsMatchingLive": 6,
+    "w599CallerRefsReattested": 1
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

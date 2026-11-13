@@ -13,5 +13,12 @@ namespace NzbDrone.Core.Exceptions
             : base(HttpStatusCode.BadRequest, message, args)
         {
         }
+
+        public static BadRequestException WithMessageId(string message, string messageId, object messageParameters = null)
+        {
+            var exception = new BadRequestException(message);
+            exception.SetMessageId(messageId, messageParameters);
+            return exception;
+        }
     }
 }

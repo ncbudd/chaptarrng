@@ -17,14 +17,17 @@ namespace NzbDrone.Core.Download.Clients.Sabnzbd
 
             RuleFor(c => c.ApiKey).NotEmpty()
                                   .WithMessage("API Key is required when username/password are not configured")
+                                  .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m220530e7c89a"))
                                   .When(c => string.IsNullOrWhiteSpace(c.Username));
 
             RuleFor(c => c.Username).NotEmpty()
                                     .WithMessage("Username is required when API key is not configured")
+                                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mbcc5625a5822"))
                                     .When(c => string.IsNullOrWhiteSpace(c.ApiKey));
 
             RuleFor(c => c.Password).NotEmpty()
                                     .WithMessage("Password is required when API key is not configured")
+                                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m89207b9b6701"))
                                     .When(c => string.IsNullOrWhiteSpace(c.ApiKey));
         }
     }

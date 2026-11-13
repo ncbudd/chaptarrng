@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/ChaptarrNG",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261030/chaptarrng-main-699b0a",
+  "livePullRequest": {
+    "baseRefName": "main",
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+    "number": 190,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "remoteBranchRef": {
+    "ref": "refs/heads/codex/chaptarrng-localization-complete-20261031",
+    "oid": "c53c7ac60624926e60ba40f10a88c109cd23a0de"
+  },
+  "head": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "tree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "worktreeClean": true,
+  "sourceQueuePath": "docs/localization/source-followup-20261101.json",
+  "sourceQueueSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+  "sourceQueueIdsCount": 1210,
+  "sourceQueueCanonicalIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceQueueLastOrdinal": 1209,
+  "reviewedOrdinals": [
+    1200,
+    1209
+  ],
+  "reviewedIds": [
+    "server.message.m73172a5045d6",
+    "server.message.mddaec7220c51",
+    "server.message.md6a7ade8523b",
+    "server.message.m9f7f2489aa05",
+    "server.message.md4a741052e8b",
+    "server.message.m621dd0308bef",
+    "server.message.m4cd205e7d07a",
+    "server.message.mc6073db4b613",
+    "server.message.m12f8b73a2b72",
+    "server.message.m47f0922640fa"
+  ],
+  "positions1210Through1249Present": false,
+  "sourceContextSha256": "ff080963d4e3b8b92b62254c61e020498753b5002397dee4835984716ac6490b",
+  "callerPinsSha256": "8c962ba8bfa2b54292b2a91ab0925d8fc6d5660d3ff848df99a2e004fcbcf26d",
+  "callerPinCount": 11,
+  "callerPinsVerified": true,
+  "sourceRegistryPath": "docs/localization/server-message-sources.json",
+  "sourceRegistrySha256": "62b3a0dd0a33bdb58dbab385bca9b655ecd27f73bfb1ed23457cab88af066825",
+  "englishCatalogPath": "src/NzbDrone.Core/Localization/Core/en.json",
+  "englishCatalogSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+  "targetCatalogsVerified": 12,
+  "currentTargetCellsVerified": 120,
+  "primaryCandidateFileSha256": "bc4aed90d56ede6f296303480484c1600963aa4cd061c42093f8763652ba33b8",
+  "blindLedgerSha256": "24679706ca5cacdded315fa3bdbb4385dff3b7bc77eaa29579a413695fddc12a",
+  "packetChecksumsVerified": true,
+  "blindReportChecksumsVerified": true,
+  "uiLabelMatches": {
+    "position1206OptionNames": 36,
+    "position1207NavigationLabels": 24
+  },
+  "repositoryChanges": false,
+  "testsBuildsScansBrowserCIWorkflowChanges": false,
+  "commitsPRUpdatesReleases": false,
+  "nativeSpeakerApproval": false
+}

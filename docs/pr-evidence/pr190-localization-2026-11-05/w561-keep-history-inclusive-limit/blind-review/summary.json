@@ -1,0 +1,26 @@
+{
+  "artifact": "ChaptarrNG W561 independent blind semantic/token review",
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "proposedSourceId": "server.message.m3a79390fb21e",
+  "sourceIdTransitionRecorded": true,
+  "currentEnglish": "NzbGet setting KeepHistory should be less than 25000",
+  "proposedEnglish": "NzbGet setting KeepHistory must not exceed 25000",
+  "targetLocaleCount": 12,
+  "decisionCounts": {
+    "proposal": 12,
+    "retain": 0,
+    "hold": 0
+  },
+  "allCurrentTargetsHaveStrictBoundaryError": true,
+  "allProposalsPreserveNzbGetKeepHistoryAnd25000": true,
+  "machineReviewOnly": true,
+  "nativeSpeakerApprovalPerformed": false,
+  "primaryReviewRead": false,
+  "reposEdited": false,
+  "testsBuildsScansCiRun": false,
+  "sourceCallerHeadPinned": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "sourceCallerTreePinned": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "worktreeClean": true
+}

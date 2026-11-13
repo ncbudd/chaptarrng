@@ -1,0 +1,16 @@
+{
+  "PRMutated": false,
+  "baseHead": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "baseRef": "main",
+  "head": "c66ef0bccc0635f047cebeda95b9aaa0ae8130a4",
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "isDraft": true,
+  "pullRequest": 190,
+  "queriedAtUtc": "2026-11-03T04:46:36.652328+00:00",
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryMutated": false,
+  "state": "OPEN",
+  "tree": "e2142a119ce8d9d765927bb44a47f71364863995",
+  "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+  "worktreeStatus": "## HEAD (no branch)"
+}

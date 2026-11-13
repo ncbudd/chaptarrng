@@ -1,0 +1,7 @@
+# ChaptarrNG PR #190 localization review window 0–49
+
+Reviewed 600 catalog cells (50 provider fields × 12 locales) at exact input head `7bb2b2f977e81d214318b3f873afe8ab17f03ed5` and tree `5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb`. Independent cross-review reconciled all 65 primary candidates and found 25 additional missed cells. Final dispositions: 573 accepted, 25 missed corrections, two refinements, no holds, and no no-ops.
+
+Applied 90 exact-hash corrections across 12 locale catalogs. All 90 targets read back exactly, catalog key parity remains 4,165 per locale, and source placeholders, protected literals, and markup were preserved. The review packet notes that seven IDs had protected-literal metadata omitted from the input placeholder field; those values were checked directly against each source/current/final string. All 134 caller references were re-attested, including 86 shifted registry lines resolved to unique current locations.
+
+The primary and independent review packets, root reconciliation, exact apply plan, and readback ledger are retained here. Qualified native-speaker approval and current-head headed-browser review remain outstanding. A local pre-push hook ran once during the push: `bash packaging/scripts/test-publish-image-aliases.sh`. It reported that the ChaptarrNG and BookshelfNG retirement release-readiness gates and the standard image alias contract tests passed. The hook ran on `kspld0` outside private JIT; it was not rerun. No builds, scans, CI workflows, release, tag, or merge occurred.

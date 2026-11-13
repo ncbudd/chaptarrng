@@ -1,0 +1,67 @@
+{
+  "task": "ChaptarrNG PR #190 W400-449 exact-hash reviewed application",
+  "inputHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "inputTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "reviewedCells": 600,
+  "appliedCellChanges": 100,
+  "finalDispositions": {
+    "accept-current": 488,
+    "propose-correction": 53,
+    "propose-refinement": 47,
+    "hold": 12
+  },
+  "retainedHolds": 12,
+  "changedLocales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "perLocale": {
+    "ar": 3,
+    "de": 9,
+    "es": 5,
+    "fr": 2,
+    "hi": 7,
+    "id": 5,
+    "ja": 11,
+    "ko": 16,
+    "pt-BR": 5,
+    "vi": 14,
+    "zh-Hans": 11,
+    "zh-Hant": 12
+  },
+  "targetKeyCountsAfter": {
+    "es": 4165,
+    "zh-Hans": 4165,
+    "hi": 4165,
+    "de": 4165,
+    "ja": 4165,
+    "fr": 4165,
+    "pt-BR": 4165,
+    "ar": 4165,
+    "ko": 4165,
+    "zh-Hant": 4165,
+    "vi": 4165,
+    "id": 4165
+  },
+  "nativeSpeakerApproval": false,
+  "releasesTagsMerges": false,
+  "testsBuildsCIWorkflowsRun": false,
+  "preCommitSemgrep": {
+    "scanner": "Semgrep Community Edition",
+    "ruleset": "p/default",
+    "stagedEvidenceBuilderFiles": 3,
+    "rulesRun": 290,
+    "findings": 0,
+    "productSourceScanned": false
+  }
+}

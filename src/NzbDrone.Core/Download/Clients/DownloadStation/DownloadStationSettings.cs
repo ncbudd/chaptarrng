@@ -20,22 +20,28 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             // Internally we normalize with TrimStart('/'), so treat leading '/' as valid input.
             RuleFor(c => c.TvDirectory).Must(dir => IsSafeDownloadStationDirectory(dir))
                                        .When(c => c.TvDirectory.IsNotNullOrWhiteSpace())
-                                       .WithMessage("Invalid directory");
+                                       .WithMessage("Invalid directory")
+                                       .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m79dd817b4295"));
 
-            RuleFor(c => c.AudiobookCategory).Matches(@"^\.?[-a-z]*$", RegexOptions.IgnoreCase).WithMessage("Allowed characters a-z and -");
-            RuleFor(c => c.EbookCategory).Matches(@"^\.?[-a-z]*$", RegexOptions.IgnoreCase).WithMessage("Allowed characters a-z and -");
+            RuleFor(c => c.AudiobookCategory).Matches(@"^\.?[-a-z]*$", RegexOptions.IgnoreCase).WithMessage("Allowed characters a-z and -")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.ma4556afba7bb"));
+            RuleFor(c => c.EbookCategory).Matches(@"^\.?[-a-z]*$", RegexOptions.IgnoreCase).WithMessage("Allowed characters a-z and -")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.ma4556afba7bb"));
 
             RuleFor(c => c.AudiobookCategory).Empty()
                                       .When(c => c.TvDirectory.IsNotNullOrWhiteSpace())
-                                      .WithMessage("Cannot use Category and Directory");
+                                      .WithMessage("Cannot use Category and Directory")
+                                      .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m006b305414e1"));
 
             RuleFor(c => c.EbookCategory).Empty()
                                       .When(c => c.TvDirectory.IsNotNullOrWhiteSpace())
-                                      .WithMessage("Cannot use Category and Directory");
+                                      .WithMessage("Cannot use Category and Directory")
+                                      .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m006b305414e1"));
 
             RuleFor(c => c.MusicCategory).Empty()
                                       .When(c => c.TvDirectory.IsNotNullOrWhiteSpace())
-                                      .WithMessage("Cannot use Category and Directory");
+                                      .WithMessage("Cannot use Category and Directory")
+                                      .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m006b305414e1"));
         }
 
         private static bool IsSafeDownloadStationDirectory(string directory)

@@ -1,0 +1,14 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "head": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "isDraft": true,
+  "matchesExpected": true,
+  "pullRequest": 190,
+  "remoteBranchHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "repository": "snapetech-org/chaptarrng",
+  "state": "OPEN",
+  "treeFromGitHubApi": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "worktreeClean": true,
+  "worktreeHead": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "worktreeTree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f"
+}

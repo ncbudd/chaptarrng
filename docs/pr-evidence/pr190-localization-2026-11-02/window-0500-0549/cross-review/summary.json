@@ -1,0 +1,205 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "primaryPacketHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "primaryPacketTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "assignedCheckpointHead": "70f5ad2c2dc8222d8f35e09ba81ffa12acfff856",
+  "assignedCheckpointTree": "9bd50b4f149f69f7cd5b78937b45fe1745e6c695",
+  "liveHead": "2625ad8bda30c7070bcc84ec8e4b31906a3d2288",
+  "liveTree": "128cbbef8788d11f0978529cf31eeab3f039b680",
+  "prState": "OPEN",
+  "draft": true,
+  "scope": {
+    "sourceOrdinals": [
+      500,
+      549
+    ],
+    "sourceIds": 50,
+    "localeCells": 600,
+    "primaryCandidates": 174,
+    "proposedCorrectionsOrRefinements": 174,
+    "primaryHolds": 0
+  },
+  "crossReview": {
+    "acceptedPrimaryCandidates": 163,
+    "revisedPrimaryCandidates": 9,
+    "noOpCandidatesAcceptedAsCurrent": 2,
+    "retainedHolds": 0,
+    "revisions": [
+      {
+        "sourceOrdinal": 506,
+        "locale": "hi",
+        "sourceId": "server.message.m2924c85ce471",
+        "finalTarget": "हर लेखक की ID अद्वितीय होनी चाहिए।",
+        "rationale": "The caller validates multiple author IDs. The proposal mixes English pluralization into Hindi; this says that each author's ID must be unique."
+      },
+      {
+        "sourceOrdinal": 511,
+        "locale": "fr",
+        "sourceId": "server.message.m2b0ea0852cd0",
+        "finalTarget": "Aucun jeton d’API Hardcover n’est configuré (ajoutez-en un à cette liste d’importation ou dans les paramètres).",
+        "rationale": "Use the idiomatic French construction “jeton d’API Hardcover” and translate the action as adding a token to this import list or Settings."
+      },
+      {
+        "sourceOrdinal": 511,
+        "locale": "vi",
+        "sourceId": "server.message.m2b0ea0852cd0",
+        "finalTarget": "Chưa cấu hình token API của Hardcover (hãy thêm token vào danh sách nhập này hoặc phần Cài đặt).",
+        "rationale": "Clarify that it is the Hardcover API token, not a generic token, and keep the two configuration locations explicit."
+      },
+      {
+        "sourceOrdinal": 513,
+        "locale": "ko",
+        "sourceId": "server.message.m2b75c50f32f3",
+        "finalTarget": "프록시를 통해 {value0}에 성공적으로 연결했습니다. 응답 시간: {value1}ms.",
+        "rationale": "The primary wording can read as a proxy connection followed by a value. This explicitly says the connection to {value0} succeeded through the proxy."
+      },
+      {
+        "sourceOrdinal": 520,
+        "locale": "ar",
+        "sourceId": "server.message.m2ebae1c36a6c",
+        "finalTarget": "لم تعد معاملات البرامج النصية المخصصة مدعومة.",
+        "rationale": "The primary “الوسائط” can mean media. In this scripting-settings caller, the source means script arguments; use “معاملات”."
+      },
+      {
+        "sourceOrdinal": 536,
+        "locale": "hi",
+        "sourceId": "server.message.m36ff1c2553cc",
+        "finalTarget": "{value0} से कम होने पर H&R होता है।",
+        "rationale": "The source states that falling below the threshold leads to H&R. “हो सकता है” weakens that to possibility; use a direct consequence."
+      },
+      {
+        "sourceOrdinal": 541,
+        "locale": "ar",
+        "sourceId": "server.message.m3b822d69ada8",
+        "finalTarget": "لم يتم إعداد ملف تعريف البيانات الوصفية للكتب الصوتية لهذا المؤلف (الكتب الصوتية معطّلة). اضبط ملف تعريف البيانات الوصفية للكتب الصوتية لإضافة كتب صوتية.",
+        "rationale": "The primary wording can be read as setting up a metadata file, while the caller means configuring a metadata profile. State the profile explicitly in both sentences."
+      },
+      {
+        "sourceOrdinal": 541,
+        "locale": "de",
+        "sourceId": "server.message.m3b822d69ada8",
+        "finalTarget": "Für diesen Autor ist kein Hörbuch-Metadatenprofil eingerichtet (Hörbücher sind deaktiviert). Richten Sie ein Hörbuch-Metadatenprofil ein, um Hörbücher hinzuzufügen.",
+        "rationale": "The primary leaves “Audiobook(s)” in English throughout. “Hörbuch” is the natural German term here, including in the metadata-profile setting."
+      },
+      {
+        "sourceOrdinal": 544,
+        "locale": "ko",
+        "sourceId": "server.message.m3cccd15ff3c8",
+        "finalTarget": "암호 문구는 {value0}자 이상이어야 하며 UTF-8 기준 최대 {value1}바이트까지 허용됩니다.",
+        "rationale": "The primary repeats the minimum requirement with “최소 ... 이상.” This uses one minimum construction and states the maximum UTF-8 byte limit separately."
+      }
+    ],
+    "noOpCells": [
+      {
+        "sourceOrdinal": 536,
+        "locale": "zh-Hans",
+        "sourceId": "server.message.m36ff1c2553cc",
+        "currentTarget": "低于 {value0} 会导致 H&R。"
+      },
+      {
+        "sourceOrdinal": 536,
+        "locale": "zh-Hant",
+        "sourceId": "server.message.m36ff1c2553cc",
+        "currentTarget": "低於 {value0} 會導致 H&R。"
+      }
+    ]
+  },
+  "finalDispositionCounts": {
+    "accept-current": 428,
+    "propose-correction": 131,
+    "propose-refinement": 41
+  },
+  "hashAndContextChecks": {
+    "all600SourceCurrentTargetCellsReattested": 600,
+    "cellMismatches": 0,
+    "proposalSourceCurrentTargetHashesReattested": 174,
+    "proposalHashMismatches": 0,
+    "uniqueLocaleCatalogsWithBlobDriftFromFrozen": 12,
+    "catalogBlobChangedRowsByLocale": {
+      "es": 50,
+      "zh-Hans": 50,
+      "hi": 50,
+      "de": 50,
+      "ja": 50,
+      "fr": 50,
+      "pt-BR": 50,
+      "ar": 50,
+      "ko": 50,
+      "zh-Hant": 50,
+      "vi": 50,
+      "id": 50
+    },
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "callerReferencesReattested": 71,
+    "uniqueCallerFiles": 49,
+    "callerMismatches": 0,
+    "W499BoundaryCellsReattested": 12,
+    "W499TargetsMatchingPreviousCrossReviewFinal": 12,
+    "W499TargetsMatchingPrimaryCurrentSnapshot": 1,
+    "W499TargetsChangedFromPrimarySnapshot": 11,
+    "W499CallerReferencesReattested": 12,
+    "W499CallerMismatches": 0,
+    "candidatePlaceholderMarkupProtectedLiteralMismatches": 0
+  },
+  "protectedLiteral": {
+    "primaryWindowCurrentMismatches": 5,
+    "allPrimaryCurrentMismatchesCoveredByCandidates": true,
+    "finalCandidateMismatchCount": 0,
+    "mismatchCells": [
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "hi",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "fr",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "ko",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 518,
+        "sourceId": "server.message.m2e3799b32682",
+        "locale": "zh-Hans",
+        "missingLiterals": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 518,
+        "sourceId": "server.message.m2e3799b32682",
+        "locale": "zh-Hant",
+        "missingLiterals": [
+          "SABnzbd"
+        ]
+      }
+    ]
+  },
+  "evidenceChecks": {
+    "primaryPacketSHA256SUMSFailures": [],
+    "primaryPacketInputChecksumFailures": [],
+    "previousCrossReviewSHA256SUMSFailures": [],
+    "previousCrossReviewHead": "70f5ad2c2dc8222d8f35e09ba81ffa12acfff856",
+    "previousCrossReviewTree": "9bd50b4f149f69f7cd5b78937b45fe1745e6c695"
+  },
+  "caveats": {
+    "nativeSpeakerApproval": false,
+    "noRepoOrPrEdits": true,
+    "noTestsBuildsScansCiBrowserOrWorkflowEdits": true,
+    "noReleasesOrTags": true
+  }
+}

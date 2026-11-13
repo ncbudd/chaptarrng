@@ -1,0 +1,63 @@
+{
+  "callerContext": {
+    "path": "caller-context.jsonl",
+    "rows": 50,
+    "sha256": "9417d3b878073e3fa757491c8494f9816c6e658750b0ec53b15c6992710ef582"
+  },
+  "candidateFreeCells": {
+    "path": "candidate-free-cells.jsonl",
+    "rows": 600,
+    "sha256": "50532f50ca1795d1e0f0762a6f77c7f3ec3998f8ed17eda26208c17f43a5dc9e"
+  },
+  "candidateFreeOnly": true,
+  "head": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "liveMain": "0d711ce1a9828675e879b2ba97f36fc3b9544188",
+  "nativeSpeakerApproval": false,
+  "result": "PASS",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "firstPosition": 350,
+    "lastPosition": 399,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "sourceIds": 50
+  },
+  "sourceSelectionSha256": "85c35d26fdf910e42e73c5b05d5be6ed26276511f0e8c9f8b6da33b39c983b41",
+  "tree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "latestMainDriftSha256": "9c3c53d2346808920dc8909fffd0257975c16e0a583552a4c6e5849312727b7d",
+  "catalogPinsSha256": "efaf3ff94aef09c14a7e94b2067892bfd4f0f7112635bfc6fc695f6883f8275d",
+  "integrityHeuristicFlags": {
+    "path": "integrity-review-flags.jsonl",
+    "rows": 16,
+    "sha256": "e456b449121b5788f938e08b455a9581740ccd9879c9b5385ff027cab1a416d2"
+  },
+  "packetVerifier": {
+    "path": "verify_candidate_free.py",
+    "sha256": "7a1f268ba62c2249a56c789209df83650fe3ce10322ab6591a0ed010d4117c49"
+  },
+  "packetBuilders": [
+    {
+      "path": "packet-builders/attest_main_delta.py",
+      "sha256": "d369b70e4914feb73a8d54eaf9acec99f8c70dd0e9c0943cf801c7aca892a78e"
+    },
+    {
+      "path": "packet-builders/build_candidate_free.py",
+      "sha256": "4391f6e4ffd4d45aaebd19bdf7f8e1385aa627bba38529c510a8807aae897f85"
+    }
+  ],
+  "liveMainTree": "6d3fcdf8e076306946734f70c629f92e2d36e04b",
+  "prAttestationSha256": "ade7326a1cc03a8a2c50657d49b2dd79b7d0c59791fdc77e1e0f48d6776e3f54"
+}

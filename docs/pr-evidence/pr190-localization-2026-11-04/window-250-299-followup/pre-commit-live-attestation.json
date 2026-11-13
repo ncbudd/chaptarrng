@@ -1,0 +1,40 @@
+{
+  "apiFilteredFields": {
+    "baseRefName": "main",
+    "baseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+    "draft": true,
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headSha": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+    "state": "open",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "attestedAtUTC": "2026-11-04T22:25:51Z/2026-11-04T22:25:53Z",
+  "filteredFieldsOnly": true,
+  "fullPullRequestBodyRetrieved": false,
+  "localProductCommit": "7bf3760ea87879304ec8deb6e4e8cf2f2b62c5b0",
+  "localProductParent": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+  "localProductTree": "8d821e88af5c3451d608e2bdd87549249d5cf745",
+  "pr": {
+    "baseRefName": "main",
+    "baseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+    "draft": true,
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headSha": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "pullRequest": 190,
+  "remoteRefs": {
+    "refs/heads/codex/chaptarrng-localization-complete-20261031": "2a9995a2bf63f06814bd8780736305f16bd6b33a",
+    "refs/heads/main": "6614d55ca4bfba9aeb3a88d8428c83c633f82e95",
+    "refs/pull/190/head": "2a9995a2bf63f06814bd8780736305f16bd6b33a"
+  },
+  "repository": "snapetech-org/ChaptarrNG",
+  "sourceWorktree": {
+    "branch": "task/chaptarrng-pr190-w250-299-apply-20261104",
+    "clean": true,
+    "head": "7bf3760ea87879304ec8deb6e4e8cf2f2b62c5b0",
+    "path": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w250-299-apply",
+    "tree": "8d821e88af5c3451d608e2bdd87549249d5cf745"
+  }
+}

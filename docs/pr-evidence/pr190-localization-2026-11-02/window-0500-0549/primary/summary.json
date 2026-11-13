@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "exactTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "scope": {
+    "positions": [
+      500,
+      549
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "counts": {
+    "accept-current": 426,
+    "propose-correction": 131,
+    "propose-refinement": 43,
+    "hold": 0
+  },
+  "proposalCount": 174,
+  "perLocale": {
+    "es": {
+      "accept-current": 35,
+      "propose-refinement": 3,
+      "propose-correction": 12,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 37,
+      "propose-refinement": 4,
+      "propose-correction": 9,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 40,
+      "propose-refinement": 4,
+      "propose-correction": 6,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 32,
+      "propose-refinement": 2,
+      "propose-correction": 16,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 30,
+      "propose-refinement": 4,
+      "propose-correction": 16,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 33,
+      "propose-refinement": 3,
+      "propose-correction": 14,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 39,
+      "propose-refinement": 4,
+      "propose-correction": 7,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 37,
+      "propose-refinement": 3,
+      "propose-correction": 10,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 35,
+      "propose-refinement": 3,
+      "propose-correction": 12,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 36,
+      "propose-refinement": 5,
+      "propose-correction": 9,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 35,
+      "propose-refinement": 4,
+      "propose-correction": 11,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 37,
+      "propose-refinement": 4,
+      "propose-correction": 9,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "currentCallerRefs": 71,
+    "uniqueCallerFiles": 49,
+    "lineNumberShifts": 0,
+    "callerMismatches": 0,
+    "allCallersAttestedAtHead": true,
+    "callerGaps": []
+  },
+  "placeholders": {
+    "sourceNonEmpty": 156,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourceNonEmpty": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 5,
+    "currentMismatchCells": [
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "hi",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "fr",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 516,
+        "sourceId": "server.message.m2e04fe8133c7",
+        "locale": "ko",
+        "missingLiterals": [
+          "Vuze Web Remote"
+        ]
+      },
+      {
+        "sourceOrdinal": 518,
+        "sourceId": "server.message.m2e3799b32682",
+        "locale": "zh-Hans",
+        "missingLiterals": [
+          "SABnzbd"
+        ]
+      },
+      {
+        "sourceOrdinal": 518,
+        "sourceId": "server.message.m2e3799b32682",
+        "locale": "zh-Hant",
+        "missingLiterals": [
+          "SABnzbd"
+        ]
+      }
+    ],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdWindowOverlap": 0,
+    "matchesInPrimaryOrCrossReviewSourceIdsPositions0To499": 0,
+    "scannedPriorLedgerFiles": 59,
+    "priorSourceIdCount": 500,
+    "reviewedPriorWindows": [
+      {
+        "window": [
+          0,
+          49
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102"
+      },
+      {
+        "window": [
+          50,
+          99
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          100,
+          149
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          150,
+          199
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102"
+      },
+      {
+        "window": [
+          200,
+          249
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0200-0249-primary-20261102"
+      },
+      {
+        "window": [
+          250,
+          299
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0250-0299-primary-20261102"
+      },
+      {
+        "window": [
+          300,
+          349
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0300-0349-primary-20261102"
+      },
+      {
+        "window": [
+          300,
+          349
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0300-0349-crossreview-by-agent-20261102"
+      },
+      {
+        "window": [
+          350,
+          399
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0350-0399-primary-20261102"
+      },
+      {
+        "window": [
+          350,
+          399
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0350-0399-crossreview-by-agent-20261102"
+      },
+      {
+        "window": [
+          400,
+          449
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0400-0449-primary-20261102"
+      },
+      {
+        "window": [
+          450,
+          499
+        ],
+        "packet": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0450-0499-primary-20261102"
+      }
+    ],
+    "contextOnlyPriorSourceId": "server.message.m2546d2b6166c",
+    "contextOnlyPriorDispositionRows": 12,
+    "adjacentPriorContext": {
+      "sourceOrdinal": 499,
+      "sourceId": "server.message.m2546d2b6166c",
+      "cells": 12,
+      "primaryDispositions": {
+        "propose-correction": 10,
+        "accept-current": 1,
+        "propose-refinement": 1
+      },
+      "priorPrimaryCurrentTargetsMatchingLive": 12,
+      "callerRefsReattested": 1,
+      "priorCallerRefsMatchLive": 12
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

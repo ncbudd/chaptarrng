@@ -18,6 +18,7 @@ using NzbDrone.Core.Profiles.Metadata;
 using NzbDrone.Core.Profiles.Qualities;
 using NzbDrone.Core.RootFolders;
 using NzbDrone.Core.Tags;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists.Goodreads
 {
@@ -251,14 +252,14 @@ namespace NzbDrone.Core.ImportLists.Goodreads
                 var userId = GetNormalizedUserId();
                 if (userId.IsNullOrWhiteSpace())
                 {
-                    return new ValidationFailure(nameof(Settings.UserId), "Goodreads user ID is required");
+                    return NzbDroneValidationFailure.ForMessage(nameof(Settings.UserId), "Goodreads user ID is required", "server.message.m9817bacf2fda");
                 }
 
                 var shelf = (Settings.BookshelfIds ?? Enumerable.Empty<string>())
                     .FirstOrDefault(s => s.IsNotNullOrWhiteSpace());
                 if (shelf.IsNullOrWhiteSpace())
                 {
-                    return new ValidationFailure(nameof(Settings.BookshelfIds), "At least one bookshelf is required");
+                    return NzbDroneValidationFailure.ForMessage(nameof(Settings.BookshelfIds), "At least one bookshelf is required", "server.message.md512ba71433e");
                 }
 
                 if (TryResolveShelfFromApi(userId, shelf, out var apiShelf, out var apiAvailable))
@@ -266,7 +267,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
                     var apiDocument = GetReviewListXml(userId, apiShelf, page: 1);
                     if (apiDocument?.Root == null)
                     {
-                        return new ValidationFailure(nameof(Settings.UserId), "Could not retrieve Goodreads bookshelf. Check the user ID and that shelves are public.");
+                        return NzbDroneValidationFailure.ForMessage(nameof(Settings.UserId), "Could not retrieve Goodreads bookshelf. Check the user ID and that shelves are public.", "server.message.m4588c1c26dfc");
                     }
 
                     return null;
@@ -274,13 +275,13 @@ namespace NzbDrone.Core.ImportLists.Goodreads
 
                 if (apiAvailable)
                 {
-                    return new ValidationFailure(nameof(Settings.BookshelfIds), $"Goodreads shelf '{shelf}' was not found for this user. Verify the shelf name and that shelves are public.");
+                    return NzbDroneValidationFailure.ForMessage(nameof(Settings.BookshelfIds), $"Goodreads shelf '{shelf}' was not found for this user. Verify the shelf name and that shelves are public.", "server.message.m7e14e7c3c085", new { value0 = shelf });
                 }
 
                 var rssDocument = GetReviewsRss(userId, shelf, page: 1);
                 if (rssDocument?.Root == null)
                 {
-                    return new ValidationFailure(nameof(Settings.UserId), "Could not retrieve Goodreads bookshelf RSS feed. Check the user ID and that shelves are public.");
+                    return NzbDroneValidationFailure.ForMessage(nameof(Settings.UserId), "Could not retrieve Goodreads bookshelf RSS feed. Check the user ID and that shelves are public.", "server.message.m826b4cc6c84e");
                 }
 
                 var channelTitle = rssDocument.Root.Element("channel")?.Element("title")?.Value;
@@ -288,7 +289,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
                 if (actualShelf.IsNotNullOrWhiteSpace() &&
                     !ShelfNamesMatch(actualShelf, shelf))
                 {
-                    return new ValidationFailure(nameof(Settings.BookshelfIds), $"Goodreads returned shelf '{actualShelf}' for requested shelf '{shelf}'. Verify the shelf name and that shelves are public.");
+                    return NzbDroneValidationFailure.ForMessage(nameof(Settings.BookshelfIds), $"Goodreads returned shelf '{actualShelf}' for requested shelf '{shelf}'. Verify the shelf name and that shelves are public.", "server.message.m6a53e8d74c29", new { value0 = actualShelf, value1 = shelf });
                 }
 
                 return null;
@@ -296,7 +297,7 @@ namespace NzbDrone.Core.ImportLists.Goodreads
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to Goodreads");
-                return new ValidationFailure(string.Empty, "Unable to connect to import list, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to import list, check the log for more details", "server.message.ma28fc67879dd");
             }
         }
 
@@ -340,39 +341,39 @@ namespace NzbDrone.Core.ImportLists.Goodreads
         {
             if (rootFolderPath.IsNullOrWhiteSpace())
             {
-                return new ValidationFailure(fieldName, "Root folder is required");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Root folder is required", "server.message.m305661a25dbf");
             }
 
             var rootFolder = _rootFolderService.GetBestRootFolder(rootFolderPath);
             if (rootFolder == null)
             {
-                return new ValidationFailure(fieldName, $"Root folder '{rootFolderPath}' is not configured in Chaptarr");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Root folder '{rootFolderPath}' is not configured in Chaptarr", "server.message.m6db923fcd485", new { value0 = rootFolderPath });
             }
 
             if (mediaType == BookMediaType.Audiobook && rootFolder.FolderType == FolderType.Ebook)
             {
-                return new ValidationFailure(fieldName, "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder", "server.message.m45461e168bdc");
             }
 
             if (mediaType == BookMediaType.Ebook && rootFolder.FolderType == FolderType.Audiobook)
             {
-                return new ValidationFailure(fieldName, "Selected root folder is Audiobook-only; choose an Ebook or Mixed root folder");
+                return NzbDroneValidationFailure.ForMessage(fieldName, "Selected root folder is Audiobook-only; choose an Ebook or Mixed root folder", "server.message.mb5750cd165f2");
             }
 
             var resolved = _rootFolderSettingsResolver.ResolveSettings(rootFolder, mediaType);
             if (resolved == null || !resolved.IsConfigured)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' does not have {mediaType} defaults configured");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' does not have {mediaType} defaults configured", "server.message.mf2463602ee31", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             if (overrideQualityProfileId <= 0 && (resolved.QualityProfileId ?? 0) <= 0)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} quality profile default");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} quality profile default", "server.message.m0df8751db78b", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             if (overrideMetadataProfileId <= 0 && (resolved.MetadataProfileId ?? 0) <= 0)
             {
-                return new ValidationFailure(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} metadata profile default");
+                return NzbDroneValidationFailure.ForMessage(fieldName, $"Selected root folder '{rootFolder.Path}' is missing a {mediaType} metadata profile default", "server.message.md5295352b8ae", new { value0 = rootFolder.Path, value1 = mediaType });
             }
 
             return null;

@@ -1,0 +1,15 @@
+{
+  "acceptCurrent": 568,
+  "candidateFreeInputLinkage": true,
+  "cells": 600,
+  "exactHead": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "exactTree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "locales": 12,
+  "nativeSpeakerReviewOutstanding": 600,
+  "placeholderParity": true,
+  "protectedLiteralParity": true,
+  "repositoryClean": true,
+  "result": "PASS",
+  "reviseCurrent": 32,
+  "sourceKeys": 50
+}

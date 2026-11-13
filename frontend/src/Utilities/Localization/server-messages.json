@@ -86,6 +86,14 @@
     ]
   },
   {
+    "id": "server.message.m006306a07286",
+    "source": "This magnet link is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.",
+    "parameters": [],
+    "patterns": [
+      "This magnet link is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads."
+    ]
+  },
+  {
     "id": "server.message.m006b305414e1",
     "source": "Cannot use Category and Directory",
     "parameters": [],
@@ -135,6 +143,14 @@
     "parameters": [],
     "patterns": [
       "At least one Music library is required"
+    ]
+  },
+  {
+    "id": "server.message.m02884586a62c",
+    "source": "m4b-tool/ffmpeg could not decode one of the source audio files.",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool/ffmpeg could not decode one of the source audio files."
     ]
   },
   {
@@ -403,6 +419,14 @@
     ]
   },
   {
+    "id": "server.message.m0e541aa42618",
+    "source": "Converted M4B does not have a readable audio duration",
+    "parameters": [],
+    "patterns": [
+      "Converted M4B does not have a readable audio duration"
+    ]
+  },
+  {
     "id": "server.message.m0e8c0447c3c8",
     "source": "QueryParam state invalid.",
     "parameters": [],
@@ -471,6 +495,21 @@
     ]
   },
   {
+    "id": "server.message.m12f8b73a2b72",
+    "source": "Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account",
+    "parameters": [],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
+    "id": "server.message.m131b7c5d7656",
+    "source": "No download client was found without tags or a matching author tag. Please check your settings.",
+    "parameters": [],
+    "patterns": [
+      "No download client was found without tags or a matching author tag. Please check your settings."
+    ]
+  },
+  {
     "id": "server.message.m1342cc36e68f",
     "source": "No tag names a narrator; the length matched the pinned edition. Difference {value0} seconds; matching tolerance {value1} seconds.",
     "parameters": [
@@ -510,6 +549,20 @@
     "parameters": [],
     "patterns": [
       "Unable to Import. Path matches client base download directory, it's possible 'Keep top-level folder' is disabled for this torrent or 'Torrent Content Layout' is NOT set to 'Original' or 'Create Subfolder'?"
+    ]
+  },
+  {
+    "id": "server.message.m14f003cf32a3",
+    "source": "Unknown or unsupported perl regex modifier: {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{modifier}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Unknown or unsupported perl regex modifier: {value0}"
     ]
   },
   {
@@ -641,6 +694,20 @@
     ]
   },
   {
+    "id": "server.message.m1e1f38c345ab",
+    "source": "Indexer specified download client is not available due to recent failures for {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{indexer.Name}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Indexer specified download client is not available due to recent failures for {value0}"
+    ]
+  },
+  {
     "id": "server.message.m1ee10c16dbff",
     "source": "No {value0} edition survived metadata profile filtering for this book.",
     "parameters": [
@@ -660,6 +727,14 @@
     "parameters": [],
     "patterns": [
       "Authentication failed, check the username and password"
+    ]
+  },
+  {
+    "id": "server.message.m1ef753cbd9a0",
+    "source": "Converted M4B imported",
+    "parameters": [],
+    "patterns": [
+      "Converted M4B imported"
     ]
   },
   {
@@ -698,6 +773,14 @@
     ],
     "patterns": [
       "The MQTT broker rejected the connection ({value0})."
+    ]
+  },
+  {
+    "id": "server.message.m207251749db8",
+    "source": "Recovering interrupted M4B conversion",
+    "parameters": [],
+    "patterns": [
+      "Recovering interrupted M4B conversion"
     ]
   },
   {
@@ -964,6 +1047,14 @@
     ]
   },
   {
+    "id": "server.message.m2dfd8b029cda",
+    "source": "A readable converted M4B was produced but will not be imported because m4b-tool reported a failure.",
+    "parameters": [],
+    "patterns": [
+      "A readable converted M4B was produced but will not be imported because m4b-tool reported a failure."
+    ]
+  },
+  {
     "id": "server.message.m2dffb9a40e48",
     "source": "Path '{value0}' is an ancestor of an existing author",
     "parameters": [
@@ -1026,6 +1117,14 @@
     ]
   },
   {
+    "id": "server.message.m300cfa158919",
+    "source": "Couldn't find requested release in cache, try searching again",
+    "parameters": [],
+    "patterns": [
+      "Couldn't find requested release in cache, try searching again"
+    ]
+  },
+  {
     "id": "server.message.m301553d117f5",
     "source": "Folder '{value0}' is not readable by user '{value1}'. Permission denied - please ensure the Chaptarr process has read access to this directory and its subdirectories.",
     "parameters": [
@@ -1069,6 +1168,14 @@
     ]
   },
   {
+    "id": "server.message.m3019d00d9226",
+    "source": "FFmpeg is not available (required by m4b-tool)",
+    "parameters": [],
+    "patterns": [
+      "FFmpeg is not available (required by m4b-tool)"
+    ]
+  },
+  {
     "id": "server.message.m30241a539efa",
     "source": "Could not retrieve Hardcover library data",
     "parameters": [],
@@ -1106,6 +1213,20 @@
     "parameters": [],
     "patterns": [
       "Cutoff must be an allowed quality or group"
+    ]
+  },
+  {
+    "id": "server.message.m3347b5962c6a",
+    "source": "Tool output: {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{firstLine}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Tool output: {value0}"
     ]
   },
   {
@@ -1235,6 +1356,14 @@
     "parameters": [],
     "patterns": [
       "MAM account status is unavailable or stale. Cannot verify unsatisfied-slot protection."
+    ]
+  },
+  {
+    "id": "server.message.m3a79390fb21e",
+    "source": "NzbGet setting KeepHistory must not exceed 25000",
+    "parameters": [],
+    "patterns": [
+      "NzbGet setting KeepHistory must not exceed 25000"
     ]
   },
   {
@@ -1475,14 +1604,6 @@
     ]
   },
   {
-    "id": "server.message.m453c42aa8de5",
-    "source": "NzbGet setting KeepHistory should be less than 25000",
-    "parameters": [],
-    "patterns": [
-      "NzbGet setting KeepHistory should be less than 25000"
-    ]
-  },
-  {
     "id": "server.message.m45461e168bdc",
     "source": "Selected root folder is Ebook-only; choose an Audiobook or Mixed root folder",
     "parameters": [],
@@ -1504,6 +1625,20 @@
     "parameters": [],
     "patterns": [
       "must be valid Host without http://"
+    ]
+  },
+  {
+    "id": "server.message.m45d5b4f145d0",
+    "source": "Converted file retained at: {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{attemptOutputPath}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Converted file retained at: {value0}"
     ]
   },
   {
@@ -1563,6 +1698,13 @@
     ]
   },
   {
+    "id": "server.message.m47f0922640fa",
+    "source": "Testing will execute the script with the EventType set to Test, ensure your script handles this correctly",
+    "parameters": [],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
     "id": "server.message.m48c9cd18eeef",
     "source": "pattern is required",
     "parameters": [],
@@ -1595,6 +1737,14 @@
     ]
   },
   {
+    "id": "server.message.m4b07093e17b8",
+    "source": "A bookId, authorId, or seriesId is required for interactive search",
+    "parameters": [],
+    "patterns": [
+      "A bookId, authorId, or seriesId is required for interactive search"
+    ]
+  },
+  {
     "id": "server.message.m4b31cd0afb3b",
     "source": "Folder '{value0}' does not exist. Please create the directory first or check the path.",
     "parameters": [
@@ -1606,6 +1756,14 @@
     ],
     "patterns": [
       "Folder '{value0}' does not exist. Please create the directory first or check the path."
+    ]
+  },
+  {
+    "id": "server.message.m4b666af14ddc",
+    "source": "Conversion environment is missing a required tool or PHP extension. Rebuild/update the container image, then retry.",
+    "parameters": [],
+    "patterns": [
+      "Conversion environment is missing a required tool or PHP extension. Rebuild/update the container image, then retry."
     ]
   },
   {
@@ -1641,6 +1799,25 @@
     ]
   },
   {
+    "id": "server.message.m4cd205e7d07a",
+    "source": "rTorrent will not pause torrents when they meet the seed criteria. Chaptarr can remove torrents after seeding is done only when Remove Completed is enabled and the torrent is not protected by Preserve torrents in client or Post-Import Category. After importing it will also set \"{value0}\" as an rTorrent view, which can be used in rTorrent scripts to customize behavior.",
+    "parameters": [
+      {
+        "name": "value0"
+      }
+    ],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
+    "id": "server.message.m4d3e6de749b4",
+    "source": "Conversion could not write or rename files in the conversion folder. Check destination folder ownership and permissions.",
+    "parameters": [],
+    "patterns": [
+      "Conversion could not write or rename files in the conversion folder. Check destination folder ownership and permissions."
+    ]
+  },
+  {
     "id": "server.message.m4d485e3d4216",
     "source": "Request body can't be empty",
     "parameters": [],
@@ -1670,6 +1847,14 @@
     "parameters": [],
     "patterns": [
       "AudioBookShelf did not return a valid access token."
+    ]
+  },
+  {
+    "id": "server.message.m4dcc9a05bd3f",
+    "source": "Recovering expired M4B conversion lease",
+    "parameters": [],
+    "patterns": [
+      "Recovering expired M4B conversion lease"
     ]
   },
   {
@@ -1727,6 +1912,14 @@
     "parameters": [],
     "patterns": [
       "AudioBookShelf did not return any cookies for the OIDC session."
+    ]
+  },
+  {
+    "id": "server.message.m5034981304b3",
+    "source": "Unable to parse books in the release",
+    "parameters": [],
+    "patterns": [
+      "Unable to parse books in the release"
     ]
   },
   {
@@ -1840,6 +2033,13 @@
     ]
   },
   {
+    "id": "server.message.m566bae95cfdb",
+    "source": "This indexer supports ebook searches only. Configured URLs remain in the order you enter them.",
+    "parameters": [],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
     "id": "server.message.m57a345f27938",
     "source": "Incorrect ApiKey",
     "parameters": [],
@@ -1861,6 +2061,14 @@
     "parameters": [],
     "patterns": [
       "Quality Profile does not exist"
+    ]
+  },
+  {
+    "id": "server.message.m58713251f1c2",
+    "source": "FFprobe is not available (required to validate converted audiobooks)",
+    "parameters": [],
+    "patterns": [
+      "FFprobe is not available (required to validate converted audiobooks)"
     ]
   },
   {
@@ -1915,6 +2123,28 @@
     "parameters": [],
     "patterns": [
       "Mapped Network Drive and Windows Service"
+    ]
+  },
+  {
+    "id": "server.message.m5ce57d9e0a1b",
+    "source": "M4B conversion failed",
+    "parameters": [],
+    "patterns": [
+      "M4B conversion failed"
+    ]
+  },
+  {
+    "id": "server.message.m5e59875772be",
+    "source": "Converting to M4B - {value0}%",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{progress}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Converting to M4B - {value0}%"
     ]
   },
   {
@@ -2036,6 +2266,23 @@
     ]
   },
   {
+    "id": "server.message.m621dd0308bef",
+    "source": "User Class: {value0} (Standard member); unsatisfied torrents: {value1}/{value2}",
+    "parameters": [
+      {
+        "name": "value0"
+      },
+      {
+        "name": "value1"
+      },
+      {
+        "name": "value2"
+      }
+    ],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
     "id": "server.message.m623b1093a9c9",
     "source": "Unable to connect to Torrent Download Station",
     "parameters": [],
@@ -2068,6 +2315,14 @@
     ]
   },
   {
+    "id": "server.message.m63d977155953",
+    "source": "Converted M4B ready to import",
+    "parameters": [],
+    "patterns": [
+      "Converted M4B ready to import"
+    ]
+  },
+  {
     "id": "server.message.m6472be787d0d",
     "source": "This torrent is protected by the permanent seeding/download preservation policy. Choose 'Ignore Download' (API: removeFromClient=false) to remove it from Chaptarr without deleting it from the client. To delete the torrent and its files, remove it directly in your download client.",
     "parameters": [],
@@ -2089,6 +2344,14 @@
     "parameters": [],
     "patterns": [
       "Use either Configuration Key or Stateless URLs"
+    ]
+  },
+  {
+    "id": "server.message.m652e95e12cc9",
+    "source": "Using retained M4B",
+    "parameters": [],
+    "patterns": [
+      "Using retained M4B"
     ]
   },
   {
@@ -2210,6 +2473,14 @@
     ]
   },
   {
+    "id": "server.message.m6c22b50bc2a8",
+    "source": "Internal Direct download client is not available.",
+    "parameters": [],
+    "patterns": [
+      "Internal Direct download client is not available."
+    ]
+  },
+  {
     "id": "server.message.m6c603ef38ec7",
     "source": "The author isn't available yet on the metadata server.",
     "parameters": [],
@@ -2326,6 +2597,13 @@
     ]
   },
   {
+    "id": "server.message.m73172a5045d6",
+    "source": "Books from your Hardcover lists and reading statuses will be matched by title and author name against your configured metadata source.",
+    "parameters": [],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
     "id": "server.message.m736b5fe15618",
     "source": "This logical field proved the pinned edition title.",
     "parameters": [],
@@ -2420,10 +2698,34 @@
   },
   {
     "id": "server.message.m783307436ce0",
-    "source": "Disable 'Check before download' option in Sabnbzd",
+    "source": "Disable the 'Check before download' option in SABnzbd.",
     "parameters": [],
     "patterns": [
-      "Disable 'Check before download' option in Sabnbzd"
+      "Disable the 'Check before download' option in SABnzbd."
+    ]
+  },
+  {
+    "id": "server.message.m7842e5a82f2c",
+    "source": "No enabled {value0} download client is configured. {value1} Add and enable a {value2}-capable download client, then retry.",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{requestedProtocolLabel}",
+        "kind": "dynamic-data"
+      },
+      {
+        "name": "value1",
+        "sourceToken": "{alternateClients}",
+        "kind": "dynamic-data"
+      },
+      {
+        "name": "value2",
+        "sourceToken": "{requestedProtocolLabel}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "No enabled {value0} download client is configured. {value1} Add and enable a {value2}-capable download client, then retry."
     ]
   },
   {
@@ -2505,6 +2807,20 @@
     "parameters": [],
     "patterns": [
       "Ebook root folder is required when monitoring ebooks"
+    ]
+  },
+  {
+    "id": "server.message.m7a9a7acb511f",
+    "source": "Input file does not exist: {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{file}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Input file does not exist: {value0}"
     ]
   },
   {
@@ -2649,6 +2965,14 @@
     "parameters": [],
     "patterns": [
       "Ebook-only folders cannot have audiobook settings"
+    ]
+  },
+  {
+    "id": "server.message.m7cd22199d71c",
+    "source": "Converted M4B file is too small to be a valid audiobook",
+    "parameters": [],
+    "patterns": [
+      "Converted M4B file is too small to be a valid audiobook"
     ]
   },
   {
@@ -2913,10 +3237,10 @@
   },
   {
     "id": "server.message.m843e64bf5198",
-    "source": "Unable to send test message though Mailgun.",
+    "source": "Unable to send a test message through Mailgun.",
     "parameters": [],
     "patterns": [
-      "Unable to send test message though Mailgun."
+      "Unable to send a test message through Mailgun."
     ]
   },
   {
@@ -2973,6 +3297,20 @@
     "parameters": [],
     "patterns": [
       "Could not connect"
+    ]
+  },
+  {
+    "id": "server.message.m869f8789d861",
+    "source": "M4B conversion failed: {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{ex.Message}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "M4B conversion failed: {value0}"
     ]
   },
   {
@@ -3070,6 +3408,20 @@
     ]
   },
   {
+    "id": "server.message.m8af0d2379b97",
+    "source": "m4b-tool failed with exit code {value0}.",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{toolResult.ExitCode}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "m4b-tool failed with exit code {value0}."
+    ]
+  },
+  {
     "id": "server.message.m8b41f6c44b16",
     "source": "Invalid folder type: {value0}. Valid values are 0 (Mixed), 1 (Audiobook), 2 (Ebook).",
     "parameters": [
@@ -3135,6 +3487,20 @@
     ],
     "patterns": [
       "Unable to send test message: {value0}"
+    ]
+  },
+  {
+    "id": "server.message.m8d6021d80642",
+    "source": "Indexer specified download client does not exist for {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{indexer.Name}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Indexer specified download client does not exist for {value0}"
     ]
   },
   {
@@ -3229,6 +3595,30 @@
     "parameters": [],
     "patterns": [
       "Authentication failed"
+    ]
+  },
+  {
+    "id": "server.message.m94463ca0c56f",
+    "source": "Converted M4B duration looks wrong. Source duration is about {value0} but output is {value1}; allowed difference is {value2}.",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{FormatDuration(expectedDuration)}",
+        "kind": "dynamic-data"
+      },
+      {
+        "name": "value1",
+        "sourceToken": "{FormatDuration(outputDuration)}",
+        "kind": "dynamic-data"
+      },
+      {
+        "name": "value2",
+        "sourceToken": "{FormatDuration(allowedDifference)}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Converted M4B duration looks wrong. Source duration is about {value0} but output is {value1}; allowed difference is {value2}."
     ]
   },
   {
@@ -3426,6 +3816,23 @@
     ]
   },
   {
+    "id": "server.message.m9f7f2489aa05",
+    "source": "✓ VIP Member - Class: {value0}; unsatisfied torrents: {value1}/{value2}",
+    "parameters": [
+      {
+        "name": "value0"
+      },
+      {
+        "name": "value1"
+      },
+      {
+        "name": "value2"
+      }
+    ],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
     "id": "server.message.m9fa2dc8d8674",
     "source": "Download Client does not exist",
     "parameters": [],
@@ -3539,6 +3946,14 @@
     "parameters": [],
     "patterns": [
       "Unable to connect to qBittorrent"
+    ]
+  },
+  {
+    "id": "server.message.ma69b7ec09fb3",
+    "source": "m4b-tool failed while writing chapters or tags. The converted audio is not being imported automatically.",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool failed while writing chapters or tags. The converted audio is not being imported automatically."
     ]
   },
   {
@@ -3658,6 +4073,25 @@
     ]
   },
   {
+    "id": "server.message.mae71772271ad",
+    "source": "Found {value0} enabled {value1} client(s).",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{result.Count}",
+        "kind": "dynamic-data"
+      },
+      {
+        "name": "value1",
+        "sourceToken": "{result.ProtocolLabel}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Found {value0} enabled {value1} client(s)."
+    ]
+  },
+  {
     "id": "server.message.maef426d77944",
     "source": "must be a valid URL that starts with http:// or https://",
     "parameters": [],
@@ -3707,6 +4141,14 @@
     ],
     "patterns": [
       "This Calibre content server already backs the root folder '{value0}'. Chaptarr manages that library directly, so pushing to it again would create duplicates."
+    ]
+  },
+  {
+    "id": "server.message.mb2062a8ec245",
+    "source": "m4b-tool finished but did not create the converted M4B file",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool finished but did not create the converted M4B file"
     ]
   },
   {
@@ -3853,6 +4295,14 @@
     ]
   },
   {
+    "id": "server.message.mb8615e9f5606",
+    "source": "An authorId is required when searching for a series pack",
+    "parameters": [],
+    "patterns": [
+      "An authorId is required when searching for a series pack"
+    ]
+  },
+  {
     "id": "server.message.mb8d345c1fd7e",
     "source": "Root folder path '{value0}' contains author folder '{value1}'",
     "parameters": [
@@ -3973,6 +4423,20 @@
     "parameters": [],
     "patterns": [
       "Username is required when API key is not configured"
+    ]
+  },
+  {
+    "id": "server.message.mbd4067e91b59",
+    "source": "M4B conversion job failed: {value0}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{ex.Message}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "M4B conversion job failed: {value0}"
     ]
   },
   {
@@ -4145,6 +4609,27 @@
     ],
     "patterns": [
       "Import list feed is not supported: {value0}"
+    ]
+  },
+  {
+    "id": "server.message.mc6073db4b613",
+    "source": "Chaptarr will handle automatic removal of torrents based on the current seed criteria in Settings -> Indexers",
+    "parameters": [],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
+    "id": "server.message.mc63ea6c0320c",
+    "source": "Converted M4B contains a {value0} stream that is not attached cover art",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{codecType}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Converted M4B contains a {value0} stream that is not attached cover art"
     ]
   },
   {
@@ -4363,6 +4848,14 @@
     ]
   },
   {
+    "id": "server.message.mccfb6e3b050a",
+    "source": "m4b-tool failed while embedding cover art. Retry without embedded cover art may succeed.",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool failed while embedding cover art. Retry without embedded cover art may succeed."
+    ]
+  },
+  {
     "id": "server.message.mcd62354c7d7b",
     "source": "Disable TV Sorting",
     "parameters": [],
@@ -4495,6 +4988,33 @@
     ]
   },
   {
+    "id": "server.message.md4447ebc7318",
+    "source": "Unable to find the requested book",
+    "parameters": [],
+    "patterns": [
+      "Unable to find the requested book"
+    ]
+  },
+  {
+    "id": "server.message.md4a741052e8b",
+    "source": "User Class: {value0} (Standard member)",
+    "parameters": [
+      {
+        "name": "value0"
+      }
+    ],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
+    "id": "server.message.md4bb98fe9185",
+    "source": "Conversion was cancelled.",
+    "parameters": [],
+    "patterns": [
+      "Conversion was cancelled."
+    ]
+  },
+  {
     "id": "server.message.md4d56753c34d",
     "source": "Failed to clear API token",
     "parameters": [],
@@ -4538,11 +5058,44 @@
     ]
   },
   {
+    "id": "server.message.md530e10017b2",
+    "source": "Converted M4B file was not created",
+    "parameters": [],
+    "patterns": [
+      "Converted M4B file was not created"
+    ]
+  },
+  {
     "id": "server.message.md657eda9fd8b",
     "source": "Edition format matches the discovered file type.",
     "parameters": [],
     "patterns": [
       "Edition format matches the discovered file type."
+    ]
+  },
+  {
+    "id": "server.message.md6a7ade8523b",
+    "source": "✓ VIP Member - Class: {value0}",
+    "parameters": [
+      {
+        "name": "value0"
+      }
+    ],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
+    "id": "server.message.md764ed5e74b4",
+    "source": "{value0} conversion was cancelled.",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{TargetQualityName}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "{value0} conversion was cancelled."
     ]
   },
   {
@@ -4565,6 +5118,14 @@
     "parameters": [],
     "patterns": [
       "Authentication failure"
+    ]
+  },
+  {
+    "id": "server.message.md8e066a1133c",
+    "source": "m4b-tool did not return a process result",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool did not return a process result"
     ]
   },
   {
@@ -4658,6 +5219,13 @@
     ]
   },
   {
+    "id": "server.message.mddaec7220c51",
+    "source": "Connection succeeded, but MAM account status is unavailable or stale. Cached counts are not shown.",
+    "parameters": [],
+    "patterns": [],
+    "explicitOnly": true
+  },
+  {
     "id": "server.message.mdefc6fdd23a6",
     "source": "Profile type must be Audiobook or Ebook",
     "parameters": [],
@@ -4698,6 +5266,14 @@
     "parameters": [],
     "patterns": [
       "Individual qualities should not be named"
+    ]
+  },
+  {
+    "id": "server.message.me26f2fd69d70",
+    "source": "Finalizing M4B",
+    "parameters": [],
+    "patterns": [
+      "Finalizing M4B"
     ]
   },
   {
@@ -4760,6 +5336,20 @@
     "parameters": [],
     "patterns": [
       "Specific-book monitoring requires book provider IDs; use the book add endpoint instead."
+    ]
+  },
+  {
+    "id": "server.message.me544a91b0e6a",
+    "source": "All download clients for {value0} are not available",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{downloadProtocol}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "All download clients for {value0} are not available"
     ]
   },
   {
@@ -4886,6 +5476,14 @@
     ]
   },
   {
+    "id": "server.message.meb232bfbe55a",
+    "source": "Recovered converted M4B; waiting to import",
+    "parameters": [],
+    "patterns": [
+      "Recovered converted M4B; waiting to import"
+    ]
+  },
+  {
     "id": "server.message.meb46390efea0",
     "source": "Invalid authentication token",
     "parameters": [],
@@ -4931,6 +5529,14 @@
     "parameters": [],
     "patterns": [
       "Topic ID must be greater than 1 or empty"
+    ]
+  },
+  {
+    "id": "server.message.mec4266f3d11f",
+    "source": "m4b-tool is not available",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool is not available"
     ]
   },
   {
@@ -5018,11 +5624,25 @@
     ]
   },
   {
+    "id": "server.message.mf00a39f5e266",
+    "source": "m4b-tool timed out after {value0}. The conversion was stopped.",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{TimeSpan.FromMilliseconds(toolResult.TimeoutMs):g}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "m4b-tool timed out after {value0}. The conversion was stopped."
+    ]
+  },
+  {
     "id": "server.message.mf00d6bc38ae8",
-    "source": "Can not contain '', '//', or start/end with '/'",
+    "source": "Can not contain '\\', '//', or start/end with '/'",
     "parameters": [],
     "patterns": [
-      "Can not contain '', '//', or start/end with '/'"
+      "Can not contain '\\', '//', or start/end with '/'"
     ]
   },
   {
@@ -5042,6 +5662,14 @@
     ]
   },
   {
+    "id": "server.message.mf1f9651ad657",
+    "source": "m4b-tool reported a failure after producing a readable M4B. The file was retained for inspection.",
+    "parameters": [],
+    "patterns": [
+      "m4b-tool reported a failure after producing a readable M4B. The file was retained for inspection."
+    ]
+  },
+  {
     "id": "server.message.mf21cf7728117",
     "source": "No response received from metadata server",
     "parameters": [],
@@ -5055,6 +5683,14 @@
     "parameters": [],
     "patterns": [
       "Indexer does not support the current query. Check if the categories and or searching for seasons/episodes are supported. Check the log for more details."
+    ]
+  },
+  {
+    "id": "server.message.mf239545bb808",
+    "source": "Converted M4B does not contain a readable audio stream",
+    "parameters": [],
+    "patterns": [
+      "Converted M4B does not contain a readable audio stream"
     ]
   },
   {
@@ -5141,6 +5777,14 @@
     ]
   },
   {
+    "id": "server.message.mf54e840dff84",
+    "source": "This torrent file is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.",
+    "parameters": [],
+    "patterns": [
+      "This torrent file is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads."
+    ]
+  },
+  {
     "id": "server.message.mf558b02f67e3",
     "source": "ast is required",
     "parameters": [],
@@ -5160,6 +5804,14 @@
     ],
     "patterns": [
       "Unable to retrieve libraries from AudioBookShelf: {value0}"
+    ]
+  },
+  {
+    "id": "server.message.mf5b2847afd2c",
+    "source": "Unable to find matching author and books",
+    "parameters": [],
+    "patterns": [
+      "Unable to find matching author and books"
     ]
   },
   {
@@ -5320,6 +5972,25 @@
     "parameters": [],
     "patterns": [
       "Invalid config contract"
+    ]
+  },
+  {
+    "id": "server.message.mfc07f61435f3",
+    "source": "Converting to M4B - {value0} of {value1}",
+    "parameters": [
+      {
+        "name": "value0",
+        "sourceToken": "{currentStep}",
+        "kind": "dynamic-data"
+      },
+      {
+        "name": "value1",
+        "sourceToken": "{totalSteps}",
+        "kind": "dynamic-data"
+      }
+    ],
+    "patterns": [
+      "Converting to M4B - {value0} of {value1}"
     ]
   },
   {

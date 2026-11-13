@@ -1,0 +1,44 @@
+{
+  "blindDispositionCounts": {
+    "accept": 525,
+    "correct": 27,
+    "hold": 48
+  },
+  "candidateFreeIndependentReviewer": {
+    "cells": 300,
+    "confidenceCounts": {
+      "high": 264,
+      "moderate": 36
+    },
+    "coveredOrdinals": "0–24",
+    "dispositionCounts": {
+      "accept-current": 300
+    }
+  },
+  "cellsReviewed": 600,
+  "crossDispositionCounts": {
+    "accept-current": 514,
+    "hold": 48,
+    "revise-current": 38
+  },
+  "exactHead": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "exactSourceCheckoutVerifiedSeparately": true,
+  "exactTree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "inputPacketChecksumsVerified": true,
+  "nativeSpeakerApproval": false,
+  "notes": [
+    "The four author-monitor keys lack exact frontend caller context. Their 48 locale cells are held with no wording proposal, including 11 cells with primary proposals.",
+    "Spanish AddCustomFilter remains at its current valid wording: Añadir versus Agregar is a style choice, not an evidenced defect.",
+    "Selected revisions preserve source placeholders and listed protected literals. Confidence is the cross-reviewer's assessment, not native-speaker approval."
+  ],
+  "objective": "Independent third-party cross-audit of ChaptarrNG PR #190 W0–W49 localization cells",
+  "primaryBlindProposalOverlap": 9,
+  "primaryDispositionCounts": {
+    "accept-current": 568,
+    "revise-current": 32
+  },
+  "primaryProposalsWithheldForNoCallerContext": 11,
+  "repoOrPrModified": false,
+  "selectedProposalCount": 38,
+  "textFreeHoldCount": 48
+}

@@ -1,0 +1,90 @@
+{
+  "PRHeadAndBaseUnchangedAtEntry": true,
+  "PRHeadAndBaseUnchangedAtExit": true,
+  "apiBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "artifact": "ChaptarrNG PR #190 W450-W474 cross-review part",
+  "blindDecisionCounts": {
+    "accept-current": 249,
+    "correction": 15,
+    "hold-hash-only": 24,
+    "refinement": 12
+  },
+  "blindExactVerifierResult": "PASS",
+  "blindProposalCellsInRange": 27,
+  "blindRowsReattested": 300,
+  "blindVerifier": "PASS (exact worktree)",
+  "browserOrDesktopUsed": false,
+  "callerBackedCells": 276,
+  "callerlessHoldTextIncluded": false,
+  "candidateFreeInputVerifierResult": "PASS",
+  "candidateFreeRowsReattested": 300,
+  "candidateFreeVerifier": "PASS (portable and exact worktree)",
+  "cellCount": 300,
+  "confidenceCounts": {
+    "high": 14,
+    "moderate": 262
+  },
+  "crossDecisionCounts": {
+    "accept-blind-proposal": 7,
+    "accept-consensus-proposal": 14,
+    "accept-current": 226,
+    "accept-primary-proposal": 12,
+    "cross-adjustment": 17,
+    "hold-hash-only": 24
+  },
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "hashOnlyHoldCells": 24,
+  "hashOnlyHoldSourceOrdinals": [
+    469,
+    474
+  ],
+  "liveMainAdvancedDuringCrossReview": true,
+  "liveMainAtCandidateFreeSeal": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "liveMainAtEntry": "73515010a360d64248c54bc51ebd66c6d50344a8",
+  "liveMainAtExit": "2ade9a5280a64ce7de8f1016961f88e93bd6cb8e",
+  "liveMainTreeAtExit": "bf48eb2492ca4ebde48fa39f974ebe5dd7abf6bd",
+  "localeCount": 12,
+  "manualOctalNumericAssessments": [
+    {
+      "locale": "ja",
+      "sourceOrdinal": 471
+    },
+    {
+      "locale": "ko",
+      "sourceOrdinal": 471
+    }
+  ],
+  "nativeSpeakerSignoff": false,
+  "noRepositoryOrPullRequestEdits": true,
+  "portableCrossVerifierResult": "PASS",
+  "primaryBlindDecisionAgreement": 283,
+  "primaryBlindDecisionDisagreement": 17,
+  "primaryCandidateFreeBoundVerifierResult": "PASS",
+  "primaryDecisionCounts": {
+    "accept-current": 245,
+    "correction": 16,
+    "hold-hash-only": 24,
+    "refinement": 15
+  },
+  "primaryProposalCellsInRange": 31,
+  "primaryRowsReattested": 300,
+  "primaryVerifier": "PASS (candidate-free bound)",
+  "proposalOutputsRead": [
+    "candidate-free/input",
+    "primary-review",
+    "blind-review"
+  ],
+  "recommendedTokenCheckFailures": {
+    "numeric": 2
+  },
+  "result": "PASS",
+  "reviewerConfidence": "Moderate overall; high for clear grammar/category corrections, moderate for terminology refinements.",
+  "sourceIdCount": 25,
+  "sourceOrdinalRange": [
+    450,
+    474
+  ],
+  "staleOrOtherCrossOutputsRead": false,
+  "testsBuildsScansOrCI": false
+}

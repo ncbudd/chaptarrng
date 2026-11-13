@@ -1,0 +1,983 @@
+{
+  "status": "PASS",
+  "repository": "snapetech-org/chaptarrng",
+  "pr": 190,
+  "baseHead": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "preMergeHead": "f6e9cb4126da5c0a4280534702d2357f8a6aa007",
+  "mainHead": "2df031b2e138e67d63182ff3d3fad0cde2a1cccf",
+  "sourceRecords": 618,
+  "sourceUpdatesFromEnglishCatalog": [
+    {
+      "id": "server.message.m783307436ce0",
+      "before": "Disable 'Check before download' option in Sabnbzd",
+      "after": "Disable the 'Check before download' option in SABnzbd."
+    },
+    {
+      "id": "server.message.m843e64bf5198",
+      "before": "Unable to send test message though Mailgun.",
+      "after": "Unable to send a test message through Mailgun."
+    }
+  ],
+  "updatedRecordsWithCallsiteChanges": 130,
+  "sourceBindingDelta": 65,
+  "newMainCallsiteRecordIds": [
+    "UsernameRequired",
+    "server.message.m006b305414e1",
+    "server.message.m05b73e4fe269",
+    "server.message.m06254ce94096",
+    "server.message.m17a00dbb4f2a",
+    "server.message.m2ebae1c36a6c",
+    "server.message.m36ff1c2553cc",
+    "server.message.m45d06dda48d1",
+    "server.message.m5269a817943e",
+    "server.message.m52a644e8b0f9",
+    "server.message.m55acf0a44748",
+    "server.message.m6026247dc0f2",
+    "server.message.m61760b3f62ff",
+    "server.message.m63cf73c14226",
+    "server.message.m64f4a104ceb4",
+    "server.message.m7132fb6d87f4",
+    "server.message.m750a8cd4307a",
+    "server.message.m794b67a4d3b9",
+    "server.message.m79dd817b4295",
+    "server.message.m7aeae1412484",
+    "server.message.m7d3d73f7deeb",
+    "server.message.m7de0a09b7503",
+    "server.message.m80830c01b9f4",
+    "server.message.m81fa19be5293",
+    "server.message.m8500a62118c5",
+    "server.message.m8d1c33f25092",
+    "server.message.m96982c5f8302",
+    "server.message.ma38b3893e50f",
+    "server.message.ma4556afba7bb",
+    "server.message.maef426d77944",
+    "server.message.mbd726c6fbe70",
+    "server.message.mc3b239e3eb56",
+    "server.message.mc78af077e86e",
+    "server.message.md0cc5efbe5e0",
+    "server.message.me3d343200bdd",
+    "server.message.me929c2679b71",
+    "server.message.mea00d26cbf7a",
+    "server.message.mec341ea80e66",
+    "server.message.meead9b01a49a",
+    "server.message.mf00d6bc38ae8",
+    "server.message.mf600936551d1"
+  ],
+  "uniqueCallsites": 877,
+  "excludedCallsites": 1,
+  "catalogTargetsChanged": 0,
+  "runtimeRegistryRefreshed": true,
+  "unresolved": [],
+  "callsiteChanges": [
+    {
+      "id": "UsernameRequired",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m006b305414e1",
+      "beforeBindings": 6,
+      "afterBindings": 12,
+      "addedBindings": 6,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m05b73e4fe269",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m06254ce94096",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m064256735f51",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m0b40b0984817",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m0b8f5729c27f",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m0bd4ca44f88d",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m0e1553e44547",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m12739b954cdf",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m17a00dbb4f2a",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m1a28032cdce5",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.m1b9eb5de4d01",
+      "beforeBindings": 2,
+      "afterBindings": 1,
+      "addedBindings": 0,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m1efcd1818dd4",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m27001fadea37",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m27c2ccd962c2",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m2bf18c3eddf8",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m2e3799b32682",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m2ebae1c36a6c",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m303e725e2fc6",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m34173ff9d338",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m34a9bd831bbe",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m35c921a37b2e",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m36ff1c2553cc",
+      "beforeBindings": 3,
+      "afterBindings": 6,
+      "addedBindings": 3,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m3c9d3d8a7bc2",
+      "beforeBindings": 3,
+      "afterBindings": 3,
+      "addedBindings": 3,
+      "removedBindings": 3
+    },
+    {
+      "id": "server.message.m42d5ddf06dd0",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m451006253bc3",
+      "beforeBindings": 7,
+      "afterBindings": 7,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m453c42aa8de5",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m45d06dda48d1",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m4abee5a92d01",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m4ba2d178c305",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m4bbe30648055",
+      "beforeBindings": 4,
+      "afterBindings": 4,
+      "addedBindings": 3,
+      "removedBindings": 3
+    },
+    {
+      "id": "server.message.m4cd205e7d07a",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m5034981304b3",
+      "beforeBindings": 3,
+      "afterBindings": 3,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m5269a817943e",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m52a644e8b0f9",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m532212ccb76d",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m537621bd08c4",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m54fc8a254d62",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m55acf0a44748",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m580ff695754e",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m596c52f1eb65",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m5b910b94aba9",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m6026247dc0f2",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m61760b3f62ff",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m623b1093a9c9",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m629e576013e4",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.m62fb6085c79e",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m63cf73c14226",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m648eddf3f253",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m64f4a104ceb4",
+      "beforeBindings": 3,
+      "afterBindings": 6,
+      "addedBindings": 3,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m661c5d4d3f03",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.m685f5e4db612",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m6b5f4e5a738f",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m6c1fa02a292a",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m6f6371d18348",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m712918a2c28f",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.m7132fb6d87f4",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m72a9cf77e4de",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m750a8cd4307a",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m755b576eb46b",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m78052ec2df88",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 0,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m783307436ce0",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m794b67a4d3b9",
+      "beforeBindings": 3,
+      "afterBindings": 6,
+      "addedBindings": 3,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m79dd817b4295",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m7ab62ae2fee8",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m7aeae1412484",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m7b950bff047b",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.m7d3d73f7deeb",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m7de0a09b7503",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m80830c01b9f4",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m81fa19be5293",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m8387ff993c50",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m843e64bf5198",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m8500a62118c5",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m850a1729a9c0",
+      "beforeBindings": 4,
+      "afterBindings": 4,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.m85babf48e233",
+      "beforeBindings": 3,
+      "afterBindings": 3,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m8754dce5138b",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m89e7654e6a1d",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m8a7981a2ced3",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m8d1c33f25092",
+      "beforeBindings": 5,
+      "afterBindings": 10,
+      "addedBindings": 5,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m90ee48cf606f",
+      "beforeBindings": 5,
+      "afterBindings": 5,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m9357e7d181e1",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m96982c5f8302",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.m96cac189cd5c",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.m98365a376c5d",
+      "beforeBindings": 3,
+      "afterBindings": 3,
+      "addedBindings": 3,
+      "removedBindings": 3
+    },
+    {
+      "id": "server.message.m9d7030ad5fa8",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.ma38b3893e50f",
+      "beforeBindings": 2,
+      "afterBindings": 4,
+      "addedBindings": 2,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.ma4556afba7bb",
+      "beforeBindings": 4,
+      "afterBindings": 8,
+      "addedBindings": 4,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.ma4a7539d1468",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.ma5add25e2d2b",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.ma78299fc1030",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.maef426d77944",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mb4816d4da7e5",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mb8615e9f5606",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mbb0768d3aacf",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mbba4350c84e5",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mbd726c6fbe70",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mbdf9bc8e9c84",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mc21c7d5d2843",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mc3b239e3eb56",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mc78af077e86e",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mca68744b8296",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mcd62354c7d7b",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.md0cc5efbe5e0",
+      "beforeBindings": 2,
+      "afterBindings": 4,
+      "addedBindings": 2,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.md83ae8fb37f8",
+      "beforeBindings": 5,
+      "afterBindings": 5,
+      "addedBindings": 5,
+      "removedBindings": 5
+    },
+    {
+      "id": "server.message.mda7d07b4febc",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mdd0fed37bc8b",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mdefc6fdd23a6",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 0,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.me3d343200bdd",
+      "beforeBindings": 3,
+      "afterBindings": 6,
+      "addedBindings": 3,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.me40966162b11",
+      "beforeBindings": 7,
+      "afterBindings": 7,
+      "addedBindings": 6,
+      "removedBindings": 6
+    },
+    {
+      "id": "server.message.me58ba0bc573d",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.me73b26812f91",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.me929c2679b71",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mea00d26cbf7a",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mea3737f42d3c",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.mea37f4df9a52",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mebd5e56ee25f",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mec341ea80e66",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mecf5ccdf0093",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mecf985c120fb",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.meead9b01a49a",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mef88db258a46",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mf00d6bc38ae8",
+      "beforeBindings": 4,
+      "afterBindings": 8,
+      "addedBindings": 4,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mf12e387b46e1",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mf4433d3129ba",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.mf48700de77d5",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    },
+    {
+      "id": "server.message.mf600936551d1",
+      "beforeBindings": 1,
+      "afterBindings": 2,
+      "addedBindings": 1,
+      "removedBindings": 0
+    },
+    {
+      "id": "server.message.mf74d744451ed",
+      "beforeBindings": 2,
+      "afterBindings": 2,
+      "addedBindings": 2,
+      "removedBindings": 2
+    },
+    {
+      "id": "server.message.mf81018a04cff",
+      "beforeBindings": 1,
+      "afterBindings": 1,
+      "addedBindings": 1,
+      "removedBindings": 1
+    }
+  ]
+}

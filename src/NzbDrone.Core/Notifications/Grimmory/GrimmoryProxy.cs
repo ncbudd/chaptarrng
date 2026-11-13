@@ -10,6 +10,7 @@ using NzbDrone.Common.Cache;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.Grimmory
 {
@@ -197,22 +198,22 @@ namespace NzbDrone.Core.Notifications.Grimmory
 
                 if (settings.EbookLibraryId > 0 && !libraries.Exists(l => l.Id == settings.EbookLibraryId))
                 {
-                    return new ValidationFailure(nameof(GrimmorySettings.EbookLibraryId), "The selected ebook library was not found in Grimmory");
+                    return NzbDroneValidationFailure.ForMessage(nameof(GrimmorySettings.EbookLibraryId), "The selected ebook library was not found in Grimmory", "server.message.m7c5d7fa17f19");
                 }
 
                 if (settings.AudiobookLibraryId > 0 && !libraries.Exists(l => l.Id == settings.AudiobookLibraryId))
                 {
-                    return new ValidationFailure(nameof(GrimmorySettings.AudiobookLibraryId), "The selected audiobook library was not found in Grimmory");
+                    return NzbDroneValidationFailure.ForMessage(nameof(GrimmorySettings.AudiobookLibraryId), "The selected audiobook library was not found in Grimmory", "server.message.maac9e4a96941");
                 }
             }
             catch (GrimmoryAuthenticationException)
             {
-                return new ValidationFailure(nameof(GrimmorySettings.Username), "Authentication failed, check the username and password");
+                return NzbDroneValidationFailure.ForMessage(nameof(GrimmorySettings.Username), "Authentication failed, check the username and password", "server.message.m1ee41f485c1e");
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to connect to Grimmory");
-                return new ValidationFailure(nameof(GrimmorySettings.Url), "Unable to connect: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(nameof(GrimmorySettings.Url), "Unable to connect: " + ex.Message, "server.message.mc76459e52a3e", new { value0 = ex.Message });
             }
 
             return null;

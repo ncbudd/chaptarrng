@@ -1,0 +1,35 @@
+{
+  "apiBaseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "apiBaseTree": "3c27ce1d128d1d74d3b46bf507e2f99f9c02f4d8",
+  "capturedAtUtc": "2026-11-05T08:50:09.412926Z",
+  "exactWorktree": "/mnt/disks/scratch/task-worktrees/localization-20261105/chaptarrng-pr190-w400-cross-pinned",
+  "exactWorktreeClean": true,
+  "exactWorktreeHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactWorktreeStatusSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exactWorktreeTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "headSha": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "headTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "headWorkflowTree": "d32d228b81852c2f44fdea6511a0bd5df35f61d2",
+  "label": "final-after-verification",
+  "liveMainSha": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "liveMainTree": "2cc37a8008f8aefba42bca3ec1bc325acbbebc55",
+  "liveMainWorkflowTree": "aed02ef5ae1eea8a00a4def7850891dc08c47176",
+  "prApi": {
+    "baseRefName": "main",
+    "baseRefOid": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "isDraft": true,
+    "number": 190,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "pullRequest": 190,
+  "remoteRefs": {
+    "refs/heads/codex/chaptarrng-localization-complete-20261031": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "refs/heads/main": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+    "refs/pull/190/head": "16c809b4787d70616a1a296ab0d90cf17923ba86"
+  },
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1
+}

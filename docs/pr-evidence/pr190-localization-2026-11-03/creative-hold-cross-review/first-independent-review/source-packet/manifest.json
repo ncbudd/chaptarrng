@@ -1,0 +1,85 @@
+{
+  "artifact": "Fresh ChaptarrNG PR #190 W1200-W1209 independent creative hold review evidence",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerFiles": 3,
+  "callerReferences": 5,
+  "callerlessHashCount": 24,
+  "callerlessHashesUnchangedAtHead": 24,
+  "callerlessHoldHashesOnly": true,
+  "callerlessHoldsOutOfScope": 24,
+  "confidenceCounts": {
+    "low": 3,
+    "moderate": 17
+  },
+  "creativeCellCount": 20,
+  "creativeSourceCount": 3,
+  "draftAtSeal": true,
+  "fileHashes": {
+    "README.md": {
+      "byteCount": 543,
+      "sha256": "bb08faca6a9dc7e5070afa2696911a849211655bff5dc39b7ecab9e9c3f55b0b"
+    },
+    "build_review.py": {
+      "byteCount": 30826,
+      "sha256": "40319d1abcb1d78a1b123e65a7144bdb45d90ced9a9ac09f3d0426ff5aafff51"
+    },
+    "input/PR-attestation.json": {
+      "byteCount": 615,
+      "sha256": "d668ce91f651348a874a833f6381375f1c335322d263f2a1ebf64746d9bb79f3"
+    },
+    "input/README.md": {
+      "byteCount": 830,
+      "sha256": "d8c8e53c8203be5fcc631c864e96187017e57fedcb7c49a839a664f5ecc3c0b4"
+    },
+    "input/callerless-hold-hashes-only.jsonl": {
+      "byteCount": 13058,
+      "sha256": "a2a105c901cf50b0bebff850441dea41049d6f3d24a6823525ac71235abbb070"
+    },
+    "input/creative-current-cells.jsonl": {
+      "byteCount": 16769,
+      "sha256": "7bbc591eb678c6109c1c63638b86f4d19741ad754d699a4fe79b011b69d43ddd"
+    },
+    "input/file-pins.json": {
+      "byteCount": 5385,
+      "sha256": "d21f82c71135ccb6053cb6482c4b9ff3d12ec798797d1f8aa8d9971aef22f030"
+    },
+    "input/source-caller-context.jsonl": {
+      "byteCount": 7023,
+      "sha256": "f20e5c7e9ac39d6cafa465c270ab38b9ab63fb571ca56ffd49274770b9661932"
+    },
+    "review/README.md": {
+      "byteCount": 553,
+      "sha256": "956d831792bf36beba85123f72c1b7b6d79ca7fa3ebdb1b91acd58a4c0043e09"
+    },
+    "review/independent-recommendations.jsonl": {
+      "byteCount": 30804,
+      "sha256": "5d7966cf3efa91306318cd7ad4dac4f2ff9653f3ebdf54b98bc6329d923f85ea"
+    },
+    "review/live-pr-and-pin-after.json": {
+      "byteCount": 5340,
+      "sha256": "581ed172214c3e8f07b6c01a0cfb114b6c382e762e341a72cd19618cfd55f7b5"
+    },
+    "review/summary.json": {
+      "byteCount": 1216,
+      "sha256": "bcdfd19e569bbee42493352be56d3c208a7717bff42e3e69c8d11914fe936342"
+    },
+    "review/verify_review.py": {
+      "byteCount": 4988,
+      "sha256": "8619ebe97eea907f4db73399410c6977973c6e8cdf41421f21977cc3b4a34e76"
+    }
+  },
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "nativeSpeakerSignoff": false,
+  "nextRequiredReview": "Qualified native-language review of the 20 creative recommendations before any application.",
+  "pullRequest": 190,
+  "recommendationCounts": {
+    "recommend-target": 20
+  },
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryOrPrModified": false,
+  "sourceCallerCatalogPinCount": 16,
+  "stateAtSeal": "OPEN",
+  "testsBuildsScansCiRun": false,
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "window": "W1200-W1209"
+}

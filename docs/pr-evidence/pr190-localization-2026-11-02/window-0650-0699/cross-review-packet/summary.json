@@ -1,0 +1,76 @@
+{
+  "attestedAtUtc": "2026-11-02T17:43:12.617172+00:00",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateDispositionCounts": {
+    "accept-proposal": 98,
+    "revise-proposal": 1
+  },
+  "candidateProposals": 99,
+  "cellDispositionCounts": {
+    "accept-current": 501,
+    "accept-proposal": 98,
+    "revise-proposal": 1
+  },
+  "cells": 600,
+  "currentProtectedMismatchCells": 12,
+  "head": "4701933a50d367406fd6749c4baaf4befee22129",
+  "locales": 12,
+  "markupMismatchCells": 0,
+  "missedSourceFollowups": 2,
+  "notes": [
+    "Primary SHA256SUMS and INPUT-SHA256SUMS both verify; all listed repository inputs match exact-head blobs and bytes.",
+    "The primary packet provides 59 exact production caller refs across 50 IDs and 48 files; all pins were reattested. The W649 prior boundary adds its caller-context ref and 12 locale values; W650 has 12 boundary locale rows.",
+    "The 99 proposals were independently reviewed against source meaning and pinned C# callers. 98 are accepted verbatim; W650 Korean is revised only to use a Korean full stop.",
+    "Twelve current targets miss the protected SABnzbd product name because English source says “Sabnbzd”; all proposed targets use SABnzbd. The source typo itself needs correction.",
+    "W695 English source says “though Mailgun”; the caller and all locale targets show intended “through Mailgun”. Source correction is a missed fix.",
+    "No repository edits, tests, builds, CI, or browser actions were performed."
+  ],
+  "packetFiles": [
+    "README.md",
+    "primary-input-integrity.json",
+    "structural-integrity.json",
+    "caller-pin-reattestation.jsonl",
+    "w649-w650-boundary-reattestation.jsonl",
+    "w649-caller-reattestation.jsonl",
+    "cell-crossreview.jsonl",
+    "candidate-adjudication.jsonl",
+    "source-followup-findings.jsonl",
+    "summary.json",
+    "cross_review.py",
+    "SHA256SUMS"
+  ],
+  "placeholderMismatchCells": 0,
+  "primaryCallerFiles": 48,
+  "primaryCallerRefs": 59,
+  "primaryCallerSourceIds": 50,
+  "priorSourceIdOverlap": 0,
+  "proposalHolds": 0,
+  "proposalProtectedMismatchCells": 0,
+  "proposalRejections": 0,
+  "proposalRevisions": 1,
+  "pullRequest": 190,
+  "pullRequestState": {
+    "baseRefName": "main",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "4701933a50d367406fd6749c4baaf4befee22129",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "readOnly": true,
+  "remoteHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "repository": "snapetech-org/chaptarrng",
+  "repositoryModified": false,
+  "sourceFollowupOrdinals": [
+    654,
+    695
+  ],
+  "sourceIds": 50,
+  "testsBuildsCiBrowserRun": false,
+  "tree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "w649BoundaryLocaleRows": 12,
+  "w649CallerRefRowsReattested": 12,
+  "w649UniqueCallerRefsReattested": 1,
+  "w650BoundaryLocaleRows": 12,
+  "window": "W650–W699"
+}

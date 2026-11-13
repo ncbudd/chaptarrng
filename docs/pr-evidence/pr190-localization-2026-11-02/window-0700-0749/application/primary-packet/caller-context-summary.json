@@ -1,0 +1,27 @@
+{
+  "genericPipelineFiles": 35,
+  "genericPipelineGaps": [],
+  "genericPipelineRefs": 76,
+  "sourceCallerGaps": [],
+  "sourceCallerRefs": 77,
+  "sourceCallerRows": 50,
+  "staleRegistryPinsRefreshed": [
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortex.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 240,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(BookDownloadCategorySettings.GetCategoryFieldName(Settings, category), \"Group does not exist\", \"server.message.m8a7981a2ced3\")",
+      "sourceId": "server.message.m8a7981a2ced3",
+      "sourceOrdinal": 711
+    },
+    {
+      "file": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+      "reason": "registry line changed; current production source-ID/literal line was refreshed",
+      "registryLine": 318,
+      "registryLineText": "return NzbDroneValidationFailure.ForMessage(\"Host\", \"Unable to connect to Usenet Download Station\", \"server.message.m9d7030ad5fa8\")",
+      "sourceId": "server.message.m9d7030ad5fa8",
+      "sourceOrdinal": 746
+    }
+  ],
+  "uniqueSourceCallerFiles": 50
+}

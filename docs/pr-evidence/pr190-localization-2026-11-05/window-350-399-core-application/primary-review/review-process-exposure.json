@@ -1,0 +1,25 @@
+{
+  "batch": "W350-399-Core",
+  "exactHead": "dbe530c9d1a7fd2c12ce2aef76ec74c5c2188aa0",
+  "exactTree": "be10d71209076f753ef295038a9f3c3646a918a3",
+  "candidateFreePacketSha256": "76a08b9a42e17fb0d9fac340497e41d1a3ffc5c2d570fc03cf262dd7a9a9b2ef",
+  "currentWindowBlindOrCrossOutputsAccessed": false,
+  "priorWindowMaterialExposure": [
+    "Inspected W300 primary-review schema/summary solely to match evidence structure; did not use W300 translation recommendations for W350 judgments."
+  ],
+  "candidateFreeInputUsed": true,
+  "adjacentContextReadOnly": [
+    "frontend/src/Author/Details/BookVisibilityToggle.js",
+    "frontend/src/Settings/General/ProxySettingsFields.js",
+    "src/NzbDrone.Core/Localization/Core/en.json keys Library, All, ProxyBypassFilterHelpText"
+  ],
+  "currentWindowPrimaryReviewUses": {
+    "candidateFreeCells": true,
+    "callerContext": true,
+    "exactSourceAndTargetHashes": true,
+    "latestMainComparison": true
+  },
+  "nativeSpeakerReviewPerformed": false,
+  "reviewerRole": "primary",
+  "result": "RECORDED"
+}

@@ -1,23 +1,29 @@
 # Fixed server and notification copy review
 
-The source catalog and caller reviews are recorded below. The current source snapshot contains 4,101 English IDs, with 1,146 missing direct values per target locale (13,752 cells across twelve locales). Translation generation and final headed Agentic VM acceptance remain queued. Agent review does not claim qualified native-speaker approval.
+The source catalog and caller reviews are recorded below. At ChaptarrNG PR #190 head `45e8e228433da1ed107ff7825652d6d1d903e5ea` (tree `d25870b289a16d3a827e827f9c5d136349f06b78`), the English source catalog and each of twelve direct target catalogs contain 4,165 IDs, with zero missing or extra keys and zero blank values. The 14,520 target cells identified at the provider-test source-boundary checkpoint have since been populated and dispositioned in hash-pinned semantic reviews: 6,304 accepted unchanged, 8,216 corrected, and zero held. Exact-current-head headed browser review and qualified native-speaker approval remain outstanding; agent review does not claim native-speaker approval.
+
+## Exact-head semantic reconciliation — 2026-11-02
+
+At PR head `b296df8ed6f590cdbb9f163445c9a0bdb16e5fac` (tree `dbb379e405045170d0cc5cbdb0f647fcca13f390`), an exact source/target hash reattestation reconciled all 63 cells marked uncertain in semantic-review v4: 41 correction decisions and 22 accepted current values, with zero unresolved. Twenty of the accepted values were checked against the final source-copy follow-up. The same review reconciled all 38 no-op proposals: 36 accepted unchanged and two corrections applied (the Arabic URL field label and Hindi MAM status message), with zero held. A separate read-only cross-review confirmed all 101 current source/target hash pairs.
+
+All twelve direct catalogs at that head contain 4,165 nonblank entries and match the English key set exactly. Full cell dispositions and hashes are in [`exact-head-semantic-reconciliation-20261102.json`](exact-head-semantic-reconciliation-20261102.json) (SHA-256 `c4305fb85cdb0c9156240bb2c131a3d2915a027e21721dca97257c35d1496f55`). This is agent semantic review, not qualified native-speaker approval. Current-head headed-browser review remains outstanding.
 
 ## Source coverage
 
-- Server/API, validation, operational progress, and persisted failure messages: 554 distinct messages and 736 unique source callers (746 template/branch bindings). One wholly dynamic Telegram exception/status template is excluded because it contains no application wording.
+- Server/API, validation, operational progress, provider test notices, and persisted failure messages: 618 distinct messages and 811 unique source callers (821 template/branch bindings). One wholly dynamic Telegram exception/status template is excluded because it contains no application wording.
 - Provider field labels/help/warnings: 409 mapped sources and 643 callers, with all 811 explicit schema attribute values resolving to catalog IDs.
 - Static provider dropdown labels and explanatory hints: 136 sources, 174 callers, 27 enum types, and 165 enum members. Numeric values, member identifiers, protocol `EnumMember` values, dynamic provider option names, and example hints stay unchanged.
 - Outbound human-readable headings, bodies, fields, tests and sensor names: 57 sources and 108 callers, plus two explicitly fingerprinted exclusions for the Proper release marker and retag metadata field names. Transport keys, event names, topics, paths, book/author titles and provider responses stay data.
 
 All seventeen authored loading messages also retain their original no-repeat variety behind stable IDs, with contributor/product names protected. The runtime fallback data is checked against its source inventory.
 
-The expanded source set has 4,101 English IDs, including 1,151 IDs beyond the 2,950-ID baseline. The current target catalogs have 2,955 direct values each and are missing 1,146 values apiece. Registries carry stable IDs, source fingerprints, exact caller lines/hashes, and protected literal rules. `check-localized-source-coverage.cjs` and `check-server-message-catalogs.cjs` reject stale sources, missing target values, unsafe paths and placeholder/protected-value changes. `--allow-pending` is a preparation check, not final translation acceptance.
+The expanded source set has 4,165 English IDs, including 1,215 IDs beyond the 2,950-ID baseline. At current PR head, each target catalog has 4,165 direct values with zero missing or extra IDs and zero blank values. Registries carry stable IDs, source fingerprints, exact caller lines/hashes, and protected literal rules. `check-localized-source-coverage.cjs` and `check-server-message-catalogs.cjs` reject stale sources, missing target values, unsafe paths and placeholder/protected-value changes. `--allow-pending` is a preparation check, not final translation acceptance.
 
 ## Presentation callers
 
 `server-message-callers.json` fingerprints every introduced presentation boundary. Reviewed paths include:
 
-- Form result alerts, input help/errors/warnings, OAuth and enhanced-select validation. Multiple validation values are translated individually before joining.
+- Form result alerts, input help/errors/warnings, OAuth and enhanced-select validation. Multiple validation values are translated individually before joining. Provider test and import-list error boundaries accept only explicit trusted IDs; otherwise they render raw payloads as opaque data.
 - Provider notices for indexers, download clients, notifications and import lists; root-folder/list save failures; import-list synchronization preview/history; first-run authentication and Quickstart connection/Hardcover failures.
 - Backup/restore/settings alerts, author media moves, queue status/detail/popovers, pending imports, import-progress drawers/sidebar messages, health status and persisted history details.
 - Search-series fetch/save failure presentation and shared `getErrorMessage` consumers. Other search/action connectors retain raw server text until the sidebar or shared error renderer presents it.
@@ -84,7 +90,58 @@ outside the translation set. Exact callsites and source fingerprints are in
 `diagnostic-exception-wrapper-audit-20261031.json`; no native-speaker review is
 claimed.
 
-The current input now has 4,101 English IDs and 1,146 pending values per locale,
-or 13,752 target cells. All 17 new entries still need translation and review.
+At that diagnostic-wrapper checkpoint, the input had 4,101 English IDs and
+1,146 pending values per locale, or 13,752 target cells. All 17 new entries
+still needed translation and review.
 The Arabic whole-document RTL gate also remains in place until logical-layout
 safety and headed visual review are complete.
+
+## Provider-test source boundary follow-up
+
+The follow-up based on `c0aebe1e` carries a trusted message ID and opaque
+parameter through release-client rejection responses, then renders it in
+Interactive Search. Fixed app-authored `ProviderMessage` notices used by
+provider test forms now have stable explicit IDs. These entries are marked
+explicit-ID-only, so arbitrary provider strings cannot match their English
+sources. Import-list save/sync errors and provider payloads accept a trusted ID
+when present and otherwise render as opaque data. MAM user-class/count values
+and the configured rTorrent view stay dynamic parameters.
+
+This adds 11 source IDs and 12 bindings, with 132 target cells pending.
+`source-followup-20261101.json` binds the current complete missing-cell set to
+the English and target catalog hashes: 4,165 English IDs, 2,955 populated
+values per target locale, and 1,210 missing values per locale (14,520 cells).
+The source presentation ledger covers 77 boundaries across 35 files. Target
+catalogs remain unchanged. No semantic or native-speaker approval is claimed.
+
+The provider-validation follow-up carries existing trusted message IDs and
+opaque parameters through `NzbDroneValidationFailure`/`NzbDroneValidationState`,
+the validation error JSON, the settings selector, and field-help rendering.
+It binds 65 provider-setting field callsites across 38 IDs and 196 provider
+`Test()` failure callsites across 133 IDs. Those groups have no overlapping
+callsites or IDs, for 261 distinct callsites and 171 distinct IDs. Of those,
+169 existing server-message IDs are absent in every target locale (169 cells
+per locale; 2,028 cells total); `AuthIncorrectCredentials` and
+`UsernameRequired` are already populated in the existing catalogs. Three
+additional shared host/URL validator callsites use existing IDs that are also
+absent in every target locale, bringing the complete source diff to 172 missing
+IDs (172 cells per locale; 2,064 total). All affected IDs were already in the
+pinned missing-cell set. No English source IDs or target-catalog values were
+added. Dynamic values such as exception text, seed thresholds, example URL
+paths, API-reported versions, and known system-folder paths remain parameters.
+Unkeyed server/provider values remain opaque. The Goodreads bookshelf
+`.NotEmpty()` rule still uses FluentValidation's default message; that
+library-generated message is not treated as an app-authored catalog source.
+OAuth UI timeout and popup errors carry local message keys from their fixed
+producer, while OAuth API messages require an explicit server ID or remain
+opaque. Option-provider fetch errors also remain opaque instead of being
+matched against app copy.
+
+`DownstreamException` responses preserve the producer's HTTP status code while
+retaining any trusted message ID and opaque parameters. Raw exception/provider
+output remains outside catalog matching.
+
+
+## Raw fallback direction-control hardening
+
+Untrusted opaque and localized fallbacks now strip all bidirectional controls at render time; only server messages verified through an application message ID may preserve the application-generated balanced isolates around captured values. Unknown and oversized server messages are scrubbed and isolated as one display string. Stored API and history values remain unchanged. Focused regressions cover nested text, opaque/localized fallbacks, unmatched controls, balanced attacker-supplied isolates, and oversized messages.

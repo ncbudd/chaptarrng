@@ -1,0 +1,21 @@
+{
+  "artifact": "ChaptarrNG W561 independent blind review",
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "currentSourceId": "server.message.m453c42aa8de5",
+  "proposedSourceId": "server.message.m3a79390fb21e",
+  "targetLocaleCount": 12,
+  "decisionCounts": {
+    "proposal": 12,
+    "retain": 0,
+    "hold": 0
+  },
+  "files": {
+    "README.md": "934de76b1943e2c76d6276066e6cb71cb67313340146f20828d5898c9c8ccff6",
+    "build_packet.py": "4c9d9572ef6b00fc890ca189c9fda1fef2a8a2f713daa0156d0035b44c9af61d",
+    "locale-review.jsonl": "2c3084f0ed7f592baccba376a91c7f89514edd57f468c12cfe8ad72643e43576",
+    "source-caller-evidence.json": "eec01ad6572a856b6ef77df565518c15f2c59e8024f453461469e5d5d06525c1",
+    "summary.json": "873dab981bf780864b4038d9ab78ade73e37013c95350d200fefebbe997a345a",
+    "verify_packet.py": "5a5416d1fe35c27bdcbc52beb038845caa1ae93f4a1525e80839171a52dfc772"
+  }
+}

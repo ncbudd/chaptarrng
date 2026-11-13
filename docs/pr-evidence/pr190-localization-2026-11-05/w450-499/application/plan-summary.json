@@ -1,0 +1,132 @@
+{
+  "artifact": "ChaptarrNG PR #190 W450-W499 hash-guarded application plan",
+  "sourcePin": {
+    "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+    "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5"
+  },
+  "baseSha": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "window": "W450-W499",
+  "candidateCellCount": 600,
+  "callerBoundCellCount": 552,
+  "hashOnlyHolds": 48,
+  "crossDecisionCounts": {
+    "accept-current": 441,
+    "selectedChanges": 111
+  },
+  "rootDecisionCounts": {
+    "accept-cross-recommendation": 111,
+    "accept-adjusted-target": 0,
+    "hold-selected-proposal": 0
+  },
+  "selectedChanges": 111,
+  "changedByLocale": {
+    "ar": 11,
+    "de": 4,
+    "es": 7,
+    "fr": 10,
+    "hi": 24,
+    "id": 11,
+    "ja": 5,
+    "ko": 7,
+    "pt-BR": 8,
+    "vi": 7,
+    "zh-Hans": 7,
+    "zh-Hant": 10
+  },
+  "manualLexicalizedNumericExceptions": [
+    {
+      "sourceOrdinal": 471,
+      "locale": "ja",
+      "token": "8進数"
+    },
+    {
+      "sourceOrdinal": 471,
+      "locale": "ko",
+      "token": "8진수"
+    }
+  ],
+  "evidenceInputs": {
+    "candidateFreeCells": {
+      "path": "candidate-free/input/candidate-free-cells.jsonl",
+      "sha256": "39b9037342ae28f0ad09d1cfad3d27dae9aa24d243bec36b01fa5bd6c032fc57"
+    },
+    "candidateFreeManifest": {
+      "path": "candidate-free/input/candidate-free-manifest.json",
+      "sha256": "f37ed7234202a36eaea93259618d972a545d3ebbed0fd3a57d8c8addcdbc25ee"
+    },
+    "candidateFreeChecksums": {
+      "path": "candidate-free/input/SHA256SUMS.txt",
+      "sha256": "a840674b2e61d495d91dca3a9ea46e08d92ecc2606bef4cd2f2c7e1f0ed7f0e2"
+    },
+    "primaryManifest": {
+      "path": "primary-review/manifest.json",
+      "sha256": "c5b658defee366ecdbfa046cd21c073ce0100e7c030b038955c244b6c9e38edf"
+    },
+    "primaryChecksums": {
+      "path": "primary-review/SHA256SUMS.txt",
+      "sha256": "fec9bf143e67931bb4a348955b484c0136ae4829c3fb49b50bf9d3969b532ac8"
+    },
+    "blindManifest": {
+      "path": "blind-review/manifest.json",
+      "sha256": "33f425d5d3c2b06045b7cd364ced94677a3f01672776653d850c735565c15ef0"
+    },
+    "blindChecksums": {
+      "path": "blind-review/SHA256SUMS.txt",
+      "sha256": "e6d93b4dff595b01833f708b5173a6b6350056ad79ea96ad34ad7d4ea0c239eb"
+    },
+    "crossManifest": {
+      "path": "cross-review-sealed/manifest.json",
+      "sha256": "af519a8dcb13594bf5c6acbf91c9030ae36647c67d6d67e75bae5c5b4878ff76"
+    },
+    "crossLedger": {
+      "path": "cross-review-sealed/ledger.jsonl",
+      "sha256": "9edb14d28b6a710b36450eabac1266bfee776fb73d43609baf4e448eb66a8137"
+    },
+    "crossProposals": {
+      "path": "cross-review-sealed/proposals.jsonl",
+      "sha256": "eed87cae98191f5470ad3ab5950db5c28c63862aaa5facf604d8b70caa43b4e2"
+    },
+    "crossChecksums": {
+      "path": "cross-review-sealed/SHA256SUMS.txt",
+      "sha256": "83dba63d8d76278071232ae534f5b150dd27df87da994ad2800d493e93a408d9"
+    },
+    "secondOpinionSummary": {
+      "path": "second-opinion/summary.json",
+      "sha256": "fc8c8c151512a707a0c3eba110bc649602f03f02c72ef35e7b78987ae30acb3e"
+    },
+    "secondOpinionLedger": {
+      "path": "second-opinion/ledger.jsonl",
+      "sha256": "a95e1b85f90eb0e7ac493a2c53b38ee7f27463d8ddcec97fb915e0d2cc1f7d2c"
+    },
+    "secondOpinionChecksums": {
+      "path": "second-opinion/SHA256SUMS.txt",
+      "sha256": "50c4a70b38b8b83fda3a2c8af2a988d6632fc6968acdd8e9c9349f471028cb82"
+    },
+    "rootLedger": {
+      "path": "root-adjudication/root-adjudication-ledger.jsonl",
+      "sha256": "e994df6790ad83c17333e192aa3a53126fab4f620e3898ccef1a4ca6cf5c64fb"
+    },
+    "rootSummary": {
+      "path": "root-adjudication/summary.json",
+      "sha256": "c882085b894f1951b5fca6457012a16a64b4507c7d832e4d7d581a3fa14668d4"
+    }
+  },
+  "nativeSpeakerApproval": false,
+  "workflowChanges": false,
+  "testsBuildsScansCiRun": false,
+  "changedCatalogCount": 12,
+  "changedCatalogPaths": [
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/id.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ]
+}

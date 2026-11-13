@@ -1,0 +1,34 @@
+{
+  "artifact": "Independent cross-review of caller-linked creative-hold drafts",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+  "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+  "window": "W1200-W1209",
+  "crossReviewedCells": 20,
+  "endorseDraftPendingNativeReview": 17,
+  "continuedHolds": 3,
+  "confidenceCounts": {
+    "moderate": 17,
+    "low": 3
+  },
+  "sourceCallerCatalogPinsRechecked": 16,
+  "targetPreimagesRechecked": 20,
+  "callerlessHoldsHashOnly": true,
+  "callerlessHoldHashesReattested": 24,
+  "callerlessTargetTextsIncluded": false,
+  "nativeSpeakerSignoff": false,
+  "catalogApplication": "none",
+  "repositoryOrPullRequestEdits": "none",
+  "buildsTestsScansCiBrowserWorkflowChanges": "none",
+  "continuedHoldLocales": {
+    "ui.loading.newEbookSmell": [
+      "ar"
+    ],
+    "ui.loading.dodgeBooks": [
+      "ar",
+      "hi"
+    ]
+  },
+  "requiredBeforeApplication": "Qualified native-language review remains required for every endorsed draft; the three continued holds need particular language review before reconsideration."
+}

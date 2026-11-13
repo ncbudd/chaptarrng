@@ -9,6 +9,7 @@ using NzbDrone.Core.Localization;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
 using NzbDrone.Common.Serializer;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.PushBullet
 {
@@ -137,16 +138,16 @@ namespace NzbDrone.Core.Notifications.PushBullet
                 if (ex.Response.StatusCode == HttpStatusCode.Unauthorized)
                 {
                     _logger.Error(ex, "API Key is invalid");
-                    return new ValidationFailure("ApiKey", "API Key is invalid");
+                    return NzbDroneValidationFailure.ForMessage("ApiKey", "API Key is invalid", "server.message.m82fee98391f9");
                 }
 
                 _logger.Error(ex, "Unable to send test message");
-                return new ValidationFailure("ApiKey", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("ApiKey", "Unable to send test message", "server.message.m1041bbcba071");
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to send test message");
-                return new ValidationFailure("", "Unable to send test message");
+                return NzbDroneValidationFailure.ForMessage("", "Unable to send test message", "server.message.m1041bbcba071");
             }
 
             return null;

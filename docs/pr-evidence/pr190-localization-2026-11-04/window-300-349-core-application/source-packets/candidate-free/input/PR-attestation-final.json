@@ -1,0 +1,29 @@
+{
+  "baseBranchMoved": true,
+  "baseRef": "main",
+  "branchRefSha": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "capturedAtUtc": "2026-11-04T23:09:57+00:00",
+  "draft": true,
+  "headRef": "codex/chaptarrng-localization-complete-20261031",
+  "headSha": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "headTree": "4cf2322354e9cf9b12d59cf10d0d8661c68ab4af",
+  "liveMainSha": "db87e7fb22ba12172e303bb2e8e4bba219f0618e",
+  "liveMainTree": "4912198b460759106b9c3f6be25b7211f9c98dbb",
+  "mainCommitsAhead": 28,
+  "merged": false,
+  "prApiBaseSha": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "prBodyRequested": false,
+  "pullRefSha": "f0082d1b655c05b8d4019ede523dd695cd6d745a",
+  "pullRequest": 190,
+  "remoteRefs": [
+    "db87e7fb22ba12172e303bb2e8e4bba219f0618e\trefs/heads/main",
+    "f0082d1b655c05b8d4019ede523dd695cd6d745a\trefs/heads/codex/chaptarrng-localization-complete-20261031",
+    "f0082d1b655c05b8d4019ede523dd695cd6d745a\trefs/pull/190/head"
+  ],
+  "repository": "snapetech-org/ChaptarrNG",
+  "result": "PASS",
+  "snapshot": "post-primary-review-final",
+  "sourceWorktree": "/mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w300-349-source",
+  "sourceWorktreeStatus": "",
+  "state": "open"
+}

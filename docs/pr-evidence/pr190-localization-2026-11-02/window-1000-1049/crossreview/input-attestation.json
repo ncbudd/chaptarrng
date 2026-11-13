@@ -1,0 +1,28 @@
+{
+  "primaryPacketPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1000-1049-primary-20261102",
+  "primarySha256SumsVerified": true,
+  "primaryPacketKeyHashes": {
+    "SHA256SUMS": "7da08c9e0e14ecbf279728a4561ab91580c39ff074a6fdea32f4ef9f92543046",
+    "manifest.json": "f446ca23d342970745c4e0c3cc8e63e79b46ed0d246115e4600d6ed68b0ccfe1",
+    "input-manifest.json": "6afd5ddda8357bc699b823fb7e3e0639ee1e5a4f045f0380032f2a10b0d40a02",
+    "review-cells.jsonl": "09212ecb43b54f2e66b6ee643fc6d2aa12ac171ec417e32eff5b76ecd7aaa6d1",
+    "input-cells.jsonl": "2d03edc0b743477270b211e064f6eef364b703268295dc831f2aa545e8ec3ac3",
+    "source-slice.jsonl": "195919ac346c6734599fb456ec52c3883e6f961c78df2e8432b0ebcc16efde6b",
+    "caller-context.jsonl": "5416aa6437e8005bbf14359e49d66639ccb082659543a7a0921fafda5e2e6ed0",
+    "holds.jsonl": "9bfd14cfee9c167854eae7fe69bf5bf276993c7175f8f34d3332bcacfbfe6934",
+    "correction-candidates.jsonl": "bdee9c866ab5637b41de951af0c8a14686120a249ab6642c3ea0609f4fcb05d3",
+    "refinement-candidates.jsonl": "9f49c29dd394e53872714201c2037bdfbf95bfe350a7141d5c57477db74b9bbc",
+    "protected-literal-integrity.jsonl": "2cb6398ee17377b24e7bef17e30587fedcb3ed4d019fc7000caa398f9d13e84c",
+    "pinned-files.json": "a98393bbf8ac80ffdc615917fad9ca6ef9904ba14d83cc045ac526d8eb304c2c"
+  },
+  "primaryPacketExactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "primaryPacketExactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "startAllSevenSnapshotPath": "live-pr-snapshots-start.json",
+  "startAllSevenSnapshotSha256": "0ea732bd9cc457778617371809e10ff9784f1498078bc1df4b98adce88b6169b",
+  "startSnapshotsAtUtc": "2026-11-02T22:07:40.958885+00:00 / 2026-11-02T22:07:50.188206+00:00",
+  "nativeSpeakerApproval": false,
+  "endAllSevenSnapshotPath": "live-pr-snapshots-end.json",
+  "endAllSevenSnapshotSha256": "7e8ca13661a13c98091dfe7807bbd1842af92321493ceb9bec8c88c60e5269f9",
+  "endSnapshotsAtUtc": "2026-11-02T22:12:08.419205+00:00 / 2026-11-02T22:12:22.521965+00:00",
+  "allSevenHeadTreeMovement": false
+}

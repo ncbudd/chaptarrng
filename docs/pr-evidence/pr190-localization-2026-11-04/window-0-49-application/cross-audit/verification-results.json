@@ -1,0 +1,28 @@
+{
+  "verifier": "verify_cross_audit.py",
+  "result": "PASS",
+  "command": "python3 verify_cross_audit.py --source-worktree /mnt/disks/scratch/task-worktrees/localization-20261104/chaptarrng-pr190-w0-49-apply",
+  "exactHead": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "exactTree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "sourceCheckoutClean": true,
+  "sourceCatalogFilesVerified": 13,
+  "sourceCallerFilesVerified": 35,
+  "expandedCellCallerReferencesVerified": 852,
+  "uniqueCallerContextRecords": 50,
+  "uniqueCallerReferencesInContextPacket": 71,
+  "inputManifestEntriesVerified": {
+    "candidatePrimary": 11,
+    "blindPacket": 13,
+    "blindNestedInput": 6
+  },
+  "cells": 600,
+  "selectedProposals": 38,
+  "textFreeHolds": 48,
+  "crossDispositionCounts": {
+    "accept-current": 514,
+    "revise-current": 38,
+    "hold": 48
+  },
+  "nativeSpeakerApproval": false,
+  "repositoryOrPullRequestModified": false
+}

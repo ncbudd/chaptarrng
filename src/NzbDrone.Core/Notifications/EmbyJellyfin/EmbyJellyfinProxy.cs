@@ -6,6 +6,7 @@ using NLog;
 using NzbDrone.Common.EnvironmentInfo;
 using NzbDrone.Common.Extensions;
 using NzbDrone.Common.Http;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.Notifications.EmbyJellyfin
 {
@@ -45,15 +46,15 @@ namespace NzbDrone.Core.Notifications.EmbyJellyfin
 
                 if (ex.Response?.StatusCode == HttpStatusCode.Unauthorized || ex.Response?.StatusCode == HttpStatusCode.Forbidden)
                 {
-                    return new ValidationFailure(nameof(EmbyJellyfinSettings.ApiKey), "Authentication failed. Check the API key and server type.");
+                    return NzbDroneValidationFailure.ForMessage(nameof(EmbyJellyfinSettings.ApiKey), "Authentication failed. Check the API key and server type.", "server.message.m4f132daa439b");
                 }
 
-                return new ValidationFailure(nameof(EmbyJellyfinSettings.Host), $"Unable to connect to Emby/Jellyfin: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(nameof(EmbyJellyfinSettings.Host), $"Unable to connect to Emby/Jellyfin: {ex.Message}", "server.message.m512fa7acd5fa", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Debug(ex, "Emby/Jellyfin connection test failed");
-                return new ValidationFailure(nameof(EmbyJellyfinSettings.Host), $"Unable to connect to Emby/Jellyfin: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(nameof(EmbyJellyfinSettings.Host), $"Unable to connect to Emby/Jellyfin: {ex.Message}", "server.message.m512fa7acd5fa", new { value0 = ex.Message });
             }
         }
 

@@ -1,0 +1,31 @@
+{
+  "artifact": "sealed primary review packet",
+  "schemaVersion": 1,
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "window": "W450-W499-Core",
+  "exactHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "exactTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateFreeCellsSha256": "39b9037342ae28f0ad09d1cfad3d27dae9aa24d243bec36b01fa5bd6c032fc57",
+  "callerContextSha256": "2a6de527472a324f3746d9c7bae651df73459a0d01ed0c35f4f4b2f1fd0ea330",
+  "recordCounts": {
+    "ledger": 600,
+    "proposals": 75,
+    "hashOnlyHolds": 48
+  },
+  "exactHeadBefore": "exact-head-before.json",
+  "exactHeadAfter": "exact-head-after.json",
+  "files": [
+    "ledger.jsonl",
+    "proposals.jsonl",
+    "holds.jsonl",
+    "summary.json",
+    "exact-head-before.json",
+    "exact-head-after.json",
+    "verify_primary.py",
+    "README.md",
+    "manifest.json",
+    "SHA256SUMS.txt"
+  ]
+}

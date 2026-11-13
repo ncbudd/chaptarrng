@@ -1,0 +1,150 @@
+{
+  "apiBase": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+  "apiBaseTree": "3c27ce1d128d1d74d3b46bf507e2f99f9c02f4d8",
+  "artifactPins": {
+    "callerContext": {
+      "path": "caller-context.jsonl",
+      "sha256": "2a6de527472a324f3746d9c7bae651df73459a0d01ed0c35f4f4b2f1fd0ea330"
+    },
+    "callerScanFilePins": {
+      "path": "caller-scan-file-pins.json",
+      "sha256": "7a3ad2b13997f302f8c92a2fcbf238dcac1bf4731127010ac10bcfe9eae4ead4"
+    },
+    "candidateFreeCells": {
+      "path": "candidate-free-cells.jsonl",
+      "sha256": "39b9037342ae28f0ad09d1cfad3d27dae9aa24d243bec36b01fa5bd6c032fc57"
+    },
+    "carriedPriorHoldReattestation": {
+      "path": "w400-carried-prior-hold-reattestation.jsonl",
+      "sha256": "6fc4fc02252269af836e3072ab8909be131d6f6b9339b6514672a6aa88debe56"
+    },
+    "catalogPins": {
+      "path": "catalog-pins.json",
+      "sha256": "db04a01921c4f18e1a19f39b0bf71f019684e11115dc06ff239ec09ad1aa239f"
+    },
+    "latestMainDrift": {
+      "path": "latest-main-drift.json",
+      "sha256": "e96ab3e75d0048bbd8353011d0830982445813db70022883ea8db978159ffb7a"
+    },
+    "legacyW450CrossCallerReattestation": {
+      "path": "legacy-w450-cross-caller-reattestation.jsonl",
+      "sha256": "2450f8b8683a1de63091f32dd3eedad5c2cb1251994953e86771b472d241a8c2"
+    },
+    "legacyW450CrossCellReattestation": {
+      "path": "legacy-w450-cross-live-cell-reattestation.jsonl",
+      "sha256": "e818a3ac1860e54ac96504b1c237d9449115190e391e3c2982f736762e4f8286"
+    },
+    "legacyW450PrimaryCallerReattestation": {
+      "path": "legacy-w450-primary-caller-reattestation.jsonl",
+      "sha256": "4838f0f34af97ba8a3bda43d653f2ff57d90f4d609864769ed558c0cefa99b7e"
+    },
+    "legacyW450PrimaryInputReattestation": {
+      "path": "legacy-w450-primary-input-reattestation.jsonl",
+      "sha256": "99d80cc6c3cd44b55f3427772dbd0ae4665a26c9f8aee99ffba594e948618ef5"
+    },
+    "legacyW450RootReadbackReattestation": {
+      "path": "legacy-w450-root-readback-reattestation.jsonl",
+      "sha256": "7528677b00be7705a47df8112e1cf7a055347097c44e483ef21187ad5ba37b75"
+    },
+    "mainCallerScanFilePins": {
+      "path": "main-caller-scan-file-pins.json",
+      "sha256": "c30063d93cc27afd3bcbf166a1c5eb1e4ef3a49f7f9487eab7990f65bbe6b74d"
+    },
+    "portableVerifier": {
+      "path": "verify_candidate_free.py",
+      "sha256": "200b78bbbc5d0f101326e92e566bd6a53e4bd2eeb79b717ccace457c66bff3c6"
+    },
+    "priorHistoricalScan": {
+      "path": "prior-historical-evidence-scan.json",
+      "sha256": "e1ea54c8c7124384cadce3262248dc31a4eff652d6cd061cbd497ddfb42fd2c8"
+    },
+    "priorReviewInputReattestation": {
+      "path": "prior-review-input-reattestation.json",
+      "sha256": "871368f5e90852e4f5e75e22111d3b0a42bb3ff3f96ce2aec711d4d97f4d717c"
+    },
+    "priorW400CallerScanReattestation": {
+      "path": "prior-caller-scan-file-reattestation.jsonl",
+      "sha256": "726f864106c86f5263c7655103b6311b474ab054a5e1f07d1453fda503c76357"
+    },
+    "priorW400CellReattestation": {
+      "path": "prior-window-reattestation.jsonl",
+      "sha256": "30ba9345f5b1a4f0cf15ca39873a48faf26d24021dbe7f5cb8cbf5621862ff9c"
+    },
+    "priorW400ReattestationSummary": {
+      "path": "prior-window-reattestation.json",
+      "sha256": "8c90026302e563b5a4fdb1043dc2cc600e4f2c44aa137bb9f3d61169306be678"
+    },
+    "runtimeSourcePins": {
+      "path": "runtime-source-pins.json",
+      "sha256": "cad96ad68cc08ab4ed7d8f675df2b83c2d4a4a7baf72e12fbfb439417eba40ff"
+    },
+    "sourceSelection": {
+      "path": "source-selection.json",
+      "sha256": "908ed1265ab9df02d1f3aa7248ca3ff61a9641536e0afbc3ae5509bca085dd8b"
+    },
+    "verifierResults": {
+      "path": "verifier-results.json",
+      "sha256": "42172c4f7ca347e297896123b087d4abdd8604446eefc8a4c53d2a8332c20ef2"
+    },
+    "w400ApplicationReadbackReattestation": {
+      "path": "w400-application-readback-reattestation.jsonl",
+      "sha256": "213f8d1dfe10fb9b9e51822417d44efdea6111fb6b8334d923c7a4625981b0e0"
+    },
+    "w400CallerlessHoldReattestation": {
+      "path": "w400-callerless-hold-reattestation.jsonl",
+      "sha256": "6a37f7a344beed7b7995806a4a2bf1adf8bc9ae56598c2cec6f48631187b71d3"
+    }
+  },
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "candidateFreeOnly": true,
+  "head": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "headWorkflowTree": "d32d228b81852c2f44fdea6511a0bd5df35f61d2",
+  "integrityCheckFailures": {
+    "numeric": 2
+  },
+  "liveMain": "317c5b431649a69a89e1c795f9490fd4df0b682b",
+  "liveMainTree": "2cc37a8008f8aefba42bca3ec1bc325acbbebc55",
+  "liveMainWorkflowTree": "aed02ef5ae1eea8a00a4def7850891dc08c47176",
+  "nativeSpeakerApproval": false,
+  "priorContinuity": {
+    "carriedPriorHoldsReattested": 12,
+    "committedApplicationRowsReattested": 140,
+    "legacyNov2W450InputsCurrent": false,
+    "legacyNov2W450KeyOverlap": 0,
+    "w400CallerSourceFilesReattested": 4350,
+    "w400CallerlessHoldsReattested": 12,
+    "w400CellsReattested": 600
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "result": "PASS",
+  "schemaVersion": 1,
+  "scope": {
+    "cells": 600,
+    "firstPosition": 450,
+    "lastPosition": 499,
+    "locales": [
+      "ar",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "ko",
+      "pt-BR",
+      "vi",
+      "zh-Hans",
+      "zh-Hant"
+    ],
+    "sourceIds": 50
+  },
+  "sourceQueue": {
+    "historicalFileCount": 392,
+    "historicalRows": 211539,
+    "priorSelectedKeysCount": 450,
+    "selectedKeysSha256": "e18a85d815b5403dd0f8c6586d08d15e171d7f65101e6995f412317609111b48",
+    "selectionMatchesFirstUncoveredPositions": true
+  },
+  "tree": "dbd8343a42476f4e830428cc59efb7f4830251d5"
+}

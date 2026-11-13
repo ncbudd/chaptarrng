@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "window": "currentMissingIds indices 0–49",
+  "head": "7bb2b2f977e81d214318b3f873afe8ab17f03ed5",
+  "tree": "5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb",
+  "inputPacketPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-20261102",
+  "inputCellsSha256": "e43c22f4fdea77aab86aba6c212d8227b490c106cfc9bdb14a573884164afd3e",
+  "inputManifestSha256": "ac560313425747250b558878f290b62d33a1f03ead3e4079f3092f0dd54b62ce",
+  "sourceIds": 50,
+  "targetCells": 600,
+  "primaryVerdictCounts": {
+    "accept": 535,
+    "correct": 65
+  },
+  "primaryVerdictsByLocale": {
+    "ar": {
+      "accept": 41,
+      "correct": 9
+    },
+    "de": {
+      "accept": 43,
+      "correct": 7
+    },
+    "es": {
+      "accept": 40,
+      "correct": 10
+    },
+    "fr": {
+      "correct": 2,
+      "accept": 48
+    },
+    "hi": {
+      "accept": 46,
+      "correct": 4
+    },
+    "id": {
+      "accept": 43,
+      "correct": 7
+    },
+    "ja": {
+      "accept": 47,
+      "correct": 3
+    },
+    "ko": {
+      "accept": 48,
+      "correct": 2
+    },
+    "pt-BR": {
+      "accept": 43,
+      "correct": 7
+    },
+    "vi": {
+      "accept": 46,
+      "correct": 4
+    },
+    "zh-Hans": {
+      "accept": 46,
+      "correct": 4
+    },
+    "zh-Hant": {
+      "accept": 44,
+      "correct": 6
+    }
+  },
+  "correctionsBySourceId": {
+    "provider.field.f05cfbd3ed92f": 3,
+    "provider.field.f068da7e9da75": 3,
+    "provider.field.f0d53d88c6792": 1,
+    "provider.field.f181ca0759729": 1,
+    "provider.field.f1cbe5ac7e066": 6,
+    "provider.field.f1e36708f9861": 1,
+    "provider.field.f2aa9bf2bc039": 3,
+    "provider.field.f48d8951e889b": 5,
+    "provider.field.f634ff14e26d8": 2,
+    "provider.field.f66d7a2535164": 3,
+    "provider.field.f73ea2afd7b35": 5,
+    "provider.field.f77b1eeefbe89": 5,
+    "provider.field.f848a6d927677": 5,
+    "provider.field.f89119c9c0b2b": 1,
+    "provider.field.fa65c5057eb7e": 1,
+    "provider.field.fb7445013fe90": 1,
+    "provider.field.fcf18cb638b27": 6,
+    "provider.field.fd1598dde2f63": 1,
+    "provider.field.fd8a3f9b429d7": 3,
+    "provider.field.ffe3afd1a7d4a": 9
+  },
+  "correctionCells": 65,
+  "uncertainCells": 0,
+  "heldCells": 0,
+  "overlapWithExactHeadSemanticReconciliation": 0,
+  "allCurrentSourceAndTargetHashesReattested": true,
+  "sourceCallersReattestedAtUniqueCurrentLines": true,
+  "sourceRegistryStoredLineNumbersShifted": 86,
+  "uniqueCallerFiles": 19,
+  "sourceCallerReferences": 134,
+  "candidatePlaceholderAndProductNameChecks": "pass for all proposed corrections",
+  "nativeSpeakerApproval": false,
+  "headedBrowserReview": false,
+  "repositoryOrPullRequestEdited": false,
+  "testsBuildsScansCiOrReleasesRun": false,
+  "reviewLimitations": [
+    "This is a non-native agent semantic review; native-speaker signoff remains required.",
+    "Provider caller registry line numbers were stale in 86 instances; exact source lines were found uniquely and re-attested at current locations.",
+    "The first 50 new provider-field IDs do not include previously resolved exact-cell dispositions; source registry mentions were excluded from disposition overlap."
+  ]
+}

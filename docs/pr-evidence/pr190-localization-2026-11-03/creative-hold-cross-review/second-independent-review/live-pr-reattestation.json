@@ -1,0 +1,50 @@
+{
+  "observedBeforeWrite": {
+    "apiTree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+    "observedAtUTC": "2026-11-03T22:24:02.665793+00:00",
+    "pr": {
+      "baseRefName": "main",
+      "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+      "headRefName": "codex/chaptarrng-localization-complete-20261031",
+      "headRefOid": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+      "isDraft": true,
+      "state": "OPEN",
+      "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+    },
+    "remoteRefs": {
+      "refs/heads/codex/chaptarrng-localization-complete-20261031": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+      "refs/pull/190/head": "15fde999b8b8dc29d44833845aba13e1a2ad0443"
+    },
+    "sourceCheckout": {
+      "clean": true,
+      "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo",
+      "statusPorcelain": "",
+      "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537"
+    }
+  },
+  "observedDuringSeal": {
+    "apiTree": "79f0882d1fa904ee967fb37ad1349dc6434c9537",
+    "observedAtUTC": "2026-11-03T22:24:05.973159+00:00",
+    "pr": {
+      "baseRefName": "main",
+      "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+      "headRefName": "codex/chaptarrng-localization-complete-20261031",
+      "headRefOid": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+      "isDraft": true,
+      "state": "OPEN",
+      "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+    },
+    "remoteRefs": {
+      "refs/heads/codex/chaptarrng-localization-complete-20261031": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+      "refs/pull/190/head": "15fde999b8b8dc29d44833845aba13e1a2ad0443"
+    },
+    "sourceCheckout": {
+      "clean": true,
+      "head": "15fde999b8b8dc29d44833845aba13e1a2ad0443",
+      "path": "/home/keith/Documents/code/task-scratch/chaptarrng-pr190-w600-619-prep-20261103/repo",
+      "statusPorcelain": "",
+      "tree": "79f0882d1fa904ee967fb37ad1349dc6434c9537"
+    }
+  }
+}

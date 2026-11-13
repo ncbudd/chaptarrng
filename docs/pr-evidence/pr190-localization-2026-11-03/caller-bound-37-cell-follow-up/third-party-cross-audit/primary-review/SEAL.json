@@ -1,0 +1,18 @@
+{
+  "candidateFreeManifestSha256": "67b758004fcfca76b0e0d9292d4161b274f888c52ff20416b34443faa336ebc6",
+  "dispositionCounts": {
+    "accept-current": 19,
+    "correction": 9,
+    "refinement": 9
+  },
+  "head": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "ledgerRows": 37,
+  "ledgerSha256": "f72fa723b120e9b197b72ea3b82a49a1bce4a689ac0879a20b933ceb512b4d2b",
+  "nativeSpeakerApproval": false,
+  "pullRequest": 190,
+  "recordType": "primary-semantic-review-seal",
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "scope": "37 caller-backed cells; 24 no-caller cells excluded and held",
+  "tree": "e57962cffbc3da25982330c4997b11a1452e0ae0"
+}

@@ -1,0 +1,19 @@
+{
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "productCommit": "9b6c2d65e843623aabf1b02f57eb0408bd3734f7",
+  "productTree": "187f154f43d9216b09b837c36a92f42db567bf2f",
+  "productParent": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "sourceId": "server.message.m3a79390fb21e",
+  "predicate": "value > 25000",
+  "productReadbackPath": "docs/pr-evidence/pr190-localization-2026-11-05/w561-keep-history-inclusive-limit/product-readback.json",
+  "productReadbackSha256": "8987c88c678abd80de1f4543bc9d7cff01b63c0938268bc30572b8134021ee32",
+  "productReadbackVerifierPath": "docs/pr-evidence/pr190-localization-2026-11-05/w561-keep-history-inclusive-limit/verify_product_readback.py",
+  "productReadbackVerifierSha256": "b53c6706812ee52ff3b98b745b6fb9d9480f237eb3211b9bf572b3a145ac086f",
+  "reviewHead": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "reviewTree": "55ea7696f4981fc56a774f38be477f89e454a7a3",
+  "nativeSpeakerApproval": false,
+  "releaseCreated": false,
+  "testsBuildsScansCiDeployments": false
+}

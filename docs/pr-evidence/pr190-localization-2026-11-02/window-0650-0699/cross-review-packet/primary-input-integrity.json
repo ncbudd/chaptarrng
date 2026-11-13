@@ -1,0 +1,708 @@
+{
+  "callerFiles": 48,
+  "callerRefsReattested": 59,
+  "callerSourceIds": 50,
+  "currentCellsReattested": 600,
+  "englishSourceCatalog": {
+    "fileSha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "gitBlob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "keyCount": 4165,
+    "path": "src/NzbDrone.Core/Localization/Core/en.json"
+  },
+  "exactHead": "4701933a50d367406fd6749c4baaf4befee22129",
+  "exactTree": "2b22ea480c934d2dc41c6813b1296f1a3c41b027",
+  "inputManifestSha256": "619b3a0b4978e6fe3758b089dd189b4e73d543635b72a51555f02b81ba2ecfe8",
+  "localeCatalogs": [
+    {
+      "fileSha256": "fa55830366cbbda0369cfe531f1f4d7a7cedb219bfdda76fede933cdcf980968",
+      "gitBlob": "53d349ac8108642bc7e0f7779c22b7978cd4ccd9",
+      "keyCount": 4165,
+      "locale": "es",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json"
+    },
+    {
+      "fileSha256": "ae97aa7b2a8225c803f36aeed436ceade72ce703029d5424e3837af9cdbc6341",
+      "gitBlob": "b2b5deaeb97e5daf27336e361a6b7cf3265dc633",
+      "keyCount": 4165,
+      "locale": "zh-Hans",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+    },
+    {
+      "fileSha256": "6bde0b12fccbaca0a064e9b4c538ddb70cf3f8a4bef68819dd5a65948edc2191",
+      "gitBlob": "3a6936a076c10b19da4628fca760b8baf185b023",
+      "keyCount": 4165,
+      "locale": "hi",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json"
+    },
+    {
+      "fileSha256": "0422beb76d4e1bfcd8c38af1e947d767c673adca59b5b5fa63594083209eaf56",
+      "gitBlob": "7e2bc532cbcc7caca5ba186af0b62c290b97c018",
+      "keyCount": 4165,
+      "locale": "de",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json"
+    },
+    {
+      "fileSha256": "2a023f87d3c410e04b8ed82ea09afa3f2a932df14577eea4d32764ba2b007bf4",
+      "gitBlob": "5c03a0f7f0dc75ba3ee38d9090740134e4716423",
+      "keyCount": 4165,
+      "locale": "ja",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json"
+    },
+    {
+      "fileSha256": "445a4dad047f5f48e2391cfa63d14f136b5469595d8bf0bbbf88c6e7c4f62c84",
+      "gitBlob": "40f7b9cb7d232423a6599566321aedcccd74b2b6",
+      "keyCount": 4165,
+      "locale": "fr",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json"
+    },
+    {
+      "fileSha256": "de772d910013b5ee0fc004c4eb683c6fc72ed2b57c33c8957b21b90a00b569af",
+      "gitBlob": "261e148449a6eb4763ab35676ba88dcce08e1d12",
+      "keyCount": 4165,
+      "locale": "pt-BR",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"
+    },
+    {
+      "fileSha256": "8969a16299a9b9b3d9719e61c08a0476410c7b0811376de5aac210dc107f538b",
+      "gitBlob": "1b6e8ec8d3df207a205d5c7dd00cfbbdde88455d",
+      "keyCount": 4165,
+      "locale": "ar",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json"
+    },
+    {
+      "fileSha256": "d663ff053269b375015830486d98bf69bf08a5e2e65e5fef90700ff7f49492ea",
+      "gitBlob": "c8d5b3473cc4324ae722de1f9fb2817a3ed55c7a",
+      "keyCount": 4165,
+      "locale": "ko",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json"
+    },
+    {
+      "fileSha256": "00fb4d9b8fb16dc2090c412c82f10040efb0190d0640b1981285da4eaeb93fab",
+      "gitBlob": "85acc4a90e91b7145a2f7ebdc08118eeec670a87",
+      "keyCount": 4165,
+      "locale": "zh-Hant",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    },
+    {
+      "fileSha256": "182734178e999dbbac2c9305055697264a1cd1f11aba3ba46598d80ae8512a3c",
+      "gitBlob": "07de34ee60be956f31e4f140c8854aa1ce8eb243",
+      "keyCount": 4165,
+      "locale": "vi",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json"
+    },
+    {
+      "fileSha256": "e65225395d2662439b6ee7e043a2d9f37badfa623f443701d4a07ac23d9076cf",
+      "gitBlob": "ab77028b217b5c9ebcbee0598dc6b5f8c83df106",
+      "keyCount": 4165,
+      "locale": "id",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json"
+    }
+  ],
+  "manifestSha256": "6144907a1aeb941a0d5b0723bb7425969307e168cfcc9baf9ff03de134d250bf",
+  "prBefore": {
+    "baseRefName": "main",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "4701933a50d367406fd6749c4baaf4befee22129",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "primaryINPUTSHA256SUMSFileSha256": "619b3a0b4978e6fe3758b089dd189b4e73d543635b72a51555f02b81ba2ecfe8",
+  "primaryPacketFileCount": 19,
+  "primaryPacketFiles": [
+    {
+      "actualSha256": "619b3a0b4978e6fe3758b089dd189b4e73d543635b72a51555f02b81ba2ecfe8",
+      "expectedSha256": "619b3a0b4978e6fe3758b089dd189b4e73d543635b72a51555f02b81ba2ecfe8",
+      "matches": true,
+      "path": "INPUT-SHA256SUMS",
+      "sizeBytes": 7695
+    },
+    {
+      "actualSha256": "e154018ceef13427aa95b0f35bac4577fe9cc18041d79939e7ddb292b849c9b1",
+      "expectedSha256": "e154018ceef13427aa95b0f35bac4577fe9cc18041d79939e7ddb292b849c9b1",
+      "matches": true,
+      "path": "README.md",
+      "sizeBytes": 1690
+    },
+    {
+      "actualSha256": "96add3258988e4c9a83739f7fba9c8760e7999b26775f740b7642fbbe4f2c8d6",
+      "expectedSha256": "96add3258988e4c9a83739f7fba9c8760e7999b26775f740b7642fbbe4f2c8d6",
+      "matches": true,
+      "path": "boundary-next-source-650.jsonl",
+      "sizeBytes": 24188
+    },
+    {
+      "actualSha256": "6ab980bf311fd7128125510d4b10824d79061fb706daf5b1c4f2838a0e1821ca",
+      "expectedSha256": "6ab980bf311fd7128125510d4b10824d79061fb706daf5b1c4f2838a0e1821ca",
+      "matches": true,
+      "path": "build_primary_packet.py",
+      "sizeBytes": 42831
+    },
+    {
+      "actualSha256": "d93f1617a01927d03596bb5439725629c07a7c15f23897bdf199a2de413ade3e",
+      "expectedSha256": "d93f1617a01927d03596bb5439725629c07a7c15f23897bdf199a2de413ade3e",
+      "matches": true,
+      "path": "caller-context.jsonl",
+      "sizeBytes": 79288
+    },
+    {
+      "actualSha256": "eb387899bc3c9654f9487b43529072d115c90e095f1bc748290898d5edcaaef6",
+      "expectedSha256": "eb387899bc3c9654f9487b43529072d115c90e095f1bc748290898d5edcaaef6",
+      "matches": true,
+      "path": "correction-candidates.jsonl",
+      "sizeBytes": 312596
+    },
+    {
+      "actualSha256": "6021ff3269f1d65088eb98ef14c7e2716a0c5884c72b311829f5ea7ac38551a9",
+      "expectedSha256": "6021ff3269f1d65088eb98ef14c7e2716a0c5884c72b311829f5ea7ac38551a9",
+      "matches": true,
+      "path": "final-reattestation.json",
+      "sizeBytes": 712
+    },
+    {
+      "actualSha256": "e37d3e03a7519b6fedd973761d92c11a97ce55f4543a17bcc56610961bec8ec4",
+      "expectedSha256": "e37d3e03a7519b6fedd973761d92c11a97ce55f4543a17bcc56610961bec8ec4",
+      "matches": true,
+      "path": "input-cells.jsonl",
+      "sizeBytes": 575718
+    },
+    {
+      "actualSha256": "0587078b63fc5120f9f737608fbf1bd51b3b0c3a04a076b62d2481231ede8e70",
+      "expectedSha256": "0587078b63fc5120f9f737608fbf1bd51b3b0c3a04a076b62d2481231ede8e70",
+      "matches": true,
+      "path": "make_plan.py",
+      "sizeBytes": 13209
+    },
+    {
+      "actualSha256": "b1ebf6d1cb92ff79479aea08102046b5402c49af8a4044e529ef0b946356f623",
+      "expectedSha256": "b1ebf6d1cb92ff79479aea08102046b5402c49af8a4044e529ef0b946356f623",
+      "matches": true,
+      "path": "manifest.json",
+      "sizeBytes": 7465
+    },
+    {
+      "actualSha256": "2afcdebf82307dac86f6f15577738bbab63040b61ede5d0c991ec60ed0a8f7ed",
+      "expectedSha256": "2afcdebf82307dac86f6f15577738bbab63040b61ede5d0c991ec60ed0a8f7ed",
+      "matches": true,
+      "path": "prior-context-dispositions.jsonl",
+      "sizeBytes": 55019
+    },
+    {
+      "actualSha256": "2ef647ea3ef92747fd63901d1aaf8d827a4e2cd71ca14751b05ba050965e96c8",
+      "expectedSha256": "2ef647ea3ef92747fd63901d1aaf8d827a4e2cd71ca14751b05ba050965e96c8",
+      "matches": true,
+      "path": "prior-disposition-boundary.json",
+      "sizeBytes": 138991
+    },
+    {
+      "actualSha256": "045e1130c379f734baaa298a0325f04ffb2fc41a8a27a7ec3e52414fe5f74480",
+      "expectedSha256": "045e1130c379f734baaa298a0325f04ffb2fc41a8a27a7ec3e52414fe5f74480",
+      "matches": true,
+      "path": "protected-literal-integrity.jsonl",
+      "sizeBytes": 524451
+    },
+    {
+      "actualSha256": "102b14b0b5388d50b5d3b8b38eea319fa8bfbefabc521bd31c5ce5524802a1f7",
+      "expectedSha256": "102b14b0b5388d50b5d3b8b38eea319fa8bfbefabc521bd31c5ce5524802a1f7",
+      "matches": true,
+      "path": "review-cells.jsonl",
+      "sizeBytes": 1864234
+    },
+    {
+      "actualSha256": "885eb575cede001136a6f87c723c04b91cad38df59d9165b991a8ec930bad8f2",
+      "expectedSha256": "885eb575cede001136a6f87c723c04b91cad38df59d9165b991a8ec930bad8f2",
+      "matches": true,
+      "path": "review-decisions.json",
+      "sizeBytes": 41838
+    },
+    {
+      "actualSha256": "303ce828b3e6bc2a844f83cad1799e1a19eedc18e36d97b66abdf0d3bc0e34b4",
+      "expectedSha256": "303ce828b3e6bc2a844f83cad1799e1a19eedc18e36d97b66abdf0d3bc0e34b4",
+      "matches": true,
+      "path": "review-plan.json",
+      "sizeBytes": 36663
+    },
+    {
+      "actualSha256": "2bdff895ee7cf5454a8da8ba6b619c61a94a6864804a1ea39a4b7cbd4414af4c",
+      "expectedSha256": "2bdff895ee7cf5454a8da8ba6b619c61a94a6864804a1ea39a4b7cbd4414af4c",
+      "matches": true,
+      "path": "reviewer-provenance.json",
+      "sizeBytes": 1396
+    },
+    {
+      "actualSha256": "74aa48f187b55e6eb813d46f234f4b492e03eaf1e993fbb9024a8b0e3c730cff",
+      "expectedSha256": "74aa48f187b55e6eb813d46f234f4b492e03eaf1e993fbb9024a8b0e3c730cff",
+      "matches": true,
+      "path": "source-slice.jsonl",
+      "sizeBytes": 100188
+    },
+    {
+      "actualSha256": "ad917b70e49daa808e327ee4a65a4ad07e6e22d6067fc2d3f8300beefe85c10d",
+      "expectedSha256": "ad917b70e49daa808e327ee4a65a4ad07e6e22d6067fc2d3f8300beefe85c10d",
+      "matches": true,
+      "path": "summary.json",
+      "sizeBytes": 6072
+    }
+  ],
+  "primaryPacketFilesVerified": true,
+  "primaryPacketPath": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0650-0699-primary-20261102",
+  "primarySHA256SUMSFileSha256": "6144907a1aeb941a0d5b0723bb7425969307e168cfcc9baf9ff03de134d250bf",
+  "remoteHeadBefore": "4701933a50d367406fd6749c4baaf4befee22129",
+  "repositoryInputCount": 63,
+  "repositoryInputs": [
+    {
+      "actualSha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+      "expectedSha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+      "gitBlob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/en.json"
+    },
+    {
+      "actualSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+      "expectedSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+      "gitBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+      "matches": true,
+      "path": "docs/localization/source-followup-20261101.json"
+    },
+    {
+      "actualSha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+      "expectedSha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+      "gitBlob": "449b91c6197ba6869e25bac6f97988d3be052475",
+      "matches": true,
+      "path": "docs/localization/provider-field-sources.json"
+    },
+    {
+      "actualSha256": "fa55830366cbbda0369cfe531f1f4d7a7cedb219bfdda76fede933cdcf980968",
+      "expectedSha256": "fa55830366cbbda0369cfe531f1f4d7a7cedb219bfdda76fede933cdcf980968",
+      "gitBlob": "53d349ac8108642bc7e0f7779c22b7978cd4ccd9",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/es.json"
+    },
+    {
+      "actualSha256": "ae97aa7b2a8225c803f36aeed436ceade72ce703029d5424e3837af9cdbc6341",
+      "expectedSha256": "ae97aa7b2a8225c803f36aeed436ceade72ce703029d5424e3837af9cdbc6341",
+      "gitBlob": "b2b5deaeb97e5daf27336e361a6b7cf3265dc633",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+    },
+    {
+      "actualSha256": "6bde0b12fccbaca0a064e9b4c538ddb70cf3f8a4bef68819dd5a65948edc2191",
+      "expectedSha256": "6bde0b12fccbaca0a064e9b4c538ddb70cf3f8a4bef68819dd5a65948edc2191",
+      "gitBlob": "3a6936a076c10b19da4628fca760b8baf185b023",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json"
+    },
+    {
+      "actualSha256": "0422beb76d4e1bfcd8c38af1e947d767c673adca59b5b5fa63594083209eaf56",
+      "expectedSha256": "0422beb76d4e1bfcd8c38af1e947d767c673adca59b5b5fa63594083209eaf56",
+      "gitBlob": "7e2bc532cbcc7caca5ba186af0b62c290b97c018",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/de.json"
+    },
+    {
+      "actualSha256": "2a023f87d3c410e04b8ed82ea09afa3f2a932df14577eea4d32764ba2b007bf4",
+      "expectedSha256": "2a023f87d3c410e04b8ed82ea09afa3f2a932df14577eea4d32764ba2b007bf4",
+      "gitBlob": "5c03a0f7f0dc75ba3ee38d9090740134e4716423",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json"
+    },
+    {
+      "actualSha256": "445a4dad047f5f48e2391cfa63d14f136b5469595d8bf0bbbf88c6e7c4f62c84",
+      "expectedSha256": "445a4dad047f5f48e2391cfa63d14f136b5469595d8bf0bbbf88c6e7c4f62c84",
+      "gitBlob": "40f7b9cb7d232423a6599566321aedcccd74b2b6",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json"
+    },
+    {
+      "actualSha256": "de772d910013b5ee0fc004c4eb683c6fc72ed2b57c33c8957b21b90a00b569af",
+      "expectedSha256": "de772d910013b5ee0fc004c4eb683c6fc72ed2b57c33c8957b21b90a00b569af",
+      "gitBlob": "261e148449a6eb4763ab35676ba88dcce08e1d12",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"
+    },
+    {
+      "actualSha256": "8969a16299a9b9b3d9719e61c08a0476410c7b0811376de5aac210dc107f538b",
+      "expectedSha256": "8969a16299a9b9b3d9719e61c08a0476410c7b0811376de5aac210dc107f538b",
+      "gitBlob": "1b6e8ec8d3df207a205d5c7dd00cfbbdde88455d",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json"
+    },
+    {
+      "actualSha256": "d663ff053269b375015830486d98bf69bf08a5e2e65e5fef90700ff7f49492ea",
+      "expectedSha256": "d663ff053269b375015830486d98bf69bf08a5e2e65e5fef90700ff7f49492ea",
+      "gitBlob": "c8d5b3473cc4324ae722de1f9fb2817a3ed55c7a",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json"
+    },
+    {
+      "actualSha256": "00fb4d9b8fb16dc2090c412c82f10040efb0190d0640b1981285da4eaeb93fab",
+      "expectedSha256": "00fb4d9b8fb16dc2090c412c82f10040efb0190d0640b1981285da4eaeb93fab",
+      "gitBlob": "85acc4a90e91b7145a2f7ebdc08118eeec670a87",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    },
+    {
+      "actualSha256": "182734178e999dbbac2c9305055697264a1cd1f11aba3ba46598d80ae8512a3c",
+      "expectedSha256": "182734178e999dbbac2c9305055697264a1cd1f11aba3ba46598d80ae8512a3c",
+      "gitBlob": "07de34ee60be956f31e4f140c8854aa1ce8eb243",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json"
+    },
+    {
+      "actualSha256": "e65225395d2662439b6ee7e043a2d9f37badfa623f443701d4a07ac23d9076cf",
+      "expectedSha256": "e65225395d2662439b6ee7e043a2d9f37badfa623f443701d4a07ac23d9076cf",
+      "gitBlob": "ab77028b217b5c9ebcbee0598dc6b5f8c83df106",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Localization/Core/id.json"
+    },
+    {
+      "actualSha256": "b0c55dddc77a89a79eb6def82120c3fb8e6e48a8cd53dc2e4af6b86067f6562f",
+      "expectedSha256": "b0c55dddc77a89a79eb6def82120c3fb8e6e48a8cd53dc2e4af6b86067f6562f",
+      "gitBlob": "90711e43c5e07ed86706e8ab826030851b0a26de",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Validation/Paths/RootFolderValidator.cs"
+    },
+    {
+      "actualSha256": "0cd8877dc731b2d8d98062a525cdf5a960bf173983fdbabf5ad2ce3a56fff68c",
+      "expectedSha256": "0cd8877dc731b2d8d98062a525cdf5a960bf173983fdbabf5ad2ce3a56fff68c",
+      "gitBlob": "be7014cb4e8f4181d775acfbb49ea53f02a46d72",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Kavita/KavitaService.cs"
+    },
+    {
+      "actualSha256": "cd57948fc631eca8bb5400d10c96642818c3741bfddf5775f15597409e8343c6",
+      "expectedSha256": "cd57948fc631eca8bb5400d10c96642818c3741bfddf5775f15597409e8343c6",
+      "gitBlob": "30236601ca7080d27ea88aefc05bde74dffe7b42",
+      "matches": true,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelfImportListSettings.cs"
+    },
+    {
+      "actualSha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47",
+      "expectedSha256": "87c14bbbd54416deddc4af587f6e8bcbbcf9c8fbf2a3b1ec9e375775ee80ea47",
+      "gitBlob": "b6f56b1660fa1d70f54bc131fb4b1d26f0896aff",
+      "matches": true,
+      "path": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs"
+    },
+    {
+      "actualSha256": "78ae7eda5718915c769519a5c78d5c9c48fb094ddf16ddc2f99dbabe3dd82120",
+      "expectedSha256": "78ae7eda5718915c769519a5c78d5c9c48fb094ddf16ddc2f99dbabe3dd82120",
+      "gitBlob": "7924350fba0f06a24d4b18ec0d112038dc783a35",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs"
+    },
+    {
+      "actualSha256": "b814b7d844f170ff4cf2dad3a48214d822ccb870d988c75f955a18f69d9b68cd",
+      "expectedSha256": "b814b7d844f170ff4cf2dad3a48214d822ccb870d988c75f955a18f69d9b68cd",
+      "gitBlob": "c7246fb51aefe37c079e7a736dac097d1e408801",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Validation/Paths/FolderWritableValidator.cs"
+    },
+    {
+      "actualSha256": "9445c67f3107f66a8722aec5decaf4f8f58f07329f1d1d19a63af3afac55dcf1",
+      "expectedSha256": "9445c67f3107f66a8722aec5decaf4f8f58f07329f1d1d19a63af3afac55dcf1",
+      "gitBlob": "f59450c659dc85d626d195266b57fcc41d4c31fd",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/NzbVortex/NzbVortexSettings.cs"
+    },
+    {
+      "actualSha256": "3b7e920c95032ec6ec0002a208c15084b5790f07749c90a5c66f613126dfa48e",
+      "expectedSha256": "3b7e920c95032ec6ec0002a208c15084b5790f07749c90a5c66f613126dfa48e",
+      "gitBlob": "f93ae00584a1c93aadd0a9759fe70314cb9e100c",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelfSettings.cs"
+    },
+    {
+      "actualSha256": "6ddf74e3f676ed937c33a2f0ca34d930700e1deadda7303cdab60f350d418625",
+      "expectedSha256": "6ddf74e3f676ed937c33a2f0ca34d930700e1deadda7303cdab60f350d418625",
+      "gitBlob": "e8ea70c7f6242e6617cd5f3baa64f3855ed5d8d7",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/EmbyJellyfin/EmbyJellyfinSettings.cs"
+    },
+    {
+      "actualSha256": "662e3df8be85ddd7e8624ae3d1998df045912a8bbc70d4e8b50e0bc6e6d54f62",
+      "expectedSha256": "662e3df8be85ddd7e8624ae3d1998df045912a8bbc70d4e8b50e0bc6e6d54f62",
+      "gitBlob": "1a086779b1753eb4a755b3e538fb82029d642f52",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/RootFolders/RootFolderController.cs"
+    },
+    {
+      "actualSha256": "e99e90a21c4413f5cc5d3e0230474987e3499cc7ef59cb620c98bec44ed40646",
+      "expectedSha256": "e99e90a21c4413f5cc5d3e0230474987e3499cc7ef59cb620c98bec44ed40646",
+      "gitBlob": "841afe78f245d9cb8c6ea64206017873a59ebeaa",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/DownloadStationSettings.cs"
+    },
+    {
+      "actualSha256": "b09e865e5c023f004ecf8f28a3847d318feea0c67e9a49f0aceaa94c6ff419f6",
+      "expectedSha256": "b09e865e5c023f004ecf8f28a3847d318feea0c67e9a49f0aceaa94c6ff419f6",
+      "gitBlob": "7d2f89e3dbe84408ee391282dc8c078fbbe48e03",
+      "matches": true,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsDualMediaImportListSettings.cs"
+    },
+    {
+      "actualSha256": "987f4712fefaeb1a8b936c68e29919a3eb28a98b89847befce5fd7df71d3ec47",
+      "expectedSha256": "987f4712fefaeb1a8b936c68e29919a3eb28a98b89847befce5fd7df71d3ec47",
+      "gitBlob": "2f5e790223a485f52e43386935cd6b8553e2d87e",
+      "matches": true,
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportListSettings.cs"
+    },
+    {
+      "actualSha256": "27a2af1a16c38f8fad81fde5d18839aadb6206db83f58f582be3c444ada0c9d1",
+      "expectedSha256": "27a2af1a16c38f8fad81fde5d18839aadb6206db83f58f582be3c444ada0c9d1",
+      "gitBlob": "47e1117bee380b6959c948db3817e95a4ab6816a",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Books/BookController.cs"
+    },
+    {
+      "actualSha256": "c0050d01494b3dfb3f58d0bd70c809007a1ac2235b114bb1785a32c92dd5f1ef",
+      "expectedSha256": "c0050d01494b3dfb3f58d0bd70c809007a1ac2235b114bb1785a32c92dd5f1ef",
+      "gitBlob": "85b03b71eb5a8920efd4abcc913eed56ba41fdf9",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Grimmory/GrimmorySettings.cs"
+    },
+    {
+      "actualSha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c",
+      "expectedSha256": "637b63deba408a62402ee9532b72202fa81034d0374de6d331cc24b9ab3cf32c",
+      "gitBlob": "a3a899a8b318a9739e03c7b34eea630b8ef418d1",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/Nzbget/Nzbget.cs"
+    },
+    {
+      "actualSha256": "c4b4352d02af7fd2f68f62a5cfa8efe08b23bd8da12ca5ef91cced53f54660b4",
+      "expectedSha256": "c4b4352d02af7fd2f68f62a5cfa8efe08b23bd8da12ca5ef91cced53f54660b4",
+      "gitBlob": "3dd7e875b902bbb6b8bbc638829b215b02eab284",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Apprise/AppriseProxy.cs"
+    },
+    {
+      "actualSha256": "fb2717144a8f637b59ec08062fd6e8def7e09c231a31b4928087e57bbf907d4d",
+      "expectedSha256": "fb2717144a8f637b59ec08062fd6e8def7e09c231a31b4928087e57bbf907d4d",
+      "gitBlob": "7768a743a1058a35ce60091084550ced51ecde73",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/CustomScript/CustomScript.cs"
+    },
+    {
+      "actualSha256": "d3ec39e6378942fd289c6562953cc9c74dac3d28d4c535ded9514eb275c0a54b",
+      "expectedSha256": "d3ec39e6378942fd289c6562953cc9c74dac3d28d4c535ded9514eb275c0a54b",
+      "gitBlob": "e97d26b83cf8daae24a6d99c09981397356b6159",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Config/HostConfigController.cs"
+    },
+    {
+      "actualSha256": "7aa42a641cfb3f9033cfa23ab62ce0248f49d9fac405ad30b3f7ee88bc63e5f8",
+      "expectedSha256": "7aa42a641cfb3f9033cfa23ab62ce0248f49d9fac405ad30b3f7ee88bc63e5f8",
+      "gitBlob": "0c7762c10bb166caec3855f243eb8671fb110ccd",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Signal/SignalProxy.cs"
+    },
+    {
+      "actualSha256": "17f7719d453b904cb62810216ea2d4818d498138305f742f47a97c509fd46159",
+      "expectedSha256": "17f7719d453b904cb62810216ea2d4818d498138305f742f47a97c509fd46159",
+      "gitBlob": "a60fa75343db0c6870260f8a6bbb4f7028d47406",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Join/JoinProxy.cs"
+    },
+    {
+      "actualSha256": "fe58c202cfc8db1d35f602f258dd6496cbb977c3caa8a0bda175f6b53864c30e",
+      "expectedSha256": "fe58c202cfc8db1d35f602f258dd6496cbb977c3caa8a0bda175f6b53864c30e",
+      "gitBlob": "c6784aa8357cc3234c49a73e307e73365e6c8ba2",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Grimmory/GrimmoryProxy.cs"
+    },
+    {
+      "actualSha256": "a2419911cbed58c7940fd2c326924a61c4ca4b5fb3ae8e070752bbe175a0c6ed",
+      "expectedSha256": "a2419911cbed58c7940fd2c326924a61c4ca4b5fb3ae8e070752bbe175a0c6ed",
+      "gitBlob": "cdb81f1e30bc9d8034b58f3e817b8b5f27f34a7a",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Author/AuthorMediaMoveController.cs"
+    },
+    {
+      "actualSha256": "fcb07f956e4831e58a1824cc3304a93e468833b0187272ccdb992a638d51af46",
+      "expectedSha256": "fcb07f956e4831e58a1824cc3304a93e468833b0187272ccdb992a638d51af46",
+      "gitBlob": "a2007e501d3c5812a296fdd81e5540c2a72005b8",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/RootFolders/RootFolderResource.cs"
+    },
+    {
+      "actualSha256": "7d9564eb92ac68a02cf40be01b4f5593716987c9a1582da469120885908a19d2",
+      "expectedSha256": "7d9564eb92ac68a02cf40be01b4f5593716987c9a1582da469120885908a19d2",
+      "gitBlob": "dd7b7f65944fe16b37d5fd662bca12bf83eda48a",
+      "matches": true,
+      "path": "src/NzbDrone.Core/ImportLists/Hardcover/Library/HardcoverLibraryImportList.cs"
+    },
+    {
+      "actualSha256": "abc504da5598ec8c2d28a121c274390aab80e5a2f2f09dac5a2ae2e90d87dee4",
+      "expectedSha256": "abc504da5598ec8c2d28a121c274390aab80e5a2f2f09dac5a2ae2e90d87dee4",
+      "gitBlob": "028139556d14f10b6a4abe7d0e68f9e5981c675a",
+      "matches": true,
+      "path": "src/Chaptarr.Http/Middleware/StartingUpMiddleware.cs"
+    },
+    {
+      "actualSha256": "65a36ffd1ea1750040e57e0140587bd29ac6589e8d9d8a543150160acf46e45e",
+      "expectedSha256": "65a36ffd1ea1750040e57e0140587bd29ac6589e8d9d8a543150160acf46e45e",
+      "gitBlob": "232db8a8b9abf0f3a462ffaabee7a119f76ee069",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Books/BookLookupController.cs"
+    },
+    {
+      "actualSha256": "215c45786b9746587c88afc31edaf75a03677ad73fd1d1ce666fd97541a9cc5b",
+      "expectedSha256": "215c45786b9746587c88afc31edaf75a03677ad73fd1d1ce666fd97541a9cc5b",
+      "gitBlob": "e2bef4444c8f58382718ea4eb5838dddd1e22912",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/Aria2/Aria2.cs"
+    },
+    {
+      "actualSha256": "4970e049ad976366804a40aa787d95aa1165c2e12f81c1f1835c6f9bcce25ad9",
+      "expectedSha256": "4970e049ad976366804a40aa787d95aa1165c2e12f81c1f1835c6f9bcce25ad9",
+      "gitBlob": "f43190c6441766b23529436e7264328a727753e7",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Books/Calibre/CalibreSettings.cs"
+    },
+    {
+      "actualSha256": "c1d19078cd0ddaeb2cd48d9605c40bda47268d5e419d495d6c10d9fa5194cedc",
+      "expectedSha256": "c1d19078cd0ddaeb2cd48d9605c40bda47268d5e419d495d6c10d9fa5194cedc",
+      "gitBlob": "4aab9f265125bfca1399620c8034672324b36344",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/BookOrbit/BookOrbitProxy.cs"
+    },
+    {
+      "actualSha256": "ca79e8aa41aa5091bec4221e8880b06ba34865ee07202d29d55bb1e9e2f70190",
+      "expectedSha256": "ca79e8aa41aa5091bec4221e8880b06ba34865ee07202d29d55bb1e9e2f70190",
+      "gitBlob": "064b6537f29ae63b1ab2a3222bea6a1058f3fb21",
+      "matches": true,
+      "path": "src/NzbDrone.Core/ImportLists/Goodreads/Bookshelf/GoodreadsBookshelf.cs"
+    },
+    {
+      "actualSha256": "9cec4ed626494d89ef6f8500675c255654ce38f7fdf7389866e53435cecb3d52",
+      "expectedSha256": "9cec4ed626494d89ef6f8500675c255654ce38f7fdf7389866e53435cecb3d52",
+      "gitBlob": "940b989c913bc8ff2e39a079814f2569a884804c",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Synology/SynologyIndexer.cs"
+    },
+    {
+      "actualSha256": "7e276bc2ae25c75b8de1cbf9354164511cdf80e3947b183e94f6dc5e7aea8590",
+      "expectedSha256": "7e276bc2ae25c75b8de1cbf9354164511cdf80e3947b183e94f6dc5e7aea8590",
+      "gitBlob": "d6c4f21130e612950b9fafd07e936fe1129c5ac6",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Config/NamingPatternController.cs"
+    },
+    {
+      "actualSha256": "659f8bf02af988651ec1899ea5357813834fa389c0d58902006bc91953191e43",
+      "expectedSha256": "659f8bf02af988651ec1899ea5357813834fa389c0d58902006bc91953191e43",
+      "gitBlob": "76e6dd771ff0aa36743ece4142a06b9e6eace5e4",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Books/RetagBookController.cs"
+    },
+    {
+      "actualSha256": "a18d66c921856787011872e2cc91bb5b1dafca7aa92808cb0446abd111e9b30b",
+      "expectedSha256": "a18d66c921856787011872e2cc91bb5b1dafca7aa92808cb0446abd111e9b30b",
+      "gitBlob": "fb170eaa363d4e94534b046bf400169a51e68cf9",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/ManualImport/ManualImportController.cs"
+    },
+    {
+      "actualSha256": "f95fcdf207557ee9ca8c3fb6b7e44b0603c6f220f9109e5658152d11195b4e0e",
+      "expectedSha256": "f95fcdf207557ee9ca8c3fb6b7e44b0603c6f220f9109e5658152d11195b4e0e",
+      "gitBlob": "c10d43dcc4b6e2ce84c46771e85ee4ecd33d3987",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/MqttGateway/MqttGatewaySettings.cs"
+    },
+    {
+      "actualSha256": "44a1a59dbfcd6f10c001a8f28ef9268000743666bdc44f7048e819bb40c827c8",
+      "expectedSha256": "44a1a59dbfcd6f10c001a8f28ef9268000743666bdc44f7048e819bb40c827c8",
+      "gitBlob": "3afee348535e9e7326f06b73fffd91ff465f6b04",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/ProviderIds/ProviderAmbiguityResource.cs"
+    },
+    {
+      "actualSha256": "642be969f1fc1c78d4462dc932af0386cf96678eaf63d87faabb6c3f84684f6f",
+      "expectedSha256": "642be969f1fc1c78d4462dc932af0386cf96678eaf63d87faabb6c3f84684f6f",
+      "gitBlob": "d64c6cd8ce6c6bbeac4f5511ccbaa36cb5bf807e",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/Hadouken/HadoukenSettings.cs"
+    },
+    {
+      "actualSha256": "7c83bff1c3a5935b75a4e5170580045ed9778428f424ab4790d05b5b0e364b92",
+      "expectedSha256": "7c83bff1c3a5935b75a4e5170580045ed9778428f424ab4790d05b5b0e364b92",
+      "gitBlob": "ab4af215e1668983efb8d2ef950e05f52ce42a2b",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Config/DevelopmentConfigController.cs"
+    },
+    {
+      "actualSha256": "a2161358537dda3212659748fa6bb2ef9b60b71fb4928730d6a19526cfe7b5f3",
+      "expectedSha256": "a2161358537dda3212659748fa6bb2ef9b60b71fb4928730d6a19526cfe7b5f3",
+      "gitBlob": "78f2520c03dc59b9d8549810c2885002ab1edd0d",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Books/Services/PendingImportService.cs"
+    },
+    {
+      "actualSha256": "ef40892112243b445b108e411b08ae8378c28b4fa7e9f8c1bc3cedc9d7b1adfc",
+      "expectedSha256": "ef40892112243b445b108e411b08ae8378c28b4fa7e9f8c1bc3cedc9d7b1adfc",
+      "gitBlob": "5af78169b325f31d5acc61e78980636bd1729dcb",
+      "matches": true,
+      "path": "src/NzbDrone.Core/ImportLists/Chaptarr/ChaptarrV1Proxy.cs"
+    },
+    {
+      "actualSha256": "aacc197c7909c30cf64efa8d59524c34a703a716e8dba63847b1e7552ad37aff",
+      "expectedSha256": "aacc197c7909c30cf64efa8d59524c34a703a716e8dba63847b1e7552ad37aff",
+      "gitBlob": "37fe574c98967d8479ee1412961272bf4f82d2a5",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/PushBullet/PushBulletProxy.cs"
+    },
+    {
+      "actualSha256": "fd947cb5b2b563b004535670272bf1f801baa55ed9ff0c23e99ec90829cdabf1",
+      "expectedSha256": "fd947cb5b2b563b004535670272bf1f801baa55ed9ff0c23e99ec90829cdabf1",
+      "gitBlob": "69c93707422e8f13124b41dc0a5e4ad45eeef410",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Commands/CommandController.cs"
+    },
+    {
+      "actualSha256": "5867b1968488296ae963f67414acc6fdf0cf9cc1f3a027b9ea517267c1c74f7c",
+      "expectedSha256": "5867b1968488296ae963f67414acc6fdf0cf9cc1f3a027b9ea517267c1c74f7c",
+      "gitBlob": "0b55c9ec804a6e955360b91666a886febd01ebe1",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Author/AuthorController.cs"
+    },
+    {
+      "actualSha256": "0d11db1b184f08654f35a6ed39ac396c186338aa37438d1ba7bdda8addffa65b",
+      "expectedSha256": "0d11db1b184f08654f35a6ed39ac396c186338aa37438d1ba7bdda8addffa65b",
+      "gitBlob": "e773cc7601978f0365a9cb191e08f0b71e5797d6",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Notifications/Mailgun/Mailgun.cs"
+    },
+    {
+      "actualSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "expectedSha256": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "gitBlob": "11470300f03fff4f861b9757a8172dfe9fac32d0",
+      "matches": true,
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs"
+    },
+    {
+      "actualSha256": "ccd03b0b7f9ddacb2bdaba94b782d978418b0cb69257f60aac2b62c32b514fa0",
+      "expectedSha256": "ccd03b0b7f9ddacb2bdaba94b782d978418b0cb69257f60aac2b62c32b514fa0",
+      "gitBlob": "b234f0d356bb8c6eb31e7863574085e2aa0953e5",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Series/AddSeriesController.cs"
+    },
+    {
+      "actualSha256": "7e7d48c559462ca588724e12a8cb12be7d8ee744c2bcfbc0a69d3e740925172e",
+      "expectedSha256": "7e7d48c559462ca588724e12a8cb12be7d8ee744c2bcfbc0a69d3e740925172e",
+      "gitBlob": "ca77230d4a555651a4960f2399816f1affba45ac",
+      "matches": true,
+      "path": "src/Chaptarr.Api.V1/Configuration/ProxyController.cs"
+    }
+  ],
+  "repositoryInputsVerified": true,
+  "sourceFollowup": {
+    "currentMissingIds": 1210,
+    "fileSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "gitBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "path": "docs/localization/source-followup-20261101.json",
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c"
+  },
+  "w649BoundaryCells": 12,
+  "w649CallerRefRowsReattested": 12,
+  "w649UniqueCallerRefsReattested": 1,
+  "w650BoundaryCells": 12,
+  "w650CallerRefsIncludedInWindowPins": 1
+}

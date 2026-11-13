@@ -15,10 +15,12 @@ namespace NzbDrone.Core.Download.Clients.Hadouken
             RuleFor(c => c.UrlBase).ValidUrlBase().When(c => c.UrlBase.IsNotNullOrWhiteSpace());
 
             RuleFor(c => c.Username).NotEmpty()
-                                    .WithMessage("Username must not be empty.");
+                                    .WithMessage("Username must not be empty.")
+                                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m61760b3f62ff"));
 
             RuleFor(c => c.Password).NotEmpty()
-                                    .WithMessage("Password must not be empty.");
+                                    .WithMessage("Password must not be empty.")
+                                    .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m81fa19be5293"));
         }
     }
 

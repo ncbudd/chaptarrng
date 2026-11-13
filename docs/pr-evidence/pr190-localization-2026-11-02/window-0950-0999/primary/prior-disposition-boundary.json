@@ -1,0 +1,81 @@
+{
+  "priorApplicationFilesSha256": {
+    "apply-plan.jsonl": "faedb63c8c83a68835a98dec47a687ce49258adf6e2d95d0996cabd61f22b8a8",
+    "apply-readback.jsonl": "99b6021da9ac4f1ea7404b870742aea466197e84009ec0f56a5c6c19bd46c292",
+    "apply-summary.json": "074b31972e614149ae09c58b3d64164d743cda50c824ee6036415609046a622d",
+    "catalog-preapply-pins.jsonl": "17194045eae181de5191e54f62bf527a8f394a8aba81eb4655d17f8f28b39c8b",
+    "post-apply-catalog-attestation.json": "5e91182d2dd366d4bae9b1690acb2c8ae2a4b2929cc5fe9549c692c4ef02cc9f"
+  },
+  "priorApplicationPacket": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/application",
+  "priorApplicationSumsSha256": null,
+  "priorCellDispositionRows": 11400,
+  "priorCrossReviewPacket": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/crossreview",
+  "priorCrossReviewRows900Through949": 600,
+  "priorCrossReviewSummarySha256": "e61591b5ad326a98860f902b993642de73236023c88540db67fb821a6150f624",
+  "priorCrossReviewSumsSha256": "b251d2be67f9e9575529adc50ee25528f72562288792f61f1cce7e0ddc16023f",
+  "priorExactDispositionRows": 11400,
+  "priorLiveCatalogMatchesFinalCount": 11205,
+  "priorLiveCatalogMismatchesCount": 195,
+  "priorPrimaryManifestSha256": "795f1b6bddd08117c158027586a56fcde0c8142043691ba6251e7c1d25cda658",
+  "priorPrimaryRows0Through899": 10800,
+  "priorPrimarySumsSha256": "f4990d65eefc3e2b0de8dfbbf7dc6afced7f20ecbdd20c287f00cf20f70d5c9d",
+  "priorQueuePositionOverlapWithSelected": 0,
+  "sourcePositionCoverage": [
+    0,
+    949
+  ],
+  "verifiedPriorPrimaryPacket": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/primary",
+  "w884SourceCorrectionContext": {
+    "currentSourceText": "Can not contain '\\', '//', or start/end with '/'",
+    "currentSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+    "instruction": "Specific source-884 follow-up only; no decisions in this packet modify/reopen its 12 locale cells.",
+    "outsideSelectedPositions": true,
+    "path": "/home/keith/Documents/code/task-worktrees/localization-20261102-chaptarrng/docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/source-correction/source-correction-record.json",
+    "record": {
+      "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+      "callerFileSha256BeforeAndAfter": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+      "callers": [
+        {
+          "line": 27,
+          "lineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb",
+          "lineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+        },
+        {
+          "line": 29,
+          "lineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b",
+          "lineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+        },
+        {
+          "line": 31,
+          "lineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5",
+          "lineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+        },
+        {
+          "line": 33,
+          "lineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661",
+          "lineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+        }
+      ],
+      "heldLocaleCells": 12,
+      "heldSourceId": "server.message.mf00d6bc38ae8",
+      "heldSourceOrdinal": 884,
+      "newSource": "Can not contain '\\', '//', or start/end with '/'",
+      "newSourceFingerprint": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+      "newSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+      "oldSource": "Can not contain '', '//', or start/end with '/'",
+      "oldSourceFingerprint": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+      "oldSourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d",
+      "semanticConclusion": "The four validators reject backslash anywhere, reject //, and disallow a leading or trailing slash. The catalog source with empty quotes was wrong; source text now matches all four callers.",
+      "sourceId": "server.message.mf00d6bc38ae8",
+      "sourceMessageHashesSha256After": "f13e8b8db5ec55fb2228bd8462f3f842373c86f6349ea3a400b98ec6d8d6468d",
+      "sourceMessageHashesSha256Before": "7c21ed396c1340c77b5635f2f5c1e6f966bf4342b03052397d39997c7920747b",
+      "stableIdRetained": true,
+      "translationReviewState": "held pending fresh exact-head review against the corrected source",
+      "validationRule": "^([^\\\\\\/](\\/?[^\\\\\\/])*)?$"
+    },
+    "sha256": "ec748de8451bee99683cd12252edc995408ace485ba2795464d9d5ec237d125d"
+  },
+  "w949BoundaryAll12Match": true,
+  "w949BoundaryLiveMatchesCrossReviewFinal": 12,
+  "w949BoundaryRows": 12
+}

@@ -1,0 +1,33 @@
+{
+  "allRowsHeld": true,
+  "artifact": "ChaptarrNG PR #190 independent blind creative-hold review",
+  "blobPinCount": 16,
+  "blobPinTypeCounts": {
+    "caller-source": 3,
+    "source-catalog": 1,
+    "target-catalog": 12
+  },
+  "createdAtUTC": "2026-11-03T16:28:52.975782+00:00",
+  "excludedIndonesianDodgeCellPresent": false,
+  "head": "712d597e6f27f6485f7c287b70f6dc79003ca714",
+  "holdCount": 20,
+  "inputChecksumVerification": "PASS",
+  "localeCount": 12,
+  "nativeSpeakerApproval": false,
+  "promptCount": 20,
+  "promptGroupCounts": {
+    "dodge-books": 11,
+    "ebook-smell": 8,
+    "provider-option": 1
+  },
+  "proposalCount": 20,
+  "pullRequest": 190,
+  "qualifiedNativeSpeakerReviewPending": true,
+  "repository": "snapetech-org/ChaptarrNG",
+  "repositoryOrPrFilesEdited": false,
+  "schemaVersion": 1,
+  "sealed": true,
+  "sourceCount": 3,
+  "testsBuildsScansCiRun": false,
+  "tree": "275b19ba948bacd883d845ec970c154511be0e43"
+}

@@ -1,0 +1,122 @@
+{
+  "allReadbacksMatch": true,
+  "catalogKeySetParity": true,
+  "catalogOrderPreservedPerLocale": true,
+  "catalogs": [
+    {
+      "fileSha256": "07be9968c8398354d2c511427ca170553be3b7704ca1e406b0cff70756db1471",
+      "gitBlobOid": "3597b9fde7cc23412bd75782e910c2a0268b1ba6",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "ar",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json"
+    },
+    {
+      "fileSha256": "dc66b38e8a54e8f772a5d3beb73cda9b98f59a45bab6546ae21c105acebdc51d",
+      "gitBlobOid": "e75e67631fb6ea67e48d99729fd61a0ebdac5052",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "de",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json"
+    },
+    {
+      "fileSha256": "e6d549b25e6e597155a3dbc3d49b603e391410ea51c6882b2a59c157bb24bc15",
+      "gitBlobOid": "e199ab5e268208380e264a66f0b1f245f324f7e1",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "es",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json"
+    },
+    {
+      "fileSha256": "f0ceca5e961594141f66b987234f8b92324b762e56e641293f414e685dc4a568",
+      "gitBlobOid": "881a93de37a61f030ebca9f01218467f0a8ebd22",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "fr",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json"
+    },
+    {
+      "fileSha256": "ae3a086889f4a249fe00bdce5fa39227abcecfc503469a916c7c37fa25a4b505",
+      "gitBlobOid": "d732c9ceb4271c4f8711d0428ba72d5baccd47fa",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "hi",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json"
+    },
+    {
+      "fileSha256": "2f314c616632e3b0efd050786ef5eb94ba192e6855eecf6fa1428ee79560cede",
+      "gitBlobOid": "f963fd1e1417e028a1d2a713e6c93abae4a74274",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "id",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json"
+    },
+    {
+      "fileSha256": "a376c466855e72199a1e97ec5c8feb0aecda12b10fbe30cb5ed32677ace66469",
+      "gitBlobOid": "9f1c57e12768ac74d097e45e507500c1b52c6349",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "ja",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json"
+    },
+    {
+      "fileSha256": "a1a0d9b6c26ea01a01c7dd6a5c75e1e21016f01bb0d36caa1c60186ccd3cb2e4",
+      "gitBlobOid": "d9cafdb45b0e63d3c54f94e82b04d13b036209e1",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "ko",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json"
+    },
+    {
+      "fileSha256": "05b13fe20b62a4d86bf338897e5b45df784de2a5ed078c720356cca0b4bad475",
+      "gitBlobOid": "897f1060b991fee5e09e26eb62c204846e5145aa",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "pt-BR",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json"
+    },
+    {
+      "fileSha256": "76676e171307e84451d4f0e3455a1e9eb582a7ee182cbb575ca2ab861b46c183",
+      "gitBlobOid": "c70d1f8061a1ce2918e573b24149eabc2d17ed34",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "vi",
+      "orderedKeysSha256": "87dffb463daf776059795552d966ad60c5889c5ae22fa0f11ca722209520edae",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json"
+    },
+    {
+      "fileSha256": "31fb4e0de12db21a1a0cb7c27d69b4dae9f808e44fb78eea49305a59c11c4675",
+      "gitBlobOid": "c300012b99ffc485301f1fc254c04c200eab5aa2",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "zh-Hans",
+      "orderedKeysSha256": "87dffb463daf776059795552d966ad60c5889c5ae22fa0f11ca722209520edae",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json"
+    },
+    {
+      "fileSha256": "7468962bbc51b23bd57e574365eb6f2fdc27d5a74a97896e830576fc248b28b7",
+      "gitBlobOid": "447ce420ca8c308c93f2c69bf1f7f483a2c55830",
+      "keyCount": 4165,
+      "keySetSha256": "d5d5cd91750533389b50db9ad469e0e71769b70de597c11c9de299e09d99023f",
+      "locale": "zh-Hant",
+      "orderedKeysSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+    }
+  ],
+  "changedCells": 122,
+  "globalCatalogOrderParity": false,
+  "pullRequest": 190,
+  "readbackCells": 600,
+  "repository": "snapetech-org/ChaptarrNG",
+  "sourceHead": "a9a74f6ba733e8c1f06a2d260bd802d4fde2da0e",
+  "sourceTree": "d9d25f309f3a7256056b4ed8deb1dabee58b64fe"
+}

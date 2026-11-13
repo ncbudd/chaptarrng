@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequestVerification": {
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "verifiedAtUtc": "2026-11-02 11:29:01 UTC"
+  },
+  "exactHead": "a5556ed5fc6869e4818ff11813c2d689775651a7",
+  "exactTree": "995e552aa07064ba19da3f63425a6d26046d8c25",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "primaryPacket": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0100-0149-primary-part-b-20261102",
+    "reviewInputSha256": "e0708b0d3c09a3b82a8a93e7c9fa9c5ede96ae1fe4d9aa8e17ae7bf2bcdf9f89",
+    "reviewSha256": "ed41b93f5abddbca9d5560bef1b946075d41a08b429d3c868b9ef2e5da27ab0e",
+    "reviewRows": 300,
+    "checksumManifestPassed": true
+  },
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "currentMissingIdsCount": 1210,
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "selectedWindow": [
+      100,
+      149
+    ],
+    "selectedIdsMatchPrimary": true
+  },
+  "sourceCatalog": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "bytes": 312087,
+    "keyCount": 4165
+  },
+  "targetCatalogs": [
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "bytes": 352136,
+      "sha256": "cf370a5dc5e985b0b784b1b35f658c9f3775ec3f51eb71985e8f0e15c01ac8b5",
+      "blob": "f010cd8fe109fb57a6925502902180383fe993ea",
+      "locale": "pt-BR",
+      "keyCount": 4165
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "bytes": 431093,
+      "sha256": "682ac96e7d071de1b37263bc81c90f2a6589833ebab2404af5a34baf7330c1ef",
+      "blob": "45a9b34963c920b381f73879b7fbef23de3a0944",
+      "locale": "ar",
+      "keyCount": 4165
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "bytes": 367450,
+      "sha256": "36323207484b532742f3344484daa0eea044963f9389053cce2603b5958856d8",
+      "blob": "75d108f9cf2e13da8b43b722dd302ec9e8e30306",
+      "locale": "ko",
+      "keyCount": 4165
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "bytes": 307006,
+      "sha256": "81715464d379cb45594768510058daec1dee4febb312a7874e36cb2eab399c59",
+      "blob": "c8ea7cf54310eab73ddb56de67ec24717acfc6a5",
+      "locale": "zh-Hant",
+      "keyCount": 4165
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "bytes": 388812,
+      "sha256": "bf815642b96fa891bdc6bf1821765512c9a61bffdab5a10beccc0bf0396ca1e4",
+      "blob": "daf15d59a089179b7086bbac739ac80fd8ef6c3f",
+      "locale": "vi",
+      "keyCount": 4165
+    },
+    {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "bytes": 332623,
+      "sha256": "ac86dd1898efa605b1b08b2828de66a917f53dfe5408a6f160b383d0168f9d09",
+      "blob": "11fccf03ba088884e1e52fbfa6276b0752eba633",
+      "locale": "id",
+      "keyCount": 4165
+    }
+  ],
+  "callerReattestation": {
+    "referencesChecked": 4272,
+    "uniqueCallerFileLinePins": 705,
+    "uniqueCallerFiles": 25,
+    "callerPinMismatches": 0
+  },
+  "rowReattestation": {
+    "cells": 300,
+    "inputCurrentCatalogMismatches": 0,
+    "primaryTargetHashMismatches": 0,
+    "placeholderMismatches": 0,
+    "protectedLiteralMismatches": 0
+  },
+  "crossReviewCounts": {
+    "accepted": 296,
+    "missed": 3,
+    "refined": 1
+  },
+  "crossReviewRecommendations": 4,
+  "primaryProposalsReattested": 27,
+  "primaryProposalsAcceptedUnchanged": 26,
+  "primaryProposalsRefined": 1,
+  "primaryProposalsRejected": 0,
+  "blockers": [],
+  "nativeSpeakerApproval": false,
+  "repositoryMutated": false,
+  "testsBuildsScansCiWorkflowsReleasesTagsMerges": false
+}

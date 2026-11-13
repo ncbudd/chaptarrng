@@ -1,0 +1,80 @@
+{
+  "additionalProtectedLiteralsByOrdinal": {
+    "806": [
+      "RanobeDB",
+      "rn:",
+      "foreignBookId"
+    ],
+    "808": [
+      "bookFileIds"
+    ],
+    "809": [
+      "null"
+    ],
+    "825": [
+      "bookId",
+      "bookFileIds",
+      "unmapped"
+    ],
+    "826": [],
+    "827": [
+      "TV"
+    ],
+    "830": [
+      "Settings",
+      "Media Management"
+    ]
+  },
+  "sourceContextRationalesByOrdinal": {
+    "800": "BookshelfNG book additions require exactly one edition, whose format selects the catalog entry.",
+    "801": "This is a path-validation error; keep the interpolated path intact.",
+    "802": "The API rejects an unsupported preference for the source used by a metadata field.",
+    "803": "The custom-format name must be unique; use a value-uniqueness term rather than “distinctive.”",
+    "804": "The Hardcover integration rejects an invalid or expired API token.",
+    "805": "The Hardcover library import list requires selecting one or more sections to import.",
+    "806": "RanobeDB release IDs identify editions, while foreignBookId requires an rn: work ID.",
+    "807": "The email notification validation reports failure to send a test email.",
+    "808": "The manual-import endpoint requires a folder when bookFileIds is supplied.",
+    "809": "The API validates the MonitorExistingMode enum; preserve every exact enum token and placeholder.",
+    "810": "The validator requires a URL path and shows an example; preserve URL and the example placeholder.",
+    "811": "The service is temporarily restarting after a factory reset; preserve the Chaptarr name.",
+    "812": "The direct-download transfer expected the completed file in its staging folder.",
+    "813": "Quality profile groups must include an ID.",
+    "814": "The HTTP import-list handler rejects the feed and appends opaque exception text in value0.",
+    "815": "The Calibre library is already configured as a root folder.",
+    "816": "Calibre and Grimmory callers report connection failures followed by opaque exception text.",
+    "817": "The custom-script path must not be inside the interpolated system folder.",
+    "818": "The Calibre content server requires authentication and the user must supply credentials.",
+    "819": "At least one narrator name is required by the narrator-name specification.",
+    "820": "The missing-book search interval accepts 0 to disable it or a value of at least 60 minutes.",
+    "821": "The metadata profile contains language values that are not recognized.",
+    "822": "Manual import could not resolve the selected edition for the requested media type.",
+    "823": "The indexer query succeeded but returned no results for configured categories; the category settings may be wrong.",
+    "824": "The path must not be the startup folder; preserve the path interpolation.",
+    "825": "The book-file operation requires at least one of four exact API identifiers.",
+    "826": "The path resolves to an interpolated system folder; preserve both values.",
+    "827": "The SABnzbd field instructs the user to disable TV sorting.",
+    "828": "The qBittorrent download is missing files.",
+    "829": "Calibre validation expects a valid library.",
+    "830": "The author controller cannot proceed without a root folder for the requested media type; retain the Settings navigation labels.",
+    "831": "No edition for the requested media type exists for this book.",
+    "832": "The Synology indexer validation requires a Synology target.",
+    "833": "The URL field is required.",
+    "834": "The author already exists in the author collection.",
+    "835": "The manual-import book ID does not agree with the requested media type.",
+    "836": "The narrator service cannot find the book identified by value0.",
+    "837": "Hardcover import requires enabling Hardcover in Settings or providing the list API token.",
+    "838": "The Hardcover settings endpoint could not clear the API token.",
+    "839": "Adding a book requires a stable provider ID at work level; preserve the distinction from edition IDs.",
+    "840": "The Goodreads import-list settings require at least one bookshelf.",
+    "841": "The selected root folder lacks a default metadata profile for the interpolated media type.",
+    "842": "The Apprise test message failed; the API response in value0 is opaque and must remain untouched.",
+    "843": "Download Station, Usenet Download Station, and other callers report authentication failure.",
+    "844": "The media-move endpoint cannot resolve the library folder for the interpolated author name.",
+    "845": "The Goodreads bookshelf refresh interval has a configured minimum.",
+    "846": "The author cannot be re-added without an external provider ID.",
+    "847": "The edition ID must match the displayed provider prefix and contain an alphanumeric identifier.",
+    "848": "Download-client validation recommends setting a category.",
+    "849": "The Goodreads list import could not retrieve list data."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "currentWindowCells": 600,
+  "result": "PASS",
+  "totalPriorLineageRows": 2719,
+  "w0W199AllCurrentTargetHashesMatch": true,
+  "w0W199AllHoldsTextFree": true,
+  "w0W199HoldHashesReattested": 312,
+  "w0W199Rows": 1519,
+  "w200AllCurrentTargetsMatchFinal": true,
+  "w200Counts": {
+    "accept-current": 489,
+    "hold-text-free": 12,
+    "selected-applied": 99
+  },
+  "w200Rows": 600,
+  "w250AllCurrentTargetsMatchFinal": true,
+  "w250AppliedChanges": 42,
+  "w250PreservedCurrent": 558,
+  "w250RootSupplementalAdjudicationIncluded": true,
+  "w250RootSupplementalSha256": "1e0edcac5ffc40f9621c215e68198fa8da94d946bfe661e451d6f17039f75f74",
+  "w250Rows": 600
+}

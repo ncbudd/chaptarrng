@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+  "tree": "90a59b1c329feeb3fb34bdc5050128c8792b573e",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "46a6abd437c78fafcec73f93f79944b5f84d3a39",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "parentPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0250-0299-primary-20261102",
+  "scope": {
+    "positions": [
+      250,
+      299
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "primaryPacket": {
+    "inputCellsSha256": "8b1e673f487dc40aa3b8b18effbeb023ad38b560450fdb9e3ecb3b34162552b5",
+    "reviewCellsSha256": "dd96dcec0fbef29f9f186f5c893d4cb65113e71f9ef4d8e39ca7efc2c7b79d89",
+    "candidateCount": 67,
+    "candidateSha256": "b9134466a717849f2fe13fef6494edb8542cb4c8e847b936d7caa1a962d6897c"
+  },
+  "crossReview": {
+    "path": "cross-review-cells.jsonl",
+    "rows": 600,
+    "sha256": "af2a2120b70cbb03977c4d98b0b1841c3ad55a8abcf4bf37a1e0a5d3a9e4eb79",
+    "dispositions": {
+      "accepted-current": 532,
+      "accepted-candidate": 66,
+      "additional-finding": 1,
+      "refined-candidate": 1
+    }
+  },
+  "integrityChecks": {
+    "path": "protected-literal-placeholder-checks.jsonl",
+    "rows": 600,
+    "sha256": "4fb91ae939241ea023332db29b320b2586e60dfa5c423232433dece9bb206d43",
+    "placeholderMismatches": 0,
+    "markupMismatches": 0,
+    "protectedLiteralMismatches": 0
+  },
+  "additionalFindings": {
+    "path": "additional-findings.jsonl",
+    "rows": 2,
+    "sha256": "04c8102cbea69782379bfd3afe0ac4c6700bd05b1e98de6bc006db0ea46516bb"
+  },
+  "w249ContextCrossReview": {
+    "path": "w249-context-crossreview.jsonl",
+    "rows": 12,
+    "sha256": "15c354e49661cb57407b74d63c37d28554548c296d6a1774ea507a6bb3d745be"
+  },
+  "summarySha256": "579da6e0bb600ec3de517e83744c06cd1f60aab9c093d32dbcdd4400e94034cd",
+  "reattestationSha256": "9161f40dbcc541d4092ba3e34f5d8056d1d8d808b4e1cc8e5b5b3beccbc23ac0",
+  "reviewerProvenanceSha256": "c815cd8837b30b4ea4466dc2d335aa946db2ee32f0c46ad32e42c7f44cf153a2",
+  "nativeSpeakerApproval": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowsTouched": false
+}

@@ -1,0 +1,1208 @@
+{
+  "600|zh-Hans": {
+    "recommendedTarget": "质量配置文件不存在。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the established localized term for a quality profile and natural nonexistence wording."
+  },
+  "600|de": {
+    "recommendedTarget": "Das Qualitätsprofil ist nicht vorhanden.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the established localized term for a quality profile and natural nonexistence wording."
+  },
+  "600|ja": {
+    "recommendedTarget": "品質プロファイルが存在しません。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the established localized term for a quality profile and natural nonexistence wording."
+  },
+  "600|ko": {
+    "recommendedTarget": "품질 프로필이 존재하지 않습니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the established localized term for a quality profile and natural nonexistence wording."
+  },
+  "600|zh-Hant": {
+    "recommendedTarget": "品質設定檔不存在。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the established localized term for a quality profile and natural nonexistence wording."
+  },
+  "601|de": {
+    "recommendedTarget": "Verbindung zu AudioBookShelf nicht möglich: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail."
+  },
+  "601|ja": {
+    "recommendedTarget": "AudioBookShelf に接続できません: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail."
+  },
+  "601|pt-BR": {
+    "recommendedTarget": "Não foi possível conectar ao AudioBookShelf: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail."
+  },
+  "601|ar": {
+    "recommendedTarget": "تعذّر الاتصال بـ AudioBookShelf: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail."
+  },
+  "601|ko": {
+    "recommendedTarget": "AudioBookShelf에 연결할 수 없습니다: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the connection error phrasing while retaining the AudioBookShelf product name and {value0} detail."
+  },
+  "602|de": {
+    "recommendedTarget": "Verbindung fehlgeschlagen.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural past-tense/status wording for a failed connection."
+  },
+  "602|ja": {
+    "recommendedTarget": "接続に失敗しました。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural past-tense/status wording for a failed connection."
+  },
+  "602|fr": {
+    "recommendedTarget": "Échec de la connexion.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural past-tense/status wording for a failed connection."
+  },
+  "602|ar": {
+    "recommendedTarget": "فشل الاتصال.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural past-tense/status wording for a failed connection."
+  },
+  "604|de": {
+    "recommendedTarget": "Das Bild konnte nicht heruntergeladen werden.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "States that the image download failed without an awkward fragment or missing subject."
+  },
+  "604|fr": {
+    "recommendedTarget": "Échec du téléchargement de l’image.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that the image download failed without an awkward fragment or missing subject."
+  },
+  "604|pt-BR": {
+    "recommendedTarget": "Falha ao baixar a imagem.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "States that the image download failed without an awkward fragment or missing subject."
+  },
+  "604|ja": {
+    "recommendedTarget": "画像をダウンロードできませんでした。",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "States that the image download failed without an awkward fragment or missing subject."
+  },
+  "604|id": {
+    "recommendedTarget": "Gagal mengunduh gambar.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that the image download failed without an awkward fragment or missing subject."
+  },
+  "606|vi": {
+    "recommendedTarget": "Định dạng ID nhà cung cấp không hợp lệ. Định dạng phải là 'provider:id'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact required provider:id format and fully localizes the surrounding validation text."
+  },
+  "606|id": {
+    "recommendedTarget": "Format ID penyedia tidak valid. Format yang diharapkan adalah 'provider:id'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact required provider:id format and fully localizes the surrounding validation text."
+  },
+  "607|zh-Hans": {
+    "recommendedTarget": "内容服务器不接受匿名更改；向服务器发送书籍需要用户名和密码。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the content-server authentication requirement clear and natural in the pinned Calibre caller context."
+  },
+  "607|zh-Hant": {
+    "recommendedTarget": "內容伺服器不接受匿名變更；若要將書籍傳送至伺服器，必須提供使用者名稱和密碼。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the content-server authentication requirement clear and natural in the pinned Calibre caller context."
+  },
+  "607|vi": {
+    "recommendedTarget": "Máy chủ nội dung không chấp nhận thay đổi ẩn danh. Cần có tên người dùng và mật khẩu để gửi sách lên máy chủ.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the content-server authentication requirement clear and natural in the pinned Calibre caller context."
+  },
+  "608|ar": {
+    "recommendedTarget": "لا يمكن الجمع بين حذف الملفات وإعادة إضافتها.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Clarifies that deleting files and adding them again cannot be combined."
+  },
+  "608|ko": {
+    "recommendedTarget": "파일 삭제와 재추가는 함께 사용할 수 없습니다.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Clarifies that deleting files and adding them again cannot be combined."
+  },
+  "610|es": {
+    "recommendedTarget": "No se puede volver a añadir al autor: no está disponible en el servidor de metadatos.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the specific re-add operation and corrects metadata-server wording."
+  },
+  "610|de": {
+    "recommendedTarget": "Der Autor kann nicht erneut hinzugefügt werden: Er ist auf dem Metadatenserver nicht verfügbar.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the specific re-add operation and corrects metadata-server wording."
+  },
+  "610|pt-BR": {
+    "recommendedTarget": "Não é possível adicionar o autor novamente: ele não está disponível no servidor de metadados.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the specific re-add operation and corrects metadata-server wording."
+  },
+  "610|zh-Hant": {
+    "recommendedTarget": "無法重新新增作者：作者目前無法從中繼資料伺服器取得。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the specific re-add operation and corrects metadata-server wording."
+  },
+  "610|id": {
+    "recommendedTarget": "Penulis tidak dapat ditambahkan kembali karena tidak tersedia di server metadata.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the specific re-add operation and corrects metadata-server wording."
+  },
+  "611|de": {
+    "recommendedTarget": "Der Pfad '{value0}' ist bereits für einen anderen Autor konfiguriert.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the normal filesystem term for path and preserves the path placeholder."
+  },
+  "611|hi": {
+    "recommendedTarget": "पथ '{value0}' पहले से किसी अन्य लेखक के लिए कॉन्फ़िगर किया गया है।",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the normal filesystem term for path and preserves the path placeholder."
+  },
+  "611|fr": {
+    "recommendedTarget": "Le chemin '{value0}' est déjà configuré pour un autre auteur.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the normal filesystem term for path and preserves the path placeholder."
+  },
+  "611|id": {
+    "recommendedTarget": "Jalur '{value0}' sudah dikonfigurasi untuk penulis lain.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the normal filesystem term for path and preserves the path placeholder."
+  },
+  "612|es": {
+    "recommendedTarget": "El token de CloudFlare CAPTCHA ha caducado. Actualiza la página.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA."
+  },
+  "612|ja": {
+    "recommendedTarget": "CloudFlare CAPTCHA トークンの有効期限が切れました。ページを更新してください。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA."
+  },
+  "612|pt-BR": {
+    "recommendedTarget": "O token do CloudFlare CAPTCHA expirou. Atualize a página.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA."
+  },
+  "612|ar": {
+    "recommendedTarget": "انتهت صلاحية رمز CloudFlare CAPTCHA. يُرجى تحديث الصفحة.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the expired-token tense and the requested refresh action while preserving CloudFlare CAPTCHA."
+  },
+  "613|zh-Hans": {
+    "recommendedTarget": "用户名不能为空。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States the required nonempty username condition directly."
+  },
+  "613|zh-Hant": {
+    "recommendedTarget": "使用者名稱不得為空。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States the required nonempty username condition directly."
+  },
+  "613|ar": {
+    "recommendedTarget": "يجب ألا يكون اسم المستخدم فارغًا.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States the required nonempty username condition directly."
+  },
+  "613|ko": {
+    "recommendedTarget": "사용자 이름은 비워 둘 수 없습니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States the required nonempty username condition directly."
+  },
+  "613|vi": {
+    "recommendedTarget": "Tên người dùng không được để trống.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States the required nonempty username condition directly."
+  },
+  "614|es": {
+    "recommendedTarget": "No se puede conectar al indexador porque su servidor no está disponible. Inténtalo de nuevo más tarde. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|zh-Hans": {
+    "recommendedTarget": "无法连接到索引器，索引器服务器不可用。请稍后重试。{value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|hi": {
+    "recommendedTarget": "इंडेक्सर से कनेक्ट नहीं हो पा रहा है क्योंकि उसका सर्वर उपलब्ध नहीं है। बाद में फिर कोशिश करें। {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|de": {
+    "recommendedTarget": "Verbindung zum Indexer nicht möglich, da der Indexer-Server nicht verfügbar ist. Versuchen Sie es später erneut. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|ja": {
+    "recommendedTarget": "インデクサーのサーバーが利用できないため接続できません。後でもう一度お試しください。{value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|fr": {
+    "recommendedTarget": "Impossible de se connecter à l’indexeur, car son serveur est indisponible. Réessayez plus tard. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|pt-BR": {
+    "recommendedTarget": "Não foi possível conectar ao indexador porque o servidor está indisponível. Tente novamente mais tarde. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|ar": {
+    "recommendedTarget": "تعذّر الاتصال بالمفهرس لأن خادمه غير متاح. حاول مرة أخرى لاحقًا. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|ko": {
+    "recommendedTarget": "인덱서 서버를 사용할 수 없어 연결할 수 없습니다. 나중에 다시 시도하세요. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|zh-Hant": {
+    "recommendedTarget": "無法連線到索引器，因為索引器伺服器無法使用。請稍後再試。{value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|vi": {
+    "recommendedTarget": "Không thể kết nối với trình lập chỉ mục vì máy chủ của trình lập chỉ mục không khả dụng. Hãy thử lại sau. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "614|id": {
+    "recommendedTarget": "Tidak dapat terhubung ke pengindeks karena server pengindeks tidak tersedia. Coba lagi nanti. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Restores the causal relation, retry instruction, and appended error detail in this indexer connection error."
+  },
+  "615|es": {
+    "recommendedTarget": "El feed del indexador no es compatible: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the standard indexer-feed term and natural support-status wording."
+  },
+  "615|de": {
+    "recommendedTarget": "Der Feed des Indexers wird nicht unterstützt: {value0}",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Uses the standard indexer-feed term and natural support-status wording."
+  },
+  "615|fr": {
+    "recommendedTarget": "Le flux de l’indexeur n’est pas pris en charge : {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the standard indexer-feed term and natural support-status wording."
+  },
+  "615|pt-BR": {
+    "recommendedTarget": "O feed do indexador não é suportado: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the standard indexer-feed term and natural support-status wording."
+  },
+  "615|vi": {
+    "recommendedTarget": "Nguồn cấp dữ liệu của trình lập chỉ mục không được hỗ trợ: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the standard indexer-feed term and natural support-status wording."
+  },
+  "615|id": {
+    "recommendedTarget": "Feed pengindeks tidak didukung: {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the standard indexer-feed term and natural support-status wording."
+  },
+  "616|ja": {
+    "recommendedTarget": "Torrent Download Station に接続できません。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Retains Torrent Download Station as the exact download-client product name."
+  },
+  "617|de": {
+    "recommendedTarget": "Kein Standardziel vorhanden.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic terms for a missing default download destination."
+  },
+  "617|ja": {
+    "recommendedTarget": "既定の保存先がありません。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic terms for a missing default download destination."
+  },
+  "617|ar": {
+    "recommendedTarget": "لا توجد وجهة افتراضية.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic terms for a missing default download destination."
+  },
+  "617|id": {
+    "recommendedTarget": "Tidak ada tujuan bawaan.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic terms for a missing default download destination."
+  },
+  "618|ja": {
+    "recommendedTarget": "Plex Media Server に接続できません。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Retains Plex Media Server as the exact product name."
+  },
+  "621|es": {
+    "recommendedTarget": "Qué libros deben supervisarse al añadir por primera vez a los autores detectados en esta carpeta",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the question about the initial monitoring choice for authors found in the folder."
+  },
+  "621|ja": {
+    "recommendedTarget": "このフォルダーで検出された作者を初めて追加するとき、どの書籍を監視しますか？",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the question about the initial monitoring choice for authors found in the folder."
+  },
+  "621|vi": {
+    "recommendedTarget": "Nên theo dõi những cuốn sách nào khi thêm lần đầu các tác giả được phát hiện trong thư mục này?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Improves the question about the initial monitoring choice for authors found in the folder."
+  },
+  "622|es": {
+    "recommendedTarget": "Use la clave de configuración de Apprise o las URL sin estado de Apprise.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|zh-Hans": {
+    "recommendedTarget": "请使用 Apprise 配置密钥或 Apprise 无状态 URL 中的一种。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|hi": {
+    "recommendedTarget": "Apprise कॉन्फ़िगरेशन कुंजी या Apprise स्टेटलेस URL में से किसी एक का उपयोग करें。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|de": {
+    "recommendedTarget": "Verwenden Sie entweder den Apprise-Konfigurationsschlüssel oder die zustandslosen Apprise-URLs.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|ja": {
+    "recommendedTarget": "Apprise 設定キーまたは Apprise のステートレス URL のどちらかを使用してください。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|fr": {
+    "recommendedTarget": "Utilisez soit la clé de configuration Apprise, soit les URL Apprise sans état.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|pt-BR": {
+    "recommendedTarget": "Use a chave de configuração do Apprise ou as URLs sem estado do Apprise.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|ar": {
+    "recommendedTarget": "استخدم إما مفتاح إعداد Apprise أو عناوين URL عديمة الحالة من Apprise.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|ko": {
+    "recommendedTarget": "Apprise 설정 키 또는 Apprise 무상태 URL 중 하나를 사용하세요.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|zh-Hant": {
+    "recommendedTarget": "請使用 Apprise 配置密鑰或 Apprise 無狀態 URL。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|vi": {
+    "recommendedTarget": "Hãy dùng khóa cấu hình Apprise hoặc URL không trạng thái của Apprise.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "622|id": {
+    "recommendedTarget": "Gunakan kunci konfigurasi Apprise atau URL stateless Apprise.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Aligns the validation message with the localized Apprise configuration-key and stateless-URL field labels."
+  },
+  "623|es": {
+    "recommendedTarget": "Error de autenticación de Goodreads: {value0}.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects word order and uses authentication terminology for Goodreads."
+  },
+  "623|fr": {
+    "recommendedTarget": "Erreur d’authentification Goodreads : {value0}.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects word order and uses authentication terminology for Goodreads."
+  },
+  "623|ar": {
+    "recommendedTarget": "خطأ في مصادقة Goodreads: {value0}.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects word order and uses authentication terminology for Goodreads."
+  },
+  "623|vi": {
+    "recommendedTarget": "Lỗi xác thực Goodreads: {value0}.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects word order and uses authentication terminology for Goodreads."
+  },
+  "623|id": {
+    "recommendedTarget": "Kesalahan autentikasi Goodreads: {value0}.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects word order and uses authentication terminology for Goodreads."
+  },
+  "624|hi": {
+    "recommendedTarget": "श्रेणी मौजूद नहीं है।",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Localizes Category consistently and uses natural existence phrasing."
+  },
+  "624|ar": {
+    "recommendedTarget": "الفئة غير موجودة.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Localizes Category consistently and uses natural existence phrasing."
+  },
+  "624|ko": {
+    "recommendedTarget": "카테고리가 존재하지 않습니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Localizes Category consistently and uses natural existence phrasing."
+  },
+  "624|vi": {
+    "recommendedTarget": "Danh mục không tồn tại.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Localizes Category consistently and uses natural existence phrasing."
+  },
+  "625|zh-Hans": {
+    "recommendedTarget": "需要授权。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses authorization rather than a generic permission/license term."
+  },
+  "625|zh-Hant": {
+    "recommendedTarget": "需要授權。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses authorization rather than a generic permission/license term."
+  },
+  "626|es": {
+    "recommendedTarget": "Debe proporcionar el parámetro 'ids'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|zh-Hans": {
+    "recommendedTarget": "必须提供 ids。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|hi": {
+    "recommendedTarget": "'ids' प्रदान करना आवश्यक है।",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|de": {
+    "recommendedTarget": "ids müssen angegeben werden.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|ja": {
+    "recommendedTarget": "ids を指定する必要があります。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|fr": {
+    "recommendedTarget": "Le paramètre 'ids' doit être fourni.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|pt-BR": {
+    "recommendedTarget": "É necessário fornecer o parâmetro 'ids'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|ar": {
+    "recommendedTarget": "يجب توفير المعامل 'ids'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|ko": {
+    "recommendedTarget": "'ids'를 제공해야 합니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|zh-Hant": {
+    "recommendedTarget": "必須提供 ids。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|vi": {
+    "recommendedTarget": "Phải cung cấp tham số 'ids'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "626|id": {
+    "recommendedTarget": "Parameter 'ids' wajib disediakan.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Preserves the exact API parameter name ids and states that it must be supplied."
+  },
+  "627|es": {
+    "recommendedTarget": "No se pudo generar la solicitud de prueba. Comprueba tu configuración.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|zh-Hans": {
+    "recommendedTarget": "未能生成测试请求。请检查设置。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|hi": {
+    "recommendedTarget": "परीक्षण अनुरोध बनाने में विफल। अपनी सेटिंग जाँचें。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|de": {
+    "recommendedTarget": "Die Testanfrage konnte nicht erstellt werden. Überprüfen Sie Ihre Einstellungen.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|ja": {
+    "recommendedTarget": "テストリクエストを生成できませんでした。設定を確認してください。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|fr": {
+    "recommendedTarget": "Impossible de générer la requête de test. Vérifiez vos paramètres.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|pt-BR": {
+    "recommendedTarget": "Não foi possível gerar a solicitação de teste. Verifique suas configurações.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|ar": {
+    "recommendedTarget": "تعذّر إنشاء طلب الاختبار. تحقق من الإعدادات.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|ko": {
+    "recommendedTarget": "테스트 요청을 생성하지 못했습니다. 설정을 확인하세요.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|zh-Hant": {
+    "recommendedTarget": "未能產生測試請求。請檢查設定。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|vi": {
+    "recommendedTarget": "Không thể tạo yêu cầu thử nghiệm. Hãy kiểm tra cài đặt.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "627|id": {
+    "recommendedTarget": "Permintaan uji coba gagal dibuat. Periksa pengaturan Anda.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the failed test-request result and settings instruction direct and grammatical."
+  },
+  "629|es": {
+    "recommendedTarget": "El ajuste KeepHistory de NzbGet debe ser mayor que 0.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|zh-Hans": {
+    "recommendedTarget": "NzbGet 的 KeepHistory 设置必须大于 0。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|hi": {
+    "recommendedTarget": "NzbGet की KeepHistory सेटिंग 0 से अधिक होनी चाहिए।",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|de": {
+    "recommendedTarget": "Die NzbGet-Einstellung KeepHistory muss größer als 0 sein.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|ja": {
+    "recommendedTarget": "NzbGet の KeepHistory 設定は 0 より大きくなければなりません。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|fr": {
+    "recommendedTarget": "La valeur de KeepHistory dans NzbGet doit être supérieure à 0.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|pt-BR": {
+    "recommendedTarget": "A configuração KeepHistory do NzbGet deve ser maior que 0.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|ar": {
+    "recommendedTarget": "يجب أن تكون قيمة إعداد KeepHistory في NzbGet أكبر من 0.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|ko": {
+    "recommendedTarget": "NzbGet의 KeepHistory 설정 값은 0보다 커야 합니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|zh-Hant": {
+    "recommendedTarget": "NzbGet 的 KeepHistory 設定值必須大於 0。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|vi": {
+    "recommendedTarget": "Giá trị cài đặt KeepHistory trong NzbGet phải lớn hơn 0.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "629|id": {
+    "recommendedTarget": "Pengaturan KeepHistory di NzbGet harus lebih dari 0.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses natural setting-value phrasing while preserving NzbGet, KeepHistory, and the numeric threshold."
+  },
+  "631|vi": {
+    "recommendedTarget": "Phiên bản máy khách không được hỗ trợ.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the software term for client, rather than customer."
+  },
+  "632|ar": {
+    "recommendedTarget": "المؤلف غير متاح بعد على خادم البيانات الوصفية.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects author and metadata-server terminology while preserving availability meaning."
+  },
+  "632|zh-Hant": {
+    "recommendedTarget": "作者目前尚未在中繼資料伺服器上提供。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects author and metadata-server terminology while preserving availability meaning."
+  },
+  "632|vi": {
+    "recommendedTarget": "Tác giả hiện chưa có trên máy chủ siêu dữ liệu.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects author and metadata-server terminology while preserving availability meaning."
+  },
+  "633|es": {
+    "recommendedTarget": "No se puede establecer en '/'.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Uses a natural prohibition for setting the path value to slash."
+  },
+  "633|ja": {
+    "recommendedTarget": "「/」には設定できません。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses a natural prohibition for setting the path value to slash."
+  },
+  "633|fr": {
+    "recommendedTarget": "Impossible de définir « / ».",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses a natural prohibition for setting the path value to slash."
+  },
+  "633|vi": {
+    "recommendedTarget": "Không thể đặt thành '/'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses a natural prohibition for setting the path value to slash."
+  },
+  "633|id": {
+    "recommendedTarget": "Tidak dapat diatur ke '/'.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses a natural prohibition for setting the path value to slash."
+  },
+  "634|zh-Hans": {
+    "recommendedTarget": "监控有声书时，必须设置有声书根文件夹。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the root-folder requirement for audiobook monitoring."
+  },
+  "634|fr": {
+    "recommendedTarget": "Un dossier racine de livres audio est requis pour les surveiller.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the root-folder requirement for audiobook monitoring."
+  },
+  "634|pt-BR": {
+    "recommendedTarget": "É necessária uma pasta raiz de audiolivros para monitorá-los.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the root-folder requirement for audiobook monitoring."
+  },
+  "634|ko": {
+    "recommendedTarget": "오디오북을 모니터링하려면 오디오북 루트 폴더가 필요합니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the root-folder requirement for audiobook monitoring."
+  },
+  "634|zh-Hant": {
+    "recommendedTarget": "監控有聲書時，必須設定有聲書根資料夾。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the root-folder requirement for audiobook monitoring."
+  },
+  "634|id": {
+    "recommendedTarget": "Folder utama untuk buku audio harus ditetapkan saat memantau buku audio.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects the root-folder requirement for audiobook monitoring."
+  },
+  "635|hi": {
+    "recommendedTarget": "रूट फ़ोल्डर '{value0}' Chaptarr में कॉन्फ़िगर नहीं है।",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard root-folder configuration wording while preserving Chaptarr and {value0}."
+  },
+  "635|ar": {
+    "recommendedTarget": "مجلد الجذر '{value0}' غير مُهيأ في Chaptarr.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard root-folder configuration wording while preserving Chaptarr and {value0}."
+  },
+  "635|vi": {
+    "recommendedTarget": "Thư mục gốc '{value0}' chưa được cấu hình trong Chaptarr.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard root-folder configuration wording while preserving Chaptarr and {value0}."
+  },
+  "636|es": {
+    "recommendedTarget": "No se puede conectar al indexador. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "636|zh-Hans": {
+    "recommendedTarget": "无法连接到索引器。{value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "636|hi": {
+    "recommendedTarget": "इंडेक्सर से कनेक्ट नहीं हो पा रहा है। {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "636|pt-BR": {
+    "recommendedTarget": "Não foi possível conectar ao indexador. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "636|zh-Hant": {
+    "recommendedTarget": "無法連線到索引器。{value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "636|vi": {
+    "recommendedTarget": "Không thể kết nối với trình lập chỉ mục. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "636|id": {
+    "recommendedTarget": "Tidak dapat terhubung ke pengindeks. {value0}",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses idiomatic indexer connection wording and retains the appended {value0} detail."
+  },
+  "637|zh-Hans": {
+    "recommendedTarget": "bookFileIds 必须属于同一个导入单元。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Clarifies that the selected book-file IDs must come from one import unit."
+  },
+  "637|ja": {
+    "recommendedTarget": "bookFileIds は同じインポート単位に属している必要があります。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Clarifies that the selected book-file IDs must come from one import unit."
+  },
+  "637|ko": {
+    "recommendedTarget": "bookFileIds는 하나의 가져오기 단위에 속해야 합니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Clarifies that the selected book-file IDs must come from one import unit."
+  },
+  "637|vi": {
+    "recommendedTarget": "bookFileIds phải thuộc cùng một đơn vị nhập.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Clarifies that the selected book-file IDs must come from one import unit."
+  },
+  "638|es": {
+    "recommendedTarget": "El patrón Regex no puede estar vacío.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|zh-Hans": {
+    "recommendedTarget": "Regex 模式不能为空。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|de": {
+    "recommendedTarget": "Das Regex-Muster darf nicht leer sein.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|pt-BR": {
+    "recommendedTarget": "O padrão Regex não pode estar vazio.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|ar": {
+    "recommendedTarget": "يجب ألا يكون نمط Regex فارغًا.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|ko": {
+    "recommendedTarget": "Regex 패턴은 비워 둘 수 없습니다.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|zh-Hant": {
+    "recommendedTarget": "Regex 模式不得為空。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|vi": {
+    "recommendedTarget": "Mẫu Regex không được để trống.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "638|id": {
+    "recommendedTarget": "Pola Regex tidak boleh kosong.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses standard Regex-pattern terminology and the required nonempty condition."
+  },
+  "641|es": {
+    "recommendedTarget": "No se pudo configurar la etiqueta.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that label configuration failed using natural error-message wording."
+  },
+  "641|hi": {
+    "recommendedTarget": "लेबल कॉन्फ़िगर नहीं किया जा सका。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that label configuration failed using natural error-message wording."
+  },
+  "641|de": {
+    "recommendedTarget": "Die Label-Konfiguration ist fehlgeschlagen.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that label configuration failed using natural error-message wording."
+  },
+  "641|ja": {
+    "recommendedTarget": "ラベルの設定に失敗しました。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that label configuration failed using natural error-message wording."
+  },
+  "641|fr": {
+    "recommendedTarget": "Échec de la configuration du libellé.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that label configuration failed using natural error-message wording."
+  },
+  "641|ar": {
+    "recommendedTarget": "فشل إعداد التسمية.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States that label configuration failed using natural error-message wording."
+  },
+  "643|hi": {
+    "recommendedTarget": "जॉब फ़ोल्डर सक्षम करें",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the download client's Job-folder terminology."
+  },
+  "643|de": {
+    "recommendedTarget": "Job-Ordner aktivieren.",
+    "disposition": "propose-refinement",
+    "confidence": "moderate",
+    "rationale": "Uses the download client's Job-folder terminology."
+  },
+  "643|ja": {
+    "recommendedTarget": "ジョブフォルダーを有効にする。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the download client's Job-folder terminology."
+  },
+  "643|id": {
+    "recommendedTarget": "Aktifkan folder Job.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Uses the download client's Job-folder terminology."
+  },
+  "644|hi": {
+    "recommendedTarget": "इसमें लेखक का नाम होना अनिवार्य है。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the required author-name condition direct."
+  },
+  "644|vi": {
+    "recommendedTarget": "Phải chứa tên tác giả.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Makes the required author-name condition direct."
+  },
+  "646|hi": {
+    "recommendedTarget": "लेखक IDs धनात्मक संख्याएँ होनी चाहिए।",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects number agreement and the meaning of positive IDs."
+  },
+  "646|ar": {
+    "recommendedTarget": "يجب أن تكون معرّفات المؤلف أعدادًا موجبة.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects number agreement and the meaning of positive IDs."
+  },
+  "646|zh-Hant": {
+    "recommendedTarget": "作者 ID 必須是正數。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects number agreement and the meaning of positive IDs."
+  },
+  "647|es": {
+    "recommendedTarget": "Debe coincidir con la contraseña.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States a direct password-match requirement."
+  },
+  "647|de": {
+    "recommendedTarget": "Muss mit dem Passwort übereinstimmen.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States a direct password-match requirement."
+  },
+  "647|ja": {
+    "recommendedTarget": "パスワードと一致する必要があります。",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States a direct password-match requirement."
+  },
+  "647|pt-BR": {
+    "recommendedTarget": "Deve corresponder à senha.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States a direct password-match requirement."
+  },
+  "647|vi": {
+    "recommendedTarget": "Phải khớp với mật khẩu.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "States a direct password-match requirement."
+  },
+  "648|fr": {
+    "recommendedTarget": "Le fichier doit être fourni.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects pluralization so the message refers to one required file."
+  },
+  "648|pt-BR": {
+    "recommendedTarget": "O arquivo deve ser fornecido.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects pluralization so the message refers to one required file."
+  },
+  "648|vi": {
+    "recommendedTarget": "Tệp phải được cung cấp.",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects pluralization so the message refers to one required file."
+  },
+  "649|es": {
+    "recommendedTarget": "La URL de Chaptarr no es válida. ¿Falta la URL base?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|hi": {
+    "recommendedTarget": "Chaptarr URL अमान्य है। क्या आधार URL छूट गया है?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|de": {
+    "recommendedTarget": "Die Chaptarr-URL ist ungültig. Fehlt die Basis-URL?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|fr": {
+    "recommendedTarget": "L’URL de Chaptarr est invalide. L’URL de base est-elle manquante ?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|pt-BR": {
+    "recommendedTarget": "A URL do Chaptarr é inválida. Está faltando uma URL base?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|ar": {
+    "recommendedTarget": "عنوان URL الخاص بـ Chaptarr غير صالح. هل عنوان URL الأساسي مفقود؟",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|vi": {
+    "recommendedTarget": "URL của Chaptarr không hợp lệ. Bạn có thiếu URL cơ sở không?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "649|id": {
+    "recommendedTarget": "URL Chaptarr tidak valid. Apakah URL dasar belum disetel?",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Corrects URL grammar and retains Chaptarr and URL terminology."
+  },
+  "618|hi": {
+    "recommendedTarget": "Plex Media Server से कनेक्ट करने में असमर्थ",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Retains Plex Media Server as the exact product name and preserves the connection-failure meaning."
+  },
+  "618|ko": {
+    "recommendedTarget": "Plex Media Server에 연결할 수 없음",
+    "disposition": "propose-correction",
+    "confidence": "moderate",
+    "rationale": "Retains Plex Media Server as the exact product name and preserves the connection-failure meaning."
+  }
+}

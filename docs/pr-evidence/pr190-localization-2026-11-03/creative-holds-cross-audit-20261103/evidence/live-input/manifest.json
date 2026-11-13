@@ -1,0 +1,38 @@
+{
+  "allTwentyTargetsUnchangedFromSeed": true,
+  "candidateFree": true,
+  "cellCount": 20,
+  "excludedIndonesianDodgeTargetChanged": true,
+  "head": "712d597e6f27f6485f7c287b70f6dc79003ca714",
+  "liveSourceCallerCatalogHashesReattested": true,
+  "localeOrder": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "nativeSpeakerApproval": false,
+  "priorReviewVerdictsIncluded": false,
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "selection": "one Vietnamese Castilian Spanish provider label, eight ui.loading.newEbookSmell cells, and eleven ui.loading.dodgeBooks cells; Indonesian dodgeBooks is outside scope and recorded separately.",
+  "sourceCount": 3,
+  "sourceIds": [
+    "provider.option.o7285d46b982d",
+    "ui.loading.newEbookSmell",
+    "ui.loading.dodgeBooks"
+  ],
+  "translationCandidatesIncluded": false,
+  "tree": "275b19ba948bacd883d845ec970c154511be0e43",
+  "upstreamCandidateFreeInputChecksumsVerified": true,
+  "upstreamCandidateFreeInputHead": "ba6142ff16921ea09364c2c1ecedb9498d9fa430",
+  "upstreamCandidateFreeInputTree": "e57962cffbc3da25982330c4997b11a1452e0ae0"
+}

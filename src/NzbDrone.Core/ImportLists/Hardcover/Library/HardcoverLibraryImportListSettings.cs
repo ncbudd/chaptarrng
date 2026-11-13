@@ -11,21 +11,25 @@ namespace NzbDrone.Core.ImportLists.Hardcover.Library
         {
             RuleFor(c => c)
                 .Must(c => c.MonitorAudiobooks || c.MonitorEbooks)
-                .WithMessage("Select at least one media type to monitor");
+                .WithMessage("Select at least one media type to monitor")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m1f70cc839b57"));
 
             RuleFor(c => c)
                 .Must(c => c.ImportOwned || c.ImportWantToRead || c.ImportCurrentlyReading || c.ImportRead)
-                .WithMessage("Select at least one library section to import");
+                .WithMessage("Select at least one library section to import")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mc1b539256890"));
 
             RuleFor(c => c.AudiobookRootFolderPath)
                 .NotEmpty()
                 .When(c => c.MonitorAudiobooks)
-                .WithMessage("Audiobook root folder is required when monitoring audiobooks");
+                .WithMessage("Audiobook root folder is required when monitoring audiobooks")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m6d69cc1ffcc4"));
 
             RuleFor(c => c.EbookRootFolderPath)
                 .NotEmpty()
                 .When(c => c.MonitorEbooks)
-                .WithMessage("Ebook root folder is required when monitoring ebooks");
+                .WithMessage("Ebook root folder is required when monitoring ebooks")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m7a3bf57a5ad5"));
         }
     }
 

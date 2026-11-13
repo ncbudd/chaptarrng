@@ -1,0 +1,27 @@
+{
+  "allInScopeTargetsUnchanged": true,
+  "approvedTranslations": 0,
+  "cells": 20,
+  "composition": {
+    "provider.option.o7285d46b982d": {
+      "vi": 1
+    },
+    "ui.loading.dodgeBooks": 11,
+    "ui.loading.newEbookSmell": 8
+  },
+  "dispositions": {
+    "hold": 20
+  },
+  "head": "712d597e6f27f6485f7c287b70f6dc79003ca714",
+  "pullRequest": 190,
+  "qualifiedNativeReviews": 0,
+  "repository": "snapetech-org/ChaptarrNG",
+  "reviewScope": "Primary candidate suggestions only. No catalog or repository changes were made.",
+  "scopeExclusion": {
+    "liveTargetChangedSinceSeed": true,
+    "locale": "id",
+    "sourceId": "ui.loading.dodgeBooks"
+  },
+  "suggestions": 20,
+  "tree": "275b19ba948bacd883d845ec970c154511be0e43"
+}

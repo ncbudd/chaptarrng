@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "reviewCell": {
+    "sourceOrdinal": 305,
+    "sourceKey": "BookMatchingStrictness",
+    "locale": "id",
+    "cellId": "BookMatchingStrictness::id",
+    "sourceText": "Match mode",
+    "targetText": "Mode pencocokan"
+  },
+  "decision": {
+    "disposition": "accept",
+    "correction": null,
+    "rationale": "The packet shows this as a settings label and Quickstart matching control. The Aggressive, Balanced, and Strict enum values make “Mode pencocokan” an accurate Indonesian label for the selected matching mode. The updated quality-comparison path does not change what the label names.",
+    "confidence": "moderate",
+    "nativeSpeakerSignoff": false
+  },
+  "pins": {
+    "head": "4688c998d92c821bbc1464ea4640c90615a69327",
+    "tree": "e655295664bbe8466e6f5541eb78e17e32cfca12",
+    "previousMain": "8c7fb4c772c3cf58fc0e951830815d9e4d8d5230",
+    "currentMain": "025498c1a9deb999a4acd1eafc4c807a252e0c29",
+    "sourcePath": "src/NzbDrone.Core/Localization/Core/en.json",
+    "sourceBlob": "5d72ce82a3d592f38b44f038bbf20bf12643d74d",
+    "sourceCatalogSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+    "targetPath": "src/NzbDrone.Core/Localization/Core/id.json",
+    "targetBlob": "449f6e39fc89c09a42589f3cdf24288a77e5ae2e",
+    "targetCatalogSha256": "8503ec8c38af4b8b3321b3c5103a0fc8eee437dab337a6b5112ee19a734e7282"
+  },
+  "hashes": {
+    "sourceTextSha256": "0fd71ca8dca4ed849986b90247aae2704a4e60fadb9632310b0b30377aae8e69",
+    "targetTextSha256": "090a911382592d233ea1afe53f75e3e48093473175be32458c88baeb01adfdd8",
+    "currentContextSha256": "f920d5f6a8031a4b828e03f93d56f7e0c06653e56202f41fed4b784f670fb74f",
+    "priorContextSha256": "cdfffba5a3f1930f4ca0c3b6ddf1141fd18874654bf0889a379a7815e85c47a5"
+  },
+  "verifier": {
+    "sourceAndTargetText": "SHA-256 over UTF-8 encoding of the exact source and target strings.",
+    "callerContext": "SHA-256 over UTF-8 compact canonical JSON with sorted keys and ensure_ascii=false for {sourceKey, literalAndIndirectReferences, relatedDynamicTranslationCallsites}; remove newline characters before hashing.",
+    "decisionSeal": "SHA-256 over this decision object with the seal field omitted, serialized as UTF-8 compact canonical JSON with sorted keys and ensure_ascii=false; no trailing newline.",
+    "verified": true,
+    "scope": "Only the packet README and fresh-review-input.json were read for the blind review; no repository or PR edits and no external sources."
+  },
+  "checksumInventory": {
+    "README.md": "2c7ebd04659dd65feec34e7f3d9623d2b26e642bc52d69da32d9923edcc5c260",
+    "fresh-review-input.json": "6cee17a71d8e700b387afb5c3fe912a1820e84b3bbbcf4f43853425d4f42e634"
+  },
+  "seal": {
+    "algorithm": "SHA-256",
+    "canonicalization": "UTF-8 compact JSON, sorted keys, ensure_ascii=false, no trailing newline; omit the top-level seal field.",
+    "sha256": "f07d6bb3fbc623f7e6bbf71973555ea9a1b33673bf8c9bc2edf375087a3cda0b"
+  }
+}

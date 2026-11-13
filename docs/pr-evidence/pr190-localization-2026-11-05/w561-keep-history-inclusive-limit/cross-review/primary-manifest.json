@@ -1,0 +1,31 @@
+{
+  "artifact": "ChaptarrNG W561 NzbGet KeepHistory maximum primary semantic review",
+  "files": {
+    "README.md": "f62042ea95d565044928e86e8b7445debfa6b7d32ec97538a5ede01b6d1e6a2e",
+    "build_primary_review.py": "0056da03132ea658bab8fbadc4f1d74716287fa4fb21cfbff5bda158f4bc403f",
+    "locale-translations.jsonl": "7450f84f3b96a80b57480564f9656c6ad2c3b6c2bc38d9a7a84ab5469f78c3f9",
+    "source-review.json": "1e4c9ce9192beb782312ffa1f647d01a29d92c0346a12baa05d8964ae61e2a04",
+    "summary.json": "8a7815e59e6ff07a78195184e52db44ebe07d83e851628a051ac6ae135905e27",
+    "verify_primary_review.py": "516e38b80e4b57e4cfe81ec4d592226077db69f93f4b5a9e32d37d015a8aa227"
+  },
+  "head": "c01c3974a01dfcab6a1aa09401c66d412bc88e60",
+  "localeCount": 12,
+  "locales": [
+    "es",
+    "zh-CN",
+    "hi",
+    "de",
+    "ja",
+    "fr",
+    "pt-BR",
+    "ar",
+    "ko",
+    "zh-TW",
+    "vi",
+    "id"
+  ],
+  "repository": "snapetech-org/chaptarrng",
+  "schemaVersion": 1,
+  "sourceId": "server.message.m3a79390fb21e",
+  "tree": "55ea7696f4981fc56a774f38be477f89e454a7a3"
+}

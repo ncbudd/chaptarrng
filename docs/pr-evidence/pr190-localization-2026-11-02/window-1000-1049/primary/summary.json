@@ -1,0 +1,119 @@
+{
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "currentProtectedLiteralFailureCells": 0,
+  "directCallerGaps": 0,
+  "directCallerReferences": 58,
+  "dispositionCounts": {
+    "accept-current": 506,
+    "correction": 50,
+    "hold": 11,
+    "refinement": 33
+  },
+  "exactHead": "c28d0ab23b2c5454a10237496e642b2ad059d8ce",
+  "exactTree": "bd7a8a32a8bffc2a3168b648ff6e22d368064e5b",
+  "finalProtectedLiteralFailureCells": 0,
+  "icuMismatchCells": 0,
+  "independentFocusCells": 348,
+  "limitations": "Static machine-assisted review; no native speaker, browser, runtime, or external dictionary approval is claimed.",
+  "localeCellCount": 600,
+  "locales": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "hi",
+    "id",
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "overallConfidence": "moderate",
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 43,
+      "hold": 2,
+      "refinement": 5
+    },
+    "de": {
+      "accept-current": 47,
+      "correction": 3
+    },
+    "es": {
+      "accept-current": 39,
+      "correction": 8,
+      "refinement": 3
+    },
+    "fr": {
+      "accept-current": 43,
+      "correction": 6,
+      "refinement": 1
+    },
+    "hi": {
+      "accept-current": 38,
+      "correction": 5,
+      "hold": 1,
+      "refinement": 6
+    },
+    "id": {
+      "accept-current": 39,
+      "correction": 2,
+      "hold": 2,
+      "refinement": 7
+    },
+    "ja": {
+      "accept-current": 43,
+      "correction": 2,
+      "hold": 1,
+      "refinement": 4
+    },
+    "ko": {
+      "accept-current": 39,
+      "correction": 9,
+      "hold": 1,
+      "refinement": 1
+    },
+    "pt-BR": {
+      "accept-current": 44,
+      "correction": 5,
+      "refinement": 1
+    },
+    "vi": {
+      "accept-current": 43,
+      "correction": 4,
+      "hold": 2,
+      "refinement": 1
+    },
+    "zh-Hans": {
+      "accept-current": 44,
+      "correction": 3,
+      "hold": 1,
+      "refinement": 2
+    },
+    "zh-Hant": {
+      "accept-current": 44,
+      "correction": 3,
+      "hold": 1,
+      "refinement": 2
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "priorDispositionRowsThroughW999": 12000,
+  "priorLiveTargetsDifferingFromFinalHash": 195,
+  "priorLiveTargetsMatchingFinalHash": 11805,
+  "priorW950W999AdjudicationRows": 182,
+  "priorW950W999CrossReviewRows": 182,
+  "priorW950W999PrimaryRows": 600,
+  "protectedLiteralCellCount": 144,
+  "queuePositionsAreZeroBased": true,
+  "sourceCount": 50,
+  "staleRegistryPins": 0,
+  "w1050BoundaryDispositionsAssigned": false,
+  "w999BoundaryAll12Match": true,
+  "window": "W1000-W1049"
+}

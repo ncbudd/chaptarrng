@@ -464,7 +464,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Password", "Authentication failed");
+                return NzbDroneValidationFailure.ForMessage("Password", "Authentication failed", "server.message.m93821eb7ce8c");
             }
             catch (WebException ex)
             {
@@ -472,22 +472,22 @@ namespace NzbDrone.Core.Download.Clients.Deluge
                 switch (ex.Status)
                 {
                     case WebExceptionStatus.ConnectFailure:
-                        return new NzbDroneValidationFailure("Host", "Unable to connect")
+                        return new NzbDroneValidationFailure("Host", "Unable to connect", "server.message.me40966162b11", null)
                         {
                             DetailedDescription = "Please verify the hostname and port."
                         };
                     case WebExceptionStatus.ConnectionClosed:
-                        return new NzbDroneValidationFailure("UseSsl", "Verify SSL settings")
+                        return new NzbDroneValidationFailure("UseSsl", "Verify SSL settings", "server.message.m0b40b0984817", null)
                         {
                             DetailedDescription = "Please verify your SSL configuration on both Deluge and Chaptarr."
                         };
                     case WebExceptionStatus.SecureChannelFailure:
-                        return new NzbDroneValidationFailure("UseSsl", "Unable to connect through SSL")
+                        return new NzbDroneValidationFailure("UseSsl", "Unable to connect through SSL", "server.message.mecf5ccdf0093", null)
                         {
                             DetailedDescription = "Chaptarr is unable to connect to Deluge using SSL. This problem could be computer related. Please try to configure both drone and Deluge to not use SSL."
                         };
                     default:
-                        return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                        return NzbDroneValidationFailure.ForMessage(string.Empty, "Unknown exception: " + ex.Message, "server.message.m98845de47ab9", new { value0 = ex.Message });
                 }
             }
             catch (HttpRequestException ex)
@@ -496,20 +496,20 @@ namespace NzbDrone.Core.Download.Clients.Deluge
 
                 if (ex.Message.Contains("Connection refused"))
                 {
-                    return new NzbDroneValidationFailure("Host", "Connection refused")
+                    return new NzbDroneValidationFailure("Host", "Connection refused", "server.message.m1a28032cdce5", null)
                     {
                         DetailedDescription = $"Unable to connect to Deluge at {Settings.Host}:{Settings.Port}. Please verify Deluge is running and accessible."
                     };
                 }
                 else if (ex.Message.Contains("No such host"))
                 {
-                    return new NzbDroneValidationFailure("Host", "Invalid hostname")
+                    return new NzbDroneValidationFailure("Host", "Invalid hostname", "server.message.mea3737f42d3c", null)
                     {
                         DetailedDescription = $"Unable to resolve hostname '{Settings.Host}'. Please verify the hostname is correct."
                     };
                 }
 
-                return new NzbDroneValidationFailure("Host", "Connection failed")
+                return new NzbDroneValidationFailure("Host", "Connection failed", "server.message.m596c52f1eb65", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -520,20 +520,20 @@ namespace NzbDrone.Core.Download.Clients.Deluge
 
                 if (ex.Message.Contains("Connection refused"))
                 {
-                    return new NzbDroneValidationFailure("Host", "Connection refused")
+                    return new NzbDroneValidationFailure("Host", "Connection refused", "server.message.m1a28032cdce5", null)
                     {
                         DetailedDescription = ex.Message
                     };
                 }
                 else if (ex.Message.Contains("hostname"))
                 {
-                    return new NzbDroneValidationFailure("Host", "Invalid hostname")
+                    return new NzbDroneValidationFailure("Host", "Invalid hostname", "server.message.mea3737f42d3c", null)
                     {
                         DetailedDescription = ex.Message
                     };
                 }
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect")
+                return new NzbDroneValidationFailure("Host", "Unable to connect", "server.message.me40966162b11", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -542,7 +542,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             {
                 _logger.Error(ex, "Failed to test connection");
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown error")
+                return new NzbDroneValidationFailure(string.Empty, "Unknown error", "server.message.m27c2ccd962c2", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -570,7 +570,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             if (!enabledPlugins.Contains("Label"))
             {
                 var field = initialCategories.Any() ? nameof(DelugeSettings.AudiobookCategory) : nameof(DelugeSettings.AudiobookImportedCategory);
-                return new NzbDroneValidationFailure(field, "Label plugin not activated")
+                return new NzbDroneValidationFailure(field, "Label plugin not activated", "server.message.m0bd4ca44f88d", null)
                 {
                     DetailedDescription = "You must have the Label plugin enabled in Deluge to use categories."
                 };
@@ -602,7 +602,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
 
                 if (!labels.Contains(pair.Value))
                 {
-                    return new NzbDroneValidationFailure(pair.Field, "Configuration of label failed")
+                    return new NzbDroneValidationFailure(pair.Field, "Configuration of label failed", "server.message.m712918a2c28f", null)
                     {
                         DetailedDescription = "Chaptarr was unable to add the label to Deluge."
                     };
@@ -621,7 +621,7 @@ namespace NzbDrone.Core.Download.Clients.Deluge
             catch (Exception ex)
             {
                 _logger.Error(ex, "Unable to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of torrents: " + ex.Message, "server.message.m451006253bc3", new { value0 = ex.Message });
             }
 
             return null;

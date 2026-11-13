@@ -1,0 +1,295 @@
+{
+  "schemaVersion": 1,
+  "recommendations": [
+    {
+      "sourceKey": "ApplyTagsHelpTextAdd",
+      "sourceKeySha256": "a5c65bb3173a48ada5d4b0e40ad84044d4a22316de962ea6cdad4c5f99231d4e",
+      "currentSourceTextSha256": "d7500fb1c3d39ea48e96db7c9f0571e398113222215a9328ca122b49506c3731",
+      "proposedSource": "Add: Add the tags to the existing list of tags.",
+      "proposedSourceSha256": "5771e29bae036a110d2961b13cce7de9eba748d18a790508702171326d3597fc",
+      "sourceWordingIssue": "English text reads “Add the tags the existing list of tags” and is missing a preposition. The four callsites render it in Add/Remove/Replace tag guidance. The primary translations use the caller-established meaning: append entered tags to the existing tag list.",
+      "crossRationale": "The exact pinned Add/Remove/Replace callsites show the English string is missing “to”; this wording states the intended operation.",
+      "callerContextSha256": "6006954f8a91b05aaf1b4543007633efbc0b96143616221bdb90a816044b8d26",
+      "callerReferenceCount": 4,
+      "callerRefs": [
+        {
+          "callerType": "frontend-translate",
+          "contextAfter": [
+            "                  translate('ApplyTagsHelpTextRemove'),",
+            "                  translate('ApplyTagsHelpTextReplace')",
+            "                ]}"
+          ],
+          "contextBefore": [
+            "                helpTexts={[",
+            "                  translate('ApplyTagsHelpTextHowToApplyAuthors'),"
+          ],
+          "fileGitBlob": "95bc0bee1658c3ca7c484718f9cb974ee484adc0",
+          "fileSha256": "4e2e2d0bebdfc01db652a547e5fc35a85ff659577784bacd63dd82e8c31cc4b3",
+          "line": 102,
+          "lineSha256": "7a1326363329114542289d4880d46f3536e43b559da7ef8d2c694a6b920144d2",
+          "lineText": "                  translate('ApplyTagsHelpTextAdd'),",
+          "path": "frontend/src/Author/Editor/Tags/TagsModalContent.js"
+        },
+        {
+          "callerType": "frontend-translate",
+          "contextAfter": [
+            "                translate('ApplyTagsHelpTextRemove'),",
+            "                translate('ApplyTagsHelpTextReplace'),",
+            "              ]}"
+          ],
+          "contextBefore": [
+            "              helpTexts={[",
+            "                translate('ApplyTagsHelpTextHowToApplyDownloadClients'),"
+          ],
+          "fileGitBlob": "dbb6629d3d82a78000ef9d266c6f5f2c77456022",
+          "fileSha256": "f1709ba06196caa8baf9b3aa94048e9730a111c3f787f7b0c1533dd01a747cb3",
+          "line": 122,
+          "lineSha256": "8600be076d7ea73e51134902cd05bbf109b848cb6eebc0f7942ae073461cc83d",
+          "lineText": "                translate('ApplyTagsHelpTextAdd'),",
+          "path": "frontend/src/Settings/DownloadClients/DownloadClients/Manage/Tags/TagsModalContent.tsx"
+        },
+        {
+          "callerType": "frontend-translate",
+          "contextAfter": [
+            "                translate('ApplyTagsHelpTextRemove'),",
+            "                translate('ApplyTagsHelpTextReplace'),",
+            "              ]}"
+          ],
+          "contextBefore": [
+            "              helpTexts={[",
+            "                translate('ApplyTagsHelpTextHowToApplyImportLists'),"
+          ],
+          "fileGitBlob": "b5bd6e0d9539c82321d24fcf7e1be7d31bfdc08a",
+          "fileSha256": "17bad3e8fa5416c50aa60ee7b53623fb4c13b294e1d893c1ebde0a0b23bdc4f3",
+          "line": 120,
+          "lineSha256": "8600be076d7ea73e51134902cd05bbf109b848cb6eebc0f7942ae073461cc83d",
+          "lineText": "                translate('ApplyTagsHelpTextAdd'),",
+          "path": "frontend/src/Settings/ImportLists/ImportLists/Manage/Tags/TagsModalContent.tsx"
+        },
+        {
+          "callerType": "frontend-translate",
+          "contextAfter": [
+            "                translate('ApplyTagsHelpTextRemove'),",
+            "                translate('ApplyTagsHelpTextReplace'),",
+            "              ]}"
+          ],
+          "contextBefore": [
+            "              helpTexts={[",
+            "                translate('ApplyTagsHelpTextHowToApplyIndexers'),"
+          ],
+          "fileGitBlob": "d31cdff2ac2fe82d686ef2c2a04fd3bbca0f5625",
+          "fileSha256": "457f27145e9f18e74888b9f0cb3a2a1b75234110def8bdcca8ee3149efde0edf",
+          "line": 120,
+          "lineSha256": "8600be076d7ea73e51134902cd05bbf109b848cb6eebc0f7942ae073461cc83d",
+          "lineText": "                translate('ApplyTagsHelpTextAdd'),",
+          "path": "frontend/src/Settings/Indexers/Indexers/Manage/Tags/TagsModalContent.tsx"
+        }
+      ],
+      "localeCellDispositions": [
+        {
+          "sourceOrdinal": 128,
+          "locale": "ar",
+          "cellId": "ApplyTagsHelpTextAdd::ar",
+          "selectedTargetSha256": "155ba4c50fa2cf7dcf63870ee595f21289a6491a5ded4e73578209c45b519386",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "de",
+          "cellId": "ApplyTagsHelpTextAdd::de",
+          "selectedTargetSha256": "2eafc460bad75f3debb88785f45be26b9b55ca0fd95b5001e8cafb533cacd1ad",
+          "crossDisposition": "select-primary-proposal"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "es",
+          "cellId": "ApplyTagsHelpTextAdd::es",
+          "selectedTargetSha256": "421961c3cb91ce122e9d824de40aec89c8ab90b9d27e742790d14e333843b9f2",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "fr",
+          "cellId": "ApplyTagsHelpTextAdd::fr",
+          "selectedTargetSha256": "21b55f3361aadb66183dfc8c3d952bde647f86f0fa8910c53e519a74e0368c9d",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "hi",
+          "cellId": "ApplyTagsHelpTextAdd::hi",
+          "selectedTargetSha256": "cdd58dd8a365e4fc8fba6dfc1a5876e3c058015ee30afec96f1b2b4b43258ccf",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "id",
+          "cellId": "ApplyTagsHelpTextAdd::id",
+          "selectedTargetSha256": "879841bf93afcfe3623fb72e135d1fe63ed24f310f5aad8030e65307ad3fce19",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "ja",
+          "cellId": "ApplyTagsHelpTextAdd::ja",
+          "selectedTargetSha256": "ace12989eb0562f629485d4f300f979554e4e2887e7a67495e19fccf7836c66d",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "ko",
+          "cellId": "ApplyTagsHelpTextAdd::ko",
+          "selectedTargetSha256": "012edc82d4eb14653aa884362802916fa806ba53223e05258cb97423cd6273fd",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "pt-BR",
+          "cellId": "ApplyTagsHelpTextAdd::pt-BR",
+          "selectedTargetSha256": "ff3d9857b523a34b3383927e63a486076014993098a885eea1927739ac827983",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "vi",
+          "cellId": "ApplyTagsHelpTextAdd::vi",
+          "selectedTargetSha256": "c6c645506ce4877814e606a8d46de6173db68ae427677a6fb25f8c2d9cef61aa",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "zh-Hans",
+          "cellId": "ApplyTagsHelpTextAdd::zh-Hans",
+          "selectedTargetSha256": "34c2874f2cfbf1430cd4c58dbb9b8547559929461a4977a11a012e81da9b075f",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 128,
+          "locale": "zh-Hant",
+          "cellId": "ApplyTagsHelpTextAdd::zh-Hant",
+          "selectedTargetSha256": "b86ae9e536fa8eea585404b78121817f304809322f46619820933ea0d35d0f86",
+          "crossDisposition": "accept-current"
+        }
+      ],
+      "recommendation": "source-wording-only; per-locale cell decisions remain in cross-ledger.jsonl"
+    },
+    {
+      "sourceKey": "AppDataLocationHealthCheckMessage",
+      "sourceKeySha256": "d660db7d050cda0cf276b8be131a3af6a91fabbde3367636a8b51b8f57e19cac",
+      "currentSourceTextSha256": "d18e1ed865f72f78083d62997b44a983b2ef4f87e5aeef542cb0a221f57364f9",
+      "proposedSource": "Updates are disabled to prevent AppData from being deleted during an update.",
+      "proposedSourceSha256": "951599b4aedde5de9deabb910cf044447127aa010833b1642833e5f274007712",
+      "sourceWordingIssue": "English construction is ambiguous. The C# condition verifies AppData is equal to or inside the startup folder; update is unavailable to prevent update cleanup from deleting AppData. Translations were judged against that caller-confirmed warning meaning.",
+      "crossRationale": "The pinned C# condition detects AppData at or below the startup folder; updates are disabled to avoid update cleanup deleting AppData. This removes the ambiguous source construction.",
+      "callerContextSha256": "6ccc83b53b9ea70043a819824e6ac2f53d2645c16176fe95fdb70305419a00b5",
+      "callerReferenceCount": 1,
+      "callerRefs": [
+        {
+          "callerType": "server-localization",
+          "contextAfter": [
+            "            }",
+            "",
+            "            return new HealthCheck(GetType());"
+          ],
+          "contextBefore": [
+            "                _appFolderInfo.StartUpFolder.PathEquals(_appFolderInfo.AppDataFolder))",
+            "            {"
+          ],
+          "fileGitBlob": "bfddc38961e1d7f3d8e571b76d186aecc930e907",
+          "fileSha256": "861a6a24943a7aa9fac82e8b058c079054cc76447b43e7590ab12a8a820b5a71",
+          "line": 22,
+          "lineSha256": "0a9ff8502d574fa1e323baae68c11108de05632be7fcb66037868502b1ac2f08",
+          "lineText": "                return new HealthCheck(GetType(), HealthCheckResult.Warning, _localizationService.GetLocalizedString(\"AppDataLocationHealthCheckMessage\"), \"#updating-will-not-be-possible-to-prevent-deleting-appdata-on-update\");",
+          "path": "src/NzbDrone.Core/HealthCheck/Checks/AppDataLocationCheck.cs"
+        }
+      ],
+      "localeCellDispositions": [
+        {
+          "sourceOrdinal": 113,
+          "locale": "ar",
+          "cellId": "AppDataLocationHealthCheckMessage::ar",
+          "selectedTargetSha256": "8ef3cec47ef3e2398de9fc0f6afd305f80fb5c88e19e7e5dca7cf824b1dbb3e5",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "de",
+          "cellId": "AppDataLocationHealthCheckMessage::de",
+          "selectedTargetSha256": "49931ed32e1929da0253c110ffb190521d26479d31b4082fd3a3413171752567",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "es",
+          "cellId": "AppDataLocationHealthCheckMessage::es",
+          "selectedTargetSha256": "cd6e4c1aa8c8dbafac98c8a17c3f1c918da1a85429e6640ac16a83b47f560299",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "fr",
+          "cellId": "AppDataLocationHealthCheckMessage::fr",
+          "selectedTargetSha256": "0a257ad18fc852877deb86a0f39bfbb90502f3bc4968d4d953bf1aba74bc7662",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "hi",
+          "cellId": "AppDataLocationHealthCheckMessage::hi",
+          "selectedTargetSha256": "5c9e853614f392fad14e6a461de72292169c39dc5962d120e84d144bf622eeed",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "id",
+          "cellId": "AppDataLocationHealthCheckMessage::id",
+          "selectedTargetSha256": "eda3bf9d5ac2cfdd2b55ae7a2750c364806fd082ab46fd6e318b716d58da1393",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "ja",
+          "cellId": "AppDataLocationHealthCheckMessage::ja",
+          "selectedTargetSha256": "91565df6e20457086050bec15a194ba006c316ef3404ae250868528667837fb6",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "ko",
+          "cellId": "AppDataLocationHealthCheckMessage::ko",
+          "selectedTargetSha256": "3033c13eba7b7f192da4a47f1a0cd0df02b2a92e71442dd84b50c243ea5ddbcc",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "pt-BR",
+          "cellId": "AppDataLocationHealthCheckMessage::pt-BR",
+          "selectedTargetSha256": "4c53aace7f2b3bbedfc7039a8c880644d02bf26bfe026e693eb6be07bde3466e",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "vi",
+          "cellId": "AppDataLocationHealthCheckMessage::vi",
+          "selectedTargetSha256": "2444b2a3d48b1c834e9e5da0787396c74db7f4e314b53d6477370247594aa8d7",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "zh-Hans",
+          "cellId": "AppDataLocationHealthCheckMessage::zh-Hans",
+          "selectedTargetSha256": "a6e7cca2d4ae213e0b9ae1d26337fc019f28e97cf93da1d7e4d750efcb4f08d1",
+          "crossDisposition": "accept-current"
+        },
+        {
+          "sourceOrdinal": 113,
+          "locale": "zh-Hant",
+          "cellId": "AppDataLocationHealthCheckMessage::zh-Hant",
+          "selectedTargetSha256": "e2591ca118cd89d1f72c1eb7351fda17e305605dc5458525dc3616a25623249d",
+          "crossDisposition": "accept-current"
+        }
+      ],
+      "recommendation": "source-wording-only; per-locale cell decisions remain in cross-ledger.jsonl"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "review": "Independent exact-head cross-review of ChaptarrNG PR #190 W50–99, locales pt-BR/ar/ko/zh-Hant/vi/id",
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "livePullRequestVerification": {
+    "state": "OPEN",
+    "isDraft": true,
+    "headRefOid": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190",
+    "verifiedAtUtc": "2026-11-02 11:07 UTC"
+  },
+  "exactHead": "22e3dc28193113e29d256307b4c75b856d7cd84f",
+  "exactTree": "605a751ae9c3b454f4189dd89d021a5976e95237",
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "primaryPacket": {
+    "path": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0050-0099-primary-part-b-20261102/review.jsonl",
+    "sha256": "9fffb8fb773c3f498c272cba018eb3d791f33021b07cae4f4e58643d0121b704",
+    "rows": 300
+  },
+  "scope": {
+    "sourcePositions": [
+      50,
+      99
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 300
+  },
+  "counts": {
+    "accepted": 289,
+    "missed": 10,
+    "refined": 1
+  },
+  "crossReviewRecommendations": 11,
+  "inputCurrentCatalogCallerMismatches": 0,
+  "primaryTargetsReattested": 8,
+  "callerReferencesReattested": 4314,
+  "uniqueCallerFiles": 27,
+  "uniqueCallerLines": 710,
+  "placeholderMismatches": 0,
+  "holds": 0,
+  "noops": 0,
+  "blockers": [],
+  "nativeSpeakerApproval": false,
+  "validationNotes": [
+    "The live PR was OPEN and draft at the required head before review.",
+    "The primary packet checksums passed; every part B source/current target, value hash, catalog blob, exact-head caller line and supplied token set re-attested with zero mismatches.",
+    "All primary proposals were independently reviewed; each accepted proposal target/hash is preserved, one Traditional Chinese target was further refined, and ten missed issues are recorded with exact target hashes.",
+    "No repository or PR changes, tests, builds, scans, CI, workflow changes, releases, tags, or merges were made. No native-speaker approval is claimed."
+  ]
+}

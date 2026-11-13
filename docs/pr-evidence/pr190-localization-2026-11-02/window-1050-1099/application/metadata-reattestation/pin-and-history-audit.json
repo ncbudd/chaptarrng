@@ -1,0 +1,27 @@
+{
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "pinnedCommitAvailable": true,
+  "observedWorktreeHead": "873405e333415b41feb870c597ef71af9f3dd5b5",
+  "observedWorktreeTree": "b979f367a401b54fc35d56c1eac92e5de3b1aa33",
+  "worktreeClean": true,
+  "pinnedFiles": 21,
+  "pinnedFileFailures": 0,
+  "sourceRowsCompared": 50,
+  "currentAndReviewCellsCompared": 600,
+  "cellParityFailures": 0,
+  "priorHistoryRowsCompared": 12600,
+  "priorHistoryParityFailures": 0,
+  "uniqueCallerPinsCompared": 60,
+  "callerPinSetMatchesCrossReview": true,
+  "crossReviewPacketChecksumsVerified": 9,
+  "crossReviewChecksumFailures": 0,
+  "postCrossReviewMtimeEvidence": {
+    "crossReviewSealUtc": "2026-11-02T22:46:22.071538+00:00",
+    "filesModifiedAfterCrossReviewSeal": [
+      "manifest.json",
+      "SHA256SUMS"
+    ],
+    "maxMtimeOtherPacketFilesUtc": "2026-11-02T22:41:05.514242+00:00"
+  }
+}

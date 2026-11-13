@@ -1,0 +1,66 @@
+{
+  "locales": {
+    "es": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "zh_CN": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "hi": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "de": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "ja": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "fr": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "pt_BR": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "ar": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "ko": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "zh_TW": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "vi": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    },
+    "id": {
+      "keys": 4165,
+      "matchesEnglishKeyset": true,
+      "duplicateKeys": false
+    }
+  },
+  "englishKeys": 4165,
+  "allPass": true
+}

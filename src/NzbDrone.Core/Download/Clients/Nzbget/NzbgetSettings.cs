@@ -23,7 +23,8 @@ namespace NzbDrone.Core.Download.Clients.Nzbget
                     c.EbookCategory.IsNotNullOrWhiteSpace() ||
                     c.MusicCategory.IsNotNullOrWhiteSpace())
                 .WithMessage("A category is recommended")
-                .AsWarning();
+                .AsWarning()
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.mda954bbc0eee", isWarning: true));
         }
     }
 

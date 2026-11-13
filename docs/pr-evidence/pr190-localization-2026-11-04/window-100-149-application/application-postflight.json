@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "preflightPrState": "OPEN",
+  "preflightIsDraft": true,
+  "preflightMerged": false,
+  "preflightHead": "9fd23606fbb4c8928505772413e5c23e85352adc",
+  "preflightTree": "cba466021a9a0c9699ef171ddc6a510a69209083",
+  "preflightBase": "main",
+  "preflightBaseOid": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "productCommit": "a5b6d99061f1193af5d8de9b3d04d9df7296b043",
+  "productTree": "cab243f181d5d5e9490130e5d6229df7219848af",
+  "productParent": "9fd23606fbb4c8928505772413e5c23e85352adc",
+  "productCommitSubject": "i18n: apply ChaptarrNG W100-W149 cross-review [skip ci]",
+  "productPaths": [
+    "CHANGELOG.md",
+    "src/NzbDrone.Core/Localization/Core/ar.json",
+    "src/NzbDrone.Core/Localization/Core/de.json",
+    "src/NzbDrone.Core/Localization/Core/es.json",
+    "src/NzbDrone.Core/Localization/Core/fr.json",
+    "src/NzbDrone.Core/Localization/Core/hi.json",
+    "src/NzbDrone.Core/Localization/Core/ja.json",
+    "src/NzbDrone.Core/Localization/Core/ko.json",
+    "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "src/NzbDrone.Core/Localization/Core/vi.json",
+    "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "src/NzbDrone.Core/Localization/Core/zh_TW.json"
+  ],
+  "workflowPathCount": 0,
+  "branchPushReadback": {
+    "branchRefOid": "a5b6d99061f1193af5d8de9b3d04d9df7296b043",
+    "pullRefOidAtObservedReadback": "9fd23606fbb4c8928505772413e5c23e85352adc",
+    "prApiHeadShaAtObservedReadback": "9fd23606fbb4c8928505772413e5c23e85352adc",
+    "prApiState": "OPEN",
+    "prApiDraft": true,
+    "prApiUpdatedAt": "2026-11-04T09:07:55Z",
+    "mismatch": "branch ref advanced while GitHub PR API and refs/pull/190/head still report the pinned base; bounded rechecks pending"
+  },
+  "checksReadback": {
+    "combinedStatus": "no statuses",
+    "testsBuildsScansCiDispatched": false,
+    "statusQueryReadOnly": true
+  },
+  "gitDiffCheck": "PASS",
+  "localCommitHooks": "bypassed because repository hooks run a Semgrep scan/post-commit synchronization; no scan/build/test executed",
+  "prePushHook": "bypassed because it runs a packaging test; no test executed",
+  "browserReview": false,
+  "nativeSpeakerApproval": false,
+  "mergeReleaseTagPerformed": false,
+  "bodyUpdate": "pending PR-head synchronization"
+}

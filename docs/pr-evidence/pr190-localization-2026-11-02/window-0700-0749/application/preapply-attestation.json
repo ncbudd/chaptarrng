@@ -1,0 +1,20 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pull_request": 190,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "input_head": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "tree": "eab2516e48adf4586f14cb131dc1ca6876f87e5f",
+  "pr_state": "open",
+  "draft": true,
+  "remote_branch_head": "02f0d841b54c7806005fc67973973799c6960bcf",
+  "primary_manifest_verified": true,
+  "primary_input_manifest_verified_from_repo_root": true,
+  "crossreview_manifest_verified": true,
+  "source_catalog_verified": true,
+  "locale_catalogs_verified": 12,
+  "selected_cells_verified": 600,
+  "caller_references_reattested": 77,
+  "frontend_pipeline_references_reattested": 76,
+  "boundary_cells_reattested": 12,
+  "boundary_caller_refs_reattested": 48
+}

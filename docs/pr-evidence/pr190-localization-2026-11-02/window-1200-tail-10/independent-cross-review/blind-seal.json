@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "phase": "blind judgments sealed before reading primary proposals",
+  "baselineHead": "c53c7ac60624926e60ba40f10a88c109cd23a0de",
+  "baselineTree": "c2554ab314c96f11ce783faa08896a97e91a4fad",
+  "inputSha256": "e9a1b4de5249af86880b9d9fcf16c4dec6d2426e41da01894a2e4b7fc6b06e76",
+  "ledgerSha256": "24679706ca5cacdded315fa3bdbb4385dff3b7bc77eaa29579a413695fddc12a",
+  "rowCount": 120,
+  "dispositionCounts": {
+    "accept-current": 56,
+    "refinement": 4,
+    "correction": 60
+  },
+  "candidateSuggestionsConsulted": false,
+  "primaryReviewLedgerConsulted": false,
+  "nativeSpeakerApproval": false
+}

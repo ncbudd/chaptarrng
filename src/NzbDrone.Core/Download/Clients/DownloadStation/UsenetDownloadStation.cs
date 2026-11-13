@@ -49,7 +49,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
         public override string Name => "Download Station (Usenet)";
 
-        public override ProviderMessage Message => new ProviderMessage("Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account", ProviderMessageType.Warning);
+        public override ProviderMessage Message => new ProviderMessage("Chaptarr is unable to connect to Download Station if 2-Factor Authentication is enabled on your DSM account", ProviderMessageType.Warning, "server.message.m12f8b73a2b72");
 
         private IDownloadStationTaskProxy DsTaskProxy => _dsTaskProxySelector.GetProxy(Settings);
 
@@ -236,7 +236,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                 if (downloadDir == null)
                 {
-                    return new NzbDroneValidationFailure(nameof(Settings.TvDirectory), "No default destination")
+                    return new NzbDroneValidationFailure(nameof(Settings.TvDirectory), "No default destination", "server.message.m629e576013e4", null)
                     {
                         DetailedDescription = $"You must login into your Diskstation as {Settings.Username} and manually set it up into DownloadStation settings under BT/HTTP/FTP/NZB -> Location."
                     };
@@ -253,7 +253,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                     if (folderInfo.Additional == null)
                     {
-                        return new NzbDroneValidationFailure(fieldName, $"Shared folder does not exist")
+                        return new NzbDroneValidationFailure(fieldName, $"Shared folder does not exist", "server.message.m3c9d3d8a7bc2", null)
                         {
                             DetailedDescription = $"The Diskstation does not have a Shared Folder with the name '{sharedFolder}', are you sure you specified it correctly?"
                         };
@@ -261,7 +261,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                     if (!folderInfo.IsDir)
                     {
-                        return new NzbDroneValidationFailure(fieldName, $"Folder does not exist")
+                        return new NzbDroneValidationFailure(fieldName, $"Folder does not exist", "server.message.m4bbe30648055", null)
                         {
                             DetailedDescription = $"The folder '{downloadDir}' does not exist, it must be created manually inside the Shared Folder '{sharedFolder}'."
                         };
@@ -279,7 +279,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             catch (Exception ex)
             {
                 _logger.Error(ex, "Error testing Usenet Download Station");
-                return new NzbDroneValidationFailure(string.Empty, $"Unknown exception: {ex.Message}");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Unknown exception: {ex.Message}", "server.message.m98845de47ab9", new { value0 = ex.Message });
             }
         }
 
@@ -292,7 +292,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new NzbDroneValidationFailure("Username", "Authentication failure", "server.message.md83ae8fb37f8", null)
                 {
                     DetailedDescription = $"Please verify your username and password. Also verify if the host running Chaptarr isn't blocked from accessing {Name} by WhiteList limitations in the {Name} configuration."
                 };
@@ -303,19 +303,19 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
                 if (ex.Status == WebExceptionStatus.ConnectFailure)
                 {
-                    return new NzbDroneValidationFailure("Host", "Unable to connect")
+                    return new NzbDroneValidationFailure("Host", "Unable to connect", "server.message.me40966162b11", null)
                     {
                         DetailedDescription = "Please verify the hostname and port."
                     };
                 }
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unknown exception: " + ex.Message, "server.message.m98845de47ab9", new { value0 = ex.Message });
             }
             catch (Exception ex)
             {
                 _logger.Error(ex, "Error testing Torrent Download Station");
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Usenet Download Station")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to Usenet Download Station", "server.message.m9d7030ad5fa8", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -330,7 +330,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
 
             if (info.MinVersion > 2 || info.MaxVersion < 2)
             {
-                return new ValidationFailure(string.Empty, $"Download Station API version not supported, should be at least 2. It supports from {info.MinVersion} to {info.MaxVersion}");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, $"Download Station API version not supported, should be at least 2. It supports from {info.MinVersion} to {info.MaxVersion}", "server.message.m33f2c35d1a7a", new { value0 = info.MinVersion, value1 = info.MaxVersion });
             }
 
             return null;
@@ -421,7 +421,7 @@ namespace NzbDrone.Core.Download.Clients.DownloadStation
             }
             catch (Exception ex)
             {
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of NZBs: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of NZBs: " + ex.Message, "server.message.m890b9b46edd4", new { value0 = ex.Message });
             }
         }
 

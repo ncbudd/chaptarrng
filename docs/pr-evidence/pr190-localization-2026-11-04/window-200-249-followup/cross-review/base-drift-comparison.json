@@ -1,0 +1,19 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "apiBase": "17bde320915af42de73b8646ad56f8ba2ccebf4e",
+  "currentMain": "dbbb46abf8bee2f88e5a8a6ca7d8e141bf4d15a2",
+  "compareStatus": "ahead",
+  "aheadBy": 8,
+  "changedFiles": [
+    ".github/workflows/bookshelfng-standalone-macos-acceptance.yml",
+    ".github/workflows/standalone-asset-validation.yml",
+    "AGENTS.md",
+    "docs/BOOKSHELFNG_RETIREMENT.md",
+    "packaging/scripts/test-bookshelf-legacy-channels.mjs",
+    "scripts/test_workflow_runner_policy.py"
+  ],
+  "containsLocalizationSourceOrCatalogChanges": false,
+  "verifiedAtUTC": "2026-11-04T16:19:50Z",
+  "verification": "GitHub compare API"
+}

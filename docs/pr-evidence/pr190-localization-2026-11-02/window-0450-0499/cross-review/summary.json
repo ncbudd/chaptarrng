@@ -1,0 +1,111 @@
+{
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "primaryPacketHead": "2eb0ae6eb15ebc366eea44dd969265c0f6366445",
+  "primaryPacketTree": "1340ba7d0642217aa81e3789e908931bd6fa74f1",
+  "liveHead": "70f5ad2c2dc8222d8f35e09ba81ffa12acfff856",
+  "liveTree": "9bd50b4f149f69f7cd5b78937b45fe1745e6c695",
+  "checkpoint48584Tree": "33b635d2fa6d5d3f1b3207002daedd6993ce2be1",
+  "prState": "OPEN",
+  "draft": true,
+  "scope": {
+    "sourceOrdinals": [
+      450,
+      499
+    ],
+    "sourceIds": 50,
+    "localeCells": 600,
+    "proposalsIndependentlyReviewed": 156,
+    "holdsIndependentlyReviewed": 12
+  },
+  "crossReview": {
+    "acceptedPrimaryCandidates": 151,
+    "revisedPrimaryCandidates": 5,
+    "retainedHolds": 12,
+    "revisions": [
+      {
+        "sourceOrdinal": 457,
+        "sourceId": "server.message.m08504a962fa8",
+        "locale": "hi",
+        "finalTarget": "चुना गया संस्करण '{value0}' चुनी गई पुस्तक {value1} का नहीं है।",
+        "rationale": "The caller uses “foreign” for an edition belonging to another selected book, not a foreign-language edition. Remove “विदेशी” and state the book-membership mismatch directly."
+      },
+      {
+        "sourceOrdinal": 457,
+        "sourceId": "server.message.m08504a962fa8",
+        "locale": "zh-Hans",
+        "finalTarget": "所选版本“{value0}”不属于所选图书 {value1}。",
+        "rationale": "In the pinned validator, this ID is “foreign” because it belongs to another selected book; “外文版” implies a foreign-language edition. Use a neutral “selected edition” so the relationship is precise."
+      },
+      {
+        "sourceOrdinal": 467,
+        "sourceId": "server.message.m0df8751db78b",
+        "locale": "id",
+        "finalTarget": "Folder akar yang dipilih '{value0}' tidak memiliki profil kualitas bawaan untuk {value1}.",
+        "rationale": "The primary proposal omitted “selected.” Keep the source’s selected-root-folder detail while improving “default” to “bawaan.”"
+      },
+      {
+        "sourceOrdinal": 483,
+        "sourceId": "server.message.m1b9eb5de4d01",
+        "locale": "ko",
+        "finalTarget": "시리즈 변형 {value0} 삭제가 성공적으로 완료되었습니다.",
+        "rationale": "The value is arbitrary display text. The primary particle “을” may be wrong depending on the value’s final sound; recast the sentence so the particle is fixed."
+      },
+      {
+        "sourceOrdinal": 485,
+        "sourceId": "server.message.m1c09d17ff717",
+        "locale": "ko",
+        "finalTarget": "선택한 에디션 ID {value0}를 찾을 수 없습니다.",
+        "rationale": "The caller passes a numeric edition ID. The primary “을” attaches to the dynamic value and can be wrong; identify the value as ID and attach “를” after the fixed literal."
+      }
+    ]
+  },
+  "technicalChecks": {
+    "all600SourceCurrentTargetCellsReattested": 600,
+    "cellValueMismatches": 0,
+    "proposalSourceAndCurrentTargetHashesReattested": 156,
+    "proposalAndHoldSourceCurrentHashesReattested": 168,
+    "proposalMismatchCount": 0,
+    "catalogBlobDifferencesDueToEarlierWindows": {
+      "es": 50,
+      "zh-Hans": 50,
+      "hi": 50,
+      "de": 50,
+      "ja": 50,
+      "fr": 50,
+      "pt-BR": 50,
+      "ar": 50,
+      "ko": 50,
+      "zh-Hant": 50,
+      "vi": 50,
+      "id": 50
+    },
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "callerReferencesReattested": 69,
+    "uniqueCallerFiles": 51,
+    "callerMismatches": 0,
+    "priorW449SourceCellsReattested": 12,
+    "W449TargetsMatchingCrossReviewFinal": 12,
+    "W449CellsChangedFromPrimarySnapshot": 6,
+    "W449CallerRefsReattested": 2,
+    "W449CallerMismatches": 0,
+    "placeholderOrMarkupOrProtectedLiteralMismatches": 0
+  },
+  "holds": {
+    "sourceOrdinal": 498,
+    "sourceId": "server.message.m23e7ac60ea9c",
+    "localeCount": 12,
+    "callerRefs": 0,
+    "reason": "No exact direct caller; preserve uncertainty."
+  },
+  "caveats": {
+    "nativeSpeakerApproval": false,
+    "noRepoOrPrEdits": true,
+    "noTestsBuildsScansCiBrowserOrWorkflowEdits": true,
+    "noReleaseOrTag": true
+  },
+  "inputPacketChecksumFailures": {
+    "SHA256SUMS": [],
+    "INPUT-SHA256SUMS": []
+  }
+}

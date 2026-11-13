@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "0117311b672af8d828fb45bad7e6026763b201da",
+  "exactTree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "scope": {
+    "positions": [
+      150,
+      199
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr"
+    ],
+    "cells": 300
+  },
+  "parentPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0150-0199-primary-part-a-20261102",
+  "inputCellsSha256": "8b5b2cd5cdc6ac223481e14b84df61e1303f2cc0e79cb9d746252e0582939691",
+  "primaryReviewSha256": "0c1a7cee5bc31217a1bd9873270f704f0003f9065027b16fb062c43decd27d90",
+  "counts": {
+    "accepted": 298,
+    "refined": 1,
+    "missed": 1,
+    "held": 0,
+    "noop": 0
+  },
+  "perLocale": {
+    "es": {
+      "accepted": 50,
+      "refined": 0,
+      "missed": 0,
+      "held": 0,
+      "noop": 0
+    },
+    "zh-Hans": {
+      "accepted": 50,
+      "refined": 0,
+      "missed": 0,
+      "held": 0,
+      "noop": 0
+    },
+    "hi": {
+      "accepted": 49,
+      "refined": 0,
+      "missed": 1,
+      "held": 0,
+      "noop": 0
+    },
+    "de": {
+      "accepted": 50,
+      "refined": 0,
+      "missed": 0,
+      "held": 0,
+      "noop": 0
+    },
+    "ja": {
+      "accepted": 50,
+      "refined": 0,
+      "missed": 0,
+      "held": 0,
+      "noop": 0
+    },
+    "fr": {
+      "accepted": 49,
+      "refined": 1,
+      "missed": 0,
+      "held": 0,
+      "noop": 0
+    }
+  },
+  "overrides": {
+    "refined": 1,
+    "missed": 1,
+    "held": 0,
+    "details": [
+      {
+        "sourceOrdinal": 187,
+        "locale": "fr",
+        "issue": "Revised sentence subject so IPTorrents generates the RSS feed URL from selected categories."
+      },
+      {
+        "sourceOrdinal": 194,
+        "locale": "hi",
+        "issue": "Current Hindi value contains a Simplified Chinese clause; supplied a Hindi correction."
+      }
+    ]
+  },
+  "reattestation": {
+    "path": "reattestation.json",
+    "mismatches": 0,
+    "callerRefsVerified": 576,
+    "placeholderMismatches": 0,
+    "protectedLiteralMismatches": 0,
+    "cellCallerRefsVerified": 576,
+    "uniqueCallerRefsVerified": 96,
+    "uniqueCallerFilesVerified": 15
+  },
+  "checks": {
+    "path": "protected-literal-placeholder-checks.jsonl",
+    "rows": 300,
+    "mismatches": 0,
+    "sha256": "3609522f89e68e83cd38d57a69ed3a93db03c4441b08b2f9bec14775d9e1c877"
+  },
+  "review": {
+    "path": "cross-review-cells.jsonl",
+    "rows": 300,
+    "sha256": "8fa76e0c57a3df4633deefb9ebce884bf05c6548d947f10d0655a7df1695ca74"
+  }
+}

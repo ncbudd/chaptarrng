@@ -8,6 +8,7 @@ using NzbDrone.Core.MetadataSource;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
 using NzbDrone.Core.ThingiProvider;
+using NzbDrone.Core.Validation;
 
 namespace NzbDrone.Core.ImportLists
 {
@@ -119,7 +120,11 @@ namespace NzbDrone.Core.ImportLists
             catch (Exception ex)
             {
                 _logger.Error(ex, "Test aborted due to exception");
-                failures.Add(new ValidationFailure(string.Empty, "Test was aborted due to an error: " + ex.Message));
+                failures.Add(NzbDroneValidationFailure.ForMessage(
+                    string.Empty,
+                    "Test was aborted due to an error: " + ex.Message,
+                    "server.message.m2651c4cafa4d",
+                    new { value0 = ex.Message }));
             }
 
             return new ValidationResult(failures);

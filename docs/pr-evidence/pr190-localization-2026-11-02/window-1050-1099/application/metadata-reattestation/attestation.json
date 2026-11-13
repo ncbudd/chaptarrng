@@ -1,0 +1,49 @@
+{
+  "attestation": "ChaptarrNG PR #190 W1050-W1099 repaired primary packet metadata reattestation",
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1050-1099-primary-20261102",
+  "sealedCrossReview": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1050-1099-crossreview-20261102",
+  "attestationPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-1050-1099-metadata-reattest-20261102",
+  "exactHead": "c0a098e4e2b23117860c6e6827c1e84485273a7a",
+  "exactTree": "669c5d82ab651dc38abb2db9d35fc2f893a19fef",
+  "observedWorktreeHead": "873405e333415b41feb870c597ef71af9f3dd5b5",
+  "observedWorktreeTree": "b979f367a401b54fc35d56c1eac92e5de3b1aa33",
+  "worktreeClean": true,
+  "primarySha256Sums": {
+    "entries": 25,
+    "failures": 0,
+    "fileSha256": "ac1781208ec67b943b7a70aaa0492231f93c7f52beb177cd15c113484d333f9a"
+  },
+  "manifest": {
+    "artifactEntries": 24,
+    "failures": 0,
+    "fileSha256": "9b3b0bb0d253d2d5d4cd2513f9777c3dd808f25a976dee72be55c0a78bbe4543"
+  },
+  "README": {
+    "bytes": 3061,
+    "sha256": "897127e176748c01d02b61bb77e9faac82a83571ed33c83bf4a31752ab9efbd4",
+    "manifestEntryMatches": true
+  },
+  "crossReviewContentParity": {
+    "sourceRows": 50,
+    "cells": 600,
+    "historyRows": 12600,
+    "uniqueCallerPins": 60,
+    "failures": 0
+  },
+  "repositoryPins": {
+    "filePins": 21,
+    "failures": 0,
+    "worktreeClean": true
+  },
+  "metadataOnlyEvidence": {
+    "crossReviewSealUtc": "2026-11-02T22:46:22.071538+00:00",
+    "filesModifiedAfterCrossReviewSeal": [
+      "manifest.json",
+      "SHA256SUMS"
+    ],
+    "maxMtimeOtherPacketFilesUtc": "2026-11-02T22:41:05.514242+00:00"
+  },
+  "result": "PASS",
+  "scope": "Metadata and cross-review parity reattestation only; no new semantic decisions.",
+  "nativeSpeakerSignoff": "Still outstanding from the sealed cross-review."
+}

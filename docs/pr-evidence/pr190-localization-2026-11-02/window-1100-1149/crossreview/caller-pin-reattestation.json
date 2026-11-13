@@ -1,0 +1,581 @@
+{
+  "callerContextRows": 50,
+  "callerFiles": 24,
+  "callerGaps": 0,
+  "callerLineResults": [
+    {
+      "actualText": "translate('ui.author.syncMonitoringHelp') :",
+      "expectedText": "translate('ui.author.syncMonitoringHelp') :",
+      "file": "frontend/src/Author/Edit/EditAuthorModalContent.js",
+      "line": 201,
+      "lineSha256": "15f19821b4a7044b6e0492f4825f09957e0a949101dd426e3c4f6d4c2746392c",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "translate('ui.author.syncMonitoringRequiresRoots');",
+      "expectedText": "translate('ui.author.syncMonitoringRequiresRoots');",
+      "file": "frontend/src/Author/Edit/EditAuthorModalContent.js",
+      "line": 202,
+      "lineSha256": "139745f9f0841cff5cae65016b23210bc2b58480eef7eeeaa0bd4ff35d34f134",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "translate('ui.dialog.label') : document.title || translate('ui.dialog.label');",
+      "expectedText": "translate('ui.dialog.label') : document.title || translate('ui.dialog.label');",
+      "file": "frontend/src/Components/Modal/ModalContent.js",
+      "line": 33,
+      "lineSha256": "a6d06382e25146960a4b2f1712e115da2257c3c4dde8cea419090936532e5370",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "translate('ui.error.unknown');",
+      "expectedText": "translate('ui.error.unknown');",
+      "file": "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
+      "line": 269,
+      "lineSha256": "70ce7d71c97f32945f41b6970a9a63582e6afa3f1b657e1661f23fea6d3f162e",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));",
+      "expectedText": "deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));",
+      "file": "frontend/src/Store/Actions/oAuthActions.js",
+      "line": 157,
+      "lineSha256": "98f52642501cc961175c626d942b5a499f3a355ba4904c1cb1d238d3a6bd5d7f",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));",
+      "expectedText": "deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));",
+      "file": "frontend/src/Store/Actions/oAuthActions.js",
+      "line": 169,
+      "lineSha256": "6014dde8ab18634664f7dcf30fd2306fa3e8b1b43ae47e128973fbb33293e08a",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));",
+      "expectedText": "deferred.reject(createOAuthError(payload, 'ui.oauth.authorizationTimedOut'));",
+      "file": "frontend/src/Store/Actions/oAuthActions.js",
+      "line": 211,
+      "lineSha256": "6014dde8ab18634664f7dcf30fd2306fa3e8b1b43ae47e128973fbb33293e08a",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));",
+      "expectedText": "deferred.reject(createOAuthError(payload, 'ui.oauth.windowClosed'));",
+      "file": "frontend/src/Store/Actions/oAuthActions.js",
+      "line": 238,
+      "lineSha256": "98f52642501cc961175c626d942b5a499f3a355ba4904c1cb1d238d3a6bd5d7f",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "const grabError = hasMessage ? responseMessage : translate('ui.release.queueFailed');",
+      "expectedText": "const grabError = hasMessage ? responseMessage : translate('ui.release.queueFailed');",
+      "file": "frontend/src/Store/Actions/releaseActions.js",
+      "line": 416,
+      "lineSha256": "077b03dc089405468a2bc2b9cb15bc0b877428927994fb22be7f7115e277d597",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "return record ? translateWithFallback(record.id, record.source) : fallback;",
+      "expectedText": "return record ? translateWithFallback(record.id, record.source) : fallback;",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.cjs",
+      "line": 8,
+      "lineSha256": "47d9f23bd6daf9ddb5e352a463706a64190dac838e597d1f35311eded420a3cc",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.refreshMonitoredDownloads\",",
+      "expectedText": "\"id\": \"ui.task.refreshMonitoredDownloads\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 4,
+      "lineSha256": "0001ef0d5666a0beb6479477f711e05b5013934258c396701ac2f34971f30357",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.messagingCleanup\",",
+      "expectedText": "\"id\": \"ui.task.messagingCleanup\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 9,
+      "lineSha256": "f81ca7219269ea929f6d6fb4707a169f5348d22c634a00525d661063ad3df3cd",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.applicationUpdateCheck\",",
+      "expectedText": "\"id\": \"ui.task.applicationUpdateCheck\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 14,
+      "lineSha256": "10643f9f33997230c4d98edc7b2cec65ec2c1aaa5c7b89ed02dad46864129884",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.checkHealth\",",
+      "expectedText": "\"id\": \"ui.task.checkHealth\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 19,
+      "lineSha256": "3352eac191a84142e3c1b97daa6bfeb4deb95b662d44c27b3e62a9b155769da0",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.refreshMyAnonaMouseAccountStatus\",",
+      "expectedText": "\"id\": \"ui.task.refreshMyAnonaMouseAccountStatus\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 24,
+      "lineSha256": "5133509680533d431ae67285b8982d0ac3cac6c839c6312e3e628af70d1713c8",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.housekeeping\",",
+      "expectedText": "\"id\": \"ui.task.housekeeping\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 39,
+      "lineSha256": "1a2d1d88127908dcb1449e7b292426251b537aec904f9ef06195d3d121fb9827",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.repairAuthorMediaCovers\",",
+      "expectedText": "\"id\": \"ui.task.repairAuthorMediaCovers\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 44,
+      "lineSha256": "480792129df714635ff4af8b030c4a526b161618490cd101871d409138ae2b48",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.importListSync\",",
+      "expectedText": "\"id\": \"ui.task.importListSync\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 54,
+      "lineSha256": "3e55349d36eedd9bba77ac794227186c51f7d29870219236c6a723b8556b1011",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.hardcoverLibrarySync\",",
+      "expectedText": "\"id\": \"ui.task.hardcoverLibrarySync\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 59,
+      "lineSha256": "0fac2c2ac7bd4d33f8c2df9781bbd5ae1c2aa3bacf62680e5418b01bcd938f9f",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.missingBookSearch\",",
+      "expectedText": "\"id\": \"ui.task.missingBookSearch\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 69,
+      "lineSha256": "8513682ca550d383efee327aae86f65600f905723c3ebd1a7e6912364e2e4ba4",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"id\": \"ui.task.processPendingImports\",",
+      "expectedText": "\"id\": \"ui.task.processPendingImports\",",
+      "file": "frontend/src/Utilities/Localization/scheduled-task-labels.json",
+      "line": 74,
+      "lineSha256": "fc02f9a788f6070097609b1eeae3e61a20d8c6a93e27b84168a704878963bfea",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw NzbDroneClientException.WithMessageId(",
+      "expectedText": "throw NzbDroneClientException.WithMessageId(",
+      "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+      "line": 216,
+      "lineSha256": "0fdf3584000adb8a8dbd1ab59134870700bc86ccce06c5ab32d7be1118e0a03a",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new NzbDroneClientException(HttpStatusCode.Conflict, $\"Getting release from indexer failed: {ex.Message}\");",
+      "expectedText": "throw new NzbDroneClientException(HttpStatusCode.Conflict, $\"Getting release from indexer failed: {ex.Message}\");",
+      "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+      "line": 225,
+      "lineSha256": "2c5850ea517242364ee3faf365cd77ea8bd7540e8f5e2e33b3c2807153608165",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new DownloadClientUnavailableException(\"No download client was found without tags or a matching author tag. Please check your settings.\");",
+      "expectedText": "throw new DownloadClientUnavailableException(\"No download client was found without tags or a matching author tag. Please check your settings.\");",
+      "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+      "line": 99,
+      "lineSha256": "56960b109c6162855cb2d072939c740621389464869f056643bab2ba11ce9ddc",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "return $\"No enabled {requestedProtocolLabel} download client is configured. Add and enable a {requestedProtocolLabel}-capable download client, then retry.\";",
+      "expectedText": "return $\"No enabled {requestedProtocolLabel} download client is configured. Add and enable a {requestedProtocolLabel}-capable download client, then retry.\";",
+      "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+      "line": 174,
+      "lineSha256": "b382a71e96ada8a86491d55bfd0f2ad6167ec8eb164e0d9cbcc5acb893c0a544",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new DownloadClientUnavailableException($\"No enabled {requestedProtocol} download client is configured. Add and enable a {requestedProtocol}-capable download client, then retry.\");",
+      "expectedText": "throw new DownloadClientUnavailableException($\"No enabled {requestedProtocol} download client is configured. Add and enable a {requestedProtocol}-capable download client, then retry.\");",
+      "file": "src/NzbDrone.Core/Download/DownloadService.cs",
+      "line": 113,
+      "lineSha256": "df596d3533e24c1e97e4f51226b37ce8bf6384abcb7a30660a9b714ae1ea1a49",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new ExistingTorrentNotFoundException(\"The matching torrent is no longer available in the selected download client. Search again before grabbing it.\");",
+      "expectedText": "throw new ExistingTorrentNotFoundException(\"The matching torrent is no longer available in the selected download client. Search again before grabbing it.\");",
+      "file": "src/NzbDrone.Core/Download/DownloadService.cs",
+      "line": 125,
+      "lineSha256": "e58414334377bc5773a5ee9c016159d5682563f3d210c0098cc04b248c0d8a5b",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": ": base($\"This torrent is already present in {downloadClientName} as '{item.Title}'.\")",
+      "expectedText": ": base($\"This torrent is already present in {downloadClientName} as '{item.Title}'.\")",
+      "file": "src/NzbDrone.Core/Download/TorrentAdoptionExceptions.cs",
+      "line": 11,
+      "lineSha256": "4f2bad61a0a028adca6b2d6acd350a54c6cbbf9bac6754f1f69c92c233c60254",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw BadRequestException.WithMessageId(\"QueryParam callbackUrl invalid.\", \"server.message.m90ee48cf606f\");",
+      "expectedText": "throw BadRequestException.WithMessageId(\"QueryParam callbackUrl invalid.\", \"server.message.m90ee48cf606f\");",
+      "file": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs",
+      "line": 81,
+      "lineSha256": "fcdc7e250d162e6c5c77c1f53a7dfbb46a107da4df805cda768cf0e818cab260",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw BadRequestException.WithMessageId(\"QueryParam oauth_token invalid.\", \"server.message.mc9032616fbb4\");",
+      "expectedText": "throw BadRequestException.WithMessageId(\"QueryParam oauth_token invalid.\", \"server.message.mc9032616fbb4\");",
+      "file": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs",
+      "line": 100,
+      "lineSha256": "89bbe2e1cfc446a83d4a66fb5240f9f0185379130a6e11b62f0ca2335ddbf66b",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw BadRequestException.WithMessageId(\"Missing requestTokenSecret.\", \"server.message.mc95460cab48b\");",
+      "expectedText": "throw BadRequestException.WithMessageId(\"Missing requestTokenSecret.\", \"server.message.mc95460cab48b\");",
+      "file": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs",
+      "line": 105,
+      "lineSha256": "425ae0c9d3a133de3cd63084da780c1c0803b0e09c17e8143f95b3c7ea8627d1",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw BadRequestException.WithMessageId(\"Goodreads user ID must be numeric or a Goodreads profile URL containing a numeric ID.\", \"server.message.m415b9b0835fe\");",
+      "expectedText": "throw BadRequestException.WithMessageId(\"Goodreads user ID must be numeric or a Goodreads profile URL containing a numeric ID.\", \"server.message.m415b9b0835fe\");",
+      "file": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs",
+      "line": 193,
+      "lineSha256": "c6307dd5782a8b3618f0829f14981656e03a8edf593706b13791ecc8853c4448",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw BadRequestException.WithMessageId(\"Goodreads did not return an account ID for the authenticated user.\", \"server.message.m262dfad1709a\");",
+      "expectedText": "throw BadRequestException.WithMessageId(\"Goodreads did not return an account ID for the authenticated user.\", \"server.message.m262dfad1709a\");",
+      "file": "src/NzbDrone.Core/ImportLists/Goodreads/GoodreadsImportListBase.cs",
+      "line": 212,
+      "lineSha256": "e716793f2874ba31c4d791af4ffb09393f68593a4d7891a0cd943d9d4cf4c1ef",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "detail = $\"No tag names a narrator; the length matched the pinned edition. Difference {diffSeconds} seconds; matching tolerance {allowedSeconds} seconds\" +",
+      "expectedText": "detail = $\"No tag names a narrator; the length matched the pinned edition. Difference {diffSeconds} seconds; matching tolerance {allowedSeconds} seconds\" +",
+      "file": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+      "line": 4459,
+      "lineSha256": "2294f8640e062b29f3d1c3f468a453082e4d726c5bd4177f178baa53c9d3ee18",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "(nearestOtherNarration.HasValue ? $\"; nearest other narration {nearestOtherNarration.Value} seconds away.\" : \".\");",
+      "expectedText": "(nearestOtherNarration.HasValue ? $\"; nearest other narration {nearestOtherNarration.Value} seconds away.\" : \".\");",
+      "file": "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+      "line": 4460,
+      "lineSha256": "03768c3eea36d784a59c2524bb4bc5dd059598cdd2c9c5cb551febd94aef441c",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "return ConversionOutputValidationResult.Fail(\"Converted M4B does not have a readable audio duration\");",
+      "expectedText": "return ConversionOutputValidationResult.Fail(\"Converted M4B does not have a readable audio duration\");",
+      "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+      "line": 804,
+      "lineSha256": "a8d80d2a8b551415e018cbe573724ae399590a130a96377fe57b57ce5102bcf3",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "return WithSnippet(ConversionFailureCategory.InvalidInput, \"m4b-tool/ffmpeg could not decode one of the source audio files.\", snippetLine);",
+      "expectedText": "return WithSnippet(ConversionFailureCategory.InvalidInput, \"m4b-tool/ffmpeg could not decode one of the source audio files.\", snippetLine);",
+      "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+      "line": 1045,
+      "lineSha256": "fa43b9957cdc5b9bbfd57c51209f2274a2e8aa630ff2396cccecaf4916c3d176",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "\"This magnet link\" => \"This magnet link is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.\",",
+      "expectedText": "\"This magnet link\" => \"This magnet link is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.\",",
+      "file": "src/NzbDrone.Core/MediaFiles/TorrentInfo/TorrentHashResolver.cs",
+      "line": 35,
+      "lineSha256": "8f0fb0af9e02ce7c1cb4b5c211e30bf03dcfd407ab1ed5a8fe542e166924b789",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException($\"Invalid Hardcover {type} id: {value}\");",
+      "expectedText": "throw new BadRequestException($\"Invalid Hardcover {type} id: {value}\");",
+      "file": "src/NzbDrone.Core/MetadataSource/Hardcover/HardcoverMetadataProxy.cs",
+      "line": 1515,
+      "lineSha256": "c4f9ceeef971ea6d5bcd53fbf6280877db621683230c305f056b70fa3110b7c8",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 782,
+      "lineSha256": "56c521eeba8919bae70369b6da72bae2ddd39cb13fbfe7d493b135f4525bc28c",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException($\"AudioBookShelf OIDC did not redirect (status {(int)response.StatusCode} {response.StatusCode}). Ensure OpenID Connect is enabled and configured on your AudioBookShelf server.\");",
+      "expectedText": "throw new BadRequestException($\"AudioBookShelf OIDC did not redirect (status {(int)response.StatusCode} {response.StatusCode}). Ensure OpenID Connect is enabled and configured on your AudioBookShelf server.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 829,
+      "lineSha256": "c6c6900704b9ce3d111163e90df47ff5da1cee57d868ab03959f56f10772112f",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"AudioBookShelf OIDC redirect missing Location header.\");",
+      "expectedText": "throw new BadRequestException(\"AudioBookShelf OIDC redirect missing Location header.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 835,
+      "lineSha256": "c4ac035c95a0c5bbec7ea41f2bb0fabf766114d3d8788c0444941931eb85af66",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"AudioBookShelf did not return any cookies for the OIDC session.\");",
+      "expectedText": "throw new BadRequestException(\"AudioBookShelf did not return any cookies for the OIDC session.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 841,
+      "lineSha256": "1975df1c17fd16d1391c0fbbf663a5925511c2d36f6837da75455bacbdd159bc",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam code invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam code invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 861,
+      "lineSha256": "8510dd55c6d63b20b622367a0917867d60204efbaf1f829ec9dd356dc4a82a20",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam state invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam state invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 866,
+      "lineSha256": "6654582937ebb62e7e63f25e6e7b131ced0b9c1c1a7f9b4421ebf5ced42e9bb3",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"OIDC session expired. Please try again.\");",
+      "expectedText": "throw new BadRequestException(\"OIDC session expired. Please try again.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 879,
+      "lineSha256": "4428f0846fe161cb0664b1791a95b11d35f3eb9632baffc4d770b7104de12b0e",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"AudioBookShelf did not return a valid access token.\");",
+      "expectedText": "throw new BadRequestException(\"AudioBookShelf did not return a valid access token.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 912,
+      "lineSha256": "01beba37c35a4c47130d02075f5ac325994ac30aa9542d161a61372f1a7bde4d",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"AudioBookShelf did not return an API key.\");",
+      "expectedText": "throw new BadRequestException(\"AudioBookShelf did not return an API key.\");",
+      "file": "src/NzbDrone.Core/Notifications/AudioBookShelf/AudioBookShelf.cs",
+      "line": 960,
+      "lineSha256": "82fc670d7cdc06891536e4fdee05630d8738ad1c70a9324ac0a7c79c809474e6",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new DiscordException(\"Unable to post payload\", ex);",
+      "expectedText": "throw new DiscordException(\"Unable to post payload\", ex);",
+      "file": "src/NzbDrone.Core/Notifications/Discord/DiscordProxy.cs",
+      "line": 42,
+      "lineSha256": "1f5ed5d062ac65dadccd0d2dddac7f366ec35b46764087db38420005bdb59035",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Goodreads/GoodreadsNotificationBase.cs",
+      "line": 53,
+      "lineSha256": "56c521eeba8919bae70369b6da72bae2ddd39cb13fbfe7d493b135f4525bc28c",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam oauth_token invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam oauth_token invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Goodreads/GoodreadsNotificationBase.cs",
+      "line": 72,
+      "lineSha256": "6cad1e2fa2d22f404d41ed08a45d81888c3a1956b8365202216be72c33f5ce2a",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"Missing requestTokenSecret.\");",
+      "expectedText": "throw new BadRequestException(\"Missing requestTokenSecret.\");",
+      "file": "src/NzbDrone.Core/Notifications/Goodreads/GoodreadsNotificationBase.cs",
+      "line": 77,
+      "lineSha256": "54b57688eeba3a4180a1588c0e888c6c9cd363c451bbd9183a60db2455f79342",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"Goodreads did not return an account ID for the authenticated user.\");",
+      "expectedText": "throw new BadRequestException(\"Goodreads did not return an account ID for the authenticated user.\");",
+      "file": "src/NzbDrone.Core/Notifications/Goodreads/GoodreadsNotificationBase.cs",
+      "line": 174,
+      "lineSha256": "0393f00b9e5dc5361bb725c6dfb6e3bb8c6ad62f0a30d76910a0ca1a26057d45",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Plex/Server/PlexServer.cs",
+      "line": 215,
+      "lineSha256": "56c521eeba8919bae70369b6da72bae2ddd39cb13fbfe7d493b135f4525bc28c",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam pinId invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam pinId invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Plex/Server/PlexServer.cs",
+      "line": 228,
+      "lineSha256": "2ead9f0be70da6694d7043127b4fd53e89e8ce4fb087b685e851e38a80d43801",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new ProwlException(\"Apikey is invalid\", ex);",
+      "expectedText": "throw new ProwlException(\"Apikey is invalid\", ex);",
+      "file": "src/NzbDrone.Core/Notifications/Prowl/ProwlProxy.cs",
+      "line": 52,
+      "lineSha256": "c6ea85101640bb322e031219c226522efad57b4950f8b8ca9d8c4e6eb9585c40",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new ProwlException(\"Unable to send text message: \" + ex.Message, ex);",
+      "expectedText": "throw new ProwlException(\"Unable to send text message: \" + ex.Message, ex);",
+      "file": "src/NzbDrone.Core/Notifications/Prowl/ProwlProxy.cs",
+      "line": 55,
+      "lineSha256": "045e2b21c14047579a8a826dbb6cb0b611ef12468037896c19bd6b60a7c2221a",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new ProwlException(\"Failed to connect to prowl, please check your settings.\", ex);",
+      "expectedText": "throw new ProwlException(\"Failed to connect to prowl, please check your settings.\", ex);",
+      "file": "src/NzbDrone.Core/Notifications/Prowl/ProwlProxy.cs",
+      "line": 59,
+      "lineSha256": "17d126cbfde7f86eee3767edebe8000353eab76f0a60eca33cc11295f60d3cb4",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new SlackExeption(\"Unable to post payload\", ex);",
+      "expectedText": "throw new SlackExeption(\"Unable to post payload\", ex);",
+      "file": "src/NzbDrone.Core/Notifications/Slack/SlackProxy.cs",
+      "line": 42,
+      "lineSha256": "3b2647b3d779f3a4bfd50ed6836448527a72ed1584b8f6379de2600c6f42e0ac",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam callbackUrl invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Twitter/Twitter.cs",
+      "line": 88,
+      "lineSha256": "56c521eeba8919bae70369b6da72bae2ddd39cb13fbfe7d493b135f4525bc28c",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam oauth_token invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam oauth_token invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Twitter/Twitter.cs",
+      "line": 103,
+      "lineSha256": "6cad1e2fa2d22f404d41ed08a45d81888c3a1956b8365202216be72c33f5ce2a",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"QueryParam oauth_verifier invalid.\");",
+      "expectedText": "throw new BadRequestException(\"QueryParam oauth_verifier invalid.\");",
+      "file": "src/NzbDrone.Core/Notifications/Twitter/Twitter.cs",
+      "line": 108,
+      "lineSha256": "46620bafd1f57cc2321c0082e27f49e892cf11b119bfb4f173fd8c3433162bf0",
+      "pass": true,
+      "registryPinExact": true
+    },
+    {
+      "actualText": "throw new BadRequestException(\"Provider authorization expired. Please sign in again.\");",
+      "expectedText": "throw new BadRequestException(\"Provider authorization expired. Please sign in again.\");",
+      "file": "src/NzbDrone.Core/ThingiProvider/PendingProviderSecretService.cs",
+      "line": 52,
+      "lineSha256": "08e4226958902acfa1ef3110bd1c0e75c56cc8fc6534dcc2f7fbc1a669a4cc50",
+      "pass": true,
+      "registryPinExact": true
+    }
+  ],
+  "declaredDirectCallerReferencesPerSourceTotal": 75,
+  "exactHead": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "exactTree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "sourceRows": 50,
+  "staleRegistryPins": 0,
+  "uniqueCallerLineRefs": 63,
+  "uniqueSourceIds": 50
+}

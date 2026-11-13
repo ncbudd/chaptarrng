@@ -1,0 +1,174 @@
+{
+  "allCatalogKeySetsEqual": true,
+  "browserReview": "blocked: no deployment exists for the exact input head; existing Agent VM tabs were left untouched",
+  "callerReferences": 74,
+  "catalogs": [
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "keyCount": 4165,
+      "locale": "ar",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "cb752269392ece6bad8005f3374668a0763586d9dc8ee5d50ad32abf568e1ebe"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/de.json",
+      "keyCount": 4165,
+      "locale": "de",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "bee77bfb090258c07d2e7508af587733d06feda7e137e20a3ec6f9a5e7f6aa7e"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/es.json",
+      "keyCount": 4165,
+      "locale": "es",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "d53df445efb9223cc8057ce852c6246b94fdcf376accbdf542c88284313e32cf"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "keyCount": 4165,
+      "locale": "fr",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "36e30964472be37f69cabfc31c7b0cd3b149c20ab5e50db67afbb0aa30b505d8"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "keyCount": 4165,
+      "locale": "hi",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "d85093c78d341c3f4ba342f385d1ea29f0c6312b392b0825d0b6013a73b1018d"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/id.json",
+      "keyCount": 4165,
+      "locale": "id",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "5a5be2ba7a2bb2044e8dc3f48abb5d26f17938a0ee357da96baed60e31ad7ce1"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "keyCount": 4165,
+      "locale": "ja",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "6a619d3ac3cba5d04394c03d40b5253e8161f7a4a21ea614d688123548594874"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "keyCount": 4165,
+      "locale": "ko",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "600d6efdd8b2e85ef3cfc5af2432819eebc96f6848d8e6a9ad25ba02e0de130e"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "keyCount": 4165,
+      "locale": "pt-BR",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "9ba498e2021d431904cd55eb6cb83c087d5b1c52fd272ea0ea324d22fdb05cf2"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "keyCount": 4165,
+      "locale": "vi",
+      "orderedKeySetSha256": "87dffb463daf776059795552d966ad60c5889c5ae22fa0f11ca722209520edae",
+      "sha256": "7e9ce4b033a68ab75b3c3c961b379d55d6f405227f4ef839c9dfe6cf0dc1b110"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "keyCount": 4165,
+      "locale": "zh-Hans",
+      "orderedKeySetSha256": "87dffb463daf776059795552d966ad60c5889c5ae22fa0f11ca722209520edae",
+      "sha256": "fd295b54fd515a8056ac1e9c6c60cbb04b713905e9603c5114513a14b869d971"
+    },
+    {
+      "file": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "keyCount": 4165,
+      "locale": "zh-Hant",
+      "orderedKeySetSha256": "4316265a8fc76be6c6bd8645f36590616e08f7e7f0bece7c3334ce24439d2a62",
+      "sha256": "406f29bf3897d6269538802a25fa6a514e6605cfb223d043aac339e22df6a948"
+    }
+  ],
+  "cells": 600,
+  "crossReviewCounts": {
+    "accept-current": 495,
+    "accept-primary-correction": 69,
+    "accept-primary-refinement": 10,
+    "propose-additional-correction": 14,
+    "retain-hold": 12
+  },
+  "draft": true,
+  "exactInputHead": "175cff3a50569b67def345bb82332b30e9bb378c",
+  "exactInputTree": "e682581e3c577b62215658c374b15a9d3f8f8bd0",
+  "finalChangedCatalogCells": 93,
+  "heldCells": 12,
+  "heldSourceId": "server.message.mf00d6bc38ae8",
+  "keyCount": 4165,
+  "mergeReleaseTag": false,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReviewOutstanding": true,
+  "pipelineReferences": 76,
+  "placeholderMarkupProtectedLiteralFailures": 0,
+  "primaryCounts": {
+    "accept-current": 509,
+    "hold": 12,
+    "propose-correction": 69,
+    "propose-refinement": 10
+  },
+  "pullRequest": 190,
+  "repository": "snapetech-org/ChaptarrNG",
+  "sourceCorrection": {
+    "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+    "callerFileSha256BeforeAndAfter": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+    "callers": [
+      {
+        "line": 27,
+        "lineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb",
+        "lineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+      },
+      {
+        "line": 29,
+        "lineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b",
+        "lineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+      },
+      {
+        "line": 31,
+        "lineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5",
+        "lineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+      },
+      {
+        "line": 33,
+        "lineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661",
+        "lineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")"
+      }
+    ],
+    "heldLocaleCells": 12,
+    "heldSourceId": "server.message.mf00d6bc38ae8",
+    "heldSourceOrdinal": 884,
+    "newSource": "Can not contain '\\', '//', or start/end with '/'",
+    "newSourceFingerprint": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+    "newSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+    "oldSource": "Can not contain '', '//', or start/end with '/'",
+    "oldSourceFingerprint": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+    "oldSourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d",
+    "semanticConclusion": "The four validators reject backslash anywhere, reject //, and disallow a leading or trailing slash. The catalog source with empty quotes was wrong; source text now matches all four callers.",
+    "sourceId": "server.message.mf00d6bc38ae8",
+    "sourceMessageHashesSha256After": "f13e8b8db5ec55fb2228bd8462f3f842373c86f6349ea3a400b98ec6d8d6468d",
+    "sourceMessageHashesSha256Before": "7c21ed396c1340c77b5635f2f5c1e6f966bf4342b03052397d39997c7920747b",
+    "stableIdRetained": true,
+    "translationReviewState": "held pending fresh exact-head review against the corrected source",
+    "validationRule": "^([^\\\\\\/](\\/?[^\\\\\\/])*)?$"
+  },
+  "sourceIds": 50,
+  "sourceOrdinals": [
+    850,
+    899
+  ],
+  "state": "OPEN",
+  "testsBuildsCiRun": false,
+  "thirdPartyAdditionalCorrections": {
+    "accepted": 14,
+    "holds": 0,
+    "revised": 0
+  },
+  "workflowFilesTouched": false
+}

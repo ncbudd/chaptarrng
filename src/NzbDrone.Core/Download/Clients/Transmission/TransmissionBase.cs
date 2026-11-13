@@ -285,7 +285,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             catch (DownloadClientAuthenticationException ex)
             {
                 _logger.Error(ex, "Unable to authenticate");
-                return new NzbDroneValidationFailure("Username", "Authentication failure")
+                return new NzbDroneValidationFailure("Username", "Authentication failure", "server.message.md83ae8fb37f8", null)
                 {
                     DetailedDescription = string.Format("Please verify your username and password. Also verify if the host running Chaptarr isn't blocked from accessing {0} by WhiteList limitations in the {0} configuration.", Name)
                 };
@@ -294,7 +294,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             {
                 _logger.Error(ex, ex.Message);
 
-                return new NzbDroneValidationFailure("Host", "Unable to connect to Transmission")
+                return new NzbDroneValidationFailure("Host", "Unable to connect to Transmission", "server.message.m4abee5a92d01", null)
                 {
                     DetailedDescription = ex.Message
                 };
@@ -303,7 +303,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             {
                 _logger.Error(ex, "Failed to test");
 
-                return new NzbDroneValidationFailure(string.Empty, "Unknown exception: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unknown exception: " + ex.Message, "server.message.m98845de47ab9", new { value0 = ex.Message });
             }
         }
 
@@ -318,7 +318,7 @@ namespace NzbDrone.Core.Download.Clients.Transmission
             catch (Exception ex)
             {
                 _logger.Error(ex, "Failed to get torrents");
-                return new NzbDroneValidationFailure(string.Empty, "Failed to get the list of torrents: " + ex.Message);
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Failed to get the list of torrents: " + ex.Message, "server.message.m451006253bc3", new { value0 = ex.Message });
             }
 
             return null;

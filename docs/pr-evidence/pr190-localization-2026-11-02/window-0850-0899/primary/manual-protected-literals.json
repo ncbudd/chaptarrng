@@ -1,0 +1,48 @@
+{
+  "additionalProtectedLiteralsByOrdinal": {
+    "850": [
+      "Hadouken"
+    ],
+    "858": [
+      "unmappedFiles.scope"
+    ],
+    "880": [
+      "Hadouken",
+      "5.1"
+    ],
+    "882": [
+      "0.7.0+"
+    ],
+    "885": [
+      "RanobeDB"
+    ],
+    "890": [
+      "all",
+      "future",
+      "missing",
+      "existing",
+      "first",
+      "latest",
+      "none",
+      "specificBook"
+    ],
+    "891": [
+      ";download"
+    ],
+    "896": [
+      "ast"
+    ]
+  },
+  "basis": "Source registry protected literals are retained in every per-cell row. These explicit additions cover product names, request paths, API enum values, version strings, URL suffixes, and field identifiers.",
+  "syntaxMarkersByOrdinal": {
+    "884": {
+      "callerMarker": "'\\'",
+      "note": "Empty/sentinel punctuation is preserved in translations; the caller additionally forbids a backslash but the English source catalog omits it.",
+      "sourceMarkers": [
+        "''",
+        "//",
+        "'/'"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "appliedChanges": 99,
+  "preservedTextFreeHolds": 12,
+  "workingTreeOnly": true,
+  "verification": "exact baseline file pins, per-cell current/recommended hashes, all 600 target readbacks, and exact 99-key diff"
+}

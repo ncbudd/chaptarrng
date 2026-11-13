@@ -1,0 +1,15 @@
+{
+  "includedInReviewLedger": false,
+  "liveCurrentTarget": "Dodge-ing melewati tumpukan-tumpukan buku ini...",
+  "liveCurrentTargetSha256": "cf65ab91925d2776a2bf9583700123fc8a0af5123e38d54df1d73289b408d2af",
+  "locale": "id",
+  "priorCandidateFreeTarget": "Dodge-ing pil buku ini",
+  "priorCandidateFreeTargetSha256": "abc075b1bde562c07243271325441e541733c254e0f014357d3a8f673e86a30d",
+  "scopeNote": "Coordinator identified Indonesian as outside the 11 held rows; retained here only to document the seed-to-live readback drift.",
+  "source": "Dodge-ing these piles of books",
+  "sourceId": "ui.loading.dodgeBooks",
+  "targetChangedSinceSeed": true,
+  "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+  "targetFileGitBlob": "0dac7379933313fc74641d296cc32a93f7a5e2bb",
+  "targetFileSha256": "f18e6f64b3ebd5c7c137e1c56af78fd47b43050bc2396300e09a16a52fe8cebe"
+}

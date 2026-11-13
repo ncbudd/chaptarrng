@@ -9,6 +9,7 @@ using NzbDrone.Core.Configuration;
 using NzbDrone.Core.MetadataSource;
 using NzbDrone.Core.Parser;
 using NzbDrone.Core.Parser.Model;
+using NzbDrone.Core.Validation;
 using NzbDrone.Core.Profiles.Metadata;
 using NzbDrone.Core.Profiles.Qualities;
 using NzbDrone.Core.RootFolders;
@@ -124,16 +125,16 @@ namespace NzbDrone.Core.ImportLists.Goodreads
                 _logger.Warn(e, "Goodreads API Error");
                 if (e.Response.StatusCode == HttpStatusCode.NotFound)
                 {
-                    return new ValidationFailure(nameof(Settings.SeriesId), $"Series {Settings.SeriesId} not found");
+                    return NzbDroneValidationFailure.ForMessage(nameof(Settings.SeriesId), $"Series {Settings.SeriesId} not found", "server.message.m42e93ada21fc", new { value0 = Settings.SeriesId });
                 }
 
-                return new ValidationFailure(nameof(Settings.SeriesId), $"Could not get series data");
+                return NzbDroneValidationFailure.ForMessage(nameof(Settings.SeriesId), "Could not get series data", "server.message.m4c93d9a5340f");
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to Goodreads");
 
-                return new ValidationFailure(string.Empty, "Unable to connect to import list, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to import list, check the log for more details", "server.message.ma28fc67879dd");
             }
         }
     }

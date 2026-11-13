@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrNG",
+  "pullRequest": 190,
+  "baseHead": "722c0aaab4eda88bb507ba4a165e2f6bb22901fa",
+  "baseTree": "d162735f61d934389634111229b42beae04aaeea",
+  "sourceId": "server.message.mf00d6bc38ae8",
+  "sourceOrdinal": 884,
+  "sourceText": "Can not contain '\\', '//', or start/end with '/'",
+  "sourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+  "acceptedCorrections": [
+    "ar",
+    "de",
+    "es",
+    "fr",
+    "id",
+    "ja",
+    "ko",
+    "pt_BR",
+    "vi",
+    "zh_CN",
+    "zh_TW"
+  ],
+  "retainedHolds": [
+    "hi"
+  ],
+  "rejectedOrRevised": [],
+  "catalogs": [
+    {
+      "locale": "ar",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "لا يمكن أن يحتوي على '' أو '//'، ولا أن يبدأ بـ '/' أو ينتهي به.",
+      "beforeTargetSha256": "e678c3c310b7c122881141a3d6b7e3227e0984d1cf485f9c53a3f52ec0cb4442",
+      "afterTarget": "لا يجوز أن تحتوي القيمة على '\\' أو '//'، ولا أن تبدأ أو تنتهي بـ '/'.",
+      "afterTargetSha256": "894511b96c2e0995abd0a98804ae6069cd7dced55c6f29f8043c2db4d87b5640",
+      "beforeCatalogSha256": "cb752269392ece6bad8005f3374668a0763586d9dc8ee5d50ad32abf568e1ebe",
+      "afterCatalogSha256": "bd8333f198cf801c185f8eec0ca66a1a3e7f0884049040ef12b30029d230d05f"
+    },
+    {
+      "locale": "de",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/de.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "Kann nicht enthalten '', '//', oder Start/End mit '/'",
+      "beforeTargetSha256": "5f27504a334d6a5591cf91243045d6303fb253338d41894816c2db028623266c",
+      "afterTarget": "Der Wert darf weder '\\' noch '//' enthalten und weder mit '/' beginnen noch enden.",
+      "afterTargetSha256": "0c1d3d5a2b5b7289c82eb506e2f8ff64481f8205cbb9aab413779b131eede606",
+      "beforeCatalogSha256": "bee77bfb090258c07d2e7508af587733d06feda7e137e20a3ec6f9a5e7f6aa7e",
+      "afterCatalogSha256": "71ffef92b186d79ac1613c8e86b08ad8d9bbe25dbfd2b78a1d1f6bdb85947194"
+    },
+    {
+      "locale": "es",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/es.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "No puede contener '', '//', o comenzar / terminar con '/'",
+      "beforeTargetSha256": "1b03903b159fb17ec95e97ff0963031a2799c32393ee94bddf565de348c69a10",
+      "afterTarget": "No puede contener '\\' ni '//', ni comenzar ni terminar con '/'.",
+      "afterTargetSha256": "16cbeda5bb381081a68c05e6d434b16e2f51ca2501a8e9b74e0219161a4a746a",
+      "beforeCatalogSha256": "d53df445efb9223cc8057ce852c6246b94fdcf376accbdf542c88284313e32cf",
+      "afterCatalogSha256": "171a924db3ec50a15c99c1f287cd962a918e981e645e3a6022da728bd6effd40"
+    },
+    {
+      "locale": "fr",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "Vous ne pouvez pas contenir '', '//', ou commencer / finir avec '/'",
+      "beforeTargetSha256": "73df083048fbae4fe25b27fb840a4b7669a1a991b34ecbc164fcb4004b47ba10",
+      "afterTarget": "La valeur ne peut contenir ni « \\ » ni « // », ni commencer ni se terminer par « / ».",
+      "afterTargetSha256": "fe3d2178874767ea382e52155c28b561d614364e4145d235a8aaf9901e0d110e",
+      "beforeCatalogSha256": "36e30964472be37f69cabfc31c7b0cd3b149c20ab5e50db67afbb0aa30b505d8",
+      "afterCatalogSha256": "11e5324f23eb18e2ec5775ca3b440e2af63ffec68f55b941604c37f9d8f20af0"
+    },
+    {
+      "locale": "hi",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "retain-hold",
+      "beforeTarget": "'', '//', या '/' के साथ शुरू / समाप्त नहीं हो सकता है",
+      "beforeTargetSha256": "ba7889a21c7670f6b39a3184dddecfffa525c287f16f58a354a1d7f5439f9734",
+      "afterTarget": "'', '//', या '/' के साथ शुरू / समाप्त नहीं हो सकता है",
+      "afterTargetSha256": "ba7889a21c7670f6b39a3184dddecfffa525c287f16f58a354a1d7f5439f9734",
+      "beforeCatalogSha256": "d85093c78d341c3f4ba342f385d1ea29f0c6312b392b0825d0b6013a73b1018d",
+      "afterCatalogSha256": "d85093c78d341c3f4ba342f385d1ea29f0c6312b392b0825d0b6013a73b1018d"
+    },
+    {
+      "locale": "id",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/id.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "Tidak bisa mengandung '', '//', atau mulai/akhir dengan '/'",
+      "beforeTargetSha256": "3ec1a02c9fa408c1aaee0fec7e4605c7e146da283735b88cb9b65be568a7e4ea",
+      "afterTarget": "Nilai tidak boleh mengandung '\\' atau '//', dan tidak boleh diawali atau diakhiri dengan '/'.",
+      "afterTargetSha256": "582e3315f68dd955eded7cbfdbfb9a2c91ee0a72fff54f43732102528235f342",
+      "beforeCatalogSha256": "5a5be2ba7a2bb2044e8dc3f48abb5d26f17938a0ee357da96baed60e31ad7ce1",
+      "afterCatalogSha256": "63cf353bde164c75a87be653a9ef8bed63bac5f71f1e77c3c91278b4ee15c754"
+    },
+    {
+      "locale": "ja",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "'', '//', または '/' を含めたり、'/' で始まったり終わったりすることはできません。",
+      "beforeTargetSha256": "ecd57bad046c963124c50525cdf1f9ef8e5da9beea758025ef34108eeacf7a63",
+      "afterTarget": "値に「\\」や「//」を含めたり、「/」で始まったり終わったりすることはできません。",
+      "afterTargetSha256": "c3dde9c8fe8c8236155ca6dc2f830af839a3bad5c90ee12263b47e3f0b5f824c",
+      "beforeCatalogSha256": "6a619d3ac3cba5d04394c03d40b5253e8161f7a4a21ea614d688123548594874",
+      "afterCatalogSha256": "81ff79b1dd6ec94075f7bca726eaac66d55d06b7fe4631e82f1caae9a6b7e062"
+    },
+    {
+      "locale": "ko",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "'', '//', 또는 '/'로 시작 / 끝을 포함할 수 없습니다.",
+      "beforeTargetSha256": "b045db1d4023dc2cf241655bce16a2ab279def5da923ad83690541bb3e2c89e7",
+      "afterTarget": "값에는 '\\' 또는 '//'가 포함될 수 없으며, '/'로 시작하거나 끝날 수도 없습니다.",
+      "afterTargetSha256": "9f94bb9fe459fddf6ed5bbd6a27c9a1a21f5c97d161cb601fb6b0b7b992e88fe",
+      "beforeCatalogSha256": "600d6efdd8b2e85ef3cfc5af2432819eebc96f6848d8e6a9ad25ba02e0de130e",
+      "afterCatalogSha256": "3124d107e82372411953d95684de7cd0d4339ad5e060b10625eee588aacf473b"
+    },
+    {
+      "locale": "pt_BR",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "Não pode conter '', '//', ou começar/fim com '/'",
+      "beforeTargetSha256": "17c407c1106dbc97486a012bbe0bf9d7d0da85d09d7f119a667fea3fa0d5e730",
+      "afterTarget": "O valor não pode conter '\\' nem '//', nem começar ou terminar com '/'.",
+      "afterTargetSha256": "d1042fbe457c7909a8a1669155bee367afc852fe590cd7e95ef33d6506ed86a9",
+      "beforeCatalogSha256": "9ba498e2021d431904cd55eb6cb83c087d5b1c52fd272ea0ea324d22fdb05cf2",
+      "afterCatalogSha256": "894fb6584b5235c4dffaa5ff3a86aa69ccf551fdf5d6bd7bf401043c315ed6e0"
+    },
+    {
+      "locale": "vi",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "Không thể chứa '', '//', hoặc bắt đầu / kết thúc với '/'",
+      "beforeTargetSha256": "00d354f36da445b157402cb453d8290e62eb4fead2d489ef8b5d6823957abdf6",
+      "afterTarget": "Giá trị không được chứa '\\' hoặc '//', cũng không được bắt đầu hoặc kết thúc bằng '/'.",
+      "afterTargetSha256": "1e7f6475f3769fe9bb79704bdc3fe9e2c35328b28f2b805f866355211b1a3cd6",
+      "beforeCatalogSha256": "7e9ce4b033a68ab75b3c3c961b379d55d6f405227f4ef839c9dfe6cf0dc1b110",
+      "afterCatalogSha256": "69a7e0892aa63abf683aa68def81ac69537d5d5535532ee33c3746bddbc3bcbf"
+    },
+    {
+      "locale": "zh_CN",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "不能包含“”,“//”,或以“/”开始/结束",
+      "beforeTargetSha256": "d77b68d4a94baa9260497bf69f8fd7b4444a685d5715508af8fd389d0d4efaf1",
+      "afterTarget": "值不能包含“\\”或“//”，也不能以“/”开头或结尾。",
+      "afterTargetSha256": "1d532a8bb39a231f57d8ff609383088b6f7eb59fa74a8374d471e37b2a046850",
+      "beforeCatalogSha256": "fd295b54fd515a8056ac1e9c6c60cbb04b713905e9603c5114513a14b869d971",
+      "afterCatalogSha256": "d1ada4bb5285e3de0f0dfc9eee1311181939ad996104d2730fb788c71eba0165"
+    },
+    {
+      "locale": "zh_TW",
+      "catalogPath": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "keyCount": 4165,
+      "orderedKeySetPreserved": true,
+      "targetDisposition": "correction",
+      "beforeTarget": "不能包含“”,“//”,或以“/”開始/結束",
+      "beforeTargetSha256": "3e8a9a1919f1d3c55170ca7aba404e723a596239182956526ba8039190a0519a",
+      "afterTarget": "值不得包含「\\」或「//」，也不得以「/」開頭或結尾。",
+      "afterTargetSha256": "636f837c566a9b81be6e8cff9b669162b143a5536044374ed01685b8e5156ccc",
+      "beforeCatalogSha256": "406f29bf3897d6269538802a25fa6a514e6605cfb223d043aac339e22df6a948",
+      "afterCatalogSha256": "1cba89310445d89e5c445d7c178ecea0d0e4c11ddcdbf0d39148f807ae4c6127"
+    }
+  ],
+  "orderedKeySetsPreserved": true,
+  "unchangedCatalogValuesPreserved": true,
+  "sourceFollowupEntryReadback": {
+    "sourceId": "server.message.mf00d6bc38ae8",
+    "sourceFile": "src/NzbDrone.Core/Localization/Core/en.json",
+    "oldSourceText": "Can not contain '', '//', or start/end with '/'",
+    "oldSourceTextSha256": "f00d6bc38ae8d8287c51f0dd680c3be77f307a21ff98f0fe4b37a78a573dcb9d",
+    "newSourceText": "Can not contain '\\', '//', or start/end with '/'",
+    "newSourceTextSha256": "a49f6f46ac43b970cc69960dbd472ad87bd94245781ac3d2cb22f035cd1709ff",
+    "sourceFingerprintBefore": "4458d0721df2c7e25ceeeb675c3db8220d6c16b58432ab7ed1d254164887c29e",
+    "sourceFingerprintAfter": "b8d6ba97590d01a9263544cce8796ec371d0e2e112ea97d3b0f3dae5416336a0",
+    "callerFile": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrentSettings.cs",
+    "callerFileSha256Before": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+    "callerFileSha256After": "b49b22a665285ad708641ae215353e834bb78c02298b7b92e1d8979d75b6070f",
+    "callerOccurrencesChanged": 0,
+    "postEditCallerOccurrences": [
+      {
+        "line": 27,
+        "lineText": "RuleFor(c => c.AudiobookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "bbfd3dbeed8c3da6cab20829a857a99135a4d3741094e0fa641578ce10985feb"
+      },
+      {
+        "line": 29,
+        "lineText": "RuleFor(c => c.EbookCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "a9fbc5509b2b7532f901539a4131a942e81493e32362cb30d710cb1942c6501b"
+      },
+      {
+        "line": 31,
+        "lineText": "RuleFor(c => c.AudiobookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "f0d4d45df8f132c5427e0d44f964a0ea5dc3bde69a348680d28e0c62453ea9a5"
+      },
+      {
+        "line": 33,
+        "lineText": "RuleFor(c => c.EbookImportedCategory).Matches(@\"^([^\\\\\\/](\\/?[^\\\\\\/])*)?$\").WithMessage(@\"Can not contain '\\', '//', or start/end with '/'\")",
+        "lineSha256": "de39d4f4982e6a7131198aa4ce43718796164307437e1625e70216d236147661"
+      }
+    ],
+    "translationHandling": "After correcting the English source under the existing stable ID, fresh exact-head primary review and independent cross-review accepted corrections in ar, de, es, fr, id, ja, ko, pt_BR, vi, zh_CN, and zh_TW. Each target prohibits backslash and // and forbids leading/trailing /. Hindi remains held pending a suitable reviewed translation; no native-speaker approval is claimed."
+  },
+  "releaseNoteParagraph": "qBittorrent category validation now explains that values cannot contain a backslash or `//`, or start or end with `/`, in the available translations.",
+  "testsBuildCiBrowserRun": false,
+  "nativeSpeakerApproval": false,
+  "nativeSpeakerReview": "outstanding"
+}

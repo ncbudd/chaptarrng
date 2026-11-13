@@ -1,0 +1,46 @@
+{
+  "task": "ChaptarrNG PR #190 W350-399 exact-hash reviewed application",
+  "inputHead": "e9de5ac22aba7780f4ff55b3fd903731fea89269",
+  "inputTree": "1c8212fcc3623723b306865ac4d7f765ecf72a22",
+  "reviewedCells": 600,
+  "acceptedPrimaryCandidates": 72,
+  "independentAdditionalProposals": 3,
+  "appliedCellChanges": 75,
+  "perLocale": {
+    "ar": 11,
+    "de": 4,
+    "es": 3,
+    "fr": 6,
+    "hi": 5,
+    "id": 7,
+    "ja": 3,
+    "ko": 6,
+    "pt-BR": 6,
+    "vi": 9,
+    "zh-Hans": 7,
+    "zh-Hant": 8
+  },
+  "finalDispositionCounts": {
+    "accept-current": 525,
+    "propose-correction": 16,
+    "propose-refinement": 59
+  },
+  "holds": [],
+  "catalogKeyCountsAfter": {
+    "ar": 4165,
+    "de": 4165,
+    "es": 4165,
+    "fr": 4165,
+    "hi": 4165,
+    "id": 4165,
+    "ja": 4165,
+    "ko": 4165,
+    "pt-BR": 4165,
+    "vi": 4165,
+    "zh-Hans": 4165,
+    "zh-Hant": 4165
+  },
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansCIWorkflowsRun": false,
+  "releasesTagsMerges": false
+}

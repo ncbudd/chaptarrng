@@ -1,0 +1,71 @@
+{
+  "reviewHead": "7bb2b2f977e81d214318b3f873afe8ab17f03ed5",
+  "reviewTree": "5fdb46e8b55083b44f6ca109b1e46fd5b375b7cb",
+  "primaryPacket": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-window-0000-0049-primary-semantic-20261102/primary-decisions.jsonl",
+  "rows": 300,
+  "locales": [
+    "ja",
+    "ko",
+    "pt-BR",
+    "vi",
+    "zh-Hans",
+    "zh-Hant"
+  ],
+  "perLocaleDispositionCounts": {
+    "ja": {
+      "accepted": 47,
+      "refined": 0,
+      "missed": 3,
+      "held": 0,
+      "noop": 0
+    },
+    "ko": {
+      "accepted": 45,
+      "refined": 0,
+      "missed": 5,
+      "held": 0,
+      "noop": 0
+    },
+    "pt-BR": {
+      "accepted": 48,
+      "refined": 0,
+      "missed": 2,
+      "held": 0,
+      "noop": 0
+    },
+    "vi": {
+      "accepted": 45,
+      "refined": 0,
+      "missed": 5,
+      "held": 0,
+      "noop": 0
+    },
+    "zh-Hans": {
+      "accepted": 49,
+      "refined": 0,
+      "missed": 1,
+      "held": 0,
+      "noop": 0
+    },
+    "zh-Hant": {
+      "accepted": 49,
+      "refined": 0,
+      "missed": 1,
+      "held": 0,
+      "noop": 0
+    }
+  },
+  "dispositionCounts": {
+    "accepted": 283,
+    "refined": 0,
+    "missed": 17,
+    "held": 0,
+    "noop": 0
+  },
+  "verifiedCallerRefs": 804,
+  "validationProblems": 0,
+  "nativeSpeakerApproval": false,
+  "testsBuildsScansCIReleasesRun": false,
+  "repoModified": false,
+  "blockers": []
+}

@@ -1,0 +1,978 @@
+{
+  "batch": "W400-449-Core",
+  "exactHead": "8ce0caa5c8c456ba5b1bcfeb0352955c93f181e7",
+  "exactTree": "018e46cd14424204a01be46e13e5b50f9f26ce07",
+  "sourceNotes": [
+    {
+      "sourceKey": "CalendarOptions",
+      "sourceOrdinal": 400,
+      "sourceTextSha256": "4ad220d3ab41e263dce15cb182abb180a53a73d3848961066a0e910a79b65a37",
+      "callerContextSha256": "a055d8ae65634e28a2e2b946b8c0d148ec445f9b4b241b5286915f3538a531eb",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Calendar/Options/CalendarOptionsModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalendarWeekColumnHeaderHelpText",
+      "sourceOrdinal": 401,
+      "sourceTextSha256": "31ba44be68b89c65d6611c8f430bfb47cc55d0c46664086978a870899310cf8b",
+      "callerContextSha256": "8c0acc1e315c2a480eeb2d0fcc9f17a791c6e3f0da00d20d72d051a028e8ee40",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/UI/UISettings.js"
+      ],
+      "proposedCells": [
+        "CalendarWeekColumnHeaderHelpText::es",
+        "CalendarWeekColumnHeaderHelpText::fr",
+        "CalendarWeekColumnHeaderHelpText::hi",
+        "CalendarWeekColumnHeaderHelpText::pt-BR"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreContentServer",
+      "sourceOrdinal": 402,
+      "sourceTextSha256": "8426e28bf3b352847db4d3791fbaee205249bcfc67ea88bb72a561d0ddf87aa4",
+      "callerContextSha256": "5d6af7707be33641cb904a16fcb5843e71a72cb247c3af641195355fb688adb9",
+      "callerReferenceCount": 13,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 12,
+      "callerPaths": [
+        "frontend/src/Book/Details/BookDetailsConnector.js",
+        "frontend/src/Book/Editor/BookEditorFooter.js",
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js",
+        "src/Chaptarr.Api.V1/Commands/CommandController.cs",
+        "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServer.cs",
+        "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServerSettings.cs",
+        "src/NzbDrone.Core/Notifications/CalibreContentServer/RePushBookCommand.cs",
+        "src/NzbDrone.Core/Notifications/CalibreContentServer/RePushBookService.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreContentServerText",
+      "sourceOrdinal": 403,
+      "sourceTextSha256": "9718619a9f6004258889663951fb495ea5e4297472a5adf27fe68c3b85109875",
+      "callerContextSha256": "27ef459d2974dfc7a807a20612181948621bb60b8c153980f4d492535dc24e50",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [
+        "CalibreContentServerText::es",
+        "CalibreContentServerText::hi",
+        "CalibreContentServerText::vi"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreHost",
+      "sourceOrdinal": 404,
+      "sourceTextSha256": "cf38d4e2711c6327cf2e08e7b44f0b0b007f8572a76de0ff05592444887713ea",
+      "callerContextSha256": "778f8993eb81341444bdaafa676786499dc093847d8f83e670e2171efa76f795",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [
+        "CalibreHost::ar"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreHostHelpText",
+      "sourceOrdinal": 405,
+      "sourceTextSha256": "bbb7158a74d4aa2e179f39648776d2e22e78782f68d46f7e118560aa1ae008d0",
+      "callerContextSha256": "a0dc8bbbc0b5f56faeb1c776eb4e956ccc1da81450e40337087d22c8343df1f5",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreLibrary",
+      "sourceOrdinal": 406,
+      "sourceTextSha256": "19d8abdd15572de86852fb24fc3eba28ca5375de16140742b9ca8ff235361716",
+      "callerContextSha256": "15f2eb18a802656c01ceefd8be47075115212c4c67e8424c96ca87023a93bcd1",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreMetadata",
+      "sourceOrdinal": 407,
+      "sourceTextSha256": "805c04951ae30f39c6491d4a70f18a0f7c2cf9f70ff3747adf9c1a80d41fc27a",
+      "callerContextSha256": "3cd7df33599b8e3824419edd3e7d93009ee0a61d4c6130e426fb4addac5c686f",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/Metadata/MetadataProvider/MetadataProvider.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreNotCalibreWeb",
+      "sourceOrdinal": 408,
+      "sourceTextSha256": "aaa0cad6029561cbd6cf5f46405f2da21da9ccaa62438f45d8f2eac85f26710a",
+      "callerContextSha256": "25d64f808c453732982f66bc439fef11f39435e294418eaccf678dfc95faa35f",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreOutputFormat",
+      "sourceOrdinal": 409,
+      "sourceTextSha256": "feba99b8c7b04494184dad2f3e26169ff1e4ad4c42aeb5afa6c5b4ba305ae2f6",
+      "callerContextSha256": "c10df0d833e1cfd8d7aee54900f2ce8be48014655517fd0d213307dcf18b8ded",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreOutputProfile",
+      "sourceOrdinal": 410,
+      "sourceTextSha256": "f60cf838196854899ecdd1ce9cd6af9f7edfbc849f49e205571c502adf61003d",
+      "callerContextSha256": "e459f0a4a684ab62e884fe1788b969f104ab817051470dc416d7a461d4bffc6c",
+      "callerReferenceCount": 2,
+      "literalCallCount": 2,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibrePassword",
+      "sourceOrdinal": 411,
+      "sourceTextSha256": "e8e8826019e930e5d6ba6f5cf40d1399dad83d66216cb95e3c5650d8c3803367",
+      "callerContextSha256": "86e3fc1ab615344308398d7be0db8a99505dc094bc43a90528e25839a0e26bb8",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibrePort",
+      "sourceOrdinal": 412,
+      "sourceTextSha256": "9998d9599762193e26292b1bcbc74aa0098b70d9ed7fa9d83953543e98b9e0ae",
+      "callerContextSha256": "529c09c26a591507ee9828728914c392c831f7969406e2cf57e7fe62249a1781",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibrePush",
+      "sourceOrdinal": 413,
+      "sourceTextSha256": "a037753f5b7c748f7486e97622a09ef4d8ec80adc5db11cb64d29f0aa45ce61d",
+      "callerContextSha256": "e687da536f883c17d31c5b1fb7ac7b9a6ec9e8e2e7918bb96fb1925396ee65b0",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Book/Details/BookDetails.js"
+      ],
+      "proposedCells": [
+        "CalibrePush::ar",
+        "CalibrePush::es",
+        "CalibrePush::hi",
+        "CalibrePush::id",
+        "CalibrePush::vi",
+        "CalibrePush::zh-Hans",
+        "CalibrePush::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibrePushDescriptionInterp",
+      "sourceOrdinal": 414,
+      "sourceTextSha256": "85acc8d178113dd436dc375516327724452094b918be1498048170b3d0d9039b",
+      "callerContextSha256": "efec9f15cdf7d4ae42a0ad510fd3cb7595d71327a74abccac85347552b911ee0",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Calibre/CalibrePushModalContent.js"
+      ],
+      "proposedCells": [
+        "CalibrePushDescriptionInterp::hi",
+        "CalibrePushDescriptionInterp::pt-BR"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibrePushMovesFilesWarning",
+      "sourceOrdinal": 415,
+      "sourceTextSha256": "6e77e160f3a5be68b087491c16765043a748bb6ff1dc6bb9820819e1cb1f89fb",
+      "callerContextSha256": "2b6e808b7faef440bc0c6c5eedbc9a43eca156782f585175959eba57b70b6bce",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Calibre/CalibrePushModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibrePushTipPreview",
+      "sourceOrdinal": 416,
+      "sourceTextSha256": "ffef695166c84f1a7497307f0560fc9eae7a774f7a1cce73830fa9a71913c735",
+      "callerContextSha256": "677ae8cd96cc795e0d178792737e7eef30a61910e0a120c7edd428f2a523acdf",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Calibre/CalibrePushModalContent.js"
+      ],
+      "proposedCells": [
+        "CalibrePushTipPreview::es",
+        "CalibrePushTipPreview::hi",
+        "CalibrePushTipPreview::zh-Hans",
+        "CalibrePushTipPreview::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreSettings",
+      "sourceOrdinal": 417,
+      "sourceTextSha256": "617f72a97bb8e66e0caebf4f927e72b726421b4ec03358b31d86bde83d1fec3f",
+      "callerContextSha256": "3693215c190f7f0d6e007c1ecca881aaa2e8425f2f565a799f1d84614ec6c9d8",
+      "callerReferenceCount": 116,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 115,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js",
+        "src/Chaptarr.Api.V1/RootFolders/RootFolderController.cs",
+        "src/Chaptarr.Api.V1/RootFolders/RootFolderResource.cs",
+        "src/NzbDrone.Core/Books/Calibre/CalibreDuplicateReaper.cs",
+        "src/NzbDrone.Core/Books/Calibre/CalibreMetadataPushService.cs",
+        "src/NzbDrone.Core/Books/Calibre/CalibreProxy.cs",
+        "src/NzbDrone.Core/Books/Calibre/CalibreRootFolderDeletionService.cs",
+        "src/NzbDrone.Core/Books/Calibre/CalibreSettings.cs",
+        "src/NzbDrone.Core/Datastore/BookshelfMigration/001_initial_setup.cs",
+        "src/NzbDrone.Core/Datastore/Migration/001_chaptarr_complete_schema.cs",
+        "src/NzbDrone.Core/HealthCheck/Checks/CalibreRootFolderCheck.cs",
+        "src/NzbDrone.Core/MediaFiles/BookImport/FileMatchingService.cs",
+        "src/NzbDrone.Core/MediaFiles/BookImport/ImportApprovedBooks.cs",
+        "src/NzbDrone.Core/MediaFiles/DiskScanService.cs",
+        "src/NzbDrone.Core/MediaFiles/EbookTagService.cs",
+        "src/NzbDrone.Core/MediaFiles/MediaFileDeletionService.cs",
+        "src/NzbDrone.Core/MediaFiles/UpgradeMediaFileService.cs",
+        "src/NzbDrone.Core/Notifications/CalibreContentServer/CalibreContentServer.cs",
+        "src/NzbDrone.Core/RootFolders/RootFolder.cs",
+        "src/NzbDrone.Core/RootFolders/RootFolderService.cs"
+      ],
+      "proposedCells": [
+        "CalibreSettings::de",
+        "CalibreSettings::hi"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreUrlBase",
+      "sourceOrdinal": 418,
+      "sourceTextSha256": "558868761ec9c4680c5a947523529b5c3fe2a785f42d807fbc17d6412069552e",
+      "callerContextSha256": "e491a19e4cabbf4b610bf08b878b6f3570f8f9eb635d7132dc026bff4a6ff037",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CalibreUsername",
+      "sourceOrdinal": 419,
+      "sourceTextSha256": "4fe0e5854f2f057766c8413b7675d45796a0cf385a9d59abcfe9fe9aba5e044e",
+      "callerContextSha256": "904f0dedcbe9a6ae93e2644b705ee037397826e5bad139207f88f5ecb12ac505",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "Cancel",
+      "sourceOrdinal": 420,
+      "sourceTextSha256": "19766ed6ccb2f4a32778eed80d1928d2c87a18d7c275ccb163ec6709d3eb2e27",
+      "callerContextSha256": "622dcf27466a9ec13d4471ba6be1fc5b444a1b7e7c0e4830c66668065582b5ce",
+      "callerReferenceCount": 91,
+      "literalCallCount": 58,
+      "indirectKeyReferenceCount": 33,
+      "callerPaths": [
+        "frontend/src/Author/Details/SelectAuthorRootFolderModalContent.js",
+        "frontend/src/Author/Edit/AddRootFolderInline.js",
+        "frontend/src/Author/Edit/EditAuthorModalContent.js",
+        "frontend/src/Author/Editor/AudioTags/RetagAuthorModalContent.js",
+        "frontend/src/Author/Editor/AuthorEditorFooter.js",
+        "frontend/src/Author/Editor/Delete/DeleteAuthorModalContent.js",
+        "frontend/src/Author/Editor/Organize/OrganizeAuthorModalContent.js",
+        "frontend/src/Author/Editor/Tags/TagsModalContent.js",
+        "frontend/src/Author/MonitoringOptions/MonitoringOptionsModalContent.js",
+        "frontend/src/Book/Edit/EditBookModalContent.js",
+        "frontend/src/Book/Editor/Delete/DeleteBookModalContent.js",
+        "frontend/src/Calibre/CalibrePushModalContent.js",
+        "frontend/src/Components/FileBrowser/FileBrowserModalContent.js",
+        "frontend/src/Components/Filter/Builder/FilterBuilderModalContent.js",
+        "frontend/src/Components/Modal/ConfirmModal.js",
+        "frontend/src/Convert/ConvertPreviewModalContent.js",
+        "frontend/src/Grimmory/GrimmoryPushModalContent.js",
+        "frontend/src/InteractiveImport/Author/SelectAuthorModalContent.js",
+        "frontend/src/InteractiveImport/Book/SelectBookModalContent.js",
+        "frontend/src/InteractiveImport/Confirmation/ConfirmImportModalContent.js",
+        "frontend/src/InteractiveImport/Edition/SelectEditionModalContent.js",
+        "frontend/src/InteractiveImport/Folder/InteractiveImportSelectFolderModalContent.js",
+        "frontend/src/InteractiveImport/IndexerFlags/SelectIndexerFlagsModalContent.js",
+        "frontend/src/InteractiveImport/Interactive/InteractiveImportModalContent.js",
+        "frontend/src/InteractiveImport/Quality/SelectQualityModalContent.js",
+        "frontend/src/InteractiveImport/ReleaseGroup/SelectReleaseGroupModalContent.js",
+        "frontend/src/Organize/OrganizePreviewModalContent.js",
+        "frontend/src/Retag/RetagPreviewModalContent.js",
+        "frontend/src/Search/Series/AddNewSeriesModalContent.js",
+        "frontend/src/Settings/CustomFormats/CustomFormats/EditCustomFormatModalContent.js",
+        "frontend/src/Settings/CustomFormats/CustomFormats/ImportCustomFormatModalContent.js",
+        "frontend/src/Settings/CustomFormats/CustomFormats/Specifications/EditSpecificationModalContent.js",
+        "frontend/src/Settings/DownloadClients/DownloadClients/EditDownloadClientModalContent.js",
+        "frontend/src/Settings/DownloadClients/DownloadClients/Manage/Edit/ManageDownloadClientsEditModalContent.tsx",
+        "frontend/src/Settings/DownloadClients/DownloadClients/Manage/Tags/TagsModalContent.tsx",
+        "frontend/src/Settings/DownloadClients/RemotePathMappings/EditRemotePathMappingModalContent.js",
+        "frontend/src/Settings/General/ProxySettingsModal.js",
+        "frontend/src/Settings/ImportLists/ImportListExclusions/EditImportListExclusionModalContent.js",
+        "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js",
+        "frontend/src/Settings/ImportLists/ImportLists/Manage/Edit/ManageImportListsEditModalContent.tsx",
+        "frontend/src/Settings/ImportLists/ImportLists/Manage/Tags/TagsModalContent.tsx",
+        "frontend/src/Settings/Indexers/Indexers/EditIndexerModalContent.js",
+        "frontend/src/Settings/Indexers/Indexers/Manage/Edit/ManageIndexersEditModalContent.tsx",
+        "frontend/src/Settings/Indexers/Indexers/Manage/Tags/TagsModalContent.tsx",
+        "frontend/src/Settings/MediaManagement/Naming/NamingVisualBuilder/NamingVisualBuilder.js",
+        "frontend/src/Settings/MediaManagement/RootFolder/EditRootFolderModalContent.js",
+        "frontend/src/Settings/Metadata/Metadata/EditMetadataModalContent.js",
+        "frontend/src/Settings/Notifications/Notifications/EditNotificationModalContent.js",
+        "frontend/src/Settings/Profiles/Delay/EditDelayProfileModalContent.js",
+        "frontend/src/Settings/Profiles/Metadata/EditMetadataProfileModalContent.js",
+        "frontend/src/Settings/Profiles/Quality/EditQualityProfileModalContent.js",
+        "frontend/src/Settings/Profiles/Release/EditReleaseProfileModalContent.js",
+        "frontend/src/Settings/Quality/Reset/ResetQualityDefinitionsModalContent.js",
+        "frontend/src/System/Backup/EncryptedBackupModalContent.js",
+        "frontend/src/System/Backup/RestoreBackupModalContent.js",
+        "frontend/src/System/Quickstart/HardcoverApiKeyModal.js",
+        "frontend/src/System/Tasks/Queued/QueuedTaskRow.tsx",
+        "frontend/src/UnmappedFiles/UnmappedFilesTable.js",
+        "src/Chaptarr.Api.V1/Commands/CommandController.cs",
+        "src/Chaptarr.Api.V1/PendingImport/PendingAuthorImportController.cs",
+        "src/Chaptarr.Api.V1/Queue/QueueController.cs",
+        "src/NzbDrone.Common/Cache/Cached.cs",
+        "src/NzbDrone.Core/Books/Services/PendingAuthorImportService.cs",
+        "src/NzbDrone.Core/Download/Clients/Direct/DirectDownloadClient.cs",
+        "src/NzbDrone.Core/Indexers/DirectDownload/DirectDownloadUrlSafety.cs",
+        "src/NzbDrone.Core/Jobs/Scheduler.cs",
+        "src/NzbDrone.Core/MediaFiles/BookFileConversionService.cs",
+        "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "src/NzbDrone.Core/MediaFiles/ConversionTrackingService.cs",
+        "src/NzbDrone.Core/MediaFiles/LightweightImportTracker.cs",
+        "src/NzbDrone.Core/Messaging/Commands/CommandExecutor.cs",
+        "src/NzbDrone.Core/Messaging/Commands/CommandQueueManager.cs",
+        "src/NzbDrone.Core/Notifications/MqttGateway/CanonicalEventGatewayService.cs",
+        "src/NzbDrone.Core/Notifications/MqttGateway/MqttGatewayConnectionWorker.cs",
+        "src/NzbDrone/SysTray/SysTrayApp.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CancelAll",
+      "sourceOrdinal": 421,
+      "sourceTextSha256": "8f563338db497fef4e3b68771983a876cff6400b0d759c6f1bcc424df19ddfa3",
+      "callerContextSha256": "7b94a83f0ea10c318dd6ea006fd6ff8b2548446315dd778186eb2fc8a818f8ca",
+      "callerReferenceCount": 3,
+      "literalCallCount": 3,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/System/Tasks/Queued/QueuedTasks.tsx"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CancelAllQueuedAndRunningTasks",
+      "sourceOrdinal": 422,
+      "sourceTextSha256": "3f662059d878b66cdf0bb87d43dc39145def8941e2859ea86f9b8bf13be0eea7",
+      "callerContextSha256": "db6675d708f32c940983d395713ae071ddeccbd88945ab58d7024c09d7b5abca",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/System/Tasks/Queued/QueuedTasks.tsx"
+      ],
+      "proposedCells": [
+        "CancelAllQueuedAndRunningTasks::hi",
+        "CancelAllQueuedAndRunningTasks::ja",
+        "CancelAllQueuedAndRunningTasks::zh-Hans",
+        "CancelAllQueuedAndRunningTasks::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CancelConversion",
+      "sourceOrdinal": 423,
+      "sourceTextSha256": "2e391fb1a86ce2d4672f95e2873803a87ca6a65d935becf78eb5b3b4ddfa8b49",
+      "callerContextSha256": "7a1beb9c47d2bac25ac7b5cd06e9252c68844e3e9686a0c3ca69167b488250eb",
+      "callerReferenceCount": 2,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "callerPaths": [
+        "frontend/src/Activity/Queue/QueueRow.js",
+        "src/Chaptarr.Api.V1/Queue/QueueController.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CancelPendingTask",
+      "sourceOrdinal": 424,
+      "sourceTextSha256": "9823ba7a109680a10454291aa48598ed5c938550240633beccb51b5dd6c87d7b",
+      "callerContextSha256": "a9e65ae87c93d6de1c71870f145db89ea7d36527215e642a772504e27928d91a",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/System/Tasks/Queued/QueuedTaskRow.tsx"
+      ],
+      "proposedCells": [
+        "CancelPendingTask::es",
+        "CancelPendingTask::fr",
+        "CancelPendingTask::ko",
+        "CancelPendingTask::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CancelRunningTask",
+      "sourceOrdinal": 425,
+      "sourceTextSha256": "079fb659bd1a302e6e7a09edf9649f3b72d358869483448e4110c31478eaea4a",
+      "callerContextSha256": "8812c1cf0db5927af8adfc552bcc977e7911538c5d10e1f68f079cf9343d4563",
+      "callerReferenceCount": 2,
+      "literalCallCount": 2,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/System/Tasks/Queued/QueuedTaskRow.tsx"
+      ],
+      "proposedCells": [
+        "CancelRunningTask::es",
+        "CancelRunningTask::hi"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CancelledCountCommands",
+      "sourceOrdinal": 426,
+      "sourceTextSha256": "97c37eec1cc01d3dd1d2ed521b730b9354107f75b5eebc72cfd241d1e1262a78",
+      "callerContextSha256": "6f3ef440326b85cc9c15fb63676293738c8b843f328e9f77ccf783bd3ca618d9",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Store/Actions/commandActions.js"
+      ],
+      "proposedCells": [
+        "CancelledCountCommands::ar",
+        "CancelledCountCommands::de",
+        "CancelledCountCommands::hi",
+        "CancelledCountCommands::ja",
+        "CancelledCountCommands::ko",
+        "CancelledCountCommands::zh-Hans",
+        "CancelledCountCommands::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "Cancelling",
+      "sourceOrdinal": 427,
+      "sourceTextSha256": "20d55e8c3373cb09161484abeb2a760254ae43d9a6a812e126928bd263949533",
+      "callerContextSha256": "ce406f291c955d483b4a41d9111241c79ad246b303a3626cc1481a6bd4ca8b4d",
+      "callerReferenceCount": 15,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 14,
+      "callerPaths": [
+        "frontend/src/Activity/Queue/QueueRow.js",
+        "src/NzbDrone.Core/MediaFiles/BookImport/ImportApprovedBooks.cs",
+        "src/NzbDrone.Core/MediaFiles/ConversionJob.cs",
+        "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+        "src/NzbDrone.Core/MediaFiles/ConversionTrackingService.cs",
+        "src/NzbDrone.Core/Messaging/Commands/CommandQueueManager.cs",
+        "src/NzbDrone.Core/Queue/QueueService.cs"
+      ],
+      "proposedCells": [
+        "Cancelling::ar",
+        "Cancelling::de",
+        "Cancelling::es",
+        "Cancelling::fr",
+        "Cancelling::hi",
+        "Cancelling::id",
+        "Cancelling::ja",
+        "Cancelling::zh-Hans",
+        "Cancelling::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CanonicalAuthorFolderPartialEditionSelectionWarning",
+      "sourceOrdinal": 428,
+      "sourceTextSha256": "1c7e9700f58140dbf90cca3463b2c8c206860156a5128239ecea99663df77b44",
+      "callerContextSha256": "48d0e24a04205897d10ed2fe1a52fd866294f8bd82094e4508c625e86c364f68",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Organize/OrganizePreviewModalContent.js"
+      ],
+      "proposedCells": [
+        "CanonicalAuthorFolderPartialEditionSelectionWarning::es",
+        "CanonicalAuthorFolderPartialEditionSelectionWarning::hi",
+        "CanonicalAuthorFolderPartialEditionSelectionWarning::ja",
+        "CanonicalAuthorFolderPartialEditionSelectionWarning::zh-Hans",
+        "CanonicalAuthorFolderPartialEditionSelectionWarning::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CannotAddFormatMissingProviderIds",
+      "sourceOrdinal": 429,
+      "sourceTextSha256": "f3e4e0a95da86b8d90fc3206ca9e8804fdf453d2ab721156cfc18539696d4e92",
+      "callerContextSha256": "ef2f6bfeabd0752c34d1d34f939278bb672cfb0abb844eb3517ca195e692030c",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Components/Book/BookFormatActions.js"
+      ],
+      "proposedCells": [
+        "CannotAddFormatMissingProviderIds::fr",
+        "CannotAddFormatMissingProviderIds::hi",
+        "CannotAddFormatMissingProviderIds::zh-Hans",
+        "CannotAddFormatMissingProviderIds::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "FormatAddRequiresCatalogIdsHelpText",
+      "sourceOrdinal": 430,
+      "sourceTextSha256": "8f47630a7a25cbf68297d72bc327c88a5a5da93c6c73d4cecfbdf474186610aa",
+      "callerContextSha256": "f8a3646f8e25535fc8582629372c6209e7c724c1f3a6dfa30fae916e53729cad",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Book/Details/BookRelatedFormats.js"
+      ],
+      "proposedCells": [
+        "FormatAddRequiresCatalogIdsHelpText::fr"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CatalogNumber",
+      "sourceOrdinal": 431,
+      "sourceTextSha256": "fc7c2fcfa0ebb4488c24cd6f370308a45b464806de81f3641a2e64fb63ae7743",
+      "callerContextSha256": "6800a94a5d6a779d3d02d45fe3f3c09f5c400edd3131fdfa1891d66dad4334fc",
+      "callerReferenceCount": 2,
+      "literalCallCount": 0,
+      "indirectKeyReferenceCount": 2,
+      "callerPaths": [
+        "src/Chaptarr.Api.V1/BookFiles/BookshelfAudioTagsCompatibilityMapper.cs",
+        "src/NzbDrone.Core/Parser/Model/ParsedTrackInfo.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": [
+        "CatalogNumber::ar",
+        "CatalogNumber::de",
+        "CatalogNumber::es",
+        "CatalogNumber::fr",
+        "CatalogNumber::hi",
+        "CatalogNumber::id",
+        "CatalogNumber::ja",
+        "CatalogNumber::ko",
+        "CatalogNumber::pt-BR",
+        "CatalogNumber::vi",
+        "CatalogNumber::zh-Hans",
+        "CatalogNumber::zh-Hant"
+      ]
+    },
+    {
+      "sourceKey": "Categories",
+      "sourceOrdinal": 432,
+      "sourceTextSha256": "b8b1d894c683725260dcd78f8ed64f979331a1ab61fc8311e9ccfc300fd5de20",
+      "callerContextSha256": "4fb36e11ca60bb990ccf8f7cb6b85087acebbac7edd313d1ff695dae5a882fca",
+      "callerReferenceCount": 65,
+      "literalCallCount": 3,
+      "indirectKeyReferenceCount": 62,
+      "callerPaths": [
+        "frontend/src/System/SettingsBackup/SettingsBackupCategoryPicker.js",
+        "frontend/src/System/SettingsBackup/SettingsBackupModal.js",
+        "frontend/src/System/SettingsBackup/SettingsRestoreModal.js",
+        "src/Chaptarr.Api.V1/Calendar/CalendarFeedController.cs",
+        "src/Chaptarr.Api.V1/Indexers/ReleaseResource.cs",
+        "src/NzbDrone.Core/Configuration/SettingsBackups/SettingsBackupCreateRequest.cs",
+        "src/NzbDrone.Core/Configuration/SettingsBackups/SettingsBackupModels.cs",
+        "src/NzbDrone.Core/Configuration/SettingsBackups/SettingsBackupRestoreRequest.cs",
+        "src/NzbDrone.Core/Configuration/SettingsBackups/SettingsBackupService.cs",
+        "src/NzbDrone.Core/DecisionEngine/DownloadDecisionComparer.cs",
+        "src/NzbDrone.Core/DecisionEngine/DownloadDecisionMaker.cs",
+        "src/NzbDrone.Core/Download/Clients/Sabnzbd/Responses/SabnzbdCategoryResponse.cs",
+        "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs",
+        "src/NzbDrone.Core/Download/Clients/Sabnzbd/SabnzbdCategory.cs",
+        "src/NzbDrone.Core/IndexerSearch/ReleaseSearchService.cs",
+        "src/NzbDrone.Core/Indexers/DirectDownload/DirectDownloadSupport.cs",
+        "src/NzbDrone.Core/Indexers/FileList/FileListRequestGenerator.cs",
+        "src/NzbDrone.Core/Indexers/FileList/FileListSettings.cs",
+        "src/NzbDrone.Core/Indexers/MyAnonaMouse/MyAnonaMouseJsonParser.cs",
+        "src/NzbDrone.Core/Indexers/Newznab/Newznab.cs",
+        "src/NzbDrone.Core/Indexers/Newznab/NewznabCapabilities.cs",
+        "src/NzbDrone.Core/Indexers/Newznab/NewznabCapabilitiesProvider.cs",
+        "src/NzbDrone.Core/Indexers/Newznab/NewznabRequestGenerator.cs",
+        "src/NzbDrone.Core/Indexers/Newznab/NewznabSettings.cs",
+        "src/NzbDrone.Core/Indexers/RssParser.cs",
+        "src/NzbDrone.Core/Indexers/Torznab/Torznab.cs",
+        "src/NzbDrone.Core/Indexers/Torznab/TorznabSettings.cs",
+        "src/NzbDrone.Core/Notifications/Grimmory/GrimmoryLibraryChangeForwarder.cs",
+        "src/NzbDrone.Core/Notifications/Grimmory/GrimmoryProxy.cs",
+        "src/NzbDrone.Core/Parser/Model/ReleaseInfo.cs",
+        "src/NzbDrone.MatchBench/Program.cs"
+      ],
+      "proposedCells": [
+        "Categories::vi"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CertificateValidation",
+      "sourceOrdinal": 433,
+      "sourceTextSha256": "6edf45e16759ce1980b1ea7550a7da63318cfa34c50e9b45ed702aa5007ac2e5",
+      "callerContextSha256": "b6de4f9764af56a541bd368449bf6b8612d47659f37386d1c7e94d66a05db5e2",
+      "callerReferenceCount": 7,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 6,
+      "callerPaths": [
+        "frontend/src/Settings/General/SecuritySettings.js",
+        "src/Chaptarr.Api.V1/Config/HostConfigResource.cs",
+        "src/NzbDrone.Core/Configuration/ConfigService.cs",
+        "src/NzbDrone.Core/Configuration/IConfigService.cs",
+        "src/NzbDrone.Core/Security/X509CertificateValidationService.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "CertificateValidationHelpText",
+      "sourceOrdinal": 434,
+      "sourceTextSha256": "d80a03e9bc768000cf06bfdb901329dbf53cf2a70b399aa44f9e826163c1108d",
+      "callerContextSha256": "5ef6ff08405c6118b0a17f97b4ab7001e1d79df0cc59be9ff0914c7dc012c784",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/General/SecuritySettings.js"
+      ],
+      "proposedCells": [
+        "CertificateValidationHelpText::de",
+        "CertificateValidationHelpText::es",
+        "CertificateValidationHelpText::fr",
+        "CertificateValidationHelpText::hi",
+        "CertificateValidationHelpText::pt-BR",
+        "CertificateValidationHelpText::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChangeCategory",
+      "sourceOrdinal": 435,
+      "sourceTextSha256": "bde5e5c13a7c7e8d18b7c5529c6e164291eb66657909584a194f65dce04f32a9",
+      "callerContextSha256": "1394d7c007afbd4d68f15c3ea11d9d2b65db0878804f1211373bcd49bca42a89",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChangeCategoryHint",
+      "sourceOrdinal": 436,
+      "sourceTextSha256": "c3dedcda7c487c5c167ea7ca240579df7b36ba375754762ba7f926d1f2104fd2",
+      "callerContextSha256": "a233ec41e201b4f79421fab9445344e64046be9c24b8170f65d25ee914694f88",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChangeCategoryMultipleHint",
+      "sourceOrdinal": 437,
+      "sourceTextSha256": "dec5c250a661b9f75eadf2d721223975ada5f2c4e2a1d297002b0f2fa7bd9518",
+      "callerContextSha256": "9844f6254a87c3cfc7371a448ae2ce9448715dde76d357fef67b2152ed5513e2",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Activity/Queue/RemoveQueueItemModal.tsx"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChangeFileDate",
+      "sourceOrdinal": 438,
+      "sourceTextSha256": "47d3451b7703b777c692610cc4dc5b63fce45d127ac7e5da186dd9d6ed8e9a56",
+      "callerContextSha256": "6e7a6281134608cbe548dd385e530d1e58ee0d9b9152ab9e4c14c88babeef7e3",
+      "callerReferenceCount": 4,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 3,
+      "callerPaths": [
+        "frontend/src/Settings/MediaManagement/MediaManagement.js",
+        "src/NzbDrone.Core/MediaFiles/UpdateBookFileService.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChangeHasNotBeenSavedYet",
+      "sourceOrdinal": 439,
+      "sourceTextSha256": "6021e68bb3597275577bff126d858007296f69e9370624034b260315e0d8ed40",
+      "callerContextSha256": "10dc2b6e545be638806e12b0d908ae74754482fb8ecb6e90beb81d60c89c6a19",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Components/Form/FormInputGroup.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChaptarrCalendarFeed",
+      "sourceOrdinal": 440,
+      "sourceTextSha256": "96c45b6f35be4dfa25b2dfabb59fdc5724626de1668d6dd6a20cb620ccf8a00b",
+      "callerContextSha256": "dab4611ccb02c1b8c6db2f221c57fefd751acf121980c21c35fc61be163c6454",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Calendar/iCal/CalendarLinkModalContent.js"
+      ],
+      "proposedCells": [
+        "ChaptarrCalendarFeed::vi"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChaptarrOnDiscord",
+      "sourceOrdinal": 441,
+      "sourceTextSha256": "6ebd809a416c4b2e7b9c9c883da95301a8c434de4d1a18cd8189b0134b16997e",
+      "callerContextSha256": "01e891ae29a80fe70daac47af0a80a186dab15d0bad9ee200f61b508a03dfd55",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/System/Status/MoreInfo/MoreInfo.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChaptarrSupportsAnyDownloadClient",
+      "sourceOrdinal": 442,
+      "sourceTextSha256": "94aaa08a0f0c39c577ac83ddade9ac057454954afd5cd28a0c8bd87e59167159",
+      "callerContextSha256": "65c5a1d5b8d558779e05a390628dc25c0157b5c40955eedb224788ac5359699c",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/DownloadClients/DownloadClients/AddDownloadClientModalContent.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChaptarrSupportsAnyIndexerThatUsesTheNewznabStandardAsWellAsOtherIndexersListedBelow",
+      "sourceOrdinal": 443,
+      "sourceTextSha256": "21513f65d8d055ef69e8f259c97f9a7f04103193aacb9aa09376aff3d34db3c6",
+      "callerContextSha256": "faa98fbafd83622846c87367ea6d730fe06837910e340c66ab8a7ef406930920",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/Indexers/Indexers/AddIndexerModalContent.js"
+      ],
+      "proposedCells": [
+        "ChaptarrSupportsAnyIndexerThatUsesTheNewznabStandardAsWellAsOtherIndexersListedBelow::zh-Hans",
+        "ChaptarrSupportsAnyIndexerThatUsesTheNewznabStandardAsWellAsOtherIndexersListedBelow::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChaptarrSupportsMultipleListsForImportingBooksAndAuthorsIntoTheDatabase",
+      "sourceOrdinal": 444,
+      "sourceTextSha256": "e70c22e67ad80a428b27ecbe6fabba732dd75aba9c6c9d3295a8ec22ad5ac376",
+      "callerContextSha256": "b48edf5eebdcb26477edd46160efdb92755462436dba3b0a1f5b85fc09a7b6f0",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/AddImportListModalContent.js"
+      ],
+      "proposedCells": [
+        "ChaptarrSupportsMultipleListsForImportingBooksAndAuthorsIntoTheDatabase::fr",
+        "ChaptarrSupportsMultipleListsForImportingBooksAndAuthorsIntoTheDatabase::ko",
+        "ChaptarrSupportsMultipleListsForImportingBooksAndAuthorsIntoTheDatabase::zh-Hant"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "ChaptarrTags",
+      "sourceOrdinal": 445,
+      "sourceTextSha256": "b446c5f78df049821d3ac034d1fe413d64c12dc13dfd04fedf12d78fc3b1922f",
+      "callerContextSha256": "39f26a28e1d0564248f51117862aa9ff5dde8382182e7a1c95ccd09cffae00aa",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Settings/ImportLists/ImportLists/EditImportListModalContent.js"
+      ],
+      "proposedCells": [
+        "ChaptarrTags::ar"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "Chapter",
+      "sourceOrdinal": 446,
+      "sourceTextSha256": "548c31f731ec2c86146a5170a2f394b0e0975a74ad035e1fd73fae9c369e18c5",
+      "callerContextSha256": "2da745831adf11a9dad7ad7f7e5fe267c812502a556e404d0a445ebb4ab6d9a2",
+      "callerReferenceCount": 3,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 2,
+      "callerPaths": [
+        "frontend/src/Book/Details/Chapters/BookChaptersTable.js",
+        "src/NzbDrone.Core/Extras/Metadata/Consumers/AudioBookShelf/AudioBookShelfMetadata.cs",
+        "src/TagLibSharp/src/TaglibSharp/Id3v2/FrameTypes.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "Chapters",
+      "sourceOrdinal": 447,
+      "sourceTextSha256": "9831375bc65196d8c923455ec07c27aefa5761edfe4162dde1c7b36eec25a3ad",
+      "callerContextSha256": "eebb1ad2c39228a4424656471ac13dcc1efca3714c460e5945996f28c20b8ffb",
+      "callerReferenceCount": 39,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 38,
+      "callerPaths": [
+        "frontend/src/Book/Details/BookDetails.js",
+        "src/Chaptarr.Api.V1/Books/EditionResource.cs",
+        "src/NzbDrone.Core/Books/Model/Edition.cs",
+        "src/NzbDrone.Core/Books/Repositories/EditionRepository.cs",
+        "src/NzbDrone.Core/Books/Services/BookService.cs",
+        "src/NzbDrone.Core/Books/Services/RefreshEntityCopy.cs",
+        "src/NzbDrone.Core/Datastore/Migration/070_add_edition_chapters_and_review_count.cs",
+        "src/NzbDrone.Core/Extras/Metadata/Consumers/AudioBookShelf/AudioBookShelfMetadata.cs",
+        "src/NzbDrone.Core/ImportLists/ImportListSyncService.cs",
+        "src/NzbDrone.Core/MediaFiles/BookImport/ImportApprovedBooks.cs",
+        "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+        "src/NzbDrone.Core/MetadataSource/BookInfo/BookInfoProxy.cs",
+        "src/NzbDrone.Core/MetadataSource/BookInfo/V5/V5AuthorResponse.cs",
+        "src/TagLibSharp/src/TaglibSharp/Matroska/MatroskaIDs.cs"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "EditionCatalog",
+      "sourceOrdinal": 448,
+      "sourceTextSha256": "bfef67412332f2d9f6b2aa0a354b03738794489384c35090e51986167f565a75",
+      "callerContextSha256": "673c97deeaf6531b311edfda841f9c30c1efd2fe4ef4ac2c1b30a36942db485c",
+      "callerReferenceCount": 2,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 1,
+      "callerPaths": [
+        "frontend/src/Book/Details/BookDetails.js",
+        "src/Chaptarr.Api.V1/System/SystemIntegrationCapabilitiesResource.cs"
+      ],
+      "proposedCells": [
+        "EditionCatalog::hi",
+        "EditionCatalog::vi"
+      ],
+      "heldCells": []
+    },
+    {
+      "sourceKey": "EditionCatalogEmpty",
+      "sourceOrdinal": 449,
+      "sourceTextSha256": "99b55f154e2c3c54b3b2a34f2ad44bce6b4f0295a2671a0b377488a7bcf55c6c",
+      "callerContextSha256": "82ad14875559d42bda65b5741b2971b441e2afbd4e89e8f80a725dc4d03d921c",
+      "callerReferenceCount": 1,
+      "literalCallCount": 1,
+      "indirectKeyReferenceCount": 0,
+      "callerPaths": [
+        "frontend/src/Book/Details/Editions/BookEditionCatalog.js"
+      ],
+      "proposedCells": [],
+      "heldCells": []
+    }
+  ],
+  "hashOnlyHoldReason": "No exact literal translate/GetLocalizedString caller is pinned for CatalogNumber; model/property identifier occurrences are insufficient to select a UI translation.",
+  "protectedLiteralPlaceholderMarkupNumericChecks": "Every selected target was checked against the candidate-free source; all checks pass."
+}

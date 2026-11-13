@@ -1,0 +1,3 @@
+integration/bookshelfng-api-contract.mjs
+integration/bookshelfng-api-differential.mjs
+integration/test-bookshelfng-api-contract.mjs

@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "reviewType": "static caller-bound source review",
+  "findingSeverity": "P2",
+  "repository": "snapetech-org/ChaptarrNG",
+  "pullRequest": 190,
+  "parentHead": "257ee0bfd45f0b8e4e280d663f4a09264697a989",
+  "parentTree": "2f4d6eeadb8c0bf34e4dd99d12a9e341d855ea38",
+  "descriptorId": "server.message.me59dec254c7d",
+  "descriptorParameterCount": 0,
+  "callerPath": "frontend/src/Store/Actions/releaseActions.js",
+  "presentationPath": "frontend/src/InteractiveSearch/InteractiveSearchRow.js",
+  "changedSourcePath": "frontend/src/Utilities/String/translateServerMessage.js",
+  "sourcePins": {
+    "frontend/src/Utilities/String/translateServerMessage.js": {
+      "sha256": "b3f3f5f71fabd5c6bf6aa99acf9a45832e6c2cf333d6a568c4f548248e448477",
+      "gitBlob": "781da6b8f912ddff0fabe5fb5a72685605250994"
+    },
+    "frontend/src/Store/Actions/releaseActions.js": {
+      "sha256": "7a50da831dcef92d54ca42652f9d029834225a27b3f4eb68eab171ad1944ff52",
+      "gitBlob": "a64c0af0b23d1b5f16443a72d3e26a3577eb0450"
+    },
+    "frontend/src/InteractiveSearch/InteractiveSearchRow.js": {
+      "sha256": "b959cb721c4e5d970336e71cd921aa04978f8ce46e4d4e55333301adbfbb50e6",
+      "gitBlob": "c00f4d67c8a9ccc2446953d747dea2b6614fd1b9"
+    },
+    "frontend/src/Utilities/Localization/server-messages.json": {
+      "sha256": "5ffa8c8b2441ca0a2d3ecc8be310b1332f4df9b27e41c588f843ca2b48a0c79e",
+      "gitBlob": "87d3a764ebf09b157d542c9416cf79d4ca30c626"
+    }
+  },
+  "validation": {
+    "gitDiffCheck": "PASS",
+    "testsRun": false,
+    "buildsRun": false,
+    "scansRun": false,
+    "ciDispatched": false
+  },
+  "scope": "Null is normalized only for valid server-message descriptors without declared parameters.",
+  "updatedSourceSha256": "013d69fb790600a0c805e3350673cd663a3fdb846bc17889cb50ad074ee06b54",
+  "updatedSourceGitBlob": "14ae867b960abd3b31ca59e1baf0e4db5d5f2050"
+}

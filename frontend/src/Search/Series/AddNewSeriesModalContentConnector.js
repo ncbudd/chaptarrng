@@ -18,8 +18,30 @@ import {
   resolveMonitorOption
 } from 'Utilities/Author/monitorOptions';
 import createAjaxRequest from 'Utilities/createAjaxRequest';
+import isolateBidiText from 'Utilities/String/isolateBidiText';
 import translate from 'Utilities/String/translate';
 import AddNewSeriesModalContent from './AddNewSeriesModalContent';
+
+function resolveErrorDescriptor(error) {
+  if (error?.isLocalized) {
+    return { message: error.message || translate('SeriesAddError'), isLocalized: true };
+  }
+
+  if (error?.messageId) {
+    return {
+      message: error.message || '',
+      messageId: error.messageId,
+      messageParameters: error.messageParameters,
+      isLocalized: true
+    };
+  }
+
+  if (typeof error?.message === 'string' && error.message) {
+    return { message: error.message, isLocalized: false };
+  }
+
+  return { message: translate('SeriesAddError'), isLocalized: true };
+}
 
 function createMapStateToProps() {
   return createSelector(
@@ -439,14 +461,10 @@ class AddNewSeriesModalContentConnector extends Component {
     });
 
     request.fail((xhr) => {
-      const error =
-        xhr.responseJSON?.error ||
-        xhr.responseJSON?.message ||
-        translate('SeriesDetailsLoadFailed');
       this.setState({
         isFetchingSeries: false,
         seriesDetails: null,
-        fetchError: error
+        fetchError: this.getApiErrorMessage(xhr, translate('SeriesDetailsLoadFailed'))
       });
     });
   };
@@ -464,21 +482,26 @@ class AddNewSeriesModalContentConnector extends Component {
     this.props.saveUISettings();
   };
 
-  getApiErrorMessage = (xhr) => {
+  getApiErrorMessage = (xhr, fallbackMessage = translate('SeriesAddError')) => {
     if (!xhr) {
-      return translate('SeriesAddError');
+      return { message: fallbackMessage, isLocalized: true };
     }
 
     const responseJson = xhr.responseJSON;
     if (responseJson) {
       if (typeof responseJson === 'string') {
-        return responseJson;
+        return { message: responseJson, isLocalized: false };
       }
 
       const errorMessage =
         responseJson.errorMessage || responseJson.error || responseJson.message;
-      if (errorMessage) {
-        return errorMessage;
+      if (errorMessage || responseJson.messageId) {
+        return {
+          message: errorMessage,
+          messageId: responseJson.messageId,
+          messageParameters: responseJson.messageParameters,
+          isLocalized: false
+        };
       }
 
       // ASP.NET validation problem details
@@ -488,21 +511,22 @@ class AddNewSeriesModalContentConnector extends Component {
           firstKey && Array.isArray(responseJson.errors[firstKey]) ?
             responseJson.errors[firstKey][0] :
             null;
-        return firstError ?
-          `${responseJson.title}: ${firstError}` :
-          responseJson.title;
+        return {
+          message: firstError ? `${responseJson.title}: ${firstError}` : responseJson.title,
+          isLocalized: false
+        };
       }
 
       if (responseJson.title) {
-        return responseJson.title;
+        return { message: responseJson.title, isLocalized: false };
       }
     }
 
     if (xhr.responseText) {
-      return xhr.responseText;
+      return { message: xhr.responseText, isLocalized: false };
     }
 
-    return translate('SeriesAddError');
+    return { message: fallbackMessage, isLocalized: true };
   };
 
   onAddSeriesPress = ({ selectedMediaType, selectedBooks }) => {
@@ -672,13 +696,17 @@ class AddNewSeriesModalContentConnector extends Component {
       }
     };
 
-    const handleFailure = (errorMessage) => {
-      this.setState({ isAddingSeries: false, addError: errorMessage });
+    const handleFailure = (error) => {
+      const renderedError = resolveErrorDescriptor(error);
+      this.setState({ isAddingSeries: false, addError: renderedError });
 
       this.props.dispatchShowMessage({
         id: `series-add-error-${Date.now()}`,
         name: 'SeriesAddError',
-        message: errorMessage,
+        message: renderedError.message,
+        messageId: renderedError.messageId,
+        messageParameters: renderedError.messageParameters,
+        messageMode: renderedError.messageId ? 'trusted' : renderedError.isLocalized ? 'localized' : 'opaque',
         type: 'error',
         hideAfter: 12
       });
@@ -686,8 +714,11 @@ class AddNewSeriesModalContentConnector extends Component {
 
     const validateResultOrThrow = (data) => {
       if (!data || !data.success) {
-        const error = data?.errorMessage || translate('SeriesAddError');
-        throw new Error(error);
+        const error = new Error(data?.errorMessage || '');
+        error.messageId = data?.messageId;
+        error.messageParameters = data?.messageParameters;
+        error.isLocalized = !data?.errorMessage && !data?.messageId;
+        throw error;
       }
 
       return data;
@@ -705,7 +736,7 @@ class AddNewSeriesModalContentConnector extends Component {
         try {
           validateResultOrThrow(data1);
         } catch (e) {
-          handleFailure(e.message || translate('SeriesAddError'));
+          handleFailure(e);
           return;
         }
 
@@ -715,7 +746,7 @@ class AddNewSeriesModalContentConnector extends Component {
           try {
             validateResultOrThrow(data2);
           } catch (e) {
-            const partialError = e.message || translate('SeriesAddError');
+            const partialError = resolveErrorDescriptor(e);
             const authorsCount = data1?.addedAuthors?.length || 0;
             const booksCount = data1?.monitoredBooks?.length || 0;
             const pendingCount = data1?.pendingAuthorImportIds?.length || 0;
@@ -732,10 +763,10 @@ class AddNewSeriesModalContentConnector extends Component {
                 booksCount,
                 queueSuffix,
                 ebooksLabel: translate('Ebooks'),
-                error: partialError
+                error: isolateBidiText(partialError.message)
               }
             );
-            handleFailure(message);
+            handleFailure({ message, isLocalized: true });
             return;
           }
 
@@ -781,7 +812,7 @@ class AddNewSeriesModalContentConnector extends Component {
         });
 
         second.fail((xhr2) => {
-          const partialError = this.getApiErrorMessage(xhr2);
+          const partialError = resolveErrorDescriptor(this.getApiErrorMessage(xhr2));
           const authorsCount = data1?.addedAuthors?.length || 0;
           const booksCount = data1?.monitoredBooks?.length || 0;
           const pendingCount = data1?.pendingAuthorImportIds?.length || 0;
@@ -798,16 +829,15 @@ class AddNewSeriesModalContentConnector extends Component {
               booksCount,
               queueSuffix,
               ebooksLabel: translate('Ebooks'),
-              error: partialError
+              error: isolateBidiText(partialError.message)
             }
           );
-          handleFailure(message);
+          handleFailure({ message, isLocalized: true });
         });
       });
 
       first.fail((xhr1) => {
-        const error = this.getApiErrorMessage(xhr1);
-        handleFailure(error);
+        handleFailure(this.getApiErrorMessage(xhr1));
       });
 
       return;
@@ -819,7 +849,7 @@ class AddNewSeriesModalContentConnector extends Component {
       try {
         validateResultOrThrow(data);
       } catch (e) {
-        handleFailure(e.message || translate('SeriesAddError'));
+        handleFailure(e);
         return;
       }
 
@@ -833,8 +863,7 @@ class AddNewSeriesModalContentConnector extends Component {
     });
 
     request.fail((xhr) => {
-      const error = this.getApiErrorMessage(xhr);
-      handleFailure(error);
+      handleFailure(this.getApiErrorMessage(xhr));
     });
   };
 

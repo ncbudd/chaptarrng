@@ -1,0 +1,18 @@
+{
+  "exactPriorDispositionOverlapCount": 0,
+  "exactPriorDispositionOverlapRows": [],
+  "priorPacketChecksumsVerified": true,
+  "priorSourceIdCount": 700,
+  "priorSourceIdsDisjoint": true,
+  "priorW650Reconciliation": "prior-w650-reconciliation.json",
+  "scopePositions": [
+    700,
+    749
+  ],
+  "selectedSourceIdListSha256": "512659c913acf28b6c14751e9c4821f5a426b7d8d1a7169a194fe39fde73ec14",
+  "sourceIds": 50,
+  "uniqueSourceIds": true,
+  "w650Applied": true,
+  "w699BoundaryRows": 12,
+  "w699BoundarySourceTargetMatchesPriorCrossReview": 12
+}

@@ -1,0 +1,92 @@
+{
+  "additionalProtectedLiteralsByOrdinal": {
+    "703": [
+      "https://",
+      "localhost"
+    ],
+    "713": [
+      "ProviderId"
+    ],
+    "717": [
+      "Both"
+    ],
+    "718": [
+      ".zip",
+      ".db",
+      ".xml",
+      ".enc",
+      ".zip.enc"
+    ],
+    "719": [
+      "a-z",
+      "0-9",
+      "-"
+    ],
+    "721": [
+      "mam_id",
+      "MAM"
+    ],
+    "727": [
+      "https://manual.calibre-ebook.com/server.html"
+    ],
+    "731": [
+      "*",
+      "IP"
+    ],
+    "736": [
+      "selectedMediaType"
+    ],
+    "740": [
+      "OpenLibrary",
+      "GoogleBooks"
+    ],
+    "748": [
+      "author/media-move"
+    ]
+  },
+  "rationalesByOrdinal": {
+    "700": "This is an indexer connection failure that directs the user to the log; candidates restore natural error wording and punctuation.",
+    "701": "The AuthorMediaMoveController returns this conflict when a media-move preview has conflicts or no files can be moved; candidates distinguish the move operation from generic motion.",
+    "702": "This is a Calibre host validation failure; candidates express a failed connection as a natural error sentence.",
+    "703": "The OIDC authority validator requires https:// except when the provider runs on localhost; the scheme and host exception must remain exact.",
+    "704": "This is an Ntfy username/password validation error; the Japanese wording needs a grammatical sentence.",
+    "705": "AudioBookShelf reports an empty server library collection; Chinese and Hindi should say media library rather than a physical library.",
+    "706": "The AudioBookShelf connection test reports failed authentication and tells the user to check the API key; Chinese punctuation and Korean imperative are corrected.",
+    "707": "The Download Station error reports failure to retrieve an NZB list and includes the exception in {value0}; candidates restore the failed-retrieval meaning and preserve NZBs and the placeholder.",
+    "708": "SABnzbd requires a password only when an API key is not configured; candidates fix awkward word order and the Vietnamese literal key term.",
+    "709": "The SeriesLookupController currently supports Hardcover for book-series lookup; candidates correct awkward or misleading “supported/search/series” wording.",
+    "710": "This HostConfig validation rejects an invalid SSL certificate file or password; the Japanese phrase currently lacks grammatical particles.",
+    "711": "NzbVortex reports that the selected download group/category does not exist; the Chinese targets use an unrelated group/organization word.",
+    "715": "This is a product update notice for NZBVortex; candidates fix Spanish agreement, Japanese particles, and Arabic gender/word order.",
+    "716": "This AddBookService error requires an ebook metadata profile before adding ebook books; the Vietnamese second sentence should retain the ebook qualifier.",
+    "717": "This validation names the Applies to field and its three exact enum values; candidates translate the field label and preserve Both, Audiobook, and Ebook.",
+    "718": "Backup restore rejects file extensions outside the listed set; candidates clarify that these are file extensions and preserve all five literal extensions.",
+    "719": "Deluge category validation allows only lowercase ASCII letters, digits, and hyphen; candidates repair incomplete or awkward sentence wording without changing the allowed characters.",
+    "720": "Signal reports a failed test-message send and interpolates the server error in {value0}; candidates make the failure a natural sentence and preserve the parameter.",
+    "721": "This MyAnonaMouse authentication error points to mam_id and two settings paths; the Indonesian version needs sentence capitalization and spacing.",
+    "722": "This NamingPattern validator rejects an empty group; candidates fix Chinese group terminology and the Japanese “cannot become empty” wording.",
+    "723": "M4bConversionService reports the in-progress conversion stage at 96 percent; candidates express an ongoing verification step, not a noun or command.",
+    "724": "Metadata profile validation reserves the exact name None; candidates correct German grammar and use the settings-profile term in Chinese.",
+    "725": "This validation requires a positive UI language value; the Arabic current wording has incorrect agreement and word order.",
+    "726": "Root-folder validation requires at least one media type with quality and metadata profiles; candidates fix unnatural root-folder and metadata terminology.",
+    "727": "CalibreProxy distinguishes Calibre-Web from the required Calibre content server and supplies the manual URL; candidates repair Chinese punctuation and French word order while preserving product names and URL.",
+    "728": "The BookController requires between 1 and {value0} author IDs; candidates correct range grammar and retain the authorIds property and formatted maximum.",
+    "729": "This is the generic authentication failure returned by multiple providers; candidates correct French tense, Japanese sentence structure, and Vietnamese capitalization.",
+    "731": "The IP validation rule requires a wildcard or valid IP address; candidates translate wildcard correctly and repair the German grammar.",
+    "732": "The SABnzbd validation requires an API key; candidates complete the German, Japanese, and Korean message fragments.",
+    "734": "This is an invalid API-key validation error; the Korean current value is an unnatural noun fragment.",
+    "735": "This indexer network error may be a timeout and instructs retry/network checks; the Hindi current word order and punctuation are poor.",
+    "737": "This author/root-folder error says the selected folder must be configured in Settings → Media Management; candidates correct Spanish vocabulary/spacing, Korean root-folder wording, and Indonesian capitalization.",
+    "738": "This is a confirmation after cancelling a pending author import; candidates restore “pending” and make the status grammatical.",
+    "739": "This Goodreads import-list validation requires a Goodreads user ID; candidates correct ungrammatical word order while preserving Goodreads.",
+    "740": "The BookController cannot add a book without an upstream provider book/work ID; the Arabic current text redundantly says “ID identifier”.",
+    "741": "This generic exception message appends {value0}; Chinese targets need standard terminology and punctuation spacing.",
+    "742": "The ImportListExclusionController rejects a duplicate exclusion for a provider ID and media type; candidates repair the noun phrase and Korean import terminology.",
+    "743": "Author-media-move validation accepts only the exact format tokens ebook or audiobook; the Arabic term means form/model and Korean grammar is incorrect.",
+    "744": "The SeriesController returns a not-found error for a book series; candidates correct gender, sentence structure, and the Vietnamese book-series sense.",
+    "745": "This conversion setting rejects an invalid audiobook tag mode; Arabic agreement and word order are corrected.",
+    "746": "This Download Station connection test/error reports inability to connect; candidates turn fragments into natural error messages while preserving the product name.",
+    "747": "Goodreads reports that a list identifier {value0} was not found; candidates fix agreement and word order while preserving the interpolation.",
+    "749": "ProxyDebugController explains that the proxy is routed to indexers and should match the torrent/BT client proxy; candidates translate Chinese technical prose and fix Japanese tense."
+  }
+}

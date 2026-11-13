@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "32686f13760d04de2bba00af47fc561e632741de",
+  "tree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "32686f13760d04de2bba00af47fc561e632741de",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "worktree": "/mnt/disks/scratch/task-worktrees/localization-20261102/chaptarrng-pr190-audit",
+  "worktreeClean": true,
+  "scope": {
+    "positions": [
+      200,
+      249
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceFollowup": {
+    "path": "docs/localization/source-followup-20261101.json",
+    "blob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+    "sha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+    "currentMissingIdsCount": 1210,
+    "currentMissingIdsSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+    "window": [
+      200,
+      249
+    ],
+    "sourceIds": 50,
+    "firstId": "provider.field.fddbb45739308",
+    "lastId": "provider.field.fcdb8bc7fbe78"
+  },
+  "sourceFile": {
+    "path": "src/NzbDrone.Core/Localization/Core/en.json",
+    "blob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+    "sha256": "2717a9615b890afebf1c52cec5a344dcbee39ea1faf8ed0db96b81e14b10627f",
+    "bytes": 312087
+  },
+  "registry": {
+    "path": "docs/localization/provider-field-sources.json",
+    "blob": "449b91c6197ba6869e25bac6f97988d3be052475",
+    "sha256": "1f3891d3bea702790386467180641e4e7cc25b9fd84f3e365ab6944a454c8a55",
+    "bytes": 395755,
+    "records": 409
+  },
+  "catalogs": {
+    "es": {
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "blob": "90f352bfbd70f8c3c9b0ed677e814deb1d236d12",
+      "sha256": "bf09635cc84efceee2630df324178609a5e90143a8f46622d8400ff3e80c85b1",
+      "bytes": 358633
+    },
+    "zh-Hans": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "blob": "6df373223d4dbdfac33ede13d12048f918a28fdf",
+      "sha256": "99145d689e0748bb2a15843827b2bf26b92ef3413238a3884d5480b15801429d",
+      "bytes": 305740
+    },
+    "hi": {
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "blob": "4bd882bd327e829ac7d9e7307695156f6b0b5516",
+      "sha256": "1db65d5e44767267cab56d4b993a981d6fb07a6a07a0940af213737d96a97125",
+      "bytes": 604920
+    },
+    "de": {
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "blob": "da2ad7c11d27c159ba1537939b42e22977f4fa6a",
+      "sha256": "fdd3802cadee539d3addb67329f479b8434feb2076d877638b0bfd7a705a42c3",
+      "bytes": 360466
+    },
+    "ja": {
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "blob": "f6b25f26f4331ba2f3a1a1cadca5799a16253928",
+      "sha256": "1751460744fa5315fbc771bb582d647b45f3b558049746a184157b4069f7f355",
+      "bytes": 408239
+    },
+    "fr": {
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "blob": "468c9bc087d89a69b572e02a1cf898c1aea4008b",
+      "sha256": "97f7709219fa3008294de6eeb5809af34696d5b65fd58863f2454c448408467e",
+      "bytes": 374116
+    },
+    "pt-BR": {
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "blob": "9b83d59935c6674d3a1fe430b80fb9b42b8deea0",
+      "sha256": "1a80733b498e936af0888844e34cd4c073b2c62d64a2d9944612eb11b620300f",
+      "bytes": 352143
+    },
+    "ar": {
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "blob": "d6712eacf1740d8ee18a582b2a354200bda94ce9",
+      "sha256": "56d8a04758776d4379909545ad0dc201298c0f6e0503939cd1461ccf50c5b639",
+      "bytes": 431134
+    },
+    "ko": {
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "blob": "ad9f16183c21b84a8c609ff06824237fea3eaede",
+      "sha256": "ff16384b9e8376b1f1d6772426cf011450afa0b2c46c78d71f989d83b6020b7d",
+      "bytes": 367421
+    },
+    "zh-Hant": {
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "blob": "146d570730ade41926ff00d8609be958ec06e308",
+      "sha256": "c20ebf744a4bc770fa6b76f8a6333d47291e4380aed42e3d20d81f108ac738ac",
+      "bytes": 307025
+    },
+    "vi": {
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "blob": "71fce565824c07ce3cc6ce6e603207a8d09953ef",
+      "sha256": "f2e5f9394ab4d869ed2c0d49828fe4548df5fcc2816af062aa232eca5e7f6d80",
+      "bytes": 388759
+    },
+    "id": {
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "blob": "e647bc5ca5ce367a5efe2b984ae3ce7066569df3",
+      "sha256": "706543fd1c18d5979888da46aa9b3c2eeceddc2caf97e86a35450f99def5b68b",
+      "bytes": 332643
+    }
+  },
+  "sourceSlice": {
+    "path": "source-slice.jsonl",
+    "rows": 50,
+    "sha256": "0bffe1031c24d2d7e828cd7fbbe8594a0d70a69c6842930dfbe09d705e81f31f"
+  },
+  "inputCells": {
+    "path": "input-cells.jsonl",
+    "rows": 600,
+    "sha256": "0ae5bf4f389ef8ea4360c1f668cdac8e676fce9c35c1ef5541888e015d6df9a6"
+  },
+  "callerContext": {
+    "path": "caller-context.jsonl",
+    "sha256": "5c2920fa21566a2877da2f7c9ada91995f0f4b4c71741db7afd617ce97c4a154",
+    "sourceIds": 50,
+    "callerRefs": 52,
+    "uniqueCallerFiles": 7,
+    "lineNumberShifts": 26,
+    "callerMismatches": 0
+  },
+  "review": {
+    "path": "review-cells.jsonl",
+    "rows": 600,
+    "sha256": "fcb4a9cda97bc894fc45a234a71a953434eafecb258fb11ec92fecaafb2abb99",
+    "dispositions": {
+      "propose-correction": 40,
+      "propose-refinement": 12,
+      "accept-current": 548,
+      "hold": 0
+    }
+  },
+  "protectedLiteralIntegrity": {
+    "path": "protected-literal-integrity.jsonl",
+    "sha256": "dab249a92964ba4cb9df5782882aa7f80c5548886ebdcd84b50aca6ed1935ca9",
+    "rows": 600,
+    "currentMismatches": 0,
+    "recommendedMismatches": 0
+  },
+  "correctionCandidates": {
+    "path": "correction-candidates.jsonl",
+    "rows": 52,
+    "sha256": "351f66a850ba16f3a92198105244cdd01188324edfb0bd0a01622406fff77137"
+  },
+  "inputChecksumManifest": {
+    "path": "INPUT-SHA256SUMS",
+    "sha256": "a778bdffd3c555a8bd18a1af5351ba1133221253241ec44e3b2723400fbddda8",
+    "verification": "pass"
+  },
+  "localizedUiTerms": {
+    "path": "localized-ui-terms.json",
+    "sha256": "bca22b62adfeee8bc574a683dbf8e68ecafcbc896810b518fa4766baa7aac973"
+  },
+  "reviewerProvenance": {
+    "path": "reviewer-provenance.json",
+    "sha256": "c89f096a767c2bfe6f59f9c9ef8a144ffd8420bfe8765e5407c7b95cf9db6f8b"
+  },
+  "priorContextDispositionRows": 12,
+  "priorContextDispositionSha256": "beb3a524b33c691dbdd9350f88ea98acd0b3b0921724639467d8933c4918a76c",
+  "priorDispositionBoundaryPath": "prior-disposition-boundary.json",
+  "priorDispositionBoundarySha256": "d59bd8760d8dee651b211c83c5a100ffa2a13bb90d2d53d32fe121e57e220480",
+  "previousWindowAttestation": {
+    "reviewedPositions": [
+      0,
+      199
+    ],
+    "sourceIdSetOverlap": 0,
+    "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c"
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false,
+  "finalReattestation": {
+    "path": "final-reattestation.json",
+    "sha256": "0dd199bd0d7e8ef4361f99f576159036714540f83d02297617c9dc217f6d1f1a",
+    "checks": "pass",
+    "head": "32686f13760d04de2bba00af47fc561e632741de",
+    "tree": "13de6a00cb6eb7206523f000d6ef345084f3c78e",
+    "cellMismatches": 0,
+    "callerMismatches": 0
+  }
+}

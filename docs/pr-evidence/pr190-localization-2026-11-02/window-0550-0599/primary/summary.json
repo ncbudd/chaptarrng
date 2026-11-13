@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "exactHead": "015ff68d96340292b5e6a45d34496a5936ebf09c",
+  "exactTree": "bbb59a14a50a4b63bc209663c1e4b873ead4fc10",
+  "livePullRequest": {
+    "baseRefOid": "03274100af783fdffaca4dd8436e163dc6b18795",
+    "headRefName": "codex/chaptarrng-localization-complete-20261031",
+    "headRefOid": "015ff68d96340292b5e6a45d34496a5936ebf09c",
+    "isDraft": true,
+    "state": "OPEN",
+    "url": "https://github.com/snapetech-org/chaptarrng/pull/190"
+  },
+  "scope": {
+    "positions": [
+      550,
+      599
+    ],
+    "sourceIds": 50,
+    "locales": [
+      "es",
+      "zh-Hans",
+      "hi",
+      "de",
+      "ja",
+      "fr",
+      "pt-BR",
+      "ar",
+      "ko",
+      "zh-Hant",
+      "vi",
+      "id"
+    ],
+    "cells": 600
+  },
+  "sourceIdListSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "sourceSliceIdsSha256": "c7a6b83ea4ed838d601b18978f20b0ec28656dc4a62c1d0f86d2346717cc24d5",
+  "counts": {
+    "accept-current": 329,
+    "propose-correction": 240,
+    "propose-refinement": 31,
+    "hold": 0
+  },
+  "proposalCount": 271,
+  "perLocale": {
+    "es": {
+      "accept-current": 26,
+      "propose-refinement": 2,
+      "propose-correction": 22,
+      "hold": 0
+    },
+    "zh-Hans": {
+      "accept-current": 25,
+      "propose-refinement": 10,
+      "propose-correction": 15,
+      "hold": 0
+    },
+    "hi": {
+      "accept-current": 33,
+      "propose-refinement": 1,
+      "propose-correction": 16,
+      "hold": 0
+    },
+    "de": {
+      "accept-current": 27,
+      "propose-refinement": 0,
+      "propose-correction": 23,
+      "hold": 0
+    },
+    "ja": {
+      "accept-current": 29,
+      "propose-refinement": 3,
+      "propose-correction": 18,
+      "hold": 0
+    },
+    "fr": {
+      "accept-current": 33,
+      "propose-refinement": 1,
+      "propose-correction": 16,
+      "hold": 0
+    },
+    "pt-BR": {
+      "accept-current": 25,
+      "propose-refinement": 1,
+      "propose-correction": 24,
+      "hold": 0
+    },
+    "ar": {
+      "accept-current": 26,
+      "propose-refinement": 0,
+      "propose-correction": 24,
+      "hold": 0
+    },
+    "ko": {
+      "accept-current": 26,
+      "propose-refinement": 3,
+      "propose-correction": 21,
+      "hold": 0
+    },
+    "zh-Hant": {
+      "accept-current": 24,
+      "propose-refinement": 10,
+      "propose-correction": 16,
+      "hold": 0
+    },
+    "vi": {
+      "accept-current": 28,
+      "propose-refinement": 0,
+      "propose-correction": 22,
+      "hold": 0
+    },
+    "id": {
+      "accept-current": 27,
+      "propose-refinement": 0,
+      "propose-correction": 23,
+      "hold": 0
+    }
+  },
+  "callerEvidence": {
+    "sourceIdsWithCallerPins": 50,
+    "callerRefs": 69,
+    "uniqueCallerFiles": 42,
+    "mismatches": 0,
+    "gaps": [],
+    "allCallersAttestedAtExactHead": true
+  },
+  "placeholders": {
+    "sourcesWithPlaceholders": 8,
+    "mismatches": 0
+  },
+  "markup": {
+    "sourcesWithMarkup": 0,
+    "mismatches": 0
+  },
+  "protectedLiterals": {
+    "checkedCells": 600,
+    "currentMismatches": 0,
+    "currentMismatchCells": [],
+    "recommendedMismatches": 0,
+    "recommendedMismatchCells": []
+  },
+  "priorDispositionBoundary": {
+    "priorSourceIdOverlap": 0,
+    "scannedPriorLedgerFiles": 69,
+    "priorSourceIdCount": 550,
+    "contextOnlyW549Rows": 12,
+    "w549SourceRowsMatchingLive": 12,
+    "w549TargetsMatchingOlderPrimary": 8,
+    "w549AppliedRecommendationsMatchingLive": 4,
+    "w549CallerRefsReattested": 1
+  },
+  "nativeSpeakerApproval": false,
+  "browserReview": false,
+  "repositoryModified": false,
+  "testsBuildsScansCiRun": false,
+  "workflowFilesTouched": false
+}

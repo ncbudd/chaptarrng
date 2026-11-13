@@ -1,0 +1,137 @@
+{
+  "genericPipelineFiles": 35,
+  "genericPipelineGaps": [],
+  "genericPipelineReferences": 76,
+  "sourceCallerGaps": [],
+  "sourceCallerReferences": 63,
+  "sourceCallerRows": 50,
+  "sourceCategories": {
+    "api-error": 6,
+    "api-message-resource": 1,
+    "api-response-resource": 1,
+    "direct-api-result": 1,
+    "fixed-fallback-constant": 1,
+    "fixed-template-fragment": 2,
+    "operational-message": 3,
+    "validation-failure": 21,
+    "validation-message": 10,
+    "validator-template": 6
+  },
+  "sourceSurfaces": {
+    "App-authored grammar fragment consumed by a source-bound fixed pattern variant": 2,
+    "Explicit API error/message response serialized for the client UI": 1,
+    "FluentValidation error response; validation errors are returned to the client UI": 10,
+    "Server-owned queue/proxy/import/naming status, error, or notification text consumed by project UI": 3,
+    "String body from an MVC API result; the caller may display it": 1,
+    "Validation result/message returned to client settings or API consumer": 21,
+    "server/API text; may be user-visible": 14
+  },
+  "staleRegistryPinsRefreshed": [
+    {
+      "currentHits": [
+        {
+          "line": 378,
+          "sha256": "7420c72571bbbde7cc7c6fdbf17f824550390c8b161c8eb4a7d6c479e882986f",
+          "text": "return new NzbDroneValidationFailure(string.Empty, \"Query successful, but no results in the configured categories were returned from your indexer. This may be an issue with the indexer or your indexer category settings.\", \"server.message.mca68744b8296\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Indexers/HttpIndexerBase.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 378,
+      "registryLineSha256": "f92fd745db2e35b8c04a4eee511c739577f18da485d77851ebb04fff235211e2",
+      "sourceId": "server.message.mca68744b8296",
+      "sourceOrdinal": 823
+    },
+    {
+      "currentHits": [
+        {
+          "line": 495,
+          "sha256": "f194d9267a682bdd2e008e0b17837c3d0f75728c399e6e2d6af20d4e7a6901bf",
+          "text": "return new NzbDroneValidationFailure(pair.Field, \"Disable TV Sorting\", \"server.message.mcd62354c7d7b\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Sabnzbd/Sabnzbd.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 495,
+      "registryLineSha256": "60554e68ea83ca323b9f56fdb6ee00e5252ba4d2f3e2aa60213752ec9f4366c7",
+      "sourceId": "server.message.mcd62354c7d7b",
+      "sourceOrdinal": 827
+    },
+    {
+      "currentHits": [
+        {
+          "line": 539,
+          "sha256": "ca546b82524bfa7837d8ef2ef68ab65a581f6c64ebdc2eb512200ba0c0c32820",
+          "text": "return new NzbDroneValidationFailure(\"Username\", \"Authentication failure\", \"server.message.md83ae8fb37f8\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/TorrentDownloadStation.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 539,
+      "registryLineSha256": "2054d3a31f7f5cb768645cd5748749562e6699141a6a0ce5a554297aede68cca",
+      "sourceId": "server.message.md83ae8fb37f8",
+      "sourceOrdinal": 843
+    },
+    {
+      "currentHits": [
+        {
+          "line": 295,
+          "sha256": "ca546b82524bfa7837d8ef2ef68ab65a581f6c64ebdc2eb512200ba0c0c32820",
+          "text": "return new NzbDroneValidationFailure(\"Username\", \"Authentication failure\", \"server.message.md83ae8fb37f8\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/DownloadStation/UsenetDownloadStation.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 295,
+      "registryLineSha256": "2054d3a31f7f5cb768645cd5748749562e6699141a6a0ce5a554297aede68cca",
+      "sourceId": "server.message.md83ae8fb37f8",
+      "sourceOrdinal": 843
+    },
+    {
+      "currentHits": [
+        {
+          "line": 680,
+          "sha256": "ca546b82524bfa7837d8ef2ef68ab65a581f6c64ebdc2eb512200ba0c0c32820",
+          "text": "return new NzbDroneValidationFailure(\"Username\", \"Authentication failure\", \"server.message.md83ae8fb37f8\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/QBittorrent/QBittorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 680,
+      "registryLineSha256": "2054d3a31f7f5cb768645cd5748749562e6699141a6a0ce5a554297aede68cca",
+      "sourceId": "server.message.md83ae8fb37f8",
+      "sourceOrdinal": 843
+    },
+    {
+      "currentHits": [
+        {
+          "line": 288,
+          "sha256": "ca546b82524bfa7837d8ef2ef68ab65a581f6c64ebdc2eb512200ba0c0c32820",
+          "text": "return new NzbDroneValidationFailure(\"Username\", \"Authentication failure\", \"server.message.md83ae8fb37f8\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/Transmission/TransmissionBase.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 288,
+      "registryLineSha256": "2054d3a31f7f5cb768645cd5748749562e6699141a6a0ce5a554297aede68cca",
+      "sourceId": "server.message.md83ae8fb37f8",
+      "sourceOrdinal": 843
+    },
+    {
+      "currentHits": [
+        {
+          "line": 317,
+          "sha256": "ca546b82524bfa7837d8ef2ef68ab65a581f6c64ebdc2eb512200ba0c0c32820",
+          "text": "return new NzbDroneValidationFailure(\"Username\", \"Authentication failure\", \"server.message.md83ae8fb37f8\", null)"
+        }
+      ],
+      "path": "src/NzbDrone.Core/Download/Clients/uTorrent/UTorrent.cs",
+      "reason": "registry callsite pin stale; current source line reattested",
+      "registryLine": 317,
+      "registryLineSha256": "2054d3a31f7f5cb768645cd5748749562e6699141a6a0ce5a554297aede68cca",
+      "sourceId": "server.message.md83ae8fb37f8",
+      "sourceOrdinal": 843
+    }
+  ],
+  "uniqueSourceCallerFiles": 50
+}

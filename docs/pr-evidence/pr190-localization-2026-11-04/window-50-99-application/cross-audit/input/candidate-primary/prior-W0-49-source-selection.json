@@ -1,0 +1,686 @@
+{
+  "allWindowJsonlDirectRequestedKeyMatches": [],
+  "allWindowJsonlDirectRequestedKeyRowCount": 0,
+  "allWindowJsonlFileCountScannedForDirectRequestedKeys": 392,
+  "allWindowJsonlScan": "All 392 JSONL files beneath docs/pr-evidence/pr190-localization-2026-11-02/window-* were inspected by exact direct identifier field membership (sourceKey/source_key/key/sourceId/source_id/id); no row directly names any requested Core key.",
+  "catalogOrder": "English Core JSON insertion order",
+  "catalogPath": "src/NzbDrone.Core/Localization/Core/en.json",
+  "catalogSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+  "cellCount": 600,
+  "exactHead": "7f5d99e24b054cf1437d135328c3dee565e6b318",
+  "exactTree": "d39f2fe8cf91a39653679980c0832c5ca400a114",
+  "firstPosition": 0,
+  "keyCount": 50,
+  "keys": [
+    "20MinutesTwenty",
+    "45MinutesFourtyFive",
+    "60MinutesSixty",
+    "AddRootFolderInlineIntroAudiobooks",
+    "AddRootFolderInlineIntroEbooks",
+    "ASIN",
+    "About",
+    "AbsLibraryModeAudioAndEbooks",
+    "AbsLibraryModeAudioOnly",
+    "AbsMappingsAbsLibraryHeader",
+    "AbsMappingsAudioSlotLabel",
+    "AbsMappingsChaptarrRootHeader",
+    "AbsMappingsEbookSlotLabel",
+    "AbsMappingsEnterCredentialsFirst",
+    "AbsMappingsHelpText",
+    "AbsMappingsLegacyWarning",
+    "AbsMappingsLoadLibraries",
+    "AbsMappingsLoadLibrariesError",
+    "AbsMappingsLoadLibrariesFirst",
+    "AbsMappingsLoadingLibraries",
+    "AbsMappingsLoadingRootFolders",
+    "AbsMappingsNoRootFolders",
+    "AbsMappingsRootFoldersError",
+    "AbsMappingsTitle",
+    "AbsMappingsWatcherRequirement",
+    "AbsWatcherOff",
+    "Adopt",
+    "AdoptExistingTorrent",
+    "AdoptExistingTorrentMessageText",
+    "Actions",
+    "Activity",
+    "Add",
+    "AddAllToLibrary",
+    "AddAnotherDownloadClient",
+    "AddAsFormat",
+    "AddAudiobookProfile",
+    "AddAudiobookQualityProfile",
+    "AddAuthorAudiobookRootFolderHelpText",
+    "AddAuthorEbookRootFolderHelpText",
+    "AddAuthorMonitorNewAudiobooksHelpText",
+    "AddAuthorMonitorNewEbooksHelpText",
+    "AddAuthorUsingExistingFolder",
+    "AddAuthorWhichAudiobooksToMonitor",
+    "AddAuthorWhichEbooksToMonitor",
+    "AddCondition",
+    "AddCustomFormatNameToFileNames",
+    "AddCustomFilter",
+    "AddDownloadClient",
+    "AddEbookProfile",
+    "AddEbookQualityProfile"
+  ],
+  "lastPosition": 49,
+  "localeCount": 12,
+  "overlapCoreKeys": [],
+  "priorDirectCoreKeyCount": 1160,
+  "priorSemanticDecisionRowCount": 31229,
+  "priorSemanticLedgerScan": [
+    {
+      "decisionRows": 43,
+      "directCoreKeyRows": 43,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/apply-plan.jsonl",
+      "rows": 43
+    },
+    {
+      "decisionRows": 25,
+      "directCoreKeyRows": 25,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/part-a-crossreview/apply-plan.jsonl",
+      "rows": 25
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/part-a-crossreview/cross-review-ledger.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 3,
+      "directCoreKeyRows": 3,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/part-a-crossreview/root-adjudication.jsonl",
+      "rows": 3
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/part-b-crossreview/cross-review.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 4,
+      "directCoreKeyRows": 4,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0050-0099/root-adjudication.jsonl",
+      "rows": 4
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0100-0149/chaptarrng-pr190-window-0100-0149-crossreview-part-a-by-b-20261102/crossreview.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0100-0149/chaptarrng-pr190-window-0100-0149-crossreview-part-b-by-a-20261102/cross-review.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0150-0199/part-a/independent-cross-review/cross-review-cells.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0150-0199/part-b/independent-cross-review/cross-review.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0250-0299/cross-review-packet/cross-review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0250-0299/cross-review-packet/w249-context-crossreview.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0250-0299/primary-packet/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 48,
+      "directCoreKeyRows": 48,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0300-0349/apply-plan.jsonl",
+      "rows": 48
+    },
+    {
+      "decisionRows": 41,
+      "directCoreKeyRows": 41,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0300-0349/independent-cross-review/candidate-assessments.jsonl",
+      "rows": 41
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0300-0349/independent-cross-review/cross-review-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0300-0349/primary-packet/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 75,
+      "directCoreKeyRows": 75,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0350-0399/apply-plan.jsonl",
+      "rows": 75
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0350-0399/cross-review/cross-review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 75,
+      "directCoreKeyRows": 75,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0350-0399/cross-review/proposal-review.jsonl",
+      "rows": 75
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0350-0399/cross-review/w349-context-reattestation.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0350-0399/primary/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 100,
+      "directCoreKeyRows": 100,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/apply-plan.jsonl",
+      "rows": 100
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/cross-review/additional-findings.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 3,
+      "directCoreKeyRows": 3,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/cross-review/candidate-revisions.jsonl",
+      "rows": 3
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/cross-review/cross-review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/cross-review/primary-packet/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0400-0449/primary/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 156,
+      "directCoreKeyRows": 156,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0450-0499/apply-plan.jsonl",
+      "rows": 156
+    },
+    {
+      "decisionRows": 168,
+      "directCoreKeyRows": 168,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0450-0499/cross-review/cross-review-candidates-and-holds.jsonl",
+      "rows": 168
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0450-0499/primary/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0450-0499/readback.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 172,
+      "directCoreKeyRows": 172,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0500-0549/apply-plan.jsonl",
+      "rows": 172
+    },
+    {
+      "decisionRows": 174,
+      "directCoreKeyRows": 174,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0500-0549/cross-review/candidate-cross-review.jsonl",
+      "rows": 174
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0500-0549/cross-review/full-cell-final-dispositions.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0500-0549/primary/prior-context-dispositions.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0500-0549/readback.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 271,
+      "directCoreKeyRows": 271,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0550-0599/crossreview/candidate-cross-review.jsonl",
+      "rows": 271
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0550-0599/crossreview/full-cell-final-dispositions.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0550-0599/crossreview/live-cell-hash-reattestation.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 201,
+      "directCoreKeyRows": 201,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0600-0649/crossreview/candidate-cross-review.jsonl",
+      "rows": 201
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0600-0649/crossreview/final-dispositions.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0600-0649/crossreview/live-cell-reattestation.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 99,
+      "directCoreKeyRows": 99,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0650-0699/application/exact-hash-apply-plan.jsonl",
+      "rows": 99
+    },
+    {
+      "decisionRows": 99,
+      "directCoreKeyRows": 99,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0650-0699/cross-review-packet/candidate-adjudication.jsonl",
+      "rows": 99
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0650-0699/cross-review-packet/cell-crossreview.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0700-0749/application/cross-review-packet/cell-crossreview.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0700-0749/application/cross-review-packet/cell-readbacks.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 8,
+      "directCoreKeyRows": 8,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0700-0749/application/cross-review-packet/missed-corrections.jsonl",
+      "rows": 8
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/application/exact-hash-apply-plan.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/crossreview/crossreview-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0800-0849/apply/apply-plan.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0800-0849/crossreview/crossreview-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/application/apply-plan.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/application/apply-readback.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/cross-review/cross-review-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 91,
+      "directCoreKeyRows": 91,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/cross-review/language-audit-addendum/language-audit.jsonl",
+      "rows": 91
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/cross-review/structural-caller-reattestation.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 91,
+      "directCoreKeyRows": 91,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/primary/language-audit-addendum/language-audit.jsonl",
+      "rows": 91
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0850-0899/primary/w800-w849-applied-reattestation.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0884-corrected-source/cross-review/crossreview.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/application/apply-plan.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/application/apply-readback.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/crossreview/crossreview-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0900-0949/primary/w899-boundary-reattestation.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 182,
+      "directCoreKeyRows": 182,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/adjudication/adjudication-ledger.jsonl",
+      "rows": 182
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/application/full-window-readback.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 182,
+      "directCoreKeyRows": 182,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/crossreview/cross-review-ledger.jsonl",
+      "rows": 182
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-0950-0999/primary/w949-boundary-reattestation.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/adjudication/root-adjudication.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/crossreview/cross-review-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 50,
+      "directCoreKeyRows": 50,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/primary/correction-candidates.jsonl",
+      "rows": 50
+    },
+    {
+      "decisionRows": 11,
+      "directCoreKeyRows": 11,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/primary/holds.jsonl",
+      "rows": 11
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/primary/language-audit.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/primary/protected-literal-integrity.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 33,
+      "directCoreKeyRows": 33,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/primary/refinement-candidates.jsonl",
+      "rows": 33
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1000-1049/primary/review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/full-window-apply-plan.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/cross-review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 24,
+      "directCoreKeyRows": 24,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/correction-candidates.jsonl",
+      "rows": 24
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/holds.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/protected-literal-integrity.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 18,
+      "directCoreKeyRows": 18,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/refinement-candidates.jsonl",
+      "rows": 18
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/primary/review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/crossreview/cross-review-ledger.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 57,
+      "directCoreKeyRows": 57,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/primary/correction-candidates.jsonl",
+      "rows": 57
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/primary/prior-dispositions-through-W1099.jsonl",
+      "rows": 13200
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/primary/protected-literal-integrity.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 11,
+      "directCoreKeyRows": 11,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/primary/refinement-candidates.jsonl",
+      "rows": 11
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1100-1149/primary/review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 138,
+      "directCoreKeyRows": 138,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/independent-cross-review/primary-comparison-differences.jsonl",
+      "rows": 138
+    },
+    {
+      "decisionRows": 133,
+      "directCoreKeyRows": 133,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/correction-candidates.jsonl",
+      "rows": 133
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/holds.jsonl",
+      "rows": 12
+    },
+    {
+      "decisionRows": 300,
+      "directCoreKeyRows": 300,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/locale-review-ja-ko-pt-vi-zh.jsonl",
+      "rows": 300
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/protected-literal-integrity.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 46,
+      "directCoreKeyRows": 46,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/refinement-candidates.jsonl",
+      "rows": 46
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1150-1199/primary-review/review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 120,
+      "directCoreKeyRows": 120,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1200-tail-10/independent-cross-review/cell-comparison.jsonl",
+      "rows": 120
+    },
+    {
+      "decisionRows": 65,
+      "directCoreKeyRows": 65,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1200-tail-10/independent-cross-review/disagreements.jsonl",
+      "rows": 65
+    },
+    {
+      "decisionRows": 120,
+      "directCoreKeyRows": 120,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-1200-tail-10/root-adjudication/root-decisions.jsonl",
+      "rows": 120
+    },
+    {
+      "decisionRows": 600,
+      "directCoreKeyRows": 600,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-200-249/independent-cross-review/cross-review-cells.jsonl",
+      "rows": 600
+    },
+    {
+      "decisionRows": 12,
+      "directCoreKeyRows": 12,
+      "path": "docs/pr-evidence/pr190-localization-2026-11-02/window-200-249/primary-review/prior-context-dispositions.jsonl",
+      "rows": 12
+    }
+  ],
+  "uncoveredCheck": "No disposition row in recognized finalized primary/root semantic ledgers directly names any of these 50 Core key strings."
+}

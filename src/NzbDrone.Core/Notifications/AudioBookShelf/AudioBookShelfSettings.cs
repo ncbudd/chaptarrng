@@ -18,11 +18,13 @@ namespace NzbDrone.Core.Notifications.AudioBookShelf
             RuleFor(c => c.Host).ValidHost();
             RuleFor(c => c.Port).InclusiveBetween(1, 65535);
             RuleFor(c => c.UrlBase).ValidUrlBase("/abs").When(c => c.UrlBase.IsNotNullOrWhiteSpace());
-            RuleFor(c => c.ApiKey).NotEmpty().WithMessage("API Key is required");
+            RuleFor(c => c.ApiKey).NotEmpty().WithMessage("API Key is required")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m794b67a4d3b9"));
             RuleFor(c => c.LibraryMappingsJson)
                 .Must(AudioBookShelfSettings.IsValidLibraryMappingsJson)
                 .When(c => c.LibraryMappingsJson.IsNotNullOrWhiteSpace())
-                .WithMessage("Library mappings are invalid");
+                .WithMessage("Library mappings are invalid")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m63cf73c14226"));
         }
     }
 

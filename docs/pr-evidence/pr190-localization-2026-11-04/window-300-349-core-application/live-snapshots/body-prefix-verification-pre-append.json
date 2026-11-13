@@ -1,0 +1,11 @@
+{
+  "originalBytes": 62184,
+  "originalSha256": "ff98a2966675d0c331db16845d5608fc0a4b74ddf4faad8f8142b2df7c99d7ce",
+  "currentBytesBeforeAppend": 62184,
+  "currentSha256BeforeAppend": "ff98a2966675d0c331db16845d5608fc0a4b74ddf4faad8f8142b2df7c99d7ce",
+  "currentBodyEqualsOriginal": true,
+  "originalBodyIsExactPrefix": true,
+  "verifiedAtHead": "4688c998d92c821bbc1464ea4640c90615a69327",
+  "prState": "open",
+  "isDraft": true
+}

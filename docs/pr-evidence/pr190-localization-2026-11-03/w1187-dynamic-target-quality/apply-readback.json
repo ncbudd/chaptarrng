@@ -1,0 +1,15 @@
+{
+  "baseHead": "c7e95620c2a89646eb6a37c7e35441804b4911bb",
+  "baseTree": "78c7aa519cbe3ed7874b2f93b6976237b7d336e9",
+  "catalogFilesChanged": 3,
+  "catalogCellsChanged": 3,
+  "plannedTargetsReadBack": true,
+  "noUnplannedCatalogValueChanges": true,
+  "directLocaleCatalogCount": 12,
+  "directLocaleKeyCount": 4165,
+  "directLocaleKeySetsEqualEnglish": true,
+  "sourceRegistryOnlyChangedProtectedLiteralsForThisRecord": true,
+  "englishSourceAndFingerprintUnchanged": true,
+  "sourceMessageHashSnapshotUnchanged": true,
+  "nativeSpeakerApproval": false
+}

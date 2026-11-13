@@ -1,0 +1,122 @@
+[
+  {
+    "locale": "ar",
+    "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+    "preimageSha256": "5059a1f931b8bcb2c733ae4a56bff5b577967651099f6aec358f9a18a5d96ec5",
+    "preimageGitBlob": "acfdc16f8822b82894c52abfda5bad8a245e2e75",
+    "postimageSha256": "3fbe88d5a777486add703ba2f8742faaecca221f75330d7be39e2b812e84a0cc",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 9
+  },
+  {
+    "locale": "de",
+    "path": "src/NzbDrone.Core/Localization/Core/de.json",
+    "preimageSha256": "9bd6ec61e2531b073cee03aa363ec43d61e30e118dedc247cb3070809893ca16",
+    "preimageGitBlob": "d0bc43902e0b617fa62924cd40b376858e7a4110",
+    "postimageSha256": "a85062eea9d7dbce4ebd2d10709f07d54ee1e083b8fad83bee62a6f9f7a8f1bc",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 9
+  },
+  {
+    "locale": "es",
+    "path": "src/NzbDrone.Core/Localization/Core/es.json",
+    "preimageSha256": "e07e0d897523129bc58a71417b9e4a51b543f7915e1c496da4c1eca981034d3c",
+    "preimageGitBlob": "e718b53e58eb80784048549226a0f7395520e279",
+    "postimageSha256": "d4ef20d212da7b11a0ee095b5854670acce9a86b56e6034d402b1d1b9366912c",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 12
+  },
+  {
+    "locale": "fr",
+    "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+    "preimageSha256": "f2ecbeee46399c91f6b177703006b5c74ff00859b13acd7be37a30a0ed25a558",
+    "preimageGitBlob": "0a29e7668c57580c6b56d85ab5a4ddef85609a5b",
+    "postimageSha256": "d4f259e5d1ab0ad9a806e5f387a0067fb0e2bec4a571b457404058a41ee111af",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 9
+  },
+  {
+    "locale": "hi",
+    "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+    "preimageSha256": "2612ad96571dcaab3b5c4cccdd18d0cd02aaa7984705aea66e30fcdec17a89cb",
+    "preimageGitBlob": "f7496f6efd9482b000f45d754fdbc710d6539157",
+    "postimageSha256": "87fd2052b54978854fafb810e9e66809f1b1e6b9dd361a1d21cb20cab26be29e",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 8
+  },
+  {
+    "locale": "id",
+    "path": "src/NzbDrone.Core/Localization/Core/id.json",
+    "preimageSha256": "081a871eff3b0b344bf8974c432540192f0732a03ccccaa478ce4edfecd56726",
+    "preimageGitBlob": "5a3fff6e841257ed2d3b038d072d427092636ee9",
+    "postimageSha256": "8503ec8c38af4b8b3321b3c5103a0fc8eee437dab337a6b5112ee19a734e7282",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 18
+  },
+  {
+    "locale": "ja",
+    "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+    "preimageSha256": "3cee92997b0256b2dff2614c49e5a19ce86ca868bf393e9da3b9e5c2a97fe058",
+    "preimageGitBlob": "472a2af1dce78972af04ba9c6e47bbe5f427c749",
+    "postimageSha256": "41ca6555af1c501af62e622534316b310c044d04a188038d60786800c1ca736e",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 8
+  },
+  {
+    "locale": "ko",
+    "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+    "preimageSha256": "3b82ca7b833c48efa4bf667b1fe78d4e720cae1695d92282dbbbc48ecd2ab5bb",
+    "preimageGitBlob": "91e78259d468626d80f7b0ed602de479290a3854",
+    "postimageSha256": "3b82ca7b833c48efa4bf667b1fe78d4e720cae1695d92282dbbbc48ecd2ab5bb",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 0
+  },
+  {
+    "locale": "pt-BR",
+    "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+    "preimageSha256": "1d0fda632f00959f1a5e69c7c3ee8f307277e00588de0d5ca769ac6ecb486857",
+    "preimageGitBlob": "9fdaf196be982855cf4ae480ec6f844d6d06bbda",
+    "postimageSha256": "2525a8ab2550b1c85c8d75e3c8bff207ffdb078751444144a261170d77c76d12",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 14
+  },
+  {
+    "locale": "vi",
+    "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+    "preimageSha256": "7219caae39fb3ddd004b62285a590118d25223b0d7e0b74c50c3d58f96a08213",
+    "preimageGitBlob": "6a354720b9ad20e49a0c8e4283fc8004192672d9",
+    "postimageSha256": "a8b5d4fb3a28ce11b6fea8622d7a42ed4712b429fdb605456cce7b30541fa0cb",
+    "keyCount": 4165,
+    "keyOrderSha256": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070",
+    "selectedCellCount": 6
+  },
+  {
+    "locale": "zh-Hans",
+    "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+    "preimageSha256": "98f988c314f423f964a1a8097a8fe38ff03f5e4969941e17e0cccd8d54a5acef",
+    "preimageGitBlob": "8dfd52f8bd0fb2d4dc38c986973b406068f67e6e",
+    "postimageSha256": "e62ef35ce3ccd3078daaa6930b934053c6d45ecdc43da8eabb626886495ceffb",
+    "keyCount": 4165,
+    "keyOrderSha256": "e3c9ddc086cb38acd2561fdf3e578bcd53b322a0f9ae10815f43cb098a9b5070",
+    "selectedCellCount": 6
+  },
+  {
+    "locale": "zh-Hant",
+    "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+    "preimageSha256": "7171b03dd8886aaf083c4c9a87e65cfd9ef501a8ec84dbc97e9797f6fd872327",
+    "preimageGitBlob": "89b1a9ff82578a00e891184551647da15600fd29",
+    "postimageSha256": "2b6673f95abed5419e8ec86a75bbb9b9002fd33920664239816c89e670a41e7b",
+    "keyCount": 4165,
+    "keyOrderSha256": "1cd31fe48384eb060d7308cb28f96b3cb8bfdacdb33d2fbf27d56c6e86cfd2ec",
+    "selectedCellCount": 7
+  }
+]

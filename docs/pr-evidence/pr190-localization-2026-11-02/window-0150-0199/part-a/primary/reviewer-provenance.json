@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "head": "0117311b672af8d828fb45bad7e6026763b201da",
+  "tree": "a6500c8078f193af52555398525ec6f832241fd0",
+  "partA": {
+    "es_zh_hans_hi": {
+      "source": "/mnt/disks/scratch/task-scratch/chaptarrng-pr190-w150-199-primary-part-a-review-by-a-20261102/locale-review.jsonl",
+      "sha256": "50dc1018f03e32f10c7441d0ed150bf38e99da98dee133197a6ed4bec783c3e0",
+      "rows": 150,
+      "dispositions": {
+        "accept-current": 132,
+        "propose-refinement": 8,
+        "propose-correction": 10
+      }
+    },
+    "de_ja_fr": {
+      "source": "local primary review of the 150 exact-pinned input cells",
+      "rows": 150,
+      "dispositions": {
+        "accept-current": 133,
+        "propose-refinement": 7,
+        "propose-correction": 10
+      }
+    }
+  },
+  "nativeSpeakerApproval": false
+}

@@ -1,0 +1,100 @@
+{
+  "acceptedPrimaryProposals": 206,
+  "browserReview": false,
+  "exactHead": "a58de8cd62a80babdca07a86d6b7d463b4a44773",
+  "exactTree": "3baf8c11efe42c617a286cd37665e946303c6d2a",
+  "independentChangedCells": 229,
+  "independentDispositionCounts": {
+    "accept-current": 371,
+    "accept-proposal": 206,
+    "propose-correction": 12,
+    "propose-refinement": 2,
+    "revise-proposal": 9
+  },
+  "independentFinalProtectedMismatchCells": 0,
+  "localeCells": 600,
+  "markupMismatchCells": 0,
+  "missedPrimaryCurrentCells": 14,
+  "nativeSpeakerApproval": false,
+  "perLocale": {
+    "ar": {
+      "accept-current": 34,
+      "accept-proposal": 15,
+      "propose-correction": 1
+    },
+    "de": {
+      "accept-current": 26,
+      "accept-proposal": 21,
+      "propose-correction": 2,
+      "revise-proposal": 1
+    },
+    "es": {
+      "accept-current": 28,
+      "accept-proposal": 20,
+      "propose-correction": 1,
+      "revise-proposal": 1
+    },
+    "fr": {
+      "accept-current": 32,
+      "accept-proposal": 16,
+      "propose-correction": 1,
+      "revise-proposal": 1
+    },
+    "hi": {
+      "accept-current": 29,
+      "accept-proposal": 18,
+      "propose-correction": 1,
+      "propose-refinement": 1,
+      "revise-proposal": 1
+    },
+    "id": {
+      "accept-current": 40,
+      "accept-proposal": 9,
+      "propose-correction": 1
+    },
+    "ja": {
+      "accept-current": 29,
+      "accept-proposal": 19,
+      "propose-correction": 1,
+      "revise-proposal": 1
+    },
+    "ko": {
+      "accept-current": 26,
+      "accept-proposal": 22,
+      "propose-correction": 1,
+      "revise-proposal": 1
+    },
+    "pt-BR": {
+      "accept-current": 34,
+      "accept-proposal": 15,
+      "revise-proposal": 1
+    },
+    "vi": {
+      "accept-current": 30,
+      "accept-proposal": 18,
+      "propose-correction": 1,
+      "propose-refinement": 1
+    },
+    "zh-Hans": {
+      "accept-current": 31,
+      "accept-proposal": 17,
+      "propose-correction": 1,
+      "revise-proposal": 1
+    },
+    "zh-Hant": {
+      "accept-current": 32,
+      "accept-proposal": 16,
+      "propose-correction": 1,
+      "revise-proposal": 1
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "primaryProposalChanges": 215,
+  "pullRequest": 190,
+  "readOnly": true,
+  "repository": "snapetech-org/chaptarrng",
+  "reviewedPrimaryProposals": 215,
+  "revisedPrimaryProposals": 9,
+  "schemaVersion": 1,
+  "sourceIds": 50
+}

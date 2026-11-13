@@ -1,0 +1,38 @@
+{
+  "currentMissingIdsCanonicalSha256": "a16dd0001c0a36f053bf0207060c338c428dc9beb2e3d929f7d73f19ad004e8c",
+  "currentMissingIdsCount": 1210,
+  "head": "c66ef0bccc0635f047cebeda95b9aaa0ae8130a4",
+  "ids": [
+    "server.message.m73172a5045d6",
+    "server.message.mddaec7220c51",
+    "server.message.md6a7ade8523b",
+    "server.message.m9f7f2489aa05",
+    "server.message.md4a741052e8b",
+    "server.message.m621dd0308bef",
+    "server.message.m4cd205e7d07a",
+    "server.message.mc6073db4b613",
+    "server.message.m12f8b73a2b72",
+    "server.message.m47f0922640fa"
+  ],
+  "position1199": "server.message.m566bae95cfdb",
+  "position1210": null,
+  "positions": [
+    1200,
+    1201,
+    1202,
+    1203,
+    1204,
+    1205,
+    1206,
+    1207,
+    1208,
+    1209
+  ],
+  "queueEndsAt": 1209,
+  "sourceFollowupBlob": "db0e8d1504da60d2d47367e93c3e1b9a3fc9e774",
+  "sourceFollowupPath": "docs/localization/source-followup-20261101.json",
+  "sourceFollowupSha256": "2eeec5479b44bf0e5ad56a25f101122447e938d35a325cc05c68449f5149f128",
+  "tree": "e2142a119ce8d9d765927bb44a47f71364863995",
+  "window": "W1200-W1209",
+  "windowIdsCanonicalSha256": "cf910b2a7547f69b7169e02ccc051772bd2aa9e5416f374b502cfa0c2d475553"
+}

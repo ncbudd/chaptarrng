@@ -1,0 +1,21 @@
+{
+  "cellCount": 600,
+  "dispositionCounts": {
+    "accept-current": 455,
+    "correction": 82,
+    "hold": 12,
+    "refinement": 51
+  },
+  "exactHead": "6e7a5341b7ccac31d950c73db68277f9a1f18f8e",
+  "exactTree": "d073e1373021bf715db37461a12654f7e993cdbf",
+  "independentReviewCellSha256": "bee7a858fd79333271bd053e1d5ba1cdcc99e78e4c63c4ae2d22484d5d5b90d1",
+  "inputsChecksumsSha256": "57d35083e09c9fdd762ed354217512d1fcccc5a973c0ebb0f52b661c17e38990",
+  "inputsManifestSha256": "32894edaea7d71db9666c296b64b87c42c5de3a2d1f0c559ff2a11d4d9498679",
+  "localeCount": 12,
+  "packet": "ChaptarrNG PR #190 independent cross-review W1150-W1199 dispositions",
+  "primaryPacketConsultedBeforeIndependentReview": false,
+  "reviewerProvenanceSha256": "75b7284a5be0bae825f770783dadfaf6718cacf9db0f055fc4bbc593b8316328",
+  "schemaVersion": 1,
+  "sealedAtUtc": "2026-11-03T00:23:45.447353+00:00",
+  "sourceCount": 50
+}

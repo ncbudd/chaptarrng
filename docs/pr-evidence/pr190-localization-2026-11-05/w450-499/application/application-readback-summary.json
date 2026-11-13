@@ -1,0 +1,139 @@
+{
+  "result": "PASS",
+  "productCommit": "fb9d0439f5adf751b07c5d6167009591d0b0c6e7",
+  "productTree": "f8ee83c8a65b1a09fd477cea56c9d8c47b1c2ea2",
+  "parentHead": "16c809b4787d70616a1a296ab0d90cf17923ba86",
+  "sourceTree": "dbd8343a42476f4e830428cc59efb7f4830251d5",
+  "sourceCellCount": 600,
+  "callerBoundCellCount": 552,
+  "callerlessHashOnlyHolds": 48,
+  "selectedChanges": 111,
+  "retainedCurrent": 441,
+  "changedCellCount": 111,
+  "changedCatalogCount": 12,
+  "workflowChanges": 0,
+  "allNonTargetLocaleValuesPreserved": true,
+  "catalogs": [
+    {
+      "locale": "en",
+      "path": "src/NzbDrone.Core/Localization/Core/en.json",
+      "baseSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+      "postSha256": "53b2e72f752b36bf8d00b602b9cfadb898abb0b130afa77e0fd4858938366fc2",
+      "keyCount": 4165,
+      "keyOrderSha256": "1267e6eb650f0ebf2a5c96dc0e898e37a1f571b8e7ded72bb3a4142fed72bcad",
+      "changedCellCount": 0
+    },
+    {
+      "locale": "ar",
+      "path": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "baseSha256": "1dcfc93eeeabf212df3c86bf28967ad6e2523ed9288071d73902d996cdfce519",
+      "postSha256": "6cf4f31a5ce80e48bbd75c97363633ee49395085a02cb2d3418091a42f675bc6",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 11
+    },
+    {
+      "locale": "de",
+      "path": "src/NzbDrone.Core/Localization/Core/de.json",
+      "baseSha256": "7e3ae03e24b4b021cd13bea5b473b604fd9747d91a436dd93847f788a74db53a",
+      "postSha256": "b8bfeb8b83eaa02fce807e0bb383ffbbe170f1e395e0b29c6a811aa49e90d485",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 4
+    },
+    {
+      "locale": "es",
+      "path": "src/NzbDrone.Core/Localization/Core/es.json",
+      "baseSha256": "35620762fbcb865dc1a3c991b791e125ff65321b4f7943635b244d85ad4f9b11",
+      "postSha256": "c267a971617a8ef43e7bd57a7ef8d47ac9cbc2626a491bf1795239fe13166ae4",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 7
+    },
+    {
+      "locale": "fr",
+      "path": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "baseSha256": "43db32ac8070a781eeff05e8c3ee03187bb0c59b4e0459d13fd3113b6184d32d",
+      "postSha256": "094614b27453e58947782b86267ef3df375b320548730f25698235ff17b369dd",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 10
+    },
+    {
+      "locale": "hi",
+      "path": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "baseSha256": "bc6410067bddb94c9b6bd8dc017b9c640137ce778c5dadfb9cf24afe539372a8",
+      "postSha256": "dc2a5c9fa1c595d79292f56fdf194358b60b513ddaa68cc6594918ade9f8fead",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 24
+    },
+    {
+      "locale": "id",
+      "path": "src/NzbDrone.Core/Localization/Core/id.json",
+      "baseSha256": "4e0afa3ec3cbf3168ef14c8194b2e2f0274ffcdf984b0ee6e340f671b0841295",
+      "postSha256": "f705922e2c95a8ac2cff7e0cb84729dc3cfa36031a9b0e5bf8c0eabbab76a2c3",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 11
+    },
+    {
+      "locale": "ja",
+      "path": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "baseSha256": "164e675dfd3bf421ff1fcdc0042648c46c2d892355705a66801bc58c7d304fc7",
+      "postSha256": "e8de7afdd2bc671f0d005f355667b03a735bef6b6ba5c06478c4d545d7d170c8",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 5
+    },
+    {
+      "locale": "ko",
+      "path": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "baseSha256": "f0123de5d6d437937397fce4a497acfe844abc33f128e55bc4187885fbea23e3",
+      "postSha256": "c606230bd39a9fe4d90fae572ee2d876650ffcc23adab1005c1c91b725a1be0c",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 7
+    },
+    {
+      "locale": "pt-BR",
+      "path": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "baseSha256": "4534142c67676e9863500bedca7f9b90ecf5b6324a7417fdf7ef976a3cd8cbfb",
+      "postSha256": "c1f6e8256d440ee0ee464dd81406b91af0a048afed4ec618377c6a79296542fd",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 8
+    },
+    {
+      "locale": "vi",
+      "path": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "baseSha256": "ed3eba4537c1d08ee4ef8c04a9f68151d57086ac0e61222b154af29558e33271",
+      "postSha256": "34b194a0979322506c7a043578c035fae5fa2d28092da8d22faa3f8498f33e33",
+      "keyCount": 4165,
+      "keyOrderSha256": "00af8c8f66d793c62cc4d9685d3ab0701565bbf9bb5f5ab619a134441b3f4f1d",
+      "changedCellCount": 7
+    },
+    {
+      "locale": "zh-Hans",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "baseSha256": "3ed299fd4aaf15cb988e073deaed78f842d33497caf0e4678daa32412c7652ce",
+      "postSha256": "3ed597065a5f8518600b6f2aff13974ade0f41626ebf5f24375ce2a37d7b3766",
+      "keyCount": 4165,
+      "keyOrderSha256": "00af8c8f66d793c62cc4d9685d3ab0701565bbf9bb5f5ab619a134441b3f4f1d",
+      "changedCellCount": 7
+    },
+    {
+      "locale": "zh-Hant",
+      "path": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "baseSha256": "9a17d2de9a500a8947be9cee24f9f9b5691dce9123f2fbaa23708cc15426badb",
+      "postSha256": "cd61d9c015c7dd3e1a179bb5a88b6e3e10e1bde42cf58c7679044bf1575e2620",
+      "keyCount": 4165,
+      "keyOrderSha256": "ecb25f625c22b9c06eb38f3b3192d2a5d32fc4f61e1e55aa54079720b1d37b5b",
+      "changedCellCount": 10
+    }
+  ],
+  "readbackSha256": "db0fc5d39eb0e81766cb13d2113fd6b8aa380907bf6567eb7c2468e9c11aba6e",
+  "EnglishFallbackUnchanged": true,
+  "nativeSpeakerApproval": false,
+  "browserAcceptance": false
+}

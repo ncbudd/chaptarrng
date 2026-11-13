@@ -155,13 +155,13 @@ namespace NzbDrone.Core.Indexers.Newznab
                     return null;
                 }
 
-                return new ValidationFailure(string.Empty, "Indexer does not support required search parameters");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Indexer does not support required search parameters", "server.message.m35c921a37b2e");
             }
             catch (Exception ex)
             {
                 _logger.Warn(ex, "Unable to connect to indexer: " + ex.Message);
 
-                return new ValidationFailure(string.Empty, "Unable to connect to indexer, check the log for more details");
+                return NzbDroneValidationFailure.ForMessage(string.Empty, "Unable to connect to indexer, check the log for more details", "server.message.m85babf48e233");
             }
         }
 

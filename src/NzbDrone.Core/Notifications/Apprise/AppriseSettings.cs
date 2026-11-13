@@ -16,22 +16,27 @@ namespace NzbDrone.Core.Notifications.Apprise
 
             RuleFor(c => c.ConfigurationKey).NotEmpty()
                 .When(c => c.StatelessUrls.IsNullOrWhiteSpace())
-                .WithMessage("Use either Configuration Key or Stateless URLs");
+                .WithMessage("Use either Configuration Key or Stateless URLs")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m64f4a104ceb4"));
 
             RuleFor(c => c.ConfigurationKey).Matches("^[a-z0-9-]*$")
-                .WithMessage("Allowed characters a-z, 0-9 and -");
+                .WithMessage("Allowed characters a-z, 0-9 and -")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m8d1c33f25092"));
 
             RuleFor(c => c.StatelessUrls).NotEmpty()
                 .When(c => c.ConfigurationKey.IsNullOrWhiteSpace())
-                .WithMessage("Use either Configuration Key or Stateless URLs");
+                .WithMessage("Use either Configuration Key or Stateless URLs")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m64f4a104ceb4"));
 
             RuleFor(c => c.StatelessUrls).Empty()
                 .When(c => c.ConfigurationKey.IsNotNullOrWhiteSpace())
-                .WithMessage("Use either Configuration Key or Stateless URLs");
+                .WithMessage("Use either Configuration Key or Stateless URLs")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m64f4a104ceb4"));
 
             RuleFor(c => c.Tags).Empty()
                 .When(c => c.StatelessUrls.IsNotNullOrWhiteSpace())
-                .WithMessage("Stateless URLs do not support tags");
+                .WithMessage("Stateless URLs do not support tags")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.m17a00dbb4f2a"));
         }
     }
 

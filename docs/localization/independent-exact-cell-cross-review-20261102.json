@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "repository": "snapetech-org/chaptarrng",
+  "pullRequest": 190,
+  "head": "856bc9d4da72f821568a8497fd3d66a815dae77a",
+  "tree": "a7445c91b438cfe8ce565c12f9c6355bf649fb1e",
+  "reviewedAt": "2026-11-01",
+  "classification": "independent exact-head semantic review; no catalog edits",
+  "sourceKey": "ExperienceModeHelpText",
+  "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+  "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+  "sourceCatalogPath": "src/NzbDrone.Core/Localization/Core/en.json",
+  "sourceCatalogBlob": "d8f7ed4636c9ce4a610c0a943f720c753f6d595b",
+  "context": {
+    "uiSettingsPath": "frontend/src/Settings/UI/UISettings.js",
+    "uiSettingsBlob": "a32a9f162a01bbca7744d0c48d488cfb5fef836a",
+    "headerTogglePath": "frontend/src/Components/Page/Header/PageHeaderActionsMenuConnector.js",
+    "headerToggleBlob": "921370a51563dcfd6ef97a9d03da38e8bf82fb4a",
+    "uiSettingsRendering": "ExperienceModeHelpText is rendered in the ExperienceMode fieldset; SimpleExperience/AdvancedExperience render as radio-option labels. UILanguageHelpText is concatenated with one literal space and inheritedFallbackNotice."
+  },
+  "controlLabelsByLocale": {
+    "ar": {
+      "ExperienceMode": "التجربة",
+      "SimpleExperience": "بسيط (بنمط BookshelfNG)",
+      "AdvancedExperience": "متقدم (ChaptarrNG بالكامل)",
+      "SimpleExperienceDescription": "حافظ على ظهور مهام المكتبة اليومية. تبقى الصفحات والتحكم الأقل استخداماً بعيداً عن الطريق، ويمكنك العودة في أي وقت.",
+      "AdvancedExperienceDescription": "يعرض جميع أقسام التنقل. يؤدي التبديل إلى الوضع المتقدم أيضًا إلى إظهار الإعدادات المتخصصة، ويمكنك إخفاؤها مجددًا من شريط أدوات صفحة الإعدادات.",
+      "SimpleExperienceToggleLabel": "التجربة الحالية بسيطة. بدّل إلى متقدم.",
+      "AdvancedExperienceToggleLabel": "الوضع الحالي هو المتقدم. انتقل إلى الوضع البسيط."
+    },
+    "de": {
+      "ExperienceMode": "Erfahrung",
+      "SimpleExperience": "Einfach (BookshelfNG-Stil)",
+      "AdvancedExperience": "Erweitert (vollständiges ChaptarrNG)",
+      "SimpleExperienceDescription": "Halten Sie alltägliche Bibliotheksaufgaben im Blick. Weniger genutzte Seiten und Steuerelemente bleiben aus dem Weg, und Sie können jederzeit zurückwechseln.",
+      "AdvancedExperienceDescription": "Zeigt alle Navigationsbereiche an. Beim Wechsel zu „Erweitert“ werden auch spezielle Einstellungen eingeblendet, die du über die Symbolleiste einer Einstellungsseite wieder ausblenden kannst.",
+      "SimpleExperienceToggleLabel": "Aktuelle Erfahrung ist Einfach. Zu Erweitert wechseln.",
+      "AdvancedExperienceToggleLabel": "Die aktuelle Ansicht ist „Erweitert“. Zu „Einfach“ wechseln."
+    },
+    "es": {
+      "ExperienceMode": "Experiencia",
+      "SimpleExperience": "Simple (estilo BookshelfNG)",
+      "AdvancedExperience": "Avanzado (ChaptarrNG completo)",
+      "SimpleExperienceDescription": "Mantenga las tareas diarias de la biblioteca a la vista. Las páginas y controles menos usados quedan fuera de la vista, y puede volver a cambiar en cualquier momento.",
+      "AdvancedExperienceDescription": "Muestra todas las áreas de navegación. Al cambiar a Avanzado también se abren los ajustes especializados, que puedes volver a ocultar desde la barra de herramientas de una página de ajustes.",
+      "SimpleExperienceToggleLabel": "La experiencia actual es Simple. Cambiar a Avanzada.",
+      "AdvancedExperienceToggleLabel": "La experiencia actual es Avanzada. Cambiar a Simple."
+    },
+    "fr": {
+      "ExperienceMode": "Expérience",
+      "SimpleExperience": "Simple (style BookshelfNG)",
+      "AdvancedExperience": "Avancé (ChaptarrNG complet)",
+      "SimpleExperienceDescription": "Gardez les tâches courantes de la bibliothèque à portée de vue. Les pages et contrôles moins utilisés restent discrets, et vous pouvez revenir en arrière à tout moment.",
+      "AdvancedExperienceDescription": "Affiche toutes les zones de navigation. Le passage au mode avancé ouvre aussi les réglages spécialisés, que vous pouvez masquer de nouveau depuis la barre d’outils d’une page de réglages.",
+      "SimpleExperienceToggleLabel": "L'expérience actuelle est Simple. Passer à Avancé.",
+      "AdvancedExperienceToggleLabel": "Le mode actuel est avancé. Passer au mode simple."
+    },
+    "hi": {
+      "ExperienceMode": "अनुभव",
+      "SimpleExperience": "सरल (BookshelfNG-शैली)",
+      "AdvancedExperience": "उन्नत (पूर्ण ChaptarrNG)",
+      "SimpleExperienceDescription": "रोज़मर्रा की लाइब्रेरी कार्यवाहियाँ दृश्य में रखें। कम उपयोग की जाने वाली पृष्ठ और नियंत्रण दूर रहते हैं, और आप किसी भी समय वापस स्विच कर सकते हैं।",
+      "AdvancedExperienceDescription": "सभी नेविगेशन क्षेत्र दिखाएँ। उन्नत पर जाने से विशेषज्ञ सेटिंग भी खुलती हैं; उन्हें किसी सेटिंग पेज के टूलबार से फिर छिपाया जा सकता है।",
+      "SimpleExperienceToggleLabel": "वर्तमान अनुभव सरल है। एडवांस्ड पर स्विच करें।",
+      "AdvancedExperienceToggleLabel": "वर्तमान अनुभव उन्नत है। सरल मोड पर जाएँ।"
+    },
+    "id": {
+      "ExperienceMode": "Pengalaman",
+      "SimpleExperience": "Sederhana (gaya BookshelfNG)",
+      "AdvancedExperience": "Lanjutan (ChaptarrNG lengkap)",
+      "SimpleExperienceDescription": "Jaga tugas perpustakaan sehari-hari tetap terlihat. Halaman dan kontrol yang jarang digunakan disembunyikan, dan Anda dapat beralih kembali kapan saja.",
+      "AdvancedExperienceDescription": "Tampilkan semua area navigasi. Beralih ke Lanjutan juga membuka pengaturan khusus, yang dapat disembunyikan lagi dari bilah alat halaman pengaturan.",
+      "SimpleExperienceToggleLabel": "Pengalaman saat ini adalah Sederhana. Beralih ke Lanjutan.",
+      "AdvancedExperienceToggleLabel": "Mode saat ini adalah Lanjutan. Beralih ke Sederhana."
+    },
+    "ja": {
+      "ExperienceMode": "体験",
+      "SimpleExperience": "シンプル (BookshelfNG スタイル)",
+      "AdvancedExperience": "詳細（ChaptarrNG の全機能）",
+      "SimpleExperienceDescription": "日常的なライブラリタスクを表示に保ちます。あまり使用しないページやコントロールは邪魔にならないよう配置され、いつでも切り替えることができます。",
+      "AdvancedExperienceDescription": "すべてのナビゲーション領域を表示します。「詳細」に切り替えると専門設定も開きます。設定ページのツールバーから再び非表示にできます。",
+      "SimpleExperienceToggleLabel": "現在の体験はシンプルです。高度なモードに切り替えます。",
+      "AdvancedExperienceToggleLabel": "現在は「詳細」です。「シンプル」に切り替えます。"
+    },
+    "ko": {
+      "ExperienceMode": "경험",
+      "SimpleExperience": "간단 (BookshelfNG 스타일)",
+      "AdvancedExperience": "고급(전체 ChaptarrNG)",
+      "SimpleExperienceDescription": "일상적인 라이브러리 작업을 화면에 유지합니다. 덜 사용되는 페이지와 컨트롤은 방해가 되지 않도록 숨겨지며, 언제든지 다시 전환할 수 있습니다.",
+      "AdvancedExperienceDescription": "모든 탐색 영역을 표시합니다. 고급으로 전환하면 전문 설정도 열리며, 설정 페이지의 도구 모음에서 다시 숨길 수 있습니다.",
+      "SimpleExperienceToggleLabel": "현재 경험은 간단 모드입니다. 고급으로 전환하세요.",
+      "AdvancedExperienceToggleLabel": "현재 고급 모드입니다. 간편 모드로 전환합니다."
+    },
+    "pt_BR": {
+      "ExperienceMode": "Experiência",
+      "SimpleExperience": "Simples (estilo BookshelfNG)",
+      "AdvancedExperience": "Avançado (ChaptarrNG completo)",
+      "SimpleExperienceDescription": "Mantenha as tarefas diárias da biblioteca em vista. Páginas e controles menos usados ficam fora do caminho, e você pode voltar a qualquer momento.",
+      "AdvancedExperienceDescription": "Mostra todas as áreas de navegação. Ao mudar para Avançado, as configurações especializadas também são exibidas; você pode ocultá-las novamente na barra de ferramentas de uma página de configurações.",
+      "SimpleExperienceToggleLabel": "A experiência atual é Simples. Alterne para Avançado.",
+      "AdvancedExperienceToggleLabel": "A experiência atual é Avançada. Mudar para Simples."
+    },
+    "vi": {
+      "ExperienceMode": "Trải nghiệm",
+      "SimpleExperience": "Đơn giản (kiểu BookshelfNG)",
+      "AdvancedExperience": "Nâng cao (ChaptarrNG đầy đủ)",
+      "SimpleExperienceDescription": "Giữ các tác vụ thư viện hàng ngày trong tầm nhìn. Các trang và điều khiển ít được sử dụng hơn sẽ được ẩn đi, và bạn có thể chuyển đổi lại bất cứ lúc nào.",
+      "AdvancedExperienceDescription": "Hiển thị mọi khu vực điều hướng. Khi chuyển sang Nâng cao, các cài đặt chuyên sâu cũng được mở; bạn có thể ẩn lại chúng từ thanh công cụ của trang cài đặt.",
+      "SimpleExperienceToggleLabel": "Trải nghiệm hiện tại là Đơn giản. Chuyển sang Nâng cao.",
+      "AdvancedExperienceToggleLabel": "Trải nghiệm hiện tại là Nâng cao. Chuyển sang Đơn giản."
+    },
+    "zh_CN": {
+      "ExperienceMode": "体验",
+      "SimpleExperience": "简易模式（BookshelfNG 风格）",
+      "AdvancedExperience": "高级（完整 ChaptarrNG）",
+      "SimpleExperienceDescription": "保持日常库任务可见。较少使用的页面和控制项将被隐藏，您可以随时切换回原模式。",
+      "AdvancedExperienceDescription": "显示所有导航区域。切换到高级模式也会展开专业设置；你可以在设置页面的工具栏中再次隐藏它们。",
+      "SimpleExperienceToggleLabel": "当前体验为简易模式。切换到高级模式。",
+      "AdvancedExperienceToggleLabel": "当前为高级体验。切换到简洁模式。"
+    },
+    "zh_TW": {
+      "ExperienceMode": "體驗",
+      "SimpleExperience": "簡易模式（BookshelfNG 風格）",
+      "AdvancedExperience": "進階（完整 ChaptarrNG）",
+      "SimpleExperienceDescription": "讓日常圖書館任務一目了然。少用的頁面和控制項將被隱藏，您可以隨時切換回來。",
+      "AdvancedExperienceDescription": "顯示所有導覽區域。切換至進階模式也會開啟專業設定；你可以在設定頁面的工具列中再次隱藏它們。",
+      "SimpleExperienceToggleLabel": "目前體驗為簡易模式。切換到進階模式。",
+      "AdvancedExperienceToggleLabel": "目前為進階體驗。切換至簡易模式。"
+    }
+  },
+  "cells": [
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "ar",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "يُبقي الوضع البسيط مهام المكتبة اليومية مرئية ويُبقي الصفحات والتحكمات النادرة الاستخدام بعيداً عن الطريق. يُظهر الوضع المتقدم كل مناطق التنقل. عند التبديل إلى الوضع المتقدم، يتم تفعيل إعدادات إضافية؛ يتيح لك شريط أدوات كل إعدادات إخفاءها مرة أخرى. تغيير الوضع يغيّر الواجهة فقط، وليس مكتبتك أو إعدادات الخدمة؛ استخدم زر الترويسة أو اختر وضعاً هنا.",
+      "currentTargetSha256": "83fbdb24d97340b2ac26d89a07570e0cdc02544401d44380e8ec28d67f4b071a",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "de",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "Einfach hält alltägliche Bibliotheksaufgaben sichtbar und räumt selten genutzte Seiten und Steuerelemente aus dem Weg. Erweitert zeigt alle Navigationsbereiche. Beim Wechsel zu Erweitert werden zusätzliche Einstellungen aktiviert; jede Einstellungsleiste ermöglicht es, sie erneut zu verbergen. Der Moduswechsel ändert nur die Oberfläche, nicht Ihre Bibliothek oder Servicekonfiguration; verwenden Sie den Header-Button oder wählen Sie hier einen Modus.",
+      "currentTargetSha256": "eaef15ae929978fae57b0f875627d459d1b5662b7a543b6770f6f894670d97f4",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "es",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "Simple mantiene visibles las tareas diarias de la biblioteca y oculta las páginas y controles poco usados. Avanzado muestra todas las áreas de navegación. Al cambiar a Avanzado, se habilitan ajustes adicionales; cada barra de herramientas de ajustes permite ocultarlos de nuevo. Cambiar de modo solo modifica la interfaz, no tu biblioteca ni la configuración del servicio; usa el botón de la cabecera o elige un modo aquí.",
+      "currentTargetSha256": "8598e3373ed6a78cd0c5f6178ecfefc412b6ca211284be31a81fc140e46abfcf",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "fr",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "Simple conserve les tâches courantes de la bibliothèque visibles et masque les pages et contrôles rarement utilisés. Avancé affiche toutes les zones de navigation. Lorsque vous passez en mode Avancé, des paramètres supplémentaires sont activés ; chaque barre d'outils de paramètres vous permet de les masquer à nouveau. Le changement de mode ne modifie que l'interface, pas votre bibliothèque ou la configuration du service ; utilisez le bouton de l'en-tête ou choisissez un mode ici.",
+      "currentTargetSha256": "bc27e20acac309c2568db04e5d3f2380595c19f0b945e8bae4561e49f6dff96d",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "hi",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "सरल मोड दैनिक लाइब्रेरी कार्य को दृश्यमान रखता है और कम उपयोग किए जाने वाले पृष्ठों और नियंत्रणों को दूर रखता है। उन्नत मोड सभी नेविगेशन क्षेत्र दिखाता है। जब आप उन्नत मोड में स्विच करते हैं, तो अतिरिक्त सेटिंग्स सक्षम हो जाती हैं; प्रत्येक सेटिंग्स टूलबार आपको उन्हें फिर से छिपाने की अनुमति देता है। मोड बदलना केवल इंटरफ़ेस को बदलता है, न कि आपकी लाइब्रेरी या सेवा कॉन्फ़िगरेशन; हेडर बटन का उपयोग करें या यहाँ से एक मोड चुनें।",
+      "currentTargetSha256": "f3b8c7590103c34000b1816f00a28107710f477a6dd9b7c92aaf504ce45ae853",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "id",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "Sederhana menjaga tugas perpustakaan sehari-hari tetap terlihat dan menyingkirkan halaman serta kontrol yang jarang digunakan. Lanjutan menampilkan semua area navigasi. Saat Anda beralih ke mode Lanjutan, pengaturan tambahan diaktifkan; setiap bilah alat pengaturan memungkinkan Anda menyembunyikannya kembali. Peralihan mode hanya mengubah antarmuka, bukan perpustakaan atau konfigurasi layanan Anda; gunakan tombol di bagian atas atau pilih mode di sini.",
+      "currentTargetSha256": "c256a970f0f7aec9b9719086f686aa07239a0dbb83a3492541e986024ce6a84b",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The mode labels “Sederhana” and “Lanjutan” match the visible radio options. “Menyingkirkan” can mean moving something aside/out of the way, matching the source; the option description confirms the pages and controls are hidden in Simple mode. No high-confidence defect remains."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "ja",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "シンプルは日常的なライブラリタスクを表示し、ほとんど使用されないページやコントロールを非表示にします。詳細はすべてのナビゲーション領域を表示します。詳細に切り替えると、追加の設定が有効になります。各設定ツールバーから再び非表示にすることができます。モードの切り替えはインターフェースのみを変更し、ライブラリやサービスの設定には影響しません。ヘッダーのボタンまたはここでモードを選択してください。",
+      "currentTargetSha256": "e9c65e0b5d480d27f8713d66e2fc52879a8d953ee0784b664f28ce33a1fac2f5",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "ko",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "간단한 모드는 일상적인 라이브러리 작업을 표시하고 덜 사용되는 페이지와 컨트롤을 숨깁니다. 고급 모드는 모든 탐색 영역을 표시합니다. 고급으로 전환하면 추가 설정이 활성화되며, 각 설정 툴바에서 다시 숨길 수 있습니다. 모드 전환은 인터페이스만 변경하며 라이브러리나 서비스 설정에는 영향을 주지 않습니다. 헤더 버튼 또는 여기서 모드를 선택하세요.",
+      "currentTargetSha256": "904deab115165d395dfcdba49b02ba9e8644faa9ff729e61efa1fc07438a8f78",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "pt_BR",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "O modo Simples mantém as tarefas diárias da biblioteca visíveis e move páginas e controles raramente usados para fora do caminho. O modo Avançado exibe todas as áreas de navegação. Ao alternar para o Avançado, configurações adicionais são habilitadas; cada barra de ferramentas de configurações permite ocultá-las novamente. Alterar o modo altera apenas a interface, não sua biblioteca ou configuração de serviço; use o botão do cabeçalho ou escolha um modo aqui.",
+      "currentTargetSha256": "c52fe2415fa27b9e2072bdba516c29226e045b836b73c35a9f17fc5e63a14beb",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "vi",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "Đơn giản giữ các tác vụ thư viện hàng ngày hiển thị rõ ràng và di chuyển các trang và điều khiển ít được sử dụng ra khỏi tầm mắt. Nâng cao hiển thị mọi khu vực điều hướng. Khi chuyển sang Nâng cao, các cài đặt bổ sung sẽ được kích hoạt; mỗi thanh công cụ cài đặt cho phép bạn ẩn chúng lại. Việc chuyển đổi chế độ chỉ thay đổi giao diện, không thay đổi thư viện hoặc cấu hình dịch vụ của bạn; sử dụng nút tiêu đề hoặc chọn một chế độ ở đây.",
+      "currentTargetSha256": "3e82ef4bbed6edbd2994accafb2ae5f54a5e8b75983274902b70c65222cd629d",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "zh_CN",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "简单模式保留日常图书馆任务可见，并将不常用的页面和控制项移至次要位置。高级模式显示所有导航区域。切换到高级模式时会启用额外设置；每个设置工具栏允许您再次隐藏它们。切换模式仅更改界面，不影响您的图书馆或服务配置；请使用标题按钮或在此处选择模式。",
+      "currentTargetSha256": "cb0d80801c4ffd5b76efdee3469fbf5eb05e97f7675f3f11357d89af384ca37a",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "ExperienceModeHelpText",
+      "locale": "zh_TW",
+      "source": "Simple keeps everyday library tasks visible and moves rarely used pages and controls out of the way. Advanced shows every navigation area. When you switch to Advanced, additional settings are enabled; each settings toolbar lets you hide them again. Switching modes changes only the interface, not your library or service configuration; use the header button or choose a mode here.",
+      "sourceSha256": "3c7f7d64afd4071e3163cbc649a40de498bf4303aff7a8ce98d99b84969dd168",
+      "currentTarget": "「簡單」模式讓日常圖書館任務保持可見，並將少用的頁面和控制項移至一旁。「進階」模式顯示所有導覽區域。切換至「進階」模式時會啟用額外設定；每個設定工具列都允許您再次隱藏它們。切換模式僅變更介面，不會影響您的圖書館或服務設定；請使用標題列按鈕或在此處選擇模式。",
+      "currentTargetSha256": "a5f6e7c1408ac1770a23af132c43c1559ba4edb5eafc8f9aa94b59ee550c628a",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The target accurately describes Simple/Advanced behavior and its terms align with the visible option labels."
+    },
+    {
+      "id": "UILanguageHelpText",
+      "locale": "es",
+      "source": "Language that Chaptarr will use for UI",
+      "sourceSha256": "ad896a5e721c3abb9e7475e78f935933556b21c6bb6b916b54b9fbae6e6b1753",
+      "currentTarget": "Idioma que Chaptarr usará para la interfaz.",
+      "currentTargetSha256": "4cce871ad4170e137e44c82e8299f8dd63e8d3415e1f3cf2c35857ca17f7e690",
+      "verdict": "accepted",
+      "confidence": "high",
+      "reason": "The Spanish target ends with a period, the renderer inserts a literal space, and the localized fallback notice begins a new sentence; the combined UI copy is correctly punctuated."
+    }
+  ],
+  "summary": {
+    "cells": 13,
+    "accepted": 13,
+    "correctionNeeded": 0,
+    "held": 0,
+    "nativeSpeakerSignoff": "not performed"
+  }
+}

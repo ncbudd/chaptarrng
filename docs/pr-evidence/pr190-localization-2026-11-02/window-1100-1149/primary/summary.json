@@ -1,0 +1,105 @@
+{
+  "allSevenPrsSnapshottedAtSelection": true,
+  "branch": "codex/chaptarrng-localization-complete-20261031",
+  "callerFiles": 24,
+  "callerGaps": 0,
+  "catalogKeyCount": 4165,
+  "cellCount": 600,
+  "currentProtectedLiteralFailureCells": 0,
+  "directCallerReferences": 75,
+  "dispositionCounts": {
+    "accept-current": 532,
+    "correction": 57,
+    "refinement": 11
+  },
+  "finalProtectedLiteralFailureCells": 0,
+  "head": "cc00a297fd221d52169f3c4683ffc1b0ee20871f",
+  "headedBrowserAcceptance": false,
+  "holdCellCount": 0,
+  "icuMismatchCells": 0,
+  "isDraft": true,
+  "limitations": "Static machine-assisted primary review. No native-speaker approval, browser acceptance, or runtime validation is claimed; the prior W1050 Dodge pun remains on hold.",
+  "localeCount": 12,
+  "markupMismatchCells": 0,
+  "nativeSpeakerApproval": false,
+  "newPriorHashDrift": 0,
+  "overallConfidence": "moderate",
+  "perLocaleDispositionCounts": {
+    "ar": {
+      "accept-current": 44,
+      "correction": 6
+    },
+    "de": {
+      "accept-current": 43,
+      "correction": 4,
+      "refinement": 3
+    },
+    "es": {
+      "accept-current": 45,
+      "correction": 4,
+      "refinement": 1
+    },
+    "fr": {
+      "accept-current": 46,
+      "correction": 3,
+      "refinement": 1
+    },
+    "hi": {
+      "accept-current": 40,
+      "correction": 7,
+      "refinement": 3
+    },
+    "id": {
+      "accept-current": 44,
+      "correction": 6
+    },
+    "ja": {
+      "accept-current": 42,
+      "correction": 5,
+      "refinement": 3
+    },
+    "ko": {
+      "accept-current": 46,
+      "correction": 4
+    },
+    "pt-BR": {
+      "accept-current": 46,
+      "correction": 4
+    },
+    "vi": {
+      "accept-current": 45,
+      "correction": 5
+    },
+    "zh-Hans": {
+      "accept-current": 46,
+      "correction": 4
+    },
+    "zh-Hant": {
+      "accept-current": 45,
+      "correction": 5
+    }
+  },
+  "placeholderMismatchCells": 0,
+  "priorDispositionRowsThroughW1099": 13200,
+  "priorLiveFinalHashMismatches": 195,
+  "proposalKindCounts": {
+    "correction": 57,
+    "refinement": 11
+  },
+  "proposedValueChanges": 68,
+  "pullRequest": 190,
+  "repository": "snapetech-org/chaptarrng",
+  "sourceCount": 50,
+  "staleRegistryPins": 0,
+  "state": "OPEN",
+  "tree": "5987da199f6d5567803ba3ed6c4dd143d1263cdf",
+  "w1050DodgeHoldCountPreserved": 12,
+  "w1050DodgeHoldsPreserved": true,
+  "w1099BoundaryAll12Match": true,
+  "w1150BoundaryPinned": true,
+  "window": "W1100-W1149",
+  "zeroBasedQueuePositions": [
+    1100,
+    1149
+  ]
+}

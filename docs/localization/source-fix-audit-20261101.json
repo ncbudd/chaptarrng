@@ -1,0 +1,615 @@
+{
+  "version": 1,
+  "baseHead": "03274100af783fdffaca4dd8436e163dc6b18795",
+  "scope": "Candidate source closure for confirmed release search/grab errors, download-client selection with historical message wording, v2-only torrent rejection, regex modifier validation, M4B queue/error copy, and UI presentation boundaries.",
+  "newMessages": [
+    {
+      "id": "server.message.m006306a07286",
+      "source": "This magnet link is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/TorrentInfo/TorrentHashResolver.cs",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "id": "server.message.m02884586a62c",
+      "source": "m4b-tool/ffmpeg could not decode one of the source audio files.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1045
+        }
+      ]
+    },
+    {
+      "id": "server.message.m0e541aa42618",
+      "source": "Converted M4B does not have a readable audio duration",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 804
+        }
+      ]
+    },
+    {
+      "id": "server.message.m131b7c5d7656",
+      "source": "No download client was found without tags or a matching author tag. Please check your settings.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 99
+        }
+      ]
+    },
+    {
+      "id": "server.message.m14f003cf32a3",
+      "source": "Unknown or unsupported perl regex modifier: {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Profiles/Releases/PerlRegexFactory.cs",
+          "line": 62
+        }
+      ]
+    },
+    {
+      "id": "server.message.m1e1f38c345ab",
+      "source": "Indexer specified download client is not available due to recent failures for {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 118
+        }
+      ]
+    },
+    {
+      "id": "server.message.m1ef753cbd9a0",
+      "source": "Converted M4B imported",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 211
+        }
+      ]
+    },
+    {
+      "id": "server.message.m207251749db8",
+      "source": "Recovering interrupted M4B conversion",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 299
+        }
+      ]
+    },
+    {
+      "id": "server.message.m2dfd8b029cda",
+      "source": "A readable converted M4B was produced but will not be imported because m4b-tool reported a failure.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 776
+        }
+      ]
+    },
+    {
+      "id": "server.message.m300cfa158919",
+      "source": "Couldn't find requested release in cache, try searching again",
+      "callsites": [
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "id": "server.message.m3019d00d9226",
+      "source": "FFmpeg is not available (required by m4b-tool)",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 82
+        }
+      ]
+    },
+    {
+      "id": "server.message.m3347b5962c6a",
+      "source": "Tool output: {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1124
+        }
+      ]
+    },
+    {
+      "id": "server.message.m45d5b4f145d0",
+      "source": "Converted file retained at: {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 543
+        }
+      ]
+    },
+    {
+      "id": "server.message.m4b07093e17b8",
+      "source": "A bookId, authorId, or seriesId is required for interactive search",
+      "callsites": [
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 269
+        }
+      ]
+    },
+    {
+      "id": "server.message.m4b666af14ddc",
+      "source": "Conversion environment is missing a required tool or PHP extension. Rebuild/update the container image, then retry.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1028
+        }
+      ]
+    },
+    {
+      "id": "server.message.m4d3e6de749b4",
+      "source": "Conversion could not write or rename files in the conversion folder. Check destination folder ownership and permissions.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1021
+        }
+      ]
+    },
+    {
+      "id": "server.message.m4dcc9a05bd3f",
+      "source": "Recovering expired M4B conversion lease",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 406
+        }
+      ]
+    },
+    {
+      "id": "server.message.m5034981304b3",
+      "source": "Unable to parse books in the release",
+      "callsites": [
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 115
+        },
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 146
+        },
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 151
+        }
+      ]
+    },
+    {
+      "id": "server.message.m58713251f1c2",
+      "source": "FFprobe is not available (required to validate converted audiobooks)",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 89
+        }
+      ]
+    },
+    {
+      "id": "server.message.m5ce57d9e0a1b",
+      "source": "M4B conversion failed",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 539
+        }
+      ]
+    },
+    {
+      "id": "server.message.m5e59875772be",
+      "source": "Converting to M4B - {value0}%",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1401
+        }
+      ]
+    },
+    {
+      "id": "server.message.m63d977155953",
+      "source": "Converted M4B ready to import",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 531
+        }
+      ]
+    },
+    {
+      "id": "server.message.m652e95e12cc9",
+      "source": "Using retained M4B",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 494
+        }
+      ]
+    },
+    {
+      "id": "server.message.m6c22b50bc2a8",
+      "source": "Internal Direct download client is not available.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 206
+        }
+      ]
+    },
+    {
+      "id": "server.message.m7842e5a82f2c",
+      "source": "No enabled {value0} download client is configured. {value1} Add and enable a {value2}-capable download client, then retry.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 177
+        }
+      ]
+    },
+    {
+      "id": "server.message.m7a9a7acb511f",
+      "source": "Input file does not exist: {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 99
+        }
+      ]
+    },
+    {
+      "id": "server.message.m7cd22199d71c",
+      "source": "Converted M4B file is too small to be a valid audiobook",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 789
+        }
+      ]
+    },
+    {
+      "id": "server.message.m869f8789d861",
+      "source": "M4B conversion failed: {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 560
+        }
+      ]
+    },
+    {
+      "id": "server.message.m8af0d2379b97",
+      "source": "m4b-tool failed with exit code {value0}.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1048
+        }
+      ]
+    },
+    {
+      "id": "server.message.m8d6021d80642",
+      "source": "Indexer specified download client does not exist for {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 113
+        }
+      ]
+    },
+    {
+      "id": "server.message.m94463ca0c56f",
+      "source": "Converted M4B duration looks wrong. Source duration is about {value0} but output is {value1}; allowed difference is {value2}.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 816
+        }
+      ]
+    },
+    {
+      "id": "server.message.ma69b7ec09fb3",
+      "source": "m4b-tool failed while writing chapters or tags. The converted audio is not being imported automatically.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1040
+        }
+      ]
+    },
+    {
+      "id": "server.message.mae71772271ad",
+      "source": "Found {value0} enabled {value1} client(s).",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 170
+        }
+      ]
+    },
+    {
+      "id": "server.message.mb2062a8ec245",
+      "source": "m4b-tool finished but did not create the converted M4B file",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 192
+        }
+      ]
+    },
+    {
+      "id": "server.message.mb8615e9f5606",
+      "source": "An authorId is required when searching for a series pack",
+      "callsites": [
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 227
+        },
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 258
+        }
+      ]
+    },
+    {
+      "id": "server.message.mbd4067e91b59",
+      "source": "M4B conversion job failed: {value0}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 569
+        }
+      ]
+    },
+    {
+      "id": "server.message.mc63ea6c0320c",
+      "source": "Converted M4B contains a {value0} stream that is not attached cover art",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 917
+        }
+      ]
+    },
+    {
+      "id": "server.message.mccfb6e3b050a",
+      "source": "m4b-tool failed while embedding cover art. Retry without embedded cover art may succeed.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1034
+        }
+      ]
+    },
+    {
+      "id": "server.message.md4447ebc7318",
+      "source": "Unable to find the requested book",
+      "callsites": [
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 102
+        },
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 135
+        },
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 282
+        },
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 386
+        }
+      ]
+    },
+    {
+      "id": "server.message.md4bb98fe9185",
+      "source": "Conversion was cancelled.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1009
+        }
+      ]
+    },
+    {
+      "id": "server.message.md530e10017b2",
+      "source": "Converted M4B file was not created",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 783
+        }
+      ]
+    },
+    {
+      "id": "server.message.md764ed5e74b4",
+      "source": "{value0} conversion was cancelled.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 195
+        },
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 603
+        }
+      ]
+    },
+    {
+      "id": "server.message.md8e066a1133c",
+      "source": "m4b-tool did not return a process result",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 995
+        }
+      ]
+    },
+    {
+      "id": "server.message.me26f2fd69d70",
+      "source": "Finalizing M4B",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1395
+        }
+      ]
+    },
+    {
+      "id": "server.message.me544a91b0e6a",
+      "source": "All download clients for {value0} are not available",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+          "line": 135
+        }
+      ]
+    },
+    {
+      "id": "server.message.meb232bfbe55a",
+      "source": "Recovered converted M4B; waiting to import",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 294
+        },
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/ConversionJobService.cs",
+          "line": 401
+        }
+      ]
+    },
+    {
+      "id": "server.message.mec4266f3d11f",
+      "source": "m4b-tool is not available",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 75
+        }
+      ]
+    },
+    {
+      "id": "server.message.mf00a39f5e266",
+      "source": "m4b-tool timed out after {value0}. The conversion was stopped.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1002
+        }
+      ]
+    },
+    {
+      "id": "server.message.mf1f9651ad657",
+      "source": "m4b-tool reported a failure after producing a readable M4B. The file was retained for inspection.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 775
+        }
+      ]
+    },
+    {
+      "id": "server.message.mf239545bb808",
+      "source": "Converted M4B does not contain a readable audio stream",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 794
+        }
+      ]
+    },
+    {
+      "id": "server.message.mf54e840dff84",
+      "source": "This torrent file is BitTorrent v2-only. Chaptarr currently requires a v1 info hash to track torrent downloads.",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/TorrentInfo/TorrentHashResolver.cs",
+          "line": 36
+        }
+      ]
+    },
+    {
+      "id": "server.message.mf5b2847afd2c",
+      "source": "Unable to find matching author and books",
+      "callsites": [
+        {
+          "file": "src/Chaptarr.Api.V1/Indexers/ReleaseController.cs",
+          "line": 123
+        }
+      ]
+    },
+    {
+      "id": "server.message.mfc07f61435f3",
+      "source": "Converting to M4B - {value0} of {value1}",
+      "callsites": [
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 120
+        },
+        {
+          "file": "src/NzbDrone.Core/MediaFiles/M4bConversionService.cs",
+          "line": 1398
+        }
+      ]
+    }
+  ],
+  "updatedExistingBindings": [
+    {
+      "id": "server.message.m09853a3933ba",
+      "file": "src/NzbDrone.Core/Download/DownloadClientProvider.cs",
+      "line": 174
+    }
+  ],
+  "uiPresentationBoundaries": [
+    {
+      "file": "frontend/src/Book/Narrator/NarratorSearchModalContent.js",
+      "line": 100,
+      "sourceLine": "              {translateServerMessage(errorMessage || error.message) || translate('NarratorSearchFailed')}"
+    },
+    {
+      "file": "frontend/src/Search/Series/AddNewSeriesModalContentConnector.js",
+      "line": 677,
+      "sourceLine": "      const renderedError = translateServerMessage(errorMessage) || errorMessage || translate('SeriesAddError');"
+    },
+    {
+      "file": "frontend/src/Search/Series/AddNewSeriesModalContentConnector.js",
+      "line": 720,
+      "sourceLine": "            const partialError = translateServerMessage(e.message) || e.message || translate('SeriesAddError');"
+    },
+    {
+      "file": "frontend/src/Search/Series/AddNewSeriesModalContentConnector.js",
+      "line": 787,
+      "sourceLine": "          const partialError = translateServerMessage(apiError) || apiError;"
+    }
+  ],
+  "existingCallerPaths": [
+    "frontend/src/InteractiveSearch/InteractiveSearchRow.js:64,346,454",
+    "frontend/src/InteractiveSearch/InteractiveSearch.js:254",
+    "frontend/src/Activity/Queue/QueueStatusCell.js:69,73",
+    "frontend/src/Activity/Queue/QueueRow.js:307,427,432"
+  ],
+  "boundaries": [
+    "Provider, indexer, OS, tool-output, and exception detail values remain dynamic data tokens; no raw external message is translated unless its fixed app-owned template matches.",
+    "Torrent v2-only errors use separate fixed magnet and torrent-file sources; protocol values and hash behavior are unchanged.",
+    "Tool output is parsed as one opaque token only after a fixed allowlisted WithSnippet base matches; suffix parsing does not inspect output payloads. Ambiguous suffixes appended after tool output remain part of that raw token.",
+    "No target locale catalog values or placeholder cells are added; only the English source catalog and runtime server-message registry receive new entries.",
+    "docs/localization/source-followup-20261031.json and all frozen target translation inputs remain unchanged."
+  ]
+}

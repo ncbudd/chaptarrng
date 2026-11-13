@@ -10,7 +10,8 @@ namespace NzbDrone.Core.Notifications.Join
         public JoinSettingsValidator()
         {
             RuleFor(s => s.ApiKey).NotEmpty();
-            RuleFor(s => s.DeviceIds).Empty().WithMessage("Use Device Names instead");
+            RuleFor(s => s.DeviceIds).Empty().WithMessage("Use Device Names instead")
+                .WithState(_ => NzbDroneValidationState.ForMessage("server.message.me929c2679b71"));
         }
     }
 

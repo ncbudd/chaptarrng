@@ -1,0 +1,193 @@
+{
+  "applicationHead": "cfb92c0d326127765480de313dcea8b2a9a8e483",
+  "applicationTree": "f4f851d6d96854882e711bff388b9557516fe7a6",
+  "rows": [
+    {
+      "sourceId": "provider.option.o7285d46b982d",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "crossDisposition": "select-primary-refinement",
+      "selectedDisposition": "refinement",
+      "selectionSource": "primary",
+      "selectedTarget": "Tiếng Tây Ban Nha Castilian",
+      "selectedTargetSha256": "904ff5421f2ef346a4208ece725adecf02577e653f7eaea190adf7c37e860a8e",
+      "observedSha256": "904ff5421f2ef346a4208ece725adecf02577e653f7eaea190adf7c37e860a8e"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "correction",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "لا شيء يضاهي رائحة فتح كتاب جديد… كتاب إلكتروني؟",
+      "selectedTargetSha256": "27c6b0e5f2998bdffe13d91cb7da956dd44851cc56d43987e14333689b5049f2",
+      "observedSha256": "27c6b0e5f2998bdffe13d91cb7da956dd44851cc56d43987e14333689b5049f2"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "refinement",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "नई किताब खोलने की खुशबू जैसी कोई चीज़ नहीं... ई-पुस्तक?",
+      "selectedTargetSha256": "da571c7ddb761569bd035f45565b5697896943b4a24b27886921689f4bf62e48",
+      "observedSha256": "da571c7ddb761569bd035f45565b5697896943b4a24b27886921689f4bf62e48"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "id",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/id.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "correction",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "Tak ada yang menandingi aroma saat membuka buku baru... buku elektronik?",
+      "selectedTargetSha256": "c5e395cecd822bd4aa4f62ee571fd78ffee7a5990e438930225bd6112b0c2f73",
+      "observedSha256": "c5e395cecd822bd4aa4f62ee571fd78ffee7a5990e438930225bd6112b0c2f73"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "correction",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "新しい本を開くときのあの匂いって、やっぱり格別……電子書籍？",
+      "selectedTargetSha256": "fe78299c04f358304726dfe5691b3ff92c348a73945b2aa966461569f5de3f6f",
+      "observedSha256": "fe78299c04f358304726dfe5691b3ff92c348a73945b2aa966461569f5de3f6f"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "correction",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "새 책을 펼칠 때 나는 냄새만큼 좋은 건 없죠… 전자책?",
+      "selectedTargetSha256": "c11343d9ff22a177838ab424d0239ef11710e890d267bfea4cd7adb442386784",
+      "observedSha256": "c11343d9ff22a177838ab424d0239ef11710e890d267bfea4cd7adb442386784"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "refinement",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "Không gì bằng mùi thơm khi mở một cuốn sách mới... sách điện tử?",
+      "selectedTargetSha256": "9abb5d5e1a05524a47e695567561aeebae346c0338c457d04d93b4b18914936a",
+      "observedSha256": "9abb5d5e1a05524a47e695567561aeebae346c0338c457d04d93b4b18914936a"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "correction",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "没有什么比打开一本新书时闻到的书香更美妙……电子书？",
+      "selectedTargetSha256": "9e2278300ad0969b760c5f4c1d91a4c56ff41190165b77875d2a41afb873531a",
+      "observedSha256": "9e2278300ad0969b760c5f4c1d91a4c56ff41190165b77875d2a41afb873531a"
+    },
+    {
+      "sourceId": "ui.loading.newEbookSmell",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "crossDisposition": "select-independent-blind",
+      "selectedDisposition": "correction",
+      "selectionSource": "independent-clean-blind",
+      "selectedTarget": "沒有什麼比打開一本新書時聞到的書香更美妙……電子書？",
+      "selectedTargetSha256": "e033ea37614d015c7a21e3dcafff97d2ac20f2e87d5b28bb43bdb062ac8daf86",
+      "observedSha256": "e033ea37614d015c7a21e3dcafff97d2ac20f2e87d5b28bb43bdb062ac8daf86"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "ar",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ar.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "977e6071cf41e8f541d9f17e69ea985cb90afc8249a412f625982e77e09d5a48",
+      "observedSha256": "977e6071cf41e8f541d9f17e69ea985cb90afc8249a412f625982e77e09d5a48"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "de",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/de.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "a61d33fd2566d3216caf97a548854af905b59e5ab2c8d5092e705ec4fd3b465e",
+      "observedSha256": "a61d33fd2566d3216caf97a548854af905b59e5ab2c8d5092e705ec4fd3b465e"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "es",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/es.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "2fa9acb11536e0354ba9fd35208c522b538a3b5f4ec196ed21049d1b3e3dae9b",
+      "observedSha256": "2fa9acb11536e0354ba9fd35208c522b538a3b5f4ec196ed21049d1b3e3dae9b"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "fr",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/fr.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "2eb92eee4866c60688c31f06f6f3e591a3222c962e214bd26fec795956424283",
+      "observedSha256": "2eb92eee4866c60688c31f06f6f3e591a3222c962e214bd26fec795956424283"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "hi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/hi.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "818a16def8db45aeaf0a8d377873691de4f6a9bdc7e1b7505ccb7acf0ab46dbf",
+      "observedSha256": "818a16def8db45aeaf0a8d377873691de4f6a9bdc7e1b7505ccb7acf0ab46dbf"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "ja",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ja.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "431e886c1fa62181d862962082da052e3f658764d5258b3467c8ea1ecd34605b",
+      "observedSha256": "431e886c1fa62181d862962082da052e3f658764d5258b3467c8ea1ecd34605b"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "ko",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/ko.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "ab2c74168d5f153a5cbef67eed9b04b1e99d5e6bad161dc02b0fec929da7b3e7",
+      "observedSha256": "ab2c74168d5f153a5cbef67eed9b04b1e99d5e6bad161dc02b0fec929da7b3e7"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "pt-BR",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/pt_BR.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "06c669240a020089b88017cc9bc327d398681cb920f60fe2465cb4faeb6f41bc",
+      "observedSha256": "06c669240a020089b88017cc9bc327d398681cb920f60fe2465cb4faeb6f41bc"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "vi",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/vi.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "ba26ecc123ae87c505d8c1aeb8e29f2a6c75faed42b9405f831a2cf3637f4e4b",
+      "observedSha256": "ba26ecc123ae87c505d8c1aeb8e29f2a6c75faed42b9405f831a2cf3637f4e4b"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "zh-Hans",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_CN.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "33499f660da2e799cc164e0a0626b6c30726f5179709a13dc88c548dfb9a7f87",
+      "observedSha256": "33499f660da2e799cc164e0a0626b6c30726f5179709a13dc88c548dfb9a7f87"
+    },
+    {
+      "sourceId": "ui.loading.dodgeBooks",
+      "locale": "zh-Hant",
+      "targetFile": "src/NzbDrone.Core/Localization/Core/zh_TW.json",
+      "crossDisposition": "hold",
+      "currentTargetSha256": "e8caf1891356b4ba8790c43749705b1b37270afb46bf0dea63b3678f93aa2717",
+      "observedSha256": "e8caf1891356b4ba8790c43749705b1b37270afb46bf0dea63b3678f93aa2717"
+    }
+  ]
+}
