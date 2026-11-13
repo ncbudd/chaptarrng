@@ -81,7 +81,7 @@ namespace NzbDrone.Core.Parser
                 return explicitPack;
             }
 
-            var splitMatch = SplitPartRegex.Match(releaseTitle);
+            var splitMatch = SplitPartRegex.Match(StripQuotedFileNames(releaseTitle));
             if (splitMatch.Success)
             {
                 return new ReleasePackDetection
@@ -117,8 +117,17 @@ namespace NzbDrone.Core.Parser
                 return null;
             }
 
-            var match = SplitPartRegex.Match(releaseTitle);
+            var match = SplitPartRegex.Match(StripQuotedFileNames(releaseTitle));
             return match.Success ? ReadSplitPart(match) : null;
+        }
+
+        // Usenet subjects quote the name of one posted file, e.g. "... [2/5] - "Title - Part 02.mp3" yEnc".
+        // A "Part N" inside that quoted file name numbers a track of the book, not a piece of the release.
+        private static readonly Regex QuotedFileNameRegex = new Regex(@"""[^""]*\.[A-Za-z0-9]{2,4}""", RegexOptions.Compiled);
+
+        private static string StripQuotedFileNames(string releaseTitle)
+        {
+            return QuotedFileNameRegex.Replace(releaseTitle, " ");
         }
 
         private static SplitPart ReadSplitPart(Match match)
