@@ -1,8 +1,12 @@
 # Upstream source attribution
 
-This ledger publicly credits all 305 records captured by ChaptarrNG’s historical audit of [Chaptarr/chaptarr](https://github.com/Chaptarr/chaptarr).
+This ledger publicly credits all 305 records captured by ChaptarrNG’s historical audit of [Chaptarr/chaptarr](https://github.com/Chaptarr/chaptarr), plus supplemental attributions added as later adaptations are reviewed.
 
 The linked people contributed reports, suggestions, discussions, or code to the upstream project—not directly to this fork. Status labels preserve the fork audit’s implementation boundaries and do not imply endorsement or participation by upstream authors.
+
+## Additional shipped adaptations
+
+- [Upstream commit `2ed39e6c8c6ccdcae67707f6aaacdd821fb51e3f`](https://github.com/Chaptarr/chaptarr/commit/2ed39e6c8c6ccdcae67707f6aaacdd821fb51e3f), “Keep the parts of a split audiobook release,” by [@snapetech](https://github.com/snapetech) — the author contributed split-release part tracking to Chaptarr. ChaptarrNG independently adapted the parsing boundary to ignore a quoted posted filename when finding `Part N`; the author did not contribute to or endorse this fork.
 
 ## Implemented; final validation pending
 
