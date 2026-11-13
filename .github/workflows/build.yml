@@ -336,6 +336,7 @@ jobs:
     - name: Guard (.NET SDK) - workflow and container pins match global.json
       shell: bash
       run: >-
+        "$CHAPTARRNG_PYTHON" scripts/test_dotnet_sdk_pins.py &&
         "$CHAPTARRNG_PYTHON" scripts/check_dotnet_sdk_pins.py
 
     - name: Guard (version) - no decreases on main

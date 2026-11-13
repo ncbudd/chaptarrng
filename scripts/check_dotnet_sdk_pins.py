@@ -10,8 +10,15 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parent.parent
-DOCKER_SDK = re.compile(r"mcr\.microsoft\.com/dotnet/sdk:([^\s@]+)")
+DOCKER_SDK = re.compile(
+    r"mcr\.microsoft\.com/dotnet/sdk:([0-9]+\.[0-9]+\.[0-9]+)(?=[@:\-\s])"
+)
 WORKFLOW_SDK = re.compile(r"^\s*dotnet-version:\s*[\"']?([0-9]+\.[0-9]+\.[0-9]+)", re.MULTILINE)
+
+
+def docker_sdk_versions(text: str) -> list[str]:
+    """Return SDK versions from image tags, excluding distro tag suffixes."""
+    return DOCKER_SDK.findall(text)
 
 
 def main() -> int:
@@ -30,7 +37,7 @@ def main() -> int:
         path = ROOT / relative
         if path.name.startswith("Dockerfile"):
             text = path.read_text(encoding="utf-8")
-            docker_pins.extend((relative, version) for version in DOCKER_SDK.findall(text))
+            docker_pins.extend((relative, version) for version in docker_sdk_versions(text))
         if relative.startswith(".github/workflows/") and path.suffix in {".yml", ".yaml"}:
             text = path.read_text(encoding="utf-8")
             workflow_pins.extend((relative, version) for version in WORKFLOW_SDK.findall(text))
