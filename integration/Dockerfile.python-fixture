@@ -1,9 +1,22 @@
-FROM python:3.13.18-slim-trixie@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+FROM alpine:3.24.4@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf AS packages
 
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && rm -rf /var/lib/apt/lists/* \
-    && python -m pip install --no-cache-dir --upgrade \
-        msgpack==1.2.4 setuptools==84.2.1 urllib3==2.8.0
+RUN apk upgrade --no-cache \
+    && apk add --no-cache python3 py3-pip \
+    && python3 -m pip install --no-cache-dir --no-compile --no-deps \
+        --target /opt/chaptarr-python msgpack==1.2.4 urllib3==2.8.0
+
+FROM alpine:3.24.4@sha256:f59abe656b692d901e184be3445e084786602108599d2a51d229c0f5a48c71bf
+
+RUN apk upgrade --no-cache \
+    && apk add --no-cache python3
+
+COPY --from=packages /opt/chaptarr-python/msgpack /opt/chaptarr-python/msgpack
+COPY --from=packages /opt/chaptarr-python/msgpack-1.2.4.dist-info /opt/chaptarr-python/msgpack-1.2.4.dist-info
+COPY --from=packages /opt/chaptarr-python/urllib3 /opt/chaptarr-python/urllib3
+COPY --from=packages /opt/chaptarr-python/urllib3-2.8.0.dist-info /opt/chaptarr-python/urllib3-2.8.0.dist-info
+
+ENV PYTHONPATH="/opt/chaptarr-python"
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 CMD ["python", "-c", "import msgpack, urllib3"]
 
 USER 99:100

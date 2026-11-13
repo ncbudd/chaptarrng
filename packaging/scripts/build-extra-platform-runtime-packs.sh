@@ -6,8 +6,9 @@ readonly runtime_sdk="10.0.115"
 readonly aspnet_sdk="10.0.115"
 readonly app_sdk="${DOTNETVERSION:-10.0.404}"
 readonly cross_image="mcr.microsoft.com/dotnet-buildtools/prereqs:azurelinux-3.0-net10.0-cross-x86@sha256:ecc9c107cd33f8303cba2280eb1537f045acaa88fc0f00780ea6232d19e942b8"
-readonly freebsd_archive_url="https://github.com/Thefrank/dotnet-freebsd-crossbuild/releases/download/v10.0.113-amd64-freebsd-14/Private.SourceBuilt.Artifacts.10.0.113-servicing.26504.104.freebsd-x64.tar.gz"
-readonly freebsd_archive_sha256="03fc3a426811b10e85f1a50137e56c0027d4b39373c5ce62538ddb652b9ff443"
+readonly freebsd_vmr_tag="v10.0.115"
+readonly freebsd_vmr_commit="8e0f8ed2312954727f8919d7d1c2f78b483b4ee7"
+readonly freebsd_vmr_image="mcr.microsoft.com/dotnet-buildtools/prereqs:azurelinux-3.0-net10.0-cross-freebsd-14-amd64@sha256:4ca96ef731e1466924d62d0fb6d2649cfc117bd98faedede5879ba98530e219b"
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 work_root="${PLATFORM_RUNTIME_WORK_DIR:?Set PLATFORM_RUNTIME_WORK_DIR to a task-scoped scratch directory}"
@@ -15,8 +16,9 @@ output_root="${PLATFORM_RUNTIME_PACKS_OUTPUT:?Set PLATFORM_RUNTIME_PACKS_OUTPUT 
 dotnet_root="${DOTNET_ROOT:-$(dirname "$(readlink -f "$(command -v dotnet)")")}"
 runtime_repo="$work_root/runtime"
 aspnet_repo="$work_root/aspnetcore"
-freebsd_archive="$work_root/freebsd-source-built.tar.gz"
+freebsd_vmr_repo="$work_root/dotnet-vmr"
 runtime_shipping="$runtime_repo/artifacts/packages/Release/Shipping"
+freebsd_vmr_shipping="$freebsd_vmr_repo/artifacts/packages/Release/Shipping"
 
 die() {
     echo "$*" >&2
@@ -89,6 +91,34 @@ clone_sources() {
     git clone --depth 1 --branch "$runtime_tag" https://github.com/dotnet/runtime.git "$runtime_repo"
     git clone --depth 1 --branch "$runtime_tag" --recurse-submodules https://github.com/dotnet/aspnetcore.git "$aspnet_repo"
     git -C "$aspnet_repo" submodule update --init --depth 1
+}
+
+build_freebsd_runtime_packs() {
+    local official_build_id
+    official_build_id="$(get_official_build_id)"
+
+    git clone --depth 1 --branch "$freebsd_vmr_tag" https://github.com/dotnet/dotnet.git "$freebsd_vmr_repo"
+    local actual_commit
+    actual_commit="$(git -C "$freebsd_vmr_repo" rev-parse HEAD)"
+    [ "$actual_commit" = "$freebsd_vmr_commit" ] || die "FreeBSD VMR tag resolved to unexpected commit $actual_commit"
+
+    docker run --rm --init \
+        --mount "type=bind,src=$freebsd_vmr_repo,dst=/vmr" \
+        --workdir /vmr \
+        "$freebsd_vmr_image" \
+        bash -lc "ROOTFS_DIR=/crossrootfs/x64 ./build.sh --prep --configuration Release --target-os freebsd --target-arch x64 --target-rid freebsd-x64 --source-build --clean-while-building -p:PortableBuild=true -p:PortableTargetRid=freebsd-x64 -p:CrossBuild=true -p:SkipUsingCrossgen=true -p:BundleCrossgen2=true --ci --official-build-id $official_build_id"
+
+    local package
+    for package in \
+        runtime/Microsoft.NETCore.App.Host.freebsd-x64.10.0.15.nupkg \
+        runtime/Microsoft.NETCore.App.Runtime.freebsd-x64.10.0.15.nupkg \
+        aspnetcore/Microsoft.AspNetCore.App.Runtime.freebsd-x64.10.0.15.nupkg; do
+        [ -s "$freebsd_vmr_shipping/$package" ] || die "The pinned .NET VMR source build did not produce $package"
+    done
+
+    local runtime_archive
+    runtime_archive="$(find "$freebsd_vmr_repo/artifacts/assets/Release/Runtime" -type f -name 'dotnet-runtime-10.0.15-freebsd-x64.tar.gz' -print -quit)"
+    [ -n "$runtime_archive" ] && [ -s "$runtime_archive" ] || die "The pinned .NET VMR source build did not produce the FreeBSD .NET 10.0.15 runtime archive"
 }
 
 patch_runtime_sources() {
@@ -314,23 +344,8 @@ verify_sha256() {
     fi
 }
 
-verify_current_freebsd_archive() {
-    curl --fail --location --retry 3 --silent --show-error --output "$freebsd_archive" "$freebsd_archive_url"
-    verify_sha256 "$freebsd_archive_sha256" "$freebsd_archive"
-    for package in \
-        Microsoft.NETCore.App.Host.freebsd-x64.10.0.15.nupkg \
-        Microsoft.NETCore.App.Runtime.freebsd-x64.10.0.15.nupkg \
-        Microsoft.AspNetCore.App.Runtime.freebsd-x64.10.0.15.nupkg \
-        dotnet-runtime-10.0.15-freebsd-x64.tar.gz; do
-        if ! tar -tzf "$freebsd_archive" | awk -F/ -v expected="$package" '$NF == expected { found = 1 } END { exit !found }'; then
-            die "The pinned FreeBSD source-built archive does not contain patched .NET 10.0.15 artifact $package; do not build or publish a FreeBSD candidate until a verified current archive is available."
-        fi
-    done
-}
-
 collect_platform_artifacts() {
     local runtime_archive
-    local freebsd_runtime_path
     local freebsd_runtime_archive
 
     mkdir -p "$output_root/packages" "$output_root/runtimes" "$output_root/sdk/sdk" "$output_root/sdk/packs"
@@ -351,23 +366,10 @@ collect_platform_artifacts() {
     [ -n "$runtime_archive" ] || die "The .NET runtime build did not produce the Linux x86 runtime archive"
     cp "$runtime_archive" "$output_root/runtimes/linux-x86-runtime.tar.gz"
 
-    tar -xzf "$freebsd_archive" -C "$output_root/packages" \
-        Microsoft.NETCore.App.Host.freebsd-x64.10.0.15.nupkg \
-        Microsoft.NETCore.App.Runtime.freebsd-x64.10.0.15.nupkg \
-        Microsoft.AspNetCore.App.Runtime.freebsd-x64.10.0.15.nupkg
-    freebsd_runtime_path="$(
-      tar -tzf "$freebsd_archive" |
-        awk '
-          /^assets\/Release\/Runtime\/[^/]+\/dotnet-runtime-10\.0\.15-freebsd-x64\.tar\.gz$/ {
-            if (!found) first = $0
-            found = 1
-          }
-          END { if (found) print first }
-        '
-    )"
-    [ -n "$freebsd_runtime_path" ] || die "Pinned FreeBSD archive is missing its .NET runtime tarball"
-    tar -xzf "$freebsd_archive" -C "$work_root" "$freebsd_runtime_path"
-    freebsd_runtime_archive="$work_root/$freebsd_runtime_path"
+    cp "$freebsd_vmr_shipping/runtime/Microsoft.NETCore.App.Host.freebsd-x64.10.0.15.nupkg" "$output_root/packages/"
+    cp "$freebsd_vmr_shipping/runtime/Microsoft.NETCore.App.Runtime.freebsd-x64.10.0.15.nupkg" "$output_root/packages/"
+    cp "$freebsd_vmr_shipping/aspnetcore/Microsoft.AspNetCore.App.Runtime.freebsd-x64.10.0.15.nupkg" "$output_root/packages/"
+    freebsd_runtime_archive="$(find "$freebsd_vmr_repo/artifacts/assets/Release/Runtime" -type f -name 'dotnet-runtime-10.0.15-freebsd-x64.tar.gz' -print -quit)"
     cp "$freebsd_runtime_archive" "$output_root/runtimes/freebsd-x64-runtime.tar.gz"
 
     for rid in linux-x86 freebsd-x64; do
@@ -386,8 +388,13 @@ collect_platform_artifacts() {
         cp -a "$dotnet_root/sdk-manifests/10.0.400" "$output_root/sdk/sdk-manifests/"
     fi
 
-    python3 -c 'from pathlib import Path; import sys; Path(sys.argv[1]).unlink(missing_ok=True)' "$freebsd_archive"
-    printf 'Platform runtime packs built from .NET %s and ASP.NET Core %s.\n' "$runtime_tag" "$runtime_tag" > "$output_root/BUILD-INFO.txt"
+    {
+        printf 'Platform runtime packs built from .NET %s and ASP.NET Core %s.\n' "$runtime_tag" "$runtime_tag"
+        printf 'FreeBSD VMR source: https://github.com/dotnet/dotnet/tree/%s (%s)\n' "$freebsd_vmr_tag" "$freebsd_vmr_commit"
+        printf 'FreeBSD source-build image: %s\n' "$freebsd_vmr_image"
+        printf 'FreeBSD official build ID: %s\n' "$(get_official_build_id)"
+    } > "$output_root/BUILD-INFO.txt"
+    (cd "$output_root" && find packages runtimes -type f -print0 | sort -z | xargs -0 sha256sum) > "$output_root/SHA256SUMS"
     cp "$repo_root/packaging/scripts/install-extra-platform-runtime-packs.sh" "$output_root/"
 }
 
@@ -400,10 +407,10 @@ command -v python3 >/dev/null || die "Python 3 is required to patch the pinned .
 command -v unzip >/dev/null || die "unzip is required to assemble the ASP.NET shared runtime"
 
 mkdir -p "$work_root"
-verify_current_freebsd_archive
 require_sdk "$runtime_sdk"
 require_sdk "$aspnet_sdk"
 require_sdk "$app_sdk"
+build_freebsd_runtime_packs
 clone_sources
 patch_sdk_runtime_ids "$runtime_sdk"
 patch_sdk_runtime_ids "$app_sdk"

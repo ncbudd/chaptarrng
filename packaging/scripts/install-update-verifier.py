@@ -1,62 +1,157 @@
 #!/usr/bin/env python3
-"""Bundle a checksum-pinned GitHub CLI for offline Sigstore bundle verification."""
+"""Build a checksum-pinned GitHub CLI for Sigstore bundle verification."""
 import hashlib
 import io
 import json
-from pathlib import Path
+import os
+from pathlib import Path, PurePosixPath
+import re
+import shutil
+import subprocess
 import sys
 import tarfile
+import tempfile
 import urllib.request
-import zipfile
 
 
-def install(rid, output):
-    platforms = {
-        "linux-x64": "linux_amd64", "linux-arm64": "linux_arm64",
-        "linux-arm": "linux_armv6", "linux-x86": "linux_386",
-        "linux-musl-x64": "linux_amd64", "linux-musl-arm64": "linux_arm64",
-        "osx-x64": "macOS_amd64", "osx-arm64": "macOS_arm64",
-        "win-x64": "windows_amd64", "win-x86": "windows_386",
+MAX_SOURCE_ARCHIVE_SIZE = 128 * 1024 * 1024
+
+
+def read_manifest():
+    path = Path(__file__).resolve().parents[2] / "security/gh-verifier-assets.json"
+    manifest = json.loads(path.read_text())
+    required = (
+        "version", "source_commit", "source_sha256", "go_version",
+        "golang_x_net", "golang_x_net_sum",
+    )
+    if any(not manifest.get(key) for key in required):
+        raise ValueError("GitHub CLI verifier source manifest is incomplete")
+    return manifest
+
+
+def download_source(manifest):
+    commit = manifest["source_commit"]
+    if not re.fullmatch(r"[0-9a-f]{40}", commit):
+        raise ValueError("GitHub CLI source commit is invalid")
+    url = f"https://github.com/cli/cli/archive/{commit}.tar.gz"
+    with urllib.request.urlopen(url, timeout=60) as response:
+        payload = response.read(MAX_SOURCE_ARCHIVE_SIZE + 1)
+    if len(payload) > MAX_SOURCE_ARCHIVE_SIZE:
+        raise ValueError("GitHub CLI source archive exceeds the size limit")
+    if hashlib.sha256(payload).hexdigest() != manifest["source_sha256"]:
+        raise ValueError("GitHub CLI source archive failed its pinned SHA-256 check")
+    return payload
+
+
+def extract_source(payload, destination, commit):
+    expected_root = f"cli-{commit}"
+    with tarfile.open(fileobj=io.BytesIO(payload), mode="r:gz") as archive:
+        members = archive.getmembers()
+        if not members:
+            raise ValueError("GitHub CLI source archive is empty")
+        for member in members:
+            path = PurePosixPath(member.name)
+            if path.is_absolute() or ".." in path.parts or not path.parts or path.parts[0] != expected_root:
+                raise ValueError("GitHub CLI source archive contains an unsafe path")
+            if not (member.isdir() or member.isfile()):
+                raise ValueError("GitHub CLI source archive contains a non-regular entry")
+        archive.extractall(destination, members=members)
+    source = Path(destination) / expected_root
+    if not (source / "go.mod").is_file() or not (source / "LICENSE").is_file():
+        raise ValueError("GitHub CLI source archive is missing required files")
+    return source
+
+
+def require_go(version):
+    go = shutil.which("go")
+    if not go:
+        raise RuntimeError(f"Go {version} is required to build the pinned update verifier")
+    output = subprocess.check_output([go, "version"], text=True).strip()
+    if not re.search(r"\bgo" + re.escape(version) + r"(?:\b|-)", output):
+        raise RuntimeError(f"Expected Go {version}; found {output}")
+    return go, output
+
+
+def build(rid, output):
+    targets = {
+        "linux-x64": ("linux", "amd64", ""),
+        "linux-arm64": ("linux", "arm64", ""),
+        "linux-arm": ("linux", "arm", "6"),
+        "linux-x86": ("linux", "386", ""),
+        "linux-musl-x64": ("linux", "amd64", ""),
+        "linux-musl-arm64": ("linux", "arm64", ""),
+        "osx-x64": ("darwin", "amd64", ""),
+        "osx-arm64": ("darwin", "arm64", ""),
+        "win-x64": ("windows", "amd64", ""),
+        "win-x86": ("windows", "386", ""),
+        "win-arm64": ("windows", "arm64", ""),
     }
     if rid == "freebsd-x64":
-        # Upstream ships no FreeBSD binary. The native port supplies gh; verification
-        # fails closed if it is missing or too old. Never run a Linux binary here.
         print("FreeBSD automatic updates require the native gh package with attestation support.")
         return
-    platform = platforms[rid]
-    manifest = json.loads((Path(__file__).resolve().parents[2] / "security/gh-verifier-assets.json").read_text())
-    suffix = "zip" if platform.startswith(("windows", "macOS")) else "tar.gz"
-    asset = f"gh_{manifest['version']}_{platform}.{suffix}"
-    url = f"https://github.com/cli/cli/releases/download/v{manifest['version']}/{asset}"
-    # nosemgrep: python.lang.security.audit.dynamic-urllib-use-detected.dynamic-urllib-use-detected -- The HTTPS origin is fixed to cli/cli; the platform is allowlisted and the version/hash come from a committed manifest, not application input.
-    with urllib.request.urlopen(url, timeout=60) as response:
-        payload = response.read(128 * 1024 * 1024 + 1)
-    if len(payload) > 128 * 1024 * 1024 or hashlib.sha256(payload).hexdigest() != manifest["sha256"][asset]:
-        raise ValueError("GitHub CLI archive failed its pinned size/hash check")
-    binary = "gh.exe" if platform.startswith("windows") else "gh"
-    # Read only the expected regular file, never extract archive paths onto disk.
-    with (zipfile.ZipFile(io.BytesIO(payload)) if suffix == "zip" else tarfile.open(fileobj=io.BytesIO(payload), mode="r:gz")) as archive:
-        names = archive.namelist() if suffix == "zip" else archive.getnames()
-        matches = [name for name in names if name.endswith("/bin/" + binary) or name == "bin/" + binary]
-        if len(matches) != 1:
-            raise ValueError("GitHub CLI archive must contain exactly one verifier")
-        if suffix == "zip":
-            data = archive.read(matches[0])
-        else:
-            member = archive.getmember(matches[0])
-            if not member.isfile():
-                raise ValueError("Verifier is not a regular file")
-            data = archive.extractfile(member).read()
-        license_names = [name for name in names if name.rsplit("/", 1)[-1] == "LICENSE"]
-        if len(license_names) != 1:
-            raise ValueError("GitHub CLI license is missing")
-        license_data = archive.read(license_names[0]) if suffix == "zip" else archive.extractfile(license_names[0]).read()
+    if rid not in targets:
+        raise ValueError(f"Unsupported GitHub CLI verifier RID: {rid}")
+
+    manifest = read_manifest()
+    go, go_info = require_go(manifest["go_version"])
+    payload = download_source(manifest)
+    goos, goarch, goarm = targets[rid]
+    filename = "gh.exe" if goos == "windows" else "gh"
     destination = Path(output)
     destination.mkdir(parents=True, exist_ok=True)
-    (destination / binary).write_bytes(data)
-    (destination / binary).chmod(0o755)
-    (destination / "GitHub-CLI-LICENSE").write_bytes(license_data)
+
+    with tempfile.TemporaryDirectory(prefix="chaptarrng-gh-verifier-") as work:
+        source = extract_source(payload, work, manifest["source_commit"])
+        subprocess.run(
+            [go, "get", f"golang.org/x/net@{manifest['golang_x_net']}"],
+            cwd=source,
+            check=True,
+        )
+        expected_sum = f"golang.org/x/net {manifest['golang_x_net']} h1:{manifest['golang_x_net_sum']}"
+        if expected_sum not in (source / "go.sum").read_text(encoding="utf-8").splitlines():
+            raise RuntimeError("The patched GitHub CLI dependency failed its pinned Go checksum check")
+        selected = subprocess.check_output(
+            [go, "list", "-m", "golang.org/x/net"], cwd=source, text=True
+        ).strip().split()
+        if len(selected) != 2 or selected[1] != manifest["golang_x_net"]:
+            raise RuntimeError("The patched GitHub CLI dependency graph did not select the pinned golang.org/x/net")
+
+        binary = Path(work) / filename
+        env = os.environ.copy()
+        env.update({"GOOS": goos, "GOARCH": goarch, "CGO_ENABLED": "0", "GOTOOLCHAIN": "local"})
+        if goarm:
+            env["GOARM"] = goarm
+        else:
+            env.pop("GOARM", None)
+        version = manifest["version"]
+        ldflags = (
+            f"-X github.com/cli/cli/v2/internal/build.Version={version} "
+            "-X github.com/cli/cli/v2/internal/build.Date=2026-10-26"
+        )
+        subprocess.run(
+            [go, "build", "-trimpath", "-buildvcs=false", "-ldflags", ldflags, "-o", str(binary), "./cmd/gh"],
+            cwd=source,
+            env=env,
+            check=True,
+        )
+        shutil.copyfile(binary, destination / filename)
+        (destination / filename).chmod(0o755)
+        shutil.copyfile(source / "LICENSE", destination / "GitHub-CLI-LICENSE")
+
+    binary_hash = hashlib.sha256((destination / filename).read_bytes()).hexdigest()
+    build_info = (
+        f"GitHub CLI version: {manifest['version']}\n"
+        f"Source commit: {manifest['source_commit']}\n"
+        f"Source archive SHA-256: {manifest['source_sha256']}\n"
+        f"Go toolchain: {go_info}\n"
+        f"golang.org/x/net: {manifest['golang_x_net']}\n"
+        f"golang.org/x/net checksum: h1:{manifest['golang_x_net_sum']}\n"
+        f"Target: {goos}/{goarch}{('/v' + goarm) if goarm else ''}\n"
+        f"Binary SHA-256: {binary_hash}\n"
+    )
+    (destination / "GitHub-CLI-BUILD-INFO.txt").write_text(build_info, encoding="utf-8")
+    print(f"Built patched GitHub CLI {manifest['version']} for {rid} ({binary_hash})")
 
 
 if __name__ == "__main__":
-    install(*sys.argv[1:])
+    build(*sys.argv[1:])

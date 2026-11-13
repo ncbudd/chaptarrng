@@ -18,6 +18,8 @@ sixlabors.lic
 
 node_modules
 **/node_modules
+**/bin
+**/obj
 
 _output
 _tests

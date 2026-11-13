@@ -1,3 +1,12 @@
+x-node-fixture: &node-fixture
+  image: chaptarrng-node-fixture:24.22.3
+  build:
+    context: ..
+    dockerfile: integration/Dockerfile.node-fixture
+    args:
+      NODE_VERSION: "24.22.3"
+      NODE_SHA256: 061ec3e3062115705b56b51fa9cc330ab50d34b6969387d4e4b1a50c6809acc2
+
 services:
   prepare-books-root:
     image: busybox:1.37.0@sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec
@@ -34,7 +43,7 @@ services:
     command: ["python", "/fixture/prepare.py"]
 
   metadata-mock:
-    image: node:24.22.3-bookworm-slim@sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54
+    <<: *node-fixture
     command:
       - node
       - -e
@@ -76,7 +85,7 @@ services:
       - chaptarrng-smoke-books:/library
 
   smoke:
-    image: node:24.22.3-bookworm-slim@sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54
+    <<: *node-fixture
     working_dir: /seerrng
     depends_on:
       - chaptarrng

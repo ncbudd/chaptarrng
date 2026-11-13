@@ -196,11 +196,12 @@ Keep the BookshelfNG installation in service until a replacement channel is
 validated or that platform is explicitly retired.
 
 As of 2026-11-12, standalone runtime pins have moved to .NET 10.0.15 and SDK
-10.0.404 to include the current security servicing release. The latest pinned
-FreeBSD source-built archive is v10.0.113, which predates .NET 10.0.15; the
-pack builder now rejects it. Do not build or publish a FreeBSD archive until a
-verified .NET 10.0.15 source-built pack is available and native installed
-acceptance passes.
+10.0.404 to include the current security servicing release. The FreeBSD packs
+are source-built from the pinned .NET VMR v10.0.115 commit and digest-pinned
+FreeBSD cross-build image in
+`packaging/scripts/build-extra-platform-runtime-packs.sh`; the obsolete
+v10.0.113 archive is no longer consumed. Native installed acceptance is still
+required before publishing a FreeBSD archive.
 
 BookshelfNG's built-in updater cannot discover the first ChaptarrNG release.
 Manual macOS and FreeBSD installs therefore need a one-time download of the

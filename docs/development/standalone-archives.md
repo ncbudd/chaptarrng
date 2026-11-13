@@ -20,14 +20,18 @@ assets can be considered for a future release.
 ## Build the custom runtime packs
 
 The Linux x86 and FreeBSD build uses Docker, .NET SDK `10.0.115` for the runtime
-and ASP.NET source builds, SDK `10.0.404` for ChaptarrNG, the pinned `v10.0.15`
-.NET source, and a FreeBSD runtime archive verified against its checked-in
-SHA-256. The latest pinned FreeBSD archive is `v10.0.113`, released before
-.NET `10.0.15`; the builder rejects it because it lacks the patched runtime
-packages. FreeBSD archive builds remain blocked until a verified `.NET 10.0.15`
-source-built archive is available and native installed acceptance passes. Do
-not reuse older FreeBSD packs. Use two unique, absolute, task-scoped directories
-that do not already exist:
+and ASP.NET source builds, SDK `10.0.404` for ChaptarrNG, and the pinned
+`v10.0.15` runtime and ASP.NET source. FreeBSD packs are built from the .NET VMR
+tag `v10.0.115` at commit
+`8e0f8ed2312954727f8919d7d1c2f78b483b4ee7` in the pinned Azure Linux 3.0
+FreeBSD cross-build image recorded in
+`packaging/scripts/build-extra-platform-runtime-packs.sh`. The script verifies
+the tag commit and required `.NET 10.0.15` packages before creating the output;
+it does not consume the obsolete `v10.0.113` archive. The output contains a
+source and image record plus SHA-256 values for each package and runtime
+archive. Native installed acceptance is still required before publishing a
+FreeBSD archive. Use two unique, absolute, task-scoped directories that do not
+already exist:
 
 ```sh
 DOTNETVERSION=10.0.404 \
@@ -36,10 +40,11 @@ PLATFORM_RUNTIME_PACKS_OUTPUT=/tmp/chaptarrng-platform-runtime-packs-task-id \
 bash packaging/scripts/build-extra-platform-runtime-packs.sh
 ```
 
-The work directory contains the cloned .NET source trees and build outputs.
-The output directory contains runtime packages, SDK metadata, and the install
-helper. Keep those paths separate from user data and remove only the exact
-task-scoped paths after their consumers finish.
+The work directory contains the pinned VMR checkout, cloned .NET source trees,
+and build outputs. The output directory contains runtime packages, SDK
+metadata, source provenance, SHA-256 values, and the install helper. Keep those
+paths separate from user data and remove only the exact task-scoped paths after
+their consumers finish.
 
 The SDK's reference packs can have a newer servicing version than the pinned
 runtime sources. The pack builder copies the SDK's installed reference-pack

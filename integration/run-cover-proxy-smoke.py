@@ -26,8 +26,10 @@ assert (candidate / 'Chaptarr').is_file()
 root = args.output.resolve()
 assert not root.exists()
 fixtures = Path(__file__).resolve().parent / 'acquisition'
+repo = Path(__file__).resolve().parents[1]
 prefix = 'chaptarr-cover-' + uuid.uuid4().hex[:12]
 owned = []
+node_image = prefix + '-node-fixture'
 base = 'docker.io/snapetech/bookshelfng@sha256:40a53ac528b6789ca78686b4303bb6c436cd191cd813f915ea171d72b47a8c38'
 seerr = 'ghcr.io/snapetech-org/seerrng@sha256:e433d13a2c50fdc96948361f3c090ed9bb12e8788fc6741337737c973e956aff'
 
@@ -48,7 +50,11 @@ with sqlite3.connect(root / 'config/readarr.db') as connection:
     connection.execute('UPDATE Editions SET Images=?,Monitored=1 WHERE Id=41', (json.dumps([{'CoverType': 6, 'Url': url}]),))
     connection.execute('UPDATE AuthorMetadata SET Images=?', (json.dumps([{'CoverType': 1, 'Url': url}]),))
 shutil.copyfile(fixtures / 'provider.mjs', root / 'provider/server.mjs')
-for image in [base, seerr, 'node:22.23.5-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a']:
+command(['docker', 'build', '--file', repo / 'integration/Dockerfile.node-fixture',
+         '--build-arg', 'NODE_VERSION=22.23.5',
+         '--build-arg', 'NODE_SHA256=c54118104acc524633b5abe106bbf44a53126ec8b4e5fa105cb92b5d7de8a1a1',
+         '--tag', node_image, repo], 'node-fixture-build.log', 300)
+for image in [base, seerr]:
     if subprocess.run(['docker', 'image', 'inspect', image], capture_output=True).returncode:
         command(['docker', 'pull', image], 'image-pull.log', 300)
 security = ['--user', f'{os.getuid()}:{os.getgid()}', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--memory', '2g', '--cpus', '2']
@@ -63,7 +69,7 @@ try:
         '-e', 'CHAPTARR__AUTH__SEERRAPIKEY=synthetic-e2e-restricted-key-20261105',
         '-v', f'{candidate}:/candidate:ro', '-v', f'{root}/config:/config', '-v', f'{root}/library:/library',
         '--entrypoint', '/candidate/Chaptarr', base, '-nobrowser', '-data=/config'])
-    start(prefix + '-provider', ['--network', 'container:' + prefix + '-app', '-v', f'{root}:/fixture', 'node:22.23.5-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a', 'node', '/fixture/provider/server.mjs'])
+    start(prefix + '-provider', ['--network', 'container:' + prefix + '-app', '-v', f'{root}:/fixture', node_image, 'node', '/fixture/provider/server.mjs'])
     owned.append(prefix + '-seerr')
     command(['docker', 'run', '--rm', '--name', prefix + '-seerr', '--network', 'container:' + prefix + '-app', *security,
         '-v', f'{fixtures}:/checks:ro', '-v', f'{root}:/fixture:ro', '--entrypoint', 'node', seerr, '/checks/verify-cover.mjs'], 'cover-results.log', 300)
@@ -76,3 +82,4 @@ finally:
         (root / (name + '.log')).write_text(result.stdout + result.stderr)
         subprocess.run(['docker', 'stop', '-t', '10', name], capture_output=True)
         subprocess.run(['docker', 'rm', name], capture_output=True)
+    subprocess.run(['docker', 'image', 'rm', node_image], capture_output=True)

@@ -1,0 +1,16 @@
+ARG NODE_VERSION=24.22.3
+ARG NODE_SHA256=061ec3e3062115705b56b51fa9cc330ab50d34b6969387d4e4b1a50c6809acc2
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0.404@sha256:fe0fd4e93bd2fbb47c883b7a6369e5c8d3db8bf01cdc5981f6ee35fbdf3ff4fb
+ARG NODE_VERSION
+ARG NODE_SHA256
+RUN set -eux; \
+    curl --fail --location --silent --show-error "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz" -o /tmp/node.tar.gz; \
+    echo "${NODE_SHA256}  /tmp/node.tar.gz" | sha256sum -c -; \
+    mkdir -p /tmp/node; \
+    tar -xzf /tmp/node.tar.gz -C /tmp/node "node-v${NODE_VERSION}-linux-x64/bin/node"; \
+    install -m 0755 "/tmp/node/node-v${NODE_VERSION}-linux-x64/bin/node" /usr/local/bin/node; \
+    rm -rf /tmp/node /tmp/node.tar.gz; \
+    node --version
+
+CMD ["node"]
