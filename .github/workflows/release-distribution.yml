@@ -446,7 +446,7 @@ jobs:
       env:
         DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet
       with:
-        dotnet-version: 10.0.403
+        dotnet-version: 10.0.404
 
     - name: Download and verify the release archive
       env:

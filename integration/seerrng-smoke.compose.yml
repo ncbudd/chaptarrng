@@ -1,14 +1,18 @@
 services:
   prepare-books-root:
-    image: busybox:1.37.0
+    image: busybox:1.37.0@sha256:a7dbc319b1438115a207e11930dc4bb3e643dcb3ec0bdd694bb36cd8fad289ec
     user: "0:0"
     volumes:
       - chaptarrng-smoke-books:/books
       - chaptarrng-smoke-books:/library
-    command: ["sh", "-ec", "chown 99:100 /books /library && chmod 0775 /books /library"]
+      - chaptarrng-smoke-config:/config
+    command: ["sh", "-ec", "chown 99:100 /books /library /config && chmod 0775 /books /library /config"]
 
   prepare-bookshelf-source:
-    image: python:3.13-slim
+    image: chaptarrng-seerrng-smoke-python:local
+    build:
+      context: ..
+      dockerfile: integration/Dockerfile.python-fixture
     depends_on:
       prepare-books-root:
         condition: service_completed_successfully
@@ -30,7 +34,7 @@ services:
     command: ["python", "/fixture/prepare.py"]
 
   metadata-mock:
-    image: node:24.22.1-bookworm-slim
+    image: node:24.22.3-bookworm-slim@sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54
     command:
       - node
       - -e
@@ -72,7 +76,7 @@ services:
       - chaptarrng-smoke-books:/library
 
   smoke:
-    image: node:24.22.1-bookworm-slim
+    image: node:24.22.3-bookworm-slim@sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54
     working_dir: /seerrng
     depends_on:
       - chaptarrng

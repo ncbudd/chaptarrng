@@ -5,15 +5,16 @@
 
 ###### node stage ######
 # Use a pinned Node image instead of curl|bash installers.
-FROM --platform=$BUILDPLATFORM node:26.12.1-bookworm-slim@sha256:28147155d47dc31abe0a46e0d12b59b2fb3d0a2dcc5dc65fce76a074180b16fe AS node
-RUN npm install -g yarn@1.22.22 --force
+FROM --platform=$BUILDPLATFORM node:26.13.1-bookworm-slim@sha256:5df79989ed685e09f0a98019db4cebfb22fb9df1a53c0161664a011f7ff6b0f1 AS node
+RUN npm install -g npm@12.2.2 yarn@1.22.22 --force
 
 ###### browser stage ######
 # Keep an arm/v7-compatible Node release for cross-platform Playwright assets.
-FROM --platform=$BUILDPLATFORM node:26.12.1-bookworm-slim@sha256:28147155d47dc31abe0a46e0d12b59b2fb3d0a2dcc5dc65fce76a074180b16fe AS browser
+FROM --platform=$BUILDPLATFORM node:26.13.1-bookworm-slim@sha256:5df79989ed685e09f0a98019db4cebfb22fb9df1a53c0161664a011f7ff6b0f1 AS browser
 ARG TARGETARCH
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
-RUN mkdir -p "$PLAYWRIGHT_BROWSERS_PATH"; \
+RUN npm install -g npm@12.2.2 --force; \
+    mkdir -p "$PLAYWRIGHT_BROWSERS_PATH"; \
     case "$TARGETARCH" in \
         amd64) PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64 npx --yes playwright@1.64.1 install --no-shell chromium ;; \
         arm64) PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-arm64 npx --yes playwright@1.64.1 install --no-shell chromium ;; \
@@ -26,7 +27,7 @@ FROM --platform=$TARGETPLATFORM sandreas/mp4v2:2.1.1@sha256:c186cccc63b69a428be6
 
 ###### deps stage ######
 # Always build on the native architecture for speed
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0.403@sha256:de4fe90a98845d75910b9769662465c84de1a934665c431279d1382b2bddc02b AS deps
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0.404@sha256:fe0fd4e93bd2fbb47c883b7a6369e5c8d3db8bf01cdc5981f6ee35fbdf3ff4fb AS deps
 WORKDIR /src
 
 # Copy Node + Yarn from the official Node image (avoids curl|bash installers).
@@ -80,10 +81,10 @@ RUN mkdir -p /app/UI && cp -r _output/UI/* /app/UI/
 RUN test -s /app/UI/index.html
 
 ###### runtime stage ######
-# Pin the cross-platform runtime to the patch shipped with SDK 10.0.403.
-FROM --platform=$TARGETPLATFORM mcr.microsoft.com/dotnet/aspnet:10.0.14-noble@sha256:de0ee358cdd672f7017a003bed21e9ac9ed48a27c922a59b18175b6e82fa7fee AS chaptarrng-standard
-RUN dotnet --list-runtimes | grep -Fq 'Microsoft.NETCore.App 10.0.14' \
-    && dotnet --list-runtimes | grep -Fq 'Microsoft.AspNetCore.App 10.0.14'
+# Pin the cross-platform runtime to the patch shipped with SDK 10.0.404.
+FROM --platform=$TARGETPLATFORM mcr.microsoft.com/dotnet/aspnet:10.0.15-noble@sha256:bfd912c83295ce66d4b706ebb8541b9f14259b0e76fbb88b2751f58ce2399d2e AS chaptarrng-standard
+RUN dotnet --list-runtimes | grep -Fq 'Microsoft.NETCore.App 10.0.15' \
+    && dotnet --list-runtimes | grep -Fq 'Microsoft.AspNetCore.App 10.0.15'
 
 # Copy Playwright Chromium from the browser stage
 COPY --from=browser /ms-playwright /ms-playwright

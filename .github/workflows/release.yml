@@ -173,7 +173,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       with:
-        node-version: 26.12.1
+        node-version: 26.13.1
         package-manager-cache: false
 
     - name: Install git-cliff
@@ -434,13 +434,12 @@ jobs:
         DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet
       with:
         dotnet-version: |
-          10.0.110
-          10.0.111
-          10.0.403
+          10.0.115
+          10.0.404
 
     - name: Build pinned extra-platform runtime packs
       env:
-        DOTNETVERSION: 10.0.403
+        DOTNETVERSION: 10.0.404
         DOTNET_ROOT: ${{ runner.temp }}/dotnet
         PLATFORM_RUNTIME_WORK_DIR: ${{ runner.temp }}/chaptarrng-platform-runtime-work
         PLATFORM_RUNTIME_PACKS_OUTPUT: ${{ runner.temp }}/chaptarrng-platform-runtime-packs
@@ -491,12 +490,12 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       with:
-        node-version: 26.12.1
+        node-version: 26.13.1
         package-manager-cache: false
 
     - name: Build frontend
       run: |
-        npm install --global yarn@1.22.22
+        npm install --global npm@12.2.2 yarn@1.22.22
         yarn install --frozen-lockfile
         yarn build
 
@@ -505,7 +504,7 @@ jobs:
       env:
         DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet
       with:
-        dotnet-version: 10.0.403
+        dotnet-version: 10.0.404
 
     - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
       if: ${{ matrix.rid == 'linux-x86' || matrix.rid == 'freebsd-x64' }}
@@ -517,7 +516,7 @@ jobs:
       env:
         CUSTOM_RUNTIME_PACKS_DIR: ${{ runner.temp }}/platform-runtime-packs/packages
         DOTNET_ROOT: ${{ runner.temp }}/dotnet
-        DOTNETVERSION: 10.0.403
+        DOTNETVERSION: 10.0.404
         VERSION: ${{ needs.release.outputs.version }}
         RID: ${{ matrix.rid }}
       run: bash packaging/scripts/build-standalone.sh "$VERSION" "$RID" "$RUNNER_TEMP/release-assets"
@@ -833,7 +832,7 @@ jobs:
       env:
         DOTNET_INSTALL_DIR: ${{ runner.temp }}/dotnet
       with:
-        dotnet-version: 10.0.403
+        dotnet-version: 10.0.404
 
     - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
       with:
@@ -1251,7 +1250,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
       with:
-        node-version: 26.12.1
+        node-version: 26.13.1
         package-manager-cache: false
 
     - name: Check Discord destination

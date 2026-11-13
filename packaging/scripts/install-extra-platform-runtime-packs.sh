@@ -4,7 +4,7 @@ set -euo pipefail
 rid="${1:?Usage: install-extra-platform-runtime-packs.sh <linux-x86|freebsd-x64> <artifact-root> [dotnet-root]}"
 artifact_root="${2:?Usage: install-extra-platform-runtime-packs.sh <linux-x86|freebsd-x64> <artifact-root> [dotnet-root]}"
 dotnet_root="${3:-${DOTNET_ROOT:-/opt/dotnet}}"
-sdk_version="${DOTNETVERSION:-10.0.403}"
+sdk_version="${DOTNETVERSION:-10.0.404}"
 
 case "$rid" in
     linux-x86|freebsd-x64) ;;

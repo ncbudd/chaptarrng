@@ -27,9 +27,9 @@ if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
     exit 2
   }
   for package in \
-    "Microsoft.NETCore.App.Host.${rid}.10.0.12.nupkg" \
-    "Microsoft.NETCore.App.Runtime.${rid}.10.0.12.nupkg" \
-    "Microsoft.AspNetCore.App.Runtime.${rid}.10.0.12.nupkg"; do
+    "Microsoft.NETCore.App.Host.${rid}.10.0.15.nupkg" \
+    "Microsoft.NETCore.App.Runtime.${rid}.10.0.15.nupkg" \
+    "Microsoft.AspNetCore.App.Runtime.${rid}.10.0.15.nupkg"; do
     [[ -s "$runtime_packs/$package" ]] || {
       echo "Missing custom runtime package: $runtime_packs/$package" >&2
       exit 2
@@ -62,13 +62,13 @@ if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
   custom_nuget_config="$work/platform-runtime.NuGet.config"
   python3 packaging/scripts/create-standalone-nuget-config.py \
     "$runtime_packs" src/NuGet.config "$custom_nuget_config" "$rid"
-  # The custom Linux x86 and FreeBSD runtime packs are pinned to 10.0.12.
+  # The custom Linux x86 and FreeBSD runtime packs are pinned to 10.0.15.
   restore_sources=(
     "--artifacts-path"
     "$work/artifacts"
     "-p:ChaptarrStandaloneIntermediateRoot=$work/obj"
     "-p:RestoreConfigFile=$custom_nuget_config"
-    "-p:RuntimeFrameworkVersion=10.0.12"
+    "-p:RuntimeFrameworkVersion=10.0.15"
     "-p:ChaptarrExtraPlatformRuntimePacks=true"
     "-p:ChaptarrStandaloneLockRoot=$work/locks"
     "-p:RestoreLockedMode=false"
@@ -132,7 +132,7 @@ publish_standalone_project src/NzbDrone.Update/Chaptarr.Update.csproj \
 
 if [[ "$rid" == linux-x86 || "$rid" == freebsd-x64 ]]; then
   python3 - \
-    "$runtime_packs/Microsoft.NETCore.App.Runtime.${rid}.10.0.12.nupkg" \
+    "$runtime_packs/Microsoft.NETCore.App.Runtime.${rid}.10.0.15.nupkg" \
     "$bundle/libcoreclr.so" \
     "$bundle/Chaptarr.Update/libcoreclr.so" <<'PY'
 import hashlib
@@ -142,7 +142,7 @@ import zipfile
 
 package = Path(sys.argv[1])
 runtime_paths = [Path(value) for value in sys.argv[2:]]
-rid = package.name.removeprefix("Microsoft.NETCore.App.Runtime.").removesuffix(".10.0.12.nupkg")
+rid = package.name.removeprefix("Microsoft.NETCore.App.Runtime.").removesuffix(".10.0.15.nupkg")
 member = f"runtimes/{rid}/native/libcoreclr.so"
 with zipfile.ZipFile(package) as package_zip:
     expected = hashlib.sha256(package_zip.read(member)).hexdigest()

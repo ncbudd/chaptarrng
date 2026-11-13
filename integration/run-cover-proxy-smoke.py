@@ -48,7 +48,7 @@ with sqlite3.connect(root / 'config/readarr.db') as connection:
     connection.execute('UPDATE Editions SET Images=?,Monitored=1 WHERE Id=41', (json.dumps([{'CoverType': 6, 'Url': url}]),))
     connection.execute('UPDATE AuthorMetadata SET Images=?', (json.dumps([{'CoverType': 1, 'Url': url}]),))
 shutil.copyfile(fixtures / 'provider.mjs', root / 'provider/server.mjs')
-for image in [base, seerr, 'node:22-alpine']:
+for image in [base, seerr, 'node:22.23.5-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a']:
     if subprocess.run(['docker', 'image', 'inspect', image], capture_output=True).returncode:
         command(['docker', 'pull', image], 'image-pull.log', 300)
 security = ['--user', f'{os.getuid()}:{os.getgid()}', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--memory', '2g', '--cpus', '2']
@@ -63,7 +63,7 @@ try:
         '-e', 'CHAPTARR__AUTH__SEERRAPIKEY=synthetic-e2e-restricted-key-20261105',
         '-v', f'{candidate}:/candidate:ro', '-v', f'{root}/config:/config', '-v', f'{root}/library:/library',
         '--entrypoint', '/candidate/Chaptarr', base, '-nobrowser', '-data=/config'])
-    start(prefix + '-provider', ['--network', 'container:' + prefix + '-app', '-v', f'{root}:/fixture', 'node:22-alpine', 'node', '/fixture/provider/server.mjs'])
+    start(prefix + '-provider', ['--network', 'container:' + prefix + '-app', '-v', f'{root}:/fixture', 'node:22.23.5-alpine@sha256:1314fb30ec37592d5845e5a160d522c0e680972aa534549940b8d73bde88481a', 'node', '/fixture/provider/server.mjs'])
     owned.append(prefix + '-seerr')
     command(['docker', 'run', '--rm', '--name', prefix + '-seerr', '--network', 'container:' + prefix + '-app', *security,
         '-v', f'{fixtures}:/checks:ro', '-v', f'{root}:/fixture:ro', '--entrypoint', 'node', seerr, '/checks/verify-cover.mjs'], 'cover-results.log', 300)

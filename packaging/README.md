@@ -185,8 +185,8 @@ ChaptarrNG `main` now skips those attributes when merging custom packs. The
 follow-up
 [39595241427](https://github.com/snapetech-org/chaptarrng/actions/runs/39595241427)
 reached pack collection but failed because it expected SDK 10.0.402 to include
-the pinned 10.0.12 reference packs. The source fix now packages the installed
-SDK reference-pack versions and pins custom-runtime publishing to 10.0.12. Its
+the pinned 10.0.15 reference packs. The source fix now packages the installed
+SDK reference-pack versions and pins custom-runtime publishing to 10.0.15. Its
 focused checks pass locally; hosted validation is pending. CI artifacts are
 temporary and do not publish assets. These archives are not public until a later
 release is approved. Keep
@@ -194,6 +194,13 @@ BookshelfNG in service until the full migration and channel acceptance gates
 close.
 Keep the BookshelfNG installation in service until a replacement channel is
 validated or that platform is explicitly retired.
+
+As of 2026-11-12, standalone runtime pins have moved to .NET 10.0.15 and SDK
+10.0.404 to include the current security servicing release. The latest pinned
+FreeBSD source-built archive is v10.0.113, which predates .NET 10.0.15; the
+pack builder now rejects it. Do not build or publish a FreeBSD archive until a
+verified .NET 10.0.15 source-built pack is available and native installed
+acceptance passes.
 
 BookshelfNG's built-in updater cannot discover the first ChaptarrNG release.
 Manual macOS and FreeBSD installs therefore need a one-time download of the

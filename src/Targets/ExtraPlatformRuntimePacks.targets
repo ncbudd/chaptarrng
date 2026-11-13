@@ -6,7 +6,7 @@
           BeforeTargets="ProcessFrameworkReferences"
           Condition="'$(ChaptarrExtraPlatformRuntimePacks)' == 'true' and
                         '$(TargetFramework)' == 'net10.0' and
-                        '$(RuntimeFrameworkVersion)' == '10.0.12' and
+                        '$(RuntimeFrameworkVersion)' == '10.0.15' and
                         ('$(RuntimeIdentifier)' == 'linux-x86' or '$(RuntimeIdentifier)' == 'freebsd-x64')">
     <ItemGroup>
       <KnownFrameworkReference Update="Microsoft.NETCore.App;Microsoft.AspNetCore.App"

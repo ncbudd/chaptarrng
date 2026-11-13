@@ -215,14 +215,14 @@ console.log("BookshelfNG API contract comparator: 18 checks passed");
 const sourceStatusFacts = {
   appName: "Readarr", version: "0.4.21.76", migrationVersion: 158,
   buildTime: "2026-10-26T01:13:37Z", startTime: "2026-11-05T11:00:00Z",
-  startupPath: "/app/readarr/bin", osName: "alpine", osVersion: "3.24.2", runtimeVersion: "10.0.13",
+  startupPath: "/app/readarr/bin", osName: "alpine", osVersion: "3.24.4", runtimeVersion: "10.0.15",
   packageAuthor: "pennydreadful", packageVersion: "f512a17f866d1fa8e5d92ae792d044de1fb45535",
   instanceName: "Readarr", authentication: "basic", urlBase: "",
 };
 const targetStatusFacts = {
   appName: "Chaptarr", version: "0.9.978.0", migrationVersion: 126,
   buildTime: "2026-11-05T11:13:36Z", startTime: "2026-11-05T11:14:00Z",
-  startupPath: "/app", osName: "ubuntu", osVersion: "24.04", runtimeVersion: "10.0.14",
+  startupPath: "/app", osName: "ubuntu", osVersion: "24.04", runtimeVersion: "10.0.15",
   instanceName: "Readarr", authentication: "basic", urlBase: "",
 };
 const nativeStatusFacts = { ...targetStatusFacts, instanceName: "Chaptarr" };

@@ -8,7 +8,7 @@ trap 'rm -rf -- "$work"' EXIT
 
 sdk_root="$work/sdk"
 output_root="$work/output/packs"
-versions=(10.0.12 10.0.13)
+versions=(10.0.14 10.0.15)
 
 for pack in Microsoft.NETCore.App.Ref Microsoft.AspNetCore.App.Ref; do
     for version in "${versions[@]}"; do

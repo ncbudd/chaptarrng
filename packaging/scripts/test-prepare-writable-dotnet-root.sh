@@ -14,8 +14,8 @@ cleanup() {
 }
 trap cleanup EXIT
 
-mkdir -p "$source_root/host/fxr/10.0.12" \
-  "$source_root/shared/Microsoft.NETCore.App/10.0.12"
+mkdir -p "$source_root/host/fxr/10.0.15" \
+  "$source_root/shared/Microsoft.NETCore.App/10.0.15"
 cat > "$source_root/dotnet" <<'DOTNET'
 #!/usr/bin/env bash
 [[ "${1:-}" == "--info" ]]
@@ -23,16 +23,16 @@ cat > "$source_root/dotnet" <<'DOTNET'
 [[ "${DOTNET_MULTILEVEL_LOOKUP:-}" == 0 ]]
 DOTNET
 chmod 0755 "$source_root/dotnet"
-printf 'hostfxr\n' > "$source_root/host/fxr/10.0.12/hostfxr.marker"
-printf 'runtime\n' > "$source_root/shared/Microsoft.NETCore.App/10.0.12/runtime.marker"
-chmod 0555 "$source_root/host/fxr/10.0.12" \
-  "$source_root/shared/Microsoft.NETCore.App/10.0.12"
+printf 'hostfxr\n' > "$source_root/host/fxr/10.0.15/hostfxr.marker"
+printf 'runtime\n' > "$source_root/shared/Microsoft.NETCore.App/10.0.15/runtime.marker"
+chmod 0555 "$source_root/host/fxr/10.0.15" \
+  "$source_root/shared/Microsoft.NETCore.App/10.0.15"
 
-source_mode_before="$(stat -c '%a' "$source_root/host/fxr/10.0.12")"
+source_mode_before="$(stat -c '%a' "$source_root/host/fxr/10.0.15")"
 bash "$prepare_script" "$source_root" "$destination_root"
 
-source_mode_after="$(stat -c '%a' "$source_root/host/fxr/10.0.12")"
-destination_mode="$(stat -c '%a' "$destination_root/host/fxr/10.0.12")"
+source_mode_after="$(stat -c '%a' "$source_root/host/fxr/10.0.15")"
+destination_mode="$(stat -c '%a' "$destination_root/host/fxr/10.0.15")"
 if [[ "$source_mode_before" != "$source_mode_after" ]]; then
   echo "Preparing the SDK changed the source directory mode." >&2
   exit 1
@@ -41,8 +41,8 @@ if (( (8#$destination_mode & 0200) == 0 )); then
   echo "The copied SDK directory is not writable by its owner." >&2
   exit 1
 fi
-grep -Fxq 'hostfxr' "$destination_root/host/fxr/10.0.12/hostfxr.marker"
-grep -Fxq 'runtime' "$destination_root/shared/Microsoft.NETCore.App/10.0.12/runtime.marker"
+grep -Fxq 'hostfxr' "$destination_root/host/fxr/10.0.15/hostfxr.marker"
+grep -Fxq 'runtime' "$destination_root/shared/Microsoft.NETCore.App/10.0.15/runtime.marker"
 
 if bash "$prepare_script" "$source_root" "$source_root/nested-dotnet" >/dev/null 2>&1; then
   echo "Preparing an SDK inside its source tree should fail." >&2
