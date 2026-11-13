@@ -1,0 +1,114 @@
+name: Scan an exact ChaptarrNG source revision
+description: Check out base-controlled scan policy and scan source data without executing it.
+inputs:
+  source-repository:
+    description: Repository containing the exact source revision.
+    required: true
+  source-sha:
+    description: Exact 40-character source commit to scan.
+    required: true
+  policy-sha:
+    description: Exact base-controlled policy commit.
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Validate exact source and policy revisions
+      shell: bash
+      env:
+        SOURCE_SHA: ${{ inputs.source-sha }}
+        POLICY_SHA: ${{ inputs.policy-sha }}
+      run: |
+        set -euo pipefail
+        [[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]
+        [[ "$POLICY_SHA" =~ ^[0-9a-fA-F]{40}$ ]]
+        test "$(git -C policy rev-parse HEAD)" = "$POLICY_SHA"
+    - name: Checkout exact source revision as scan data
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: ${{ inputs.source-repository }}
+        ref: ${{ inputs.source-sha }}
+        path: source
+        persist-credentials: false
+    - name: Verify checked out source revision
+      shell: bash
+      env:
+        SOURCE_SHA: ${{ inputs.source-sha }}
+      run: test "$(git -C source rev-parse HEAD)" = "$SOURCE_SHA"
+    - name: Prepare pinned scanners and vulnerability database
+      shell: bash
+      run: |
+        set -euo pipefail
+        python3 policy/scripts/check-scan-suppressions.py policy source
+        docker pull semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d
+        docker pull aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb
+        mkdir -p reports "$RUNNER_TEMP/trivy-cache" "$RUNNER_TEMP/security-rules"
+        python3 policy/scripts/prepare-semgrep-rules.py "$RUNNER_TEMP/security-rules" --download-only
+        docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \
+          -v "$PWD/policy:/policy:ro" -v "$RUNNER_TEMP/security-rules:/rules" \
+          semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d \
+          /policy/scripts/prepare-semgrep-rules.py /rules
+        docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -e TRIVY_CACHE_DIR=/cache \
+          --mount "type=bind,src=$RUNNER_TEMP/trivy-cache,dst=/cache" \
+          aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
+          image --cache-dir /cache --download-db-only
+        test -s "$RUNNER_TEMP/trivy-cache/db/trivy.db"
+        test -s "$RUNNER_TEMP/trivy-cache/db/metadata.json"
+    - name: Scan source offline with Semgrep Community Edition
+      shell: bash
+      run: |
+        set -euo pipefail
+        # These sealed localization evidence scripts calculate Git blob SHA-1 IDs and verify the
+        # recorded content separately with SHA-256; exclude only the seven exact false-positive paths.
+        docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+          --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
+          --user "$(id -u):$(id -g)" -e HOME=/tmp -e EIO_BACKEND=posix \
+          -v "$PWD/source:/src:ro" -v "$RUNNER_TEMP/security-rules:/rules:ro" -v "$PWD/reports:/reports" -w /src \
+          semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d \
+          semgrep scan --config /rules/rules.json --metrics=off --no-git-ignore --no-rewrite-rule-ids --max-target-bytes 10000000 --disable-version-check --error --jobs 2 \
+            --exclude .git \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/crossreview/capture_ui_label_evidence.py \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/crossreview/reattest.py \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/build_attestation.py \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/build_crossreview.py \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-03/creative-hold-cross-review/first-independent-review/verify_cross_review.py \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-03/creative-holds-cross-audit-20261103/verify_cross_audit.py \
+            --exclude docs/pr-evidence/pr190-localization-2026-11-05/w561-keep-history-inclusive-limit/cross-review/verify_cross_review.py \
+            --json-output /reports/semgrep.json .
+    - name: Scan dependencies, secrets, and deployment configuration offline
+      if: always() && !cancelled()
+      shell: bash
+      run: |
+        set -euo pipefail
+        docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+          --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
+          --user "$(id -u):$(id -g)" -e HOME=/tmp -e TRIVY_CACHE_DIR=/cache \
+          -v "$PWD/source:/src:ro" -v "$PWD/policy:/policy:ro" \
+          --mount "type=bind,src=$RUNNER_TEMP/trivy-cache,dst=/cache" \
+          -v "$PWD/reports:/reports" -w /src \
+          aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
+          fs --cache-dir /cache --skip-db-update --skip-java-db-update --skip-check-update \
+            --config= --ignorefile /policy/.trivyignore.yaml --show-suppressed --secret-config= --scanners vuln,secret,misconfig --include-dev-deps \
+            --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --exit-code 1 --timeout 20m \
+            --skip-dirs .git,node_modules,_output,_tests,_temp \
+            --helm-set bookshelfMigration.confirmed=true --helm-set image.digest=sha256:0000000000000000000000000000000000000000000000000000000000000000 \
+            --format json --output /reports/trivy.json .
+    - name: Retain an SBOM for the scanned dependency graph
+      if: always() && !cancelled()
+      shell: bash
+      run: |
+        set -euo pipefail
+        test -s reports/trivy.json
+        docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
+          --read-only --pids-limit 128 --memory 1g --tmpfs /tmp:rw,nosuid,nodev,size=64m \
+          --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD/reports:/reports" \
+          aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
+          convert --config= --ignorefile= --format cyclonedx --output /reports/dependencies.cdx.json /reports/trivy.json
+    - name: Retain source scan reports
+      if: always()
+      uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      with:
+        name: security-${{ inputs.source-sha }}
+        path: reports/*.json
+        if-no-files-found: error
+        retention-days: 14

@@ -44,39 +44,55 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
     def test_security_gate_scans_builder_inputs_and_requires_the_full_image_matrix(self) -> None:
         workflow_dir = WORKFLOW.parent
         security_gate = (workflow_dir / "security-gate.yml").read_text(encoding="utf-8")
-        status_workflow = (workflow_dir / "security-audit-status.yml").read_text(encoding="utf-8")
-        image_job = job_block(security_gate, "container-images")
-        image_matrix = image_job.split("        include:", 1)[1].split("    permissions:", 1)[0]
-        image_count = sum(line.strip().startswith("- image:") for line in image_matrix.splitlines())
-        expected = re.search(r"EXPECTED_IMAGE_SCANS:\s*['\"]?(\d+)", status_workflow)
-
-        self.assertIsNotNone(expected)
-        self.assertEqual(image_count, int(expected.group(1)))
+        image_action = (WORKFLOW.parents[1] / "actions/security-image-scan/action.yml").read_text(encoding="utf-8")
+        self.assertFalse((workflow_dir / "security-audit-status.yml").exists())
+        self.assertIn("pull_request_target:", security_gate)
+        self.assertNotRegex(security_gate, r"(?m)^  pull_request:")
+        image_names = (
+            "product-amd64", "product-arm64", "product-armv7", "docker-build-input",
+            "docker-build-optimized-input", "cross-builder-input", "m4b-test", "node-fixture",
+            "x86-handoff-fixture", "python-fixture", "qbittorrent-fixture", "musl-handoff-fixture",
+        )
+        for job_name in ("container-images-trusted", "container-images-untrusted"):
+            image_job = job_block(security_gate, job_name)
+            image_matrix = image_job.split("        include:", 1)[1].split("    permissions:", 1)[0]
+            names = re.findall(r"(?m)^          - image: (.+)$", image_matrix)
+            self.assertEqual(names, list(image_names), job_name)
         self.assertIn("image: docker-build-input", image_matrix)
         self.assertIn("image: docker-build-optimized-input", image_matrix)
         self.assertIn("image: cross-builder-input", image_matrix)
         self.assertIn("target: deps", image_matrix)
         self.assertIn("target: dotnet-deps", image_matrix)
-        self.assertIn("needs: [scan, container-images]", security_gate)
-        self.assertIn('"$IMAGE_SCAN_RESULT" == success', security_gate)
-        self.assertEqual(security_gate.count('[[ "$REQUESTED_SHA" =~ ^[0-9a-fA-F]{40}$ ]]'), 2)
-        self.assertIn('[[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]', security_gate)
+        self.assertIn("needs: [status-pending, scan-trusted, scan-untrusted, container-images-trusted, container-images-untrusted]", security_gate)
+        self.assertIn("expected exactly 12 successful base-controlled image scans", security_gate)
+        self.assertIn("--severity HIGH,CRITICAL --exit-code 1", image_action)
+        self.assertNotIn("cache-from:", image_action)
+        self.assertNotIn("cache-to:", image_action)
+        self.assertIn('[[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]', (WORKFLOW.parents[1] / "actions/security-source-scan/action.yml").read_text(encoding="utf-8"))
 
     def test_security_image_builds_are_limited_to_main_and_trusted_owner_prs(self) -> None:
         security_gate = (WORKFLOW.parent / "security-gate.yml").read_text(encoding="utf-8")
-        image_job = job_block(security_gate, "container-images")
-        condition = image_job.split("    runs-on:", 1)[0]
+        trusted_image_job = job_block(security_gate, "container-images-trusted")
+        untrusted_image_job = job_block(security_gate, "container-images-untrusted")
 
-        self.assertIn("github.ref == 'refs/heads/main'", condition)
-        self.assertIn("inputs.ref == '' || inputs.ref == github.sha", condition)
-        self.assertIn("github.event_name == 'pull_request'", condition)
-        self.assertIn("github.event.pull_request.head.repo.full_name == github.repository", condition)
-        self.assertNotIn("github.event_name != 'pull_request'", condition)
+        self.assertIn("github.ref == 'refs/heads/main'", trusted_image_job)
+        self.assertIn("github.event_name == 'pull_request_target'", trusted_image_job)
+        self.assertIn("github.event.pull_request.head.repo.full_name == github.repository", trusted_image_job)
+        self.assertIn("github.event_name == 'pull_request_target'", untrusted_image_job)
+        self.assertIn("group: public-fork-jit", untrusted_image_job)
+        self.assertNotIn("runs-on: ubuntu-24.04", untrusted_image_job)
+        self.assertIn("persist-credentials: false", security_gate)
+        self.assertNotIn("workflow_run:", security_gate)
+        self.assertIn("SECURITY_POLICY_SHA: ${{ github.event.pull_request.base.sha || github.sha }}", security_gate)
+        self.assertEqual(security_gate.count("ref: ${{ env.SECURITY_POLICY_SHA }}"), 4)
+        self.assertNotIn("ref: ${{ github.event.pull_request", security_gate)
 
     def test_semgrep_workflows_share_the_current_digest_pinned_image(self) -> None:
         workflow_dir = WORKFLOW.parent
         image = "semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d"
-        for name in ("security-gate.yml", "semgrep-community.yml"):
+        security_action = (WORKFLOW.parents[1] / "actions/security-source-scan/action.yml").read_text(encoding="utf-8")
+        self.assertIn(image, security_action)
+        for name in ("semgrep-community.yml",):
             source = (workflow_dir / name).read_text(encoding="utf-8")
             self.assertIn(image, source, name)
 
@@ -188,7 +204,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                         self.assertIn("runner: ubuntu-24.04", installed)
                         continue
                 if workflow_path.name == "security-gate.yml" and line.strip() == "runs-on: ${{ matrix.runner }}":
-                    image_scans = job_block(source, "container-images")
+                    image_scans = job_block(source, "container-images-trusted")
                     self.assertIn("runner: ubuntu-24.04-arm", image_scans)
                     self.assertIn("runner: ubuntu-24.04", image_scans)
                     continue
