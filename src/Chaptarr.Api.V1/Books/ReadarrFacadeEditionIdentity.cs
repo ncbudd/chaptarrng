@@ -139,7 +139,8 @@ namespace Chaptarr.Api.V1.Books
 
             if (omittedCount > 0)
             {
-                Logger.Warn("[ReadarrFacade] Omitted {0} edition row(s) without {1} identity from {2}.",
+                // Debug, not Warn: this fires on every edition response and drowned out real warnings.
+                Logger.Debug("[ReadarrFacade] Omitted {0} edition row(s) without {1} identity from {2}.",
                     omittedCount,
                     facadeContext.Dialect,
                     source ?? "edition response");
