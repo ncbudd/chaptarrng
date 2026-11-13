@@ -98,7 +98,7 @@ namespace NzbDrone.Core.Books.Services
 
     public interface ILibrarySearchService
     {
-        LibrarySearchResult Search(string term, int limit);
+        LibrarySearchResult Search(string term, int limit, BookMediaType? mediaType = null);
     }
 
     public class LibrarySearchService : ILibrarySearchService
@@ -113,7 +113,7 @@ namespace NzbDrone.Core.Books.Services
             _logger = logger;
         }
 
-        public LibrarySearchResult Search(string term, int limit)
+        public LibrarySearchResult Search(string term, int limit, BookMediaType? mediaType = null)
         {
             var trimmed = (term ?? string.Empty).Trim();
             if (trimmed.Length < 2)
@@ -127,8 +127,8 @@ namespace NzbDrone.Core.Books.Services
             {
                 return _database.DatabaseType switch
                 {
-                    DatabaseType.SQLite => SearchSqlite(trimmed, limit),
-                    DatabaseType.PostgreSQL => SearchPostgres(trimmed, limit),
+                    DatabaseType.SQLite => SearchSqlite(trimmed, limit, mediaType),
+                    DatabaseType.PostgreSQL => SearchPostgres(trimmed, limit, mediaType),
                     _ => new LibrarySearchResult()
                 };
             }
@@ -139,12 +139,12 @@ namespace NzbDrone.Core.Books.Services
             }
         }
 
-        private LibrarySearchResult SearchSqlite(string term, int limit)
+        private LibrarySearchResult SearchSqlite(string term, int limit, BookMediaType? mediaType)
         {
             using (var conn = _database.OpenConnection())
             {
-                var authors = SearchAuthorsSqlite(conn, term, limit);
-                var books = SearchBooksSqlite(conn, term, limit);
+                var authors = SearchAuthorsSqlite(conn, term, limit, mediaType);
+                var books = SearchBooksSqlite(conn, term, limit, mediaType);
 
                 return new LibrarySearchResult
                 {
@@ -154,7 +154,7 @@ namespace NzbDrone.Core.Books.Services
             }
         }
 
-        private List<LibrarySearchAuthor> SearchAuthorsSqlite(IDbConnection conn, string term, int limit)
+        private List<LibrarySearchAuthor> SearchAuthorsSqlite(IDbConnection conn, string term, int limit, BookMediaType? mediaType)
         {
             var ftsQuery = BuildFtsPrefixQuery(term);
             if (string.IsNullOrWhiteSpace(ftsQuery))
@@ -171,13 +171,18 @@ SELECT
 FROM author_fts
 JOIN Authors a ON a.Id = author_fts.rowid
 WHERE author_fts MATCH @ftsQuery
+  AND (@mediaType IS NULL OR EXISTS (
+      SELECT 1
+      FROM Books b
+      WHERE b.AuthorId = a.Id AND b.MediaType = @mediaType
+  ))
 ORDER BY bm25(author_fts)
 LIMIT @limit";
 
-            return conn.Query<LibrarySearchAuthor>(sql, new { ftsQuery, limit }).ToList();
+            return conn.Query<LibrarySearchAuthor>(sql, new { ftsQuery, limit, mediaType = (int?)mediaType }).ToList();
         }
 
-        private List<LibrarySearchBook> SearchBooksSqlite(IDbConnection conn, string term, int limit)
+        private List<LibrarySearchBook> SearchBooksSqlite(IDbConnection conn, string term, int limit, BookMediaType? mediaType)
         {
             var innerQuery = BuildColumnFtsPrefixQuery("MatchingTitle", term);
             if (string.IsNullOrWhiteSpace(innerQuery))
@@ -224,6 +229,7 @@ WITH matches AS (
     JOIN Books b ON b.Id = e.BookId
     JOIN Authors a ON a.Id = b.AuthorId
     WHERE edition_fts MATCH @ftsQuery
+      AND (@mediaType IS NULL OR b.MediaType = @mediaType)
 ),
 ranked AS (
     SELECT
@@ -263,11 +269,11 @@ WHERE rn = 1
 ORDER BY Score
 LIMIT @rowLimit";
 
-            var rows = conn.Query<LibrarySearchBookRow>(sql, new { ftsQuery = innerQuery, rowLimit = limit * 4 }).ToList();
+            var rows = conn.Query<LibrarySearchBookRow>(sql, new { ftsQuery = innerQuery, rowLimit = limit * 4, mediaType = (int?)mediaType }).ToList();
             return BuildGroupedBooks(rows, limit);
         }
 
-        private LibrarySearchResult SearchPostgres(string term, int limit)
+        private LibrarySearchResult SearchPostgres(string term, int limit, BookMediaType? mediaType)
         {
             using (var conn = _database.OpenConnection())
             {
@@ -279,11 +285,16 @@ SELECT
     ""Name"" AS Name,
     ""Images"" AS Images,
     ""SelectedPosterHash"" AS SelectedPosterHash
-FROM ""Authors""
-WHERE ""Name"" ILIKE @pattern ESCAPE '\'
-   OR ""SortName"" ILIKE @pattern ESCAPE '\'
-   OR ""TitleSlug"" ILIKE @pattern ESCAPE '\'
-ORDER BY ""Name""
+FROM ""Authors"" a
+WHERE (a.""Name"" ILIKE @pattern ESCAPE '\'
+   OR a.""SortName"" ILIKE @pattern ESCAPE '\'
+   OR a.""TitleSlug"" ILIKE @pattern ESCAPE '\')
+  AND (@mediaType IS NULL OR EXISTS (
+      SELECT 1
+      FROM ""Books"" filteredBook
+      WHERE filteredBook.""AuthorId"" = a.""Id"" AND filteredBook.""MediaType"" = @mediaType
+  ))
+ORDER BY a.""Name""
 LIMIT @limit";
 
                 const string booksSql = @"
@@ -322,14 +333,16 @@ SELECT
 FROM ""Books"" b
 JOIN ""Authors"" a ON a.""Id"" = b.""AuthorId""
 WHERE b.""Title"" ILIKE @pattern ESCAPE '\'
+  AND (@mediaType IS NULL OR b.""MediaType"" = @mediaType)
 ORDER BY b.""Title""
 LIMIT @rowLimit";
 
-                var bookRows = conn.Query<LibrarySearchBookRow>(booksSql, new { pattern, rowLimit = limit * 4 }).ToList();
+                var parameters = new { pattern, limit, rowLimit = limit * 4, mediaType = (int?)mediaType };
+                var bookRows = conn.Query<LibrarySearchBookRow>(booksSql, parameters).ToList();
 
                 return new LibrarySearchResult
                 {
-                    Authors = conn.Query<LibrarySearchAuthor>(authorsSql, new { pattern, limit }).ToList(),
+                    Authors = conn.Query<LibrarySearchAuthor>(authorsSql, parameters).ToList(),
                     Books = BuildGroupedBooks(bookRows, limit)
                 };
             }

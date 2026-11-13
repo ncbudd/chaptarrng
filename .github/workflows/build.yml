@@ -890,6 +890,11 @@ jobs:
         dotnet build src/Chaptarr.NoTests.sln --configuration Release --no-restore
         dotnet build src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --configuration Release --no-restore -p:UseSharedCompilation=false
 
+    - name: Test PostgreSQL library search media type filtering
+      env:
+        CHAPTARRNG_POSTGRES_TEST_CONNECTION: Host=localhost;Port=5432;Database=acceptance-main;Username=chaptarr;Password=chaptarr;Pooling=false;Timeout=5;Command Timeout=300
+      run: dotnet test src/Chaptarr.Core.Test/Chaptarr.Core.Test.csproj --configuration Release --no-build --filter FullyQualifiedName~LibrarySearch
+
     - name: Smoke - migrate up on fresh PostgreSQL
       env:
         CHAPTARRNG_KEEP_POSTGRES_EVIDENCE: 'true'
