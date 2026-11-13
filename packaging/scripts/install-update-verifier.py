@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 """Build a checksum-pinned GitHub CLI for Sigstore bundle verification."""
 import hashlib
-import http.client
 import io
 import json
 import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
-import ssl
 import subprocess
 import sys
 import tarfile
@@ -34,20 +32,36 @@ def download_source(manifest):
     commit = manifest["source_commit"]
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("GitHub CLI source commit is invalid")
-    connection = http.client.HTTPSConnection(
-        "codeload.github.com", timeout=60, context=ssl.create_default_context()
-    )
-    try:
-        connection.request("GET", f"/cli/cli/tar.gz/{commit}")
-        response = connection.getresponse()
-        if response.status != 200:
-            raise RuntimeError(f"GitHub CLI source download failed with HTTP {response.status}")
-        content_length = response.getheader("Content-Length")
-        if content_length and content_length.isdigit() and int(content_length) > MAX_SOURCE_ARCHIVE_SIZE:
-            raise ValueError("GitHub CLI source archive exceeds the size limit")
-        payload = response.read(MAX_SOURCE_ARCHIVE_SIZE + 1)
-    finally:
-        connection.close()
+    curl = shutil.which("curl")
+    if not curl:
+        raise RuntimeError("curl is required to download the pinned GitHub CLI source archive")
+    url = f"https://codeload.github.com/cli/cli/tar.gz/{commit}"
+    with tempfile.TemporaryDirectory(prefix="chaptarrng-gh-source-") as work:
+        archive_path = Path(work) / "gh-source.tar.gz"
+        subprocess.run(
+            [
+                curl,
+                "--fail",
+                "--silent",
+                "--show-error",
+                "--location",
+                "--proto",
+                "=https",
+                "--proto-redir",
+                "=https",
+                "--max-redirs",
+                "3",
+                "--max-time",
+                "60",
+                "--max-filesize",
+                str(MAX_SOURCE_ARCHIVE_SIZE),
+                "--output",
+                str(archive_path),
+                url,
+            ],
+            check=True,
+        )
+        payload = archive_path.read_bytes()
     if len(payload) > MAX_SOURCE_ARCHIVE_SIZE:
         raise ValueError("GitHub CLI source archive exceeds the size limit")
     if hashlib.sha256(payload).hexdigest() != manifest["source_sha256"]:
