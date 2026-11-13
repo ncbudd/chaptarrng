@@ -3,11 +3,16 @@ name: Security gate
 on:
   push:
     branches: [main]
-  # Use the trusted base workflow/rules. PR contents are scanned as read-only data;
-  # no PR scripts, actions, package hooks, or binaries execute on the runner.
-  pull_request_target:
+  # PR contents are scanned as read-only data. This event gets no repository
+  # secrets and a read-only token, so a fork cannot use the scanner as a pwn request.
+  pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
   workflow_dispatch:
+    inputs:
+      ref:
+        description: Exact source commit to scan as read-only data
+        required: false
+        type: string
   workflow_call:
     inputs:
       ref:
@@ -24,14 +29,12 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
-      # nosemgrep: yaml.github-actions.security.pull-request-target-code-checkout.pull-request-target-code-checkout -- PR sources are read-only scan data in network-isolated containers; no PR scripts, actions, hooks, or binaries execute, and checkout credentials are not persisted.
       - name: Checkout trusted scanner policy
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           ref: ${{ github.event.pull_request.base.sha || github.sha }}
           path: policy
           persist-credentials: false
-      # nosemgrep: yaml.github-actions.security.pull-request-target-code-checkout.pull-request-target-code-checkout -- PR sources are read-only scan data in network-isolated containers; no PR scripts, actions, hooks, or binaries execute, and checkout credentials are not persisted.
       - name: Checkout exact source revision as scan data
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -103,7 +106,7 @@ jobs:
   status:
     name: Record exact source result
     needs: scan
-    if: always() && !cancelled()
+    if: always() && !cancelled() && github.event_name != 'pull_request'
     runs-on: ubuntu-24.04
     permissions:
       contents: read
