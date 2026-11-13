@@ -4,6 +4,19 @@ ChaptarrNG release notes highlight user-facing changes and operating guidance.
 Each release combines curated entries from release-notes/ with technical
 history grouped from conventional commits.
 
+## [Unreleased]
+
+### Security and packaging
+
+- Move .NET-based product, build, and test images to runtime 10.0.15 and SDK 10.0.404, apply current operating-system package upgrades, and remove the unused Pebble test CA from product images.
+- Build bubblewrap 0.13.1, LAME 4.0, and FFmpeg 9.0.2 from checksum-verified sources; keep MP3 support through a replaceable LGPL library, verify the pinned m4b-tool, and disable FFmpeg network protocols.
+- Replace the runtime's outdated Expat library with a checksum-verified Expat 2.10.0 package that preserves the libexpat1 ABI.
+- Remove runtime wget; health checks use bounded direct curl requests and reject redirects and non-2xx responses.
+- Keep the Cloudron migration candidate's health check working without runtime wget by requiring an explicit 2xx response from its local proxy.
+- Build the FreeBSD .NET 10.0.15 packs from the pinned VMR revision and update the Linux x86 handoff fixture to the rebuilt Debian Forky image.
+- Rebuild the updater-signature verifier from GitHub CLI 2.104.0 with current Go `x/net` and `x/crypto` dependencies.
+- Add exact-head Trivy image scans for the product's amd64, arm64, and arm/v7 images, plus all buildable build and integration fixture images; fail on active HIGH and CRITICAL vulnerabilities.
+
 ## [0.9.1000](https://github.com/snapetech-org/chaptarrng/compare/v0.9.999..v0.9.1000) - 2026-11-10
 
 ### Backup restore recovery

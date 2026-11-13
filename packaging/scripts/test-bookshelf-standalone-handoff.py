@@ -146,6 +146,12 @@ def wait_http(process: subprocess.Popen[bytes], timeout: int, label: str) -> Non
 
 def start_predecessor(app: Path, data_dir: Path, log_path: Path) -> subprocess.Popen[bytes]:
     log = log_path.open("wb")
+    env = {**os.environ, "HARDCOVER": "false", "HARDCOVER_NATIVE": "false"}
+    if platform.system() == "FreeBSD":
+        # The public .76 predecessor requires the installed OpenSSL ABI 17.
+        # Keep this override on the predecessor only; the candidate launcher
+        # must still select its own compatible ABI.
+        env.setdefault("DOTNET_OPENSSL_VERSION_OVERRIDE", "17")
     process = subprocess.Popen(
         [str(app), "-nobrowser", f"-data={data_dir}"],
         cwd=app.parent,
@@ -153,7 +159,7 @@ def start_predecessor(app: Path, data_dir: Path, log_path: Path) -> subprocess.P
         stdout=log,
         stderr=subprocess.STDOUT,
         start_new_session=True,
-        env={**os.environ, "HARDCOVER": "false", "HARDCOVER_NATIVE": "false"},
+        env=env,
     )
     RUNNING.append(process)
     # The 32-bit predecessor runs through CPU emulation on hosted x64 Linux.
@@ -707,7 +713,7 @@ def main() -> int:
     parser.add_argument("candidate_archive", type=Path)
     parser.add_argument("--output", type=Path, help="New evidence directory outside the temporary workspace")
     parser.add_argument("--candidate-revision", help="Exact candidate source revision recorded with the evidence")
-    parser.add_argument("--runtime-id", help="Validate Linux predecessor and candidate ELF architecture for this RID")
+    parser.add_argument("--runtime-id", help="Validate Linux or FreeBSD predecessor and candidate ELF architecture for this RID")
     parser.add_argument("--preinitialized-source-auxiliary-databases", action="store_true",
                         help="Use checksum-pinned .76 log/cache schemas for an existing-installation baseline")
     parser.add_argument("--exclude-legacy-x86-mam-indexer", action="store_true",
@@ -728,8 +734,10 @@ def main() -> int:
         predecessor = executable(predecessor_root, "Readarr")
         if args.runtime_id:
             architectures = {"linux-x86": (32, 3), "linux-x64": (64, 62), "linux-musl-x64": (64, 62),
-                             "linux-arm64": (64, 183), "linux-musl-arm64": (64, 183)}
-            require(args.runtime_id in architectures, "ELF architecture validation requires a supported Linux RID")
+                             "linux-arm64": (64, 183), "linux-musl-arm64": (64, 183),
+                             "freebsd-x64": (64, 62)}
+            require(args.runtime_id in architectures,
+                    "ELF architecture validation requires a supported Linux or FreeBSD RID")
             expected = architectures[args.runtime_id]
             require(elf_identity(predecessor) == expected, "Predecessor executable architecture does not match the requested RID")
             executable_elf_identity = elf_identity(candidate_root / "ChaptarrNG/Chaptarr")

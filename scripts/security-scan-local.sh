@@ -68,11 +68,11 @@ semgrep_run() {
       python3 scripts/prepare-semgrep-rules.py "$rules_dir" --download-only
     fi
     if command -v uvx >/dev/null 2>&1; then
-      uvx --from semgrep==1.184.0 python scripts/prepare-semgrep-rules.py "$rules_dir"
+      uvx --from semgrep==1.185.0 python scripts/prepare-semgrep-rules.py "$rules_dir"
     elif command -v docker >/dev/null 2>&1; then
       docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \
         -v "$repo_root:/policy:ro" -v "$rules_dir:/rules" \
-        semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed \
+        semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d \
         /policy/scripts/prepare-semgrep-rules.py /rules
     else
       python3 scripts/prepare-semgrep-rules.py "$rules_dir"
@@ -113,11 +113,11 @@ semgrep_run() {
   elif command -v uvx >/dev/null 2>&1; then
     local uv_args=()
     [[ "${SEMGREP_OFFLINE:-0}" == 1 ]] && uv_args+=(--offline)
-    uvx "${uv_args[@]}" --from semgrep==1.184.0 semgrep "${args[@]}" "${targets[@]}"
+    uvx "${uv_args[@]}" --from semgrep==1.185.0 semgrep "${args[@]}" "${targets[@]}"
   elif command -v semgrep >/dev/null 2>&1; then
     semgrep "${args[@]}" "${targets[@]}"
   elif command -v docker >/dev/null 2>&1; then
-    local image="semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed"
+    local image="semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d"
     if ! docker image inspect "$image" >/dev/null 2>&1; then
       [[ "${SEMGREP_OFFLINE:-0}" == 0 ]] || { echo "Semgrep image is not cached for offline mode." >&2; return 127; }
       docker pull "$image"

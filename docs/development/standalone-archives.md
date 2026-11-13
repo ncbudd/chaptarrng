@@ -93,3 +93,17 @@ Linux, macOS and Windows runtime targets; the current FreeBSD archive still
 needs native installed acceptance. The BookshelfNG identity bridge remains
 unpublished. See the [package acceptance handoff](../maintainers/PACKAGE_ACCEPTANCE_HANDOFF_2026-11-10.md)
 for current evidence and platform-specific outstanding checks.
+
+The local `0.9.1001` FreeBSD x64 candidate built with the `.NET 10.0.15`
+runtime packs passed installed handoff on FreeBSD 15.1-RELEASE-p6 amd64. The
+candidate archive SHA-256 is
+`e87ec939211a4737fe400b9ec59d0218ab96f83740db8338ff52ad29bffa580d`; the
+pinned BookshelfNG `.76` predecessor SHA-256 is
+`129fb321342e9bfe36a26429e138f88380ee5429e81f84a75a6f4488894cba89`. No,
+headless Manual, Yes with health and retained source backup, and forced-health-
+failure rollback all passed. Evidence is retained at
+`/mnt/disks/scratch/chaptarrng-backlog-release-20261112/freebsd-evidence-current-source-20261113/evidence-pass1`.
+This archive came from a dirty local tree (`HEAD=73d145a`, `MERGE_HEAD=d066e65`,
+index tree `f51fa91`); repeat acceptance against the exact committed release
+head before publication. This does not change the historical v0.9.995 result
+above.

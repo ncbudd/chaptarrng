@@ -3,9 +3,10 @@ name: Security gate
 on:
   push:
     branches: [main]
-  # PR contents are scanned as read-only data. This event gets no repository
-  # secrets and a read-only token, so a fork cannot use the scanner as a pwn request.
-  pull_request:
+  # pull_request_target loads this workflow from the trusted base branch. PR
+  # content is checked out only as data and built on disposable fork JIT runners.
+  pull_request_target:
+    branches: [main]
     types: [opened, synchronize, reopened, ready_for_review]
   workflow_dispatch:
     inputs:
@@ -20,109 +21,519 @@ on:
         required: true
 permissions:
   contents: read
+env:
+  # Use the trusted target branch SHA for policy checkout; keep PR head refs out
+  # of every actions/checkout ref field in this privileged workflow.
+  SECURITY_POLICY_SHA: ${{ github.event.pull_request.base.sha || github.sha }}
 concurrency:
   group: security-gate-${{ github.event.pull_request.number || inputs.ref || github.ref }}
   cancel-in-progress: true
 jobs:
-  scan:
-    name: Security gate
-    runs-on: ubuntu-24.04
-    timeout-minutes: 30
-    steps:
-      - name: Checkout trusted scanner policy
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          ref: ${{ github.event.pull_request.base.sha || github.sha }}
-          path: policy
-          persist-credentials: false
-      - name: Checkout exact source revision as scan data
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          ref: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
-          path: source
-          persist-credentials: false
-      - name: Prepare pinned scanners and vulnerability database
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 policy/scripts/check-scan-suppressions.py policy source
-          docker pull semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed
-          docker pull aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb
-          mkdir -p reports trivy-cache "$RUNNER_TEMP/security-rules"
-          python3 policy/scripts/prepare-semgrep-rules.py "$RUNNER_TEMP/security-rules" --download-only
-          docker run --rm --network none --user "$(id -u):$(id -g)" --entrypoint python \
-            -v "$PWD/policy:/policy:ro" -v "$RUNNER_TEMP/security-rules:/rules" \
-            semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed \
-            /policy/scripts/prepare-semgrep-rules.py /rules
-          docker run --rm --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD/trivy-cache:/cache" \
-            aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
-            image --cache-dir /cache --download-db-only
-      - name: Scan source offline with Semgrep Community Edition
-        shell: bash
-        run: |
-          set -euo pipefail
-          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
-            --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
-            --user "$(id -u):$(id -g)" -e HOME=/tmp -e EIO_BACKEND=posix \
-            -v "$PWD/source:/src:ro" -v "$RUNNER_TEMP/security-rules:/rules:ro" -v "$PWD/reports:/reports" -w /src \
-            semgrep/semgrep:1.184.0@sha256:cc1b68266f267878b39739373ea9985b9a78e5d64497dd875c8de100b22695ed \
-            semgrep scan --config /rules/rules.json --metrics=off --no-git-ignore --no-rewrite-rule-ids --max-target-bytes 10000000 --disable-version-check --error --jobs 2 \
-              --exclude .git --json-output /reports/semgrep.json .
-      - name: Scan dependencies, secrets, and deployment configuration offline
-        if: always() && !cancelled()
-        shell: bash
-        run: |
-          set -euo pipefail
-          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
-            --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
-            --user "$(id -u):$(id -g)" -e HOME=/tmp \
-            -v "$PWD/source:/src:ro" -v "$PWD/policy:/policy:ro" -v "$PWD/trivy-cache:/cache" -v "$PWD/reports:/reports" -w /src \
-            aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
-            fs --cache-dir /cache --skip-db-update --skip-java-db-update --skip-check-update \
-              --config= --ignorefile /policy/.trivyignore.yaml --show-suppressed --secret-config= --scanners vuln,secret,misconfig --include-dev-deps \
-              --severity UNKNOWN,LOW,MEDIUM,HIGH,CRITICAL --exit-code 1 --timeout 20m \
-              --skip-dirs .git,node_modules,_output,_tests,_temp \
-              --helm-set bookshelfMigration.confirmed=true --helm-set image.digest=sha256:0000000000000000000000000000000000000000000000000000000000000000 \
-              --format json --output /reports/trivy.json .
-      - name: Retain an SBOM for the scanned dependency graph
-        if: always() && !cancelled()
-        shell: bash
-        run: |
-          set -euo pipefail
-          test -s reports/trivy.json
-          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
-            --read-only --pids-limit 128 --memory 1g --tmpfs /tmp:rw,nosuid,nodev,size=64m \
-            --user "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD/reports:/reports" \
-            aquasec/trivy:0.76.2@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb \
-            convert --config= --ignorefile= --format cyclonedx --output /reports/dependencies.cdx.json /reports/trivy.json
-      - name: Retain reports
-        if: always()
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
-        with:
-          name: security-${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
-          path: reports/*.json
-          if-no-files-found: error
-          retention-days: 14
-  status:
-    name: Record exact source result
-    needs: scan
-    if: always() && !cancelled() && github.event_name != 'pull_request'
+  status-pending:
+    name: Start exact source status
+    if: >-
+      (
+        github.event_name == 'pull_request_target' &&
+        github.event.pull_request.base.repo.full_name == github.repository &&
+        github.event.pull_request.base.ref == 'main'
+      ) ||
+      (
+        github.event_name != 'pull_request_target' &&
+        (
+          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+          (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.actor == 'snapetech' && (inputs.ref == '' || inputs.ref == github.sha)) ||
+          github.workflow_ref == format('{0}/.github/workflows/release.yml@refs/heads/main', github.repository)
+        )
+      )
     runs-on: ubuntu-24.04
     permissions:
       contents: read
+      pull-requests: read
       statuses: write
     steps:
-      - name: Record required status on the scanned commit
+      - name: Mark the exact source commit pending
         env:
           GH_TOKEN: ${{ github.token }}
           SOURCE_SHA: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
-          SCAN_RESULT: ${{ needs.scan.result }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          IS_PR_TARGET: ${{ github.event_name == 'pull_request_target' }}
+          TARGET_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         shell: bash
         run: |
           set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]
+          if [[ "$IS_PR_TARGET" == true ]]; then
+            [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
+            current_sha="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq '.head.sha')"
+            [[ "$current_sha" == "$SOURCE_SHA" ]]
+          fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$SOURCE_SHA" \
+            -f state=pending -f context='Security audit' \
+            -f description='Source and 12 image scans are running' \
+            -f "target_url=$TARGET_URL"
+
+  scan-trusted:
+    name: Source scan (trusted)
+    if: >-
+      (
+        github.event_name == 'pull_request_target' &&
+        github.event.pull_request.base.repo.full_name == github.repository &&
+        github.event.pull_request.base.ref == 'main' &&
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        github.event.pull_request.user.login == 'snapetech' &&
+        github.event.pull_request.user.type != 'Bot'
+      ) ||
+      (
+        github.event_name != 'pull_request_target' &&
+        (
+          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+          (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.actor == 'snapetech' && (inputs.ref == '' || inputs.ref == github.sha)) ||
+          github.workflow_ref == format('{0}/.github/workflows/release.yml@refs/heads/main', github.repository)
+        )
+      )
+    needs: [status-pending]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout trusted scan policy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SECURITY_POLICY_SHA }}
+          path: policy
+          persist-credentials: false
+      - name: Verify trusted policy revision
+        env:
+          POLICY_SHA: ${{ env.SECURITY_POLICY_SHA }}
+        run: test "$(git -C policy rev-parse HEAD)" = "$POLICY_SHA"
+      - name: Run the base-controlled source scan
+        uses: ./policy/.github/actions/security-source-scan
+        with:
+          source-repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          source-sha: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          policy-sha: ${{ env.SECURITY_POLICY_SHA }}
+
+  scan-untrusted:
+    name: Source scan (isolated fork JIT)
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      github.event.pull_request.base.repo.full_name == github.repository &&
+      github.event.pull_request.base.ref == 'main' &&
+      !(github.event.pull_request.head.repo.full_name == github.repository &&
+        github.event.pull_request.user.login == 'snapetech' &&
+        github.event.pull_request.user.type != 'Bot')
+    needs: [status-pending]
+    runs-on:
+      group: public-fork-jit
+      labels: [self-hosted, linux, x64, public-pr-chaptarrng, "ng-public-run-${{ github.run_id }}"]
+    timeout-minutes: 60
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout trusted scan policy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SECURITY_POLICY_SHA }}
+          path: policy
+          persist-credentials: false
+      - name: Verify trusted policy revision
+        env:
+          POLICY_SHA: ${{ env.SECURITY_POLICY_SHA }}
+        run: test "$(git -C policy rev-parse HEAD)" = "$POLICY_SHA"
+      - name: Run the base-controlled source scan
+        uses: ./policy/.github/actions/security-source-scan
+        with:
+          source-repository: ${{ github.event.pull_request.head.repo.full_name }}
+          source-sha: ${{ github.event.pull_request.head.sha }}
+          policy-sha: ${{ env.SECURITY_POLICY_SHA }}
+
+  container-images-trusted:
+    name: Container image scan (${{ matrix.image }})
+    if: >-
+      (
+        github.event_name == 'pull_request_target' &&
+        github.event.pull_request.base.repo.full_name == github.repository &&
+        github.event.pull_request.base.ref == 'main' &&
+        github.event.pull_request.head.repo.full_name == github.repository &&
+        github.event.pull_request.user.login == 'snapetech' &&
+        github.event.pull_request.user.type != 'Bot'
+      ) ||
+      (
+        github.event_name != 'pull_request_target' &&
+        (
+          (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+          (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.actor == 'snapetech' && (inputs.ref == '' || inputs.ref == github.sha)) ||
+          github.workflow_ref == format('{0}/.github/workflows/release.yml@refs/heads/main', github.repository)
+        )
+      )
+    needs: [status-pending]
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - image: product-amd64
+            dockerfile: Dockerfile.cross
+            target: chaptarrng-standard
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: mp4v2,hardened-tools,chaptarrng-standard
+            no_cache: false
+          - image: product-arm64
+            dockerfile: Dockerfile.cross
+            target: chaptarrng-standard
+            platform: linux/arm64
+            runner: ubuntu-24.04-arm
+            qemu: false
+            fresh_stages: mp4v2,hardened-tools,chaptarrng-standard
+            no_cache: false
+          - image: product-armv7
+            dockerfile: Dockerfile.cross
+            target: chaptarrng-standard
+            platform: linux/arm/v7
+            runner: ubuntu-24.04
+            qemu: true
+            fresh_stages: mp4v2,hardened-tools,chaptarrng-standard
+            no_cache: false
+          - image: docker-build-input
+            dockerfile: Dockerfile.build
+            target: deps
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: docker-build-optimized-input
+            dockerfile: Dockerfile.build.optimized
+            target: dotnet-deps
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: cross-builder-input
+            dockerfile: Dockerfile.cross
+            target: deps
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: m4b-test
+            dockerfile: integration/Dockerfile.m4b-test
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: node-fixture
+            dockerfile: integration/Dockerfile.node-fixture
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: x86-handoff-fixture
+            dockerfile: integration/standalone-handoff/Dockerfile.x86
+            target: ''
+            platform: linux/386
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: python-fixture
+            dockerfile: integration/Dockerfile.python-fixture
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: qbittorrent-fixture
+            dockerfile: integration/acquisition/Dockerfile.qbittorrent
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: musl-handoff-fixture
+            dockerfile: integration/standalone-handoff/Dockerfile.musl
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout trusted scan policy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SECURITY_POLICY_SHA }}
+          path: policy
+          persist-credentials: false
+      - name: Verify trusted policy revision
+        env:
+          POLICY_SHA: ${{ env.SECURITY_POLICY_SHA }}
+        run: test "$(git -C policy rev-parse HEAD)" = "$POLICY_SHA"
+      - name: Rebuild and scan the exact source image
+        uses: ./policy/.github/actions/security-image-scan
+        with:
+          source-repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          source-sha: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          policy-sha: ${{ env.SECURITY_POLICY_SHA }}
+          image: ${{ matrix.image }}
+          dockerfile: ${{ matrix.dockerfile }}
+          target: ${{ matrix.target }}
+          platform: ${{ matrix.platform }}
+          install-qemu: ${{ matrix.qemu }}
+          qemu-platforms: ${{ matrix.platform == 'linux/arm64' && 'arm64' || matrix.platform == 'linux/arm/v7' && 'arm' || matrix.platform == 'linux/386' && '386' || '' }}
+          fresh-stages: ${{ matrix.fresh_stages }}
+          no-cache: ${{ matrix.no_cache }}
+
+  container-images-untrusted:
+    name: Container image scan (${{ matrix.image }})
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      github.event.pull_request.base.repo.full_name == github.repository &&
+      github.event.pull_request.base.ref == 'main' &&
+      !(github.event.pull_request.head.repo.full_name == github.repository &&
+        github.event.pull_request.user.login == 'snapetech' &&
+        github.event.pull_request.user.type != 'Bot')
+    needs: [status-pending]
+    runs-on:
+      group: public-fork-jit
+      labels: [self-hosted, linux, x64, public-pr-chaptarrng, "ng-public-run-${{ github.run_id }}"]
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - image: product-amd64
+            dockerfile: Dockerfile.cross
+            target: chaptarrng-standard
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: mp4v2,hardened-tools,chaptarrng-standard
+            no_cache: false
+          - image: product-arm64
+            dockerfile: Dockerfile.cross
+            target: chaptarrng-standard
+            platform: linux/arm64
+            runner: ubuntu-24.04-arm
+            qemu: false
+            fresh_stages: mp4v2,hardened-tools,chaptarrng-standard
+            no_cache: false
+          - image: product-armv7
+            dockerfile: Dockerfile.cross
+            target: chaptarrng-standard
+            platform: linux/arm/v7
+            runner: ubuntu-24.04
+            qemu: true
+            fresh_stages: mp4v2,hardened-tools,chaptarrng-standard
+            no_cache: false
+          - image: docker-build-input
+            dockerfile: Dockerfile.build
+            target: deps
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: docker-build-optimized-input
+            dockerfile: Dockerfile.build.optimized
+            target: dotnet-deps
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: cross-builder-input
+            dockerfile: Dockerfile.cross
+            target: deps
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: m4b-test
+            dockerfile: integration/Dockerfile.m4b-test
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: node-fixture
+            dockerfile: integration/Dockerfile.node-fixture
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: x86-handoff-fixture
+            dockerfile: integration/standalone-handoff/Dockerfile.x86
+            target: ''
+            platform: linux/386
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: python-fixture
+            dockerfile: integration/Dockerfile.python-fixture
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: qbittorrent-fixture
+            dockerfile: integration/acquisition/Dockerfile.qbittorrent
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+          - image: musl-handoff-fixture
+            dockerfile: integration/standalone-handoff/Dockerfile.musl
+            target: ''
+            platform: linux/amd64
+            runner: ubuntu-24.04
+            qemu: false
+            fresh_stages: ''
+            no_cache: true
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout trusted scan policy
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SECURITY_POLICY_SHA }}
+          path: policy
+          persist-credentials: false
+      - name: Verify trusted policy revision
+        env:
+          POLICY_SHA: ${{ env.SECURITY_POLICY_SHA }}
+        run: test "$(git -C policy rev-parse HEAD)" = "$POLICY_SHA"
+      - name: Rebuild and scan the exact source image
+        uses: ./policy/.github/actions/security-image-scan
+        with:
+          source-repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          source-sha: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          policy-sha: ${{ env.SECURITY_POLICY_SHA }}
+          image: ${{ matrix.image }}
+          dockerfile: ${{ matrix.dockerfile }}
+          target: ${{ matrix.target }}
+          platform: ${{ matrix.platform }}
+          install-qemu: ${{ matrix.platform != 'linux/amd64' }}
+          qemu-platforms: ${{ matrix.platform == 'linux/arm64' && 'arm64' || matrix.platform == 'linux/arm/v7' && 'arm' || matrix.platform == 'linux/386' && '386' || '' }}
+          fresh-stages: ${{ matrix.fresh_stages }}
+          no-cache: ${{ matrix.no_cache }}
+
+  status:
+    name: Record exact source result
+    needs: [status-pending, scan-trusted, scan-untrusted, container-images-trusted, container-images-untrusted]
+    if: >-
+      always() && !cancelled() &&
+      (
+        (
+          github.event_name == 'pull_request_target' &&
+          github.event.pull_request.base.repo.full_name == github.repository &&
+          github.event.pull_request.base.ref == 'main'
+        ) ||
+        (
+          github.event_name != 'pull_request_target' &&
+          (
+            (github.event_name == 'push' && github.ref == 'refs/heads/main') ||
+            (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.actor == 'snapetech' && (inputs.ref == '' || inputs.ref == github.sha)) ||
+            github.workflow_ref == format('{0}/.github/workflows/release.yml@refs/heads/main', github.repository)
+          )
+        )
+      )
+    runs-on: ubuntu-24.04
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: read
+      statuses: write
+    steps:
+      - name: Verify the exact PR head and all 12 image jobs before setting success
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_SHA: ${{ inputs.ref || github.event.pull_request.head.sha || github.sha }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          IS_PR_TARGET: ${{ github.event_name == 'pull_request_target' }}
+          TRUSTED_PR: ${{ github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.user.login == 'snapetech' && github.event.pull_request.user.type != 'Bot' }}
+          EVENT_HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          EVENT_USER: ${{ github.event.pull_request.user.login }}
+          EVENT_USER_TYPE: ${{ github.event.pull_request.user.type }}
+          TRUSTED_SCAN_RESULT: ${{ needs.scan-trusted.result }}
+          UNTRUSTED_SCAN_RESULT: ${{ needs.scan-untrusted.result }}
+          TRUSTED_IMAGES_RESULT: ${{ needs.container-images-trusted.result }}
+          UNTRUSTED_IMAGES_RESULT: ${{ needs.container-images-untrusted.result }}
+          TARGET_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]
           state=failure
-          if [[ "$SCAN_RESULT" == success ]]; then state=success; fi
+          description='Source or image scan failed'
+          if [[ "$IS_PR_TARGET" == true ]]; then
+            [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]
+            pr_data="$(gh api "repos/$GITHUB_REPOSITORY/pulls/$PR_NUMBER" --jq '[.state, .base.ref, .head.sha, (.head.repo.full_name // ""), .user.login, .user.type] | @tsv')"
+            IFS=$'\t' read -r pr_state base_ref current_sha current_repo current_user current_user_type <<< "$pr_data"
+            if [[ "$pr_state" != open || "$base_ref" != main || "$current_sha" != "$SOURCE_SHA" || "$current_repo" != "$EVENT_HEAD_REPO" || "$current_user" != "$EVENT_USER" || "$current_user_type" != "$EVENT_USER_TYPE" ]]; then
+              description='PR head changed or is no longer eligible'
+            elif [[ "$TRUSTED_PR" == true && "$TRUSTED_SCAN_RESULT" == success && "$TRUSTED_IMAGES_RESULT" == success && "$UNTRUSTED_SCAN_RESULT" == skipped && "$UNTRUSTED_IMAGES_RESULT" == skipped ]]; then
+              state=success
+            elif [[ "$TRUSTED_PR" != true && "$UNTRUSTED_SCAN_RESULT" == success && "$UNTRUSTED_IMAGES_RESULT" == success && "$TRUSTED_SCAN_RESULT" == skipped && "$TRUSTED_IMAGES_RESULT" == skipped ]]; then
+              state=success
+            fi
+          elif [[ "$TRUSTED_SCAN_RESULT" == success && "$TRUSTED_IMAGES_RESULT" == success && "$UNTRUSTED_SCAN_RESULT" == skipped && "$UNTRUSTED_IMAGES_RESULT" == skipped ]]; then
+            state=success
+          fi
+
+          if [[ "$state" == success ]]; then
+            jobs_json="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/jobs?per_page=100" --jq '[.jobs[] | select(.name | startswith("Container image scan (")) | {name, conclusion}]')"
+            python3 - "$jobs_json" <<'PY'
+          import json
+          import sys
+
+          expected = {
+              "Container image scan (product-amd64)",
+              "Container image scan (product-arm64)",
+              "Container image scan (product-armv7)",
+              "Container image scan (docker-build-input)",
+              "Container image scan (docker-build-optimized-input)",
+              "Container image scan (cross-builder-input)",
+              "Container image scan (m4b-test)",
+              "Container image scan (node-fixture)",
+              "Container image scan (x86-handoff-fixture)",
+              "Container image scan (python-fixture)",
+              "Container image scan (qbittorrent-fixture)",
+              "Container image scan (musl-handoff-fixture)",
+          }
+          jobs = json.loads(sys.argv[1])
+          selected = [job for job in jobs if job["name"] in expected]
+          actual = {job["name"] for job in selected}
+          if actual != expected or any(job["conclusion"] != "success" for job in selected):
+              raise SystemExit("expected exactly 12 successful base-controlled image scans")
+          PY
+            description='Source and all 12 image scans passed'
+          fi
+
           gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$SOURCE_SHA" \
             -f "state=$state" -f context='Security audit' \
-            -f "description=Security scan: $SCAN_RESULT" \
-            -f "target_url=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+            -f "description=$description" -f "target_url=$TARGET_URL"

@@ -244,6 +244,16 @@ Linux x64 archive directory, but does not itself establish installed handoff,
 HTTP enqueue/acquisition/import, operator-media acceptance or release readiness.
 The full hosted Build runs it after the existing real-tool component cases.
 
+For local hosts where first-run schema migration exceeds the harness's health
+deadline, `--schema-config-directory /path/to/clean-config` accepts the current
+candidate's clean SQLite databases. The harness checks database integrity,
+applied migration history, and empty media, user and conversion-job tables,
+then copies each database into its new task config before starting the product.
+This keeps the test isolated while avoiding repeated migration work; it does
+not replace separate migration acceptance. Pass a clean config containing only
+`.db` files, with no WAL, SHM or journal sidecars. A single main database can
+also be supplied with `--schema-database /path/to/chaptarr.db`.
+
 After building the test assembly as in `.github/workflows/build.yml`, run it
 locally with:
 

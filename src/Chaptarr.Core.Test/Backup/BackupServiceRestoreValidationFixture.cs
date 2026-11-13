@@ -58,14 +58,10 @@ namespace Chaptarr.Core.Test.Backup
 
             public void Extract(string compressedFile, string destination)
             {
-                File.WriteAllText(Path.Combine(destination, "Config.xml"), "<Config><InstanceName>Replacement</InstanceName></Config>"); // nosemgrep: csharp.lang.security.filesystem.unsafe-path-combine.unsafe-path-combine -- destination is a test-owned extraction folder and the filename is fixed.
+                ZipFile.ExtractToDirectory(compressedFile, destination);
                 if (ExtractContents != null)
                 {
                     ExtractContents(destination);
-                }
-                else
-                {
-                    File.WriteAllText(Path.Combine(destination, "readarr.db"), "invalid"); // nosemgrep: csharp.lang.security.filesystem.unsafe-path-combine.unsafe-path-combine -- destination is a test-owned extraction folder and the filename is fixed.
                 }
             }
 
@@ -77,14 +73,6 @@ namespace Chaptarr.Core.Test.Backup
                 {
                     archive.CreateEntryFromFile(file, Path.GetFileName(file));
                 }
-            }
-        }
-
-        private sealed class TestMakeDatabaseBackup : IMakeDatabaseBackup
-        {
-            public void BackupDatabase(IDatabase database, string targetDirectory)
-            {
-                File.WriteAllText(Path.Combine(targetDirectory, "chaptarr.db"), "database backup"); // nosemgrep: csharp.lang.security.filesystem.unsafe-path-combine.unsafe-path-combine -- targetDirectory is a test-owned temporary folder and the filename is fixed.
             }
         }
 
@@ -156,6 +144,30 @@ namespace Chaptarr.Core.Test.Backup
             return _subject;
         }
 
+        private string CreateBackupArchive(string archiveName, bool includeInvalidDatabase)
+        {
+            var configPath = Path.Combine(_tempFolder, "Config.xml");
+            var databasePath = Path.Combine(_tempFolder, "readarr.db");
+            var archivePath = Path.Combine(_tempFolder, archiveName);
+            File.WriteAllText(configPath, "<Config><InstanceName>Replacement</InstanceName></Config>");
+
+            var files = new List<string> { configPath };
+            if (includeInvalidDatabase)
+            {
+                File.WriteAllText(databasePath, "invalid");
+                files.Add(databasePath);
+            }
+
+            _archiveService.CreateZip(archivePath, files);
+            File.Delete(configPath);
+            if (includeInvalidDatabase)
+            {
+                File.Delete(databasePath);
+            }
+
+            return archivePath;
+        }
+
         [TearDown]
         public void TearDown()
         {
@@ -171,7 +183,8 @@ namespace Chaptarr.Core.Test.Backup
             var configPath = _appFolderInfo.GetConfigPath();
             File.WriteAllText(configPath, "original");
 
-            Assert.Throws<RestoreBackupFailedException>(() => _subject.Restore(Path.Combine(_tempFolder, "backup.zip")));
+            var archivePath = CreateBackupArchive("backup.zip", includeInvalidDatabase: true);
+            Assert.Throws<RestoreBackupFailedException>(() => _subject.Restore(archivePath));
 
             Assert.Multiple(() =>
             {
@@ -203,9 +216,20 @@ namespace Chaptarr.Core.Test.Backup
             var configPath = _appFolderInfo.GetConfigPath();
             File.WriteAllText(configPath, "config backup");
 
+            var databasePath = Path.Combine(_tempFolder, "chaptarr.db");
+            var databaseConnectionString = new SqliteConnectionStringBuilder { DataSource = databasePath }.ToString();
+            var database = new Database("test", () => new SqliteConnection(databaseConnectionString));
+            using (var connection = database.OpenConnection())
+            {
+                connection.Open();
+                using var command = connection.CreateCommand();
+                command.CommandText = "CREATE TABLE BackupFixture (Id INTEGER PRIMARY KEY)";
+                command.ExecuteNonQuery();
+            }
+
             var service = new BackupService(
-                new MainDatabase(null),
-                new TestMakeDatabaseBackup(),
+                new MainDatabase(database),
+                new MakeDatabaseBackup(LogManager.GetCurrentClassLogger()),
                 new TestDiskTransferService(),
                 new TestDiskProvider(new FileSystem()),
                 _appFolderInfo,
@@ -229,8 +253,7 @@ namespace Chaptarr.Core.Test.Backup
         [Test]
         public void should_stage_a_supported_bookshelf_database_from_a_legacy_zip_backup()
         {
-            var archivePath = Path.Combine(_tempFolder, "readarr_backup_v0.4.21.71_2026.10.19_12.00.00.zip");
-            File.WriteAllText(archivePath, "fixture archive");
+            var archivePath = CreateBackupArchive("readarr_backup_v0.4.21.71_2026.10.19_12.00.00.zip", includeInvalidDatabase: false);
             _archiveService.ExtractContents = destination => CreateBookshelfDatabase(Path.Combine(destination, "readarr.db"));
             _subject = CreateSubject(new DatabaseRestorationService(new TestDiskProvider(new FileSystem()), _appFolderInfo));
 

@@ -61,6 +61,16 @@ def main():
     parser.add_argument("--candidate-revision", required=True)
     parser.add_argument("--image", required=True, help="Previously built integration/Dockerfile.m4b-test image")
     parser.add_argument("--work-dir", type=Path, required=True, help="New task-owned directory; all evidence is retained")
+    parser.add_argument(
+        "--schema-database",
+        type=Path,
+        help="Optional clean, current-schema native database from this candidate; it is copied into the new test config",
+    )
+    parser.add_argument(
+        "--schema-config-directory",
+        type=Path,
+        help="Optional clean config directory containing current-schema SQLite databases from this candidate",
+    )
     args = parser.parse_args()
     candidate = args.candidate_directory.resolve(strict=True)
     root = args.work_dir.resolve()
@@ -71,6 +81,51 @@ def main():
         elf = stream.read(20)
     require(elf[:5] == b"\x7fELF\x02" and elf[18:20] == b"\x3e\x00", "This tool image requires a native Linux x64 application")
     image_id = command(["docker", "image", "inspect", args.image, "--format", "{{.Id}}"]).strip()
+    require(not (args.schema_database and args.schema_config_directory), "Choose one schema seed option")
+    if args.schema_config_directory:
+        schema_directory = args.schema_config_directory.resolve(strict=True)
+        require(schema_directory.is_dir(), "The schema config seed must be a directory")
+        schema_seeds = sorted(path for path in schema_directory.glob("*.db") if path.is_file())
+        require(schema_seeds, "The schema config seed contains no SQLite databases")
+    elif args.schema_database:
+        schema_seeds = [args.schema_database.resolve(strict=True)]
+    else:
+        schema_seeds = []
+    schema_seed_hashes = {}
+    schema_seed_versions = {}
+    has_conversion_jobs_database = False
+    operator_table_queries = (
+        ("Authors", 'SELECT COUNT(*) FROM "Authors"'),
+        ("Books", 'SELECT COUNT(*) FROM "Books"'),
+        ("BookFiles", 'SELECT COUNT(*) FROM "BookFiles"'),
+        ("Series", 'SELECT COUNT(*) FROM "Series"'),
+        ("Users", 'SELECT COUNT(*) FROM "Users"'),
+        ("RootFolders", 'SELECT COUNT(*) FROM "RootFolders"'),
+        ("DownloadClients", 'SELECT COUNT(*) FROM "DownloadClients"'),
+        ("Indexers", 'SELECT COUNT(*) FROM "Indexers"'),
+        ("Notifications", 'SELECT COUNT(*) FROM "Notifications"'),
+    )
+    for schema_seed in schema_seeds:
+        require(schema_seed.is_file(), "Every schema seed must be a database file")
+        for suffix in ("-wal", "-shm", "-journal"):
+            require(not Path(str(schema_seed) + suffix).exists(), f"The schema seed has a SQLite {suffix} sidecar")
+        with sqlite3.connect(schema_seed.as_uri() + "?mode=ro", uri=True) as connection:
+            require(connection.execute("PRAGMA integrity_check").fetchone() == ("ok",), f"Invalid native schema seed database: {schema_seed.name}")
+            tables = {row[0] for row in connection.execute("SELECT name FROM sqlite_master WHERE type='table'")}
+            if "VersionInfo" in tables:
+                version = connection.execute('SELECT MAX("Version") FROM "VersionInfo"').fetchone()[0]
+                require(version is not None and version > 0, f"The schema seed has no applied migrations: {schema_seed.name}")
+                schema_seed_versions[schema_seed.name] = version
+            if "ConversionJobs" in tables:
+                has_conversion_jobs_database = True
+                require(schema_seed.name == "chaptarr.db", "The conversion job database must be named chaptarr.db")
+                require(connection.execute('SELECT COUNT(*) FROM "ConversionJobs"').fetchone() == (0,), "The schema seed must not contain conversion jobs")
+            for table, query in operator_table_queries:
+                if table in tables:
+                    require(connection.execute(query).fetchone() == (0,), f"The schema seed contains operator data in {table}")
+        schema_seed_hashes[schema_seed.name] = sha256(schema_seed)
+    if schema_seeds:
+        require(has_conversion_jobs_database, "The schema seed must include the initialized chaptarr.db database")
     root.mkdir(parents=True, mode=0o700)
     evidence = root / "evidence"
     evidence.mkdir()
@@ -107,11 +162,14 @@ def main():
             "candidateRevision": args.candidate_revision, "candidateDirectory": str(candidate),
             "applicationHashes": {file: sha256(candidate / file) for file in ["Chaptarr", "Chaptarr.dll", "Chaptarr.Core.dll", "Chaptarr.Host.dll", "Chaptarr.Api.V1.dll"]},
             "toolImage": args.image, "toolImageId": image_id,
+            "schemaSeedSha256": schema_seed_hashes, "schemaSeedVersions": schema_seed_versions,
             "scope": result["fixture"], "installedArchiveAcceptance": False,
         }, indent=2) + "\n")
         config, sources, tool = (root / part for part in ["config", "source", "tool"])
         for directory in [config, sources, tool]:
             directory.mkdir()
+        for schema_seed in schema_seeds:
+            shutil.copy2(schema_seed, config / schema_seed.name)
         (config / "config.xml").write_text("<Config><BindAddress>127.0.0.1</BindAddress><Port>18787</Port><EnableSsl>False</EnableSsl><LaunchBrowser>False</LaunchBrowser></Config>")
         wrapper = tool / "ffmpeg"
         wrapper.write_text("""#!/bin/sh

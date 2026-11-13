@@ -16,11 +16,44 @@ RUN set -eux; \
     apk del .mp4v2-build-deps; \
     /usr/local/bin/mp4tags --version
 
-FROM mcr.microsoft.com/dotnet/sdk:10.0.404@sha256:fe0fd4e93bd2fbb47c883b7a6369e5c8d3db8bf01cdc5981f6ee35fbdf3ff4fb
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/aspnet:10.0.15-resolute@sha256:b5e72aa3bc183d98a0fc5739c583201a4b97bdbaadcb9dcd1b69d428a8bd172b AS hardened-tools
+ARG M4B_TOOL_URL=https://github.com/sandreas/m4b-tool/releases/download/v0.5.2/m4b-tool.phar
+ARG M4B_TOOL_SHA256=a3ea9b81a4e8ce10ecc85c1fc712c982ba2622f2ed0318fb558dadfad4a590fa
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+        build-essential curl libcap-dev libselinux1-dev meson nasm ninja-build pkg-config xz-utils \
+    && rm -rf /var/lib/apt/lists/*
+COPY packaging/scripts/build-hardened-linux-tools.sh /tmp/build-hardened-linux-tools.sh
+RUN M4B_TOOL_URL="$M4B_TOOL_URL" M4B_TOOL_SHA256="$M4B_TOOL_SHA256" bash /tmp/build-hardened-linux-tools.sh \
+    && rm /tmp/build-hardened-linux-tools.sh
+COPY packaging/scripts/build-hardened-expat-package.sh /tmp/build-hardened-expat-package.sh
+RUN bash /tmp/build-hardened-expat-package.sh && rm /tmp/build-hardened-expat-package.sh
+
+FROM mcr.microsoft.com/dotnet/sdk:10.0.404-resolute@sha256:f685dd6b5a970778b53cead9a11cf54206c4b4fc3c97e4424a59b8bff9aa43d7
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
-        ca-certificates ffmpeg php-cli php-mbstring php-xml php-json php-curl php-zip wget \
+        ca-certificates php-cli php-mbstring php-xml php-json php-curl php-zip \
     && rm -rf /var/lib/apt/lists/*
+
+# The SDK base carries these command-line tools, but the real-tool test image
+# only needs dotnet, PHP and the pinned media utilities.
+RUN apt-get purge -y git git-man wget \
+    && rm -f /usr/bin/pebble
+
+COPY --from=hardened-tools /tmp/chaptarr-libexpat1.deb /tmp/chaptarr-libexpat1.deb
+RUN dpkg -i /tmp/chaptarr-libexpat1.deb \
+    && rm /tmp/chaptarr-libexpat1.deb \
+    && ldconfig \
+    && dpkg-query -W libexpat1 | grep -F '2.10.0-1chaptarr1'
+
+COPY --from=hardened-tools /usr/local/bin/ffmpeg /usr/bin/ffmpeg
+COPY --from=hardened-tools /usr/local/bin/ffprobe /usr/bin/ffprobe
+COPY --from=hardened-tools /usr/local/bin/m4b-tool /usr/local/bin/m4b-tool
+COPY --from=hardened-tools /usr/local/lib/libmp3lame.so* /usr/local/lib/
+COPY --from=hardened-tools /usr/local/share/licenses/lame /usr/local/share/licenses/lame/
+RUN ldconfig \
+    && ldd /usr/bin/ffmpeg | grep -F 'libmp3lame.so.0 => /usr/local/lib/libmp3lame.so.0' \
+    && /usr/bin/ffmpeg -hide_banner -version | grep -F 'ffmpeg version 9.0.2' \
+    && /usr/bin/ffmpeg -hide_banner -h encoder=libmp3lame >/dev/null
 
 COPY --from=mp4v2 /usr/local/bin/mp4* /opt/mp4v2/bin/
 COPY --from=mp4v2 /usr/local/lib/libmp4v2* /opt/mp4v2/lib/
@@ -42,11 +75,4 @@ RUN set -eux; \
     mp4tags --version; \
     mp4chaps --version
 
-ARG M4B_TOOL_URL=https://github.com/sandreas/m4b-tool/releases/download/v0.5.2/m4b-tool.phar
-ARG M4B_TOOL_SHA256=a3ea9b81a4e8ce10ecc85c1fc712c982ba2622f2ed0318fb558dadfad4a590fa
-
-RUN set -eux; \
-    wget -O /usr/local/bin/m4b-tool "$M4B_TOOL_URL"; \
-    echo "${M4B_TOOL_SHA256}  /usr/local/bin/m4b-tool" | sha256sum -c -; \
-    chmod +x /usr/local/bin/m4b-tool; \
-    php /usr/local/bin/m4b-tool --version
+RUN php /usr/local/bin/m4b-tool --version
