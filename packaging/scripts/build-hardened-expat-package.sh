@@ -35,7 +35,7 @@ for library in "$work_dir/install/usr/lib/${multiarch}"/libexpat.so.1*; do
     install -D -m 0755 "$library" "$package_root/usr/lib/${multiarch}/$(basename "$library")"
 done
 test -e "$package_root/usr/lib/${multiarch}/libexpat.so.1"
-install -m 0644 "$work_dir/expat-${expat_version}/expat/COPYING" "$package_root/usr/share/doc/libexpat1/copyright"
+install -m 0644 "$work_dir/expat-${expat_version}/COPYING" "$package_root/usr/share/doc/libexpat1/copyright"
 
 cat > "$package_root/DEBIAN/control" <<EOF
 Package: libexpat1
