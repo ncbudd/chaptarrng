@@ -1084,7 +1084,7 @@ namespace NzbDrone.Core.MediaFiles.BookImport
                 .Any(candidate => candidate == asin);
         }
 
-        private static string NormalizeCatalogIsbn(string value)
+        internal static string NormalizeCatalogIsbn(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
             {

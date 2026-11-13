@@ -1228,7 +1228,8 @@ namespace NzbDrone.Core.MediaFiles
                     continue;
                 }
 
-                if (IsSameRecording(expectedEdition, matchedEdition))
+                if (IsSameRecording(expectedEdition, matchedEdition) &&
+                    TryRetargetToExpectedEdition(localBook, matchedBook, expectedEdition))
                 {
                     // Providers list one recording several times (Audible regions, Hardcover and
                     // Goodreads copies), and uploads rarely say which listing they are. Files that
@@ -1240,14 +1241,27 @@ namespace NzbDrone.Core.MediaFiles
                     continue;
                 }
 
-                if (IsEquivalentEbookTitle(expectedEdition, matchedEdition))
+                // File metadata can identify the pinned provider edition even when the title matcher
+                // selected a same-book sibling listing. Only use this evidence within the same book;
+                // an embedded ISBN must never retarget a file across library books.
+                if (expectedEdition.IsEbook && matchedEdition.IsEbook &&
+                    HasExactExpectedEditionIsbn(localBook, expectedEdition) &&
+                    TryRetargetToExpectedEdition(localBook, matchedBook, expectedEdition))
+                {
+                    _logger.Debug("Import matched a different listing with the grabbed edition ISBN {0}; retargeting to edition {1}",
+                        expectedEdition.Isbn13 ?? expectedEdition.Isbn10, expectedEdition.Id);
+                    continue;
+                }
+
+                if (IsEquivalentEbookTitle(expectedEdition, matchedEdition) &&
+                    TryRetargetToExpectedEdition(localBook, matchedBook, expectedEdition))
                 {
                     _logger.Debug("Import matched equivalent ebook edition {0} instead of grabbed edition {1}; accepting", matchedEdition.Id, expectedEdition.Id);
                     continue;
                 }
 
                 decision.Reject(new Rejection(
-                    $"Completed download was grabbed for edition '{expectedEdition.Title}', but import matched edition '{matchedEdition.Title}'. Chaptarr could not verify the expected edition."));
+                    $"Completed download was grabbed for edition {FormatEditionLabel(expectedEdition)}, but import matched edition {FormatEditionLabel(matchedEdition)}. Chaptarr could not verify the expected edition."));
             }
         }
 
@@ -1274,6 +1288,15 @@ namespace NzbDrone.Core.MediaFiles
                 return false;
             }
 
+            var expectedLanguage = EditionMetadataProfileFilter.NormalizeLanguageBucket(expected.Language);
+            var matchedLanguage = EditionMetadataProfileFilter.NormalizeLanguageBucket(matched.Language);
+            if (string.IsNullOrWhiteSpace(expectedLanguage) ||
+                string.IsNullOrWhiteSpace(matchedLanguage) ||
+                !string.Equals(expectedLanguage, matchedLanguage, StringComparison.OrdinalIgnoreCase))
+            {
+                return false;
+            }
+
             var expectedTitle = ReleaseTitleMatchScorer.TryGetGenericNovelBaseTitle(expected.Title, out var expectedBase)
                 ? expectedBase : expected.Title;
             var matchedTitle = ReleaseTitleMatchScorer.TryGetGenericNovelBaseTitle(matched.Title, out var matchedBase)
@@ -1282,6 +1305,47 @@ namespace NzbDrone.Core.MediaFiles
             var expectedTokens = ReleaseTitleMatchScorer.Tokenize(expectedTitle);
             var matchedTokens = ReleaseTitleMatchScorer.Tokenize(matchedTitle);
             return expectedTokens.Count > 0 && expectedTokens.SequenceEqual(matchedTokens, StringComparer.OrdinalIgnoreCase);
+        }
+
+        internal static bool HasExactExpectedEditionIsbn(LocalBook localBook, Edition expectedEdition)
+        {
+            if (localBook?.RawTags?.AllTags == null || expectedEdition == null)
+            {
+                return false;
+            }
+
+            var expectedIsbns = new[] { expectedEdition.Isbn10, expectedEdition.Isbn13 }
+                .Select(UnmappedCatalogSuggestionHelper.NormalizeCatalogIsbn)
+                .Where(isbn => isbn != null)
+                .ToHashSet(StringComparer.Ordinal);
+            if (expectedIsbns.Count == 0)
+            {
+                return false;
+            }
+
+            var isbnTagNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+            {
+                "ISBN", "ISBN13", "ISBN10", "ISBN-13", "ISBN-10", "ISBN_13", "ISBN_10"
+            };
+
+            return localBook.RawTags.AllTags
+                .Where(pair => isbnTagNames.Contains(pair.Key))
+                .SelectMany(pair => pair.Value ?? new List<string>())
+                .Select(UnmappedCatalogSuggestionHelper.NormalizeCatalogIsbn)
+                .Any(isbn => isbn != null && expectedIsbns.Contains(isbn));
+        }
+
+        internal static bool TryRetargetToExpectedEdition(LocalBook localBook, Book matchedBook, Edition expectedEdition)
+        {
+            if (localBook?.Book == null || matchedBook == null || expectedEdition == null || expectedEdition.Id <= 0 ||
+                localBook.Edition == null || localBook.Edition.IsEbook != expectedEdition.IsEbook || matchedBook.Id <= 0 ||
+                localBook.Book.Id != matchedBook.Id || expectedEdition.BookId != matchedBook.Id)
+            {
+                return false;
+            }
+
+            HydrateEditionForImport(localBook, expectedEdition);
+            return true;
         }
 
         private Edition ResolveExpectedTrackedEdition(Book book, DownloadClientItem downloadClientItem)
