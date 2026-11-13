@@ -19,7 +19,7 @@ namespace Chaptarr.Api.V1.Logs
         public UpdateLogFileController(IAppFolderInfo appFolderInfo,
                                    IDiskProvider diskProvider,
                                    IConfigFileProvider configFileProvider)
-            : base(diskProvider, configFileProvider, "update")
+            : base(diskProvider, configFileProvider, "log/file/update")
         {
             _appFolderInfo = appFolderInfo;
             _diskProvider = diskProvider;

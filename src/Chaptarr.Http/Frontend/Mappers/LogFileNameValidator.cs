@@ -36,7 +36,7 @@ namespace Chaptarr.Http.Frontend.Mappers
             }
 
             // Only allow the same conservative character set as the API route constraint:
-            // `[-.a-zA-Z0-9]+\.txt`
+            // `[-_.a-zA-Z0-9]+\.txt`
             var baseName = Path.GetFileNameWithoutExtension(fileName);
             if (string.IsNullOrWhiteSpace(baseName))
             {
@@ -57,7 +57,7 @@ namespace Chaptarr.Http.Frontend.Mappers
             {
                 var isAsciiLetter = (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z');
                 var isDigit = ch >= '0' && ch <= '9';
-                if (!isAsciiLetter && !isDigit && ch != '-' && ch != '.')
+                if (!isAsciiLetter && !isDigit && ch != '-' && ch != '_' && ch != '.')
                 {
                     return false;
                 }

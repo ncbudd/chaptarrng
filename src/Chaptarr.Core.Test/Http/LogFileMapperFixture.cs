@@ -28,6 +28,7 @@ namespace Chaptarr.Core.Test.Http
 
         [TestCase("/logfile/chaptarr.txt", true)]
         [TestCase("/logfile/CHAPTARR.TXT", true)]
+        [TestCase("/logfile/chaptarr.debug_4990.txt", true)]
         [TestCase("/logfile/report.log", false)]
         [TestCase("/logfile/CON.txt", false)]
         [TestCase("/logfile/trace.txt:evil", false)]
@@ -45,6 +46,7 @@ namespace Chaptarr.Core.Test.Http
         }
 
         [TestCase("/updatelogfile/update.txt", true)]
+        [TestCase("/updatelogfile/update_debug_1.txt", true)]
         [TestCase("/updatelogfile/LPT1.txt", false)]
         [TestCase("/updatelogfile/update.txt:ads", false)]
         public void update_log_file_mapper_should_share_the_same_safe_filename_rules(string resourceUrl, bool expected)

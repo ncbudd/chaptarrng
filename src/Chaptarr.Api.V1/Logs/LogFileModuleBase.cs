@@ -10,7 +10,7 @@ namespace Chaptarr.Api.V1.Logs
 {
     public abstract class LogFileControllerBase : Controller
     {
-        protected const string LOGFILE_ROUTE = @"/(?<filename>[-.a-zA-Z0-9]+?\.txt)";
+        protected const string LOGFILE_ROUTE = @"/(?<filename>[-_.a-zA-Z0-9]+?\.txt)";
         protected string _resource;
 
         private readonly IDiskProvider _diskProvider;
@@ -50,7 +50,7 @@ namespace Chaptarr.Api.V1.Logs
             return result.OrderByDescending(l => l.LastWriteTime).ToList();
         }
 
-        [HttpGet(@"{filename:regex([[-.a-zA-Z0-9]]+?\.txt)}")]
+        [HttpGet(@"{filename:regex([[-_.a-zA-Z0-9]]+?\.txt)}")]
         public IActionResult GetLogFileResponse(string filename)
         {
             LogManager.Flush();
