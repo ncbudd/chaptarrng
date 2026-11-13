@@ -484,7 +484,7 @@ jobs:
 
     - name: Build tool-enabled M4B test image
       if: matrix.platform == 'linux-x64'
-      run: docker build -f integration/Dockerfile.m4b-test -t chaptarrng-m4b-test:ci integration
+      run: docker build -f integration/Dockerfile.m4b-test -t chaptarrng-m4b-test:ci .
 
     - name: Test real M4B merge, fallback, and restart recovery
       if: matrix.platform == 'linux-x64'

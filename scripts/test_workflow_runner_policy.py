@@ -41,6 +41,34 @@ def step_block(source: str, name: str) -> str:
 
 
 class WorkflowRunnerPolicyTests(unittest.TestCase):
+    def test_security_gate_scans_builder_inputs_and_requires_the_full_image_matrix(self) -> None:
+        workflow_dir = WORKFLOW.parent
+        security_gate = (workflow_dir / "security-gate.yml").read_text(encoding="utf-8")
+        status_workflow = (workflow_dir / "security-audit-status.yml").read_text(encoding="utf-8")
+        image_job = job_block(security_gate, "container-images")
+        image_matrix = image_job.split("        include:", 1)[1].split("    permissions:", 1)[0]
+        image_count = sum(line.strip().startswith("- image:") for line in image_matrix.splitlines())
+        expected = re.search(r"EXPECTED_IMAGE_SCANS:\s*['\"]?(\d+)", status_workflow)
+
+        self.assertIsNotNone(expected)
+        self.assertEqual(image_count, int(expected.group(1)))
+        self.assertIn("image: docker-build-input", image_matrix)
+        self.assertIn("image: docker-build-optimized-input", image_matrix)
+        self.assertIn("image: cross-builder-input", image_matrix)
+        self.assertIn("target: deps", image_matrix)
+        self.assertIn("target: dotnet-deps", image_matrix)
+        self.assertIn("needs: [scan, container-images]", security_gate)
+        self.assertIn('"$IMAGE_SCAN_RESULT" == success', security_gate)
+        self.assertEqual(security_gate.count('[[ "$REQUESTED_SHA" =~ ^[0-9a-fA-F]{40}$ ]]'), 2)
+        self.assertIn('[[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]', security_gate)
+
+    def test_semgrep_workflows_share_the_current_digest_pinned_image(self) -> None:
+        workflow_dir = WORKFLOW.parent
+        image = "semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d"
+        for name in ("security-gate.yml", "semgrep-community.yml"):
+            source = (workflow_dir / name).read_text(encoding="utf-8")
+            self.assertIn(image, source, name)
+
     def test_build_uses_only_dispatch_and_owner_pr_routes(self) -> None:
         source = WORKFLOW.read_text(encoding="utf-8")
         self.assertNotRegex(source, r"(?m)^  push:")
@@ -111,6 +139,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
             "semgrep-community.yml",
             "trivy-filesystem.yml",
             "discord-announcement.yml",
+            "security-gate.yml",
         }
         for workflow_path in sorted(workflow_dir.glob("*.yml")):
             source = workflow_path.read_text(encoding="utf-8")
@@ -147,6 +176,11 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
                         self.assertIn("runner: ubuntu-24.04-arm", installed)
                         self.assertIn("runner: ubuntu-24.04", installed)
                         continue
+                if workflow_path.name == "security-gate.yml" and line.strip() == "runs-on: ${{ matrix.runner }}":
+                    image_scans = job_block(source, "container-images")
+                    self.assertIn("runner: ubuntu-24.04-arm", image_scans)
+                    self.assertIn("runner: ubuntu-24.04", image_scans)
+                    continue
                 self.assertNotRegex(
                     line,
                     r"runs-on:.*\b(?:ubuntu-latest|windows-latest|macos-latest)",

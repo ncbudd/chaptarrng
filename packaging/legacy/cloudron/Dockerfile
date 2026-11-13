@@ -9,8 +9,9 @@ USER root
 # migration readiness window. Keep a local proxy on the stable port while the
 # app starts on 8788.
 RUN apt-get update \
+    && apt-get upgrade -y \
     && apt-get install -y --no-install-recommends \
-        acl bash coreutils findutils mawk nginx-light sqlite3 tar \
+        acl bash coreutils curl findutils mawk nginx-light sqlite3 tar \
     && rm -rf /var/lib/apt/lists/*
 
 # Create the service identity at image build time: Cloudron makes /etc read-only.
@@ -42,7 +43,7 @@ ENV CHAPTARR_BOOKSHELF_COMPATIBILITY=true \
 EXPOSE 8787
 
 HEALTHCHECK --interval=30s --timeout=10s --start-period=245m --retries=3 \
-    CMD wget --no-proxy --quiet --output-document=/dev/null http://127.0.0.1:8787/ping
+    CMD ["sh", "-ec", "status=$(curl --noproxy '*' --fail --silent --show-error --output /dev/null --write-out '%{http_code}' --max-time 5 http://127.0.0.1:8787/ping); case \"$status\" in 2??) exit 0 ;; *) exit 1 ;; esac"]
 
 # Replacing ENTRYPOINT clears the base image's inherited application CMD.
 # Pass the Chaptarr command explicitly so the supervisor actually starts it.

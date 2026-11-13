@@ -1,9 +1,11 @@
 {
-  "version": "2.103.3",
-  "source": "https://github.com/cli/cli/tree/63837fb778d6a39f02be0ce76ff89f2bc8d74bdc",
-  "source_commit": "63837fb778d6a39f02be0ce76ff89f2bc8d74bdc",
-  "source_sha256": "1a64dc5be667fa8c6458c0e639292ee1a5e215854705db267882e1bcf865b335",
+  "version": "2.104.0",
+  "source": "https://github.com/cli/cli/tree/3d5a9e355a837f2f5ee78d7484c118cc1342ad1a",
+  "source_commit": "3d5a9e355a837f2f5ee78d7484c118cc1342ad1a",
+  "source_sha256": "2efd73b8567dead91626d5f1465b361d7b3c6499867cbe2e1c9faff0bc9a1f8e",
   "go_version": "1.27.4",
   "golang_x_net": "v0.62.0",
-  "golang_x_net_sum": "18ELalfM5+XNRwzM2nYqXsZQ9ByS1uhj2O/U7+5jqRY="
+  "golang_x_net_sum": "18ELalfM5+XNRwzM2nYqXsZQ9ByS1uhj2O/U7+5jqRY=",
+  "golang_x_crypto": "v0.59.0",
+  "golang_x_crypto_sum": "xS2jhqYbzNrpvkWP2YTDf4TJwBy3ykR03i8vFDxEc7c="
 }

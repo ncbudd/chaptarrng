@@ -34,17 +34,17 @@ namespace NzbDrone.Core.Books
 
         public List<BookshelfLegacyIdentityMapEntry> GetMappings(string entityType, IEnumerable<int> sourceIds)
         {
-            return GetMappingsByIds(entityType, sourceIds, "SourceId");
+            return GetMappingsByIds(entityType, sourceIds, byTargetId: false);
         }
 
         public List<BookshelfLegacyIdentityMapEntry> GetMappingsByTargetIds(string entityType, IEnumerable<int> targetIds)
         {
-            return GetMappingsByIds(entityType, targetIds, "TargetId");
+            return GetMappingsByIds(entityType, targetIds, byTargetId: true);
         }
 
-        private List<BookshelfLegacyIdentityMapEntry> GetMappingsByIds(string entityType, IEnumerable<int> ids, string idColumn)
+        private List<BookshelfLegacyIdentityMapEntry> GetMappingsByIds(string entityType, IEnumerable<int> ids, bool byTargetId)
         {
-            if (string.IsNullOrWhiteSpace(entityType) || (idColumn != "SourceId" && idColumn != "TargetId"))
+            if (string.IsNullOrWhiteSpace(entityType))
             {
                 return new List<BookshelfLegacyIdentityMapEntry>();
             }
@@ -60,27 +60,44 @@ namespace NzbDrone.Core.Books
             for (var offset = 0; offset < distinctIds.Count; offset += 500)
             {
                 var batch = distinctIds.Skip(offset).Take(500).ToList();
-                var parameters = new DynamicParameters();
-                parameters.Add("Source", SourceSystem);
-                parameters.Add("EntityType", entityType.Trim());
-                var parameterNames = new List<string>(batch.Count);
-                for (var index = 0; index < batch.Count; index++)
+                var databaseType = _database.DatabaseType;
+                var sql = (byTargetId, databaseType) switch
                 {
-                    var parameterName = $"SourceId{index}";
-                    parameterNames.Add("@" + parameterName);
-                    parameters.Add(parameterName, batch[index]);
-                }
-
-                var sql = $@"
+                    (true, DatabaseType.PostgreSQL) => @"
 SELECT ""Source"", ""EntityType"", ""SourceId"", ""TargetId"", ""MediaType""
 FROM ""BookshelfLegacyIdentityMap""
 WHERE ""Source"" = @Source
   AND LOWER(""EntityType"") = LOWER(@EntityType)
-  AND ""{idColumn}"" IN ({string.Join(", ", parameterNames)});"; // nosemgrep: csharp.lang.security.sqli.csharp-sqli.csharp-sqli -- idColumn is allow-listed to fixed column names above.
+  AND ""TargetId"" = ANY(@Ids);",
+                    (true, _) => @"
+SELECT ""Source"", ""EntityType"", ""SourceId"", ""TargetId"", ""MediaType""
+FROM ""BookshelfLegacyIdentityMap""
+WHERE ""Source"" = @Source
+  AND LOWER(""EntityType"") = LOWER(@EntityType)
+  AND ""TargetId"" IN @Ids;",
+                    (false, DatabaseType.PostgreSQL) => @"
+SELECT ""Source"", ""EntityType"", ""SourceId"", ""TargetId"", ""MediaType""
+FROM ""BookshelfLegacyIdentityMap""
+WHERE ""Source"" = @Source
+  AND LOWER(""EntityType"") = LOWER(@EntityType)
+  AND ""SourceId"" = ANY(@Ids);",
+                    _ => @"
+SELECT ""Source"", ""EntityType"", ""SourceId"", ""TargetId"", ""MediaType""
+FROM ""BookshelfLegacyIdentityMap""
+WHERE ""Source"" = @Source
+  AND LOWER(""EntityType"") = LOWER(@EntityType)
+  AND ""SourceId"" IN @Ids;"
+                };
+                var parameters = new
+                {
+                    Source = SourceSystem,
+                    EntityType = entityType.Trim(),
+                    Ids = batch.ToArray()
+                };
                 // Sorting in SQL can make SQLite scan the source-order index
                 // instead of seeking TargetId. Sort only the selected rows here,
                 // retaining each database's previous NULL ordering per batch.
-                var nullsLast = _database.DatabaseType == DatabaseType.PostgreSQL;
+                var nullsLast = databaseType == DatabaseType.PostgreSQL;
                 mappings.AddRange(connection.Query<BookshelfLegacyIdentityMapEntry>(sql, parameters)
                     .OrderBy(mapping => mapping.SourceId)
                     .ThenBy(mapping => nullsLast && !mapping.MediaType.HasValue)

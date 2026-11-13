@@ -29,6 +29,36 @@ enable a legacy feed as part of this acceptance exercise.
 
 ## What is already validated
 
+### Current local security candidate — 2026-11-13
+
+The local `0.9.1001` FreeBSD x64 archive built with `.NET 10.0.15` runtime
+packs passed installed handoff on FreeBSD 15.1-RELEASE-p6 amd64. Candidate
+archive SHA-256:
+`e87ec939211a4737fe400b9ec59d0218ab96f83740db8338ff52ad29bffa580d`.
+Predecessor `.76` archive SHA-256:
+`129fb321342e9bfe36a26429e138f88380ee5429e81f84a75a6f4488894cba89`.
+No, headless Manual, Yes with health and retained source backup, and forced-
+health-failure rollback all passed. The result and logs are retained at
+`/mnt/disks/scratch/chaptarrng-backlog-release-20261112/freebsd-evidence-current-source-20261113/evidence-pass1`.
+
+This was a dirty local candidate (`HEAD=73d145a`, `MERGE_HEAD=d066e65`, index
+tree `f51fa91`), not an exact committed release head. Repeat on the final
+committed candidate before publication. The v0.9.995 release row below still
+describes the separately published historical archive and its outstanding
+FreeBSD installed check.
+
+The current local product image scans found no HIGH or CRITICAL vulnerability
+findings, but they cover only amd64 and are not exact-head hosted acceptance.
+The security gate now rebuilds and scans the product's amd64, arm64, and arm/v7
+images plus every build and integration fixture image from the exact source
+revision. Do not report all-platform image acceptance until that hosted matrix
+passes on the committed candidate. The unpublished Cloudron migration
+candidate remains a separately gated image: its Dockerfile intentionally
+requires the exact product image digest from a released candidate, so it is
+not built in the current image matrix. Its Dockerfile is still included in the
+repository source scan. Its health check now uses bounded `curl` and requires
+a 2xx response because the standard product image removes runtime `wget`.
+
 The v0.9.995 release workflow [42715733054](https://github.com/snapetech-org/chaptarrng/actions/runs/42715733054)
 built the ten standalone archives and their SHA-256 and Sigstore sidecars,
 verified updater signatures and published the release. It passed installed

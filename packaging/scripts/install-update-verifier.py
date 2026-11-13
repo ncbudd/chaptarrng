@@ -21,7 +21,8 @@ def read_manifest():
     manifest = json.loads(path.read_text())
     required = (
         "version", "source_commit", "source_sha256", "go_version",
-        "golang_x_net", "golang_x_net_sum",
+        "golang_x_net", "golang_x_net_sum", "golang_x_crypto",
+        "golang_x_crypto_sum",
     )
     if any(not manifest.get(key) for key in required):
         raise ValueError("GitHub CLI verifier source manifest is incomplete")
@@ -111,10 +112,8 @@ def build(rid, output):
         "win-x64": ("windows", "amd64", ""),
         "win-x86": ("windows", "386", ""),
         "win-arm64": ("windows", "arm64", ""),
+        "freebsd-x64": ("freebsd", "amd64", ""),
     }
-    if rid == "freebsd-x64":
-        print("FreeBSD automatic updates require the native gh package with attestation support.")
-        return
     if rid not in targets:
         raise ValueError(f"Unsupported GitHub CLI verifier RID: {rid}")
 
@@ -128,19 +127,25 @@ def build(rid, output):
 
     with tempfile.TemporaryDirectory(prefix="chaptarrng-gh-verifier-") as work:
         source = extract_source(payload, work, manifest["source_commit"])
+        pinned_modules = (
+            ("golang.org/x/net", manifest["golang_x_net"], manifest["golang_x_net_sum"]),
+            ("golang.org/x/crypto", manifest["golang_x_crypto"], manifest["golang_x_crypto_sum"]),
+        )
         subprocess.run(
-            [go, "get", f"golang.org/x/net@{manifest['golang_x_net']}"],
+            [go, "get", *(f"{module}@{version}" for module, version, _ in pinned_modules)],
             cwd=source,
             check=True,
         )
-        expected_sum = f"golang.org/x/net {manifest['golang_x_net']} h1:{manifest['golang_x_net_sum']}"
-        if expected_sum not in (source / "go.sum").read_text(encoding="utf-8").splitlines():
-            raise RuntimeError("The patched GitHub CLI dependency failed its pinned Go checksum check")
-        selected = subprocess.check_output(
-            [go, "list", "-m", "golang.org/x/net"], cwd=source, text=True
-        ).strip().split()
-        if len(selected) != 2 or selected[1] != manifest["golang_x_net"]:
-            raise RuntimeError("The patched GitHub CLI dependency graph did not select the pinned golang.org/x/net")
+        go_sum = (source / "go.sum").read_text(encoding="utf-8").splitlines()
+        for module, version, checksum in pinned_modules:
+            expected_sum = f"{module} {version} h1:{checksum}"
+            if expected_sum not in go_sum:
+                raise RuntimeError(f"The patched GitHub CLI dependency failed its pinned {module} checksum check")
+            selected = subprocess.check_output(
+                [go, "list", "-m", module], cwd=source, text=True
+            ).strip().split()
+            if len(selected) != 2 or selected[1] != version:
+                raise RuntimeError(f"The patched GitHub CLI dependency graph did not select the pinned {module}")
 
         binary = Path(work) / filename
         env = os.environ.copy()
@@ -152,7 +157,7 @@ def build(rid, output):
         version = manifest["version"]
         ldflags = (
             f"-X github.com/cli/cli/v2/internal/build.Version={version} "
-            "-X github.com/cli/cli/v2/internal/build.Date=2026-10-26"
+            "-X github.com/cli/cli/v2/internal/build.Date=2026-11-12"
         )
         subprocess.run(
             [go, "build", "-trimpath", "-buildvcs=false", "-ldflags", ldflags, "-o", str(binary), "./cmd/gh"],
@@ -172,6 +177,8 @@ def build(rid, output):
         f"Go toolchain: {go_info}\n"
         f"golang.org/x/net: {manifest['golang_x_net']}\n"
         f"golang.org/x/net checksum: h1:{manifest['golang_x_net_sum']}\n"
+        f"golang.org/x/crypto: {manifest['golang_x_crypto']}\n"
+        f"golang.org/x/crypto checksum: h1:{manifest['golang_x_crypto_sum']}\n"
         f"Target: {goos}/{goarch}{('/v' + goarm) if goarm else ''}\n"
         f"Binary SHA-256: {binary_hash}\n"
     )

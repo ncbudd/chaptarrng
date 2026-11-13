@@ -318,7 +318,7 @@ build_linux_x86_aspnetcore() {
             DOTNET_MULTILEVEL_LOOKUP=0 PATH="$dotnet_root:$PATH" ./eng/build.sh --only-build-repo-tasks \
             "/p:SdkVersion=$aspnet_sdk"
     )
-    patch_sdk_runtime_ids "$aspnet_sdk" "$aspnet_repo/.dotnet"
+    patch_sdk_runtime_ids "$aspnet_sdk" "$dotnet_root"
     (
         cd "$aspnet_repo"
         DOTNET_INSTALL_DIR="$dotnet_root" DOTNET_ROOT="$dotnet_root" DOTNET_SDK_VERSION="$aspnet_sdk" \
@@ -326,6 +326,7 @@ build_linux_x86_aspnetcore() {
             --projects "$aspnet_repo/src/Framework/App.Runtime/src/Microsoft.AspNetCore.App.Runtime.sfxproj" /m:1 \
             "/p:OfficialBuildId=$official_build_id" \
             "/p:SdkVersion=$aspnet_sdk" \
+            /p:RuntimeIdentifier=linux-x86 \
             /p:StabilizePackageVersion=true \
             /p:CrossgenOutput=false \
             /p:PublishReadyToRun=false

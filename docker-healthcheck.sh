@@ -136,4 +136,13 @@ if [ -n "$url_base" ]; then
     url_base="/$url_base"
 fi
 
-exec wget --no-proxy --max-redirect=0 --quiet --output-document=/dev/null "http://${health_host}:${port}${url_base}/ping"
+response_code=$(curl --noproxy '*' --silent --show-error --output /dev/null \
+    --write-out '%{http_code}' --max-time 5 \
+    "http://${health_host}:${port}${url_base}/ping")
+case "$response_code" in
+    2[0-9][0-9]) ;;
+    *)
+        echo "Chaptarr health endpoint returned HTTP status $response_code." >&2
+        exit 1
+        ;;
+esac

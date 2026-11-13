@@ -1,5 +1,5 @@
 {
-  "engine": "1.184.0",
+  "engine": "1.185.0",
   "selection": "Community Edition p/default rule IDs reviewed 2026-11-09; source rules downloaded privately from immutable, checksum-pinned upstream archives.",
   "rules": 1074,
   "sources": [
