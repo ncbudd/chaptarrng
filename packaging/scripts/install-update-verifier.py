@@ -8,6 +8,7 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import shutil
+import ssl
 import subprocess
 import sys
 import tarfile
@@ -33,7 +34,9 @@ def download_source(manifest):
     commit = manifest["source_commit"]
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("GitHub CLI source commit is invalid")
-    connection = http.client.HTTPSConnection("codeload.github.com", timeout=60)
+    connection = http.client.HTTPSConnection(
+        "codeload.github.com", timeout=60, context=ssl.create_default_context()
+    )
     try:
         connection.request("GET", f"/cli/cli/tar.gz/{commit}")
         response = connection.getresponse()
