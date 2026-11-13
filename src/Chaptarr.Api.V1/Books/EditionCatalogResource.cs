@@ -53,7 +53,7 @@ namespace Chaptarr.Api.V1.Books
             return names
                 .Where(name => !string.IsNullOrWhiteSpace(name))
                 .SelectMany(name => name.Split(new[] { ',', ';', '&' }, StringSplitOptions.RemoveEmptyEntries))
-                .Select(name => name.Trim())
+                .Select(name => Regex.Replace(name.Trim(), @"\s+", " "))
                 .Where(name => name.Length > 0)
                 .Distinct(StringComparer.OrdinalIgnoreCase)
                 .ToList();

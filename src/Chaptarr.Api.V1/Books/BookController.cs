@@ -1284,6 +1284,9 @@ namespace Chaptarr.Api.V1.Books
         private List<EditionCatalogResource> GetBookshelfEditionCatalog(List<int> bookIds, ReadarrFacadeContext facadeContext)
         {
             var editions = _editionService.GetEditionsByBook(bookIds);
+            var ownedEditionIds = (_mediaFileService?.GetFilesByBooks(bookIds) ?? new List<NzbDrone.Core.MediaFiles.BookFile>())
+                .Select(file => file.EditionId)
+                .ToHashSet();
             var mappings = _bookshelfLegacyIdentityMapService?.GetMappingsByTargetIds("Edition", editions.Select(edition => edition.Id))
                 .GroupBy(mapping => mapping.TargetId)
                 .ToDictionary(group => group.Key, group => group.First().SourceId)
@@ -1297,9 +1300,10 @@ namespace Chaptarr.Api.V1.Books
                     var original = group.OrderByDescending(edition => edition.Id == group.Key)
                         .ThenBy(edition => edition.Id)
                         .First();
-                    // Bookshelf's catalog reports only already-loaded ownership and
-                    // original cover URLs; native catalogs hydrate/proxy explicitly.
-                    var resource = original.ToCatalogResource(original.BookFiles?.Any() == true, facadeContext);
+                    // Ownership comes from the batched file lookup (Edition.BookFiles is not
+                    // normally loaded); a synthetic sibling's file still marks the original edition owned.
+                    // Cover URLs stay original; native catalogs hydrate/proxy explicitly.
+                    var resource = original.ToCatalogResource(original.BookFiles?.Any() == true || group.Any(edition => ownedEditionIds.Contains(edition.Id)), facadeContext);
                     resource.EditionId = group.Key;
                     return resource;
                 })
