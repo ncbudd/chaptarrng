@@ -529,7 +529,8 @@ namespace NzbDrone.Core.Download
 
             if (!book.Title.IsNullOrWhiteSpace())
             {
-                return book.Title;
+                // Copy rows carry the canonical title, so the id is what tells the two apart.
+                return book.Id > 0 ? $"{book.Title} (BookId {book.Id})" : book.Title;
             }
 
             return book.Id > 0 ? $"BookId {book.Id}" : "unknown book";
