@@ -116,6 +116,8 @@ namespace Chaptarr.Http.Authentication
                 case "/book/paged":
                 case "/book/lookup":
                     return true;
+                case "/library/search":
+                    return IsLibrarySearchQueryAllowed(request);
                 case "/series/narrators/matrix":
                     return IsSeriesNarratorMatrixQueryAllowed(request);
                 case "/author":
@@ -132,6 +134,38 @@ namespace Chaptarr.Http.Authentication
                    IsNumericItemPath(path, "/pendingauthorimport") ||
                    IsNumericItemPath(path, "/command") ||
                    IsMediaCoverPath(path);
+        }
+
+        private static bool IsLibrarySearchQueryAllowed(HttpRequest request)
+        {
+            if (request.Query.Keys.Any(key =>
+                    !string.Equals(key, "term", StringComparison.OrdinalIgnoreCase) &&
+                    !string.Equals(key, "limit", StringComparison.OrdinalIgnoreCase) &&
+                    !string.Equals(key, "mediaType", StringComparison.OrdinalIgnoreCase)))
+            {
+                return false;
+            }
+
+            var terms = request.Query["term"];
+            if (terms.Count != 1 || string.IsNullOrWhiteSpace(terms[0]) || terms[0].Length > 256)
+            {
+                return false;
+            }
+
+            var limits = request.Query["limit"];
+            if (limits.Count > 1 ||
+                (limits.Count == 1 &&
+                 (!int.TryParse(limits[0], NumberStyles.None, CultureInfo.InvariantCulture, out var limit) ||
+                  limit is < 1 or > 50)))
+            {
+                return false;
+            }
+
+            var mediaTypes = request.Query["mediaType"];
+            return mediaTypes.Count <= 1 &&
+                   (mediaTypes.Count == 0 ||
+                    string.Equals(mediaTypes[0], "ebook", StringComparison.OrdinalIgnoreCase) ||
+                    string.Equals(mediaTypes[0], "audiobook", StringComparison.OrdinalIgnoreCase));
         }
 
         private static bool IsLegacyIdentityMapQueryAllowed(HttpRequest request)
