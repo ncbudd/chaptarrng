@@ -62,6 +62,17 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertEqual(security_gate.count('[[ "$REQUESTED_SHA" =~ ^[0-9a-fA-F]{40}$ ]]'), 2)
         self.assertIn('[[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]', security_gate)
 
+    def test_security_image_builds_are_limited_to_main_and_trusted_owner_prs(self) -> None:
+        security_gate = (WORKFLOW.parent / "security-gate.yml").read_text(encoding="utf-8")
+        image_job = job_block(security_gate, "container-images")
+        condition = image_job.split("    runs-on:", 1)[0]
+
+        self.assertIn("github.ref == 'refs/heads/main'", condition)
+        self.assertIn("inputs.ref == '' || inputs.ref == github.sha", condition)
+        self.assertIn("github.event_name == 'pull_request'", condition)
+        self.assertIn("github.event.pull_request.head.repo.full_name == github.repository", condition)
+        self.assertNotIn("github.event_name != 'pull_request'", condition)
+
     def test_semgrep_workflows_share_the_current_digest_pinned_image(self) -> None:
         workflow_dir = WORKFLOW.parent
         image = "semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d"

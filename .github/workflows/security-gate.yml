@@ -129,8 +129,12 @@ jobs:
   container-images:
     name: Container image scan (${{ matrix.image }})
     if: >-
-      github.event_name != 'pull_request' ||
       (
+        github.ref == 'refs/heads/main' &&
+        (inputs.ref == '' || inputs.ref == github.sha)
+      ) ||
+      (
+        github.event_name == 'pull_request' &&
         github.event.pull_request.head.repo.full_name == github.repository &&
         github.event.pull_request.user.login == 'snapetech' &&
         github.event.pull_request.user.type != 'Bot'
