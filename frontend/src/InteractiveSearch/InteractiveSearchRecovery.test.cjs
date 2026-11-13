@@ -119,6 +119,10 @@ function makeMocks() {
       default: (error, fallback) => error?.message || fallback
     }],
     ['Utilities/String/translate', { __esModule: true, default: (key) => key }],
+    ['Utilities/String/translateServerMessage', {
+      __esModule: true,
+      translateServerMessageById: () => null
+    }],
     ['./FilterWarning', { __esModule: true, default: 'FilterWarning' }],
     ['./InteractiveSearchMediaTypeToggle', { __esModule: true, default: 'InteractiveSearchMediaTypeToggle' }],
     ['./InteractiveSearchRow', { __esModule: true, default: 'InteractiveSearchRow' }],
@@ -133,13 +137,13 @@ test('interactive search error is announced and offers a working retry', () => {
     searchPayload: { bookId: 17, initialMediaType: 'ebook' },
     isFetching: false,
     isPopulated: false,
-    error: { message: 'Indexer is offline' },
+    error: { responseJSON: { message: 'Indexer is offline' } },
     totalReleasesCount: 0,
     items: [],
     hiddenItems: [],
-    onSortPress() {},
-    onGrabPress() {},
-    onToggleBypass() {},
+    onSortPress: () => null,
+    onGrabPress: () => null,
+    onToggleBypass: () => null,
     onRetryPress: () => retries++
   });
   const output = component.render();

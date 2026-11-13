@@ -62,6 +62,7 @@ function loadComponent() {
     ['react', { __esModule: true, default: React, Component }],
     ['prop-types', { __esModule: true, default: PropTypes }],
     ['Components/Alert', { __esModule: true, default: 'Alert' }],
+    ['Components/BidiText', { __esModule: true, default: 'BidiText' }],
     ['Components/Form/CheckInput', { __esModule: true, default: 'CheckInput' }],
     ['Components/Link/Button', { __esModule: true, default: 'Button' }],
     ['Components/Loading/LoadingIndicator', { __esModule: true, default: 'LoadingIndicator' }],
@@ -73,6 +74,10 @@ function loadComponent() {
     ['Components/Table/TableBody', { __esModule: true, default: 'TableBody' }],
     ['Helpers/Props', { kinds: { DANGER: 'DANGER', INFO: 'INFO', WARNING: 'WARNING' } }],
     ['Utilities/String/translate', { __esModule: true, default: (key) => key }],
+    ['Utilities/String/translateServerMessage', {
+      __esModule: true,
+      translateServerMessageById: () => null
+    }],
     ['./NarratorSearchRow', { __esModule: true, default: 'NarratorSearchRow' }],
     ['./NarratorSearchModalContent.css', { __esModule: true, default: styles }]
   ]);
@@ -115,9 +120,9 @@ function renderNarratorSearch(overrides = {}) {
     discovery: {},
     isSearching: false,
     isSettingPreferred: false,
-    onNarratorSelect() {},
-    onRefreshPress() {},
-    onModalClose() {},
+    onNarratorSelect: () => null,
+    onRefreshPress: () => null,
+    onModalClose: () => null,
     ...overrides
   });
 
@@ -134,7 +139,9 @@ test('narrator discovery failure announces the error and exposes its refresh cal
   const retryButton = findElements(alert, (element) => element.type === 'Button')[0];
 
   assert.equal(alert.props.role, 'alert');
-  assert.equal(alert.props.children[0], 'Provider is offline');
+  assert.equal(alert.props.children[0].type, 'BidiText');
+  assert.equal(alert.props.children[0].props.lang, 'und');
+  assert.equal(alert.props.children[0].props.children, 'Provider is offline');
   assert.equal(retryButton.props.children, 'Retry');
   retryButton.props.onPress();
   assert.equal(retries, 1);
