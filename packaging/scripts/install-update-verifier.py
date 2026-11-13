@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build a checksum-pinned GitHub CLI for Sigstore bundle verification."""
 import hashlib
+import http.client
 import io
 import json
 import os
@@ -11,7 +12,6 @@ import subprocess
 import sys
 import tarfile
 import tempfile
-import urllib.request
 
 
 MAX_SOURCE_ARCHIVE_SIZE = 128 * 1024 * 1024
@@ -33,9 +33,18 @@ def download_source(manifest):
     commit = manifest["source_commit"]
     if not re.fullmatch(r"[0-9a-f]{40}", commit):
         raise ValueError("GitHub CLI source commit is invalid")
-    url = f"https://github.com/cli/cli/archive/{commit}.tar.gz"
-    with urllib.request.urlopen(url, timeout=60) as response:
+    connection = http.client.HTTPSConnection("codeload.github.com", timeout=60)
+    try:
+        connection.request("GET", f"/cli/cli/tar.gz/{commit}")
+        response = connection.getresponse()
+        if response.status != 200:
+            raise RuntimeError(f"GitHub CLI source download failed with HTTP {response.status}")
+        content_length = response.getheader("Content-Length")
+        if content_length and content_length.isdigit() and int(content_length) > MAX_SOURCE_ARCHIVE_SIZE:
+            raise ValueError("GitHub CLI source archive exceeds the size limit")
         payload = response.read(MAX_SOURCE_ARCHIVE_SIZE + 1)
+    finally:
+        connection.close()
     if len(payload) > MAX_SOURCE_ARCHIVE_SIZE:
         raise ValueError("GitHub CLI source archive exceeds the size limit")
     if hashlib.sha256(payload).hexdigest() != manifest["source_sha256"]:
