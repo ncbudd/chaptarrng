@@ -2,41 +2,6 @@
   "version": 2,
   "dependencies": {
     "net10.0": {
-      "FluentValidation": {
-        "type": "Direct",
-        "requested": "[12.2.0, )",
-        "resolved": "12.2.0",
-        "contentHash": "DR3lFbdnKucaaj1/8zMNOACMz/64igzox1yVZSFVsLxYB5mxAB+wFP1WZ8fjwrZnbU1KA1DoMzHKYKxUfuZ4wQ=="
-      },
-      "ImpromptuInterface": {
-        "type": "Direct",
-        "requested": "[8.1.0, )",
-        "resolved": "8.1.0",
-        "contentHash": "9zWkR/vTWT3BpIYURdJ56Rey6ZetpIbe8cbNgPkMntX+0rq1CbFRzBuJ9dr1Kf8+pIQLapt7TBHCBgJym/v+gg==",
-        "dependencies": {
-          "Dynamitey": "3.0.3"
-        }
-      },
-      "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
-        "type": "Direct",
-        "requested": "[10.0.15, )",
-        "resolved": "10.0.15",
-        "contentHash": "e+YnssZ13Vs9wMi4Jvw+nA46oh+0I3bZKASmASHX4x2IQh4Ns9ilcNw30YC1lnyMLF6mIF4Fe7U0Mn0WJbr3Hg==",
-        "dependencies": {
-          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.19.2"
-        }
-      },
-      "Microsoft.Data.Sqlite": {
-        "type": "Direct",
-        "requested": "[10.0.15, )",
-        "resolved": "10.0.15",
-        "contentHash": "PtnNCUloQOLAXhB09id+0CL2c9yd+9/wi0QHCHPa+zrTKEJTdu07jlUgblFjorYhKnwcHN1VS0z75jN8vFruuQ==",
-        "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "10.0.15",
-          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.13",
-          "SQLitePCLRaw.core": "2.1.13"
-        }
-      },
       "Microsoft.SourceLink.GitHub": {
         "type": "Direct",
         "requested": "[10.0.404, )",
@@ -47,12 +12,6 @@
           "Microsoft.SourceLink.Common": "10.0.404",
           "System.IO.Hashing": "10.0.15"
         }
-      },
-      "NLog": {
-        "type": "Direct",
-        "requested": "[6.2.2, )",
-        "resolved": "6.2.2",
-        "contentHash": "Hoxigm/d7wY/+y4y2ILF2ERSojhxgLd8ASBZQbrnm52jB5NHkF4AWW5tZzMxJ/HTOp0bLwClGOokrA31iSXuMA=="
       },
       "BouncyCastle.Cryptography": {
         "type": "Transitive",
@@ -443,6 +402,11 @@
           "Microsoft.IdentityModel.Logging": "8.19.2"
         }
       },
+      "Microsoft.OpenApi": {
+        "type": "Transitive",
+        "resolved": "2.7.5",
+        "contentHash": "0FA67RSnRM4tcBKqiqVu/HPdZ9+QOKbmeRjxRUGTCjPU4C0bmUhd97Dso7Yild5P7nOV6GxJ2xrK0Kv/O9xp0w=="
+      },
       "Microsoft.SourceLink.Common": {
         "type": "Transitive",
         "resolved": "10.0.404",
@@ -466,6 +430,11 @@
         "type": "Transitive",
         "resolved": "3.0.0",
         "contentHash": "LgRC8/8plJfvr1nCPmyHNIwP4fs346doMA/UVDZvFN0RfGJdyD2uS7Dl1AydxjVLrIvad8ghozI0vYFWcfPeYQ=="
+      },
+      "NodaTime": {
+        "type": "Transitive",
+        "resolved": "3.2.2",
+        "contentHash": "dmju5W0UYC3QP/UJM0juKAZkH0HSDMp0gH91A0+mT9M0kgyM2Jm67hUZPl/WRQLq8Lijjqmdk8kyAViWFWM7dA=="
       },
       "Polly.Contrib.WaitAndRetry": {
         "type": "Transitive",
@@ -516,6 +485,14 @@
         "contentHash": "um8YSWduhhuskTG2bHfZrBqMNQOydfU8pcseT+cu5RivOGyoUbCrGXxgoRNTmRYw2VbMWnEZVVFcneZT/5dsBg==",
         "dependencies": {
           "SQLitePCLRaw.core": "3.0.5"
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger": {
+        "type": "Transitive",
+        "resolved": "10.3.1",
+        "contentHash": "ZBsi9PZbuy25lUIs+4/V8pmuMqospRAX9zVmxzCm1ZRyKiXjsUL9YCyqdi7ezfDwxKuef6P0fUgVan9sLRcDJA==",
+        "dependencies": {
+          "Microsoft.OpenApi": "2.7.5"
         }
       },
       "System.ComponentModel.Annotations": {
@@ -572,6 +549,22 @@
         "type": "Transitive",
         "resolved": "10.4.0",
         "contentHash": "7G5NzIjs7544Dit0uuvYOOAzD8E4alQS2ENPGT3HV1Ks/1r55O7X4d9g6L273n70IDkgqNdBCmrkWxJLn0xCZA=="
+      },
+      "chaptarr.api.v1": {
+        "type": "Project",
+        "dependencies": {
+          "Chaptarr.Common": "[1.0.0, )",
+          "Chaptarr.Core": "[1.0.0, )",
+          "Chaptarr.Http": "[1.0.0, )",
+          "Chaptarr.SignalR": "[1.0.0, )",
+          "FluentValidation": "[12.2.0, )",
+          "Ical.Net": "[5.2.4, )",
+          "Microsoft.SourceLink.GitHub": "[10.0.404, )",
+          "NLog": "[6.2.2, )",
+          "Swashbuckle.AspNetCore.Annotations": "[10.3.1, )",
+          "System.IO.Abstractions": "[22.3.0, )",
+          "System.Reflection.TypeExtensions": "[4.7.0, )"
+        }
       },
       "chaptarr.common": {
         "type": "Project",
@@ -633,6 +626,42 @@
           "TagLibSharp-Lidarr": "[2.4.0, )"
         }
       },
+      "chaptarr.diagnostics": {
+        "type": "Project",
+        "dependencies": {
+          "Chaptarr.Core": "[1.0.0, )",
+          "Microsoft.SourceLink.GitHub": "[10.0.404, )"
+        }
+      },
+      "chaptarr.host": {
+        "type": "Project",
+        "dependencies": {
+          "Chaptarr.Api.V1": "[1.0.0, )",
+          "Chaptarr.Common": "[1.0.0, )",
+          "Chaptarr.Core": "[1.0.0, )",
+          "Chaptarr.Diagnostics": "[1.0.0, )",
+          "Chaptarr.Http": "[1.0.0, )",
+          "Chaptarr.SignalR": "[1.0.0, )",
+          "DryIoc.Microsoft.DependencyInjection": "[6.2.0, )",
+          "DryIoc.dll": "[5.4.3, )",
+          "Microsoft.Extensions.Hosting.WindowsServices": "[10.0.15, )",
+          "Microsoft.SourceLink.GitHub": "[10.0.404, )",
+          "Swashbuckle.AspNetCore.SwaggerGen": "[10.3.1, )"
+        }
+      },
+      "chaptarr.http": {
+        "type": "Project",
+        "dependencies": {
+          "Chaptarr.Core": "[1.0.0, )",
+          "Chaptarr.SignalR": "[1.0.0, )",
+          "FluentValidation": "[12.2.0, )",
+          "ImpromptuInterface": "[8.1.0, )",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "[10.0.15, )",
+          "Microsoft.Data.Sqlite": "[10.0.15, )",
+          "Microsoft.SourceLink.GitHub": "[10.0.404, )",
+          "NLog": "[6.2.2, )"
+        }
+      },
       "chaptarr.signalr": {
         "type": "Project",
         "dependencies": {
@@ -643,6 +672,15 @@
           "NLog": "[6.2.2, )",
           "System.IO.Abstractions": "[22.3.0, )",
           "System.Security.Cryptography.Pkcs": "[10.0.15, )"
+        }
+      },
+      "chaptarr.windows": {
+        "type": "Project",
+        "dependencies": {
+          "Chaptarr.Common": "[1.0.0, )",
+          "Microsoft.SourceLink.GitHub": "[10.0.404, )",
+          "NLog": "[6.2.2, )",
+          "System.IO.FileSystem.AccessControl": "[5.0.0, )"
         }
       },
       "TagLibSharp-Lidarr": {
@@ -665,6 +703,16 @@
         "requested": "[5.4.3, )",
         "resolved": "5.4.3",
         "contentHash": "yhXOG3SOxeWYxBAWskNRDD8fzw5hriEawv4VN4WKaFHOuubiop4kxe2rkWTEyCnTgRVgxVUSQCDBBkZqwPm1iQ=="
+      },
+      "DryIoc.Microsoft.DependencyInjection": {
+        "type": "CentralTransitive",
+        "requested": "[6.2.0, )",
+        "resolved": "6.2.0",
+        "contentHash": "vR0CUZ/H/1WamB9VDHyBg8nTxqGAU8/hJo4MdDQrwfdsm1E2d9HrJNDJo+V8gAg0GXpC1vgHv7JenpehT0iybw==",
+        "dependencies": {
+          "DryIoc.dll": "5.4.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "7.0.0"
+        }
       },
       "Equ": {
         "type": "CentralTransitive",
@@ -707,6 +755,30 @@
           "FluentMigrator.Runner.Core": "8.0.1"
         }
       },
+      "FluentValidation": {
+        "type": "CentralTransitive",
+        "requested": "[12.2.0, )",
+        "resolved": "12.2.0",
+        "contentHash": "DR3lFbdnKucaaj1/8zMNOACMz/64igzox1yVZSFVsLxYB5mxAB+wFP1WZ8fjwrZnbU1KA1DoMzHKYKxUfuZ4wQ=="
+      },
+      "Ical.Net": {
+        "type": "CentralTransitive",
+        "requested": "[5.2.4, )",
+        "resolved": "5.2.4",
+        "contentHash": "KpXaIEqe4TntybCRoa0TSwkXJu7kgnFsLRj3lKSaYLYRQuos1ujyzaS0Opk7g5QZKM1Igi/2h84+FBhbmGgNeg==",
+        "dependencies": {
+          "NodaTime": "3.2.2"
+        }
+      },
+      "ImpromptuInterface": {
+        "type": "CentralTransitive",
+        "requested": "[8.1.0, )",
+        "resolved": "8.1.0",
+        "contentHash": "9zWkR/vTWT3BpIYURdJ56Rey6ZetpIbe8cbNgPkMntX+0rq1CbFRzBuJ9dr1Kf8+pIQLapt7TBHCBgJym/v+gg==",
+        "dependencies": {
+          "Dynamitey": "3.0.3"
+        }
+      },
       "IPAddressRange": {
         "type": "CentralTransitive",
         "requested": "[6.3.0, )",
@@ -732,6 +804,15 @@
           "MimeKit": "4.18.2"
         }
       },
+      "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+        "type": "CentralTransitive",
+        "requested": "[10.0.15, )",
+        "resolved": "10.0.15",
+        "contentHash": "e+YnssZ13Vs9wMi4Jvw+nA46oh+0I3bZKASmASHX4x2IQh4Ns9ilcNw30YC1lnyMLF6mIF4Fe7U0Mn0WJbr3Hg==",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.19.2"
+        }
+      },
       "Microsoft.Data.SqlClient": {
         "type": "CentralTransitive",
         "requested": "[7.1.1, )",
@@ -749,6 +830,17 @@
           "System.Configuration.ConfigurationManager": "9.0.18",
           "System.Security.Cryptography.Pkcs": "9.0.18",
           "System.Threading.RateLimiting": "9.0.18"
+        }
+      },
+      "Microsoft.Data.Sqlite": {
+        "type": "CentralTransitive",
+        "requested": "[10.0.15, )",
+        "resolved": "10.0.15",
+        "contentHash": "PtnNCUloQOLAXhB09id+0CL2c9yd+9/wi0QHCHPa+zrTKEJTdu07jlUgblFjorYhKnwcHN1VS0z75jN8vFruuQ==",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "10.0.15",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.13",
+          "SQLitePCLRaw.core": "2.1.13"
         }
       },
       "Microsoft.Extensions.Caching.Memory": {
@@ -836,6 +928,12 @@
         "requested": "[13.0.4, )",
         "resolved": "13.0.4",
         "contentHash": "pdgNNMai3zv51W5aq268sujXUyx7SNdE2bj1wZcWjAQrKMFZV260lbqYop1d2GM67JI1huLRwxo9ZqnfF/lC6A=="
+      },
+      "NLog": {
+        "type": "CentralTransitive",
+        "requested": "[6.2.2, )",
+        "resolved": "6.2.2",
+        "contentHash": "Hoxigm/d7wY/+y4y2ILF2ERSojhxgLd8ASBZQbrnm52jB5NHkF4AWW5tZzMxJ/HTOp0bLwClGOokrA31iSXuMA=="
       },
       "NLog.Extensions.Logging": {
         "type": "CentralTransitive",
@@ -930,6 +1028,24 @@
           "SQLitePCLRaw.config.e_sqlite3": "3.0.5"
         }
       },
+      "Swashbuckle.AspNetCore.Annotations": {
+        "type": "CentralTransitive",
+        "requested": "[10.3.1, )",
+        "resolved": "10.3.1",
+        "contentHash": "sQgSmjgpwElR48bM6u3yAfYkJ4JcTyzAsrlepgWC+mG3gNStIBfyGkF0TDRWZ1GcQuZTJnZttxVg1ETYrAq9pg==",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.SwaggerGen": "10.3.1"
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen": {
+        "type": "CentralTransitive",
+        "requested": "[10.3.1, )",
+        "resolved": "10.3.1",
+        "contentHash": "DMamYj+m40rOgnGdAp+4iQ+NXIMup2oYVs/zIOZtal0Dar6CXjCF9/SkepEn42TKNO29wAx0xyLfOXj1VjEIXg==",
+        "dependencies": {
+          "Swashbuckle.AspNetCore.Swagger": "10.3.1"
+        }
+      },
       "System.Configuration.ConfigurationManager": {
         "type": "CentralTransitive",
         "requested": "[10.0.15, )",
@@ -949,6 +1065,18 @@
           "TestableIO.System.IO.Abstractions": "22.3.0",
           "TestableIO.System.IO.Abstractions.Wrappers": "22.3.0"
         }
+      },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
+      },
+      "System.Reflection.TypeExtensions": {
+        "type": "CentralTransitive",
+        "requested": "[4.7.0, )",
+        "resolved": "4.7.0",
+        "contentHash": "VybpaOQQhqE6siHppMktjfGBw1GCwvCqiufqmP8F1nj7fTUNtW35LOEt3UZTEsECfo+ELAl/9o9nJx3U91i7vA=="
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
@@ -1023,6 +1151,12 @@
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
       },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
+      },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
         "requested": "[10.0.15, )",
@@ -1089,6 +1223,12 @@
         "requested": "[4.154.0, )",
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
+      },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
@@ -1157,6 +1297,12 @@
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
       },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
+      },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
         "requested": "[10.0.15, )",
@@ -1223,6 +1369,12 @@
         "requested": "[4.154.0, )",
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
+      },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
@@ -1291,6 +1443,12 @@
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
       },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
+      },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
         "requested": "[10.0.15, )",
@@ -1357,6 +1515,12 @@
         "requested": "[4.154.0, )",
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
+      },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
@@ -1425,6 +1589,12 @@
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
       },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
+      },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
         "requested": "[10.0.15, )",
@@ -1491,6 +1661,12 @@
         "requested": "[4.154.0, )",
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
+      },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
@@ -1559,6 +1735,12 @@
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
       },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
+      },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
         "requested": "[10.0.15, )",
@@ -1625,6 +1807,12 @@
         "requested": "[4.154.0, )",
         "resolved": "4.154.0",
         "contentHash": "U6HQ/n+wQ09WyXQB6PK1l46BIrHqTN/dImV84pti3mLxnlOdcSASPQzJwzuZmEgiCbriLtu5fP0t9cdzpFPHsw=="
+      },
+      "System.IO.FileSystem.AccessControl": {
+        "type": "CentralTransitive",
+        "requested": "[5.0.0, )",
+        "resolved": "5.0.0",
+        "contentHash": "SxHB3nuNrpptVk+vZ/F+7OHEpoHUIKKMl02bUmYHQr1r+glbZQxs7pRtsf4ENO29TVm2TH3AEeep2fJcy92oYw=="
       },
       "System.Security.Cryptography.Pkcs": {
         "type": "CentralTransitive",
