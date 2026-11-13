@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-readonly runtime_tag="v10.0.15"
+readonly runtime_version="10.0.15"
 readonly runtime_sdk="10.0.115"
 readonly aspnet_sdk="10.0.115"
 readonly app_sdk="${DOTNETVERSION:-10.0.404}"
@@ -14,11 +14,12 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 work_root="${PLATFORM_RUNTIME_WORK_DIR:?Set PLATFORM_RUNTIME_WORK_DIR to a task-scoped scratch directory}"
 output_root="${PLATFORM_RUNTIME_PACKS_OUTPUT:?Set PLATFORM_RUNTIME_PACKS_OUTPUT to a task-scoped output directory}"
 dotnet_root="${DOTNET_ROOT:-$(dirname "$(readlink -f "$(command -v dotnet)")")}"
-runtime_repo="$work_root/runtime"
-aspnet_repo="$work_root/aspnetcore"
 freebsd_vmr_repo="$work_root/dotnet-vmr"
-runtime_shipping="$runtime_repo/artifacts/packages/Release/Shipping"
+runtime_repo="$freebsd_vmr_repo/src/runtime"
+aspnet_repo="$freebsd_vmr_repo/src/aspnetcore"
 freebsd_vmr_shipping="$freebsd_vmr_repo/artifacts/packages/Release/Shipping"
+runtime_shipping="$runtime_repo/artifacts/packages/Release/Shipping"
+aspnet_shipping="$aspnet_repo/artifacts/packages/Release/Shipping"
 
 die() {
     echo "$*" >&2
@@ -87,20 +88,37 @@ PY
 }
 
 clone_sources() {
-    mkdir -p "$work_root"
-    git clone --depth 1 --branch "$runtime_tag" https://github.com/dotnet/runtime.git "$runtime_repo"
-    git clone --depth 1 --branch "$runtime_tag" --recurse-submodules https://github.com/dotnet/aspnetcore.git "$aspnet_repo"
-    git -C "$aspnet_repo" submodule update --init --depth 1
+    git clone --depth 1 --branch "$freebsd_vmr_tag" https://github.com/dotnet/dotnet.git "$freebsd_vmr_repo"
+    local actual_commit
+    actual_commit="$(git -C "$freebsd_vmr_repo" rev-parse HEAD)"
+    [ "$actual_commit" = "$freebsd_vmr_commit" ] || die "Pinned .NET VMR tag resolved to unexpected commit $actual_commit"
+    [ -f "$runtime_repo/eng/Versions.props" ] || die "Pinned .NET VMR is missing its runtime source tree"
+    [ -f "$aspnet_repo/eng/Versions.props" ] || die "Pinned .NET VMR is missing its ASP.NET Core source tree"
+
+    python3 - "$runtime_repo/eng/Versions.props" "$aspnet_repo/eng/Versions.props" "$runtime_version" <<'PY'
+from pathlib import Path
+import re
+import sys
+
+runtime_props = Path(sys.argv[1])
+aspnet_props = Path(sys.argv[2])
+version = sys.argv[3]
+patch = version.rsplit(".", 1)[-1]
+
+def verify(path, property_name):
+    match = re.search(rf"<{property_name}>([^<]+)</{property_name}>", path.read_text())
+    if not match or match.group(1) != patch:
+        actual = match.group(1) if match else "missing"
+        raise SystemExit(f"Pinned VMR {path.name} has {property_name}={actual}, expected {patch}")
+
+verify(runtime_props, "PatchVersion")
+verify(aspnet_props, "AspNetCorePatchVersion")
+PY
 }
 
 build_freebsd_runtime_packs() {
     local official_build_id
     official_build_id="$(get_official_build_id)"
-
-    git clone --depth 1 --branch "$freebsd_vmr_tag" https://github.com/dotnet/dotnet.git "$freebsd_vmr_repo"
-    local actual_commit
-    actual_commit="$(git -C "$freebsd_vmr_repo" rev-parse HEAD)"
-    [ "$actual_commit" = "$freebsd_vmr_commit" ] || die "FreeBSD VMR tag resolved to unexpected commit $actual_commit"
 
     docker run --rm --init \
         --mount "type=bind,src=$freebsd_vmr_repo,dst=/vmr" \
@@ -277,10 +295,10 @@ build_linux_x86_runtime() {
         -e DOTNET_SDK_VERSION="$runtime_sdk" \
         -e ROOTFS_DIR=/crossrootfs/x86 \
         -v "$dotnet_root:/usr/share/dotnet" \
-        -v "$runtime_repo:/runtime" \
-        -w /runtime \
+        -v "$freebsd_vmr_repo:/vmr" \
+        -w /vmr \
         "$cross_image" \
-        bash -lc "export PATH=/usr/share/dotnet:\$PATH; ./eng/build.sh -ci -c Release -cross -os Linux -arch x86 /m:1 /p:OfficialBuildId=$official_build_id /p:SdkVersion=$runtime_sdk /p:AppHostSourcePath=/runtime/artifacts/obj/linux-x86.Release/apphost/standalone/apphost /p:SelfContained=false /p:UseAppHost=false /p:PublishTrimmed=false /p:UseNativeAotForComponents=false /p:PublishAot=false /p:PublishReadyToRun=false /p:PublishSingleFile=false /p:StabilizePackageVersion=true -subset clr.native+clr.corelib+libs.native+libs.sfx+libs.oob+host.native+host.pkg+packs.product -pack"
+        bash -lc "cd /vmr/src/runtime && export PATH=/usr/share/dotnet:\$PATH; ./eng/build.sh -ci -c Release -cross -os Linux -arch x86 /m:1 /p:OfficialBuildId=$official_build_id /p:SdkVersion=$runtime_sdk /p:AppHostSourcePath=/vmr/src/runtime/artifacts/obj/linux-x86.Release/apphost/standalone/apphost /p:SelfContained=false /p:UseAppHost=false /p:PublishTrimmed=false /p:UseNativeAotForComponents=false /p:PublishAot=false /p:PublishReadyToRun=false /p:PublishSingleFile=false /p:StabilizePackageVersion=true -subset clr.native+clr.corelib+libs.native+libs.sfx+libs.oob+host.native+host.pkg+packs.product -pack"
 }
 
 patch_aspnet_sources() {
@@ -306,6 +324,9 @@ if 'Microsoft.NETCore.App.Runtime.linux-x86' not in text:
 dependencies.write_text(text)
 PY
     sed -i '/dnceng\/internal/d' "$aspnet_repo/NuGet.config"
+    if "$dotnet_root/dotnet" nuget list source --configfile "$aspnet_repo/NuGet.config" 2>/dev/null | grep -q 'chaptarr-linux-x86-runtime'; then
+        "$dotnet_root/dotnet" nuget remove source chaptarr-linux-x86-runtime --configfile "$aspnet_repo/NuGet.config"
+    fi
     "$dotnet_root/dotnet" nuget add source "$runtime_shipping" --name chaptarr-linux-x86-runtime --configfile "$aspnet_repo/NuGet.config"
 }
 
@@ -318,6 +339,10 @@ build_linux_x86_aspnetcore() {
             DOTNET_MULTILEVEL_LOOKUP=0 PATH="$dotnet_root:$PATH" ./eng/build.sh --only-build-repo-tasks \
             "/p:SdkVersion=$aspnet_sdk"
     )
+    local bootstrap_sdk
+    bootstrap_sdk="$(find "$aspnet_repo/.dotnet/sdk" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort -V | tail -n 1)"
+    [ -n "$bootstrap_sdk" ] || die "ASP.NET Core did not install its bootstrap SDK"
+    patch_sdk_runtime_ids "$bootstrap_sdk" "$aspnet_repo/.dotnet"
     patch_sdk_runtime_ids "$aspnet_sdk" "$dotnet_root"
     (
         cd "$aspnet_repo"
@@ -326,6 +351,7 @@ build_linux_x86_aspnetcore() {
             --projects "$aspnet_repo/src/Framework/App.Runtime/src/Microsoft.AspNetCore.App.Runtime.sfxproj" /m:1 \
             "/p:OfficialBuildId=$official_build_id" \
             "/p:SdkVersion=$aspnet_sdk" \
+            "/p:MicrosoftNETCoreAppRefVersion=$runtime_version" \
             /p:RuntimeIdentifier=linux-x86 \
             /p:StabilizePackageVersion=true \
             /p:CrossgenOutput=false \
@@ -345,6 +371,33 @@ verify_sha256() {
     fi
 }
 
+verify_nupkg_version() {
+    python3 - "$1" "$runtime_version" <<'PY'
+from pathlib import Path
+from zipfile import ZipFile
+import sys
+import xml.etree.ElementTree as ET
+
+package = Path(sys.argv[1])
+expected = sys.argv[2]
+with ZipFile(package) as archive:
+    nuspec_names = [name for name in archive.namelist() if name.endswith(".nuspec")]
+    if len(nuspec_names) != 1:
+        raise SystemExit(f"Expected one nuspec in {package.name}; found {len(nuspec_names)}")
+    root = ET.fromstring(archive.read(nuspec_names[0]))
+    version = root.find("./{*}metadata/{*}version")
+    actual = version.text if version is not None else None
+    if actual != expected:
+        raise SystemExit(f"{package.name} declares version {actual}; expected {expected}")
+PY
+}
+
+verify_runtime_archive_version() {
+    local archive="$1"
+    tar -tzf "$archive" | grep -F -x "./shared/Microsoft.NETCore.App/$runtime_version/" >/dev/null \
+        || die "$(basename "$archive") does not contain the .NET $runtime_version shared runtime"
+}
+
 collect_platform_artifacts() {
     local runtime_archive
     local freebsd_runtime_archive
@@ -355,22 +408,32 @@ collect_platform_artifacts() {
         Microsoft.NETCore.App.Host.linux-x86.10.0.15.nupkg \
         Microsoft.NETCore.App.Runtime.linux-x86.10.0.15.nupkg; do
         [ -s "$runtime_shipping/$package" ] || die "The .NET runtime build did not produce $package"
+        verify_nupkg_version "$runtime_shipping/$package"
         cp "$runtime_shipping/$package" "$output_root/packages/"
     done
 
     local aspnet_package
-    aspnet_package="$(find "$aspnet_repo/artifacts/packages/Release/Shipping" -maxdepth 1 -type f -name 'Microsoft.AspNetCore.App.Runtime.linux-x86.10.0.15.nupkg' -print -quit)"
+    aspnet_package="$(find "$aspnet_shipping" -maxdepth 1 -type f -name 'Microsoft.AspNetCore.App.Runtime.linux-x86.10.0.15.nupkg' -print -quit)"
     [ -n "$aspnet_package" ] || die "ASP.NET Core did not produce the Linux x86 runtime pack"
+    verify_nupkg_version "$aspnet_package"
     cp "$aspnet_package" "$output_root/packages/"
 
     runtime_archive="$(find "$runtime_shipping" -maxdepth 1 -type f -name 'dotnet-runtime-10.0.15-linux-x86.tar.gz' -print -quit)"
-    [ -n "$runtime_archive" ] || die "The .NET runtime build did not produce the Linux x86 runtime archive"
+    [ -n "$runtime_archive" ] && [ -s "$runtime_archive" ] || die "The .NET runtime build did not produce the Linux x86 runtime archive"
+    verify_runtime_archive_version "$runtime_archive"
     cp "$runtime_archive" "$output_root/runtimes/linux-x86-runtime.tar.gz"
 
-    cp "$freebsd_vmr_shipping/runtime/Microsoft.NETCore.App.Host.freebsd-x64.10.0.15.nupkg" "$output_root/packages/"
-    cp "$freebsd_vmr_shipping/runtime/Microsoft.NETCore.App.Runtime.freebsd-x64.10.0.15.nupkg" "$output_root/packages/"
-    cp "$freebsd_vmr_shipping/aspnetcore/Microsoft.AspNetCore.App.Runtime.freebsd-x64.10.0.15.nupkg" "$output_root/packages/"
+    for package in \
+        "$freebsd_vmr_shipping/runtime/Microsoft.NETCore.App.Host.freebsd-x64.10.0.15.nupkg" \
+        "$freebsd_vmr_shipping/runtime/Microsoft.NETCore.App.Runtime.freebsd-x64.10.0.15.nupkg" \
+        "$freebsd_vmr_shipping/aspnetcore/Microsoft.AspNetCore.App.Runtime.freebsd-x64.10.0.15.nupkg"; do
+        [ -s "$package" ] || die "Pinned .NET VMR build did not produce $(basename "$package")"
+        verify_nupkg_version "$package"
+        cp "$package" "$output_root/packages/"
+    done
     freebsd_runtime_archive="$(find "$freebsd_vmr_repo/artifacts/assets/Release/Runtime" -type f -name 'dotnet-runtime-10.0.15-freebsd-x64.tar.gz' -print -quit)"
+    [ -n "$freebsd_runtime_archive" ] && [ -s "$freebsd_runtime_archive" ] || die "The pinned .NET VMR build did not produce the FreeBSD .NET $runtime_version runtime archive"
+    verify_runtime_archive_version "$freebsd_runtime_archive"
     cp "$freebsd_runtime_archive" "$output_root/runtimes/freebsd-x64-runtime.tar.gz"
 
     for rid in linux-x86 freebsd-x64; do
@@ -390,10 +453,11 @@ collect_platform_artifacts() {
     fi
 
     {
-        printf 'Platform runtime packs built from .NET %s and ASP.NET Core %s.\n' "$runtime_tag" "$runtime_tag"
-        printf 'FreeBSD VMR source: https://github.com/dotnet/dotnet/tree/%s (%s)\n' "$freebsd_vmr_tag" "$freebsd_vmr_commit"
+        printf 'Platform runtime packs built from .NET and ASP.NET Core %s.\n' "$runtime_version"
+        printf 'Pinned VMR source: https://github.com/dotnet/dotnet/tree/%s (%s)\n' "$freebsd_vmr_tag" "$freebsd_vmr_commit"
         printf 'FreeBSD source-build image: %s\n' "$freebsd_vmr_image"
-        printf 'FreeBSD official build ID: %s\n' "$(get_official_build_id)"
+        printf 'Linux x86 cross-build image: %s\n' "$cross_image"
+        printf 'Official build ID: %s\n' "$(get_official_build_id)"
     } > "$output_root/BUILD-INFO.txt"
     (cd "$output_root" && find packages runtimes -type f -print0 | sort -z | xargs -0 sha256sum) > "$output_root/SHA256SUMS"
     cp "$repo_root/packaging/scripts/install-extra-platform-runtime-packs.sh" "$output_root/"
@@ -411,8 +475,8 @@ mkdir -p "$work_root"
 require_sdk "$runtime_sdk"
 require_sdk "$aspnet_sdk"
 require_sdk "$app_sdk"
-build_freebsd_runtime_packs
 clone_sources
+build_freebsd_runtime_packs
 patch_sdk_runtime_ids "$runtime_sdk"
 patch_sdk_runtime_ids "$app_sdk"
 patch_runtime_sources
