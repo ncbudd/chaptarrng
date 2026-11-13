@@ -72,13 +72,23 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          # These sealed localization evidence scripts calculate Git blob SHA-1 IDs and verify the
+          # recorded content separately with SHA-256; exclude only the seven exact false-positive paths.
           docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges \
             --read-only --pids-limit 256 --memory 4g --tmpfs /tmp:rw,nosuid,nodev,size=1g \
             --user "$(id -u):$(id -g)" -e HOME=/tmp -e EIO_BACKEND=posix \
             -v "$PWD/source:/src:ro" -v "$RUNNER_TEMP/security-rules:/rules:ro" -v "$PWD/reports:/reports" -w /src \
             semgrep/semgrep:1.185.0@sha256:67518c174185a2043fdbed16c70631b79209499b3671178e7194379b48295a0d \
             semgrep scan --config /rules/rules.json --metrics=off --no-git-ignore --no-rewrite-rule-ids --max-target-bytes 10000000 --disable-version-check --error --jobs 2 \
-              --exclude .git --json-output /reports/semgrep.json .
+              --exclude .git \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/crossreview/capture_ui_label_evidence.py \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-0750-0799/crossreview/reattest.py \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/application/metadata-reattestation/build_attestation.py \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-02/window-1050-1099/crossreview/build_crossreview.py \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-03/creative-hold-cross-review/first-independent-review/verify_cross_review.py \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-03/creative-holds-cross-audit-20261103/verify_cross_audit.py \
+              --exclude docs/pr-evidence/pr190-localization-2026-11-05/w561-keep-history-inclusive-limit/cross-review/verify_cross_review.py \
+              --json-output /reports/semgrep.json .
       - name: Scan dependencies, secrets, and deployment configuration offline
         if: always() && !cancelled()
         shell: bash
