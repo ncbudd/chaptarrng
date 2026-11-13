@@ -1305,6 +1305,10 @@
         "sourceFingerprint": "6bca9fee7183aebd403f4febe7887d2816ff93bc8de1dac2e89aefcf960c2230",
         "category": "invariant"
       },
+      "AuthOidc": {
+        "sourceFingerprint": "fce3dcef22bc9b6abca31156b6c2e808357d45780e53bdbd5208390c2b79c01b",
+        "category": "invariant"
+      },
       "AuthPlex": {
         "sourceFingerprint": "7da497c53585afcbdc437054f3d6cb8acb5f4be87c783ddee4b5da2b5aa4dc01",
         "category": "invariant"
