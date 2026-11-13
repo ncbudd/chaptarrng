@@ -7076,6 +7076,18 @@
               "format": "int32",
               "default": 10
             }
+          },
+          {
+            "name": "mediaType",
+            "in": "query",
+            "description": "Optionally limit results to a single media type.",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "ebook",
+                "audiobook"
+              ]
+            }
           }
         ],
         "responses": {
