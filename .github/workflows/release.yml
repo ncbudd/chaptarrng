@@ -638,6 +638,12 @@ jobs:
         ref: ${{ github.sha }}
         path: release-test-fixture
         persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      if: matrix.rid == 'linux-x86'
+      with:
+        ref: ${{ github.sha }}
+        path: policy
+        persist-credentials: false
     - name: Verify and record current x86 fixture provenance
       if: matrix.rid == 'linux-x86'
       run: |
@@ -647,6 +653,7 @@ jobs:
         mkdir -p "$RUNNER_TEMP/standalone-handoff"
         {
           printf 'fixture_commit=%s\n' "$(git -C release-test-fixture rev-parse HEAD)"
+          printf 'scan_policy_commit=%s\n' "$(git -C policy rev-parse HEAD)"
           printf 'fixture_dockerfile_sha256='
           sha256sum "$fixture" | cut -d ' ' -f 1
         } | tee "$RUNNER_TEMP/standalone-handoff/x86-fixture-provenance.txt" | tee -a "$GITHUB_STEP_SUMMARY"

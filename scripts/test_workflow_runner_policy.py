@@ -309,6 +309,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("test-bookshelf-standalone-handoff.py", installed)
         self.assertIn("ref: ${{ github.sha }}", installed)
         self.assertIn("path: release-test-fixture", installed)
+        self.assertIn("path: policy", installed)
         self.assertIn('test "$(git -C release-test-fixture rev-parse HEAD)" = "$GITHUB_SHA"', installed)
         self.assertIn("uses: ./release-test-fixture/.github/actions/security-image-scan", installed)
         self.assertIn("source-sha: ${{ github.sha }}", installed)
