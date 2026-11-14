@@ -1,5 +1,5 @@
 ---
-category: bug-fix
+category: fixed
 audience: operators
 area: backups
 action: none
