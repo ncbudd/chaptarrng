@@ -3403,12 +3403,33 @@ namespace NzbDrone.Core.MetadataSource.BookInfo
                     return nativeBooks;
                 }
 
-                var primaryResults = preferMetadataApi && IsMetadataApiEnabled()
-                    ? SearchMetadataApiCatalog(q, getAllEditions, mediaType)
-                    : Search(q, getAllEditions, mediaType);
+                List<Book> primaryResults;
+                var searchedHardcover = false;
+                if (preferMetadataApi && IsMetadataApiEnabled())
+                {
+                    try
+                    {
+                        primaryResults = SearchMetadataApiCatalog(q, getAllEditions, mediaType);
+                    }
+                    catch (GoodreadsException exception) when (_hardcoverMetadataProxy?.IsConfigured == true)
+                    {
+                        // A metadata server can answer id lookups without offering free-text search
+                        // (api2.chaptarr.com answers 404 for /search), which used to fail every ISBN and
+                        // title lookup. With a Hardcover token configured, search Hardcover instead; its
+                        // search resolves ISBNs and ASINs as identifiers.
+                        _logger.Warn(exception, "Metadata server search failed for {0}; searching Hardcover instead", CleanseLogMessage.Cleanse(q));
+                        primaryResults = SearchNativeHardcoverEntities(q, mediaType).OfType<Book>().ToList();
+                        searchedHardcover = true;
+                    }
+                }
+                else
+                {
+                    primaryResults = Search(q, getAllEditions, mediaType);
+                }
+
                 ApplySearchMetadataPreferences(primaryResults);
 
-                if (preferMetadataApi && IsHardcoverCatalogEnabled() && _hardcoverMetadataProxy?.IsConfigured == true)
+                if (preferMetadataApi && !searchedHardcover && IsHardcoverCatalogEnabled() && _hardcoverMetadataProxy?.IsConfigured == true)
                 {
                     try
                     {
