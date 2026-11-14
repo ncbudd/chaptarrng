@@ -67,10 +67,12 @@ namespace Chaptarr.Core.Test.Http
             }
 
             public int GetCount { get; private set; }
+            public HttpRequest LastRequest { get; private set; }
 
             public HttpResponse Get(HttpRequest request)
             {
                 GetCount++;
+                LastRequest = request;
                 return _get(request);
             }
 
@@ -321,6 +323,23 @@ namespace Chaptarr.Core.Test.Http
             Assert.That(proxy.SearchBooks("missing"), Is.Empty);
             Assert.That(repositoryState.UpsertCount, Is.Zero);
             Assert.That(client.GetCount, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void audible_search_should_disable_logging_for_query_bearing_request_urls()
+        {
+            var repository = DispatchProxy.Create<ICachedHttpResponseRepository, RepositoryProxy>();
+            var client = new RecordingHttpClient(request =>
+                new HttpResponse(request, new HttpHeader { ContentType = "application/json" }, "{\"products\":[]}", HttpStatusCode.OK));
+            var service = new CachedHttpResponseService(repository, client, LogManager.GetCurrentClassLogger());
+            var proxy = new AudibleCatalogProxy(service, LogManager.GetCurrentClassLogger(), null);
+
+            Assert.That(proxy.SearchBooks("Native Book password=topsecret"), Is.Empty);
+
+            Assert.That(client.LastRequest, Is.Not.Null);
+            Assert.That(client.LastRequest.Url.FullUri, Does.Contain("keywords="));
+            Assert.That(client.LastRequest.LogRequest, Is.False);
+            Assert.That(client.LastRequest.LogHttpError, Is.False);
         }
 
         [Test]

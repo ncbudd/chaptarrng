@@ -131,21 +131,26 @@ namespace NzbDrone.Core.MetadataSource.Hardcover
 
                 if (results == null)
                 {
-                    _logger.WarnSafe($"Hardcover search failed for '{cleanedTerm}'");
+                    _logger.WarnSafe("Hardcover search returned no result set");
                     return null;
                 }
 
-                _logger.DebugSafe($"Hardcover search successful: {results.Count} total results for '{cleanedTerm}'");
+                _logger.DebugSafe("Hardcover search returned {0} total results", results.Count);
                 return results;
+            }
+            catch (BookInfoException ex)
+            {
+                _logger.ErrorSafe("Hardcover search failed with HTTP status {0}", ex.StatusCode);
+                throw;
             }
             catch (NzbDroneClientException ex)
             {
-                _logger.ErrorSafe($"Hardcover search failed for '{searchTerm}': {ex.Message}");
-                throw;
+                _logger.ErrorSafe("Hardcover search failed with HTTP status {0}", ex.StatusCode);
+                throw new NzbDroneClientException(ex.StatusCode, "Hardcover search failed");
             }
             catch (Exception ex)
             {
-                _logger.ErrorSafe(ex, $"Hardcover search failed for '{searchTerm}'");
+                _logger.ErrorSafe("Hardcover search failed with error type {0}", ex.GetType().Name);
                 return null;
             }
         }
@@ -189,11 +194,11 @@ namespace NzbDrone.Core.MetadataSource.Hardcover
 
                     searchPayloads[target.ResponseProperty] = searchPayload;
                 }
-                catch (JsonException ex)
+                catch (JsonException)
                 {
                     throw new NzbDroneClientException(
                         HttpStatusCode.ServiceUnavailable,
-                        $"Hardcover {target.QueryType} search returned unparseable JSON ({ex.Message})");
+                        $"Hardcover {target.QueryType} search returned unparseable JSON");
                 }
             }
 
@@ -210,13 +215,7 @@ namespace NzbDrone.Core.MetadataSource.Hardcover
                 var hasAuthError = false;
                 foreach (var error in errorsElement.EnumerateArray())
                 {
-                    var message = error.ValueKind == JsonValueKind.String
-                        ? error.GetString()
-                        : error.TryGetProperty("message", out var messageElement) && messageElement.ValueKind == JsonValueKind.String
-                            ? messageElement.GetString()
-                            : error.GetRawText();
-
-                    _logger.Error($"Hardcover {queryType} search GraphQL error: {message}");
+                    _logger.Error("Hardcover {0} search returned a GraphQL error", queryType);
 
                     if (error.ValueKind == JsonValueKind.Object &&
                         error.TryGetProperty("extensions", out var extensions) &&
@@ -263,8 +262,7 @@ namespace NzbDrone.Core.MetadataSource.Hardcover
                     bool hasAuthError = false;
                     foreach (var error in errorsElement.EnumerateArray())
                     {
-                        var message = error.GetProperty("message").GetString();
-                        _logger.Error($"Hardcover GraphQL error: {message}");
+                        _logger.Error("Hardcover search returned a GraphQL error");
                         
                         // Check for authentication errors in extensions
                         if (error.TryGetProperty("extensions", out var extensions) &&
@@ -376,15 +374,14 @@ namespace NzbDrone.Core.MetadataSource.Hardcover
                 EnrichAuthorsAndSeries(authors, seriesResults, interactiveSearch);
 
                 var orderedResults = OrderSearchResultsAroundAnchor(query, anchor, authors, books, seriesResults);
-                _logger.DebugSafe("Hardcover search anchor for '{0}': {1}; ordered {2} results",
-                    query,
+                _logger.DebugSafe("Hardcover search anchor: {0}; ordered {1} results",
                     DescribeSearchResult(anchor),
                     orderedResults.Count);
                 return orderedResults;
             }
-            catch (JsonException ex)
+            catch (JsonException)
             {
-                _logger.Error(ex, $"Failed to parse Hardcover response: {ex.Message}");
+                _logger.ErrorSafe("Failed to parse Hardcover search response");
                 return null;
             }
         }

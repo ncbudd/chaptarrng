@@ -25,10 +25,14 @@ and ASP.NET source builds, SDK `10.0.404` for ChaptarrNG, and the pinned
 tag `v10.0.115` at commit
 `8e0f8ed2312954727f8919d7d1c2f78b483b4ee7` in the pinned Azure Linux 3.0
 FreeBSD cross-build image recorded in
-`packaging/scripts/build-extra-platform-runtime-packs.sh`. The script verifies
-the tag commit and required `.NET 10.0.15` packages before creating the output;
-it does not consume the obsolete `v10.0.113` archive. The output contains a
-source and image record plus SHA-256 values for each package and runtime
+`packaging/scripts/build-extra-platform-runtime-packs.sh`. Before cloning the
+large VMR tree, the script verifies over HTTPS that the immutable pinned commit
+contains .NET and ASP.NET Core 10.0.15 source-version markers. The source build
+must then generate the required FreeBSD runtime packages and archive; each
+generated package version and runtime archive is checked before the output is
+assembled. The script does not consume the obsolete `v10.0.113` archive or
+pretend that prebuilt upstream FreeBSD package assets exist. The output contains
+a source and image record plus SHA-256 values for each package and runtime
 archive. Native installed acceptance is still required before publishing a
 FreeBSD archive. Use two unique, absolute, task-scoped directories that do not
 already exist:

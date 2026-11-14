@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using NLog;
 using NzbDrone.Common.Http;
+using NzbDrone.Common.Instrumentation;
 using NzbDrone.Common.Serializer;
 using NzbDrone.Core.Http;
 using NzbDrone.Core.MetadataSource;
@@ -45,6 +46,8 @@ namespace NzbDrone.Core.MetadataSource.Goodreads
                 var httpRequest = _searchBuilder.Create()
                     .AddQueryParam("q", query)
                     .Build();
+                httpRequest.LogRequest = false;
+                httpRequest.LogHttpError = false;
 
                 var response = _cachedHttpClient.Get<List<SearchJsonResource>>(
                     httpRequest,
@@ -56,18 +59,18 @@ namespace NzbDrone.Core.MetadataSource.Goodreads
             }
             catch (HttpException ex)
             {
-                _logger.Warn(ex);
-                throw new GoodreadsException("Search for '{0}' failed. Unable to communicate with Goodreads.", ex, query);
+                _logger.WarnSafe("Goodreads search failed with HTTP status {0}", ex.Response?.StatusCode);
+                throw new GoodreadsException("Goodreads search failed with HTTP status {0}.", ex.Response?.StatusCode);
             }
             catch (WebException ex)
             {
-                _logger.Warn(ex);
-                throw new GoodreadsException("Search for '{0}' failed. Unable to communicate with Goodreads.", ex, query, ex.Message);
+                _logger.WarnSafe("Goodreads search failed with network status {0}", ex.Status);
+                throw new GoodreadsException("Goodreads search failed with network status {0}.", ex.Status);
             }
             catch (Exception ex)
             {
-                _logger.Warn(ex);
-                throw new GoodreadsException("Search for '{0}' failed. Invalid response received from Goodreads.", ex, query);
+                _logger.WarnSafe("Goodreads search failed with error type {0}", ex.GetType().Name);
+                throw new GoodreadsException("Goodreads search failed with an invalid response ({0}).", ex.GetType().Name);
             }
         }
 
@@ -89,24 +92,27 @@ namespace NzbDrone.Core.MetadataSource.Goodreads
                     .SetSegment("route", "search")
                     .AddQueryParam("q", query)
                     .Build();
+                request.LogRequest = false;
+                request.LogHttpError = false;
 
                 return _cachedHttpClient.Get<List<SearchJsonResource>>(request, false, TimeSpan.FromDays(5)).Resource
                     ?? new List<SearchJsonResource>();
             }
             catch (HttpException ex)
             {
-                _logger.Warn(ex);
-                throw new GoodreadsException("Search for '{0}' failed. Unable to communicate with the metadata source.", ex, query);
+                var statusCode = ex.Response?.StatusCode;
+                _logger.WarnSafe("Metadata server search failed with HTTP status {0}", statusCode);
+                throw new GoodreadsException("Metadata server search failed with HTTP status {0}.", statusCode);
             }
             catch (WebException ex)
             {
-                _logger.Warn(ex);
-                throw new GoodreadsException("Search for '{0}' failed. Unable to communicate with the metadata source.", ex, query, ex.Message);
+                _logger.WarnSafe("Metadata server search failed with network status {0}", ex.Status);
+                throw new GoodreadsException("Metadata server search failed with network status {0}.", ex.Status);
             }
             catch (Exception ex)
             {
-                _logger.Warn(ex);
-                throw new GoodreadsException("Search for '{0}' failed. Invalid response received from the metadata source.", ex, query);
+                _logger.WarnSafe("Metadata server search failed with error type {0}", ex.GetType().Name);
+                throw new GoodreadsException("Metadata server search failed with an invalid response ({0}).", ex.GetType().Name);
             }
         }
     }

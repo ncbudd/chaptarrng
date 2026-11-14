@@ -6,9 +6,17 @@ namespace NzbDrone.Core.MetadataSource.Goodreads
 {
     public class GoodreadsException : NzbDroneClientException
     {
+        public HttpStatusCode? UpstreamStatusCode { get; }
+
         public GoodreadsException(string message)
             : base(HttpStatusCode.ServiceUnavailable, message)
         {
+        }
+
+        public GoodreadsException(string message, HttpStatusCode? upstreamStatusCode)
+            : base(HttpStatusCode.ServiceUnavailable, message, upstreamStatusCode?.ToString() ?? "unknown")
+        {
+            UpstreamStatusCode = upstreamStatusCode;
         }
 
         public GoodreadsException(string message, params object[] args)

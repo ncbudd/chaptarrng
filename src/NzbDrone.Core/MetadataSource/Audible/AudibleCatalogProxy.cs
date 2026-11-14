@@ -99,10 +99,9 @@ namespace NzbDrone.Core.MetadataSource.Audible
         {
             try
             {
-                _logger.DebugSafe("Audiobooks search called with Audible catalog query: {0}, useCache: {1}", query, useCache);
+                _logger.DebugSafe("Audiobooks search called against Audible catalog (useCache: {0})", useCache);
 
                 var sanitizedQuery = SanitizeSearchQuery(query);
-                _logger.DebugSafe("Sanitized query: {0}", sanitizedQuery);
 
                 var marketplace = AudibleMarketplaceOptions.Get(_configService?.AudibleMarketplace);
                 var httpRequest = CreateRequestBuilder(marketplace).Create()
@@ -114,7 +113,8 @@ namespace NzbDrone.Core.MetadataSource.Audible
                     .Build();
 
                 ApplyAudibleHeaders(httpRequest, marketplace);
-                _logger.Debug("Audible catalog request URL: {0}", httpRequest.Url);
+                httpRequest.LogRequest = false;
+                httpRequest.LogHttpError = false;
 
                 httpRequest.AllowAutoRedirect = true;
                 httpRequest.SuppressHttpError = true;
@@ -132,7 +132,7 @@ namespace NzbDrone.Core.MetadataSource.Audible
 
                 if (httpResponse.HasHttpError)
                 {
-                    _logger.Warn("Audible catalog search failed with status {0}: {1}", httpResponse.StatusCode, httpResponse.Content);
+                    _logger.Warn("Audible catalog search failed with status {0}", httpResponse.StatusCode);
                     return new List<AudibleCatalogBookResource>();
                 }
 
@@ -149,12 +149,12 @@ namespace NzbDrone.Core.MetadataSource.Audible
                     .Where(product => product != null)
                     .ToList();
 
-                _logger.DebugSafe("Found {0} results in Audible catalog search for: {1}", searchResults?.Count ?? 0, query);
+                _logger.DebugSafe("Audible catalog search returned {0} results", searchResults?.Count ?? 0);
                 return searchResults ?? new List<AudibleCatalogBookResource>();
             }
             catch (Exception ex)
             {
-                _logger.ErrorSafe(ex, "Error searching Audible catalog for: {0}", query);
+                _logger.ErrorSafe("Audible catalog search failed with error type {0}", ex.GetType().Name);
                 return new List<AudibleCatalogBookResource>();
             }
         }

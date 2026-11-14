@@ -89,7 +89,7 @@ namespace NzbDrone.Common.Http
 
             if (request.AllowAutoRedirect && response.HasHttpRedirect)
             {
-                var autoRedirectChain = new List<string> { request.Url.ToString() };
+                var autoRedirectChain = new List<string> { GetRequestLogTarget(request) };
 
                 do
                 {
@@ -104,7 +104,7 @@ namespace NzbDrone.Common.Http
                     var location = response.Headers.GetSingleValue("Location");
                     if (location.IsNullOrWhiteSpace())
                     {
-                        throw new WebException($"Redirect response from {redirectRequest.Url} is missing a Location header.", WebExceptionStatus.ProtocolError);
+                        throw new WebException($"Redirect response from {GetRequestLogTarget(redirectRequest)} is missing a Location header.", WebExceptionStatus.ProtocolError);
                     }
 
                     var sourceUrl = redirectRequest.Url;
@@ -145,9 +145,12 @@ namespace NzbDrone.Common.Http
                     }
 
                     request.Url = nextUrl;
-                    autoRedirectChain.Add(request.Url.ToString());
+                    autoRedirectChain.Add(GetRequestLogTarget(request));
 
-                    _logger.Trace("Redirected to {0}", request.Url);
+                    if (request.LogRequest)
+                    {
+                        _logger.Trace("Redirected to {0}", request.Url);
+                    }
 
                     if (autoRedirectChain.Count > MaxRedirects)
                     {
@@ -161,7 +164,14 @@ namespace NzbDrone.Common.Http
 
             if (response.HasHttpRedirect && !RuntimeInfo.IsProduction)
             {
-                _logger.Error("Server requested a redirect to [{0}] while in developer mode. Update the request URL to avoid this redirect.", response.Headers["Location"]);
+                if (request.LogRequest)
+                {
+                    _logger.Error("Server requested a redirect to [{0}] while in developer mode. Update the request URL to avoid this redirect.", response.Headers["Location"]);
+                }
+                else
+                {
+                    _logger.Error("Server requested a redirect while in developer mode. Update the request URL to avoid this redirect.");
+                }
             }
 
             if (!request.SuppressHttpError && response.HasHttpError && (request.SuppressHttpErrorStatusCodes == null || !request.SuppressHttpErrorStatusCodes.Contains(response.StatusCode)))
@@ -216,6 +226,13 @@ namespace NzbDrone.Common.Http
         private static bool IsCloudMetadataTarget(HttpUri url)
         {
             return CloudMetadataTargetPolicy.IsBlocked(url?.Host);
+        }
+
+        private static string GetRequestLogTarget(HttpRequest request)
+        {
+            return request.LogRequest
+                ? request.Url.ToString()
+                : $"{request.Url.Host}{request.Url.Path}";
         }
 
         private static bool IsCrossOriginRedirect(HttpUri source, HttpUri destination)
@@ -284,7 +301,10 @@ namespace NzbDrone.Common.Http
                 await _rateLimitService.WaitAndPulseAsync(request.Url.Host, request.RateLimitKey, request.RateLimit);
             }
 
-            _logger.Trace(request);
+            if (request.LogRequest)
+            {
+                _logger.Trace(request);
+            }
 
             var stopWatch = Stopwatch.StartNew();
 
@@ -294,7 +314,10 @@ namespace NzbDrone.Common.Http
 
             stopWatch.Stop();
 
-            _logger.Trace("{0} ({1} ms)", response, stopWatch.ElapsedMilliseconds);
+            if (request.LogRequest)
+            {
+                _logger.Trace("{0} ({1} ms)", response, stopWatch.ElapsedMilliseconds);
+            }
 
             foreach (var interceptor in _requestInterceptors)
             {

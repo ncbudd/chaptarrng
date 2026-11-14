@@ -25,7 +25,16 @@ namespace NzbDrone.Core.Http.CloudFlare
         {
             if (response.StatusCode == HttpStatusCode.Forbidden && response.Content.Contains(_cloudFlareChallengeScript))
             {
-                _logger.Debug("CloudFlare CAPTCHA block on {0}", response.Request.Url);
+                if (response.Request.LogRequest)
+                {
+                    _logger.Debug("CloudFlare CAPTCHA block on {0}", response.Request.Url);
+                }
+                else
+                {
+                    // Some API URLs contain user search text or other sensitive query data.
+                    _logger.Debug("CloudFlare CAPTCHA block on {0}", response.Request.Url.Host);
+                }
+
                 throw new CloudFlareCaptchaException(response, CreateCaptchaRequest(response));
             }
 

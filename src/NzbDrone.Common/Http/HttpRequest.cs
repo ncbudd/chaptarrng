@@ -43,6 +43,7 @@ namespace NzbDrone.Common.Http
         public ICredentials Credentials { get; set; }
         public bool SuppressHttpError { get; set; }
         public IEnumerable<HttpStatusCode> SuppressHttpErrorStatusCodes { get; set; }
+        public bool LogRequest { get; set; } = true;
         public bool UseSimplifiedUserAgent { get; set; }
         public bool AllowAutoRedirect { get; set; }
         public bool ConnectionKeepAlive { get; set; }

@@ -234,6 +234,20 @@ namespace Chaptarr.Core.Test.MetadataSource.BookInfo
         }
 
         [Test]
+        public void should_not_surface_provider_error_text_that_contains_the_search_query()
+        {
+            var rawQuery = "Native Book password=topsecret";
+            var client = new RecordingHardcoverSearchClient(() =>
+                throw new NzbDroneClientException(System.Net.HttpStatusCode.ServiceUnavailable, rawQuery));
+            var (proxy, _) = CreateProxy(client);
+
+            var exception = Assert.Throws<NzbDroneClientException>(() => proxy.SearchForNewEntity(rawQuery, "hardcover"));
+
+            Assert.That(exception.Message, Is.EqualTo("Hardcover search failed"));
+            Assert.That(exception.InnerException, Is.Null);
+        }
+
+        [Test]
         public void should_not_reuse_a_search_after_the_hardcover_token_changes()
         {
             var client = new RecordingHardcoverSearchClient(() => new List<object>());

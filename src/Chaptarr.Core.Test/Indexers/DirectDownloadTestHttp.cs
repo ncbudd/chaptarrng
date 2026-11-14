@@ -21,14 +21,15 @@ namespace Chaptarr.Core.Test.Indexers
             _routes.Add(new Route(matcher, responder));
         }
 
-        public NzbDrone.Common.Http.HttpClient CreateClient()
+        public NzbDrone.Common.Http.HttpClient CreateClient(Logger logger = null)
         {
+            logger ??= LogManager.GetCurrentClassLogger();
             return new NzbDrone.Common.Http.HttpClient(
                 Array.Empty<IHttpRequestInterceptor>(),
                 new CacheManager(),
-                new RateLimitService(new CacheManager(), LogManager.GetCurrentClassLogger()),
+                new RateLimitService(new CacheManager(), logger),
                 new Dispatcher(this),
-                LogManager.GetCurrentClassLogger());
+                logger);
         }
 
         private sealed class Dispatcher : IHttpDispatcher

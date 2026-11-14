@@ -76,14 +76,15 @@ namespace NzbDrone.Core.Http
 
             if (useCache && cached != null && cached.Expiry > DateTime.UtcNow)
             {
-                _logger.Trace($"Returning cached response for [GET] {request.Url}");
-                _logger.Trace($"[CACHE-HIT] Using cached response for {request.Url} (expires: {cached.Expiry:yyyy-MM-dd HH:mm:ss})");
+                var requestTarget = GetRequestLogTarget(request);
+                _logger.Trace($"Returning cached response for [GET] {requestTarget}");
+                _logger.Trace($"[CACHE-HIT] Using cached response for {requestTarget} (expires: {cached.Expiry:yyyy-MM-dd HH:mm:ss})");
                 var headers = new HttpHeader();
                 headers["X-Cache-Status"] = "HIT";
                 return new HttpResponse(request, headers, cached.Value, (HttpStatusCode)cached.StatusCode);
             }
 
-            _logger.Trace($"[CACHE-MISS] Fetching fresh data from {request.Url} (useCache: {useCache})");
+            _logger.Trace($"[CACHE-MISS] Fetching fresh data from {GetRequestLogTarget(request)} (useCache: {useCache})");
             var result = _httpClient.Get(request);
 
             var positiveResponse = result.StatusCode == HttpStatusCode.OK && IsPositiveResponse(result, isPositive);
@@ -173,6 +174,13 @@ namespace NzbDrone.Core.Http
         private static bool ContainsNoStore(string value)
         {
             return value?.IndexOf("no-store", StringComparison.OrdinalIgnoreCase) >= 0;
+        }
+
+        private static string GetRequestLogTarget(HttpRequest request)
+        {
+            return request.LogRequest
+                ? request.Url.ToString()
+                : $"{request.Url.Host}{request.Url.Path}";
         }
 
         public HttpResponse<T> Get<T>(HttpRequest request, bool useCache, TimeSpan ttl)

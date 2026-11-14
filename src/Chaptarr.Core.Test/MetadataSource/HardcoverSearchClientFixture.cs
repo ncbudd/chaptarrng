@@ -6,10 +6,15 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using NLog;
+using NLog.Config;
+using NLog.Targets;
+using Moq;
+using Newtonsoft.Json.Linq;
 using NUnit.Framework;
 using NzbDrone.Common.Cache;
 using NzbDrone.Common.Http;
 using NzbDrone.Core.Configuration;
+using NzbDrone.Core.Exceptions;
 using NzbDrone.Core.MetadataSource.BookInfo;
 using NzbDrone.Core.MetadataSource.Hardcover;
 
@@ -285,7 +290,7 @@ namespace Chaptarr.Core.Test.MetadataSource
 
             var ex = Assert.Throws<BookInfoException>(() => client.Search("matt dinniman"));
 
-            Assert.That(ex.Message, Does.Contain("GraphQL request failed"));
+            Assert.That(ex.Message, Does.Contain("GraphQL error response"));
             Assert.That(httpClient.Requests, Has.Count.EqualTo(1));
         }
 
@@ -395,6 +400,88 @@ namespace Chaptarr.Core.Test.MetadataSource
             Assert.That(results[2], Is.TypeOf<HardcoverSeriesResult>());
             Assert.That(((HardcoverSeriesResult)results[2]).Id, Is.EqualTo("12717"));
             Assert.That(httpClient.Requests, Has.Count.EqualTo(5));
+        }
+
+        [Test]
+        public void should_not_log_or_surface_hardcover_search_query_from_provider_error()
+        {
+            var previousConfiguration = LogManager.Configuration;
+            var memory = new MemoryTarget("hardcover-search-query-redaction")
+            {
+                Layout = "${level}|${message}|${exception:format=tostring}"
+            };
+            var configuration = new LoggingConfiguration();
+            configuration.AddRule(LogLevel.Trace, LogLevel.Fatal, memory, typeof(HardcoverSearchClient).FullName);
+
+            try
+            {
+                LogManager.Configuration = configuration;
+                LogManager.ReconfigExistingLoggers();
+
+                var rawQuery = "Native Book password=topsecret";
+                var metadataProxy = new Mock<IHardcoverMetadataProxy>();
+                metadataProxy.SetupGet(proxy => proxy.IsConfigured).Returns(true);
+                metadataProxy.Setup(proxy => proxy.ExecuteSearchGraphQl(
+                        It.IsAny<string>(),
+                        It.IsAny<string>(),
+                        It.IsAny<JObject>(),
+                        It.IsAny<bool>()))
+                    .Throws(new NzbDroneClientException(HttpStatusCode.ServiceUnavailable, rawQuery));
+
+                var configService = DispatchProxy.Create<IConfigService, ConfigServiceProxy>();
+                var client = new HardcoverSearchClient(configService, metadataProxy.Object);
+                var exception = Assert.Throws<NzbDroneClientException>(() => client.Search(rawQuery));
+
+                Assert.That(exception.Message, Is.EqualTo("Hardcover search failed"));
+                Assert.That(exception.InnerException, Is.Null);
+                Assert.That(memory.Logs, Has.None.Contains("Native Book"));
+                Assert.That(memory.Logs, Has.None.Contains("topsecret"));
+            }
+            finally
+            {
+                LogManager.Configuration = previousConfiguration;
+                LogManager.ReconfigExistingLoggers();
+            }
+        }
+
+        [Test]
+        public void should_not_log_hardcover_search_query_from_http_error_body()
+        {
+            var previousConfiguration = LogManager.Configuration;
+            var memory = new MemoryTarget("hardcover-search-http-error-redaction")
+            {
+                Layout = "${level}|${message}|${exception:format=tostring}"
+            };
+            var configuration = new LoggingConfiguration();
+            configuration.AddRule(LogLevel.Trace, LogLevel.Fatal, memory, "*");
+
+            try
+            {
+                LogManager.Configuration = configuration;
+                LogManager.ReconfigExistingLoggers();
+
+                var rawQuery = "Native Book password=topsecret";
+                var httpClient = new RecordingHttpClient(request => JsonResponse(
+                    request,
+                    "{\"error\":\"" + rawQuery + "\"}",
+                    HttpStatusCode.BadRequest));
+                var client = CreateClient(httpClient);
+
+                var exception = Assert.Throws<BookInfoException>(() => client.Search(rawQuery, interactiveSearch: true));
+
+                Assert.That(exception.Message, Does.Not.Contain("Native Book"));
+                Assert.That(exception.ToString(), Does.Not.Contain("topsecret"));
+                Assert.That(memory.Logs, Has.None.Contains("Native Book"));
+                Assert.That(memory.Logs, Has.None.Contains("topsecret"));
+                Assert.That(httpClient.Requests, Has.Count.EqualTo(1));
+                Assert.That(httpClient.Requests[0].LogRequest, Is.False);
+                Assert.That(httpClient.Requests[0].LogHttpError, Is.False);
+            }
+            finally
+            {
+                LogManager.Configuration = previousConfiguration;
+                LogManager.ReconfigExistingLoggers();
+            }
         }
 
         [Test]
