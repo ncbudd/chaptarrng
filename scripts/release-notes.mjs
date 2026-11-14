@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { execFileSync } from 'node:child_process';
-import fs from 'node:fs';
 import path from 'node:path';
 
 export const RELEASE_NOTE_DIRECTORY = 'release-notes';
@@ -209,17 +208,24 @@ export function isShippedReleaseNoteChanged(file, head, cwd = process.cwd()) {
   }
 }
 
-export function readReleaseNotes(entries, cwd = process.cwd()) {
+export function readReleaseNotes(entries, { ref = 'HEAD', cwd = process.cwd() } = {}) {
   const notes = [];
   const errors = [];
 
   for (const entry of entries) {
-    const filePath = path.join(cwd, entry.file);
+    if (!isReleaseNoteFile(entry.file)) {
+      errors.push('invalid release-note path: ' + entry.file);
+      continue;
+    }
+
     let content;
     try {
-      content = fs.readFileSync(filePath, 'utf8');
-    } catch (error) {
-      errors.push(entry.file + ': unable to read file (' + error.message + ')');
+      content = execFileSync('git', ['show', ref + ':' + entry.file], {
+        cwd,
+        encoding: 'utf8',
+      });
+    } catch {
+      errors.push(entry.file + ': unable to read file from commit ' + ref);
       continue;
     }
 

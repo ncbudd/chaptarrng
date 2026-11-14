@@ -43,7 +43,7 @@ const updatedUnshipped = entries
 const { notes, errors } = readReleaseNotes([
   ...entries.filter((entry) => entry.status === 'A'),
   ...updatedUnshipped,
-]);
+], { ref: head });
 const body = fs.readFileSync(bodyFile, 'utf8');
 const explicitNoReleaseNote = hasExplicitNoReleaseNote(body);
 const issues = [...errors];

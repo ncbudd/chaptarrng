@@ -39,7 +39,7 @@ const updatedUnshipped = entries
 const { notes, errors } = readReleaseNotes([
   ...entries.filter((entry) => entry.status === 'A'),
   ...updatedUnshipped,
-]);
+], { ref: head });
 
 if (deleted.length > 0 || modified.length > 0 || errors.length > 0) {
   console.error('Release-note preview failed validation:');

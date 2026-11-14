@@ -1,10 +1,14 @@
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
 import test from 'node:test';
 
 import {
   hasExplicitNoReleaseNote,
   prepareReleaseBodies,
+  readReleaseNotes,
 } from './release-notes.mjs';
 
 const pullRequestTemplate = fs.readFileSync(
@@ -45,6 +49,44 @@ test('release-note markers inside fenced code examples are ignored', () => {
 
 test('the CodeQL internal-note marker remains supported', () => {
   assert.equal(hasExplicitNoReleaseNote('release-note-none-codeql-action'), true);
+});
+
+test('release-note fragments are read from the exact commit, not the working tree', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'chaptarr-release-note-ref-'));
+  const relativePath = 'release-notes/exact-head.md';
+  const noteContent = [
+    '---',
+    'category: fixed',
+    'audience: users',
+    'area: metadata',
+    'action: none',
+    'breaking: false',
+    '---',
+    'Search terms stay out of logs when a metadata lookup fails.',
+    '',
+  ].join('\n');
+
+  const git = (...args) => execFileSync('git', args, { cwd: root, stdio: 'ignore' });
+
+  try {
+    git('init', '-q');
+    git('config', 'user.name', 'Release note test');
+    git('config', 'user.email', 'release-note-test@example.invalid');
+    fs.mkdirSync(path.join(root, 'release-notes'));
+    fs.writeFileSync(path.join(root, relativePath), noteContent);
+    git('add', relativePath);
+    git('commit', '-q', '-m', 'add test release note');
+    const head = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
+    fs.rmSync(path.join(root, relativePath));
+
+    const { notes, errors } = readReleaseNotes([{ status: 'A', file: relativePath }], { ref: head, cwd: root });
+
+    assert.deepEqual(errors, []);
+    assert.equal(notes.length, 1);
+    assert.match(notes[0].body, /Search terms stay out of logs/u);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test('release bodies below the limit retain the complete changelog', () => {

@@ -61,7 +61,7 @@ if (deleted.length > 0 || modifiedShipped.length > 0) {
 const { notes, errors } = readReleaseNotes([
   ...entries.filter((entry) => entry.status === 'A'),
   ...updatedUnshipped,
-]);
+], { ref: head });
 if (errors.length > 0) {
   console.error('Release-note validation failed:');
   for (const error of errors) {
