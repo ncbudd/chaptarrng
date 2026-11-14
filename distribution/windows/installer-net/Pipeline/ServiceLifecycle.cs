@@ -512,7 +512,16 @@ public static class ServiceLifecycle
         }
         catch (Exception ex) when (ex is InvalidOperationException or System.ComponentModel.Win32Exception)
         {
-            log.Report(new LogLine(LogStream.Stderr, $"[service] Could not start {serviceName}: {ex.Message}"));
+            var rootCause = ex.GetBaseException();
+            var details = rootCause == ex
+                ? string.Empty
+                : $" Root cause: {rootCause.GetType().Name}: {rootCause.Message}";
+            if (rootCause is Win32Exception win32Exception)
+            {
+                details += $" (Win32 error {win32Exception.NativeErrorCode})";
+            }
+
+            log.Report(new LogLine(LogStream.Stderr, $"[service] Could not start {serviceName}: {ex.Message}{details}"));
             return false;
         }
     }

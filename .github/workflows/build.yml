@@ -588,10 +588,20 @@ jobs:
     - name: Build frontend
       run: yarn build
     
-    - name: Publish
+    - name: Publish non-Windows application
+      if: matrix.platform != 'windows-x64'
       run: |
         dotnet publish src/NzbDrone.Console/Chaptarr.Console.csproj -c Release -f net10.0 -o ./publish/Chaptarr
         dotnet publish src/NzbDrone.Update/Chaptarr.Update.csproj -c Release -f net10.0 -o ./publish/Chaptarr/Chaptarr.Update
+
+    - name: Publish self-contained Windows application and updater
+      if: matrix.platform == 'windows-x64'
+      shell: pwsh
+      run: |
+        dotnet publish src/NzbDrone.Console/Chaptarr.Console.csproj -c Release -f net10.0 -r win-x64 --self-contained true -p:UseAppHost=true -o ./publish/Chaptarr
+        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+        dotnet publish src/NzbDrone.Update/Chaptarr.Update.csproj -c Release -f net10.0 -r win-x64 --self-contained true -p:UseAppHost=true -o ./publish/Chaptarr/Chaptarr.Update
+        if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
     - name: Include and verify frontend in artifact
       shell: bash
