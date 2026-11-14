@@ -70,7 +70,7 @@ Application source: <https://github.com/snapetech-org/chaptarrng>
 
 ## Security scanning
 
-Run scripts/security-scan-local.sh for local Semgrep Community Edition and applicable Trivy scans. Public GitHub Actions workflows run these scans on changes and weekly, alongside any existing CodeQL workflow. See docs/security-scanning.md for offline setup and updates. Run scripts/install-security-hooks.sh once to enable the staged Semgrep pre-commit hook.
+Run `scripts/security-scan-local.sh` for local Semgrep Community Edition and Trivy scans. The trusted Security gate runs on pull requests targeting `main` and pushes to `main`, scanning source and rebuilt product/build/test image inputs. Manual Semgrep and Trivy workflows run from `main` and default to public GitHub-hosted runners. CodeQL is disabled for this repository. See `docs/security-scanning.md` for workflow details. Run `scripts/install-security-hooks.sh` once to enable the staged Semgrep pre-commit hook.
 
 
 The SDK 3 toolchain uses a scoped `@typescript-eslint/typescript-estree`

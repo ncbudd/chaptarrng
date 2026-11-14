@@ -920,9 +920,9 @@ include a BuildKit SBOM and provenance metadata, plus a GitHub build-provenance
 attestation. The Compose example also enables `no-new-privileges` and binds
 the published web port to loopback by default.
 
-The frontend build uses a local `braces` parser depth limit while its upstream
-package has no published fix for GHSA-vfj7-8cjw-p6xm. See the
-[dependency security notes](docs/dependency-security.md) for the patch details,
+The frontend build keeps a local `braces` parser-depth limit for defense in
+depth; the advisory it addressed was withdrawn as not practically exploitable.
+See the [dependency security notes](docs/dependency-security.md) for details,
 audit commands, and removal criteria.
 
 Use the `X-Api-Key` header for API clients. ChaptarrNG still accepts the legacy
@@ -987,4 +987,4 @@ See the [LICENSE](LICENSE) file for the full license text and [COPYRIGHT.md](COP
 
 ## Security scanning
 
-Run scripts/security-scan-local.sh for local Semgrep Community Edition and applicable Trivy scans. Tag and manually dispatched GitHub Actions workflows run these scans on private ephemeral JIT runners; CodeQL is disabled. See docs/security-scanning.md for offline setup and updates. Run scripts/install-security-hooks.sh once to enable the staged Semgrep pre-commit hook.
+Run `scripts/security-scan-local.sh` for local Semgrep Community Edition and Trivy scans. The trusted Security gate runs on pull requests targeting `main` and pushes to `main`, scanning source and rebuilt product/build/test image inputs. Manual Semgrep and Trivy workflows run from `main` and default to public GitHub-hosted runners. CodeQL is disabled for this repository. See `docs/security-scanning.md` for workflow details. Run `scripts/install-security-hooks.sh` once to enable the staged Semgrep pre-commit hook.

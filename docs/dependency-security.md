@@ -16,24 +16,24 @@ packages across the solution's target frameworks.
 
 ## Frontend parser depth limit
 
-The `braces` package currently has no published release with a fix for
-[GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm).
-ChaptarrNG keeps a local MIT-licensed copy of `braces` 3.0.3 at
+GitHub withdrew
+[GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm) on
+October 23, 2026, stating that it was not practically exploitable. ChaptarrNG
+keeps a local MIT-licensed copy of `braces` 3.0.3 at
 `patches/braces`, resolved through `package.json`. Its parser rejects nested
 brace and parenthesis input beyond 256 levels before building a deeply nested
-AST. This limits the recursive parser path that can exhaust the Node.js call
-stack. The package is used by frontend build tooling; the change does not alter
-the Chaptarr application runtime.
+AST as defense in depth. The package is used by frontend build tooling; the
+change does not alter the Chaptarr application runtime. The withdrawn advisory
+is not an open vulnerability finding.
 
-`patches/braces/PATCH.md` records the exact local modification. Remove the
-copy and the `braces` resolution after an upstream release contains an
-equivalent bound, then regenerate `yarn.lock` and rerun the full audit and
-frontend build.
+`patches/braces/PATCH.md` records the exact local modification. Revisit the
+local bound if the package changes or its callers change, then regenerate
+`yarn.lock` and rerun the full audit and frontend build.
 
 ## .NET cryptography package
 
-The solution centrally pins `System.Security.Cryptography.Pkcs` to `10.0.13`
-in `src/Directory.Packages.props`. That is the patched .NET 10 version for
+The solution centrally pins `System.Security.Cryptography.Pkcs` to `10.0.15`
+in `src/Directory.Packages.props`. That is the current .NET 10 patch for
 [GHSA-846f-f764-76mx](https://github.com/advisories/GHSA-846f-f764-76mx) and
 [GHSA-2fmv-rv2c-59x7](https://github.com/advisories/GHSA-2fmv-rv2c-59x7).
 Keep the central pin current when updating packages that bring Pkcs
@@ -51,15 +51,11 @@ successful install alone does not establish that every intended override applied
 The production frontend build, all 193 CJS tests, TypeScript checks and focused
 application lint pass against the resolved graph. No minimatch 7–10 remains.
 
-A fresh Yarn audit still reports build-tool findings for
-[glob cancellation](https://github.com/advisories/GHSA-3g3m-2fjr-6pw4)
-(four moderate dependency paths) and
-[deepmerge object prototypes](https://github.com/advisories/GHSA-gcqx-w48m-w2h4)
-(two low paths). These are not bundled application HTTP dependencies: glob is
-used by local build tooling, and deepmerge is reached through the TypeScript
-checker and Rollup resolver. Build configuration and patterns come from the
-checked-out repository; untrusted code still requires isolated runners without
-secrets. This bounds the currently observed exposure, rather than declaring the
-advisories fixed. The audit has zero high/critical findings; deepmerge has no
-published patched version in the advisory. Keep the findings visible and
-reassess when updating those parent tools. No alert was dismissed.
+## Dependency audit — November 13, 2026
+
+The current `yarn.lock` audit reported zero informational, low, moderate, high,
+or critical advisories across 1,571 dependencies. A restore followed by
+`dotnet list src/Chaptarr.sln package --vulnerable --include-transitive` also
+reported no vulnerable .NET packages. These checks used the current public
+advisory data; rerun them after dependency changes and review Trivy's exact-head
+filesystem and image scans before release.
