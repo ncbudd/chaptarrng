@@ -31,7 +31,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: release-${{ inputs.release_tag }}
+  group: release-${{ inputs.release_tag || github.ref_name }}-${{ github.sha }}
   cancel-in-progress: false
 
 jobs:
@@ -1035,6 +1035,9 @@ jobs:
         if-no-files-found: error
 
   publish-release:
+    concurrency:
+      group: release-publish-${{ inputs.release_tag || github.ref_name }}
+      cancel-in-progress: false
     needs: [preflight, release, docker, standalone-assets, installed-release-linux, installed-release-desktop, rpm-source, windows-migration-installer, legacy-desktop-candidates]
     if: >-
       always() &&
@@ -1200,6 +1203,9 @@ jobs:
           --latest
 
   publish-packages:
+    concurrency:
+      group: release-publish-${{ inputs.release_tag || github.ref_name }}
+      cancel-in-progress: false
     needs: [release, docker, publish-release]
     uses: ./.github/workflows/release-distribution.yml
     permissions:
@@ -1220,6 +1226,9 @@ jobs:
 
   announce-discord:
     name: Announce release to Discord
+    concurrency:
+      group: release-publish-${{ inputs.release_tag || github.ref_name }}
+      cancel-in-progress: false
     needs: [release, docker, publish-release]
     if: >-
       (

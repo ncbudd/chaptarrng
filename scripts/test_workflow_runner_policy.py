@@ -276,6 +276,18 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         release = (WORKFLOW.parent / "release.yml").read_text(encoding="utf-8")
         docker = (WORKFLOW.parent / "docker-publish.yml").read_text(encoding="utf-8")
         distribution = (WORKFLOW.parent / "release-distribution.yml").read_text(encoding="utf-8")
+        self.assertIn(
+            "group: release-${{ inputs.release_tag || github.ref_name }}-${{ github.sha }}",
+            release,
+        )
+        for name in ("publish-release", "publish-packages", "announce-discord"):
+            publication_job = job_block(release, name)
+            self.assertIn(
+                "group: release-publish-${{ inputs.release_tag || github.ref_name }}",
+                publication_job,
+                name,
+            )
+            self.assertIn("cancel-in-progress: false", publication_job, name)
         for source in (release, distribution):
             self.assertNotIn('"group":"ng-shared-main-jit"', source)
             self.assertNotIn("inputs.runner_pool == 'private'", source)
