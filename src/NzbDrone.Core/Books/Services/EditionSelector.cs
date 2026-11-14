@@ -237,7 +237,8 @@ namespace NzbDrone.Core.Books
             var changed = false;
             foreach (var edition in list)
             {
-                var shouldMonitor = edition.Id == selected.Id;
+                // Editions added in this refresh are not saved yet and all have Id 0, so compare those by reference.
+                var shouldMonitor = ReferenceEquals(edition, selected) || (selected.Id != 0 && edition.Id == selected.Id);
                 if (edition.Monitored != shouldMonitor)
                 {
                     edition.Monitored = shouldMonitor;

@@ -1235,6 +1235,10 @@ namespace NzbDrone.Core.Books
 
             var monitoredBefore = all.FirstOrDefault(e => e.Monitored)?.Id;
 
+            // A pre-release placeholder edition ("<Series> <N>") that a request pinned moves to the real
+            // edition once the provider lists it; files and ambiguous candidates are left alone.
+            MovePlaceholderMonitoring(all, fileCountsByEditionId);
+
             _editionSelector.EnsureSingleMonitoredEdition(all, fileCountsByEditionId, mediaType);
 
             PersistMonitoredChanges(children, beforeMonitoredById);
@@ -1245,6 +1249,25 @@ namespace NzbDrone.Core.Books
             if (monitored != null && monitored.Id != monitoredBefore)
             {
                 ReconcileCoverForMonitoredEdition(monitored, all);
+            }
+        }
+
+        private void MovePlaceholderMonitoring(List<Edition> all, IReadOnlyDictionary<int, int> fileCountsByEditionId)
+        {
+            try
+            {
+                var book = all.Select(e => e.Book).FirstOrDefault(b => b != null);
+                var moved = PreorderPlaceholderEdition.TryMove(all, book, fileCountsByEditionId);
+
+                if (moved != null)
+                {
+                    _logger.Info("[PlaceholderEdition] Book '{0}' (ID: {1}) moved monitoring from a pre-release placeholder edition to '{2}' ({3})",
+                        book.Title, book.Id, moved.Title, moved.ForeignEditionId);
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Debug(ex, "Unable to check for a pre-release placeholder edition");
             }
         }
 
