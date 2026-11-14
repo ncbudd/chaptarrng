@@ -221,7 +221,11 @@ namespace Chaptarr.Core.Test.Backup
             File.WriteAllText(configPath, "config backup");
 
             var databasePath = Path.Combine(_tempFolder, "chaptarr.db");
-            var databaseConnectionString = new SqliteConnectionStringBuilder { DataSource = databasePath }.ToString();
+            var databaseConnectionString = new SqliteConnectionStringBuilder
+            {
+                DataSource = databasePath,
+                Pooling = false
+            }.ToString();
             var database = new Database("test", () => new SqliteConnection(databaseConnectionString));
             using (var connection = database.OpenConnection())
             {
