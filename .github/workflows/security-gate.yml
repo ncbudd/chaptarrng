@@ -469,6 +469,12 @@ jobs:
       pull-requests: read
       statuses: write
     steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ env.SECURITY_POLICY_SHA }}
+          fetch-depth: 1
+          persist-credentials: false
+
       - name: Verify the exact PR head and all 12 image jobs before setting success
         env:
           GH_TOKEN: ${{ github.token }}
@@ -506,31 +512,8 @@ jobs:
           fi
 
           if [[ "$state" == success ]]; then
-            jobs_json="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/jobs?per_page=100" --jq '[.jobs[] | select(.name | startswith("Container image scan (")) | {name, conclusion}]')"
-            python3 - "$jobs_json" <<'PY'
-          import json
-          import sys
-
-          expected = {
-              "Container image scan (product-amd64)",
-              "Container image scan (product-arm64)",
-              "Container image scan (product-armv7)",
-              "Container image scan (docker-build-input)",
-              "Container image scan (docker-build-optimized-input)",
-              "Container image scan (cross-builder-input)",
-              "Container image scan (m4b-test)",
-              "Container image scan (node-fixture)",
-              "Container image scan (x86-handoff-fixture)",
-              "Container image scan (python-fixture)",
-              "Container image scan (qbittorrent-fixture)",
-              "Container image scan (musl-handoff-fixture)",
-          }
-          jobs = json.loads(sys.argv[1])
-          selected = [job for job in jobs if job["name"] in expected]
-          actual = {job["name"] for job in selected}
-          if actual != expected or any(job["conclusion"] != "success" for job in selected):
-              raise SystemExit("expected exactly 12 successful base-controlled image scans")
-          PY
+            jobs_json="$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/jobs?per_page=100" --jq '[.jobs[] | {name, conclusion}]')"
+            python3 scripts/verify_security_image_scan_jobs.py "$jobs_json"
             description='Source and all 12 image scans passed'
           fi
 

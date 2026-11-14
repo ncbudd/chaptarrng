@@ -2,6 +2,8 @@ import re
 import unittest
 from pathlib import Path
 
+from verify_security_image_scan_jobs import EXPECTED_IMAGE_SCAN_NAMES, verify_image_scan_jobs
+
 
 WORKFLOW = Path(__file__).resolve().parents[1] / ".github" / "workflows" / "build.yml"
 
@@ -44,6 +46,7 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
     def test_security_gate_scans_builder_inputs_and_requires_the_full_image_matrix(self) -> None:
         workflow_dir = WORKFLOW.parent
         security_gate = (workflow_dir / "security-gate.yml").read_text(encoding="utf-8")
+        scan_result_verifier = (Path(__file__).resolve().parent / "verify_security_image_scan_jobs.py").read_text(encoding="utf-8")
         image_action = (WORKFLOW.parents[1] / "actions/security-image-scan/action.yml").read_text(encoding="utf-8")
         self.assertFalse((workflow_dir / "security-audit-status.yml").exists())
         self.assertIn("pull_request_target:", security_gate)
@@ -64,16 +67,52 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("target: deps", image_matrix)
         self.assertIn("target: dotnet-deps", image_matrix)
         self.assertIn("needs: [status-pending, scan-trusted, scan-untrusted, container-images-trusted, container-images-untrusted]", security_gate)
-        self.assertIn("expected exactly 12 successful base-controlled image scans", security_gate)
+        self.assertIn("expected exactly 12 successful base-controlled image scans", scan_result_verifier)
+        self.assertIn("python3 scripts/verify_security_image_scan_jobs.py", security_gate)
         self.assertIn("--severity HIGH,CRITICAL --exit-code 1", image_action)
         self.assertNotIn("cache-from:", image_action)
         self.assertNotIn("cache-to:", image_action)
         self.assertIn('[[ "$SOURCE_SHA" =~ ^[0-9a-fA-F]{40}$ ]]', (WORKFLOW.parents[1] / "actions/security-source-scan/action.yml").read_text(encoding="utf-8"))
 
+    def test_security_scan_result_accepts_reusable_workflow_job_names(self) -> None:
+        jobs = [
+            {"name": f"security / {name}", "conclusion": "success"}
+            for name in EXPECTED_IMAGE_SCAN_NAMES
+        ]
+        jobs.append({"name": "security / Container image scan (${{ matrix.image }})", "conclusion": "skipped"})
+
+        verify_image_scan_jobs(jobs)
+
+        mixed_names = [
+            {"name": name, "conclusion": "success"}
+            for name in EXPECTED_IMAGE_SCAN_NAMES
+        ]
+        verify_image_scan_jobs(mixed_names)
+
+        with self.assertRaisesRegex(ValueError, "expected exactly 12"):
+            verify_image_scan_jobs(jobs[1:])
+
+        with self.assertRaisesRegex(ValueError, "expected exactly 12"):
+            invalid_placeholder = jobs[:-1] + [
+                {"name": "security / Container image scan (${{ matrix.image }})", "conclusion": "success"}
+            ]
+            verify_image_scan_jobs(invalid_placeholder)
+
+        with self.assertRaisesRegex(ValueError, "expected exactly 12"):
+            verify_image_scan_jobs(jobs[:-1] + [jobs[0]])
+
+        failed_jobs = [
+            {**job, "conclusion": "failure"} if index == 0 else job
+            for index, job in enumerate(jobs)
+        ]
+        with self.assertRaisesRegex(ValueError, "expected exactly 12"):
+            verify_image_scan_jobs(failed_jobs)
+
     def test_security_image_builds_are_limited_to_main_and_trusted_owner_prs(self) -> None:
         security_gate = (WORKFLOW.parent / "security-gate.yml").read_text(encoding="utf-8")
         trusted_image_job = job_block(security_gate, "container-images-trusted")
         untrusted_image_job = job_block(security_gate, "container-images-untrusted")
+        status_job = job_block(security_gate, "status")
 
         self.assertIn("github.ref == 'refs/heads/main'", trusted_image_job)
         self.assertIn("github.event_name == 'pull_request_target'", trusted_image_job)
@@ -82,9 +121,11 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         self.assertIn("group: public-fork-jit", untrusted_image_job)
         self.assertNotIn("runs-on: ubuntu-24.04", untrusted_image_job)
         self.assertIn("persist-credentials: false", security_gate)
+        self.assertIn("ref: ${{ env.SECURITY_POLICY_SHA }}", status_job)
+        self.assertIn("persist-credentials: false", status_job)
         self.assertNotIn("workflow_run:", security_gate)
         self.assertIn("SECURITY_POLICY_SHA: ${{ github.event.pull_request.base.sha || github.sha }}", security_gate)
-        self.assertEqual(security_gate.count("ref: ${{ env.SECURITY_POLICY_SHA }}"), 4)
+        self.assertEqual(security_gate.count("ref: ${{ env.SECURITY_POLICY_SHA }}"), 5)
         self.assertNotIn("ref: ${{ github.event.pull_request", security_gate)
 
     def test_semgrep_workflows_share_the_current_digest_pinned_image(self) -> None:
