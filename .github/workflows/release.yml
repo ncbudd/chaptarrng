@@ -669,6 +669,21 @@ jobs:
           "https://github.com/snapetech-org/bookshelfng/releases/download/v0.4.21.76/$predecessor" \
           --output "$RUNNER_TEMP/standalone-predecessor/$predecessor"
         printf '%s  %s\n' "$PREDECESSOR_SHA256" "$RUNNER_TEMP/standalone-predecessor/$predecessor" | sha256sum --check -
+    - name: Rebuild and scan the exact x86 handoff fixture
+      if: matrix.rid == 'linux-x86'
+      uses: ./release-test-fixture/.github/actions/security-image-scan
+      with:
+        source-repository: ${{ github.repository }}
+        source-sha: ${{ github.sha }}
+        policy-sha: ${{ github.sha }}
+        image: release-x86-handoff-fixture
+        dockerfile: integration/standalone-handoff/Dockerfile.x86
+        target: ''
+        platform: linux/amd64
+        install-qemu: false
+        qemu-platforms: ''
+        fresh-stages: ''
+        no-cache: true
     - name: Exercise installed migration and forced rollback
       env:
         RID: ${{ matrix.rid }}
@@ -687,18 +702,16 @@ jobs:
             --output "$RUNNER_TEMP/standalone-handoff/evidence" --candidate-revision "$RELEASE_SHA" --runtime-id "$RID" \
             2>&1 | tee "$RUNNER_TEMP/standalone-handoff/acceptance.log"
         else
-          image="chaptarrng-release-handoff-${RID}:$GITHUB_RUN_ID"
           fixture_options=()
-          dockerfile_path="integration/standalone-handoff/Dockerfile.$FLAVOR"
-          docker_context="integration/standalone-handoff"
           fixture_library="$RUNNER_TEMP/standalone-handoff/library"
           mkdir -p "$fixture_library/Fixture Author/Ebooks" "$fixture_library/Fixture Author/Audiobooks"
           if [[ "$FLAVOR" == x86 ]]; then
+            image="local/chaptarrng-release-x86-handoff-fixture:$GITHUB_RUN_ID"
             fixture_options=(--preinitialized-source-auxiliary-databases --exclude-legacy-x86-mam-indexer)
-            dockerfile_path="$GITHUB_WORKSPACE/release-test-fixture/integration/standalone-handoff/Dockerfile.x86"
-            docker_context="$GITHUB_WORKSPACE/release-test-fixture/integration/standalone-handoff"
+          else
+            image="chaptarrng-release-handoff-${RID}:$GITHUB_RUN_ID"
+            docker build -t "$image" -f "integration/standalone-handoff/Dockerfile.$FLAVOR" integration/standalone-handoff
           fi
-          docker build -t "$image" -f "$dockerfile_path" "$docker_context"
           docker run --rm --network none --user "$(id -u):$(id -g)" \
             --cap-drop ALL --security-opt no-new-privileges --pids-limit 512 --memory 6g --cpus 2 \
             -e TMPDIR=/work/work -v "$PWD:/repo:ro" \
