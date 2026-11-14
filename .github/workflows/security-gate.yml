@@ -242,7 +242,7 @@ jobs:
           - image: x86-handoff-fixture
             dockerfile: integration/standalone-handoff/Dockerfile.x86
             target: ''
-            platform: linux/386
+            platform: linux/amd64
             runner: ubuntu-24.04
             qemu: false
             fresh_stages: ''
@@ -385,7 +385,7 @@ jobs:
           - image: x86-handoff-fixture
             dockerfile: integration/standalone-handoff/Dockerfile.x86
             target: ''
-            platform: linux/386
+            platform: linux/amd64
             runner: ubuntu-24.04
             qemu: false
             fresh_stages: ''

@@ -1,9 +1,15 @@
-# CI-only linux/386 handoff fixture. Debian's stable i386 base has active
-# high-severity issues without stable fixes, so pin the current testing image
-# and scan the fully upgraded fixture before using it for release acceptance.
-FROM i386/debian:forky-slim@sha256:c68021144c3e2488704791edfd76e6c23d907a3cdeaf0295f319bcbc57e42e34
-RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
-    python3 bash procps curl ca-certificates libicu78 libssl3t64 libstdc++6 libgcc-s1 zlib1g libgssapi-krb5-2 \
+# Run the Linux x86 handoff under a current, scanned amd64 userspace with the
+# 32-bit libraries required by the predecessor's .NET 10.0.12 runtime. The
+# predecessor crashes with newer glibc releases, so this pins Ubuntu 24.04's
+# glibc while still exercising the actual ELF32 candidate and predecessor.
+FROM ubuntu:24.04@sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec
+RUN dpkg --add-architecture i386 \
+    && apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y --no-install-recommends \
+        python3 bash procps curl ca-certificates \
+        libicu74:i386 libssl3t64:i386 libstdc++6:i386 libgcc-s1:i386 \
+        zlib1g:i386 libgssapi-krb5-2:i386 libsqlite3-0:i386 \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /repo
 ENTRYPOINT ["python3", "/repo/packaging/scripts/test-bookshelf-standalone-handoff.py"]

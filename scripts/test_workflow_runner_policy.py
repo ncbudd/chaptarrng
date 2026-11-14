@@ -61,6 +61,9 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
             image_matrix = image_job.split("        include:", 1)[1].split("    permissions:", 1)[0]
             names = re.findall(r"(?m)^          - image: (.+)$", image_matrix)
             self.assertEqual(names, list(image_names), job_name)
+            x86_fixture = image_matrix.split("          - image: x86-handoff-fixture\n", 1)[1].split("          - image:", 1)[0]
+            self.assertIn("platform: linux/amd64", x86_fixture, job_name)
+            self.assertIn("qemu: false", x86_fixture, job_name)
         self.assertIn("image: docker-build-input", image_matrix)
         self.assertIn("image: docker-build-optimized-input", image_matrix)
         self.assertIn("image: cross-builder-input", image_matrix)
@@ -304,6 +307,15 @@ class WorkflowRunnerPolicyTests(unittest.TestCase):
         for rid in ("linux-x64", "linux-arm64", "linux-musl-x64", "linux-musl-arm64", "linux-x86"):
             self.assertIn(f"rid: {rid}", installed)
         self.assertIn("test-bookshelf-standalone-handoff.py", installed)
+        self.assertIn("ref: ${{ github.sha }}", installed)
+        self.assertIn("path: release-test-fixture", installed)
+        self.assertIn('test "$(git -C release-test-fixture rev-parse HEAD)" = "$GITHUB_SHA"', installed)
+        self.assertIn('dockerfile_path="$GITHUB_WORKSPACE/release-test-fixture/integration/standalone-handoff/Dockerfile.x86"', installed)
+        self.assertNotIn("--platform linux/386", installed)
+        x86_fixture = (Path(__file__).resolve().parents[1] / "integration/standalone-handoff/Dockerfile.x86").read_text(encoding="utf-8")
+        self.assertIn("FROM ubuntu:24.04@sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec", x86_fixture)
+        self.assertIn("libicu74:i386", x86_fixture)
+        self.assertIn("libsqlite3-0:i386", x86_fixture)
         desktop = job_block(release, "installed-release-desktop")
         for rid in ("osx-x64", "osx-arm64", "win-x64", "win-x86"):
             self.assertIn(f"rid: {rid}", desktop)

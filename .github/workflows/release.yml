@@ -632,6 +632,24 @@ jobs:
       env:
         EXPECTED_RELEASE_SHA: ${{ needs.release.outputs.sha }}
       run: bash packaging/scripts/verify-release-source-sha.sh
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      if: matrix.rid == 'linux-x86'
+      with:
+        ref: ${{ github.sha }}
+        path: release-test-fixture
+        persist-credentials: false
+    - name: Verify and record current x86 fixture provenance
+      if: matrix.rid == 'linux-x86'
+      run: |
+        set -euo pipefail
+        fixture=release-test-fixture/integration/standalone-handoff/Dockerfile.x86
+        test "$(git -C release-test-fixture rev-parse HEAD)" = "$GITHUB_SHA"
+        mkdir -p "$RUNNER_TEMP/standalone-handoff"
+        {
+          printf 'fixture_commit=%s\n' "$(git -C release-test-fixture rev-parse HEAD)"
+          printf 'fixture_dockerfile_sha256='
+          sha256sum "$fixture" | cut -d ' ' -f 1
+        } | tee "$RUNNER_TEMP/standalone-handoff/x86-fixture-provenance.txt" | tee -a "$GITHUB_STEP_SUMMARY"
     - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
       with:
         name: chaptarrng-standalone-${{ matrix.rid }}
@@ -670,16 +688,18 @@ jobs:
             2>&1 | tee "$RUNNER_TEMP/standalone-handoff/acceptance.log"
         else
           image="chaptarrng-release-handoff-${RID}:$GITHUB_RUN_ID"
-          docker_platform=()
           fixture_options=()
+          dockerfile_path="integration/standalone-handoff/Dockerfile.$FLAVOR"
+          docker_context="integration/standalone-handoff"
           fixture_library="$RUNNER_TEMP/standalone-handoff/library"
           mkdir -p "$fixture_library/Fixture Author/Ebooks" "$fixture_library/Fixture Author/Audiobooks"
           if [[ "$FLAVOR" == x86 ]]; then
-            docker_platform=(--platform linux/386)
             fixture_options=(--preinitialized-source-auxiliary-databases --exclude-legacy-x86-mam-indexer)
+            dockerfile_path="$GITHUB_WORKSPACE/release-test-fixture/integration/standalone-handoff/Dockerfile.x86"
+            docker_context="$GITHUB_WORKSPACE/release-test-fixture/integration/standalone-handoff"
           fi
-          docker build "${docker_platform[@]}" -t "$image" -f "integration/standalone-handoff/Dockerfile.$FLAVOR" integration/standalone-handoff
-          docker run "${docker_platform[@]}" --rm --network none --user "$(id -u):$(id -g)" \
+          docker build -t "$image" -f "$dockerfile_path" "$docker_context"
+          docker run --rm --network none --user "$(id -u):$(id -g)" \
             --cap-drop ALL --security-opt no-new-privileges --pids-limit 512 --memory 6g --cpus 2 \
             -e TMPDIR=/work/work -v "$PWD:/repo:ro" \
             -v "$RUNNER_TEMP/standalone-predecessor:/predecessor:ro" \
@@ -704,6 +724,7 @@ jobs:
           ${{ runner.temp }}/standalone-handoff/acceptance.log
           ${{ runner.temp }}/standalone-handoff/evidence/**
           ${{ runner.temp }}/standalone-handoff/kernel-release.txt
+          ${{ runner.temp }}/standalone-handoff/x86-fixture-provenance.txt
         retention-days: 30
         if-no-files-found: warn
 
