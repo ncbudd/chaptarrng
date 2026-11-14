@@ -81,8 +81,24 @@ terminal `[y/N]` choice; it defaults to Manual when no terminal is attached.
 The supervisor stages the migration, retains the source for rollback, checks
 startup health, and restores the source if the handoff fails. The launcher does
 not change the old service or local launcher path; switch it after the new
-service passes health. On FreeBSD, install the `sqlite3` runtime package. The
-launcher links the bundle's SQLite dependency to the installed library and
+service passes health. On FreeBSD, install the `sqlite3`, `icu`, `libunwind`,
+and `libinotify` runtime packages before starting the archive:
+
+```sh
+pkg install --yes sqlite3 icu libunwind libinotify
+```
+
+The application needs `sqlite3`; the .NET runtime needs ICU, libunwind,
+libinotify, and MIT Kerberos. Before starting the archive, install `krb5` or
+`krb5-122` version 1.22.3 or newer; earlier versions are affected by the
+[FreeBSD krb5 security advisory](https://vuxml.freebsd.org/freebsd/8dc02503-dd51-11f1-a654-f8b46a88f42c.html).
+If the configured package repository offers an older version, update it or
+build and install the updated
+[FreeBSD krb5-122 port](https://cgit.freebsd.org/ports/tree/security/krb5-122).
+Run `pkg audit -F` after installing the dependencies.
+These dependencies are also listed in the
+[.NET FreeBSD runtime requirements](https://github.com/dotnet/runtime/blob/main/docs/workflow/requirements/freebsd-requirements.md).
+The launcher links the bundle's SQLite dependency to the installed library and
 selects a compatible installed OpenSSL ABI when needed.
 
 ## Publication gate
