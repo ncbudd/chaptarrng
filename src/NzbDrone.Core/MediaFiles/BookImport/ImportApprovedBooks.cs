@@ -48,6 +48,7 @@ namespace NzbDrone.Core.MediaFiles.BookImport
     /// </summary>
     public class ImportApprovedBooks : IImportApprovedBooks
     {
+        public const string AdditionalCopyDestinationOccupiedRejectionPrefix = "Additional physical copy cannot be imported because the managed destination is already occupied";
         public const string AlreadyImportedRejectionReason = "Already imported: this edition already has files of equal or better quality";
 
         private const string ConversionArtifactManifestFileName = "conversion-artifact.json";
@@ -4803,7 +4804,7 @@ namespace NzbDrone.Core.MediaFiles.BookImport
                 var destinationExists = DestinationFileExists(destinationPath);
                 if (existingTracked != null && destinationExists && existingTracked.Path.PathNotEquals(localBook.Path))
                 {
-                    return $"Additional physical copy cannot be imported because the managed destination is already occupied: {destinationPath}. Current naming settings cannot represent a separate copy.";
+                    return $"{AdditionalCopyDestinationOccupiedRejectionPrefix}: {destinationPath}. Current naming settings cannot represent a separate copy.";
                 }
 
                 if (destinationExists && (existingTracked == null || existingTracked.Path.PathNotEquals(localBook.Path)))
