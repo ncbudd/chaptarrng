@@ -146,8 +146,10 @@ namespace Chaptarr.Core.Test.Backup
 
         private string CreateBackupArchive(string archiveName, bool includeInvalidDatabase)
         {
-            var configPath = Path.Combine(_tempFolder, "Config.xml");
-            var databasePath = Path.Combine(_tempFolder, "readarr.db");
+            var sourceFolder = Path.Combine(_tempFolder, "archive-source");
+            Directory.CreateDirectory(sourceFolder);
+            var configPath = Path.Combine(sourceFolder, "Config.xml");
+            var databasePath = Path.Combine(sourceFolder, "readarr.db");
             var archivePath = Path.Combine(_tempFolder, archiveName);
             File.WriteAllText(configPath, "<Config><InstanceName>Replacement</InstanceName></Config>");
 
@@ -158,11 +160,13 @@ namespace Chaptarr.Core.Test.Backup
                 files.Add(databasePath);
             }
 
-            _archiveService.CreateZip(archivePath, files);
-            File.Delete(configPath);
-            if (includeInvalidDatabase)
+            try
             {
-                File.Delete(databasePath);
+                _archiveService.CreateZip(archivePath, files);
+            }
+            finally
+            {
+                Directory.Delete(sourceFolder, true);
             }
 
             return archivePath;
@@ -180,10 +184,10 @@ namespace Chaptarr.Core.Test.Backup
         [Test]
         public void should_validate_extracted_database_before_replacing_config()
         {
+            var archivePath = CreateBackupArchive("backup.zip", includeInvalidDatabase: true);
             var configPath = _appFolderInfo.GetConfigPath();
             File.WriteAllText(configPath, "original");
 
-            var archivePath = CreateBackupArchive("backup.zip", includeInvalidDatabase: true);
             Assert.Throws<RestoreBackupFailedException>(() => _subject.Restore(archivePath));
 
             Assert.Multiple(() =>

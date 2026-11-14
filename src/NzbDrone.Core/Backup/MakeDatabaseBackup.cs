@@ -30,6 +30,7 @@ namespace NzbDrone.Core.Backup
             var backupConnectionStringBuilder = new SqliteConnectionStringBuilder(sourceConnectionString);
 
             backupConnectionStringBuilder.DataSource = Path.Combine(targetDirectory, Path.GetFileName(backupConnectionStringBuilder.DataSource));
+            backupConnectionStringBuilder.Pooling = false;
 
             // We MUST use truncate journal mode (not WAL) when restoring backups to avoid WAL/page-size issues.
             // Microsoft.Data.Sqlite does not expose JournalMode in the connection string; we'll set it via PRAGMA after backup.
