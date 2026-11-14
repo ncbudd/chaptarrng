@@ -1,12 +1,12 @@
 {
   "name": "chaptarrng",
-  "version": "0.9.1003",
+  "version": "0.9.1004",
   "description": "ChaptarrNG, the SeerrNG-maintained Chaptarr fork",
   "scripts": {
     "release-notes:preview": "node scripts/preview-release-notes.mjs",
     "build": "webpack --env production --config ./frontend/build/webpack.config.js",
     "prebuild": "yarn clean",
-    "clean": "npx rimraf ./_output/UI",
+    "clean": "rimraf ./_output/UI",
     "start": "webpack --watch --config ./frontend/build/webpack.config.js",
     "watch": "webpack --watch --config ./frontend/build/webpack.config.js",
     "typecheck": "tsc -p frontend/tsconfig.json && tsc -p frontend/tsconfig.sw.json",
