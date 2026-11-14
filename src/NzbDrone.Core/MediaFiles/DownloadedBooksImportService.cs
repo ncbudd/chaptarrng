@@ -1196,6 +1196,7 @@ namespace NzbDrone.Core.MediaFiles
             }
 
             var expectedEditionCache = new Dictionary<int, Edition>();
+            var grabNarratorCache = new Dictionary<int, string>();
 
             foreach (var decision in decisions.Where(decision => decision?.Approved == true))
             {
@@ -1237,6 +1238,26 @@ namespace NzbDrone.Core.MediaFiles
                     _logger.Debug(
                         "Import matched edition {0} instead of grabbed edition {1}; same narration and language, accepting",
                         matchedEdition.Id,
+                        expectedEdition.Id);
+                    RetargetToExpectedEdition(localBook, matchedBook, expectedEdition);
+                    continue;
+                }
+
+                // A matched listing without any narrator data cannot be compared to the grabbed one, but
+                // the grab history records which narrator the release was for.
+                if (!grabNarratorCache.TryGetValue(matchedBook.Id, out var grabNarrator))
+                {
+                    grabNarrator = GetGrabbedReleaseNarrator(matchedBook.Id, downloadClientItem);
+                    grabNarratorCache[matchedBook.Id] = grabNarrator;
+                }
+
+                if (IsSameRecordingByGrabNarrator(expectedEdition, matchedEdition, grabNarrator) &&
+                    TryRetargetToExpectedEdition(localBook, matchedBook, expectedEdition))
+                {
+                    _logger.Debug(
+                        "Import matched edition {0} without narrator data; grab history narrator '{1}' matches grabbed edition {2}, accepting",
+                        matchedEdition.Id,
+                        grabNarrator,
                         expectedEdition.Id);
                     RetargetToExpectedEdition(localBook, matchedBook, expectedEdition);
                     continue;
@@ -1302,6 +1323,37 @@ namespace NzbDrone.Core.MediaFiles
                    !string.IsNullOrWhiteSpace(matchedLanguage) &&
                    string.Equals(expectedLanguage, matchedLanguage, StringComparison.OrdinalIgnoreCase) &&
                    BookService.HaveSameNarration(expected, matched);
+        }
+
+        internal static bool IsSameRecordingByGrabNarrator(Edition expected, Edition matched, string grabNarrator)
+        {
+            if (expected == null || matched == null || expected.IsEbook || matched.IsEbook ||
+                expected.BookId != matched.BookId || expected.IsGraphicAudio != matched.IsGraphicAudio ||
+                BookService.HasNarratorData(matched))
+            {
+                return false;
+            }
+
+            var expectedLanguage = EditionMetadataProfileFilter.NormalizeLanguageBucket(expected.Language);
+            var matchedLanguage = EditionMetadataProfileFilter.NormalizeLanguageBucket(matched.Language);
+
+            return !string.IsNullOrWhiteSpace(expectedLanguage) &&
+                   string.Equals(expectedLanguage, matchedLanguage, StringComparison.OrdinalIgnoreCase) &&
+                   BookService.ReleaseNarratorMatchesEdition(grabNarrator, expected);
+        }
+
+        private string GetGrabbedReleaseNarrator(int bookId, DownloadClientItem downloadClientItem)
+        {
+            if (string.IsNullOrWhiteSpace(downloadClientItem?.DownloadId) || _historyService == null)
+            {
+                return null;
+            }
+
+            return (_historyService.FindByDownloadId(downloadClientItem.DownloadId) ?? new List<EntityHistory>())
+                .Where(history => history.EventType == EntityHistoryEventType.Grabbed && history.BookId == bookId)
+                .OrderByDescending(history => history.Date)
+                .Select(history => history.Data != null && history.Data.TryGetValue("Narrator", out var narrator) ? narrator : null)
+                .FirstOrDefault();
         }
 
         internal static bool IsEquivalentEbookTitle(Edition expected, Edition matched)

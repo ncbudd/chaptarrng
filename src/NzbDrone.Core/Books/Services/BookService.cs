@@ -3134,6 +3134,36 @@ namespace NzbDrone.Core.Books
                    names.SetEquals(GetEditionNarratorKeys(right));
         }
 
+        // The matched listing may carry no narrator data at all while the grabbed listing does. The
+        // grab history records the release narrator, which is then the only evidence of the recording.
+        // Both sides must be explicit: a missing or conflicting release narrator never matches.
+        internal static bool HasNarratorData(Edition edition)
+        {
+            return GetEditionNarratorKeys(edition).Count > 0;
+        }
+
+        internal static bool ReleaseNarratorMatchesEdition(string releaseNarrator, Edition edition)
+        {
+            if (string.IsNullOrWhiteSpace(releaseNarrator))
+            {
+                return false;
+            }
+
+            var editionKeys = GetEditionNarratorKeys(edition).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            if (editionKeys.Count == 0 || editionKeys.Contains("full cast") || editionKeys.Contains("various"))
+            {
+                return false;
+            }
+
+            var releaseKeys = System.Text.RegularExpressions.Regex.Split(releaseNarrator, @"\s*(?:,|;|&|/|\band\b)\s*", System.Text.RegularExpressions.RegexOptions.IgnoreCase)
+                .Where(name => !string.IsNullOrWhiteSpace(name))
+                .Select(name => string.Join(" ", Services.TextNormalizer.NormalizeAndTokenize(name)))
+                .Where(key => key.Length > 0)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            return releaseKeys.Count > 0 && releaseKeys.SetEquals(editionKeys);
+        }
+
         private static List<string> GetEditionNarratorKeys(Edition edition)
         {
             var names = new List<string>();
