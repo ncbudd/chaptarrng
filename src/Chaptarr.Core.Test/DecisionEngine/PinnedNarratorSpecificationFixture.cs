@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Linq;
+using Moq;
 using NLog;
 using NUnit.Framework;
 using NzbDrone.Core.Books;
@@ -12,9 +14,99 @@ namespace Chaptarr.Core.Test.DecisionEngine
     [TestFixture]
     public class PinnedNarratorSpecificationFixture
     {
-        private static PinnedNarratorSpecification CreateSubject()
+        private static PinnedNarratorSpecification CreateSubject(params Edition[] editionsByAsin)
         {
-            return new PinnedNarratorSpecification(LogManager.GetCurrentClassLogger());
+            var editionService = new Mock<IEditionService>();
+            editionService
+                .Setup(s => s.GetEditionsByProviderAndId("az", It.IsAny<string>()))
+                .Returns((string prefix, string asin) => editionsByAsin
+                    .Where(e => e.Asin == asin || (e.Asins != null && e.Asins.Contains(asin)))
+                    .ToList());
+            return new PinnedNarratorSpecification(editionService.Object, LogManager.GetCurrentClassLogger());
+        }
+
+        private static Edition AsinEdition(string asin, params string[] narrators)
+        {
+            return new Edition
+            {
+                Id = 50,
+                BookId = 7,
+                Title = "Some Book",
+                IsEbook = false,
+                Asin = asin,
+                Asins = new List<string> { asin },
+                Narrator = narrators.Length > 0 ? narrators[0] : null,
+                NarratorNames = new List<string>(narrators)
+            };
+        }
+
+        [Test]
+        public void should_reject_when_title_asin_is_another_recording_in_the_library()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book {B0FBS2CPR7}");
+
+            var decision = CreateSubject(AsinEdition("B0FBS2CPR7", "Bertie Carvel", "Glenn Close"))
+                .IsSatisfiedBy(remoteBook, new BookSearchCriteria());
+
+            Assert.That(decision.Accepted, Is.False);
+            Assert.That(decision.CanBypass, Is.True);
+            Assert.That(decision.Category, Is.EqualTo("Narrator"));
+            Assert.That(decision.Reason, Does.Contain("Bertie Carvel"));
+            Assert.That(decision.Reason, Does.Contain("Roy Dotrice"));
+        }
+
+        [Test]
+        public void should_accept_when_title_asin_edition_shares_the_pinned_narrator()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book {B0FBS2CPR7}");
+
+            Assert.That(CreateSubject(AsinEdition("B0FBS2CPR7", "Roy Dotrice"))
+                .IsSatisfiedBy(remoteBook, new BookSearchCriteria()).Accepted, Is.True);
+        }
+
+        [Test]
+        public void should_accept_when_title_asin_is_unknown()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book {B0FBS2CPR7}");
+
+            Assert.That(CreateSubject().IsSatisfiedBy(remoteBook, new BookSearchCriteria()).Accepted, Is.True);
+        }
+
+        [Test]
+        public void should_accept_when_title_asin_edition_has_no_narrator()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book {B0FBS2CPR7}");
+
+            Assert.That(CreateSubject(AsinEdition("B0FBS2CPR7"))
+                .IsSatisfiedBy(remoteBook, new BookSearchCriteria()).Accepted, Is.True);
+        }
+
+        [Test]
+        public void should_accept_when_title_asin_belongs_to_the_pinned_edition()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book {B0FBS2CPR7}");
+            remoteBook.Books[0].Editions[0].Asin = "B0FBS2CPR7";
+
+            Assert.That(CreateSubject(AsinEdition("B0FBS2CPR7", "Bertie Carvel"))
+                .IsSatisfiedBy(remoteBook, new BookSearchCriteria()).Accepted, Is.True);
+        }
+
+        [Test]
+        public void should_not_use_title_asin_when_the_book_is_not_pinned()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book {B0FBS2CPR7}", anyEditionOk: true);
+
+            Assert.That(CreateSubject(AsinEdition("B0FBS2CPR7", "Bertie Carvel"))
+                .IsSatisfiedBy(remoteBook, new BookSearchCriteria()).Accepted, Is.True);
+        }
+
+        [Test]
+        public void should_ignore_asin_like_text_inside_a_longer_word()
+        {
+            var remoteBook = BuildRemoteBook(title: "Some Book XB0FBS2CPR7 M4B");
+
+            Assert.That(CreateSubject(AsinEdition("B0FBS2CPR7", "Bertie Carvel"))
+                .IsSatisfiedBy(remoteBook, new BookSearchCriteria()).Accepted, Is.True);
         }
 
         [Test]

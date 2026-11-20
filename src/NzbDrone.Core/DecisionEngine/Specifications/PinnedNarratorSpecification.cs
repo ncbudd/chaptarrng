@@ -16,14 +16,21 @@ namespace NzbDrone.Core.DecisionEngine.Specifications
     /// Rejects an audiobook release whose narrator is known and differs from the narrator(s) of the
     /// edition the request is pinned to. A release that names no narrator is still allowed, because
     /// many indexers (usenet, MyAnonamouse) never put the narrator in the title; those releases keep
-    /// being ranked by the narrator custom formats. The rejection can be bypassed from a manual search.
+    /// being ranked by the narrator custom formats. A full name of another edition's narrator, or an
+    /// Audible ASIN the library knows as another recording, counts as evidence too. The rejection can
+    /// be bypassed from a manual search.
     /// </summary>
     public class PinnedNarratorSpecification : IDecisionEngineSpecification
     {
+        // Audible ASINs as indexers put them in titles: "Pride and Prejudice {B0FBS2CPR7}".
+        private static readonly Regex AsinInTitleRegex = new Regex(@"(?<![A-Za-z0-9])B0[0-9A-Z]{8}(?![A-Za-z0-9])", RegexOptions.Compiled);
+
+        private readonly IEditionService _editionService;
         private readonly Logger _logger;
 
-        public PinnedNarratorSpecification(Logger logger)
+        public PinnedNarratorSpecification(IEditionService editionService, Logger logger)
         {
+            _editionService = editionService;
             _logger = logger;
         }
 
@@ -68,6 +75,16 @@ namespace NzbDrone.Core.DecisionEngine.Specifications
                 if (releaseNarrators.Count > 0)
                 {
                     _logger.Debug("[PINNED_NARRATOR] Release title names the narrator of another edition of this book: {0}",
+                        CleanseLogMessage.Cleanse(string.Join(", ", releaseNarrators)));
+                }
+            }
+
+            if (releaseNarrators.Count == 0)
+            {
+                releaseNarrators = GetNarratorsOfAsinInTitle(books, release.Title, pinnedNarrators);
+                if (releaseNarrators.Count > 0)
+                {
+                    _logger.Debug("[PINNED_NARRATOR] Release title carries the ASIN of an edition narrated by: {0}",
                         CleanseLogMessage.Cleanse(string.Join(", ", releaseNarrators)));
                 }
             }
@@ -171,6 +188,90 @@ namespace NzbDrone.Core.DecisionEngine.Specifications
                 .Where(name => TitleContainsFullName(normalizedTitle, name))
                 .Distinct(StringComparer.OrdinalIgnoreCase)
                 .ToList();
+        }
+
+        /// <summary>
+        /// An Audible ASIN in a release title identifies one recording. When the library knows that
+        /// ASIN as an audiobook edition (of this book, or of a duplicate book for the same work, such
+        /// as an Audible-only listing) and none of its narrators is a pinned narrator, the release is
+        /// another recording: "Pride and Prejudice {B0FBS2CPR7}" is the full-cast edition, not the
+        /// pinned Kate Reading one. Returns nothing when the ASIN is unknown, belongs to the pinned
+        /// edition, has no narrator data, or any matching edition shares a pinned narrator.
+        /// </summary>
+        private List<string> GetNarratorsOfAsinInTitle(IEnumerable<Book> books, string title, List<string> pinnedNarrators)
+        {
+            var none = new List<string>();
+            if (_editionService == null || string.IsNullOrWhiteSpace(title))
+            {
+                return none;
+            }
+
+            var asins = AsinInTitleRegex.Matches(title)
+                .Select(match => match.Value)
+                .Distinct(StringComparer.Ordinal)
+                .Take(3)
+                .ToList();
+            if (asins.Count == 0)
+            {
+                return none;
+            }
+
+            var pinnedAsins = new HashSet<string>(
+                books.Where(book => book != null)
+                    .SelectMany(book => EditionPinPolicy.GetProtectedEditions(book, book.Editions))
+                    .SelectMany(GetAsins),
+                StringComparer.OrdinalIgnoreCase);
+
+            var names = new List<string>();
+            foreach (var asin in asins)
+            {
+                if (pinnedAsins.Contains(asin))
+                {
+                    return none;
+                }
+
+                List<Edition> editions;
+                try
+                {
+                    editions = _editionService.GetEditionsByProviderAndId("az", asin)
+                        .Where(PreferredNarratorMatcher.IsAudiobookEdition)
+                        .ToList();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Debug(ex, "[PINNED_NARRATOR] ASIN lookup failed, ignoring the ASIN");
+                    return none;
+                }
+
+                foreach (var edition in editions)
+                {
+                    var editionNarrators = ReleaseNarratorEvidenceExtractor.ExtractNames(edition.NarratorNames, edition.Narrator).Names
+                        .Where(IsSpecificNarratorName)
+                        .ToList();
+                    if (editionNarrators.Count == 0 ||
+                        editionNarrators.Any(name => pinnedNarrators.Any(pinned => NarratorNameMatcher.IsMatch(name, pinned))))
+                    {
+                        return none;
+                    }
+
+                    names.AddRange(editionNarrators);
+                }
+            }
+
+            return names.Distinct(StringComparer.OrdinalIgnoreCase).ToList();
+        }
+
+        private static IEnumerable<string> GetAsins(Edition edition)
+        {
+            if (edition == null)
+            {
+                return Enumerable.Empty<string>();
+            }
+
+            return new[] { edition.Asin, edition.AudibleASIN }
+                .Concat(edition.Asins ?? new List<string>())
+                .Where(asin => !string.IsNullOrWhiteSpace(asin))
+                .Select(asin => asin.Trim());
         }
 
         private static bool TitleContainsFullName(string normalizedTitle, string name)
