@@ -257,7 +257,7 @@ namespace Chaptarr.Api.V1.Books
                 Links = links,
                 Statistics = options.Statistics?.ToResource(options.FacadeContext?.IsBookshelfCompatibility == true),
                 AddOptions = model.AddOptions,
-                RemoteCover = string.Empty,
+                RemoteCover = SelectFallbackRemoteCover(model, model.Editions, legacy) ?? string.Empty,
                 Grabbed = options.FacadeContext?.IsBookshelfCompatibility == true ? false : null,
                 Narrator = legacy ? selectedEdition?.Narrator : GetNarratorDisplay(model, selectedEdition),
                 AvailableNarrators = GetAvailableNarrators(model),
@@ -670,6 +670,68 @@ namespace Chaptarr.Api.V1.Books
                     Monitored = model.IsMonitored(),
                     HasFiles = model.HasFiles
                 };
+            }
+
+            /// <summary>
+            /// A display-only cover for clients when the monitored edition has no art: the first
+            /// public cover URL of another edition, editions in the book's own format first. The
+            /// stored cover and <c>Images</c> still come only from the monitored edition, so a
+            /// pinned recording never takes another edition's cover as its own.
+            /// </summary>
+            public static string SelectFallbackRemoteCover(Book model, IEnumerable<Edition> editions, bool legacy)
+            {
+                var allEditions = editions?.Where(edition => edition != null).ToList() ?? new List<Edition>();
+                var selectedEdition = SelectMonitoredEdition(allEditions);
+                var ownImages = selectedEdition != null
+                    ? selectedEdition.Images
+                    : (legacy ? null : model?.Images);
+                if (ownImages?.Any(HasCover) == true)
+                {
+                    return null;
+                }
+
+                var wantEbook = model?.MediaType == BookMediaType.Ebook;
+                return allEditions
+                    .Where(edition => !ReferenceEquals(edition, selectedEdition) &&
+                        (selectedEdition == null || edition.Id == 0 || edition.Id != selectedEdition.Id))
+                    .Select((edition, index) => new { edition, index })
+                    .OrderByDescending(x => x.edition.IsEbook == wantEbook)
+                    .ThenBy(x => x.index)
+                    .SelectMany(x => x.edition.Images ?? new List<MediaCover>())
+                    .Where(cover => cover?.CoverType == MediaCoverTypes.Cover)
+                    .Select(PublicCoverUrl)
+                    .FirstOrDefault(url => url != null);
+            }
+
+            public static bool HasCover(MediaCover cover)
+            {
+                return cover?.CoverType == MediaCoverTypes.Cover && !string.IsNullOrWhiteSpace(cover.Url) &&
+                    !IsPlaceholderCover(cover.RemoteUrl) && !IsPlaceholderCover(cover.Url);
+            }
+
+            // Amazon serves a stock "No image available" picture for books without art, and
+            // catalogues pass it on as the cover; it is not a cover.
+            private static bool IsPlaceholderCover(string url)
+            {
+                return url != null && Regex.IsMatch(
+                    url, @"/images/I/01RmK(\+|%2B)J4pJL\.|/nophoto/|no[-_]image[-_]available", RegexOptions.IgnoreCase);
+            }
+
+            // Only an absolute http(s) address works for clients outside ChaptarrNG; proxied or
+            // local paths are skipped.
+            private static string PublicCoverUrl(MediaCover cover)
+            {
+                foreach (var url in new[] { cover?.RemoteUrl, cover?.Url })
+                {
+                    if (Uri.TryCreate(url, UriKind.Absolute, out var uri) &&
+                        (uri.Scheme == Uri.UriSchemeHttps || uri.Scheme == Uri.UriSchemeHttp) &&
+                        !IsPlaceholderCover(url))
+                    {
+                        return url;
+                    }
+                }
+
+                return null;
             }
 
             private static Edition SelectMonitoredEdition(IEnumerable<Edition> editions)

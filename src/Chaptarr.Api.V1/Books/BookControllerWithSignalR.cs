@@ -138,11 +138,54 @@ namespace Chaptarr.Api.V1.Books
                 });
             }).ToList();
             BookResourceMapper.WarnFacadeIdentityGaps(result, facadeContext, "book response");
+            FillFallbackRemoteCovers(books, result, facadeContext);
 
             MapCoversToLocal(result.ToArray());
 
             return ProjectLegacyBookshelfResources(books, result, resolvedStatsByBookId, facadeContext);
 
+        }
+
+        // Lean list endpoints load only the monitored edition. For the few books whose monitored
+        // edition has no art, load their editions once so clients still get a display cover.
+        private void FillFallbackRemoteCovers(List<Book> books, List<BookResource> resources, ReadarrFacadeContext facadeContext)
+        {
+            if (_editionService == null || books == null || resources == null)
+            {
+                return;
+            }
+
+            var legacy = facadeContext?.IsBookshelfCompatibility == true;
+            var missing = new List<int>();
+            for (var i = 0; i < resources.Count && i < books.Count; i++)
+            {
+                var resource = resources[i];
+                // Books that already carry more than their monitored edition were handled by ToResource.
+                if (resource != null && books[i]?.Id > 0 && (books[i].Editions?.Count ?? 0) <= 1 &&
+                    string.IsNullOrEmpty(resource.RemoteCover) &&
+                    resource.Images?.Any(BookResourceMapper.HasCover) != true)
+                {
+                    missing.Add(i);
+                }
+            }
+
+            if (missing.Count == 0)
+            {
+                return;
+            }
+
+            var editionsByBook = _editionService.GetEditionsByBook(missing.Select(i => books[i].Id).Distinct().ToList())
+                .Where(edition => edition != null)
+                .GroupBy(edition => edition.BookId)
+                .ToDictionary(group => group.Key, group => group.ToList());
+
+            foreach (var i in missing)
+            {
+                if (editionsByBook.TryGetValue(books[i].Id, out var editions))
+                {
+                    resources[i].RemoteCover = BookResourceMapper.SelectFallbackRemoteCover(books[i], editions, legacy) ?? string.Empty;
+                }
+            }
         }
 
         private void ProjectLegacyBookshelfResource(BookResource resource)

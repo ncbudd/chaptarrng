@@ -108,7 +108,8 @@ namespace Chaptarr.Core.Test.Api
                 addBookService: null,
                 editionService: Proxy<IEditionService>(new Dictionary<string, Func<MethodInfo, object[], object>>
                 {
-                    [nameof(IEditionService.GetEditionsByAuthor)] = (_, _) => new List<Edition>()
+                    [nameof(IEditionService.GetEditionsByAuthor)] = (_, _) => new List<Edition>(),
+                    [nameof(IEditionService.GetEditionsByBook)] = (_, _) => new List<Edition>()
                 }),
                 editionSelector: null,
                 seriesBookLinkService: Proxy<ISeriesBookLinkService>(new Dictionary<string, Func<MethodInfo, object[], object>>
